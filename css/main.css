@@ -1995,7 +1995,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #1cffa1;
+  background: #d9014e;
 }
 .links-of-blogroll {
   font-size: 13px;
@@ -3315,4 +3315,18 @@ pre .javascript .function {
   .pagination {
     margin: 8px 0 0;
   }
+}
+body {
+  background: url("http://i1.fuimg.com/707843/c077df3f3486783e.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: 50% 50%;
+}
+.main-inner {
+  background: #fff;
+  opacity: 1;
+}
+.header-inner {
+  opacity: 1;
 }
