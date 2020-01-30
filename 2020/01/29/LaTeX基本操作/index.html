@@ -86,14 +86,14 @@
 
 
 
-<meta name="description" content="1.LaTeX环境的安装与配置  官网自行安装下载  2.LaTeX源文件的基本结构  %导言区 注释  \documentclass{article}%book, report, letter  \title{My First Document}  \author{Lin Jun}  \date{\today}  %正文区（文稿区）  \begin{document}  \maketitle">
+<meta name="description" content="1.LaTeX环境的安装与配置 官网自行安装下载  2.LaTeX源文件的基本结构      %导言区 注释   \documentclass{article}%book, report, letter    \title{My First Document}   \author{Lin Jun}   \date{\today}   %正文区（文稿区）   \begin{document}">
 <meta property="og:type" content="article">
 <meta property="og:title" content="LaTeX基本操作">
 <meta property="og:url" content="https:&#x2F;&#x2F;gemini-lin.github.io.git&#x2F;2020&#x2F;01&#x2F;29&#x2F;LaTeX%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C&#x2F;index.html">
 <meta property="og:site_name" content="GeminiPlanet">
-<meta property="og:description" content="1.LaTeX环境的安装与配置  官网自行安装下载  2.LaTeX源文件的基本结构  %导言区 注释  \documentclass{article}%book, report, letter  \title{My First Document}  \author{Lin Jun}  \date{\today}  %正文区（文稿区）  \begin{document}  \maketitle">
+<meta property="og:description" content="1.LaTeX环境的安装与配置 官网自行安装下载  2.LaTeX源文件的基本结构      %导言区 注释   \documentclass{article}%book, report, letter    \title{My First Document}   \author{Lin Jun}   \date{\today}   %正文区（文稿区）   \begin{document}">
 <meta property="article:published_time" content="2020-01-29T06:35:10.000Z">
-<meta property="article:modified_time" content="2020-01-29T13:01:12.706Z">
+<meta property="article:modified_time" content="2020-01-30T14:05:57.973Z">
 <meta property="article:author" content="Gemini-Lin">
 <meta property="article:tag" content="LaTeX">
 <meta name="twitter:card" content="summary">
@@ -392,7 +392,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  1.3k
+                  2.8k
                 </span>
               
 
@@ -408,7 +408,7 @@
                   <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
                 <span title="阅读时长">
-                  5
+                  12
                 </span>
               
             </div>
@@ -429,46 +429,593 @@
       
 
       
-        <p>1.LaTeX环境的安装与配置</p>
-<blockquote>
+        <h2 id="1-LaTeX环境的安装与配置"><a href="#1-LaTeX环境的安装与配置" class="headerlink" title="1.LaTeX环境的安装与配置"></a>1.LaTeX环境的安装与配置</h2><blockquote>
 <p>官网自行安装下载</p>
 </blockquote>
-<p>2.LaTeX源文件的基本结构</p>
-<blockquote>
-<p>%导言区 注释<br>  \documentclass{article}%book, report, letter<br>  \title{My First Document}<br>  \author{Lin Jun}<br>  \date{\today}<br>  %正文区（文稿区）<br>  \begin{document}<br>  \maketitle<br>  Hello World!<br>  %在源文件增加空行实现分行<br>  Let $f(x)$ be defined by the formula<br>  $f(x)=3x^2+x-1$.<br>  %使用$符号编辑行内数学公式<br>  $$f(x)=3x^2+x-1$$ which is a polynomial of degree 2.<br>  %使用$$符号编辑行间数学公式<br>  \end{document}</p>
-</blockquote>
-<p>3.LaTeX中的中文处理方法</p>
-<blockquote>
-<p>1.设置构建的默认编译器为XeLaTeX<br>  2.设置编辑器的编码格式为UTF-8</p>
-</blockquote>
-<blockquote>
-<p>%导言区 注释<br>  \documentclass{article}%book, report, letter<br>  %documentclass{ctexart}%ctexbook, ctexrep引入ctex文章文档，并且不需要usepackage命令<br>  \usepackage{ctex} %引入中文宏包<br>  \newcommand\degree{^\circ} %在导言区进行命令的定义<br>  \title{\heiti 杂谈勾股定理}<br>  \author{\kaisu 不二}<br>  \date{\today}<br>  %正文区（文稿区）<br>  \begin{document}<br>      \maketitle<br>      勾股定理可以用现代语言表述如下:<br>      直角三角形斜边的平方等于两腰的平方和。<br>      可以用符号语言表述为: 设直角三角形 $ABC$, 其中 $\angle C=90\degree$, 则有:<br>      \begin{equation}<br>      AB^2 = BC^2 + AC^2.<br>      \end{equation}<br>      %引入equation环境 相当于$$符号<br>      %注意angle C 之间需要有空格<br>  \end{document}</p>
-</blockquote>
-<p>4.LaTeX的字体设置</p>
-<blockquote>
-<p>在LaTeX中，一个字体有5中属性:<br>  1.字体编码<br>    正文字体编码: OT1、T1、EU1等<br>    数字字体编码: OML、OMS、OMX等<br>  2.字体族<br>    罗马字体: 笔画起始处有装饰<br>    \textrm{Roman Family}<br>    \rmfamily Roman Family<br>    无衬线字体: 笔画起始处无装饰<br>    \textsf{Sans Serif Family}<br>    {\sffamily Sans Serif Family}<br>    打字机字体: 每个字符宽度<br>    \texttt{Typewriter Family}<br>    {\ttfamily Typewriter Family}<br>  3.字体系列<br>      粗细<br>      \textmd{Medium Series}<br>      {\mdseries Medium Series}<br>      宽度<br>      \textbf{Boldface Series}<br>      {\bfseries Boldface Series}<br>  4.字体形状<br>    直立<br>    \textup{Upright Shape}<br>    {\upshape Upright Shape}<br>    斜体<br>    \textit{Italic Shape}<br>    {\itshape Italic Shape}<br>    伪斜体<br>    \textsl{Slanted Shape}<br>    {\slshape Slanted Shape}<br>    小型大写<br>    \textsc{Small Caps Shape}<br>    {\scshape Small Caps Shape}<br>  5.字体大小<br>  参看文档<br>  6.中文字体<br>  %需要使用ctex宏包<br>  {\songti 宋体}<br>  {\heiti 黑体}<br>  {\fangsong 仿宋}<br>  {\kaisu 楷书}<br>  %\quad表示空格<br>  %\表示换行<br>  %通常定义命令来实现字体操作<br>  \newcommand{\myfont}{\textit{\textbf{\textsf{Fancy Text}}}} </p>
-</blockquote>
-<p>5.LaTeX的篇章结构</p>
-<blockquote>
-<p>%导言区<br>  \documentclass{ctexbook}%ctexbook, ctexrep<br>  %\usepackage{ctex}<br>  %在导言区可以使用ctexset进行格式设置<br>  %正文区<br>  \begin{document}<br>      \tableofcontents<br>      %题干构建<br>      %\par 实现另起段落<br>      \chapter{实验与结果分析}<br>      \section{引言} %小结<br>      \section{实验方法}<br>      \section{实验结果}<br>      \subsection{数据} %子小结<br>      \subsection{图表}<br>      \subsubsection{实验条件} %子子小结<br>      \subsubsection{实验过程}<br>      \subsection{结果分析}<br>      \section{结论}<br>      \section{致谢}<br>  \end{document}</p>
-</blockquote>
-<p>6.LaTeX中的特殊字符</p>
-<blockquote>
-<p>%导言区<br>  \documentclass{article}<br>  \usepackage{ctex} % 中文处理宏包<br>  \usepackage{xltxtra} %提供了针对XeTeX的改进并且加入XeTeX的LOGO<br>  % 正文区（文稿区）<br>  \begin{document}<br>      \section{空白符号}<br>      % 空行分段，多个空行等同1个<br>      % 自动缩进，绝对不能使用空格代替<br>      % 英文中多个空格处理为1个空格，中文中空格将被忽略<br>    % 汉字与其它字符的间距会自动由XeLaTeX处理<br>    % 禁止使用中文全角空格<br>      \section{\LaTeX 控制符}<br>      # $ % { } ~{} _{} ^{} \textbackslash &amp;<br>      \section{排版符号}<br>      \S \P \dag \ddag \copyright \pounds<br>      \section{\TeX 标志符号}<br>      %基本符号<br>      \TeX{} \LaTeX{} \LaTeXe{}<br>      \XeLaTeX<br>      \section{引号}<br>      ‘ ’ “ ”<br>      \section{连字符}<br>      - – —<br>      \section{非英文字符}<br>      \oe \OE<br>      \section{重音符号(以o为例)}<br>      `o<br>  \end{document}    </p>
-</blockquote>
-<p>7.LaTeX中的插图</p>
-<blockquote>
-<p>% 导言区<br>  \documentclass{ctexart}%ctexbook, ctexrep<br>  %\usepackage{ctex}<br>  % 导言区: \usepackage{graphicx}<br>  % 语  法: \includegraphics[&lt;选项&gt;]{&lt;文件名&gt;}<br>  % 格  式: EPS,PDF,PNG,JPEG,BMP<br>  \usepackage{graphicx}<br>  \graphicspath{figures/}% 此处需要双括号，由于markdown语法原因未打<br>  % 正文区（文稿区）<br>  \begin{document}<br>      \LaTeX{}中的插图:<br>    \includegraphics[scale=0.25]{wallpaper}% 输入图片名,指定缩放因子<br>    \includegraphics[height=5cm]{wallpaper}<br>    \includegraphics[width=10cm]{wallpaper}<br>    %使用texdoc graphicx 查看文档<br>  \end{document}</p>
-</blockquote>
-<p>8.LaTeX中的表格</p>
-<blockquote>
-<p>% 导言区<br>  \documentclass{ctexart}%ctexbook, ctexrep<br>  %\usepackage{ctex}<br>  % 正文区（文稿区）<br>  \begin{document}<br>      \begin{tabular}{|l|c|c|c|p{1.5cm}|}<br>          % l 左对齐 c 居中对齐 r 右对齐 | 产生表格竖线<br>          %空格不起作用 p{&lt;宽&gt;}指定宽度<br>          %当内容超出时自动换行 &amp; 表示不同列<br>          %texdoc booktab<br>          %texdoc longtab<br>          %texdoc tabu<br>          \hline %产生横线<br>          姓名 &amp; 语文 &amp; 数学 &amp; 外语 &amp; 备注 \<br>          \hline %产生横线<br>          张三 &amp; 87 &amp; 100 &amp; 93 &amp; 优秀 \<br>          \hline %产生横线<br>          李四 &amp; 75 &amp; 64 &amp; 52 &amp; 补考另行通知 \<br>          \hline %产生横线<br>          王二 &amp; 80 &amp; 82 &amp; 78 &amp; \<br>          \hline %产生横线<br>      \end{tabular}<br>\end{document}</p>
-</blockquote>
-<p>9.LaTeX中的浮动体</p>
-<blockquote>
-<p>% 导言区<br>  \documentclass{ctexart}%ctexbook, ctexrep<br>  \usepackage{graphicx}<br>  \graphicspath{figures/}<br>  %\usepackage{ctex}<br>  % 正文区（文稿区）<br>  \begin{document}<br>      电脑壁纸见图\ref{fig-wallpaper}% 实现交叉引用<br>      \begin{figure}[htbp]%图形位置 h 当前位置 t 顶部 b 底部 p 浮动页<br>          \centering % 居中排列<br>          \includegraphics[scale=0.25]{wallpaper}% 输入图片名,指定缩放因子<br>          \caption{WallPaper}\label{fig-wallpaper} %设置图片名字 设置浮动体标签<br>      \end{figure}<br>      当然，在\LaTeX{}中也如以下使用表\ref{tab-score}所示的表格<br>      \begin{table}[h]<br>          \centering<br>          \caption{考试成绩单}\label{tab-score}<br>          \begin{tabular}{|l|c|c|c|r|}<br>              \hline %产生横线<br>              姓名 &amp; 语文 &amp; 数学 &amp; 外语 &amp; 备注 \<br>              \hline %产生横线<br>              张三 &amp; 87 &amp; 100 &amp; 93 &amp; 优秀 \<br>              \hline %产生横线<br>              李四 &amp; 75 &amp; 64 &amp; 52 &amp; 补考另行通知 \<br>              \hline %产生横线<br>              王二 &amp; 80 &amp; 82 &amp; 78 &amp; \<br>              \hline %产生横线<br>          \end{tabular}<br>      \end{table}<br>\end{document}</p>
-</blockquote>
+<h2 id="2-LaTeX源文件的基本结构"><a href="#2-LaTeX源文件的基本结构" class="headerlink" title="2.LaTeX源文件的基本结构"></a>2.LaTeX源文件的基本结构</h2>  <pre><code>
+   %导言区 注释
+  \documentclass{article}%book, report, letter 
+  \title{My First Document}
+  \author{Lin Jun}
+  \date{\today}
+  %正文区（文稿区）
+  \begin{document}
+   \maketitle 
 
+   Hello World!
+
+  %在源文件增加空行实现分行
+  Let $f(x)$ be defined by the formula
+  $f(x)=3x^2+x-1$.
+  %使用$符号编辑行内数学公式
+  $$f(x)=3x^2+x-1$$ which is a polynomial of degree 2.
+  %使用$$符号编辑行间数学公式
+  \end{document}
+  </code></pre>
+
+<h2 id="3-LaTeX中的中文处理方法"><a href="#3-LaTeX中的中文处理方法" class="headerlink" title="3.LaTeX中的中文处理方法"></a>3.LaTeX中的中文处理方法</h2><h3 id="1-设置构建的默认编译器为XeLaTeX"><a href="#1-设置构建的默认编译器为XeLaTeX" class="headerlink" title="1.设置构建的默认编译器为XeLaTeX"></a>1.设置构建的默认编译器为XeLaTeX</h3><h3 id="2-设置编辑器的编码格式为UTF-8"><a href="#2-设置编辑器的编码格式为UTF-8" class="headerlink" title="2.设置编辑器的编码格式为UTF-8"></a>2.设置编辑器的编码格式为UTF-8</h3><pre><code>
+  %导言区 注释
+  \documentclass{article}%book, report, letter 
+
+  \usepackage{ctex} %引入中文宏包
+
+  \newcommand\degree{^\circ} %在导言区进行命令的定义
+
+  \title{\heiti 杂谈勾股定理}
+  \author{\kaisu 不二}
+  \date{\today}
+
+  %正文区（文稿区）
+  \begin{document}
+     \maketitle 
+
+      勾股定理可以用现代语言表述如下:
+
+      直角三角形斜边的平方等于两腰的平方和。
+
+      可以用符号语言表述为: 设直角三角形 $ABC$, 其中 $\angle C=90\degree$, 则有:
+      \begin{equation}
+      AB^2 = BC^2 + AC^2.
+      \end{equation}
+      %引入equation环境 相当于$$符号
+      %注意angle C 之间需要有空格
+  \end{document}    
+</code></pre>
+
+<h2 id="4-LaTeX的字体设置"><a href="#4-LaTeX的字体设置" class="headerlink" title="4.LaTeX的字体设置"></a>4.LaTeX的字体设置</h2><pre><code>
+    在LaTeX中，一个字体有5中属性:
+  1.字体编码
+    正文字体编码: OT1、T1、EU1等
+    数字字体编码: OML、OMS、OMX等
+  2.字体族
+    罗马字体: 笔画起始处有装饰
+    \textrm{Roman Family}
+    \rmfamily Roman Family 
+    无衬线字体: 笔画起始处无装饰
+    \textsf{Sans Serif Family}
+    {\sffamily Sans Serif Family}
+    打字机字体: 每个字符宽度 
+    \texttt{Typewriter Family}
+    {\ttfamily Typewriter Family}
+  3.字体系列
+      粗细
+      \textmd{Medium Series}
+      {\mdseries Medium Series}
+      宽度
+      \textbf{Boldface Series}
+      {\bfseries Boldface Series}
+  4.字体形状
+    直立
+    \textup{Upright Shape}
+    {\upshape Upright Shape}
+    斜体
+    \textit{Italic Shape}
+    {\itshape Italic Shape}
+    伪斜体
+    \textsl{Slanted Shape}
+    {\slshape Slanted Shape}
+    小型大写
+    \textsc{Small Caps Shape}
+    {\scshape Small Caps Shape}
+  5.字体大小
+  参看文档
+  6.中文字体
+  %需要使用ctex宏包
+  {\songti 宋体}
+  {\heiti 黑体}
+  {\fangsong 仿宋} 
+  {\kaisu 楷书}     
+  %\quad表示空格
+  %\\表示换行
+  %通常定义命令来实现字体操作
+  \newcommand{\myfont}{\textit{\textbf{\textsf{Fancy Text}}}} 
+</code></pre>
+
+<h2 id="5-LaTeX的篇章结构"><a href="#5-LaTeX的篇章结构" class="headerlink" title="5.LaTeX的篇章结构"></a>5.LaTeX的篇章结构</h2><pre><code>
+   %导言区
+  \documentclass{ctexbook}%ctexbook, ctexrep
+
+  %\usepackage{ctex} 
+
+  %在导言区可以使用ctexset进行格式设置
+
+  %正文区
+
+\begin{document}
+      \tableofcontents
+
+      \chapter{实验与结果分析}
+      \section{引言} %小结 
+      \section{实验方法}  
+      \section{实验结果}
+      \subsection{数据} %子小结
+      \subsection{图表}
+      \subsubsection{实验条件} %子子小结
+      \subsubsection{实验过程}
+      \subsection{结果分析}
+      \section{结论}
+      \section{致谢}
+
+      %题干构建 
+      %\par 实现另起段落
+
+
+\end{document}          
+</code></pre>
+
+<h2 id="6-LaTeX中的特殊字符"><a href="#6-LaTeX中的特殊字符" class="headerlink" title="6.LaTeX中的特殊字符"></a>6.LaTeX中的特殊字符</h2><pre><code>
+   %导言区
+  \documentclass{article}
+  \usepackage{ctex} % 中文处理宏包
+  \usepackage{xltxtra} %提供了针对XeTeX的改进并且加入XeTeX的LOGO
+  % 正文区（文稿区）
+  \begin{document}
+      \section{空白符号}
+      % 空行分段，多个空行等同1个
+      % 自动缩进，绝对不能使用空格代替
+      % 英文中多个空格处理为1个空格，中文中空格将被忽略
+    % 汉字与其它字符的间距会自动由XeLaTeX处理
+    % 禁止使用中文全角空格
+      \section{\LaTeX 控制符}
+      \# \$ \% \{ \} \~{} \_{} \^{} \textbackslash \&
+      \section{排版符号}
+      \S \P \dag \ddag \copyright \pounds
+      \section{\TeX 标志符号}
+      %基本符号
+      \TeX{} \LaTeX{} \LaTeXe{}
+      \XeLaTeX
+      \section{引号}
+      ‘ ’ “ ”
+      \section{连字符}
+      - -- ---
+      \section{非英文字符}
+      \oe \OE
+      \section{重音符号(以o为例)}
+      \`o
+  \end{document}    
+</code></pre>
+
+<h2 id="7-LaTeX中的插图"><a href="#7-LaTeX中的插图" class="headerlink" title="7.LaTeX中的插图"></a>7.LaTeX中的插图</h2><pre><code>
+    % 导言区
+    \documentclass{ctexart}%ctexbook, ctexrep
+    %\usepackage{ctex}
+    % 导言区: \usepackage{graphicx}
+    % 语  法: \includegraphics[<选项>]{<文件名>}
+    % 格  式: EPS,PDF,PNG,JPEG,BMP
+    \usepackage{graphicx}    
+    \graphicspath{{figures/}}% 此处需要双括号
+    % 正文区（文稿区）
+    \begin{document}
+    \LaTeX{}中的插图:
+    \includegraphics[scale=0.25]{wallpaper}% 输入图片名,指定缩放因子
+    %\includegraphics[height=5cm]{wallpaper}
+    %\includegraphics[width=10cm]{wallpaper}
+    %使用texdoc graphicx 查看文档
+    \end{document}
+</code></pre>
+
+<h2 id="8-LaTeX中的表格"><a href="#8-LaTeX中的表格" class="headerlink" title="8.LaTeX中的表格"></a>8.LaTeX中的表格</h2><pre><code>
+      % 导言区
+  \documentclass{ctexart}%ctexbook, ctexrep
+  %\usepackage{ctex}
+  % 正文区（文稿区）
+  \begin{document}
+      \begin{tabular}{|l|c|c|c|p{1.5cm}|}
+          % l 左对齐 c 居中对齐 r 右对齐 | 产生表格竖线 
+          %空格不起作用 p{<宽>}指定宽度 
+          %当内容超出时自动换行 & 表示不同列
+          %texdoc booktab
+          %texdoc longtab
+          %texdoc tabu
+          \hline %产生横线
+          姓名 & 语文 & 数学 & 外语 & 备注 \\
+          \hline %产生横线
+          张三 & 87 & 100 & 93 & 优秀 \\
+          \hline %产生横线
+          李四 & 75 & 64 & 52 & 补考另行通知 \\
+          \hline %产生横线
+          王二 & 80 & 82 & 78 & \\ 
+          \hline %产生横线
+
+      \end{tabular}
+\end{document}
+</code></pre>
+
+<h2 id="9-LaTeX中的浮动体"><a href="#9-LaTeX中的浮动体" class="headerlink" title="9.LaTeX中的浮动体"></a>9.LaTeX中的浮动体</h2><pre><code>
+    % 导言区
+  \documentclass{ctexart}%ctexbook, ctexrep
+  \usepackage{graphicx}    
+  \graphicspath{figures/}
+  %\usepackage{ctex}
+  % 正文区（文稿区）
+  \begin{document}
+      电脑壁纸见图\ref{fig-wallpaper}% 实现交叉引用
+      \begin{figure}[htbp]%图形位置 h 当前位置 t 顶部 b 底部 p 浮动页
+          \centering % 居中排列
+          \includegraphics[scale=0.25]{wallpaper}% 输入图片名,指定缩放因子
+          \caption{WallPaper}\label{fig-wallpaper} %设置图片名字 设置浮动体标签
+      \end{figure}
+
+      当然，在\LaTeX{}中也如以下使用表\ref{tab-score}所示的表格
+      \begin{table}[h]
+          \centering
+          \caption{考试成绩单}\label{tab-score}
+          \begin{tabular}{|l|c|c|c|r|}
+              \hline %产生横线
+              姓名 & 语文 & 数学 & 外语 & 备注 \\
+              \hline %产生横线
+              张三 & 87 & 100 & 93 & 优秀 \\
+              \hline %产生横线
+              李四 & 75 & 64 & 52 & 补考另行通知 \\
+              \hline %产生横线
+              王二 & 80 & 82 & 78 & \\ 
+              \hline %产生横线    
+          \end{tabular}
+      \end{table}
+
+\end{document}
+</code></pre>
+
+<h2 id="10-LaTeX数学公式初步"><a href="#10-LaTeX数学公式初步" class="headerlink" title="10.LaTeX数学公式初步"></a>10.LaTeX数学公式初步</h2><pre><code>
+    % 导言区
+\documentclass{article}%ctexbook, ctexrep
+
+\usepackage{ctex}
+\usepackage{amsmath}
+
+% 正文区（文稿区）
+\begin{document}
+    \section{简介}
+    \LaTeX{}将排版内容分为文本模式和数学模式。文本模式用于普通文本排版，数学模式用于数学公式排版。
+    \section{行内公式}
+    \subsection{美元符号}
+    交换律是 $a+b=b+a$,如 $1+2=2+1=3$。
+    \subsection{小括号}
+    交换律是 \(a+b=b+a\),如 \(1+2=2+1=3\)。
+    \subsection{math环境}
+    交换律是 \begin{math}a+b=b+a\end{math},如\begin{math}
+    1+2=2+1=3\end{math}
+    \section{上下标}
+    \subsection{上标}
+    $3x^{20} - x + 2 = 0$
+
+    $3x^{3x^{20} - x + 2} - x + 2 = 0$
+    \subsection{下标}
+    $a_0,a_1,a_2$
+
+    $a_0,a_1,a_2,...,a_{3x^{20} - x + 2}$
+    \section{希腊字母}
+    $\alpha$
+    $\beta$
+    $\gamma$
+    $\epsilon$
+    $\pi$
+    $\omega$
+
+    $\Gamma$
+    $\Delta$
+    $\Theta$
+    $\Pi$
+    $\Omega$
+
+    $\alpha^3 + \beta^2 + \gamma = 0$
+    \section{数字函数}
+    $\log$
+    $\sin$
+    $\cos$
+    $\arcsin$
+    $\arccos$
+    $\ln$
+
+    $\sin^2 x + \cos^2 x = 1$
+    $y = \arcsin x$
+
+    $y = \sin^{-1} x$ 
+
+    $y = \log_2 x$
+
+    $y = \ln x$
+
+    $\sqrt{2}$
+    $\sqrt{x^2 + y^2}$
+    $\sqrt{2 + \sqrt{2}}$
+    $\sqrt[4]{x}$ %通过[]指定开方的次数
+    \section{分式}
+    大约是原体积的$3/4$。
+    大约是原体积的$\frac{3}{4}$。
+
+    $\frac{x}{x^2 + x +1}$
+
+    $\frac{\sqrt{x-1}}{\sqrt{x+1}}$
+
+    $\frac{1}{1+ \frac{1}{x}}$
+
+    $\sqrt{\frac{x}{x^2 + x + 1}}$
+
+    \section{行间公式}
+    \subsection{美元符号}
+    交换律是 $$a+b=b+a$$
+    如 $$1+2=2+1=3$$
+    \subsection{中括号}
+     \[a+b=b+a\]
+     如
+     \[1+2=2+1=3\]
+    \subsection{displaymath环境}
+    \begin{displaymath}
+        a+b=b+a,
+    \end{displaymath},
+    如
+    \begin{displaymath}
+        1+2=2+1=3.
+    \end{displaymath}
+    \subsection{自动编号公式equation环境}
+    交换律见式\ref{eq:commutative}
+    \begin{equation}
+        a+b=b+a \label{eq:commutative}
+    \end{equation}
+    \subsection{不编号公式equation*环境}
+    交换律见式\ref{eq:commutative2}
+    \begin{equation*}
+    a+b=b+a \label{eq:commutative2}
+    \end{equation*}
+\end{document}
+</code></pre>
+
+<h2 id="11-LaTeX数学公式的矩阵"><a href="#11-LaTeX数学公式的矩阵" class="headerlink" title="11.LaTeX数学公式的矩阵"></a>11.LaTeX数学公式的矩阵</h2><pre><code>
+\documentclass{ctexart}%ctexbook, ctexrep
+%\usepackage{ctex}
+\usepackage{amsmath}
+% 正文区（文稿区）
+\begin{document}
+    %矩阵环境，用&分隔列，用\\分隔行
+    \[
+    \begin{matrix}
+    0 & 1\\
+    1 & 0
+    \end{matrix} \qquad
+    % pmatrix环境 加小括号
+    \begin{pmatrix}
+    0 & -i\\
+    i & 0
+    \end{pmatrix} \qquad
+    % bmatrix环境 加中括号
+    \begin{bmatrix}
+    0 & -i\\
+    i & 0
+    \end{bmatrix} \qquad
+    % Bmatrix环境 加大括号
+    \begin{Bmatrix}
+    0 & -i\\
+    i & 0
+    \end{Bmatrix} \qquad
+    % vmatrix环境 加单竖线
+    \begin{vmatrix}
+    0 & -i\\
+    i & 0
+    \end{vmatrix} \qquad
+    % Vmatrix环境 加双竖线
+    \begin{Vmatrix}
+    0 & -i\\
+    i & 0
+    \end{Vmatrix} 
+    \]
+
+    % 可以使用上下标
+    \[
+    A = \begin{pmatrix}
+    a_{11}^2 & a_{12}^2 & a_{13}^2 \\
+    0 & a_{22} & a_{23} \\
+    0 & 0 & a_{33}
+    \end{pmatrix}
+    \]
+
+    %常用省略号：\dots,\vdots,\ddots
+    \[
+    A = \begin{pmatrix}
+    a_{11} & \dots & a_{1n} \\
+    & \ddots & \vdots \\
+    0 & & a_{mn}
+    \end{pmatrix}_{n \times n}% times命令排版乘号
+    \]
+\end{document}
+</code></pre>
+
+<h2 id="12-LaTeX中的多行数学公式"><a href="#12-LaTeX中的多行数学公式" class="headerlink" title="12.LaTeX中的多行数学公式"></a>12.LaTeX中的多行数学公式</h2><pre><code>
+% 导言区
+\documentclass{ctexart}%ctexbook, ctexrep
+
+%\usepackage{ctex}
+\usepackage{amsmath}
+\usepackage{amssymb}
+
+% 正文区（文稿区）
+\begin{document}
+    % gather 和 gather* 环境 (可以使用\\换行)
+
+    % 带编号
+    \begin{gather}
+        a + b = b + a \\
+        ab ba
+    \end{gather}
+
+    % 不带编号
+    \begin{gather*}
+    3+5 = 5+3 = 8 \\
+    3 \times 5 = 5 \times 3
+    \end{gather*}
+
+    % 在\\前使用\notag 阻止编号
+    \begin{gather}
+        3^2 + 4^2 = 5^2 \notag \\
+        5^2 + 12^2 = 13^2 \notag \\
+        a^2 + b^2 = c^2 
+    \end{gather}
+
+    % align 和 align* 环境 (用 & 进行对齐)
+    % 带编号
+    \begin{align}
+    x &= t + \cos t + 1 \\
+    y &= 2\sin t
+    \end{align}
+    % 不带编号
+    \begin{align*}
+        x &= t & x &= \cos t & x &= t \\
+        y &= 2t & y &= \sin(t+1) & y &= \sin t 
+    \end{align*}
+
+    % split 环境(对齐采用 align 环境的方式，编号在中间)
+    \begin{equation}
+    \begin{split}
+    \cos 2x &= \cos^2 x - \sin^2 x \\
+    &= 2\cos^2 x - 1
+    \end{split}
+    \end{equation}
+
+    % cases 环境
+    % 每行公式中使用 &　分隔为两部分，
+    %　通常表示值和后面的条件
+    \begin{equation}
+        D(x) = \begin{cases}
+        1, & \text{如果 } x \in \mathbb{Q}; \\ %\in 用于输出属于符号 mathbb用于输出花体字符 \text{} 用于在数学模式中输入中文
+        0, & \text{如果 } x \in \mathbb{R}\setminus\mathbb{Q}.
+        \end{cases}
+    \end{equation} 
+\end{document}
+
+</code></pre>
+
+<h2 id="13-LaTeX中的参考文献——BibTex"><a href="#13-LaTeX中的参考文献——BibTex" class="headerlink" title="13.LaTeX中的参考文献——BibTex"></a>13.LaTeX中的参考文献——BibTex</h2><ol>
+<li>在构件中设置默认文献工具为BibTex</li>
+<li>在谷歌学术中点击引用链接获取BibTex格式的数据</li>
+<li>新建.bib后缀的文件，复制获取参考文献数据</li>
+</ol>
+<h3 id="tex文件如下"><a href="#tex文件如下" class="headerlink" title=".tex文件如下"></a>.tex文件如下</h3><pre><code>
+% 导言区
+\documentclass{ctexart}%ctexbook, ctexrep
+
+%\usepackage{ctex}
+
+\bibliographystyle{plain}%指定排版样式 如plain unsrt alpha abbrv
+
+% 正文区（文稿区）
+\begin{document}
+    %一次管理，一次使用
+    %参考文献格式：
+    %\begin{thebibliography}{编号样本}
+    %    \bibitem[label]{citekey}文献条目1
+    %   \bibitem[label]{citekey}文献条目2
+    %    ……
+    %\end{thebibliography}
+    %其中文献条目包括：作者，题目，出版社，年代，版本，页码等。
+    %引用时候要可以采用：\cite{引用标志1，引用标志2，……}
+    引用一本Guide\cite{latexGuide}等等
+    \begin{thebibliography}{99}
+        \bibitem{latexGuide} Kopka Helmut, W. Daly Patrick,
+        \emph{Guide to \LaTeX}, $4^{th}$ Edition.
+        Available at \texttt{http://www.amazon.com}.
+    \end{thebibliography}
+    这是一个参考文献的引用：\cite{scott1988social}
+    \bibliography{test}
+\end{document}
+</code></pre>
+
+<h3 id="bib文件如下"><a href="#bib文件如下" class="headerlink" title=".bib文件如下"></a>.bib文件如下</h3><pre><code>
+  @article{scott1988social,
+  title={Social network analysis},
+  author={Scott, John},
+  journal={Sociology},
+  volume={22},
+  number={1},
+  pages={109--127},
+  year={1988},
+  publisher={British Sociological Association Publications Limited}
+}
+</code></pre>
+
+<h2 id="15-LaTeX中定义新命令和环境"><a href="#15-LaTeX中定义新命令和环境" class="headerlink" title="15.LaTeX中定义新命令和环境"></a>15.LaTeX中定义新命令和环境</h2><pre><code>
+    % 导言区
+\documentclass{ctexart}%ctexbook, ctexrep
+
+% \newcommand{cmd}{def}定义命令
+% 命令只能由字母组成，不能以\end 开头
+% \newcommand{命令}[参数个数][首字母默认值]{具体定义}
+
+% \newcommand可以是简单字符串替代，例如：
+% 使用\PRC 相当于 People's Republic of \emph{China} 这一串内容
+\newcommand\PRC{People's Republic of \emph{China}}%\emph{text}表示强调
+
+% \newcommand也可以使用参数
+% 参数个数可以从1到9，使用时用 #1，#2，……，#9 表示
+\newcommand\loves[2]{#1 喜欢 #2}
+\newcommand\hatedby[2]{#2 不受 #1 喜欢}
+
+% \newcommand的参数也可以有默认值
+% 指定参数个数的同时指定了首个参数的默认值，那么这个命令的
+% 第一个参数就成为可选的参数(要使用中括号指定)
+\newcommand\love[3][喜欢]{#2#1#3}
+
+% \renewcommand-重定义命令
+% 与\newcommand 命令作用和用法相同，但只能用于已有命令
+% \renewcommand{cmd}[args][default]{def}
+\renewcommand\abstractname{内容简介}
+
+% 定义和重定义环境
+% \newenvironment{name}[args][default]{begdef}{enddef}
+% \renewenvironment{name}[args][default]{begdef}{enddef}
+
+% 为 book 类中定义摘要(abstract) 环境
+\newenvironment{myabstract}[1][摘要]%
+{\small
+    \begin{center}\bfseries #1\end{center}%
+    \begin{quotation}}%
+{    
+    \end{quotation}
+}
+
+% 正文区（文稿区）
+\begin{document}
+    \PRC
+
+    \loves{猫儿}{鱼}
+
+    \hatedby{猫儿}{萝卜}
+
+    \love{猫儿}{鱼}
+
+    \love[最爱]{猫儿}{鱼}
+
+    \begin{abstract}
+        这是一段摘要...
+    \end{abstract}
+
+    \begin{myabstract}[我的摘要]
+        这是一段自定义格式的摘要...
+    \end{myabstract}
+
+\end{document}
+</code></pre>
+
+<h1 id="完整的演示代码见Github仓库https-github-com-Gemini-Lin-MCM-ICM"><a href="#完整的演示代码见Github仓库https-github-com-Gemini-Lin-MCM-ICM" class="headerlink" title="完整的演示代码见Github仓库https://github.com/Gemini-Lin/MCM-ICM"></a>完整的演示代码见Github仓库<a href="https://github.com/Gemini-Lin/MCM-ICM" target="_blank" rel="noopener">https://github.com/Gemini-Lin/MCM-ICM</a></h1>
       
     </div>
     
@@ -632,9 +1179,18 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -735,6 +1291,22 @@
       </section>
 
       
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-LaTeX环境的安装与配置"><span class="nav-number">1.</span> <span class="nav-text">1.LaTeX环境的安装与配置</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-LaTeX源文件的基本结构"><span class="nav-number">2.</span> <span class="nav-text">2.LaTeX源文件的基本结构</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-LaTeX中的中文处理方法"><span class="nav-number">3.</span> <span class="nav-text">3.LaTeX中的中文处理方法</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-设置构建的默认编译器为XeLaTeX"><span class="nav-number">3.1.</span> <span class="nav-text">1.设置构建的默认编译器为XeLaTeX</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-设置编辑器的编码格式为UTF-8"><span class="nav-number">3.2.</span> <span class="nav-text">2.设置编辑器的编码格式为UTF-8</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-LaTeX的字体设置"><span class="nav-number">4.</span> <span class="nav-text">4.LaTeX的字体设置</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#5-LaTeX的篇章结构"><span class="nav-number">5.</span> <span class="nav-text">5.LaTeX的篇章结构</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#6-LaTeX中的特殊字符"><span class="nav-number">6.</span> <span class="nav-text">6.LaTeX中的特殊字符</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#7-LaTeX中的插图"><span class="nav-number">7.</span> <span class="nav-text">7.LaTeX中的插图</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#8-LaTeX中的表格"><span class="nav-number">8.</span> <span class="nav-text">8.LaTeX中的表格</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#9-LaTeX中的浮动体"><span class="nav-number">9.</span> <span class="nav-text">9.LaTeX中的浮动体</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#10-LaTeX数学公式初步"><span class="nav-number">10.</span> <span class="nav-text">10.LaTeX数学公式初步</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#11-LaTeX数学公式的矩阵"><span class="nav-number">11.</span> <span class="nav-text">11.LaTeX数学公式的矩阵</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#12-LaTeX中的多行数学公式"><span class="nav-number">12.</span> <span class="nav-text">12.LaTeX中的多行数学公式</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#13-LaTeX中的参考文献——BibTex"><span class="nav-number">13.</span> <span class="nav-text">13.LaTeX中的参考文献——BibTex</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#tex文件如下"><span class="nav-number">13.1.</span> <span class="nav-text">.tex文件如下</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#bib文件如下"><span class="nav-number">13.2.</span> <span class="nav-text">.bib文件如下</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#15-LaTeX中定义新命令和环境"><span class="nav-number">14.</span> <span class="nav-text">15.LaTeX中定义新命令和环境</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#完整的演示代码见Github仓库https-github-com-Gemini-Lin-MCM-ICM"><span class="nav-number"></span> <span class="nav-text">完整的演示代码见Github仓库https:&#x2F;&#x2F;github.com&#x2F;Gemini-Lin&#x2F;MCM-ICM</span></a></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
 
       
 
@@ -762,7 +1334,7 @@
     
       <span class="post-meta-item-text">Site words total count&#58;</span>
     
-    <span title="Site words total count">3.3k</span>
+    <span title="Site words total count">4.8k</span>
   
 </div>
 
