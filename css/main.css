@@ -741,6 +741,20 @@ pre .javascript .function {
   max-width: 150px;
   max-height: 150px;
 }
+.exturl {
+  background-color: transparent;
+  cursor: pointer;
+  border-bottom: 1px solid #999;
+}
+.exturl .fa {
+  font-size: 14px;
+}
+.exturl:active,
+.exturl:hover {
+  outline: 0;
+  color: #222;
+  border-bottom-color: #222;
+}
 .post-body .note {
   position: relative;
   padding: 15px;
@@ -1995,7 +2009,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #a7c38f;
+  background: #ff94ff;
 }
 .links-of-blogroll {
   font-size: 13px;
@@ -3329,4 +3343,10 @@ body {
 }
 .header-inner {
   opacity: 1;
+}
+.post-toc .nav .nav-child {
+  display: block;
+}
+.post-toc ol {
+  font-size: 13px;
 }
