@@ -2009,7 +2009,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #ffff46;
+  background: #b12f85;
 }
 .links-of-blogroll {
   font-size: 13px;
@@ -3331,7 +3331,7 @@ pre .javascript .function {
   }
 }
 body {
-  background: url("http://i1.fuimg.com/707843/c077df3f3486783e.jpg");
+  background: url("https://s1.ax1x.com/2020/03/29/GVyqeI.png");
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
@@ -3339,10 +3339,10 @@ body {
 }
 .main-inner {
   background: #fff;
-  opacity: 1;
+  opacity: 0.9;
 }
 .header-inner {
-  opacity: 1;
+  opacity: 0.9;
 }
 .post-toc .nav .nav-child {
   display: block;
