@@ -1,6 +1,28 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>Github入门教学</title>
+    <url>/2020/05/14/Github%E5%85%A5%E9%97%A8%E6%95%99%E5%AD%A6/</url>
+    <content><![CDATA[<h1 id="GitHub入门教学（Git，界面介绍，搜索）"><a href="#GitHub入门教学（Git，界面介绍，搜索）" class="headerlink" title="GitHub入门教学（Git，界面介绍，搜索）"></a>GitHub入门教学（Git，界面介绍，搜索）</h1><h2 id="前提：Git使用"><a href="#前提：Git使用" class="headerlink" title="前提：Git使用"></a>前提：Git使用</h2><p>GitHub是基于Git开发得到，学习Git是了解GitHub的前提，在这里我推荐一个特别喜欢的学习教程。</p>
+<p><a href="https://www.liaoxuefeng.com/wiki/896043488029600" target="_blank" rel="noopener">廖雪峰Git教学</a></p>
+<p>简单示例</p>
+<figure class="highlight avrasm"><table><tr><td class="code"><pre><span class="line">mkdir learngit <span class="meta">#创建一个空白目录</span></span><br><span class="line">cd learngit </span><br><span class="line"></span><br><span class="line">git init <span class="meta">#把这个目录变成Git可以管理的仓库</span></span><br><span class="line"></span><br><span class="line">git <span class="keyword">add</span> readme.txt <span class="meta">#把文件添加到仓库</span></span><br><span class="line"></span><br><span class="line">git commit -m <span class="string">"wrote a readme file"</span> <span class="meta">#把文件提交给仓库</span></span><br><span class="line"></span><br><span class="line">git <span class="keyword">push</span> -u origin master <span class="meta">#把本地仓库中的所有内容上传到远程库</span></span><br></pre></td></tr></table></figure>
+<p><img src="https://www.liaoxuefeng.com/files/attachments/919020037470528/0" alt="image"></p>
+<h2 id="GitHub介绍-敲黑板"><a href="#GitHub介绍-敲黑板" class="headerlink" title="GitHub介绍(敲黑板)"></a>GitHub介绍(敲黑板)</h2><p>Keywords：</p>
+<p>版本分支介绍，版本分支比较，Issue，Pull Request，Projects，wiki，github pages</p>
+<h2 id="GitHub搜索开源项目"><a href="#GitHub搜索开源项目" class="headerlink" title="GitHub搜索开源项目"></a>GitHub搜索开源项目</h2><p>开源项目的搜索方法</p>
+<figure class="highlight avrasm"><table><tr><td class="code"><pre><span class="line"><span class="symbol">pushed:</span>&gt;<span class="number">2020</span><span class="number">-05</span><span class="number">-15</span>   <span class="meta"># 在最近这一天修改过</span></span><br><span class="line"><span class="symbol">in:</span>name [关键字]  <span class="meta"># 名字里面包含关键字</span></span><br><span class="line"><span class="symbol">in:</span>readme [关键字] <span class="meta"># readme里面包含关键字</span></span><br><span class="line"><span class="symbol">in:</span>description 【关键字】<span class="meta"># 描述里面包含关键字</span></span><br><span class="line"><span class="symbol">forks:</span>&gt;<span class="number">4</span> <span class="meta"># stars数量大于4的项目</span></span><br><span class="line"><span class="symbol">stars:</span>&gt;<span class="number">1000</span>  <span class="meta"># stars数量大于1000的项目</span></span><br><span class="line"><span class="symbol">langusge:</span>java  <span class="meta"># 使用java作为开发语言</span></span><br></pre></td></tr></table></figure>
+
+<p>简单示例</p>
+<figure class="highlight vim"><table><tr><td class="code"><pre><span class="line">in:description 爬虫 <span class="keyword">star</span><span class="variable">s:</span>&gt;<span class="number">100</span>  <span class="keyword">language</span>:<span class="keyword">python</span></span><br></pre></td></tr></table></figure>]]></content>
+      <categories>
+        <category>工具分享</category>
+      </categories>
+      <tags>
+        <tag>GitHub</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>数学建模算法汇总</title>
     <url>/2020/02/02/%E6%95%B0%E5%AD%A6%E5%BB%BA%E6%A8%A1%E7%AE%97%E6%B3%95%E6%B1%87%E6%80%BB/</url>
     <content><![CDATA[<p><img src="https://i.loli.net/2020/02/03/AiDVdhUEBgYKtQz.png" alt="image.png"></p>
@@ -362,9 +384,11 @@
 <blockquote>
 <p>Step5: 安装成功<br><img src="https://s1.ax1x.com/2020/03/29/GVcM8S.png" alt="GVcM8S.png"><br> <img src="https://s1.ax1x.com/2020/03/29/GVcQgg.png" alt="GVcQgg.png"></p>
 </blockquote>
+<h2 id="VPN推荐"><a href="#VPN推荐" class="headerlink" title="VPN推荐"></a>VPN推荐</h2><p>20元一个月，特别稳定，网速快。</p>
+<p><a href="https://efanccyun.net/" target="_blank" rel="noopener">饿饭CC云</a></p>
 ]]></content>
       <categories>
-        <category>上网工具</category>
+        <category>工具分享</category>
       </categories>
       <tags>
         <tag>Google</tag>
