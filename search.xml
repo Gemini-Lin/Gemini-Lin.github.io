@@ -14,7 +14,9 @@
 <figure class="highlight avrasm"><table><tr><td class="code"><pre><span class="line"><span class="symbol">pushed:</span>&gt;<span class="number">2020</span><span class="number">-05</span><span class="number">-15</span>   <span class="meta"># 在最近这一天修改过</span></span><br><span class="line"><span class="symbol">in:</span>name [关键字]  <span class="meta"># 名字里面包含关键字</span></span><br><span class="line"><span class="symbol">in:</span>readme [关键字] <span class="meta"># readme里面包含关键字</span></span><br><span class="line"><span class="symbol">in:</span>description 【关键字】<span class="meta"># 描述里面包含关键字</span></span><br><span class="line"><span class="symbol">forks:</span>&gt;<span class="number">4</span> <span class="meta"># stars数量大于4的项目</span></span><br><span class="line"><span class="symbol">stars:</span>&gt;<span class="number">1000</span>  <span class="meta"># stars数量大于1000的项目</span></span><br><span class="line"><span class="symbol">langusge:</span>java  <span class="meta"># 使用java作为开发语言</span></span><br></pre></td></tr></table></figure>
 
 <p>简单示例</p>
-<figure class="highlight vim"><table><tr><td class="code"><pre><span class="line">in:description 爬虫 <span class="keyword">star</span><span class="variable">s:</span>&gt;<span class="number">100</span>  <span class="keyword">language</span>:<span class="keyword">python</span></span><br></pre></td></tr></table></figure>]]></content>
+<figure class="highlight vim"><table><tr><td class="code"><pre><span class="line">in:description 爬虫 <span class="keyword">star</span><span class="variable">s:</span>&gt;<span class="number">100</span>  <span class="keyword">language</span>:<span class="keyword">python</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="B站视频链接"><a href="#B站视频链接" class="headerlink" title="B站视频链接"></a><a href="https://www.bilibili.com/video/BV1ea4y1i7NN/" target="_blank" rel="noopener">B站视频链接</a></h2>]]></content>
       <categories>
         <category>工具分享</category>
       </categories>
