@@ -1,6 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>汇编语言学习总结</title>
+    <url>/2020/05/19/%E6%B1%87%E7%BC%96%E8%AF%AD%E8%A8%80%E5%AD%A6%E4%B9%A0%E6%80%BB%E7%BB%93/</url>
+    <content><![CDATA[<h1 id="基础知识"><a href="#基础知识" class="headerlink" title="基础知识"></a>基础知识</h1><h1 id="寄存器"><a href="#寄存器" class="headerlink" title="寄存器"></a>寄存器</h1><h1 id="寄存器-内存访问"><a href="#寄存器-内存访问" class="headerlink" title="寄存器(内存访问)"></a>寄存器(内存访问)</h1><h1 id="第一个程序"><a href="#第一个程序" class="headerlink" title="第一个程序"></a>第一个程序</h1><h1 id="BX-和loop指令"><a href="#BX-和loop指令" class="headerlink" title="[BX]和loop指令"></a>[BX]和loop指令</h1><h1 id="包含多个段的程序"><a href="#包含多个段的程序" class="headerlink" title="包含多个段的程序"></a>包含多个段的程序</h1><h1 id="更灵活的定位内存地址的方法"><a href="#更灵活的定位内存地址的方法" class="headerlink" title="更灵活的定位内存地址的方法"></a>更灵活的定位内存地址的方法</h1><h1 id="数据处理的两个基本问题"><a href="#数据处理的两个基本问题" class="headerlink" title="数据处理的两个基本问题"></a>数据处理的两个基本问题</h1><h1 id="转移指令的原理"><a href="#转移指令的原理" class="headerlink" title="转移指令的原理"></a>转移指令的原理</h1><h1 id="CALL-和-RET-指令"><a href="#CALL-和-RET-指令" class="headerlink" title="CALL 和 RET 指令"></a>CALL 和 RET 指令</h1>]]></content>
+      <categories>
+        <category>课程总结</category>
+      </categories>
+      <tags>
+        <tag>汇编语言</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>JAVA后端开发学习路线</title>
     <url>/2020/05/18/java%E5%90%8E%E7%AB%AF%E5%BC%80%E5%8F%91%E5%AD%A6%E4%B9%A0%E8%B7%AF%E7%BA%BF/</url>
     <content><![CDATA[<h1 id="JAVA学习路线"><a href="#JAVA学习路线" class="headerlink" title="JAVA学习路线"></a>JAVA学习路线</h1><p><img src="http://assets.processon.com/chart_image/5ec28f620791290fe06e73f8.png" alt="思维导图"><br><a href="https://www.processon.com/embed/5ec28f620791290fe06e73f5" target="_blank" rel="noopener">思维导图在线链接</a><br>感谢来自CodeSheep大神的总结，<a href="https://www.bilibili.com/video/BV1GQ4y1N7HD" target="_blank" rel="noopener">视频链接</a></p>
