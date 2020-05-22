@@ -5,7 +5,7 @@
   
 
 
-<html class="theme-next gemini use-motion" lang="zh-Hans">
+<html class="theme-next gemini use-motion" lang="English">
 <head>
   <meta charset="UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -103,13 +103,13 @@
     root: '/',
     scheme: 'Gemini',
     version: '5.1.4',
-    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":true,"onmobile":false},
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":true,"scrollpercent":true,"onmobile":false},
     fancybox: true,
     tabs: true,
     motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
     duoshuo: {
       userId: '0',
-      author: '博主'
+      author: 'Author'
     },
     algolia: {
       applicationID: '',
@@ -141,7 +141,7 @@
 
 <meta name="generator" content="Hexo 4.1.1"></head>
 
-<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+<body itemscope itemtype="http://schema.org/WebPage" lang="English">
 
   
   
@@ -166,7 +166,7 @@
       </a>
     </div>
       
-        <p class="site-subtitle">Hello，My Little Prince !</p>
+        <h1 class="site-subtitle" itemprop="description">Hello，My Little Prince !</h1>
       
   </div>
 
@@ -191,7 +191,7 @@
             
               <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
             
-            首页
+            Home
           </a>
         </li>
       
@@ -201,7 +201,7 @@
             
               <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
             
-            关于
+            About
           </a>
         </li>
       
@@ -211,7 +211,7 @@
             
               <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
             
-            标签
+            Tags
           </a>
         </li>
       
@@ -221,7 +221,7 @@
             
               <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
             
-            分类
+            Categories
           </a>
         </li>
       
@@ -231,7 +231,7 @@
             
               <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
             
-            归档
+            Archives
           </a>
         </li>
       
@@ -244,7 +244,7 @@
             
               <i class="menu-item-icon fa fa-search fa-fw"></i> <br />
             
-            搜索
+            Search
           </a>
         </li>
       
@@ -264,7 +264,7 @@
     </span>
     <div class="local-search-input-wrapper">
       <input autocomplete="off"
-             placeholder="搜索..." spellcheck="false"
+             placeholder="Searching..." spellcheck="false"
              type="text" id="local-search-input">
     </div>
   </div>
@@ -319,9 +319,9 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">
+          <h2 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2020/05/19/%E6%B1%87%E7%BC%96%E8%AF%AD%E8%A8%80%E5%AD%A6%E4%B9%A0%E6%80%BB%E7%BB%93/" itemprop="url">汇编语言学习总结</a></h1>
+                <a class="post-title-link" href="/2020/05/19/%E6%B1%87%E7%BC%96%E8%AF%AD%E8%A8%80%E5%AD%A6%E4%B9%A0%E6%80%BB%E7%BB%93/" itemprop="url">汇编语言学习总结</a></h2>
         
 
         <div class="post-meta">
@@ -331,15 +331,27 @@
                 <i class="fa fa-calendar-o"></i>
               </span>
               
-                <span class="post-meta-item-text">发表于</span>
+                <span class="post-meta-item-text">Posted on</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2020-05-19T17:07:02+08:00">
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2020-05-19T17:07:02+08:00">
                 2020-05-19
               </time>
             
 
             
+              <span class="post-meta-divider">|</span>
+            
 
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-check-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Post modified&#58;</span>
+              
+              <time title="Post modified" itemprop="dateModified" datetime="2020-05-19T17:12:43+08:00">
+                2020-05-19
+              </time>
             
           </span>
 
@@ -352,7 +364,7 @@
                 <i class="fa fa-folder-o"></i>
               </span>
               
-                <span class="post-meta-item-text">分类于</span>
+                <span class="post-meta-item-text">In</span>
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
@@ -384,9 +396,9 @@
                   <i class="fa fa-file-word-o"></i>
                 </span>
                 
-                  <span class="post-meta-item-text">字数统计&#58;</span>
+                  <span class="post-meta-item-text">Words count in article&#58;</span>
                 
-                <span title="字数统计">
+                <span title="Words count in article">
                   67
                 </span>
               
@@ -400,9 +412,9 @@
                   <i class="fa fa-clock-o"></i>
                 </span>
                 
-                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                  <span class="post-meta-item-text">Reading time &asymp;</span>
                 
-                <span title="阅读时长">
+                <span title="Reading time">
                   1
                 </span>
               
@@ -431,7 +443,7 @@
           <!--noindex-->
           <div class="post-button text-center">
             <a class="btn" href="/2020/05/19/%E6%B1%87%E7%BC%96%E8%AF%AD%E8%A8%80%E5%AD%A6%E4%B9%A0%E6%80%BB%E7%BB%93/#more" rel="contents">
-              阅读全文 &raquo;
+              Read more &raquo;
             </a>
           </div>
           <!--/noindex-->
@@ -501,9 +513,9 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">
+          <h2 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2020/05/18/java%E5%90%8E%E7%AB%AF%E5%BC%80%E5%8F%91%E5%AD%A6%E4%B9%A0%E8%B7%AF%E7%BA%BF/" itemprop="url">JAVA后端开发学习路线</a></h1>
+                <a class="post-title-link" href="/2020/05/18/java%E5%90%8E%E7%AB%AF%E5%BC%80%E5%8F%91%E5%AD%A6%E4%B9%A0%E8%B7%AF%E7%BA%BF/" itemprop="url">JAVA后端开发学习路线</a></h2>
         
 
         <div class="post-meta">
@@ -513,15 +525,27 @@
                 <i class="fa fa-calendar-o"></i>
               </span>
               
-                <span class="post-meta-item-text">发表于</span>
+                <span class="post-meta-item-text">Posted on</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2020-05-18T21:39:47+08:00">
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2020-05-18T21:39:47+08:00">
                 2020-05-18
               </time>
             
 
             
+              <span class="post-meta-divider">|</span>
+            
 
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-check-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Post modified&#58;</span>
+              
+              <time title="Post modified" itemprop="dateModified" datetime="2020-05-19T17:14:38+08:00">
+                2020-05-19
+              </time>
             
           </span>
 
@@ -534,7 +558,7 @@
                 <i class="fa fa-folder-o"></i>
               </span>
               
-                <span class="post-meta-item-text">分类于</span>
+                <span class="post-meta-item-text">In</span>
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
@@ -566,9 +590,9 @@
                   <i class="fa fa-file-word-o"></i>
                 </span>
                 
-                  <span class="post-meta-item-text">字数统计&#58;</span>
+                  <span class="post-meta-item-text">Words count in article&#58;</span>
                 
-                <span title="字数统计">
+                <span title="Words count in article">
                   951
                 </span>
               
@@ -582,9 +606,9 @@
                   <i class="fa fa-clock-o"></i>
                 </span>
                 
-                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                  <span class="post-meta-item-text">Reading time &asymp;</span>
                 
-                <span title="阅读时长">
+                <span title="Reading time">
                   3
                 </span>
               
@@ -611,12 +635,14 @@
           JAVA学习路线思维导图在线链接感谢来自CodeSheep大神的总结，视频链接
 学习资料总结
 Java 基础，那必须 https://www.bilibili.com/video/BV1GZ4y1s7MG
-虚拟机，毋庸置疑，肯定是胡志明老师的《深入理解 Java 虚拟机》，累计销售 30W 本，你说
+虚拟机，毋庸置疑，肯定是胡志明老师的《深入理解 Java 虚拟机》，累计销售 30W 本，你说中国才有多少 Java 开发呢？
+多线程，我是一点点点看阿里P7清英的书学会的，看了三篇，还是非常经典《Java并发编程的艺术》
+数据结构和算法， LeetCode 官方国内唯一合作课程，专注于面试场景，全程动态动画教学。我也是一边看这个视频一边刷 LeetCode的，只想说刷完 LeetCode 
           ...
           <!--noindex-->
           <div class="post-button text-center">
             <a class="btn" href="/2020/05/18/java%E5%90%8E%E7%AB%AF%E5%BC%80%E5%8F%91%E5%AD%A6%E4%B9%A0%E8%B7%AF%E7%BA%BF/#more" rel="contents">
-              阅读全文 &raquo;
+              Read more &raquo;
             </a>
           </div>
           <!--/noindex-->
@@ -686,9 +712,9 @@ Java 基础，那必须 https://www.bilibili.com/video/BV1GZ4y1s7MG
 
         
         
-          <h1 class="post-title" itemprop="name headline">
+          <h2 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2020/05/14/Github%E5%85%A5%E9%97%A8%E6%95%99%E5%AD%A6/" itemprop="url">Github入门教学</a></h1>
+                <a class="post-title-link" href="/2020/05/14/Github%E5%85%A5%E9%97%A8%E6%95%99%E5%AD%A6/" itemprop="url">Github入门教学</a></h2>
         
 
         <div class="post-meta">
@@ -698,15 +724,27 @@ Java 基础，那必须 https://www.bilibili.com/video/BV1GZ4y1s7MG
                 <i class="fa fa-calendar-o"></i>
               </span>
               
-                <span class="post-meta-item-text">发表于</span>
+                <span class="post-meta-item-text">Posted on</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2020-05-14T13:12:28+08:00">
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2020-05-14T13:12:28+08:00">
                 2020-05-14
               </time>
             
 
             
+              <span class="post-meta-divider">|</span>
+            
 
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-check-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Post modified&#58;</span>
+              
+              <time title="Post modified" itemprop="dateModified" datetime="2020-05-15T08:36:51+08:00">
+                2020-05-15
+              </time>
             
           </span>
 
@@ -719,7 +757,7 @@ Java 基础，那必须 https://www.bilibili.com/video/BV1GZ4y1s7MG
                 <i class="fa fa-folder-o"></i>
               </span>
               
-                <span class="post-meta-item-text">分类于</span>
+                <span class="post-meta-item-text">In</span>
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
@@ -751,9 +789,9 @@ Java 基础，那必须 https://www.bilibili.com/video/BV1GZ4y1s7MG
                   <i class="fa fa-file-word-o"></i>
                 </span>
                 
-                  <span class="post-meta-item-text">字数统计&#58;</span>
+                  <span class="post-meta-item-text">Words count in article&#58;</span>
                 
-                <span title="字数统计">
+                <span title="Words count in article">
                   283
                 </span>
               
@@ -767,9 +805,9 @@ Java 基础，那必须 https://www.bilibili.com/video/BV1GZ4y1s7MG
                   <i class="fa fa-clock-o"></i>
                 </span>
                 
-                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                  <span class="post-meta-item-text">Reading time &asymp;</span>
                 
-                <span title="阅读时长">
+                <span title="Reading time">
                   1
                 </span>
               
@@ -796,12 +834,14 @@ Java 基础，那必须 https://www.bilibili.com/video/BV1GZ4y1s7MG
           GitHub入门教学（Git，界面介绍，搜索）前提：Git使用GitHub是基于Git开发得到，学习Git是了解GitHub的前提，在这里我推荐一个特别喜欢的学习教程。
 廖雪峰Git教学
 简单示例
-12345678910mkdir learngit #创建一个空白目录cd learngit git 
+12345678910mkdir learngit #创建一个空白目录cd learngit git init #把这个目录变成Git可以管理的仓库git add readme.txt #把文件添加到仓库git commit -m "wrote a readme file" #把文件提交给仓库git push -u origin master #把本地仓库中的所有内容上传到远程库
+
+GitHub介绍
           ...
           <!--noindex-->
           <div class="post-button text-center">
             <a class="btn" href="/2020/05/14/Github%E5%85%A5%E9%97%A8%E6%95%99%E5%AD%A6/#more" rel="contents">
-              阅读全文 &raquo;
+              Read more &raquo;
             </a>
           </div>
           <!--/noindex-->
@@ -871,9 +911,9 @@ Java 基础，那必须 https://www.bilibili.com/video/BV1GZ4y1s7MG
 
         
         
-          <h1 class="post-title" itemprop="name headline">
+          <h2 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2020/02/02/%E6%95%B0%E5%AD%A6%E5%BB%BA%E6%A8%A1%E7%AE%97%E6%B3%95%E6%B1%87%E6%80%BB/" itemprop="url">数学建模算法汇总</a></h1>
+                <a class="post-title-link" href="/2020/02/02/%E6%95%B0%E5%AD%A6%E5%BB%BA%E6%A8%A1%E7%AE%97%E6%B3%95%E6%B1%87%E6%80%BB/" itemprop="url">数学建模算法汇总</a></h2>
         
 
         <div class="post-meta">
@@ -883,15 +923,27 @@ Java 基础，那必须 https://www.bilibili.com/video/BV1GZ4y1s7MG
                 <i class="fa fa-calendar-o"></i>
               </span>
               
-                <span class="post-meta-item-text">发表于</span>
+                <span class="post-meta-item-text">Posted on</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2020-02-02T21:07:00+08:00">
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2020-02-02T21:07:00+08:00">
                 2020-02-02
               </time>
             
 
             
+              <span class="post-meta-divider">|</span>
+            
 
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-check-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Post modified&#58;</span>
+              
+              <time title="Post modified" itemprop="dateModified" datetime="2020-03-30T10:28:11+08:00">
+                2020-03-30
+              </time>
             
           </span>
 
@@ -904,7 +956,7 @@ Java 基础，那必须 https://www.bilibili.com/video/BV1GZ4y1s7MG
                 <i class="fa fa-folder-o"></i>
               </span>
               
-                <span class="post-meta-item-text">分类于</span>
+                <span class="post-meta-item-text">In</span>
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
@@ -936,9 +988,9 @@ Java 基础，那必须 https://www.bilibili.com/video/BV1GZ4y1s7MG
                   <i class="fa fa-file-word-o"></i>
                 </span>
                 
-                  <span class="post-meta-item-text">字数统计&#58;</span>
+                  <span class="post-meta-item-text">Words count in article&#58;</span>
                 
-                <span title="字数统计">
+                <span title="Words count in article">
                   6.4k
                 </span>
               
@@ -952,9 +1004,9 @@ Java 基础，那必须 https://www.bilibili.com/video/BV1GZ4y1s7MG
                   <i class="fa fa-clock-o"></i>
                 </span>
                 
-                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                  <span class="post-meta-item-text">Reading time &asymp;</span>
                 
-                <span title="阅读时长">
+                <span title="Reading time">
                   23
                 </span>
               
@@ -981,12 +1033,18 @@ Java 基础，那必须 https://www.bilibili.com/video/BV1GZ4y1s7MG
           
 优化模型优化模型(1)三要素: 决策变量、目标函数、约束https://blog.csdn.net/luolang_103/article/details/80567443
 单目标（Single-Objective Optimization Problem）
-所评测目标只有一个，只需要根据具体的满
+所评测目标只有一个，只需要根据具体的满足函数条件，求得最值
+
+多目标（Multi-objective Optimization Problem）
+多目标优化问题中，同时存在多个最大化或是最小化的目标函数，并且，这些目标函数并不是相互独立的，也不是相互和谐融洽的，他们之间会存在或多或少的冲突，使得不能同时满足所有的目标函数。
+
+线性
+线性
           ...
           <!--noindex-->
           <div class="post-button text-center">
             <a class="btn" href="/2020/02/02/%E6%95%B0%E5%AD%A6%E5%BB%BA%E6%A8%A1%E7%AE%97%E6%B3%95%E6%B1%87%E6%80%BB/#more" rel="contents">
-              阅读全文 &raquo;
+              Read more &raquo;
             </a>
           </div>
           <!--/noindex-->
@@ -1056,9 +1114,9 @@ Java 基础，那必须 https://www.bilibili.com/video/BV1GZ4y1s7MG
 
         
         
-          <h1 class="post-title" itemprop="name headline">
+          <h2 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2020/02/02/%E7%BE%8E%E8%B5%9B%E5%86%99%E4%BD%9C%E5%A5%97%E8%B7%AF/" itemprop="url">美赛写作套路</a></h1>
+                <a class="post-title-link" href="/2020/02/02/%E7%BE%8E%E8%B5%9B%E5%86%99%E4%BD%9C%E5%A5%97%E8%B7%AF/" itemprop="url">美赛写作套路</a></h2>
         
 
         <div class="post-meta">
@@ -1068,15 +1126,27 @@ Java 基础，那必须 https://www.bilibili.com/video/BV1GZ4y1s7MG
                 <i class="fa fa-calendar-o"></i>
               </span>
               
-                <span class="post-meta-item-text">发表于</span>
+                <span class="post-meta-item-text">Posted on</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2020-02-02T10:23:43+08:00">
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2020-02-02T10:23:43+08:00">
                 2020-02-02
               </time>
             
 
             
+              <span class="post-meta-divider">|</span>
+            
 
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-check-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Post modified&#58;</span>
+              
+              <time title="Post modified" itemprop="dateModified" datetime="2020-02-19T10:36:30+08:00">
+                2020-02-19
+              </time>
             
           </span>
 
@@ -1089,7 +1159,7 @@ Java 基础，那必须 https://www.bilibili.com/video/BV1GZ4y1s7MG
                 <i class="fa fa-folder-o"></i>
               </span>
               
-                <span class="post-meta-item-text">分类于</span>
+                <span class="post-meta-item-text">In</span>
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
@@ -1121,9 +1191,9 @@ Java 基础，那必须 https://www.bilibili.com/video/BV1GZ4y1s7MG
                   <i class="fa fa-file-word-o"></i>
                 </span>
                 
-                  <span class="post-meta-item-text">字数统计&#58;</span>
+                  <span class="post-meta-item-text">Words count in article&#58;</span>
                 
-                <span title="字数统计">
+                <span title="Words count in article">
                   516
                 </span>
               
@@ -1137,9 +1207,9 @@ Java 基础，那必须 https://www.bilibili.com/video/BV1GZ4y1s7MG
                   <i class="fa fa-clock-o"></i>
                 </span>
                 
-                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                  <span class="post-meta-item-text">Reading time &asymp;</span>
                 
-                <span title="阅读时长">
+                <span title="Reading time">
                   2
                 </span>
               
@@ -1167,12 +1237,12 @@ Java 基础，那必须 https://www.bilibili.com/video/BV1GZ4y1s7MG
 倾向于使用Word进行写作，有利于论文的最后的协同合作LaTex最新模板地址:https://github.com/latexstudio-org/mcmthesis/releases/tag/6.3
 
 美赛论文怎么翻译
-谷歌翻译:https://translat
+谷歌翻译:https://translate.google.cn/有以下几点要注意：（1） 翻译完成后再排版，记住，排版永远放在最后一步；（2）第一次翻译完成后一定要再次核对语法、通顺程度、专有名词等，初次翻译出来的结果是不能看的，后面我再教给大家怎么修改；（3）中文版用word写，后续翻译完成并修改后再用latex模板套用，因为latex
           ...
           <!--noindex-->
           <div class="post-button text-center">
             <a class="btn" href="/2020/02/02/%E7%BE%8E%E8%B5%9B%E5%86%99%E4%BD%9C%E5%A5%97%E8%B7%AF/#more" rel="contents">
-              阅读全文 &raquo;
+              Read more &raquo;
             </a>
           </div>
           <!--/noindex-->
@@ -1242,9 +1312,9 @@ Java 基础，那必须 https://www.bilibili.com/video/BV1GZ4y1s7MG
 
         
         
-          <h1 class="post-title" itemprop="name headline">
+          <h2 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2020/02/01/%E7%BE%8E%E8%B5%9B%E8%AE%BA%E6%96%87%E5%8F%A5%E5%BC%8F/" itemprop="url">美赛论文句式</a></h1>
+                <a class="post-title-link" href="/2020/02/01/%E7%BE%8E%E8%B5%9B%E8%AE%BA%E6%96%87%E5%8F%A5%E5%BC%8F/" itemprop="url">美赛论文句式</a></h2>
         
 
         <div class="post-meta">
@@ -1254,15 +1324,27 @@ Java 基础，那必须 https://www.bilibili.com/video/BV1GZ4y1s7MG
                 <i class="fa fa-calendar-o"></i>
               </span>
               
-                <span class="post-meta-item-text">发表于</span>
+                <span class="post-meta-item-text">Posted on</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2020-02-01T16:04:32+08:00">
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2020-02-01T16:04:32+08:00">
                 2020-02-01
               </time>
             
 
             
+              <span class="post-meta-divider">|</span>
+            
 
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-check-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Post modified&#58;</span>
+              
+              <time title="Post modified" itemprop="dateModified" datetime="2020-02-02T21:26:07+08:00">
+                2020-02-02
+              </time>
             
           </span>
 
@@ -1275,7 +1357,7 @@ Java 基础，那必须 https://www.bilibili.com/video/BV1GZ4y1s7MG
                 <i class="fa fa-folder-o"></i>
               </span>
               
-                <span class="post-meta-item-text">分类于</span>
+                <span class="post-meta-item-text">In</span>
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
@@ -1307,9 +1389,9 @@ Java 基础，那必须 https://www.bilibili.com/video/BV1GZ4y1s7MG
                   <i class="fa fa-file-word-o"></i>
                 </span>
                 
-                  <span class="post-meta-item-text">字数统计&#58;</span>
+                  <span class="post-meta-item-text">Words count in article&#58;</span>
                 
-                <span title="字数统计">
+                <span title="Words count in article">
                   456
                 </span>
               
@@ -1323,9 +1405,9 @@ Java 基础，那必须 https://www.bilibili.com/video/BV1GZ4y1s7MG
                   <i class="fa fa-clock-o"></i>
                 </span>
                 
-                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                  <span class="post-meta-item-text">Reading time &asymp;</span>
                 
-                <span title="阅读时长">
+                <span title="Reading time">
                   2
                 </span>
               
@@ -1352,12 +1434,12 @@ Java 基础，那必须 https://www.bilibili.com/video/BV1GZ4y1s7MG
           开头句型写法
 Mention polygamy in Canada and waht might come to mind is Bountiful ,a suitably named town in British Columbia .
 
-Mention…and what comes to min
+Mention…and what comes to mind is …提及……时我们第一个想到的是……当我们要介绍某个地方、人物或者作品时，就可以用上该句型Mention A and what comes to mind is BA 一般是与事物有关的品质或者特点 B是事物本身eg:Mention  innovative thinking and what
           ...
           <!--noindex-->
           <div class="post-button text-center">
             <a class="btn" href="/2020/02/01/%E7%BE%8E%E8%B5%9B%E8%AE%BA%E6%96%87%E5%8F%A5%E5%BC%8F/#more" rel="contents">
-              阅读全文 &raquo;
+              Read more &raquo;
             </a>
           </div>
           <!--/noindex-->
@@ -1427,9 +1509,9 @@ Mention…and what comes to min
 
         
         
-          <h1 class="post-title" itemprop="name headline">
+          <h2 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2020/01/31/%E6%97%A5%E8%AF%AD%E5%AD%A6%E4%B9%A0%E5%B8%B8%E7%94%A8%E5%8F%A5%E5%BC%8F%EF%BC%88%E4%B8%80%EF%BC%89/" itemprop="url">日语学习常用句式（一）</a></h1>
+                <a class="post-title-link" href="/2020/01/31/%E6%97%A5%E8%AF%AD%E5%AD%A6%E4%B9%A0%E5%B8%B8%E7%94%A8%E5%8F%A5%E5%BC%8F%EF%BC%88%E4%B8%80%EF%BC%89/" itemprop="url">日语学习常用句式（一）</a></h2>
         
 
         <div class="post-meta">
@@ -1439,15 +1521,27 @@ Mention…and what comes to min
                 <i class="fa fa-calendar-o"></i>
               </span>
               
-                <span class="post-meta-item-text">发表于</span>
+                <span class="post-meta-item-text">Posted on</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2020-01-31T16:20:40+08:00">
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2020-01-31T16:20:40+08:00">
                 2020-01-31
               </time>
             
 
             
+              <span class="post-meta-divider">|</span>
+            
 
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-check-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Post modified&#58;</span>
+              
+              <time title="Post modified" itemprop="dateModified" datetime="2020-01-31T18:31:09+08:00">
+                2020-01-31
+              </time>
             
           </span>
 
@@ -1460,7 +1554,7 @@ Mention…and what comes to min
                 <i class="fa fa-folder-o"></i>
               </span>
               
-                <span class="post-meta-item-text">分类于</span>
+                <span class="post-meta-item-text">In</span>
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
@@ -1492,9 +1586,9 @@ Mention…and what comes to min
                   <i class="fa fa-file-word-o"></i>
                 </span>
                 
-                  <span class="post-meta-item-text">字数统计&#58;</span>
+                  <span class="post-meta-item-text">Words count in article&#58;</span>
                 
-                <span title="字数统计">
+                <span title="Words count in article">
                   199
                 </span>
               
@@ -1508,9 +1602,9 @@ Mention…and what comes to min
                   <i class="fa fa-clock-o"></i>
                 </span>
                 
-                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                  <span class="post-meta-item-text">Reading time &asymp;</span>
                 
-                <span title="阅读时长">
+                <span title="Reading time">
                   1
                 </span>
               
@@ -1539,12 +1633,18 @@ Su go ku ta no si iすごく　たのしい超级开心
 I ta da ki ma suいただきます我要开动啦
 O I si iおいしい好吃（女生）
 U ma i　うまい好吃（男生）
-I ma do koいま、どこ？你现在
+I ma do koいま、どこ？你现在在哪儿？
+E ki daえきだ在车站呢
+Ge nn kiげんき元気ん拨音身体健康
+O ge nn ki de su kaおげんきですか你的身体还健康吗？お：尊敬语A na ka doあなかど你的です：是か：吗
+Se nn se iせんせい先生
+Yo ro shi kuよろしく请多关照
+Sa yo n
           ...
           <!--noindex-->
           <div class="post-button text-center">
             <a class="btn" href="/2020/01/31/%E6%97%A5%E8%AF%AD%E5%AD%A6%E4%B9%A0%E5%B8%B8%E7%94%A8%E5%8F%A5%E5%BC%8F%EF%BC%88%E4%B8%80%EF%BC%89/#more" rel="contents">
-              阅读全文 &raquo;
+              Read more &raquo;
             </a>
           </div>
           <!--/noindex-->
@@ -1614,9 +1714,9 @@ I ma do koいま、どこ？你现在
 
         
         
-          <h1 class="post-title" itemprop="name headline">
+          <h2 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2020/01/29/LaTeX%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C/" itemprop="url">LaTeX基本操作</a></h1>
+                <a class="post-title-link" href="/2020/01/29/LaTeX%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C/" itemprop="url">LaTeX基本操作</a></h2>
         
 
         <div class="post-meta">
@@ -1626,15 +1726,27 @@ I ma do koいま、どこ？你现在
                 <i class="fa fa-calendar-o"></i>
               </span>
               
-                <span class="post-meta-item-text">发表于</span>
+                <span class="post-meta-item-text">Posted on</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2020-01-29T14:35:10+08:00">
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2020-01-29T14:35:10+08:00">
                 2020-01-29
               </time>
             
 
             
+              <span class="post-meta-divider">|</span>
+            
 
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-check-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Post modified&#58;</span>
+              
+              <time title="Post modified" itemprop="dateModified" datetime="2020-02-03T16:32:42+08:00">
+                2020-02-03
+              </time>
             
           </span>
 
@@ -1647,7 +1759,7 @@ I ma do koいま、どこ？你现在
                 <i class="fa fa-folder-o"></i>
               </span>
               
-                <span class="post-meta-item-text">分类于</span>
+                <span class="post-meta-item-text">In</span>
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
@@ -1679,9 +1791,9 @@ I ma do koいま、どこ？你现在
                   <i class="fa fa-file-word-o"></i>
                 </span>
                 
-                  <span class="post-meta-item-text">字数统计&#58;</span>
+                  <span class="post-meta-item-text">Words count in article&#58;</span>
                 
-                <span title="字数统计">
+                <span title="Words count in article">
                   3.5k
                 </span>
               
@@ -1695,9 +1807,9 @@ I ma do koいま、どこ？你现在
                   <i class="fa fa-clock-o"></i>
                 </span>
                 
-                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                  <span class="post-meta-item-text">Reading time &asymp;</span>
                 
-                <span title="阅读时长">
+                <span title="Reading time">
                   17
                 </span>
               
@@ -1724,12 +1836,12 @@ I ma do koいま、どこ？你现在
           1.LaTeX环境的安装与配置
 官网自行安装下载
 
-2.LaTeX源文件的基本结构 123456789101112131415161718%导言区 注释\documentclass&#123;article&#125;%book, report, letter \title&#123;My Firs
+2.LaTeX源文件的基本结构 123456789101112131415161718%导言区 注释\documentclass&#123;article&#125;%book, report, letter \title&#123;My First Document&#125;\author&#123;Lin Jun&#125;	\date&#123;\today&#125;%正文区（文稿区）\begin&#123;document&#125;\maketitle Hello World!%在源文件增加空行实现分行Let $f(x)$ be
           ...
           <!--noindex-->
           <div class="post-button text-center">
             <a class="btn" href="/2020/01/29/LaTeX%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C/#more" rel="contents">
-              阅读全文 &raquo;
+              Read more &raquo;
             </a>
           </div>
           <!--/noindex-->
@@ -1799,9 +1911,9 @@ I ma do koいま、どこ？你现在
 
         
         
-          <h1 class="post-title" itemprop="name headline">
+          <h2 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2020/01/16/%E8%B0%B7%E6%AD%8C%E6%9C%8D%E5%8A%A1%E5%8A%A9%E6%89%8B/" itemprop="url">谷歌访问助手</a></h1>
+                <a class="post-title-link" href="/2020/01/16/%E8%B0%B7%E6%AD%8C%E6%9C%8D%E5%8A%A1%E5%8A%A9%E6%89%8B/" itemprop="url">谷歌访问助手</a></h2>
         
 
         <div class="post-meta">
@@ -1811,15 +1923,27 @@ I ma do koいま、どこ？你现在
                 <i class="fa fa-calendar-o"></i>
               </span>
               
-                <span class="post-meta-item-text">发表于</span>
+                <span class="post-meta-item-text">Posted on</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2020-01-16T14:17:36+08:00">
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2020-01-16T14:17:36+08:00">
                 2020-01-16
               </time>
             
 
             
+              <span class="post-meta-divider">|</span>
+            
 
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-check-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Post modified&#58;</span>
+              
+              <time title="Post modified" itemprop="dateModified" datetime="2020-05-18T17:34:28+08:00">
+                2020-05-18
+              </time>
             
           </span>
 
@@ -1832,7 +1956,7 @@ I ma do koいま、どこ？你现在
                 <i class="fa fa-folder-o"></i>
               </span>
               
-                <span class="post-meta-item-text">分类于</span>
+                <span class="post-meta-item-text">In</span>
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
@@ -1864,9 +1988,9 @@ I ma do koいま、どこ？你现在
                   <i class="fa fa-file-word-o"></i>
                 </span>
                 
-                  <span class="post-meta-item-text">字数统计&#58;</span>
+                  <span class="post-meta-item-text">Words count in article&#58;</span>
                 
-                <span title="字数统计">
+                <span title="Words count in article">
                   114
                 </span>
               
@@ -1880,9 +2004,9 @@ I ma do koいま、どこ？你现在
                   <i class="fa fa-clock-o"></i>
                 </span>
                 
-                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                  <span class="post-meta-item-text">Reading time &asymp;</span>
                 
-                <span title="阅读时长">
+                <span title="Reading time">
                   1
                 </span>
               
@@ -1925,12 +2049,16 @@ Step3: 点击加载已解压的扩展程序
 Step4: 选择下载后解压的文件
 
 
-Step5: 安装成
-          ...
+Step5: 安装成功 
+
+VPN推荐20元一个月，特别稳定，网速快。
+饿饭CC云
+
+          
           <!--noindex-->
           <div class="post-button text-center">
             <a class="btn" href="/2020/01/16/%E8%B0%B7%E6%AD%8C%E6%9C%8D%E5%8A%A1%E5%8A%A9%E6%89%8B/#more" rel="contents">
-              阅读全文 &raquo;
+              Read more &raquo;
             </a>
           </div>
           <!--/noindex-->
@@ -2000,9 +2128,9 @@ Step5: 安装成
 
         
         
-          <h1 class="post-title" itemprop="name headline">
+          <h2 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2020/01/14/%E6%94%AF%E6%95%99/" itemprop="url">暑期支教</a></h1>
+                <a class="post-title-link" href="/2020/01/14/%E6%94%AF%E6%95%99/" itemprop="url">暑期支教</a></h2>
         
 
         <div class="post-meta">
@@ -2012,15 +2140,27 @@ Step5: 安装成
                 <i class="fa fa-calendar-o"></i>
               </span>
               
-                <span class="post-meta-item-text">发表于</span>
+                <span class="post-meta-item-text">Posted on</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2020-01-14T16:36:06+08:00">
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2020-01-14T16:36:06+08:00">
                 2020-01-14
               </time>
             
 
             
+              <span class="post-meta-divider">|</span>
+            
 
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-check-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Post modified&#58;</span>
+              
+              <time title="Post modified" itemprop="dateModified" datetime="2020-04-18T09:05:56+08:00">
+                2020-04-18
+              </time>
             
           </span>
 
@@ -2033,7 +2173,7 @@ Step5: 安装成
                 <i class="fa fa-folder-o"></i>
               </span>
               
-                <span class="post-meta-item-text">分类于</span>
+                <span class="post-meta-item-text">In</span>
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
@@ -2065,9 +2205,9 @@ Step5: 安装成
                   <i class="fa fa-file-word-o"></i>
                 </span>
                 
-                  <span class="post-meta-item-text">字数统计&#58;</span>
+                  <span class="post-meta-item-text">Words count in article&#58;</span>
                 
-                <span title="字数统计">
+                <span title="Words count in article">
                   1.9k
                 </span>
               
@@ -2081,9 +2221,9 @@ Step5: 安装成
                   <i class="fa fa-clock-o"></i>
                 </span>
                 
-                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                  <span class="post-meta-item-text">Reading time &asymp;</span>
                 
-                <span title="阅读时长">
+                <span title="Reading time">
                   6
                 </span>
               
@@ -2116,7 +2256,7 @@ Step5: 安装成
           <!--noindex-->
           <div class="post-button text-center">
             <a class="btn" href="/2020/01/14/%E6%94%AF%E6%95%99/#more" rel="contents">
-              阅读全文 &raquo;
+              Read more &raquo;
             </a>
           </div>
           <!--/noindex-->
@@ -2197,7 +2337,7 @@ Step5: 安装成
                 alt="Gemini-Lin" />
             
               <p class="site-author-name" itemprop="name">Gemini-Lin</p>
-              <p class="site-description motion-element" itemprop="description">If you want to tame a person,    you should risk tears.</p>
+              <p class="site-description motion-element" itemprop="description"></p>
           </div>
 
           <nav class="site-state motion-element">
@@ -2208,7 +2348,7 @@ Step5: 安装成
                 <a href="/archives/%7C%7Carchive">
               
                   <span class="site-state-item-count">10</span>
-                  <span class="site-state-item-name">日志</span>
+                  <span class="site-state-item-name">posts</span>
                 </a>
               </div>
             
@@ -2219,7 +2359,7 @@ Step5: 安装成
               <div class="site-state-item site-state-categories">
                 <a href="/categories/index.html">
                   <span class="site-state-item-count">6</span>
-                  <span class="site-state-item-name">分类</span>
+                  <span class="site-state-item-name">categories</span>
                 </a>
               </div>
             
@@ -2230,7 +2370,7 @@ Step5: 安装成
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
                   <span class="site-state-item-count">12</span>
-                  <span class="site-state-item-name">标签</span>
+                  <span class="site-state-item-name">tags</span>
                 </a>
               </div>
             
@@ -2279,6 +2419,10 @@ Step5: 安装成
                     <a href="http://www.zer0-nu1l.com/" title="ZER0-Nu1L" target="_blank">ZER0-Nu1L</a>
                   </li>
                 
+                  <li class="links-of-blogroll-item">
+                    <a href="https://f1ed.github.io/" title="Fred" target="_blank">Fred</a>
+                  </li>
+                
               </ul>
             </div>
           
@@ -2290,6 +2434,13 @@ Step5: 安装成
 
       
 
+      
+        <div class="back-to-top">
+          <i class="fa fa-arrow-up"></i>
+          
+            <span id="scrollpercent"><span>0</span>%</span>
+          
+        </div>
       
 
     </div>
@@ -2392,7 +2543,7 @@ Step5: 安装成
   <span class="with-love">
     <i class="fa fa-user"></i>
   </span>
-  <span class="author" itemprop="copyrightHolder">Gemini-Lin</span>
+  <span class="author" itemprop="copyrightHolder">true</span>
 
   
     <span class="post-meta-divider">|</span>
@@ -2408,7 +2559,7 @@ Step5: 安装成
 
 
 <!--
-  <div class="powered-by">由 <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> 强力驱动</div>
+  <div class="powered-by">Powered by <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a></div>
 
 
 
@@ -2416,7 +2567,7 @@ Step5: 安装成
 
 
 
-  <div class="theme-info">主题 &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Gemini</a> v5.1.4</div>
+  <div class="theme-info">Theme &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Gemini</a> v5.1.4</div>
 -->
 
 
@@ -2453,13 +2604,6 @@ Step5: 安装成
       </div>
     </footer>
 
-    
-      <div class="back-to-top">
-        <i class="fa fa-arrow-up"></i>
-        
-          <span id="scrollpercent"><span>0</span>%</span>
-        
-      </div>
     
 
     
@@ -2928,6 +3072,21 @@ Step5: 安装成
   
 
   
+<script>
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';        
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+
 
   
   
@@ -2970,6 +3129,28 @@ Step5: 安装成
   
 
   
+  
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+          processEscapes: true,
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+        }
+      });
+    </script>
+
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for (i=0; i < all.length; i += 1) {
+          all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+      });
+    </script>
+    <script type="text/javascript" src="//cdn.bootcss.com/mathjax/2.7.1/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+  
+
 
   
 
