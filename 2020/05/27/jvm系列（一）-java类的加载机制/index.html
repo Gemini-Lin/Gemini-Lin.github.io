@@ -88,16 +88,20 @@
 
 <meta name="description" content="面试问题 简单讲下JVM中的类加载过程  JVM中的类加载和卸载的时机？  如何理解JVM中不同类加载器的概念和作用？  简单讲下JVM中的双亲委派模型？  什么情况下会破坏双亲委派模型？为什么？可否举个例子？  Tomcat中的类加载机制有了解吗？为什么这么设计？  实际开发中有遇到哪些类加载器相关的问题？你又是如何解决的？  JVM之上的弱类型语言例如Groovy是如何实现？简单讲下动态类加载">
 <meta property="og:type" content="article">
-<meta property="og:title" content="jvm系列（一）--java类的加载机制">
+<meta property="og:title" content="JVM系列（一）--Java类的加载机制">
 <meta property="og:url" content="https:&#x2F;&#x2F;gemini-lin.github.io.git&#x2F;2020&#x2F;05&#x2F;27&#x2F;jvm%E7%B3%BB%E5%88%97%EF%BC%88%E4%B8%80%EF%BC%89-java%E7%B1%BB%E7%9A%84%E5%8A%A0%E8%BD%BD%E6%9C%BA%E5%88%B6&#x2F;index.html">
 <meta property="og:site_name" content="GeminiPlanet">
 <meta property="og:description" content="面试问题 简单讲下JVM中的类加载过程  JVM中的类加载和卸载的时机？  如何理解JVM中不同类加载器的概念和作用？  简单讲下JVM中的双亲委派模型？  什么情况下会破坏双亲委派模型？为什么？可否举个例子？  Tomcat中的类加载机制有了解吗？为什么这么设计？  实际开发中有遇到哪些类加载器相关的问题？你又是如何解决的？  JVM之上的弱类型语言例如Groovy是如何实现？简单讲下动态类加载">
+<meta property="og:image" content="https:&#x2F;&#x2F;mmbiz.qpic.cn&#x2F;mmbiz_png&#x2F;PgqYrEEtEnokxXiapDdvntH8PGwa0zGXMqaq9p1LDCF7iadMBibd685uYCy8u0yhb5dmlvLRwgzNueNdSdWdvEwww&#x2F;640?wx_fmt&#x3D;png&amp;tp&#x3D;webp&amp;wxfrom&#x3D;5&amp;wx_lazy&#x3D;1&amp;wx_co&#x3D;1">
+<meta property="og:image" content="https:&#x2F;&#x2F;imgconvert.csdnimg.cn&#x2F;aHR0cHM6Ly9tbWJpei5xcGljLmNuL21tYml6X3BuZy80QUc2dGljNjhBR2JSNnc4bWQ5cW1vcmdldjV5cHN0aWF3ekRKNk5kNmFONUZJRzVzaWFyYmlhTUFSSmljeFQ0UmR2ZzZtaDRhUWdnSVlmQ0xZNTAwMHVIRGliUS82NDA_d3hfZm10PXBuZw?x-oss-process&#x3D;image&#x2F;format,png">
+<meta property="og:image" content="http:&#x2F;&#x2F;mmbiz.qpic.cn&#x2F;mmbiz_png&#x2F;PgqYrEEtEnokxXiapDdvntH8PGwa0zGXM7qXKib1ibsib1BuyLxjoP1sgorwib78yTD4896N5r1AibdhDXTHZ7z9VyBg&#x2F;640?wx_fmt&#x3D;png&amp;tp&#x3D;webp&amp;wxfrom&#x3D;5&amp;wx_lazy&#x3D;1&amp;wx_co&#x3D;1">
 <meta property="article:published_time" content="2020-05-27T08:52:42.000Z">
-<meta property="article:modified_time" content="2020-05-27T09:56:37.897Z">
+<meta property="article:modified_time" content="2020-05-27T14:25:34.754Z">
 <meta property="article:author" content="Gemini-Lin">
 <meta property="article:tag" content="jvm">
 <meta property="article:tag" content="java类">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https:&#x2F;&#x2F;mmbiz.qpic.cn&#x2F;mmbiz_png&#x2F;PgqYrEEtEnokxXiapDdvntH8PGwa0zGXMqaq9p1LDCF7iadMBibd685uYCy8u0yhb5dmlvLRwgzNueNdSdWdvEwww&#x2F;640?wx_fmt&#x3D;png&amp;tp&#x3D;webp&amp;wxfrom&#x3D;5&amp;wx_lazy&#x3D;1&amp;wx_co&#x3D;1">
 
 
 
@@ -133,7 +137,7 @@
 
 
 
-  <title>jvm系列（一）--java类的加载机制 | GeminiPlanet</title>
+  <title>JVM系列（一）--Java类的加载机制 | GeminiPlanet</title>
   
 
 
@@ -322,7 +326,7 @@
 
         
         
-          <h2 class="post-title" itemprop="name headline">jvm系列（一）--java类的加载机制</h2>
+          <h2 class="post-title" itemprop="name headline">JVM系列（一）--Java类的加载机制</h2>
         
 
         <div class="post-meta">
@@ -350,7 +354,7 @@
               
                 <span class="post-meta-item-text">Post modified&#58;</span>
               
-              <time title="Post modified" itemprop="dateModified" datetime="2020-05-27T17:56:37+08:00">
+              <time title="Post modified" itemprop="dateModified" datetime="2020-05-27T22:25:34+08:00">
                 2020-05-27
               </time>
             
@@ -405,7 +409,7 @@
                   <span class="post-meta-item-text">Words count in article&#58;</span>
                 
                 <span title="Words count in article">
-                  784
+                  3.1k
                 </span>
               
 
@@ -421,7 +425,7 @@
                   <span class="post-meta-item-text">Reading time &asymp;</span>
                 
                 <span title="Reading time">
-                  2
+                  11
                 </span>
               
             </div>
@@ -462,43 +466,148 @@
 
 </li>
 </ol>
-<h1 id="类的加载定义"><a href="#类的加载定义" class="headerlink" title="类的加载定义"></a>类的加载定义</h1><blockquote>
-<p>类的加载指的是将类的.class文件中的二进制数据读入到内存中，将其放在运行时数据区的方法区内，然后在堆区创建一个<code>java.lang.Class</code>对象，用来封装类在方法区内的数据结构。</p>
-</blockquote>
-<blockquote>
+<h1 id="类的加载定义"><a href="#类的加载定义" class="headerlink" title="类的加载定义"></a>类的加载定义</h1><p>类的加载指的是将类的.class文件中的二进制数据读入到内存中，将其放在运行时数据区的方法区内，然后在堆区创建一个<code>java.lang.Class</code>对象，用来封装类在方法区内的数据结构。</p>
+<p><img src="https://mmbiz.qpic.cn/mmbiz_png/PgqYrEEtEnokxXiapDdvntH8PGwa0zGXMqaq9p1LDCF7iadMBibd685uYCy8u0yhb5dmlvLRwgzNueNdSdWdvEwww/640?wx_fmt=png&tp=webp&wxfrom=5&wx_lazy=1&wx_co=1" alt="image"></p>
 <p>类的最终加载产品是位于堆区中的Class对象，Class对象封装了类在方法区内的数据结构，并向Java程序提供访问接口。</p>
-</blockquote>
-<blockquote>
 <p>与C语言的类比：C语言 –&gt; 二进制文件 –&gt; 计算机硬件；Java –&gt; 字节码文件 –&gt; JVM</p>
-</blockquote>
 <blockquote>
 <p><strong>注意事项：</strong>类加载器并不需要等到某个类被“首次主动使用”时再加载，JVM规范允许类加载器在预料某个类将要被使用时就预先加载它，但是如果这个类在加载中遇到错误，只有在主动使用此类时才会报错(LinkageError)。</p>
 </blockquote>
 <h1 id="类的生命周期"><a href="#类的生命周期" class="headerlink" title="类的生命周期"></a>类的生命周期</h1><p>加载(Loading) –&gt;  <strong>验证(Verification) –&gt; 准备(Preparation) –&gt; 解析(Resolution)</strong> –&gt; 初始化(Intialization) –&gt; 使用(Using) –&gt; 卸载(Unloading) 共七个阶段；其中验证、准备和解析又统称为<strong>连接(Linking)阶段</strong>。</p>
+<p><img src="https://imgconvert.csdnimg.cn/aHR0cHM6Ly9tbWJpei5xcGljLmNuL21tYml6X3BuZy80QUc2dGljNjhBR2JSNnc4bWQ5cW1vcmdldjV5cHN0aWF3ekRKNk5kNmFONUZJRzVzaWFyYmlhTUFSSmljeFQ0UmR2ZzZtaDRhUWdnSVlmQ0xZNTAwMHVIRGliUS82NDA_d3hfZm10PXBuZw?x-oss-process=image/format,png" alt="image"></p>
 <blockquote>
 <p>在前五个阶段中，加载、验证、准备、初始化的顺序是确定的，但是解析阶段不一定，它在某些情况下可以在初始化阶段之前开始，这是为了支持Java的动态绑定。</p>
 </blockquote>
-<h2 id="加载"><a href="#加载" class="headerlink" title="加载"></a>加载</h2><blockquote>
-<p>三个任务：</p>
-</blockquote>
+<h2 id="加载"><a href="#加载" class="headerlink" title="加载"></a>加载</h2><p><strong>三个任务：</strong></p>
+<blockquote>
 <ul>
 <li>通过一个类的全限定名来获取其定义的二进制字节流</li>
 <li>将这个字节流所代表的<strong>静态存储结构</strong>转化为方法区的运行时<strong>数据结构</strong></li>
 <li>在Java堆中生成一个代表这个类的<code>java.lang.Class</code>对象，作为对方法区中数据的访问入口</li>
 </ul>
-<h2 id="验证"><a href="#验证" class="headerlink" title="验证"></a>验证</h2><p><strong>确保被加载的类的正确性</strong></p>
-<blockquote>
-<p>四个阶段：</p>
 </blockquote>
+<h2 id="验证：确保被加载的类的正确性"><a href="#验证：确保被加载的类的正确性" class="headerlink" title="验证：确保被加载的类的正确性"></a>验证：确保被加载的类的正确性</h2><p><strong>四个阶段：</strong></p>
+<blockquote>
 <ul>
-<li><strong>文件格式验证：</strong>验证字节流是否符合Class文件格式规范；</li>
-<li><strong>云数据验证：</strong>对字节码描述的信息进行语义分析，以保证满足java语言的规范</li>
-<li><strong>字节码验证：</strong>通过数据流和控制流，确保程序语义是合法的、符合逻辑的。</li>
-<li><strong>符号引用验证：</strong>确保解析动作能够正确执行</li>
+<li><strong>文件格式验证</strong>：验证字节流是否符合Class文件格式规范；</li>
+<li><strong>云数据验证</strong>：对字节码描述的信息进行语义分析，以保证满足java语言的规范</li>
+<li><strong>字节码验证</strong>：通过数据流和控制流，确保程序语义是合法的、符合逻辑的。</li>
+<li><strong>符号引用验证</strong>：确保解析动作能够正确执行</li>
 </ul>
+</blockquote>
 <blockquote>
 <p>ps: 验证阶段非常重要，但是不是必须的，如果引用的类已经经过反复验证了，就可以使用<code>-Xverifynone</code>参数来关闭大部分的类验证措施，以缩短虚拟机类加载的时间。</p>
 </blockquote>
+<h2 id="准备：为类的静态变量分配内存，并将其初始化为默认值"><a href="#准备：为类的静态变量分配内存，并将其初始化为默认值" class="headerlink" title="准备：为类的静态变量分配内存，并将其初始化为默认值"></a>准备：为类的静态变量分配内存，并将其初始化为默认值</h2><ol>
+<li>这时候进行内存分配的仅包括类变量(static)，而不包括实例变量，实例变量会在对象实例化时随着对象一块分配在java堆中。</li>
+<li>这里所设置的初始值通常情况下是数据类型默认的零值(如0，null,false),而不是被在java代码中显示赋予的值。</li>
+<li>如果类字段的字段属性表中存在<code>ConstantValue</code>属性，即同时被final和static修饰，那么在准备阶段变量value就会被初始化为ConstValue属性所指定的值。</li>
+</ol>
+<p><strong>示例：</strong></p>
+<blockquote>
+<p>假设一个类变量的定义为：<code>public static int value = 3;</code><br>那么变量value在准备阶段过后的初始值为0，而不是3。因为此时尚未执行任何java方法，而赋值为3是在程序编译后，存放于类构造器<code>&lt;clinit&gt;()</code>方法中的，在初始化阶段执行。</p>
+</blockquote>
+<p> 这里还需要注意如下几点：</p>
+<blockquote>
+<ul>
+<li>对基本数据类型来说，对于类变量（static）和全局变量，如果不显式地对其赋值而直接使用，则系统会为其赋予默认的零值，而对于局部变量来说，在使用前必须显式地为其赋值，否则编译时不通过。</li>
+<li>对于同时被static和final修饰的常量，必须在声明的时候就为其显式地赋值，否则编译时不通过；而只被final修饰的常量则既可以在声明时显式地为其赋值，也可以在类初始化时显式地为其赋值，总之，在使用前必须为其显式地赋值，系统不会为其赋予默认零值。</li>
+<li>对于引用数据类型reference来说，如数组引用、对象引用等，如果没有对其进行显式地赋值而直接使用，系统都会为其赋予默认的零值，即null。<ul>
+<li>如果在数组初始化时没有对数组中的各元素赋值，那么其中的元素将根据对应的数据类型而被赋予默认的零值。</li>
+</ul>
+</li>
+</ul>
+</blockquote>
+<h2 id="解析"><a href="#解析" class="headerlink" title="解析"></a>解析</h2><p>解析阶段是虚拟机将常量池内的符号引用替换为直接引用的过程。<br>符号引用就是一组符号来描述目标，可以是任何字面量。<br>直接引用就是直接指向目标的指针、相对偏移量或一个间接定位到目标的句柄。</p>
+<h2 id="初始化"><a href="#初始化" class="headerlink" title="初始化"></a>初始化</h2><p>初始化：为类的静态变量赋予正确的初始值，JVM负责对类进行初始化，主要对类变量进行初始化。在java中对类变量进行初始值设定有两种方式：</p>
+<blockquote>
+<ol>
+<li>声明类变量是指定初始值</li>
+<li>使用静态代码块为类变量指定初始值</li>
+</ol>
+</blockquote>
+<p>JVM初始化步骤</p>
+<blockquote>
+<ol>
+<li>假如这个类还没有被加载和连接，则程序先加载并连接该类</li>
+<li>假如该类的直接父类还没有被初始化，则先初始化其直接父类</li>
+<li>假如类中有初始化语句，则系统依次执行这些初始化语句</li>
+</ol>
+</blockquote>
+<p>类初始化时机：只有当对类的主动引用的时候才会导致类的初始化，<strong>类的主动引用</strong>包括以下六种：</p>
+<blockquote>
+<ol>
+<li>创建类的实例，也就是new的方式</li>
+<li>访问某个类或接口的静态变量，或者对该静态变量赋值</li>
+<li>调用类的静态方法</li>
+<li>反射（如 Class.forName(“com.shengsiyuan.Test”)）</li>
+<li>初始化某个类的子类，则其父类也会被初始化</li>
+<li>Java虚拟机启动时被标明为启动类的类（ JavaTest），直接使用 java.exe命令来运行某个主类</li>
+</ol>
+</blockquote>
+<p>被动引用：</p>
+<blockquote>
+<ol>
+<li>通过子类引用父类静态字段，不会导致子类初始化；</li>
+<li>Array[] arr = new Array[10]; 不会触发 Array 类初始化；</li>
+<li>static final VAR 在编译阶段会存入调用类的常量池，通过 ClassName.VAR 引用不会触发 ClassName 初始化。</li>
+</ol>
+</blockquote>
+<h2 id="介绍生命周期"><a href="#介绍生命周期" class="headerlink" title="介绍生命周期"></a>介绍生命周期</h2><p>以下四种情况：</p>
+<blockquote>
+<ul>
+<li>执行了 System.exit()方法</li>
+<li>程序正常执行结束</li>
+<li>程序在执行过程中遇到了异常或错误而异常终止</li>
+<li>由于操作系统出现错误而导致Java虚拟机进程终止</li>
+</ul>
+</blockquote>
+<h1 id="类加载器"><a href="#类加载器" class="headerlink" title="类加载器"></a>类加载器</h1><p><img src="http://mmbiz.qpic.cn/mmbiz_png/PgqYrEEtEnokxXiapDdvntH8PGwa0zGXM7qXKib1ibsib1BuyLxjoP1sgorwib78yTD4896N5r1AibdhDXTHZ7z9VyBg/640?wx_fmt=png&tp=webp&wxfrom=5&wx_lazy=1&wx_co=1" alt="image"></p>
+<p>站在Java虚拟机的角度来讲，只存在两种不同的类加载器：<br><strong>启动类加载器：</strong><br>它使用C++实现（这里仅限于Hotspot，也就是JDK1.5之后默认的虚拟机，有很多其他的虚拟机是用Java语言实现的），是虚拟机自身的一部分；<br><strong>所有其它的类加载器：</strong><br>这些类加载器都由Java语言实现，独立于虚拟机之外，并且全部继承自抽象类 <code>java.lang.ClassLoader</code>，这些类加载器需要由启动类加载器加载到内存中之后才能去加载其他的类。</p>
+<p>站在Java开发人员的角度来看，类加载器可以大致划分为以下三类：</p>
+<p><strong>启动类加载器：</strong><code>BootstrapClassLoader</code>，负责加载存放在 <code>JDK\jre\lib</code>(JDK代表JDK的安装目录，下同)下，或被 <code>-Xbootclasspath</code>参数指定的路径中的，并且能被虚拟机识别的类库（如rt.jar，所有的java.开头的类均被 <code>BootstrapClassLoader</code>加载）。启动类加载器是无法被Java程序直接引用的。<br><strong>扩展类加载器：</strong><code>ExtensionClassLoader</code>，该加载器由 <code>sun.misc.Launcher$ExtClassLoader</code>实现，它负责加载 <code>JDK\jre\lib\ext</code>目录中，或者由 <code>java.ext.dirs</code>系统变量指定的路径中的所有类库（如javax.开头的类），开发者可以直接使用扩展类加载器。<br><strong>应用程序类加载器：</strong><code>ApplicationClassLoader</code>，该类加载器由 <code>sun.misc.Launcher$AppClassLoader</code>来实现，它负责加载用户类路径（ClassPath）所指定的类，开发者可以直接使用该类加载器，如果应用程序中没有自定义过自己的类加载器，一般情况下这个就是程序中默认的类加载器。</p>
+<h2 id="JVM类加载机制"><a href="#JVM类加载机制" class="headerlink" title="JVM类加载机制"></a>JVM类加载机制</h2><ul>
+<li><strong>全盘负责：</strong>当一个类加载器负责加载某个Class时，该Class所依赖的和引用的其他Class也将由该类加载器负责载入，除非显示使用另外一个类加载器来载入；</li>
+<li><strong>父类委托：</strong>先让父类加载器试图加载该类，只有在父类加载器无法加载该类时才尝试从自己的类路径中加载该类；</li>
+<li><strong>缓存机制：</strong>缓存机制将会保证所有加载过的Class都会被缓存，当程序中需要使用某个Class时，类加载器先从缓冲区寻找该Class，只有缓存区不存在，系统才会读取该类对应的二进制数据，并将其转换成Class对象，存入缓存区。*这就是为什么修改了Class后，必须重启JVM，程序的修改才会生效。</li>
+</ul>
+<h1 id="类的加载"><a href="#类的加载" class="headerlink" title="类的加载"></a>类的加载</h1><h2 id="显式加载"><a href="#显式加载" class="headerlink" title="显式加载"></a>显式加载</h2><p>调用<code>ClassLoader#loadClass(className)</code>或<code>Class.forName(className)</code>。<br>区别：</p>
+<blockquote>
+<ol>
+<li>Class.forName()：将类的.class文件加载到jvm中之外，还会对类进行解释，执行类中的static块；</li>
+<li>ClassLoader.loadClass()：只干一件事情，就是将.class文件加载到jvm中，不会执行static中的内容,只有在newInstance才会去执行static块。</li>
+<li>Class.forName(name,initialize,loader)带参函数也可控制是否加载static块。并且只有调用了newInstance()方法采用调用构造函数，创建类的对象 。</li>
+</ol>
+</blockquote>
+<h2 id="隐式加载"><a href="#隐式加载" class="headerlink" title="隐式加载"></a>隐式加载</h2><ol>
+<li>new类对象；</li>
+<li>使用类的静态域；</li>
+<li>创建子类对象；</li>
+<li>使用子类的静态域；</li>
+<li>其他的隐式加载，在JVM启动时：<blockquote>
+<ul>
+<li>BootStrapLoader 会加载一些 JVM 自身运行所需的 Class；</li>
+<li>ExtClassLoader 会加载指定目录下一些特殊的 Class；</li>
+<li>AppClassLoader 会加载 classpath 路径下的 Class，以及 main 函数所在的类的 Class 文件。</li>
+</ul>
+</blockquote>
+</li>
+</ol>
+<h1 id="双亲委派模型"><a href="#双亲委派模型" class="headerlink" title="双亲委派模型"></a>双亲委派模型</h1><p><strong>工作流程：</strong>如果一个类加载器收到了类加载的请求，它首先不会自己去尝试加载这个类，而是把请求委托给父加载器去完成，依次向上，因此，所有的类加载请求最终都应该被传递到顶层的启动类加载器中，只有当父加载器在它的搜索范围中没有找到所需的类时，即无法完成该加载，子加载器才会尝试自己去加载该类。</p>
+<p><strong>双亲委派机制：</strong></p>
+<ol>
+<li><p>当 <code>AppClassLoader</code>加载一个class时，它首先不会自己去尝试加载这个类，而是把类加载请求委派给父类加载器<code>ExtClassLoader</code>去完成。</p>
+</li>
+<li><p>当 <code>ExtClassLoader</code>加载一个class时，它首先也不会自己去尝试加载这个类，而是把类加载请求委派给<code>BootStrapClassLoader</code>去完成。</p>
+</li>
+<li><p>如果 <code>BootStrapClassLoader</code>加载失败（例如在 $JAVA_HOME/jre/lib里未查找到该class），会使用 <code>ExtClassLoader</code>来尝试加载；</p>
+</li>
+<li><p>若<code>ExtClassLoader</code>也加载失败，则会使用 <code>AppClassLoader</code>来加载，如果 <code>AppClassLoader</code>也加载失败，则会报出异常 <code>ClassNotFoundException</code>。</p>
+</li>
+</ol>
+<p>参考资料：<br><a href="https://mp.weixin.qq.com/s?__biz=MzI4NDY5Mjc1Mg==&amp;mid=2247483934&amp;idx=1&amp;sn=41c46eceb2add54b7cde9eeb01412a90&amp;chksm=ebf6da61dc81537721d36aadb5d20613b0449762842f9128753e716ce5fefe2b659d8654c4e8&amp;scene=21#wechat_redirect" target="_blank" rel="noopener">https://mp.weixin.qq.com/s?__biz=MzI4NDY5Mjc1Mg==&amp;mid=2247483934&amp;idx=1&amp;sn=41c46eceb2add54b7cde9eeb01412a90&amp;chksm=ebf6da61dc81537721d36aadb5d20613b0449762842f9128753e716ce5fefe2b659d8654c4e8&amp;scene=21#wechat_redirect</a></p>
+<p><a href="https://github.com/TangBean/understanding-the-jvm/blob/master/Ch2-Java%E8%99%9A%E6%8B%9F%E6%9C%BA%E7%A8%8B%E5%BA%8F%E6%89%A7%E8%A1%8C/01-%E8%99%9A%E6%8B%9F%E6%9C%BA%E7%9A%84%E7%B1%BB%E5%8A%A0%E8%BD%BD%E6%9C%BA%E5%88%B6.md" target="_blank" rel="noopener">https://github.com/TangBean/understanding-the-jvm/blob/master/Ch2-Java%E8%99%9A%E6%8B%9F%E6%9C%BA%E7%A8%8B%E5%BA%8F%E6%89%A7%E8%A1%8C/01-%E8%99%9A%E6%8B%9F%E6%9C%BA%E7%9A%84%E7%B1%BB%E5%8A%A0%E8%BD%BD%E6%9C%BA%E5%88%B6.md</a></p>
+<p><a href="https://blog.csdn.net/duqi_2009/article/details/101877579" target="_blank" rel="noopener">https://blog.csdn.net/duqi_2009/article/details/101877579</a></p>
 
       
     </div>
@@ -566,7 +675,7 @@
   </li>
   <li class="post-copyright-link">
     <strong>Post link:</strong>
-    <a href="https://gemini-lin.github.io.git/2020/05/27/jvm%E7%B3%BB%E5%88%97%EF%BC%88%E4%B8%80%EF%BC%89-java%E7%B1%BB%E7%9A%84%E5%8A%A0%E8%BD%BD%E6%9C%BA%E5%88%B6/" title="jvm系列（一）--java类的加载机制">https://gemini-lin.github.io.git/2020/05/27/jvm%E7%B3%BB%E5%88%97%EF%BC%88%E4%B8%80%EF%BC%89-java%E7%B1%BB%E7%9A%84%E5%8A%A0%E8%BD%BD%E6%9C%BA%E5%88%B6/</a>
+    <a href="https://gemini-lin.github.io.git/2020/05/27/jvm%E7%B3%BB%E5%88%97%EF%BC%88%E4%B8%80%EF%BC%89-java%E7%B1%BB%E7%9A%84%E5%8A%A0%E8%BD%BD%E6%9C%BA%E5%88%B6/" title="JVM系列（一）--Java类的加载机制">https://gemini-lin.github.io.git/2020/05/27/jvm%E7%B3%BB%E5%88%97%EF%BC%88%E4%B8%80%EF%BC%89-java%E7%B1%BB%E7%9A%84%E5%8A%A0%E8%BD%BD%E6%9C%BA%E5%88%B6/</a>
   </li>
   <li class="post-copyright-license">
     <strong>Copyright Notice: </strong>
@@ -808,7 +917,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#面试问题"><span class="nav-number">1.</span> <span class="nav-text">面试问题</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#类的加载定义"><span class="nav-number">2.</span> <span class="nav-text">类的加载定义</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#类的生命周期"><span class="nav-number">3.</span> <span class="nav-text">类的生命周期</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#加载"><span class="nav-number">3.1.</span> <span class="nav-text">加载</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#验证"><span class="nav-number">3.2.</span> <span class="nav-text">验证</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#面试问题"><span class="nav-number">1.</span> <span class="nav-text">面试问题</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#类的加载定义"><span class="nav-number">2.</span> <span class="nav-text">类的加载定义</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#类的生命周期"><span class="nav-number">3.</span> <span class="nav-text">类的生命周期</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#加载"><span class="nav-number">3.1.</span> <span class="nav-text">加载</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#验证：确保被加载的类的正确性"><span class="nav-number">3.2.</span> <span class="nav-text">验证：确保被加载的类的正确性</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#准备：为类的静态变量分配内存，并将其初始化为默认值"><span class="nav-number">3.3.</span> <span class="nav-text">准备：为类的静态变量分配内存，并将其初始化为默认值</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#解析"><span class="nav-number">3.4.</span> <span class="nav-text">解析</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#初始化"><span class="nav-number">3.5.</span> <span class="nav-text">初始化</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#介绍生命周期"><span class="nav-number">3.6.</span> <span class="nav-text">介绍生命周期</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#类加载器"><span class="nav-number">4.</span> <span class="nav-text">类加载器</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#JVM类加载机制"><span class="nav-number">4.1.</span> <span class="nav-text">JVM类加载机制</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#类的加载"><span class="nav-number">5.</span> <span class="nav-text">类的加载</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#显式加载"><span class="nav-number">5.1.</span> <span class="nav-text">显式加载</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#隐式加载"><span class="nav-number">5.2.</span> <span class="nav-text">隐式加载</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#双亲委派模型"><span class="nav-number">6.</span> <span class="nav-text">双亲委派模型</span></a></li></ol></div>
             
 
           </div>
@@ -935,7 +1044,7 @@
     
       <span class="post-meta-item-text">Site words total count&#58;</span>
     
-    <span title="Site words total count">15.1k</span>
+    <span title="Site words total count">17.5k</span>
   
 </div>
 
