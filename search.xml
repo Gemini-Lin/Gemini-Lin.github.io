@@ -24,7 +24,7 @@
 </li>
 </ol>
 <h1 id="类的加载定义"><a href="#类的加载定义" class="headerlink" title="类的加载定义"></a>类的加载定义</h1><p>类的加载指的是将类的.class文件中的二进制数据读入到内存中，将其放在运行时数据区的方法区内，然后在堆区创建一个<code>java.lang.Class</code>对象，用来封装类在方法区内的数据结构。</p>
-<p><img src="https://mmbiz.qpic.cn/mmbiz_png/PgqYrEEtEnokxXiapDdvntH8PGwa0zGXMqaq9p1LDCF7iadMBibd685uYCy8u0yhb5dmlvLRwgzNueNdSdWdvEwww/640?wx_fmt=png&tp=webp&wxfrom=5&wx_lazy=1&wx_co=1" alt="image"></p>
+<p><img src="http://favorites.ren/assets/images/2017/jvm/jvm-1.png" alt="image"></p>
 <p>类的最终加载产品是位于堆区中的Class对象，Class对象封装了类在方法区内的数据结构，并向Java程序提供访问接口。</p>
 <p>与C语言的类比：C语言 –&gt; 二进制文件 –&gt; 计算机硬件；Java –&gt; 字节码文件 –&gt; JVM</p>
 <blockquote>
@@ -119,7 +119,7 @@
 <li>由于操作系统出现错误而导致Java虚拟机进程终止</li>
 </ul>
 </blockquote>
-<h1 id="类加载器"><a href="#类加载器" class="headerlink" title="类加载器"></a>类加载器</h1><p><img src="http://mmbiz.qpic.cn/mmbiz_png/PgqYrEEtEnokxXiapDdvntH8PGwa0zGXM7qXKib1ibsib1BuyLxjoP1sgorwib78yTD4896N5r1AibdhDXTHZ7z9VyBg/640?wx_fmt=png&tp=webp&wxfrom=5&wx_lazy=1&wx_co=1" alt="image"></p>
+<h1 id="类加载器"><a href="#类加载器" class="headerlink" title="类加载器"></a>类加载器</h1><p><img src="http://favorites.ren/assets/images/2017/jvm/calssloader.png" alt="image"></p>
 <p>站在Java虚拟机的角度来讲，只存在两种不同的类加载器：<br><strong>启动类加载器：</strong><br>它使用C++实现（这里仅限于Hotspot，也就是JDK1.5之后默认的虚拟机，有很多其他的虚拟机是用Java语言实现的），是虚拟机自身的一部分；<br><strong>所有其它的类加载器：</strong><br>这些类加载器都由Java语言实现，独立于虚拟机之外，并且全部继承自抽象类 <code>java.lang.ClassLoader</code>，这些类加载器需要由启动类加载器加载到内存中之后才能去加载其他的类。</p>
 <p>站在Java开发人员的角度来看，类加载器可以大致划分为以下三类：</p>
 <p><strong>启动类加载器：</strong><code>BootstrapClassLoader</code>，负责加载存放在 <code>JDK\jre\lib</code>(JDK代表JDK的安装目录，下同)下，或被 <code>-Xbootclasspath</code>参数指定的路径中的，并且能被虚拟机识别的类库（如rt.jar，所有的java.开头的类均被 <code>BootstrapClassLoader</code>加载）。启动类加载器是无法被Java程序直接引用的。<br><strong>扩展类加载器：</strong><code>ExtensionClassLoader</code>，该加载器由 <code>sun.misc.Launcher$ExtClassLoader</code>实现，它负责加载 <code>JDK\jre\lib\ext</code>目录中，或者由 <code>java.ext.dirs</code>系统变量指定的路径中的所有类库（如javax.开头的类），开发者可以直接使用扩展类加载器。<br><strong>应用程序类加载器：</strong><code>ApplicationClassLoader</code>，该类加载器由 <code>sun.misc.Launcher$AppClassLoader</code>来实现，它负责加载用户类路径（ClassPath）所指定的类，开发者可以直接使用该类加载器，如果应用程序中没有自定义过自己的类加载器，一般情况下这个就是程序中默认的类加载器。</p>
