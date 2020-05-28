@@ -75,7 +75,7 @@
 
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="JVM,内存管理," />
 
 
 
@@ -86,18 +86,24 @@
 
 
 
-<meta name="description" content="饮冰十年，难凉热血       我是GeminiPlanet的守护者，Gemini-Lin。  我现在就读于电子科技大学，从事互联网安全方向，建立这个网站的初衷是记录自己的学习历程以及分享自己的学习体会，同时如果能够帮助一些人解决学业、技术、生活等方面的Bug，自然是一举两得了。  先谈谈这个网站的名字GeminiPlanet，我把它比作一个星球，就像小王子的B612星球一样，我希望无论自己走的多">
-<meta property="og:type" content="website">
-<meta property="og:title" content="自我介绍">
-<meta property="og:url" content="https:&#x2F;&#x2F;gemini-lin.github.io.git&#x2F;about&#x2F;index.html">
+<meta name="description" content="运行时数据区域 程序计数器程序计数器就是一块较小的内存空间，可以看作是当前线程所执行的字节码的行号指示器，和机组中学到的大致一样。 由于Java虚拟机的多线程是通过线程轮流切换、分配处理执行时间的方式来实现的，也就是操作系统中学到的并发性–两个或多个事件在同一时间间隔内发生，在任何时刻仅会执行一条线程中的指令。因此，为了线程切换后能恢复到正确的执行位置，每条线程都需要有一个独立的程序计数器，各条线">
+<meta property="og:type" content="article">
+<meta property="og:title" content="JVM系列（二）-- Java内存管理">
+<meta property="og:url" content="https:&#x2F;&#x2F;gemini-lin.github.io.git&#x2F;2020&#x2F;05&#x2F;28&#x2F;JVM%E7%B3%BB%E5%88%97%EF%BC%88%E4%BA%8C%EF%BC%89-Java%E5%86%85%E5%AD%98%E7%AE%A1%E7%90%86&#x2F;index.html">
 <meta property="og:site_name" content="GeminiPlanet">
-<meta property="og:description" content="饮冰十年，难凉热血       我是GeminiPlanet的守护者，Gemini-Lin。  我现在就读于电子科技大学，从事互联网安全方向，建立这个网站的初衷是记录自己的学习历程以及分享自己的学习体会，同时如果能够帮助一些人解决学业、技术、生活等方面的Bug，自然是一举两得了。  先谈谈这个网站的名字GeminiPlanet，我把它比作一个星球，就像小王子的B612星球一样，我希望无论自己走的多">
-<meta property="og:image" content="https:&#x2F;&#x2F;avatars2.githubusercontent.com&#x2F;u&#x2F;47587977?s&#x3D;460&amp;u&#x3D;db6fb475d59e7998bb5df3e236ee84729753107c&amp;v&#x3D;4">
-<meta property="article:published_time" content="2020-01-15T12:00:41.000Z">
-<meta property="article:modified_time" content="2020-05-15T00:36:32.138Z">
+<meta property="og:description" content="运行时数据区域 程序计数器程序计数器就是一块较小的内存空间，可以看作是当前线程所执行的字节码的行号指示器，和机组中学到的大致一样。 由于Java虚拟机的多线程是通过线程轮流切换、分配处理执行时间的方式来实现的，也就是操作系统中学到的并发性–两个或多个事件在同一时间间隔内发生，在任何时刻仅会执行一条线程中的指令。因此，为了线程切换后能恢复到正确的执行位置，每条线程都需要有一个独立的程序计数器，各条线">
+<meta property="og:image" content="https:&#x2F;&#x2F;s1.ax1x.com&#x2F;2020&#x2F;05&#x2F;28&#x2F;tmAiTO.md.png">
+<meta property="og:image" content="http:&#x2F;&#x2F;ifeve.com&#x2F;wp-content&#x2F;uploads&#x2F;2015&#x2F;05&#x2F;JUtH_20121024_RuntimeDataAreas_2_MemoryModel-1.png">
+<meta property="og:image" content="https:&#x2F;&#x2F;s1.ax1x.com&#x2F;2020&#x2F;05&#x2F;28&#x2F;te5Rcq.png">
+<meta property="og:image" content="https:&#x2F;&#x2F;s1.ax1x.com&#x2F;2020&#x2F;05&#x2F;28&#x2F;te7VDx.png">
+<meta property="og:image" content="https:&#x2F;&#x2F;s1.ax1x.com&#x2F;2020&#x2F;05&#x2F;28&#x2F;teHwTK.png">
+<meta property="article:published_time" content="2020-05-28T07:45:04.000Z">
+<meta property="article:modified_time" content="2020-05-28T15:45:35.608Z">
 <meta property="article:author" content="Gemini-Lin">
+<meta property="article:tag" content="JVM">
+<meta property="article:tag" content="内存管理">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https:&#x2F;&#x2F;avatars2.githubusercontent.com&#x2F;u&#x2F;47587977?s&#x3D;460&amp;u&#x3D;db6fb475d59e7998bb5df3e236ee84729753107c&amp;v&#x3D;4">
+<meta name="twitter:image" content="https:&#x2F;&#x2F;s1.ax1x.com&#x2F;2020&#x2F;05&#x2F;28&#x2F;tmAiTO.md.png">
 
 
 
@@ -127,13 +133,13 @@
 
 
 
-  <link rel="canonical" href="https://Gemini-Lin.github.io.git/about/"/>
+  <link rel="canonical" href="https://Gemini-Lin.github.io.git/2020/05/28/JVM系列（二）-Java内存管理/"/>
 
 
 
 
 
-  <title>自我介绍 | GeminiPlanet</title>
+  <title>JVM系列（二）-- Java内存管理 | GeminiPlanet</title>
   
 
 
@@ -293,39 +299,441 @@
 
   <div id="posts" class="posts-expand">
     
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://Gemini-Lin.github.io.git/2020/05/28/JVM%E7%B3%BB%E5%88%97%EF%BC%88%E4%BA%8C%EF%BC%89-Java%E5%86%85%E5%AD%98%E7%AE%A1%E7%90%86/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Gemini-Lin">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="https://s1.ax1x.com/2020/05/14/YD6wTI.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="GeminiPlanet">
+    </span>
+
     
-    
-    <div class="post-block page">
       <header class="post-header">
 
-	<h2 class="post-title" itemprop="name headline">自我介绍</h2>
-
-
-
-</header>
-
-      
-      
-      
-      <div class="post-body">
         
         
-          <blockquote class="blockquote-center"><p><strong><em>饮冰十年，难凉热血</em></strong>  </p>
-</blockquote>
+          <h2 class="post-title" itemprop="name headline">JVM系列（二）-- Java内存管理</h2>
+        
 
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2020-05-28T15:45:04+08:00">
+                2020-05-28
+              </time>
+            
+
+            
+              <span class="post-meta-divider">|</span>
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-check-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">更新于&#58;</span>
+              
+              <time title="更新于" itemprop="dateModified" datetime="2020-05-28T23:45:35+08:00">
+                2020-05-28
+              </time>
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/java%E5%90%8E%E7%AB%AF%E5%BC%80%E5%8F%91/" itemprop="url" rel="index">
+                    <span itemprop="name">java后端开发</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+            <span class="post-meta-divider">|</span>
+            <span class="page-pv">本文总阅读量<i class="fa fa-file-o"></i>
+            <span class="busuanzi-value" id="busuanzi_value_page_pv" ></span>次
+            </span>
+          
+
+          
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数统计&#58;</span>
+                
+                <span title="字数统计">
+                  3.2k
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                
+                <span title="阅读时长">
+                  11
+                </span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h1 id="运行时数据区域"><a href="#运行时数据区域" class="headerlink" title="运行时数据区域"></a>运行时数据区域</h1><p><a href="https://imgchr.com/i/tmAiTO" target="_blank" rel="noopener"><img src="https://s1.ax1x.com/2020/05/28/tmAiTO.md.png" alt="tmAiTO.md.png"></a></p>
+<h2 id="程序计数器"><a href="#程序计数器" class="headerlink" title="程序计数器"></a>程序计数器</h2><p>程序计数器就是一块较小的内存空间，可以看作是当前线程所执行的字节码的行号指示器，和机组中学到的大致一样。</p>
+<p>由于Java虚拟机的多线程是通过线程轮流切换、分配处理执行时间的方式来实现的，也就是操作系统中学到的并发性–两个或多个事件在<em>同一时间间隔</em>内发生，在任何时刻仅会执行一条线程中的指令。因此，为了线程切换后能恢复到正确的执行位置，每条线程都需要有一个独立的程序计数器，各条线程之间计数器互不影响，独立存储，我们称这类内存区域为“<strong>线程私有</strong>”的内存。</p>
+<p>如果线程正在执行的是一个Java方法，这个计算器记录的是正在执行的虚拟机字节码指令的地址；<br>如果正在执行的是本地(Native)方法，这个计数器值则应为空(Undefined)。<br>此内存区域是唯一一个在《Java虚拟机规范》中没有规定任何<code>OutOfMemoryError</code>情况的区域。</p>
+<a id="more"></a>
+<h2 id="Java虚拟机栈"><a href="#Java虚拟机栈" class="headerlink" title="Java虚拟机栈"></a>Java虚拟机栈</h2><p>与程序计数器一样，Java虚拟机栈(Java Virtual Machine Stack)也是<em>线程私有</em>的，它的生命周期与线程相同。虚拟机站描述的是<strong>Java方法执行的线程内存模型</strong>：每个方法被执行的时候，Java虚拟机都会同步创建一个栈帧(Stack Frame:是方法运行期很重要的基础数据结构，后面会补充)用于存储局部变量表、操作数栈、动态连接、方法出口等信息。每一个方法被调用直至执行完毕的过程，就对应着一个栈帧在虚拟机栈中从入栈到出栈。</p>
+<h3 id="局部变量表"><a href="#局部变量表" class="headerlink" title="局部变量表"></a>局部变量表</h3><p>局部变量表存放了编译期可知的各种Java虚拟机<strong>基本数据类型</strong>(boolean、byte、char、short、int、float、long、double)、<strong>对象引用</strong>(reference类型，它并不等同于对象本身，可能是一个指向对象起始地址的引用指针，也可能是指向一个代表对象的句柄或者其他与此对象相关的位置)和<code>returnAddress</code>类型(指向了一条字节码指令的地址)。</p>
 <blockquote>
-<p> 我是<strong>GeminiPlanet</strong>的守护者，Gemini-Lin。<br>  我现在就读于电子科技大学，从事互联网安全方向，建立这个网站的初衷是记录自己的学习历程以及分享自己的学习体会，同时如果能够帮助一些人解决学业、技术、生活等方面的Bug，自然是一举两得了。<br>  先谈谈这个网站的名字GeminiPlanet，我把它比作一个星球，就像小王子的B612星球一样，我希望无论自己走的多远，都能记得自己的梦想，不被世俗所拘束，小王子说<strong>“星星发亮是为了让每一个人有一天都能找到属于自己的星星”,</strong>愿我也能找到自己的星星，发出自己的一份光亮！<br> <img src="https://avatars2.githubusercontent.com/u/47587977?s=460&u=db6fb475d59e7998bb5df3e236ee84729753107c&v=4" alt="Gemini-Lin"><br>  再谈谈我的名字<strong>Gemini-Lin</strong>，Gemini是我的星座，Lin是我的姓氏。我喜欢篮球，不管遇到什么困难，心情多么奔溃，只要打上一场篮球，一切都会海阔天空。因此我想起了华人球星<strong>Jeremy Lin</strong>，便给自己取了Gemini-Lin。我觉得每一个人都要有一份热爱，不管是程序，还是篮球，都能引领我走的更远。<br>  最后，欢迎你们来到GeminiPlanet,请好好停留，<strong>万一我的星球里，也有你想要的玫瑰花呢？</strong></p>
+<p>这些数据类型在局部变量表中的存储空间以<strong>局部变量槽(Slot)</strong> 来表示，其中64位长度的long和double类型的数据会占用<em>两个变量槽</em>，其余的数据类型只占用一个。局部变量表所需的内存空间在<strong>编译期间完成分配</strong>，当进入一个方法时，这个方法需要在栈帧中分配多大的局部变量空间是<em>完全确定的</em>，在方法运行期间不会改变局部变量表的大小。请读者注意，这里说的“大小”是指变量槽的数量，虚拟机真正使用多大的内存空间（譬如按照1个变量槽占用32个比特、64个比特，或者更多）来实现一个变量槽，这是完全由具体的虚拟机实现自行决定的事情。</p>
 </blockquote>
+<blockquote>
+<p>在《Java虚拟机规范》中，对这个内存区域规定了两类异常情况：</p>
+<ol>
+<li>如果线程请求的栈深度大于虚拟机所允许的深度，将抛出<code>StackOverflowerError</code>异常;</li>
+<li>如果Java虚拟机栈容量可以动态扩展，当栈扩展时无法申请到足够的内存会抛出<code>OutOfMemoryError</code>异常。</li>
+</ol>
+</blockquote>
+<blockquote>
+<p><strong>动态扩展：</strong>HotSpot虚拟机的栈容量是不可以动态扩展的，以前的Classic虚拟机倒是可以。所以在Hotspot虚拟机上是不会由于虚拟机栈无法扩展而导致<code>OutOfMemoryError</code>异常–只要线程申请栈空间成功了就不会有OOM，但是如果申请时失败，仍然是会出现OOM异常的。</p>
+</blockquote>
+<h2 id="本地方法栈"><a href="#本地方法栈" class="headerlink" title="本地方法栈"></a>本地方法栈</h2><p>本地方法栈(Native Method Stacks)与虚拟机栈所发挥的作用是非常相似的，其区别只是虚拟机栈为<em>虚拟机执行Java方法(也就是字节码)服务</em>，而本地方法栈则是<strong>为虚拟机使用到的本地(Native)方法服务</strong>。</p>
+<p>《Java虚拟机规范》对本地方法栈中方法使用的语言、使用方式与数据结构并没有任何强制规定，因此具体的虚拟机可以根据需要自由实现它，甚至有的Java虚拟机（譬如Hot-Spot虚拟机）直接就把本地方法栈和虚拟机栈合二为一。与虚拟机栈一样，本地方法栈也会在栈深度溢出或者栈扩展失败时分别抛出StackOverflowError和OutOfMemoryError异常。</p>
+<h3 id="Native-Method"><a href="#Native-Method" class="headerlink" title="Native Method"></a>Native Method</h3><p>Native Method就是一个java调用非java代码的接口。一个Native Method是这样一个java的方法：该方法的实现由非java语言实现，比如C。这个特征并非java所特有，很多其它的编程语言都有这一机制，比如在C++中，你可以用extern “C”告知C++编译器去调用一个C的函数。</p>
+<p><a href="https://blog.csdn.net/wike163/article/details/6635321" target="_blank" rel="noopener">详细介绍</a></p>
+<h2 id="Java堆"><a href="#Java堆" class="headerlink" title="Java堆"></a>Java堆</h2><p>对于Java应用程序来说，<strong>Java堆(Java Heap)</strong>是虚拟机所管理的内存中最大的一块。Java堆是被所有线程共享的一块内存区域，在虚拟机启动时创建。此内存区域的唯一目的就是<strong>存放对象实例</strong>，Java世界里“几乎”所有对象实例都在这里分配内存。</p>
+<blockquote>
+<p>在《Java虚拟机规范》中对Java堆的描述是：“所有的对象实例以及数组都应当在堆上分配”，而这里笔者写的“几乎”是指从实现角度来看，随着Java语言的发展，现在已经能看到些许迹象表明日后可能出现值类型的支持，即使只考虑现在，由于即时编译技术的进步，尤其是逃逸分析技术的日渐强大，栈上分配、标量替换优化手段已经导致一些微妙的变化悄然发生，所以说Java对象实例都分配在堆上也渐渐变得不是那么绝对了。</p>
+</blockquote>
+<p>Java堆是垃圾收集管理器管理的内存区域，因此一些资料中它也被称为“<strong>GC堆</strong>”(Garbage Collected Heap)。从回收内存的角度看，由于现代垃圾收集器大部分都是基于<strong>分代收集理论</strong>设计的，所以Java堆中经常会出现 <strong>“新生代”、“老年代”、“永久代”</strong>等名字；再细致一点的有<strong>Eden空间、From Survivor空间、To Survivor空间</strong>等(面试常问)</p>
+<p><img src="http://ifeve.com/wp-content/uploads/2015/05/JUtH_20121024_RuntimeDataAreas_2_MemoryModel-1.png" alt="image"><br>所有的对象在实例化后的整个运行周期内，都被存放在堆内存中。堆内存又被划分成不同的部分：伊甸区(Eden)，幸存者区域(Survivor Sapce)，老年代（Old Generation Space）。</p>
+<p>根据Java虚拟机规范的规定，Java堆可以处于<strong>物理上不连续的内存空间中，只要逻辑上是连续的即可</strong>，就像我们的磁盘空间一样。在实现时，既可以实现成固定大小的，也可以是可扩展的，不过当前主流的虚拟机都是按照可扩展来实现的（通过-Xmx和-Xms控制）。</p>
+<p>如果在堆中没有内存完成实例分配，并且堆也无法再扩展时，将会抛出<code>OutOfMemoryError</code>异常。</p>
+<h2 id="方法区"><a href="#方法区" class="headerlink" title="方法区"></a>方法区</h2><p>方法区(Method Area)与Java堆一样，是各个线程共享的内存区域，它用于<strong>存储已被虚拟机加载的类型信息、常量、静态变量、即时编译器编译后的代码缓存</strong>等数据。</p>
+<p>方法的执行都是伴随着线程的。<strong>原始类型的本地变量以及引用</strong>都存放在<strong>线程栈</strong>中。而<strong>引用关联的对象</strong>比如String，都存在在<strong>堆中</strong>。</p>
+<h3 id="运行时常量池"><a href="#运行时常量池" class="headerlink" title="运行时常量池"></a>运行时常量池</h3><p><strong>运行时常量池（Runtime Constant Pool）</strong>是方法区的一部分。Class文件中除了有类的版本、字段、方法、接口等描述信息外，还有一项信息是常量池表（Constant PoolTable），用于存放<strong>编译期生成的各种字面量与符号引用</strong>，这部分内容将在类加载后存放到方法区的运行时常量池中。</p>
+<h1 id="HotSpot虚拟机对象"><a href="#HotSpot虚拟机对象" class="headerlink" title="HotSpot虚拟机对象"></a>HotSpot虚拟机对象</h1><p>HotSpot虚拟机在Java堆中对象分配、布局和访问的全过程。</p>
+<h2 id="对象的创建"><a href="#对象的创建" class="headerlink" title="对象的创建"></a>对象的创建</h2><p>遇到一条new指令时的创建过程：</p>
+<ol>
+<li>检查这个指令的参数能否在常量池中定位到一个<strong>类的符号引用</strong>，并检查这个符号引用代表的类是否已被<em>加载、解析和初始化过</em>；</li>
+<li>类加载检查通过后，虚拟机将为新对象<strong>分配内存</strong>，此时可以确定存储这个对象所需的<em>内存大小</em>；</li>
+<li>在堆中为新对象分配可用内存；</li>
+<li>将分配到的内存初始化；</li>
+<li>设置对象头中的数据；</li>
+<li>此时，从虚拟机的角度看，对象已经创建好了，但从Java程序的角度看，对象创建才刚刚开始，构造函数还没有执行。</li>
+</ol>
+<h3 id="如何在堆中为新对象划分可用的内存？"><a href="#如何在堆中为新对象划分可用的内存？" class="headerlink" title="如何在堆中为新对象划分可用的内存？"></a>如何在堆中为新对象划分可用的内存？</h3><p><strong>指针碰撞(内存分配规整)</strong></p>
+<ul>
+<li>用过的内存放一边，没用过的内存放一边，中间用一个指针分割；</li>
+<li>分配内存的过程就是将指针向没有用过的内存那边移动所需的长度。</li>
+</ul>
+<p><strong>空闲列表(内存分配不规整)</strong></p>
+<ul>
+<li>维护一个列表，记录哪些内存块是可用的；</li>
+<li>分配内存时，从列表上选取一块足够大的空间分配给对象，并更新列表上的记录。</li>
+</ul>
+<h3 id="如何处理多线程创建对象时，划分内存的指针的同步问题？"><a href="#如何处理多线程创建对象时，划分内存的指针的同步问题？" class="headerlink" title="如何处理多线程创建对象时，划分内存的指针的同步问题？"></a>如何处理多线程创建对象时，划分内存的指针的同步问题？</h3><ul>
+<li>对分配内存空间的动作进行<strong>同步处理(CAS)</strong>;</li>
+<li>把内存分配动作按照线程划分在<strong>不同的空间</strong>之中进行；<ol>
+<li>每个线程在Java堆中预先分配一小块内存，称为<strong>本地线程分配缓冲</strong>(Thread Local Allocation Buffer,TLAB);</li>
+<li>哪个线程要分配内存就在哪个线程的TLAB上分配，TLAB用完需要分配新的TLAB时，才需要同步锁定；</li>
+<li>通过 <code>-XX:+/-UseTLAB</code>参数设定是否使用 TLAB。</li>
+</ol>
+</li>
+</ul>
+<h2 id="对象的内存布局"><a href="#对象的内存布局" class="headerlink" title="对象的内存布局"></a>对象的内存布局</h2><p>在Hotspot虚拟机里，对象在堆内存中的存储布局可以划分为三个部分：<strong>对象头(Header)、实例数据(Instance Data)和对齐填充(Padding)</strong>。</p>
+<h3 id="对象头"><a href="#对象头" class="headerlink" title="对象头"></a>对象头</h3><p><strong>对象头部分</strong>包括两类信息：</p>
+<ol>
+<li><strong>运行数据：</strong>用于存储对象自身的运行时数据，如哈希码(HashCode)、GC分代年龄、锁状态标志等。(见官方 Mark Word)<br><img src="https://s1.ax1x.com/2020/05/28/te5Rcq.png" alt="te5Rcq.png"></li>
+<li><strong>类型指针：</strong>即对象指向它的类型元数据的指针，Java虚拟机通过这个指针确定该对象是哪个类的实例。</li>
+</ol>
+<h3 id="实例数据"><a href="#实例数据" class="headerlink" title="实例数据"></a>实例数据</h3><p>实例数据部分是对象真正存储的有效信息，即我们在程序代码里面所定义的<strong>各种类型的字段内容</strong>，无论是从父类继承下来的，还是在子类中定义的字段都必须记录起来。</p>
+<ul>
+<li><strong>默认分配顺序：</strong>longs/doubles、ints、shorts/chars、bytes/booleans、oops (Ordinary Object Pointers)，相同宽度的字段会被分配在一起，除了 oops，其他的长度由长到短；</li>
+<li>默认分配顺序下，父类字段会被分配在子类字段前面。</li>
+</ul>
+<h3 id="对齐填充"><a href="#对齐填充" class="headerlink" title="对齐填充"></a>对齐填充</h3><p>对象的第三部分是对齐填充，这并不是必然存在的，也没有特别的含义，它仅仅起着<strong>占位符</strong>的作用。<br>HotSpot VM要求对象的起始地址必须是<strong>8字节的整数倍</strong>，所以不够要补齐。</p>
+<h2 id="对象的访问定位"><a href="#对象的访问定位" class="headerlink" title="对象的访问定位"></a>对象的访问定位</h2><p>Java 程序需要通过虚拟机栈上的 <strong>reference 数据</strong>来操作堆上的具体对象，reference 数据是一个指向对象的引用，不过如何通过这个引用定位到具体的对象，目前主要有以下两种访问方式：<strong>句柄访问和直接指针访问</strong>。</p>
+<h3 id="句柄访问"><a href="#句柄访问" class="headerlink" title="句柄访问"></a>句柄访问</h3><p>句柄访问会在Java堆中划分一块内存作为句柄池，每一个句柄存放着对象类型数据的指针。</p>
+<p><strong>优势：</strong>对象移动的时候(这在垃圾回收时十分常见)只需改变句柄池中<strong>对象实例数据的指针</strong>，不需要修改Reference本身。<br><img src="https://s1.ax1x.com/2020/05/28/te7VDx.png" alt="te7VDx.png"></p>
+<h3 id="直接指针访问"><a href="#直接指针访问" class="headerlink" title="直接指针访问"></a>直接指针访问</h3><p>直接指针访问方式在Java堆对象的实例数据中存放了一个指向对象实例数据和对象类型数据的指针，在HotSpot中，这个指针会被存放在对象头中。</p>
+<p><strong>优势：</strong>减少了一次指针定位对象实例数据的开销，速度更快。<br><img src="https://s1.ax1x.com/2020/05/28/teHwTK.png" alt="teHwTK.png"></p>
+<p>参考目录：<br><a href="http://www.ityouknow.com/jvm/2017/08/25/jvm-memory-structure.html" target="_blank" rel="noopener">纯洁的微笑</a><br><a href="https://github.com/TangBean/understanding-the-jvm/blob/master/Ch1-Java%E5%86%85%E5%AD%98%E7%AE%A1%E7%90%86%E6%9C%BA%E5%88%B6/00-Java%E5%86%85%E5%AD%98%E5%8C%BA%E5%9F%9F%E8%AF%A6%E8%A7%A3.md" target="_blank" rel="noopener">Github笔记总结</a><br>《深入理解java虚拟机》</p>
 
-        
-      </div>
-      
-      
       
     </div>
     
     
     
+
+    
+      <div>
+      <div>
+    
+        <div style="text-align:center;color: #ccc;font-size:14px;">-------------本文结束<i class="fa fa-paw"></i>感谢您的阅读-------------</div>
+    
+</div>
+      </div>
+    
+
+    
+      <div>
+        <div id="wechat_subscriber" style="display: block; padding: 10px 0; margin: 20px auto; width: 100%; text-align: center">
+    <img id="wechat_subscriber_qcode" src="https://s1.ax1x.com/2020/04/24/J0wpss.png" alt="Gemini-Lin wechat" style="width: 200px; max-width: 100%;"/>
+    <div>扫一扫上面的二维码就可以关注我哦！</div>
+</div>
+
+      </div>
+    
+
+    
+      <div>
+        <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center;">
+  <div>您的支持是对我最大的肯定</div>
+  <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
+    <span>打赏</span>
+  </button>
+  <div id="QR" style="display: none;">
+
+    
+      <div id="wechat" style="display: inline-block">
+        <img id="wechat_qr" src="/images/wechatpay.jpg" alt="Gemini-Lin 微信支付"/>
+        <p>微信支付</p>
+      </div>
+    
+
+    
+      <div id="alipay" style="display: inline-block">
+        <img id="alipay_qr" src="/images/alipay.jpg" alt="Gemini-Lin 支付宝"/>
+        <p>支付宝</p>
+      </div>
+    
+
+    
+
+  </div>
+</div>
+
+      </div>
+    
+
+    
+      <div>
+        <!-- JS库 clipboard 拷贝内容到粘贴板-->
+<script src="https://cdn.bootcss.com/clipboard.js/2.0.1/clipboard.min.js"></script>
+
+<!-- JS库 sweetalert 显示提示信息-->
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+
+<ul class="post-copyright">
+  <!-- 本文标题 -->
+  <li>
+    <strong>本文标题： </strong>
+    JVM系列（二）-- Java内存管理
+  </li>
+
+  <!-- 本文作者 -->
+  <li class="post-copyright-author">
+    <strong>本文作者： </strong>
+    Gemini-Lin
+  </li>
+
+  <!-- 创建时间 -->
+  <li>
+    <strong>创建于： </strong>
+    2020年05月28日 - 15时05分
+  </li>
+
+  <!-- 修改时间 -->
+  <li>
+    <strong>更新于： </strong>
+    2020年05月28日 - 23时05分
+  </li>
+
+  <!-- 引用链接 -->
+  <li class="post-copyright-link">
+    <strong>引用链接：</strong>
+    <a href="https://gemini-lin.github.io.git/2020/05/28/JVM%E7%B3%BB%E5%88%97%EF%BC%88%E4%BA%8C%EF%BC%89-Java%E5%86%85%E5%AD%98%E7%AE%A1%E7%90%86/" title="JVM系列（二）-- Java内存管理"
+      >https://gemini-lin.github.io.git/2020/05/28/JVM%E7%B3%BB%E5%88%97%EF%BC%88%E4%BA%8C%EF%BC%89-Java%E5%86%85%E5%AD%98%E7%AE%A1%E7%90%86/</a
+    >
+    <span class="copy-path" title="点击复制引用链接"
+      ><i
+        style="cursor: pointer"
+        class="fa fa-clipboard"
+        data-clipboard-text="['s Blog | JVM系列（二）-- Java内存管理](https://gemini-lin.github.io.git/2020/05/28/JVM%E7%B3%BB%E5%88%97%EF%BC%88%E4%BA%8C%EF%BC%89-Java%E5%86%85%E5%AD%98%E7%AE%A1%E7%90%86/)"
+        aria-label="post.copy_success"
+      ></i
+    ></span>
+  </li>
+
+  <!-- 版权声明 -->
+  <li class="post-copyright-license">
+    <strong
+      >版权声明：
+    </strong>
+    本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="external nofollow" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明出处！
+  </li>
+</ul>
+
+<script>
+  var clipboard = new ClipboardJS(".fa-clipboard");
+  clipboard.on("success", function(target) {
+    var message = document.createElement("div");
+    message.innerHTML =
+      '<i class="fa fa-check-circle message-icon"></i><span class="message-content">' +
+      target.trigger.getAttribute("aria-label") +
+      "</span>";
+    swal({
+      content: message,
+      className: "copy-success-message",
+      timer: 1000,
+      button: false
+    });
+  });
+</script>
+      </div>
+    
+
+    
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/JVM/" rel="tag"># JVM</a>
+          
+            <a href="/tags/%E5%86%85%E5%AD%98%E7%AE%A1%E7%90%86/" rel="tag"># 内存管理</a>
+          
+        </div>
+      
+
+      
+      
+        <div class="post-widgets">
+        
+
+        
+
+        
+          
+          <div id="needsharebutton-postbottom">
+            <span class="btn">
+              <i class="fa fa-share-alt" aria-hidden="true"></i>
+            </span>
+          </div>
+        
+        </div>
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2020/05/27/JVM%E7%B3%BB%E5%88%97%EF%BC%88%E4%B8%80)%20-%20Java%E7%B1%BB%E7%9A%84%E5%8A%A0%E8%BD%BD%E6%9C%BA%E5%88%B6/" rel="next" title="JVM系列（一）--Java类的加载机制">
+                <i class="fa fa-chevron-left"></i> JVM系列（一）--Java类的加载机制
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+        
+<script>
+  with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='//bdimg.share.baidu.com/static/api/js/share.js?cdnversion='+~(-new Date()/36e5)];
+</script>
+
+      
+    </div>
   </div>
 
 
@@ -363,9 +771,18 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -469,6 +886,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#运行时数据区域"><span class="nav-number">1.</span> <span class="nav-text">运行时数据区域</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#程序计数器"><span class="nav-number">1.1.</span> <span class="nav-text">程序计数器</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Java虚拟机栈"><span class="nav-number">1.2.</span> <span class="nav-text">Java虚拟机栈</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#局部变量表"><span class="nav-number">1.2.1.</span> <span class="nav-text">局部变量表</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#本地方法栈"><span class="nav-number">1.3.</span> <span class="nav-text">本地方法栈</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Native-Method"><span class="nav-number">1.3.1.</span> <span class="nav-text">Native Method</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Java堆"><span class="nav-number">1.4.</span> <span class="nav-text">Java堆</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#方法区"><span class="nav-number">1.5.</span> <span class="nav-text">方法区</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#运行时常量池"><span class="nav-number">1.5.1.</span> <span class="nav-text">运行时常量池</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#HotSpot虚拟机对象"><span class="nav-number">2.</span> <span class="nav-text">HotSpot虚拟机对象</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#对象的创建"><span class="nav-number">2.1.</span> <span class="nav-text">对象的创建</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#如何在堆中为新对象划分可用的内存？"><span class="nav-number">2.1.1.</span> <span class="nav-text">如何在堆中为新对象划分可用的内存？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#如何处理多线程创建对象时，划分内存的指针的同步问题？"><span class="nav-number">2.1.2.</span> <span class="nav-text">如何处理多线程创建对象时，划分内存的指针的同步问题？</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#对象的内存布局"><span class="nav-number">2.2.</span> <span class="nav-text">对象的内存布局</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#对象头"><span class="nav-number">2.2.1.</span> <span class="nav-text">对象头</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#实例数据"><span class="nav-number">2.2.2.</span> <span class="nav-text">实例数据</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#对齐填充"><span class="nav-number">2.2.3.</span> <span class="nav-text">对齐填充</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#对象的访问定位"><span class="nav-number">2.3.</span> <span class="nav-text">对象的访问定位</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#句柄访问"><span class="nav-number">2.3.1.</span> <span class="nav-text">句柄访问</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#直接指针访问"><span class="nav-number">2.3.2.</span> <span class="nav-text">直接指针访问</span></a></li></ol></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
