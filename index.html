@@ -349,7 +349,7 @@
               
                 <span class="post-meta-item-text">更新于&#58;</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2020-05-30T21:09:34+08:00">
+              <time title="更新于" itemprop="dateModified" datetime="2020-05-30T21:12:01+08:00">
                 2020-05-30
               </time>
             
@@ -437,17 +437,13 @@
 
       
         
-          
-          红黑树原理二叉查找树二叉查找树具有以下的特性：
-
-某节点的左子树节点值仅包含小于该节点值
-某节点的右子树节点值仅包含大于该节点值
-左右子树每个也必须是二叉查找树
-
-简单的讲：越小的放在越左边。
-你以为的二叉查找树变态的二叉查找树这种畸形的二叉查找树就会退化成链表，查找节点的时间复杂度就会从O($log_2^n$)退化成O(n)。而根据我们在小学二年级就学过的[去除顶端优势]，我们引入了红黑树，达到树的平衡。
-红黑树简介R-B Tree，全称是Red-Black Tree，又称为“红黑树”，它一种特殊的二叉查找树。红黑树的每个节点上都有存储位表示节点的颜色，可以是红(Red)或黑(Black)。
-          ...
+          <h1 id="红黑树原理"><a href="#红黑树原理" class="headerlink" title="红黑树原理"></a>红黑树原理</h1><h2 id="二叉查找树"><a href="#二叉查找树" class="headerlink" title="二叉查找树"></a>二叉查找树</h2><p>二叉查找树具有以下的特性：</p>
+<ol>
+<li>某节点的左子树节点值仅包含小于该节点值</li>
+<li>某节点的右子树节点值仅包含大于该节点值</li>
+<li>左右子树每个也必须是二叉查找树</li>
+</ol>
+<p>简单的讲：<em>越小的放在越左边</em>。</p>
           <!--noindex-->
           <div class="post-button text-center">
             <a class="btn" href="/Data-Structure-and-Algorithms-1/#more" rel="contents">
@@ -551,8 +547,8 @@
               
                 <span class="post-meta-item-text">更新于&#58;</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2020-05-28T23:45:35+08:00">
-                2020-05-28
+              <time title="更新于" itemprop="dateModified" datetime="2020-05-30T21:11:52+08:00">
+                2020-05-30
               </time>
             
           </span>
@@ -640,7 +636,7 @@
       
         
           <h1 id="运行时数据区域"><a href="#运行时数据区域" class="headerlink" title="运行时数据区域"></a>运行时数据区域</h1><p><a href="https://imgchr.com/i/tmAiTO" target="_blank" rel="noopener"><img src="https://s1.ax1x.com/2020/05/28/tmAiTO.md.png" alt="tmAiTO.md.png"></a></p>
-<h2 id="程序计数器"><a href="#程序计数器" class="headerlink" title="程序计数器"></a>程序计数器</h2><p>程序计数器就是一块较小的内存空间，可以看作是当前线程所执行的字节码的行号指示器，和机组中学到的大致一样。</p>
+<h2 id="程序计数器"><a href="#程序计数器" class="headerlink" title="程序计数器"></a>程序计数器</h2><p>程序计数器就是一块较小的内存空间，可以看作是当前线程所执行的字节码的行号指示器，和计组中学到的大致一样。</p>
 <p>由于Java虚拟机的多线程是通过线程轮流切换、分配处理执行时间的方式来实现的，也就是操作系统中学到的并发性–两个或多个事件在<em>同一时间间隔</em>内发生，在任何时刻仅会执行一条线程中的指令。因此，为了线程切换后能恢复到正确的执行位置，每条线程都需要有一个独立的程序计数器，各条线程之间计数器互不影响，独立存储，我们称这类内存区域为“<strong>线程私有</strong>”的内存。</p>
 <p>如果线程正在执行的是一个Java方法，这个计算器记录的是正在执行的虚拟机字节码指令的地址；<br>如果正在执行的是本地(Native)方法，这个计数器值则应为空(Undefined)。<br>此内存区域是唯一一个在《Java虚拟机规范》中没有规定任何<code>OutOfMemoryError</code>情况的区域。</p>
           <!--noindex-->
