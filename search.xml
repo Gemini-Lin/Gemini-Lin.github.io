@@ -8,8 +8,10 @@
 <li>哪些内存需要回收？</li>
 <li>什么时候回收？</li>
 <li>如何回收？<a id="more"></a>
-<h2 id="Why-need-it？"><a href="#Why-need-it？" class="headerlink" title="Why need it？"></a>Why need it？</h2>经过半个世纪的发展，今天的内存动态分配与内存回收技术已经相当成熟，一切看起来都进入了“自动化”时代，那为什么我们还要去了解垃圾收集和内存分配？</li>
+
+</li>
 </ul>
+<h2 id="Why-need-it？"><a href="#Why-need-it？" class="headerlink" title="Why need it？"></a>Why need it？</h2><p>经过半个世纪的发展，今天的内存动态分配与内存回收技术已经相当成熟，一切看起来都进入了“自动化”时代，那为什么我们还要去了解垃圾收集和内存分配？</p>
 <p><strong>答案很简单：</strong>当需要排查<strong>各种内存溢出、内存泄漏问题</strong>时，当垃圾收集成为系统达到更高并发量的瓶颈时，我们就必须对这些“自动化”的技术实施必要的监控和调节。</p>
 <h2 id="对象"><a href="#对象" class="headerlink" title="对象"></a>对象</h2><p>我们在系列2中学习了Java内存运行各个区域，分别为<strong>程序计数器、虚拟机栈、本地方法栈、Java堆、方法区</strong>。(<em>如果忘记了，快回头复习</em>)</p>
 <p>其中程序计数器、虚拟机栈、本地方法栈3个区域随线程而生，随线程而灭，栈中的栈帧随着方法的进入和退出而有条不紊地执行着出栈和入栈操作。每一个栈帧中分配多少内存基本上是在类结构确定下来时就已知的，因此这几个区域的内存分配和回收都具备确定性，在这几个区域内就不需要过多考虑如何回收的问题，当方法结束或者线程结束时，内存自然就跟随着回收了。</p>
@@ -18,7 +20,7 @@
 <h2 id="引用计数算法"><a href="#引用计数算法" class="headerlink" title="引用计数算法"></a>引用计数算法</h2><p><strong>引用计数算法：</strong><br>在对象中添加一个引用计数器，每当有一个地方引用它时，计数器值就加一；<br>当引用失效时，计数器值就减一；<br>任何时刻计算器为零的对象就是不可能再被使用的。</p>
 <p><em>这种方法是我编程中最常用的了，这里被狠狠地打脸了。</em><br>这个算法面临的问题：<strong>无法解决对象之间相互循环引用的问题。</strong></p>
 <blockquote>
-<p>即 ```objA.instance = objB; objB.instance = objA;``objA 和 objB 都不会再被访问后，它们仍然相互引用着对方，所以它们的引用计数器不为 0，将永远不能被判为不可用。<br>(可以好好思考一下)</p>
+<p>即 <code>objA.instance = objB; objB.instance = objA;</code>objA 和 objB 都不会再被访问后，它们仍然相互引用着对方，所以它们的引用计数器不为 0，将永远不能被判为不可用。<br>(可以好好思考一下)</p>
 </blockquote>
 <h2 id="可达性分析算法"><a href="#可达性分析算法" class="headerlink" title="可达性分析算法"></a>可达性分析算法</h2><p><strong>基本思路：</strong> 当前对象到根对象(GC Roots)是否是可达的 <em>(图论知识)</em></p>
 <ul>
@@ -26,8 +28,9 @@
 <li>从 “GC Roots” 开始，不可达的对象被判为不可用。</li>
 </ul>
 <blockquote>
-<p>如下图所示，对象object 5、object 6、object 7虽然互有关联，但是它们到GC Roots是不可达的，因此它们将会被判定为可回收的对象。<br><img src="https://s1.ax1x.com/2020/05/31/tl4Qv4.png" alt="tl4Qv4.png"></p>
+<p>如下图所示，对象object 5、object 6、object 7虽然互有关联，但是它们到GC Roots是不可达的，因此它们将会被判定为可回收的对象。</p>
 </blockquote>
+<p><img src="https://s1.ax1x.com/2020/05/31/tl4Qv4.png" alt="tl4Qv4.png"></p>
 <h3 id="Java中可作为”GC-Roots”的对象"><a href="#Java中可作为”GC-Roots”的对象" class="headerlink" title="Java中可作为”GC Roots”的对象"></a>Java中可作为”GC Roots”的对象</h3><ol>
 <li>栈中(本地变量表中的Reference)<ul>
 <li>虚拟机栈中，栈帧中的本地变量表所引用的对象；</li>
@@ -37,12 +40,13 @@
 <li>方法区中<ul>
 <li>类的静态属性引用的对象；</li>
 <li>常量引用的对象；<blockquote>
-<p>这上面的对象没搞懂<br>即便如此，一个对象也不是一旦被判为不可达，就立即死去的，宣告一个的死亡需要经过两次标记过程。</p>
+<p>这上面的对象没搞懂</p>
 </blockquote>
 </li>
 </ul>
 </li>
 </ol>
+<p>即便如此，一个对象也不是一旦被判为不可达，就立即死去的，宣告一个的死亡需要经过两次标记过程。</p>
 <h2 id="引用"><a href="#引用" class="headerlink" title="引用"></a>引用</h2><p>无论是通过引用计数算法判断对象的引用数量，还是通过可达性分析算法判断对象是否引用链可达，判定对象是否存活都和“引用”离不开关系。</p>
 <p>在JDK 1.2版以前，Java里面的引用是很传统的<strong>定义：</strong>如果reference类型的数据中存储的数值代表的是另外一块内存的起始地址，就称该reference数据是代表某块内存、某个对象的引用。–<em>我自己的以往理解也是这样的</em></p>
 <p>在JDK 1.2版之后，Java对引用的概念进行了扩充，将引用分为<strong>强引用（Strongly Re-ference）、软引用（SoftReference）、弱引用（Weak Reference）和虚引用（Phantom Reference）</strong>4种，这4种引用强度依次逐渐减弱。</p>
