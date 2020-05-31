@@ -75,7 +75,7 @@
 
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="JVM,垃圾收集," />
 
 
 
@@ -86,14 +86,21 @@
 
 
 
-<meta name="description" content="If you want to tame a person,    you should risk tears.">
-<meta property="og:type" content="website">
-<meta property="og:title" content="GeminiPlanet">
-<meta property="og:url" content="https:&#x2F;&#x2F;gemini-lin.github.io&#x2F;tags&#x2F;LaTeX&#x2F;index.html">
+<meta name="description" content="概述起源误解: 垃圾收集(Garbage Collection,简称GC)是Java语言的伴生产物。事实上，垃圾收集的历史远远比Java久远，在1960年诞生于麻省理工学院的Lisp是第一门开始使用内存动态分配和垃圾收集技术的语言。当Lisp还在胚胎时期时，其作者John McCarthy就思考过垃圾收集需要完成的三件事情：  哪些内存需要回收？ 什么时候回收？ 如何回收？">
+<meta property="og:type" content="article">
+<meta property="og:title" content="JVM系列（三）-- 垃圾收集基础(GC)">
+<meta property="og:url" content="https:&#x2F;&#x2F;gemini-lin.github.io&#x2F;Garbage-Collection&#x2F;index.html">
 <meta property="og:site_name" content="GeminiPlanet">
-<meta property="og:description" content="If you want to tame a person,    you should risk tears.">
+<meta property="og:description" content="概述起源误解: 垃圾收集(Garbage Collection,简称GC)是Java语言的伴生产物。事实上，垃圾收集的历史远远比Java久远，在1960年诞生于麻省理工学院的Lisp是第一门开始使用内存动态分配和垃圾收集技术的语言。当Lisp还在胚胎时期时，其作者John McCarthy就思考过垃圾收集需要完成的三件事情：  哪些内存需要回收？ 什么时候回收？ 如何回收？">
+<meta property="og:image" content="https:&#x2F;&#x2F;s1.ax1x.com&#x2F;2020&#x2F;05&#x2F;31&#x2F;tl4Qv4.png">
+<meta property="og:image" content="https:&#x2F;&#x2F;s1.ax1x.com&#x2F;2020&#x2F;05&#x2F;31&#x2F;t1Spex.png">
+<meta property="article:published_time" content="2020-05-30T14:01:31.000Z">
+<meta property="article:modified_time" content="2020-05-31T05:17:10.890Z">
 <meta property="article:author" content="Gemini-Lin">
+<meta property="article:tag" content="JVM">
+<meta property="article:tag" content="垃圾收集">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https:&#x2F;&#x2F;s1.ax1x.com&#x2F;2020&#x2F;05&#x2F;31&#x2F;tl4Qv4.png">
 
 
 
@@ -123,13 +130,13 @@
 
 
 
-  <link rel="canonical" href="https://Gemini-Lin.github.io/tags/LaTeX/"/>
+  <link rel="canonical" href="https://Gemini-Lin.github.io/Garbage-Collection/"/>
 
 
 
 
 
-  <title>标签: LaTeX | GeminiPlanet</title>
+  <title>JVM系列（三）-- 垃圾收集基础(GC) | GeminiPlanet</title>
   
 
 
@@ -148,7 +155,7 @@
     
   
 
-  <div class="container sidebar-position-left ">
+  <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
     <a href="https://github.com/Gemini-Lin" target="_blank" rel="noopener" class="github-corner" aria-label="View source on GitHub"><svg width="80" height="80" viewBox="0 0 250 250" style="fill:#151513; color:#fff; position: absolute; top: 0; border: 0; right: 0;" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a><style>.github-corner:hover .octo-arm{animation:octocat-wave 560ms ease-in-out}@keyframes octocat-wave{0%,100%{transform:rotate(0)}20%,60%{transform:rotate(-25deg)}40%,80%{transform:rotate(10deg)}}@media (max-width:500px){.github-corner:hover .octo-arm{animation:none}.github-corner .octo-arm{animation:octocat-wave 560ms ease-in-out}}</style>
 
@@ -287,54 +294,440 @@
           <div id="content" class="content">
             
 
-  
-  
-  
-  <div class="post-block tag">
+  <div id="posts" class="posts-expand">
+    
 
-    <div id="posts" class="posts-collapse">
-      <div class="collection-title">
-        <h2>LaTeX<small>标签</small>
-        </h2>
-      </div>
+  
 
-      
-        
+  
+  
+  
 
   <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://Gemini-Lin.github.io/Garbage-Collection/">
 
-      <h3 class="post-title">
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Gemini-Lin">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="https://s1.ax1x.com/2020/05/14/YD6wTI.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="GeminiPlanet">
+    </span>
+
+    
+      <header class="post-header">
+
         
-            <a class="post-title-link" href="/LaTeX%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C/" itemprop="url">
-              
-                <span itemprop="name">LaTeX基本操作</span>
-              
-            </a>
         
-      </h3>
+          <h2 class="post-title" itemprop="name headline">JVM系列（三）-- 垃圾收集基础(GC)</h2>
+        
 
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2020-01-29T14:35:10+08:00"
-              content="2020-01-29" >
-          01-29
-        </time>
-      </div>
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2020-05-30T22:01:31+08:00">
+                2020-05-30
+              </time>
+            
 
-    </header>
-  </article>
+            
+              <span class="post-meta-divider">|</span>
+            
 
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-check-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">更新于&#58;</span>
+              
+              <time title="更新于" itemprop="dateModified" datetime="2020-05-31T13:17:10+08:00">
+                2020-05-31
+              </time>
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/java%E5%90%8E%E7%AB%AF%E5%BC%80%E5%8F%91/" itemprop="url" rel="index">
+                    <span itemprop="name">java后端开发</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+            <span class="post-meta-divider">|</span>
+            <span class="page-pv">本文总阅读量<i class="fa fa-file-o"></i>
+            <span class="busuanzi-value" id="busuanzi_value_page_pv" ></span>次
+            </span>
+          
+
+          
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数统计&#58;</span>
+                
+                <span title="字数统计">
+                  2.4k
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                
+                <span title="阅读时长">
+                  8
+                </span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h1 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h1><h2 id="起源"><a href="#起源" class="headerlink" title="起源"></a>起源</h2><p><strong>误解:</strong> 垃圾收集(Garbage Collection,简称GC)是Java语言的伴生产物。<br>事实上，垃圾收集的历史远远比Java久远，在1960年诞生于麻省理工学院的Lisp是第一门开始使用内存动态分配和垃圾收集技术的语言。当Lisp还在胚胎时期时，其作者John McCarthy就思考过垃圾收集需要完成的三件事情：</p>
+<ul>
+<li>哪些内存需要回收？</li>
+<li>什么时候回收？</li>
+<li>如何回收？<a id="more"></a>
+<h2 id="Why-need-it？"><a href="#Why-need-it？" class="headerlink" title="Why need it？"></a>Why need it？</h2>经过半个世纪的发展，今天的内存动态分配与内存回收技术已经相当成熟，一切看起来都进入了“自动化”时代，那为什么我们还要去了解垃圾收集和内存分配？</li>
+</ul>
+<p><strong>答案很简单：</strong>当需要排查<strong>各种内存溢出、内存泄漏问题</strong>时，当垃圾收集成为系统达到更高并发量的瓶颈时，我们就必须对这些“自动化”的技术实施必要的监控和调节。</p>
+<h2 id="对象"><a href="#对象" class="headerlink" title="对象"></a>对象</h2><p>我们在系列2中学习了Java内存运行各个区域，分别为<strong>程序计数器、虚拟机栈、本地方法栈、Java堆、方法区</strong>。(<em>如果忘记了，快回头复习</em>)</p>
+<p>其中程序计数器、虚拟机栈、本地方法栈3个区域随线程而生，随线程而灭，栈中的栈帧随着方法的进入和退出而有条不紊地执行着出栈和入栈操作。每一个栈帧中分配多少内存基本上是在类结构确定下来时就已知的，因此这几个区域的内存分配和回收都具备确定性，在这几个区域内就不需要过多考虑如何回收的问题，当方法结束或者线程结束时，内存自然就跟随着回收了。</p>
+<p>而<strong>Java堆和方法区</strong>有很显著的不确定性：一个接口的多个实现类需要的内存可能会不一样，一个方法所执行的不同条件分支所需要的内存也可能不一样，只有处于运行期间，我们才能知道程序究竟会创建哪些对象，创建多少个对象，这个不分内存的分配和回收是动态的。<strong>这也就是GC所关注的对象！</strong><br>这里我们就回答了之前提出的第一个问题 – 哪些内存需要回收。</p>
+<h1 id="判断对象生死"><a href="#判断对象生死" class="headerlink" title="判断对象生死"></a>判断对象生死</h1><p>在垃圾收集器对内存进行回收时，第一步就是要判断对象的状态。</p>
+<h2 id="引用计数算法"><a href="#引用计数算法" class="headerlink" title="引用计数算法"></a>引用计数算法</h2><p><strong>引用计数算法：</strong><br>在对象中添加一个引用计数器，每当有一个地方引用它时，计数器值就加一；<br>当引用失效时，计数器值就减一；<br>任何时刻计算器为零的对象就是不可能再被使用的。</p>
+<p><em>这种方法是我编程中最常用的了，这里被狠狠地打脸了。</em><br>这个算法面临的问题：<strong>无法解决对象之间相互循环引用的问题。</strong></p>
+<blockquote>
+<p>即 ```objA.instance = objB; objB.instance = objA;``objA 和 objB 都不会再被访问后，它们仍然相互引用着对方，所以它们的引用计数器不为 0，将永远不能被判为不可用。<br>(可以好好思考一下)</p>
+</blockquote>
+<h2 id="可达性分析算法"><a href="#可达性分析算法" class="headerlink" title="可达性分析算法"></a>可达性分析算法</h2><p><strong>基本思路：</strong> 当前对象到根对象(GC Roots)是否是可达的 <em>(图论知识)</em></p>
+<ul>
+<li>从 “GC Roots” 对象作为起点开始向下搜索，走过的路径称为引用链（Reference Chain）；</li>
+<li>从 “GC Roots” 开始，不可达的对象被判为不可用。</li>
+</ul>
+<blockquote>
+<p>如下图所示，对象object 5、object 6、object 7虽然互有关联，但是它们到GC Roots是不可达的，因此它们将会被判定为可回收的对象。<br><img src="https://s1.ax1x.com/2020/05/31/tl4Qv4.png" alt="tl4Qv4.png"></p>
+</blockquote>
+<h3 id="Java中可作为”GC-Roots”的对象"><a href="#Java中可作为”GC-Roots”的对象" class="headerlink" title="Java中可作为”GC Roots”的对象"></a>Java中可作为”GC Roots”的对象</h3><ol>
+<li>栈中(本地变量表中的Reference)<ul>
+<li>虚拟机栈中，栈帧中的本地变量表所引用的对象；</li>
+<li>本地方法栈中，JNI引用的对象(native方法)</li>
+</ul>
+</li>
+<li>方法区中<ul>
+<li>类的静态属性引用的对象；</li>
+<li>常量引用的对象；<blockquote>
+<p>这上面的对象没搞懂<br>即便如此，一个对象也不是一旦被判为不可达，就立即死去的，宣告一个的死亡需要经过两次标记过程。</p>
+</blockquote>
+</li>
+</ul>
+</li>
+</ol>
+<h2 id="引用"><a href="#引用" class="headerlink" title="引用"></a>引用</h2><p>无论是通过引用计数算法判断对象的引用数量，还是通过可达性分析算法判断对象是否引用链可达，判定对象是否存活都和“引用”离不开关系。</p>
+<p>在JDK 1.2版以前，Java里面的引用是很传统的<strong>定义：</strong>如果reference类型的数据中存储的数值代表的是另外一块内存的起始地址，就称该reference数据是代表某块内存、某个对象的引用。–<em>我自己的以往理解也是这样的</em></p>
+<p>在JDK 1.2版之后，Java对引用的概念进行了扩充，将引用分为<strong>强引用（Strongly Re-ference）、软引用（SoftReference）、弱引用（Weak Reference）和虚引用（Phantom Reference）</strong>4种，这4种引用强度依次逐渐减弱。</p>
+<h3 id="4种引用"><a href="#4种引用" class="headerlink" title="4种引用"></a>4种引用</h3><ol>
+<li><strong>强引用：</strong> 像<code>Object obj = new Object()</code>这种，只要强引用还存在，垃圾收集器就永远不会回收掉被引用的对象。</li>
+<li><strong>软引用：</strong> 用来描述还有用但非必须的对象。对于软引用对象，在OOM（OutOfMemory)前，虚拟机会把这些对象列入回收范围中进行第二次回收，如果这次回收后，内存还是不够用，就OOM。实现类：<code>SoftReference</code>。</li>
+<li><strong>弱引用：</strong> 跟软引用类似，比它更弱一点。被弱引用关联的对象只能生存到下一次垃圾收集发生为止。当垃圾收集器开始工作，无论当前内存是否足够，都会回收掉只被弱引用关联的对象。实现类：<code>WeakReference</code>。</li>
+<li><strong>虚引用：</strong> 也称为“幽灵引用”或者“幻影引用”，它是最弱的一种引用关系。唯一作用就是为了能在这个对象被收集器回收时收到一个系统通知。实现类：<code>PhantomReference</code>。</li>
+</ol>
+<h2 id="To-be-or-not-to-be"><a href="#To-be-or-not-to-be" class="headerlink" title="To be or not to be?"></a>To be or not to be?</h2><p>要真正宣告一个对象死亡，至少要经历两次标记过程：</p>
+<ol>
+<li><strong>第一次标记：</strong> 如果对象在进行可达性分析后发现没有与GC Roots相连接的引用链，那它将会被第一次标记；</li>
+<li><strong>第二次标记：</strong> 筛选此对象是否有必要执行<code>finalize()</code>方法。假如对象没有覆盖finalize()方法，或者finalize()方法已经被虚拟机调用过，那么虚拟机将这两种情况都视为“没有必要执行”。</li>
+</ol>
+<h3 id="finalize方法"><a href="#finalize方法" class="headerlink" title="finalize方法"></a>finalize方法</h3><p>如果这个对象被判定为确有必要执行finalize()方法，那么该对象将会被放置在一个名为F-Queue的队列之中，并在稍后由一条由虚拟机自动建立的、低调度优先级的Finalizer线程去执行它们的finalize()方法。</p>
+<blockquote>
+<p>这里所说的“执行”是指虚拟机会触发这个方法开始运行，但并不承诺一定会等待它运行结束。<br>这样做的原因是，如果某个对象的finalize()方法执行缓慢，或者更极端地发生了死循环，将很可能导致F-Queue队列中的其他对象永久处于等待，甚至导致整个内存回收子系统的崩溃。</p>
+</blockquote>
+<p><strong>存活方式：</strong><br>如果对象要在finalize()中成功拯救自己–只要重新与引用链上的任何一个对象建立关联即可，譬如把自己（this关键字）赋值给某个类变量或者对象的成员变量，那在第二次标记时它将被移出“即将回收”的集合；</p>
+<blockquote>
+<p>finalize()能做的所有工作，使用try-finally或者其他方式都可以做得更好、更及时，所以笔者建议大家完全可以忘掉Java语言里面的这个方法。</p>
+</blockquote>
+<h2 id="回收方法区"><a href="#回收方法区" class="headerlink" title="回收方法区"></a>回收方法区</h2><blockquote>
+<p>方法区垃圾收集的“性价比”通常也是比较低的：在Java堆中，尤其是在新生代中，对常规应用进行一次垃圾收集通常可以回收70%至99%的内存空间，相比之下，方法区回收囿于苛刻的判定条件，其区域垃圾收集的回收成果往往远低于此。</p>
+</blockquote>
+<p>回收的内容：<strong>废弃的常量和不再使用的类型</strong></p>
+<ul>
+<li><strong>废弃常量：</strong> 例如一个字符串”abc”，当没有任何引用指向”abc”时，它就是废弃常量了。</li>
+<li><strong>无用的类：</strong> 同时满足一下3个条件的类。<ol>
+<li>该类的所有实例已被回收，Java堆中不存在该类的任何实例；</li>
+<li>加载该类的Classloader已被回收；</li>
+<li>该类的Class对象没有被任何地方引用，即无法在任何地方通过反射访问该类的方法。</li>
+</ol>
+</li>
+</ul>
+<h1 id="Free-Talk"><a href="#Free-Talk" class="headerlink" title="Free Talk"></a>Free Talk</h1><p>今天的垃圾收集基础部分算是写完，本来打算把算法部分也讲了，但是发现算法部分另起一篇的效果更好一点，同时打算补一篇Java基础，发现自己上学期学的Java遗忘的比较厉害了，而且上学期学的时候也没有学全，再拿来复习学习一下比较好。然后我发现自己对内存管理里面的数据区域了解的太少了，遇到了总是弄不清楚。  </p>
+<p><strong>热爱未知，比如宇宙和清晨</strong><br><img src="https://s1.ax1x.com/2020/05/31/t1Spex.png" alt="image"></p>
+<p>参考资料：<br><a href="https://github.com/TangBean/understanding-the-jvm/blob/master/Ch1-Java%E5%86%85%E5%AD%98%E7%AE%A1%E7%90%86%E6%9C%BA%E5%88%B6/02-%E5%9E%83%E5%9C%BE%E6%94%B6%E9%9B%86(GC).md" target="_blank" rel="noopener">Github</a><br>《深入理解java虚拟机》</p>
 
       
     </div>
+    
+    
+    
 
+    
+      <div>
+      <div>
+    
+        <div style="text-align:center;color: #ccc;font-size:14px;">-------------本文结束<i class="fa fa-paw"></i>感谢您的阅读-------------</div>
+    
+</div>
+      </div>
+    
+
+    
+      <div>
+        <div id="wechat_subscriber" style="display: block; padding: 10px 0; margin: 20px auto; width: 100%; text-align: center">
+    <img id="wechat_subscriber_qcode" src="https://s1.ax1x.com/2020/04/24/J0wpss.png" alt="Gemini-Lin wechat" style="width: 200px; max-width: 100%;"/>
+    <div>扫一扫上面的二维码就可以关注我哦！</div>
+</div>
+
+      </div>
+    
+
+    
+      <div>
+        <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center;">
+  <div>您的支持是对我最大的肯定</div>
+  <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
+    <span>打赏</span>
+  </button>
+  <div id="QR" style="display: none;">
+
+    
+      <div id="wechat" style="display: inline-block">
+        <img id="wechat_qr" src="/images/wechatpay.jpg" alt="Gemini-Lin 微信支付"/>
+        <p>微信支付</p>
+      </div>
+    
+
+    
+      <div id="alipay" style="display: inline-block">
+        <img id="alipay_qr" src="/images/alipay.jpg" alt="Gemini-Lin 支付宝"/>
+        <p>支付宝</p>
+      </div>
+    
+
+    
+
+  </div>
+</div>
+
+      </div>
+    
+
+    
+      <div>
+        <!-- JS库 clipboard 拷贝内容到粘贴板-->
+<script src="https://cdn.bootcss.com/clipboard.js/2.0.1/clipboard.min.js"></script>
+
+<!-- JS库 sweetalert 显示提示信息-->
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+
+<ul class="post-copyright">
+  <!-- 本文标题 -->
+  <li>
+    <strong>本文标题： </strong>
+    JVM系列（三）-- 垃圾收集基础(GC)
+  </li>
+
+  <!-- 本文作者 -->
+  <li class="post-copyright-author">
+    <strong>本文作者： </strong>
+    Gemini-Lin
+  </li>
+
+  <!-- 创建时间 -->
+  <li>
+    <strong>创建于： </strong>
+    2020年05月30日 - 22时05分
+  </li>
+
+  <!-- 修改时间 -->
+  <li>
+    <strong>更新于： </strong>
+    2020年05月31日 - 13时05分
+  </li>
+
+  <!-- 引用链接 -->
+  <li class="post-copyright-link">
+    <strong>引用链接：</strong>
+    <a href="https://gemini-lin.github.io/Garbage-Collection/" title="JVM系列（三）-- 垃圾收集基础(GC)"
+      >https://gemini-lin.github.io/Garbage-Collection/</a
+    >
+    <span class="copy-path" title="点击复制引用链接"
+      ><i
+        style="cursor: pointer"
+        class="fa fa-clipboard"
+        data-clipboard-text="['s Blog | JVM系列（三）-- 垃圾收集基础(GC)](https://gemini-lin.github.io/Garbage-Collection/)"
+        aria-label="post.copy_success"
+      ></i
+    ></span>
+  </li>
+
+  <!-- 版权声明 -->
+  <li class="post-copyright-license">
+    <strong
+      >版权声明：
+    </strong>
+    本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="external nofollow" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明出处！
+  </li>
+</ul>
+
+<script>
+  var clipboard = new ClipboardJS(".fa-clipboard");
+  clipboard.on("success", function(target) {
+    var message = document.createElement("div");
+    message.innerHTML =
+      '<i class="fa fa-check-circle message-icon"></i><span class="message-content">' +
+      target.trigger.getAttribute("aria-label") +
+      "</span>";
+    swal({
+      content: message,
+      className: "copy-success-message",
+      timer: 1000,
+      button: false
+    });
+  });
+</script>
+      </div>
+    
+
+    
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/JVM/" rel="tag"># JVM</a>
+          
+            <a href="/tags/%E5%9E%83%E5%9C%BE%E6%94%B6%E9%9B%86/" rel="tag"># 垃圾收集</a>
+          
+        </div>
+      
+
+      
+      
+        <div class="post-widgets">
+        
+
+        
+
+        
+          
+          <div id="needsharebutton-postbottom">
+            <span class="btn">
+              <i class="fa fa-share-alt" aria-hidden="true"></i>
+            </span>
+          </div>
+        
+        </div>
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/Data-Structure-and-Algorithms-1/" rel="next" title="数据结构与算法篇(一) -- 红黑树">
+                <i class="fa fa-chevron-left"></i> 数据结构与算法篇(一) -- 红黑树
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
   </div>
   
   
   
+  </article>
 
-  
+
+
+    <div class="post-spread">
+      
+        
+<script>
+  with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='//bdimg.share.baidu.com/static/api/js/share.js?cdnversion='+~(-new Date()/36e5)];
+</script>
+
+      
+    </div>
+  </div>
 
 
           </div>
@@ -342,6 +735,15 @@
 
 
           
+
+  
+    <div class="comments" id="comments">
+      <div id="lv-container" data-id="city" data-uid="MTAyMC80ODI3NS8yNDc2OQ"></div>
+    </div>
+
+  
+
+
 
         </div>
         
@@ -362,9 +764,18 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -468,6 +879,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#概述"><span class="nav-number">1.</span> <span class="nav-text">概述</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#起源"><span class="nav-number">1.1.</span> <span class="nav-text">起源</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Why-need-it？"><span class="nav-number">1.2.</span> <span class="nav-text">Why need it？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#对象"><span class="nav-number">1.3.</span> <span class="nav-text">对象</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#判断对象生死"><span class="nav-number">2.</span> <span class="nav-text">判断对象生死</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#引用计数算法"><span class="nav-number">2.1.</span> <span class="nav-text">引用计数算法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#可达性分析算法"><span class="nav-number">2.2.</span> <span class="nav-text">可达性分析算法</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Java中可作为”GC-Roots”的对象"><span class="nav-number">2.2.1.</span> <span class="nav-text">Java中可作为”GC Roots”的对象</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#引用"><span class="nav-number">2.3.</span> <span class="nav-text">引用</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#4种引用"><span class="nav-number">2.3.1.</span> <span class="nav-text">4种引用</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#To-be-or-not-to-be"><span class="nav-number">2.4.</span> <span class="nav-text">To be or not to be?</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#finalize方法"><span class="nav-number">2.4.1.</span> <span class="nav-text">finalize方法</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#回收方法区"><span class="nav-number">2.5.</span> <span class="nav-text">回收方法区</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Free-Talk"><span class="nav-number">3.</span> <span class="nav-text">Free Talk</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
@@ -739,6 +1166,10 @@
 
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
 
   
 
@@ -767,6 +1198,17 @@
 
 
 
+  
+    <script type="text/javascript">
+      (function(d, s) {
+        var j, e = d.getElementsByTagName(s)[0];
+        if (typeof LivereTower === 'function') { return; }
+        j = d.createElement(s);
+        j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+        j.async = true;
+        e.parentNode.insertBefore(j, e);
+      })(document, 'script');
+    </script>
   
 
 

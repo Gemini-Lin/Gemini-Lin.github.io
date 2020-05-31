@@ -86,19 +86,19 @@
 
 
 
-<meta name="description" content="运行时数据区域 程序计数器程序计数器就是一块较小的内存空间，可以看作是当前线程所执行的字节码的行号指示器，和计组中学到的大致一样。 由于Java虚拟机的多线程是通过线程轮流切换、分配处理执行时间的方式来实现的，也就是操作系统中学到的并发性–两个或多个事件在同一时间间隔内发生，在任何时刻仅会执行一条线程中的指令。因此，为了线程切换后能恢复到正确的执行位置，每条线程都需要有一个独立的程序计数器，各条线">
+<meta name="description" content="运行时数据区域 程序计数器程序计数器就是一块较小的内存空间，可以看作是当前线程所执行的字节码的行号指示器，和计组中学到的大致一样。">
 <meta property="og:type" content="article">
 <meta property="og:title" content="JVM系列（二）-- Java内存管理">
 <meta property="og:url" content="https:&#x2F;&#x2F;gemini-lin.github.io&#x2F;JVM%E7%B3%BB%E5%88%97%EF%BC%88%E4%BA%8C%EF%BC%89-Java%E5%86%85%E5%AD%98%E7%AE%A1%E7%90%86&#x2F;index.html">
 <meta property="og:site_name" content="GeminiPlanet">
-<meta property="og:description" content="运行时数据区域 程序计数器程序计数器就是一块较小的内存空间，可以看作是当前线程所执行的字节码的行号指示器，和计组中学到的大致一样。 由于Java虚拟机的多线程是通过线程轮流切换、分配处理执行时间的方式来实现的，也就是操作系统中学到的并发性–两个或多个事件在同一时间间隔内发生，在任何时刻仅会执行一条线程中的指令。因此，为了线程切换后能恢复到正确的执行位置，每条线程都需要有一个独立的程序计数器，各条线">
+<meta property="og:description" content="运行时数据区域 程序计数器程序计数器就是一块较小的内存空间，可以看作是当前线程所执行的字节码的行号指示器，和计组中学到的大致一样。">
 <meta property="og:image" content="https:&#x2F;&#x2F;s1.ax1x.com&#x2F;2020&#x2F;05&#x2F;28&#x2F;tmAiTO.md.png">
 <meta property="og:image" content="http:&#x2F;&#x2F;ifeve.com&#x2F;wp-content&#x2F;uploads&#x2F;2015&#x2F;05&#x2F;JUtH_20121024_RuntimeDataAreas_2_MemoryModel-1.png">
 <meta property="og:image" content="https:&#x2F;&#x2F;s1.ax1x.com&#x2F;2020&#x2F;05&#x2F;28&#x2F;te5Rcq.png">
 <meta property="og:image" content="https:&#x2F;&#x2F;s1.ax1x.com&#x2F;2020&#x2F;05&#x2F;28&#x2F;te7VDx.png">
 <meta property="og:image" content="https:&#x2F;&#x2F;s1.ax1x.com&#x2F;2020&#x2F;05&#x2F;28&#x2F;teHwTK.png">
 <meta property="article:published_time" content="2020-05-28T07:45:04.000Z">
-<meta property="article:modified_time" content="2020-05-30T13:11:52.768Z">
+<meta property="article:modified_time" content="2020-05-31T02:43:07.320Z">
 <meta property="article:author" content="Gemini-Lin">
 <meta property="article:tag" content="JVM">
 <meta property="article:tag" content="内存管理">
@@ -356,8 +356,8 @@
               
                 <span class="post-meta-item-text">更新于&#58;</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2020-05-30T21:11:52+08:00">
-                2020-05-30
+              <time title="更新于" itemprop="dateModified" datetime="2020-05-31T10:43:07+08:00">
+                2020-05-31
               </time>
             
           </span>
@@ -450,9 +450,10 @@
       
         <h1 id="运行时数据区域"><a href="#运行时数据区域" class="headerlink" title="运行时数据区域"></a>运行时数据区域</h1><p><a href="https://imgchr.com/i/tmAiTO" target="_blank" rel="noopener"><img src="https://s1.ax1x.com/2020/05/28/tmAiTO.md.png" alt="tmAiTO.md.png"></a></p>
 <h2 id="程序计数器"><a href="#程序计数器" class="headerlink" title="程序计数器"></a>程序计数器</h2><p>程序计数器就是一块较小的内存空间，可以看作是当前线程所执行的字节码的行号指示器，和计组中学到的大致一样。</p>
+<a id="more"></a>
 <p>由于Java虚拟机的多线程是通过线程轮流切换、分配处理执行时间的方式来实现的，也就是操作系统中学到的并发性–两个或多个事件在<em>同一时间间隔</em>内发生，在任何时刻仅会执行一条线程中的指令。因此，为了线程切换后能恢复到正确的执行位置，每条线程都需要有一个独立的程序计数器，各条线程之间计数器互不影响，独立存储，我们称这类内存区域为“<strong>线程私有</strong>”的内存。</p>
 <p>如果线程正在执行的是一个Java方法，这个计算器记录的是正在执行的虚拟机字节码指令的地址；<br>如果正在执行的是本地(Native)方法，这个计数器值则应为空(Undefined)。<br>此内存区域是唯一一个在《Java虚拟机规范》中没有规定任何<code>OutOfMemoryError</code>情况的区域。</p>
-<a id="more"></a>
+<!--more-->
 <h2 id="Java虚拟机栈"><a href="#Java虚拟机栈" class="headerlink" title="Java虚拟机栈"></a>Java虚拟机栈</h2><p>与程序计数器一样，Java虚拟机栈(Java Virtual Machine Stack)也是<em>线程私有</em>的，它的生命周期与线程相同。虚拟机站描述的是<strong>Java方法执行的线程内存模型</strong>：每个方法被执行的时候，Java虚拟机都会同步创建一个栈帧(Stack Frame:是方法运行期很重要的基础数据结构，后面会补充)用于存储局部变量表、操作数栈、动态连接、方法出口等信息。每一个方法被调用直至执行完毕的过程，就对应着一个栈帧在虚拟机栈中从入栈到出栈。</p>
 <h3 id="局部变量表"><a href="#局部变量表" class="headerlink" title="局部变量表"></a>局部变量表</h3><p>局部变量表存放了编译期可知的各种Java虚拟机<strong>基本数据类型</strong>(boolean、byte、char、short、int、float、long、double)、<strong>对象引用</strong>(reference类型，它并不等同于对象本身，可能是一个指向对象起始地址的引用指针，也可能是指向一个代表对象的句柄或者其他与此对象相关的位置)和<code>returnAddress</code>类型(指向了一条字节码指令的地址)。</p>
 <blockquote>
@@ -618,7 +619,7 @@
   <!-- 修改时间 -->
   <li>
     <strong>更新于： </strong>
-    2020年05月30日 - 21时05分
+    2020年05月31日 - 10时05分
   </li>
 
   <!-- 引用链接 -->
@@ -805,7 +806,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">13</span>
+                  <span class="site-state-item-count">14</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -827,7 +828,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">16</span>
+                  <span class="site-state-item-count">17</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
@@ -1027,7 +1028,7 @@
     
       <span class="post-meta-item-text">Site words total count&#58;</span>
     
-    <span title="Site words total count">23.4k</span>
+    <span title="Site words total count">25.8k</span>
   
 </div>
 
