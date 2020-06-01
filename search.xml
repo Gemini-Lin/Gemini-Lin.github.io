@@ -661,7 +661,7 @@
 <p><a href="https://www.liaoxuefeng.com/wiki/896043488029600" target="_blank" rel="noopener">廖雪峰Git教学</a></p>
 <p>简单示例</p>
 <figure class="highlight avrasm"><table><tr><td class="code"><pre><span class="line">mkdir learngit <span class="meta">#创建一个空白目录</span></span><br><span class="line">cd learngit </span><br><span class="line"></span><br><span class="line">git init <span class="meta">#把这个目录变成Git可以管理的仓库</span></span><br><span class="line"></span><br><span class="line">git <span class="keyword">add</span> readme.txt <span class="meta">#把文件添加到仓库</span></span><br><span class="line"></span><br><span class="line">git commit -m <span class="string">"wrote a readme file"</span> <span class="meta">#把文件提交给仓库</span></span><br><span class="line"></span><br><span class="line">git <span class="keyword">push</span> -u origin master <span class="meta">#把本地仓库中的所有内容上传到远程库</span></span><br></pre></td></tr></table></figure>
-<p><img src="https://www.liaoxuefeng.com/files/attachments/919020037470528/0" alt="image"></p>
+<p><img src="https://s1.ax1x.com/2020/06/01/t8gefS.png" alt="t8gefS.png"></p>
 <a id="more"></a>
 <h2 id="GitHub介绍-敲黑板"><a href="#GitHub介绍-敲黑板" class="headerlink" title="GitHub介绍(敲黑板)"></a>GitHub介绍(敲黑板)</h2><p>Keywords：</p>
 <p>版本分支介绍，版本分支比较，Issue，Pull Request，Projects，Wiki，Github Pages</p>
