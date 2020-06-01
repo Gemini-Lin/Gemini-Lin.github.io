@@ -657,12 +657,7 @@
   <entry>
     <title>Github入门教学</title>
     <url>/Github%E5%85%A5%E9%97%A8%E6%95%99%E5%AD%A6/</url>
-    <content><![CDATA[<h2 id="https-zhuanlan-zhihu-com-p-144876570"><a href="#https-zhuanlan-zhihu-com-p-144876570" class="headerlink" title="#! https://zhuanlan.zhihu.com/p/144876570"></a>#! <a href="https://zhuanlan.zhihu.com/p/144876570" target="_blank" rel="noopener">https://zhuanlan.zhihu.com/p/144876570</a></h2><p>title: Github入门教学<br>date: 2020-05-14 13:12:28<br>tags:</p>
-<ul>
-<li>GitHub<br>categories: 工具分享<br>copyrignt: true</li>
-</ul>
-<hr>
-<h1 id="GitHub入门教学（Git，界面介绍，搜索）"><a href="#GitHub入门教学（Git，界面介绍，搜索）" class="headerlink" title="GitHub入门教学（Git，界面介绍，搜索）"></a>GitHub入门教学（Git，界面介绍，搜索）</h1><h2 id="前提：Git使用"><a href="#前提：Git使用" class="headerlink" title="前提：Git使用"></a>前提：Git使用</h2><p>GitHub是基于Git开发得到，学习Git是了解GitHub的前提，在这里我推荐一个特别喜欢的学习教程。</p>
+    <content><![CDATA[<h1 id="GitHub入门教学（Git，界面介绍，搜索）"><a href="#GitHub入门教学（Git，界面介绍，搜索）" class="headerlink" title="GitHub入门教学（Git，界面介绍，搜索）"></a>GitHub入门教学（Git，界面介绍，搜索）</h1><h2 id="前提：Git使用"><a href="#前提：Git使用" class="headerlink" title="前提：Git使用"></a>前提：Git使用</h2><p>GitHub是基于Git开发得到，学习Git是了解GitHub的前提，在这里我推荐一个特别喜欢的学习教程。</p>
 <p><a href="https://www.liaoxuefeng.com/wiki/896043488029600" target="_blank" rel="noopener">廖雪峰Git教学</a></p>
 <p>简单示例</p>
 <figure class="highlight avrasm"><table><tr><td class="code"><pre><span class="line">mkdir learngit <span class="meta">#创建一个空白目录</span></span><br><span class="line">cd learngit </span><br><span class="line"></span><br><span class="line">git init <span class="meta">#把这个目录变成Git可以管理的仓库</span></span><br><span class="line"></span><br><span class="line">git <span class="keyword">add</span> readme.txt <span class="meta">#把文件添加到仓库</span></span><br><span class="line"></span><br><span class="line">git commit -m <span class="string">"wrote a readme file"</span> <span class="meta">#把文件提交给仓库</span></span><br><span class="line"></span><br><span class="line">git <span class="keyword">push</span> -u origin master <span class="meta">#把本地仓库中的所有内容上传到远程库</span></span><br></pre></td></tr></table></figure>
@@ -677,62 +672,12 @@
 <figure class="highlight vim"><table><tr><td class="code"><pre><span class="line">in:description 爬虫 <span class="keyword">star</span><span class="variable">s:</span>&gt;<span class="number">100</span>  <span class="keyword">language</span>:<span class="keyword">python</span></span><br></pre></td></tr></table></figure>
 
 <h2 id="B站视频链接"><a href="#B站视频链接" class="headerlink" title="B站视频链接"></a><a href="https://www.bilibili.com/video/BV1ea4y1i7NN/" target="_blank" rel="noopener">B站视频链接</a></h2>]]></content>
-  </entry>
-  <entry>
-    <title>支教</title>
-    <url>/%E6%94%AF%E6%95%99/</url>
-    <content><![CDATA[<h2 id="https-zhuanlan-zhihu-com-p-144878220"><a href="#https-zhuanlan-zhihu-com-p-144878220" class="headerlink" title="#! https://zhuanlan.zhihu.com/p/144878220"></a>#! <a href="https://zhuanlan.zhihu.com/p/144878220" target="_blank" rel="noopener">https://zhuanlan.zhihu.com/p/144878220</a></h2><p>title: 暑期支教<br>date: 2020-01-14 16:36:06<br>tags:</p>
-<ul>
-<li>体验</li>
-<li>支教<br>categories: 大学生活<br>copyrignt: true</li>
-</ul>
-<hr>
-<p> <strong><em>让我再看看你们</em></strong>  </p>
-<blockquote>
-<p><strong>“让我再看看你们”</strong>这是我在黑板上留下的最后一句话。<br><img src="https://i.loli.net/2020/03/29/eGFf2H6Y1Lvw5VT.png" alt="image.png"></p>
-</blockquote>
-<blockquote>
-<p>这支教半个月来，我们从陌生到相识相知再到现在转身离别。<strong>这既是与学生，亦是与队员</strong>。</p>
-</blockquote>
-<a id="more"></a>
-
-<blockquote>
-<p>我很抱歉，在这半个月里并没有认识班上所有的小孩，有些只局限于名字。<strong>每个人心中都有一团火，路过的人都只看到烟。</strong>这是我给班上的38个孩子写完明信片后的感慨。我若看到他们心中的火，就会说一些出于真心的废话，絮絮叨叨；我若只看到他们心中的烟，便只有一些泛泛而谈的寄语，满腹诗论。<br><img src="https://i.loli.net/2020/03/29/MBjHLwJ7NhioCOy.png" alt="image.png"></p>
-</blockquote>
-<blockquote>
-<p>支教的这半个月，自己最大的体会是孩子并不是天使，他们也有着人类阴暗与丑陋的一面。比如班上的一个女孩陈柯欣，她的脑袋有点问题，全班的小朋友都远离她，没人愿意和她一起玩。而我呢？会站在上帝视角上看待这一切，忘记自己小时候也是这副模样，甚至现在也未必改变。</p>
-</blockquote>
-<blockquote>
-<p>对于孩子而言，最可怕的是他们腐朽的思想。尽管我也是生活在农村，但是这里的学习氛围与家里天壤之别。这里还保留着读完初中就外出打工的腐朽思想。父母对于孩子的学习，关注实在太少太少。我意识到自己仅仅给孩子们传授知识是远远不够的，我必须给他们强调学习的重要性。因此在支教的后半段，我每天都给孩子们普及大学的知识。先给他们看看北大的宣传片《星空日记》和《北大体验》，看到《星空日记》时，我也想起我自己高二的时候，看到北大的宣传片满腔热血，奔向未来，现在的我却离梦想渐行渐远了。看到《北大体验》，我的脑海里不停回荡这那句“在北大生活是一种什么样的体验，北大等着你来体验”，在我的内心深处还残存着对北大的愿景。<strong>你自由，而在一片向上生长的林中，你不会歪斜，但我失去了你，只敢在梦里拥抱着你。</strong>然后我给他们看了一下成电的招生宣传片，和一系列成电的照片，用自己在大学生活的感受去感染他们。我希望自己用着些举动，能够在他们的心中种下名为“大学”的种子。<br><img src="https://i.loli.net/2020/04/18/mIkGb1exLlwTyMJ.png" alt="image.png"></p>
-</blockquote>
-<blockquote>
-<p><strong>“即使有一天我失去了所有，但在祖国的大西部，我还有一群可爱的孩子”</strong>写于在教室前目送孩子们离去，我对他们大喊：“今天我就不送你们了，今后的路你们要自己走了。”</p>
-</blockquote>
-<blockquote>
-<p><strong>“支教真的有意义吗？”</strong>这是我在支教路上在知乎关注的一个问题，今天在支教生涯结束时，我要用自己的方式给出回答。<br><img src="https://i.loli.net/2020/03/29/zFaUuGHbLNn7RSe.png" alt="image.png"></p>
-</blockquote>
-<blockquote>
-<p>谈支教是否有意义，最为关键的问题是你是如何看待支教的，你到底为支教付出了多少。回顾我们至微这四个月为支教的筹备，一进队最为强调的一点是<strong>“支教对于你的收获是远远大于你给孩子的收获”</strong>，这一路来，我们经历了两周的义捐义卖，两天的高考文具募捐，两周的课程试讲，再到两周的正式支教。再谈我是如何看待支教的，在我的心里这是小时候的愿景，是社会的公益给我的驱使。我想要通过支教让山里的孩子们明白，他们所看到的仅仅是世界的很小一部分，他们应该去更高更远的地方，去好好看看这世界。因此，我可以确切地回答，支教是绝对有意义的。<br><img src="https://s1.ax1x.com/2020/03/29/GV61Tx.png" alt="image.png"></p>
-</blockquote>
-<blockquote>
-<p>其实支教对我影响最大的不是<strong>支教本身，而是我身旁一起陪伴的十五名队员。</strong>当你身处在一个大环境中时，你会自然而然地被环境所影响。先谈谈舒队，作为队长，他需要把握团队的大局走向，最为关键的是控制一个“度”，比如伙食的质量，放松的时间，上课的课程，活动的安排。我印象最深的是，当我在过渡放纵的时候，会有一个改变以往逗比的形象的人，严肃地和你强调支教是为了什么。从支教的过程中，同时也是从队友的身上，发现自己的不足，便是我此行最大的收获。比如对于支教日志的撰写上，有的队友每天坚持记录至少1500字的日志，尽管里面的很多内容是记流水账，但是对于这件事上她是付出了大量的时间，与我每次几百字的支教日志形成了极大的反差。再比如活动组的成员，在每次活动前都会周密的安排，加班到凌晨一两点，相反的是我十一点多就回到了寝室。从他们的身上，我发现了优秀的原因，同时也解决我一直以来的困惑。简而言之，就是对于事情的专注，对于一件事情，做的时候必须竭尽全力、心无旁骛，这样结束时才可以尽情放松。对于学习亦是如此，我总是把学习挂在嘴边，但是每天真正学习的时长却总是很短，看似每天都在学习，其实两天的学习效率抵不过别人的一天，自然放松的时候也不能尽兴。<br><img src="https://s1.ax1x.com/2020/03/29/GV6rAP.jpg" alt="GV6rAP.jpg"></p>
-</blockquote>
-<blockquote>
-<p>最后再回到支教本身来，谈谈这群我可能再也不会相见的38个孩子们。其实离别的时候，没有孩子流泪，我还是比较难过的，即使我确实不希望哭丧着离别，但可能是因为我对班上的孩子们付出还是太少了。作为四年级的班主任，我明显感受到自己与班上孩子的感情与任课老师差别很大的，每天一大半的时间，我都会陪在这群孩子身边。今天的最后一堂课，我和副班主任们，都和孩子们讲了一些煽情的话，关于回顾，关于离别，关于未来。我让孩子们把自己的名字都写在黑板上，让我记住他们，同时我也在黑板上写下<strong>“你这一生，我只送一程；不忍离别，但车已到站”。</strong>借用龙应台的一句话，<strong>我慢慢地、慢慢地了解到，所谓师生一场，只不过意味着，你和他们的缘分就是今生今世目送着他们的背影渐行渐远。你站在小路的这一段，看着他逐渐消失在小路转弯的地方，而且，他们用背影默默告诉你：不必追。</strong><br><img src="https://s1.ax1x.com/2020/03/29/GV6g1g.jpg" alt="GV6g1g.jpg"></p>
-</blockquote>
-<p><strong>未来</strong></p>
-<p><strong>我让你成为你</strong></p>
-<p><strong>你梦着我的梦</strong></p>
-<p><strong>我写着你的诗</strong></p>
-<p><strong>你点亮我的天空</strong></p>
-<p><strong>我闪耀你的眼睛</strong></p>
-<p><strong>从此，</strong></p>
-<p><strong>山谷里多了一片</strong></p>
-<p><strong>彩色森林</strong></p>
-<blockquote>
-<p>（这首诗送给支教的孩子们，亦是支教感悟的终点）<br><a href="https://weibo.com/u/2694121201?is_all=1" target="_blank" rel="noopener">至微公益团队微博</a></p>
-</blockquote>
-]]></content>
+      <categories>
+        <category>工具分享</category>
+      </categories>
+      <tags>
+        <tag>GitHub</tag>
+      </tags>
   </entry>
   <entry>
     <title>数学建模算法汇总</title>
@@ -1109,6 +1054,63 @@
       </categories>
       <tags>
         <tag>Google</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>暑期支教</title>
+    <url>/%E6%94%AF%E6%95%99/</url>
+    <content><![CDATA[<p> <strong><em>让我再看看你们</em></strong>  </p>
+<blockquote>
+<p><strong>“让我再看看你们”</strong>这是我在黑板上留下的最后一句话。<br><img src="https://i.loli.net/2020/03/29/eGFf2H6Y1Lvw5VT.png" alt="image.png"></p>
+</blockquote>
+<blockquote>
+<p>这支教半个月来，我们从陌生到相识相知再到现在转身离别。<strong>这既是与学生，亦是与队员</strong>。</p>
+</blockquote>
+<a id="more"></a>
+
+<blockquote>
+<p>我很抱歉，在这半个月里并没有认识班上所有的小孩，有些只局限于名字。<strong>每个人心中都有一团火，路过的人都只看到烟。</strong>这是我给班上的38个孩子写完明信片后的感慨。我若看到他们心中的火，就会说一些出于真心的废话，絮絮叨叨；我若只看到他们心中的烟，便只有一些泛泛而谈的寄语，满腹诗论。<br><img src="https://i.loli.net/2020/03/29/MBjHLwJ7NhioCOy.png" alt="image.png"></p>
+</blockquote>
+<blockquote>
+<p>支教的这半个月，自己最大的体会是孩子并不是天使，他们也有着人类阴暗与丑陋的一面。比如班上的一个女孩陈柯欣，她的脑袋有点问题，全班的小朋友都远离她，没人愿意和她一起玩。而我呢？会站在上帝视角上看待这一切，忘记自己小时候也是这副模样，甚至现在也未必改变。</p>
+</blockquote>
+<blockquote>
+<p>对于孩子而言，最可怕的是他们腐朽的思想。尽管我也是生活在农村，但是这里的学习氛围与家里天壤之别。这里还保留着读完初中就外出打工的腐朽思想。父母对于孩子的学习，关注实在太少太少。我意识到自己仅仅给孩子们传授知识是远远不够的，我必须给他们强调学习的重要性。因此在支教的后半段，我每天都给孩子们普及大学的知识。先给他们看看北大的宣传片《星空日记》和《北大体验》，看到《星空日记》时，我也想起我自己高二的时候，看到北大的宣传片满腔热血，奔向未来，现在的我却离梦想渐行渐远了。看到《北大体验》，我的脑海里不停回荡这那句“在北大生活是一种什么样的体验，北大等着你来体验”，在我的内心深处还残存着对北大的愿景。<strong>你自由，而在一片向上生长的林中，你不会歪斜，但我失去了你，只敢在梦里拥抱着你。</strong>然后我给他们看了一下成电的招生宣传片，和一系列成电的照片，用自己在大学生活的感受去感染他们。我希望自己用着些举动，能够在他们的心中种下名为“大学”的种子。<br><img src="https://i.loli.net/2020/04/18/mIkGb1exLlwTyMJ.png" alt="image.png"></p>
+</blockquote>
+<blockquote>
+<p><strong>“即使有一天我失去了所有，但在祖国的大西部，我还有一群可爱的孩子”</strong>写于在教室前目送孩子们离去，我对他们大喊：“今天我就不送你们了，今后的路你们要自己走了。”</p>
+</blockquote>
+<blockquote>
+<p><strong>“支教真的有意义吗？”</strong>这是我在支教路上在知乎关注的一个问题，今天在支教生涯结束时，我要用自己的方式给出回答。<br><img src="https://i.loli.net/2020/03/29/zFaUuGHbLNn7RSe.png" alt="image.png"></p>
+</blockquote>
+<blockquote>
+<p>谈支教是否有意义，最为关键的问题是你是如何看待支教的，你到底为支教付出了多少。回顾我们至微这四个月为支教的筹备，一进队最为强调的一点是<strong>“支教对于你的收获是远远大于你给孩子的收获”</strong>，这一路来，我们经历了两周的义捐义卖，两天的高考文具募捐，两周的课程试讲，再到两周的正式支教。再谈我是如何看待支教的，在我的心里这是小时候的愿景，是社会的公益给我的驱使。我想要通过支教让山里的孩子们明白，他们所看到的仅仅是世界的很小一部分，他们应该去更高更远的地方，去好好看看这世界。因此，我可以确切地回答，支教是绝对有意义的。<br><img src="https://s1.ax1x.com/2020/03/29/GV61Tx.png" alt="image.png"></p>
+</blockquote>
+<blockquote>
+<p>其实支教对我影响最大的不是<strong>支教本身，而是我身旁一起陪伴的十五名队员。</strong>当你身处在一个大环境中时，你会自然而然地被环境所影响。先谈谈舒队，作为队长，他需要把握团队的大局走向，最为关键的是控制一个“度”，比如伙食的质量，放松的时间，上课的课程，活动的安排。我印象最深的是，当我在过渡放纵的时候，会有一个改变以往逗比的形象的人，严肃地和你强调支教是为了什么。从支教的过程中，同时也是从队友的身上，发现自己的不足，便是我此行最大的收获。比如对于支教日志的撰写上，有的队友每天坚持记录至少1500字的日志，尽管里面的很多内容是记流水账，但是对于这件事上她是付出了大量的时间，与我每次几百字的支教日志形成了极大的反差。再比如活动组的成员，在每次活动前都会周密的安排，加班到凌晨一两点，相反的是我十一点多就回到了寝室。从他们的身上，我发现了优秀的原因，同时也解决我一直以来的困惑。简而言之，就是对于事情的专注，对于一件事情，做的时候必须竭尽全力、心无旁骛，这样结束时才可以尽情放松。对于学习亦是如此，我总是把学习挂在嘴边，但是每天真正学习的时长却总是很短，看似每天都在学习，其实两天的学习效率抵不过别人的一天，自然放松的时候也不能尽兴。<br><img src="https://s1.ax1x.com/2020/03/29/GV6rAP.jpg" alt="GV6rAP.jpg"></p>
+</blockquote>
+<blockquote>
+<p>最后再回到支教本身来，谈谈这群我可能再也不会相见的38个孩子们。其实离别的时候，没有孩子流泪，我还是比较难过的，即使我确实不希望哭丧着离别，但可能是因为我对班上的孩子们付出还是太少了。作为四年级的班主任，我明显感受到自己与班上孩子的感情与任课老师差别很大的，每天一大半的时间，我都会陪在这群孩子身边。今天的最后一堂课，我和副班主任们，都和孩子们讲了一些煽情的话，关于回顾，关于离别，关于未来。我让孩子们把自己的名字都写在黑板上，让我记住他们，同时我也在黑板上写下<strong>“你这一生，我只送一程；不忍离别，但车已到站”。</strong>借用龙应台的一句话，<strong>我慢慢地、慢慢地了解到，所谓师生一场，只不过意味着，你和他们的缘分就是今生今世目送着他们的背影渐行渐远。你站在小路的这一段，看着他逐渐消失在小路转弯的地方，而且，他们用背影默默告诉你：不必追。</strong><br><img src="https://s1.ax1x.com/2020/03/29/GV6g1g.jpg" alt="GV6g1g.jpg"></p>
+</blockquote>
+<p><strong>未来</strong></p>
+<p><strong>我让你成为你</strong></p>
+<p><strong>你梦着我的梦</strong></p>
+<p><strong>我写着你的诗</strong></p>
+<p><strong>你点亮我的天空</strong></p>
+<p><strong>我闪耀你的眼睛</strong></p>
+<p><strong>从此，</strong></p>
+<p><strong>山谷里多了一片</strong></p>
+<p><strong>彩色森林</strong></p>
+<blockquote>
+<p>（这首诗送给支教的孩子们，亦是支教感悟的终点）<br><a href="https://weibo.com/u/2694121201?is_all=1" target="_blank" rel="noopener">至微公益团队微博</a></p>
+</blockquote>
+]]></content>
+      <categories>
+        <category>大学生活</category>
+      </categories>
+      <tags>
+        <tag>体验</tag>
+        <tag>支教</tag>
       </tags>
   </entry>
 </search>
