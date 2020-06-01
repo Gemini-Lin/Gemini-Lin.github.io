@@ -86,17 +86,20 @@
 
 
 
-<meta name="description" content="基础知识寄存器寄存器(内存访问)第一个程序[BX]和loop指令包含多个段的程序更灵活的定位内存地址的方法数据处理的两个基本问题转移指令的原理CALL 和 RET 指令">
+<meta name="description" content="CALL和RET指令ret和retfret 指令用栈中的数据，修改IP的内容，从而实现近转移；retf 指令用栈中的数据，修改CS和IP的内容，从而实现远转移。 ret 指令相当于  pop IP  retf 指令相当于  pop IP  pop CS  检测点10.1 12345678910111213141516171819assume cs: codestack segment    db">
 <meta property="og:type" content="article">
 <meta property="og:title" content="汇编语言学习总结">
 <meta property="og:url" content="https:&#x2F;&#x2F;gemini-lin.github.io&#x2F;%E6%B1%87%E7%BC%96%E8%AF%AD%E8%A8%80%E5%AD%A6%E4%B9%A0%E6%80%BB%E7%BB%93&#x2F;index.html">
 <meta property="og:site_name" content="GeminiPlanet">
-<meta property="og:description" content="基础知识寄存器寄存器(内存访问)第一个程序[BX]和loop指令包含多个段的程序更灵活的定位内存地址的方法数据处理的两个基本问题转移指令的原理CALL 和 RET 指令">
+<meta property="og:description" content="CALL和RET指令ret和retfret 指令用栈中的数据，修改IP的内容，从而实现近转移；retf 指令用栈中的数据，修改CS和IP的内容，从而实现远转移。 ret 指令相当于  pop IP  retf 指令相当于  pop IP  pop CS  检测点10.1 12345678910111213141516171819assume cs: codestack segment    db">
+<meta property="og:image" content="https:&#x2F;&#x2F;s1.ax1x.com&#x2F;2020&#x2F;06&#x2F;01&#x2F;t837KH.png">
+<meta property="og:image" content="https:&#x2F;&#x2F;s1.ax1x.com&#x2F;2020&#x2F;06&#x2F;01&#x2F;t8Nvin.png">
 <meta property="article:published_time" content="2020-05-19T09:07:02.000Z">
-<meta property="article:modified_time" content="2020-05-28T18:01:17.126Z">
+<meta property="article:modified_time" content="2020-06-01T03:52:06.031Z">
 <meta property="article:author" content="Gemini-Lin">
 <meta property="article:tag" content="汇编语言">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https:&#x2F;&#x2F;s1.ax1x.com&#x2F;2020&#x2F;06&#x2F;01&#x2F;t837KH.png">
 
 
 
@@ -349,8 +352,8 @@
               
                 <span class="post-meta-item-text">更新于&#58;</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2020-05-29T02:01:17+08:00">
-                2020-05-29
+              <time title="更新于" itemprop="dateModified" datetime="2020-06-01T11:52:06+08:00">
+                2020-06-01
               </time>
             
           </span>
@@ -404,7 +407,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  67
+                  1.1k
                 </span>
               
 
@@ -420,7 +423,7 @@
                   <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
                 <span title="阅读时长">
-                  1
+                  4
                 </span>
               
             </div>
@@ -441,9 +444,85 @@
       
 
       
-        <h1 id="基础知识"><a href="#基础知识" class="headerlink" title="基础知识"></a>基础知识</h1><h1 id="寄存器"><a href="#寄存器" class="headerlink" title="寄存器"></a>寄存器</h1><h1 id="寄存器-内存访问"><a href="#寄存器-内存访问" class="headerlink" title="寄存器(内存访问)"></a>寄存器(内存访问)</h1><h1 id="第一个程序"><a href="#第一个程序" class="headerlink" title="第一个程序"></a>第一个程序</h1><h1 id="BX-和loop指令"><a href="#BX-和loop指令" class="headerlink" title="[BX]和loop指令"></a>[BX]和loop指令</h1><h1 id="包含多个段的程序"><a href="#包含多个段的程序" class="headerlink" title="包含多个段的程序"></a>包含多个段的程序</h1><h1 id="更灵活的定位内存地址的方法"><a href="#更灵活的定位内存地址的方法" class="headerlink" title="更灵活的定位内存地址的方法"></a>更灵活的定位内存地址的方法</h1><h1 id="数据处理的两个基本问题"><a href="#数据处理的两个基本问题" class="headerlink" title="数据处理的两个基本问题"></a>数据处理的两个基本问题</h1><h1 id="转移指令的原理"><a href="#转移指令的原理" class="headerlink" title="转移指令的原理"></a>转移指令的原理</h1><h1 id="CALL-和-RET-指令"><a href="#CALL-和-RET-指令" class="headerlink" title="CALL 和 RET 指令"></a>CALL 和 RET 指令</h1><a id="more"></a>
-
-
+        <h1 id="CALL和RET指令"><a href="#CALL和RET指令" class="headerlink" title="CALL和RET指令"></a>CALL和RET指令</h1><h2 id="ret和retf"><a href="#ret和retf" class="headerlink" title="ret和retf"></a>ret和retf</h2><p><strong>ret 指令</strong>用栈中的数据，<strong>修改IP的内容</strong>，从而实现近转移；<br><strong>retf 指令</strong>用栈中的数据，<strong>修改CS和IP的内容</strong>，从而实现远转移。</p>
+<p>ret 指令相当于</p>
+<blockquote>
+<p>pop IP</p>
+</blockquote>
+<p>retf 指令相当于</p>
+<blockquote>
+<p>pop IP<br>  pop CS</p>
+</blockquote>
+<p>检测点10.1</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">assume cs: code</span><br><span class="line"></span><br><span class="line">stack segment</span><br><span class="line">    db 16 dup(0)</span><br><span class="line">stack ends</span><br><span class="line"></span><br><span class="line">code segment</span><br><span class="line">start:  mov ax, stack</span><br><span class="line">        mov ss, ax</span><br><span class="line">        mov sp, 16</span><br><span class="line">        mov ax, 1000h;cs地址</span><br><span class="line">        push ax</span><br><span class="line">        mov ax, 0 ;ip地址</span><br><span class="line">        push ax</span><br><span class="line">        retf</span><br><span class="line">        ;retf指令相当于是pop ip,pop cs</span><br><span class="line">code ends</span><br><span class="line"></span><br><span class="line">end start</span><br></pre></td></tr></table></figure>
+<a id="more"></a>
+<h2 id="call指令"><a href="#call指令" class="headerlink" title="call指令"></a>call指令</h2><ol>
+<li>call 标号<blockquote>
+<p>push IP<br>jmp near ptr 标号</p>
+</blockquote>
+</li>
+<li>call far ptr 标号<blockquote>
+<p>push CS<br>push IP<br>jmp near ptr 标号</p>
+</blockquote>
+</li>
+<li>call 16位 reg<blockquote>
+<p>push IP<br>jmp 16位 reg</p>
+</blockquote>
+</li>
+<li>call word ptr 内存单元地址<blockquote>
+<p>push IP<br>jmp word ptr 内存单元地址</p>
+</blockquote>
+</li>
+<li>call dword ptr 内存单元地址<blockquote>
+<p>push CS<br>push IP<br>jmp dword ptr 内存单元地址</p>
+</blockquote>
+</li>
+</ol>
+<h2 id="call和ret的配合使用"><a href="#call和ret的配合使用" class="headerlink" title="call和ret的配合使用"></a>call和ret的配合使用</h2><blockquote>
+<p>call 标号<br>标号：<br>    指令<br>    ret</p>
+</blockquote>
+<h2 id="mul指令"><a href="#mul指令" class="headerlink" title="mul指令"></a>mul指令</h2><ol>
+<li><strong>两个相乘的数：</strong><br>两个相乘的数，要么都是8位，要么都是16位。<br>如果是8位，一个默认放在AL中，另一个放在8位reg或内存字节单元中；<br>如果是16位，一个默认在AX中，另一个放在16位reg或内存字单元中。</li>
+<li><strong>结果：</strong><br>如果是8位乘法，结果默认放在AX中；<br>如果是16位乘法，结果高位默认在DX中存放，低位在AX中放。</li>
+</ol>
+<blockquote>
+<p> mul reg<br>mul 内存单元<br> mul byte ptr ds:[0]</p>
+</blockquote>
+<h2 id="实验十："><a href="#实验十：" class="headerlink" title="实验十："></a>实验十：</h2><figure class="highlight x86asm"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">assume</span> <span class="built_in">cs</span>:code</span><br><span class="line">data <span class="meta">segment</span></span><br><span class="line">    <span class="built_in">db</span> <span class="number">10</span> dup(<span class="number">0</span>)</span><br><span class="line">data ends</span><br><span class="line"></span><br><span class="line">code <span class="meta">segment</span></span><br><span class="line"><span class="symbol">start:</span>  <span class="keyword">mov</span> <span class="built_in">ax</span>, <span class="number">12345</span></span><br><span class="line">        <span class="keyword">mov</span> <span class="built_in">bx</span>, data</span><br><span class="line">        <span class="keyword">mov</span> <span class="built_in">ds</span>, <span class="built_in">bx</span></span><br><span class="line">        <span class="keyword">mov</span> <span class="built_in">si</span>, <span class="number">0</span></span><br><span class="line">        <span class="keyword">call</span> dtoc</span><br><span class="line"></span><br><span class="line">        <span class="keyword">mov</span> <span class="number">dh</span>, <span class="number">8</span></span><br><span class="line">        <span class="keyword">mov</span> <span class="built_in">dl</span>, <span class="number">3</span></span><br><span class="line">        <span class="keyword">mov</span> <span class="built_in">cl</span>, <span class="number">2</span></span><br><span class="line">        <span class="keyword">call</span> show_str <span class="comment">;IP入栈</span></span><br><span class="line"></span><br><span class="line">        <span class="keyword">mov</span> <span class="built_in">ax</span>, <span class="number">4c00h</span></span><br><span class="line">        <span class="keyword">int</span> <span class="number">21h</span></span><br><span class="line"></span><br><span class="line"><span class="symbol">show_str:</span></span><br><span class="line">    <span class="comment">;把需要用到的寄存器入栈保护</span></span><br><span class="line">    <span class="keyword">push</span> <span class="built_in">ax</span></span><br><span class="line">    <span class="keyword">push</span> <span class="built_in">bx</span></span><br><span class="line">    <span class="keyword">push</span> <span class="built_in">si</span></span><br><span class="line">    <span class="keyword">push</span> <span class="built_in">es</span></span><br><span class="line">    </span><br><span class="line"></span><br><span class="line">    <span class="comment">;计算起始偏移地址</span></span><br><span class="line">    <span class="keyword">mov</span> <span class="built_in">al</span>, <span class="number">160</span> <span class="comment">;行地址</span></span><br><span class="line">    <span class="keyword">dec</span> <span class="number">dh</span></span><br><span class="line">    <span class="keyword">mul</span> <span class="number">dh</span></span><br><span class="line">    <span class="keyword">mov</span> <span class="built_in">bx</span>, <span class="built_in">ax</span></span><br><span class="line"></span><br><span class="line">    <span class="keyword">mov</span> <span class="built_in">al</span>, <span class="number">2</span>  <span class="comment">;列地址</span></span><br><span class="line">    <span class="keyword">dec</span> <span class="built_in">dl</span></span><br><span class="line">    <span class="keyword">mul</span> <span class="built_in">dl</span></span><br><span class="line">    <span class="keyword">add</span> <span class="built_in">bx</span>, <span class="built_in">ax</span> <span class="comment">;偏移地址</span></span><br><span class="line"></span><br><span class="line">    <span class="keyword">mov</span> <span class="built_in">ax</span>, <span class="number">0b800h</span><span class="comment">;</span></span><br><span class="line">    <span class="keyword">mov</span> <span class="built_in">es</span>, <span class="built_in">ax</span> <span class="comment">;基址地址</span></span><br><span class="line"></span><br><span class="line">    <span class="keyword">mov</span> <span class="built_in">al</span>, <span class="built_in">cl</span></span><br><span class="line">    <span class="keyword">mov</span> <span class="built_in">si</span>, <span class="number">0</span></span><br><span class="line"></span><br><span class="line">    <span class="comment">;循环执行mov指令</span></span><br><span class="line"><span class="symbol">s:</span>  <span class="keyword">mov</span> <span class="built_in">cl</span>, <span class="built_in">ds</span>:[<span class="built_in">si</span>] <span class="comment">;判断是否结束循环</span></span><br><span class="line">    <span class="keyword">jcxz</span> ok</span><br><span class="line">    <span class="keyword">mov</span> <span class="built_in">es</span>:[<span class="built_in">bx</span>], <span class="built_in">cl</span></span><br><span class="line">    <span class="keyword">mov</span> <span class="built_in">es</span>:[<span class="built_in">bx</span>+<span class="number">1</span>], <span class="built_in">al</span></span><br><span class="line"></span><br><span class="line">    <span class="keyword">inc</span> <span class="built_in">si</span></span><br><span class="line">    <span class="keyword">add</span> <span class="built_in">bx</span>, <span class="number">2</span></span><br><span class="line">    <span class="keyword">jmp</span> short s</span><br><span class="line"></span><br><span class="line"><span class="symbol">ok:</span> </span><br><span class="line">    <span class="keyword">pop</span> <span class="built_in">es</span></span><br><span class="line">    <span class="keyword">pop</span> <span class="built_in">si</span></span><br><span class="line">    <span class="keyword">pop</span> <span class="built_in">bx</span></span><br><span class="line">    <span class="keyword">pop</span> <span class="built_in">ax</span></span><br><span class="line">    <span class="keyword">ret</span> <span class="comment">;IP出栈</span></span><br><span class="line"></span><br><span class="line"><span class="symbol">dtoc:</span> </span><br><span class="line">    <span class="comment">; 寄存器入栈保护</span></span><br><span class="line">    <span class="keyword">push</span> <span class="built_in">si</span></span><br><span class="line">    <span class="keyword">push</span> <span class="built_in">bx</span></span><br><span class="line">    <span class="keyword">push</span> <span class="built_in">cx</span></span><br><span class="line">    <span class="keyword">push</span> <span class="built_in">dx</span></span><br><span class="line">    <span class="comment">; 计算十进制数字每位的值</span></span><br><span class="line">    <span class="keyword">mov</span> <span class="built_in">si</span>, <span class="number">0</span></span><br><span class="line">    <span class="keyword">mov</span> <span class="built_in">bx</span>, <span class="number">10d</span></span><br><span class="line">    </span><br><span class="line"></span><br><span class="line"><span class="symbol">s1:</span> <span class="keyword">mov</span> <span class="built_in">dx</span>, <span class="number">0</span></span><br><span class="line">    <span class="keyword">div</span> <span class="built_in">bx</span></span><br><span class="line">    <span class="keyword">mov</span> <span class="built_in">cx</span>, <span class="built_in">ax</span></span><br><span class="line">    <span class="keyword">add</span> <span class="built_in">dx</span>, <span class="number">30H</span> <span class="comment">; 转换ASCII码</span></span><br><span class="line"></span><br><span class="line">    <span class="keyword">push</span> <span class="built_in">dx</span></span><br><span class="line">    <span class="keyword">inc</span> <span class="built_in">si</span></span><br><span class="line">    <span class="keyword">jcxz</span> over</span><br><span class="line">    <span class="keyword">jmp</span> short s1</span><br><span class="line">    </span><br><span class="line"></span><br><span class="line"><span class="symbol">over:</span>   <span class="keyword">mov</span> <span class="built_in">cx</span>, <span class="built_in">si</span></span><br><span class="line">        <span class="keyword">mov</span> <span class="built_in">si</span>, <span class="number">0</span></span><br><span class="line"></span><br><span class="line"><span class="symbol">s2:</span>     <span class="keyword">pop</span> <span class="built_in">dx</span></span><br><span class="line">        <span class="keyword">mov</span> <span class="built_in">ds</span>:[<span class="built_in">si</span>], <span class="built_in">dx</span> <span class="comment">; 修改到data字段</span></span><br><span class="line">        <span class="keyword">inc</span> <span class="built_in">si</span></span><br><span class="line">        <span class="keyword">loop</span> s2</span><br><span class="line"></span><br><span class="line">        <span class="keyword">pop</span> <span class="built_in">dx</span></span><br><span class="line">        <span class="keyword">pop</span> <span class="built_in">cx</span></span><br><span class="line">        <span class="keyword">pop</span> <span class="built_in">bx</span></span><br><span class="line">        <span class="keyword">pop</span> <span class="built_in">si</span></span><br><span class="line">        <span class="keyword">ret</span></span><br><span class="line"></span><br><span class="line">code ends</span><br><span class="line">end start</span><br></pre></td></tr></table></figure>
+<h1 id="标志寄存器"><a href="#标志寄存器" class="headerlink" title="标志寄存器"></a>标志寄存器</h1><p><img src="https://s1.ax1x.com/2020/06/01/t837KH.png" alt="t837KH.png"><br>flag和其他寄存器不一样，其他寄存器是用来存放数据的，都是整个寄存器具有一个含义；<br>而flag寄存器是按位起作用的，也就是说，它的每一位都有专门的含义，记录特定的信息。</p>
+<h2 id="ZF标志-第6位-–零标志位"><a href="#ZF标志-第6位-–零标志位" class="headerlink" title="ZF标志(第6位)–零标志位"></a>ZF标志(第6位)–零标志位</h2><p>记录相关指令执行后，其结果是否为0.</p>
+<ol>
+<li>结果为0：zf=1；</li>
+<li>结果不为0：zf=0。<blockquote>
+<p>注意是与结果相反的</p>
+</blockquote>
+</li>
+</ol>
+<h2 id="PF标志-第2位-–奇偶标志位"><a href="#PF标志-第2位-–奇偶标志位" class="headerlink" title="PF标志(第2位)–奇偶标志位"></a>PF标志(第2位)–奇偶标志位</h2><p>它记录相关指令执行后，其结果的所有bit位中1的个数是否为偶数。</p>
+<ol>
+<li>1的个数为偶数：pf=1，</li>
+<li>奇数：pf=0。</li>
+</ol>
+<h2 id="SF标志-第7位-–符号标志位"><a href="#SF标志-第7位-–符号标志位" class="headerlink" title="SF标志(第7位)–符号标志位"></a>SF标志(第7位)–符号标志位</h2><ol>
+<li>结果为负，SF=1；</li>
+<li>结果为正，SF=0。</li>
+</ol>
+<p>通常用补码来表示有符号数据。<br>因此，对于一个二进制数据，计算机在既把它当做有符号数运算也进行无符号数运算，同时提供两种结果给程序选择。</p>
+<h2 id="CF标志-第0位-–进位-借位标志位"><a href="#CF标志-第0位-–进位-借位标志位" class="headerlink" title="CF标志(第0位)–进位/借位标志位"></a>CF标志(第0位)–进位/借位标志位</h2><p>记录最高有效位向更高有效位的进位/借位<br><img src="https://s1.ax1x.com/2020/06/01/t8Nvin.png" alt="t8Nvin.png"></p>
+<ol>
+<li>有进位/借位：CF=1，</li>
+<li>无进位/借位：CF=0。</li>
+</ol>
+<h2 id="OF标志-第11位-–溢出标志位"><a href="#OF标志-第11位-–溢出标志位" class="headerlink" title="OF标志(第11位)–溢出标志位"></a>OF标志(第11位)–溢出标志位</h2><ol>
+<li>有溢出：OF=1，</li>
+<li>无溢出：OF=0。</li>
+</ol>
+<p><strong>CF和OF的区别：</strong><br>CF是对无符号数运算有意义的标志位；<br>OF是对有符号数运算有意义的标志位。</p>
+<h2 id="adc指令"><a href="#adc指令" class="headerlink" title="adc指令"></a>adc指令</h2><p>adc是带进位加法指令，它利用了CF位上记录的进位值。</p>
+<blockquote>
+<p>adc obj1,obj2<br>obj1 = obj1+obj2+CF</p>
+</blockquote>
+<h1 id="基础知识"><a href="#基础知识" class="headerlink" title="基础知识"></a>基础知识</h1><h1 id="寄存器"><a href="#寄存器" class="headerlink" title="寄存器"></a>寄存器</h1><h1 id="寄存器-内存访问"><a href="#寄存器-内存访问" class="headerlink" title="寄存器(内存访问)"></a>寄存器(内存访问)</h1><h1 id="第一个程序"><a href="#第一个程序" class="headerlink" title="第一个程序"></a>第一个程序</h1><h1 id="BX-和loop指令"><a href="#BX-和loop指令" class="headerlink" title="[BX]和loop指令"></a>[BX]和loop指令</h1><h1 id="包含多个段的程序"><a href="#包含多个段的程序" class="headerlink" title="包含多个段的程序"></a>包含多个段的程序</h1><h1 id="更灵活的定位内存地址的方法"><a href="#更灵活的定位内存地址的方法" class="headerlink" title="更灵活的定位内存地址的方法"></a>更灵活的定位内存地址的方法</h1><h1 id="数据处理的两个基本问题"><a href="#数据处理的两个基本问题" class="headerlink" title="数据处理的两个基本问题"></a>数据处理的两个基本问题</h1><h1 id="转移指令的原理"><a href="#转移指令的原理" class="headerlink" title="转移指令的原理"></a>转移指令的原理</h1>
       
     </div>
     
@@ -641,7 +720,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">14</span>
+                  <span class="site-state-item-count">15</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -652,7 +731,7 @@
               
               <div class="site-state-item site-state-categories">
                 <a href="/categories/index.html">
-                  <span class="site-state-item-count">6</span>
+                  <span class="site-state-item-count">5</span>
                   <span class="site-state-item-name">分类</span>
                 </a>
               </div>
@@ -663,7 +742,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">17</span>
+                  <span class="site-state-item-count">15</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
@@ -736,7 +815,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#基础知识"><span class="nav-number">1.</span> <span class="nav-text">基础知识</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#寄存器"><span class="nav-number">2.</span> <span class="nav-text">寄存器</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#寄存器-内存访问"><span class="nav-number">3.</span> <span class="nav-text">寄存器(内存访问)</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#第一个程序"><span class="nav-number">4.</span> <span class="nav-text">第一个程序</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#BX-和loop指令"><span class="nav-number">5.</span> <span class="nav-text">[BX]和loop指令</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#包含多个段的程序"><span class="nav-number">6.</span> <span class="nav-text">包含多个段的程序</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#更灵活的定位内存地址的方法"><span class="nav-number">7.</span> <span class="nav-text">更灵活的定位内存地址的方法</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#数据处理的两个基本问题"><span class="nav-number">8.</span> <span class="nav-text">数据处理的两个基本问题</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#转移指令的原理"><span class="nav-number">9.</span> <span class="nav-text">转移指令的原理</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#CALL-和-RET-指令"><span class="nav-number">10.</span> <span class="nav-text">CALL 和 RET 指令</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#CALL和RET指令"><span class="nav-number">1.</span> <span class="nav-text">CALL和RET指令</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#ret和retf"><span class="nav-number">1.1.</span> <span class="nav-text">ret和retf</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#call指令"><span class="nav-number">1.2.</span> <span class="nav-text">call指令</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#call和ret的配合使用"><span class="nav-number">1.3.</span> <span class="nav-text">call和ret的配合使用</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#mul指令"><span class="nav-number">1.4.</span> <span class="nav-text">mul指令</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#实验十："><span class="nav-number">1.5.</span> <span class="nav-text">实验十：</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#标志寄存器"><span class="nav-number">2.</span> <span class="nav-text">标志寄存器</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#ZF标志-第6位-–零标志位"><span class="nav-number">2.1.</span> <span class="nav-text">ZF标志(第6位)–零标志位</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#PF标志-第2位-–奇偶标志位"><span class="nav-number">2.2.</span> <span class="nav-text">PF标志(第2位)–奇偶标志位</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#SF标志-第7位-–符号标志位"><span class="nav-number">2.3.</span> <span class="nav-text">SF标志(第7位)–符号标志位</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#CF标志-第0位-–进位-借位标志位"><span class="nav-number">2.4.</span> <span class="nav-text">CF标志(第0位)–进位&#x2F;借位标志位</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#OF标志-第11位-–溢出标志位"><span class="nav-number">2.5.</span> <span class="nav-text">OF标志(第11位)–溢出标志位</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#adc指令"><span class="nav-number">2.6.</span> <span class="nav-text">adc指令</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#基础知识"><span class="nav-number">3.</span> <span class="nav-text">基础知识</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#寄存器"><span class="nav-number">4.</span> <span class="nav-text">寄存器</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#寄存器-内存访问"><span class="nav-number">5.</span> <span class="nav-text">寄存器(内存访问)</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#第一个程序"><span class="nav-number">6.</span> <span class="nav-text">第一个程序</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#BX-和loop指令"><span class="nav-number">7.</span> <span class="nav-text">[BX]和loop指令</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#包含多个段的程序"><span class="nav-number">8.</span> <span class="nav-text">包含多个段的程序</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#更灵活的定位内存地址的方法"><span class="nav-number">9.</span> <span class="nav-text">更灵活的定位内存地址的方法</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#数据处理的两个基本问题"><span class="nav-number">10.</span> <span class="nav-text">数据处理的两个基本问题</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#转移指令的原理"><span class="nav-number">11.</span> <span class="nav-text">转移指令的原理</span></a></li></ol></div>
             
 
           </div>
@@ -863,7 +942,7 @@
     
       <span class="post-meta-item-text">Site words total count&#58;</span>
     
-    <span title="Site words total count">25.8k</span>
+    <span title="Site words total count">27.3k</span>
   
 </div>
 
