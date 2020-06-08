@@ -1,6 +1,123 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>Computer Network</title>
+    <url>/Computer-Network/</url>
+    <content><![CDATA[<h1 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h1><p><img src="https://s1.ax1x.com/2020/06/08/tRorRg.png" alt="tRorRg.png"></p>
+<blockquote>
+<p>第8点会考一些基本安全知识</p>
+</blockquote>
+<h2 id="计算机网络的概念"><a href="#计算机网络的概念" class="headerlink" title="计算机网络的概念"></a>计算机网络的概念</h2><h2 id="什么是协议？"><a href="#什么是协议？" class="headerlink" title="什么是协议？"></a>什么是协议？</h2><h3 id="网络协议"><a href="#网络协议" class="headerlink" title="网络协议"></a>网络协议</h3><h3 id="三要素"><a href="#三要素" class="headerlink" title="三要素"></a>三要素</h3><h3 id="和现实协议的对比"><a href="#和现实协议的对比" class="headerlink" title="和现实协议的对比"></a>和现实协议的对比</h3><h2 id="服务"><a href="#服务" class="headerlink" title="服务"></a>服务</h2><h3 id="服务划分"><a href="#服务划分" class="headerlink" title="服务划分"></a>服务划分</h3><p>面向连接的不一定可靠，无连接的一定不可靠</p>
+<h2 id="网络核心"><a href="#网络核心" class="headerlink" title="网络核心"></a>网络核心</h2><h3 id="电路交换"><a href="#电路交换" class="headerlink" title="电路交换"></a>电路交换</h3><p>频分<br>时分<br>码分</p>
+<h3 id="分组交换"><a href="#分组交换" class="headerlink" title="分组交换"></a>分组交换</h3><p>特点：</p>
+<h3 id="比较优缺点"><a href="#比较优缺点" class="headerlink" title="比较优缺点"></a>比较优缺点</h3><a id="more"></a>
+<h2 id="分组交换网络中延迟、丢失和吞吐量"><a href="#分组交换网络中延迟、丢失和吞吐量" class="headerlink" title="分组交换网络中延迟、丢失和吞吐量"></a>分组交换网络中延迟、丢失和吞吐量</h2><h3 id="分组交换的4种时延"><a href="#分组交换的4种时延" class="headerlink" title="分组交换的4种时延"></a>分组交换的4种时延</h3><ol>
+<li>节点处理时延</li>
+<li>排队时延(变换剧烈)</li>
+<li><strong>传输时延</strong></li>
+<li><strong>传播时延</strong></li>
+</ol>
+<h3 id="吞吐量"><a href="#吞吐量" class="headerlink" title="吞吐量"></a>吞吐量</h3><p>瓶颈链路是制约吞吐量的链路</p>
+<h2 id="协议层及服务模型"><a href="#协议层及服务模型" class="headerlink" title="协议层及服务模型"></a>协议层及服务模型</h2><h3 id="TCP-IP协议的五层模型"><a href="#TCP-IP协议的五层模型" class="headerlink" title="TCP/IP协议的五层模型"></a>TCP/IP协议的五层模型</h3><p><img src="https://s1.ax1x.com/2020/06/08/tRTNpF.png" alt="tRTNpF.png"></p>
+<h1 id="应用层"><a href="#应用层" class="headerlink" title="应用层"></a>应用层</h1><p><img src="https://s1.ax1x.com/2020/06/08/tRTdX9.png" alt="tRTdX9.png"></p>
+<h2 id="应用层协议原理"><a href="#应用层协议原理" class="headerlink" title="应用层协议原理"></a>应用层协议原理</h2><h3 id="端口号"><a href="#端口号" class="headerlink" title="端口号"></a>端口号</h3><p>端口号用16位(0-65535)<br>常用端口：<br>HTTP：80<br>邮件服务：25<br>TelNet：23<br>SSH：22</p>
+<p>上层需要的服务，是本层无法确保的：<br>传输层不能向上一层提供时延保证</p>
+<h2 id="Web应用和HTTP协议"><a href="#Web应用和HTTP协议" class="headerlink" title="Web应用和HTTP协议"></a>Web应用和HTTP协议</h2><h3 id="HTTP协议"><a href="#HTTP协议" class="headerlink" title="HTTP协议"></a>HTTP协议</h3><p>持久和非持久连接的区别：</p>
+<h3 id="RTT"><a href="#RTT" class="headerlink" title="RTT"></a>RTT</h3><h3 id="Cookies"><a href="#Cookies" class="headerlink" title="Cookies"></a>Cookies</h3><p>作用、原理、流程<br>4个重要方面</p>
+<h3 id="web缓存"><a href="#web缓存" class="headerlink" title="web缓存"></a>web缓存</h3><p>作用、流程<br>条件GET</p>
+<h2 id="电子邮件SMTP、POP3、IMAP"><a href="#电子邮件SMTP、POP3、IMAP" class="headerlink" title="电子邮件SMTP、POP3、IMAP"></a>电子邮件SMTP、POP3、IMAP</h2><p>用户本地到服务器的连接方式</p>
+<h2 id="DNS"><a href="#DNS" class="headerlink" title="DNS"></a>DNS</h2><p>DNS服务器提供的功能：</p>
+<h3 id="DNS的查询方法"><a href="#DNS的查询方法" class="headerlink" title="DNS的查询方法"></a>DNS的查询方法</h3><p>递归：<br>迭代：</p>
+<h2 id="CDN"><a href="#CDN" class="headerlink" title="CDN"></a>CDN</h2><p>作用：<br>方案：</p>
+<h1 id="运输层"><a href="#运输层" class="headerlink" title="运输层"></a>运输层</h1><h2 id="UDP"><a href="#UDP" class="headerlink" title="UDP"></a>UDP</h2><h3 id="校验和"><a href="#校验和" class="headerlink" title="校验和"></a>校验和</h3><h3 id="伪首部的作用"><a href="#伪首部的作用" class="headerlink" title="伪首部的作用"></a>伪首部的作用</h3><h2 id="可靠数据传输原理"><a href="#可靠数据传输原理" class="headerlink" title="可靠数据传输原理"></a>可靠数据传输原理</h2><p>Rdt1.0-3.0<br>流水线GBN<br>选择性重传SR</p>
+<h2 id="TCP"><a href="#TCP" class="headerlink" title="TCP"></a>TCP</h2><h3 id="报文段结构"><a href="#报文段结构" class="headerlink" title="报文段结构"></a>报文段结构</h3><p>20字节的固定首部</p>
+<h3 id="TCP序号和确认"><a href="#TCP序号和确认" class="headerlink" title="TCP序号和确认"></a>TCP序号和确认</h3><p>填ACK，Seq<br>序号Seq：<br>数据段中第一个字节在数据流中的位置编号<br>ACK：</p>
+<p>TCP估计RTT时：不计算重发的包的–忽略重传</p>
+<h3 id="连接管理"><a href="#连接管理" class="headerlink" title="连接管理"></a>连接管理</h3><p>3次握手、4次挥手 释放连接</p>
+<h3 id="拥塞控制原理"><a href="#拥塞控制原理" class="headerlink" title="拥塞控制原理"></a>拥塞控制原理</h3><p>场景原因</p>
+<p>简述TCP拥塞控制</p>
+<p>经典图<br>窗口变化，阈值变化</p>
+<h1 id="套接字编程"><a href="#套接字编程" class="headerlink" title="套接字编程"></a>套接字编程</h1><h2 id="字节序"><a href="#字节序" class="headerlink" title="字节序"></a>字节序</h2><p>网络是大端字节序</p>
+<h2 id="基本套接字函数的使用"><a href="#基本套接字函数的使用" class="headerlink" title="基本套接字函数的使用"></a>基本套接字函数的使用</h2><p>send和rec缺省是阻塞的</p>
+<h2 id="5种I-O模式"><a href="#5种I-O模式" class="headerlink" title="5种I/O模式"></a>5种I/O模式</h2><h1 id="网络层"><a href="#网络层" class="headerlink" title="网络层"></a>网络层</h1><h2 id="虚电路和数据报网络"><a href="#虚电路和数据报网络" class="headerlink" title="虚电路和数据报网络"></a>虚电路和数据报网络</h2><p>区别</p>
+<h2 id="路由器结构"><a href="#路由器结构" class="headerlink" title="路由器结构"></a>路由器结构</h2><p>3种交换结构</p>
+<h2 id="网际协议"><a href="#网际协议" class="headerlink" title="网际协议"></a>网际协议</h2><h3 id="IP数据包分片和重组"><a href="#IP数据包分片和重组" class="headerlink" title="IP数据包分片和重组"></a>IP数据包分片和重组</h3><p>traceroute原理:TTL</p>
+<h3 id="IP地址划分"><a href="#IP地址划分" class="headerlink" title="IP地址划分"></a>IP地址划分</h3><p>CIDR</p>
+<h2 id="路由算法"><a href="#路由算法" class="headerlink" title="路由算法"></a>路由算法</h2><p>链路状态<br>距离向量</p>
+<h1 id="链路层"><a href="#链路层" class="headerlink" title="链路层"></a>链路层</h1><h2 id=""><a href="#" class="headerlink" title=""></a></h2><p>进程<br>服务器<br>接口</p>
+<h2 id="奇偶校验"><a href="#奇偶校验" class="headerlink" title="奇偶校验"></a>奇偶校验</h2><h2 id="CRC循环冗余码计算"><a href="#CRC循环冗余码计算" class="headerlink" title="CRC循环冗余码计算"></a>CRC循环冗余码计算</h2><h2 id="多路访问"><a href="#多路访问" class="headerlink" title="多路访问"></a>多路访问</h2><p>ALOHA(纯、时隙)<br>效率推导了解一下：求极限</p>
+<p>CSMA/CD的运行机制<br>二进制指数回退算法</p>
+<h2 id="MAC、ARP"><a href="#MAC、ARP" class="headerlink" title="MAC、ARP"></a>MAC、ARP</h2><p>IP地址不变，MAC不停变化</p>
+<h2 id="交换机"><a href="#交换机" class="headerlink" title="交换机"></a>交换机</h2><p>只学习<br>VLAN 作用</p>
+]]></content>
+      <categories>
+        <category>课程总结</category>
+      </categories>
+      <tags>
+        <tag>计算机网络</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Database Programming</title>
+    <url>/Database-Programming/</url>
+    <content><![CDATA[<h1 id="数据定义SQL语句"><a href="#数据定义SQL语句" class="headerlink" title="数据定义SQL语句"></a>数据定义SQL语句</h1><h2 id="基本数据类型"><a href="#基本数据类型" class="headerlink" title="基本数据类型"></a>基本数据类型</h2><ol>
+<li>字符串型varchar(n)、char(n)<blockquote>
+<p>varchar长度可变、char固定长度</p>
+</blockquote>
+</li>
+<li>整数型int、smallint</li>
+<li>定点数型numerica(p,d)<blockquote>
+<p>numeric(p,d)为定点数，p 为定点数的总位数，d 为定点数的小数位数。该数据类型可以表示带小数的数值。</p>
+</blockquote>
+</li>
+<li>浮点数型real、double(n,d)</li>
+<li>货币型money</li>
+<li>逻辑性bit</li>
+<li>日期型date</li>
+</ol>
+<h2 id="数据库定义"><a href="#数据库定义" class="headerlink" title="数据库定义"></a>数据库定义</h2><h3 id="创建数据库"><a href="#创建数据库" class="headerlink" title="创建数据库"></a>创建数据库</h3><figure class="highlight"><table><tr><td class="code"><pre><span class="line"><span class="keyword">CREATE</span> <span class="keyword">DATABASE</span> &lt;<span class="keyword">NAME</span>&gt;;</span><br><span class="line">&gt; CERATE DATABASE HR;</span><br></pre></td></tr></table></figure>
+<a id="more"></a>
+<h3 id="修改数据库"><a href="#修改数据库" class="headerlink" title="修改数据库"></a>修改数据库</h3><figure class="highlight"><table><tr><td class="code"><pre><span class="line"><span class="keyword">ALTER</span> <span class="keyword">DATABASE</span> &lt;<span class="keyword">NAME</span>&gt;[[<span class="keyword">WITH</span>] <span class="keyword">option</span>[...]];</span><br><span class="line">&gt; ALTER DATABASE demoDB RENAME TO &lt;MyDemoDB&gt;;</span><br></pre></td></tr></table></figure>
+
+<h3 id="删除数据库"><a href="#删除数据库" class="headerlink" title="删除数据库"></a>删除数据库</h3><figure class="highlight"><table><tr><td class="code"><pre><span class="line"><span class="keyword">DROP</span> <span class="keyword">DATABASE</span> &lt;<span class="keyword">NAME</span>&gt;;</span><br><span class="line">&gt; DROP DATABASE demoDB;</span><br></pre></td></tr></table></figure>
+<h2 id="数据库表对象的定义"><a href="#数据库表对象的定义" class="headerlink" title="数据库表对象的定义"></a>数据库表对象的定义</h2><h3 id="数据库表创建"><a href="#数据库表创建" class="headerlink" title="数据库表创建"></a>数据库表创建</h3><figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">CREATE</span>　<span class="keyword">TABLE</span>　Student（ </span><br><span class="line">StudentID　　　　<span class="built_in">char</span>(<span class="number">13</span>)　　PRIMARY　<span class="keyword">KEY</span>, </span><br><span class="line">StudentName　　　<span class="built_in">varchar</span>(<span class="number">10</span>)　<span class="keyword">NOT</span>　<span class="literal">NULL</span>, </span><br><span class="line">StudentGender　　<span class="built_in">char</span>(<span class="number">2</span>)　　　<span class="literal">NULL</span>, </span><br><span class="line">BirthDay　　　　　<span class="built_in">date</span>　　　　 <span class="literal">NULL</span>, </span><br><span class="line">Major　　　　　　 <span class="built_in">varchar</span>(<span class="number">30</span>)　<span class="literal">NULL</span>, </span><br><span class="line">StudentPhone　　 <span class="built_in">char</span>(<span class="number">11</span>)　　<span class="literal">NULL</span> </span><br><span class="line">）;</span><br></pre></td></tr></table></figure>
+<ol>
+<li>列约束关键词<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line">PRIMARY KEY、NOT NULL、NULL 、UNIQUE、<span class="keyword">CHECK</span>、<span class="keyword">DEFAULT</span> </span><br><span class="line">&gt; </span><br><span class="line"><span class="keyword">CREATE</span>　<span class="keyword">TABLE</span>　Course( </span><br><span class="line">CourseID　　　 <span class="built_in">char</span>(<span class="number">4</span>)　　　PRIMARY　<span class="keyword">Key</span>, </span><br><span class="line">CourseName　　 <span class="built_in">varchar</span>(<span class="number">20</span>) <span class="keyword">NOT</span>　<span class="literal">NULL</span>　<span class="keyword">UNIQUE</span>, </span><br><span class="line">CourseType　　 <span class="built_in">varchar</span>(<span class="number">10</span>) <span class="literal">NULL</span>　<span class="keyword">CHECK</span>(CourseType <span class="keyword">IN</span>(’基础课’,’专业’,’选修’)), </span><br><span class="line">CourseCredit　<span class="built_in">smallint</span>　　<span class="literal">NULL</span>, </span><br><span class="line">CoursePeriod　<span class="built_in">smallint</span>　　<span class="literal">NULL</span>, </span><br><span class="line">TestMethod　　 <span class="built_in">char</span>(<span class="number">10</span>)　　<span class="keyword">NOT</span>　<span class="literal">NULL</span>　<span class="keyword">DEFAULT</span>　’闭卷考试’ </span><br><span class="line">);</span><br></pre></td></tr></table></figure></li>
+<li>表约束关键词</li>
+<li>表约束定义代理键</li>
+<li>表约束定义外键</li>
+</ol>
+]]></content>
+      <categories>
+        <category>课程总结</category>
+      </categories>
+      <tags>
+        <tag>数据库编程</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Operating System</title>
+    <url>/Operating-System/</url>
+    <content><![CDATA[]]></content>
+  </entry>
+  <entry>
+    <title>How to write a summary</title>
+    <url>/How-to-write-a-summary/</url>
+    <content><![CDATA[<h1 id="Introduction"><a href="#Introduction" class="headerlink" title="Introduction"></a>Introduction</h1><p>撰写读后摘要是2018级专用英语期末笔试写作部分的第一题，满分10分，占总分10%。 题目要求考生先阅读一篇长度为 300-350 词的短文，然后概括、浓缩其主旨大意及主要内容， 并撰写一篇长度 100-120 词的摘要。阅读短文主要涉及议论性、说明性和学术性内容</p>
+<h1 id="Find-out-theme-of-article"><a href="#Find-out-theme-of-article" class="headerlink" title="Find out theme of article"></a>Find out theme of article</h1><p>用一段话来高度概括文章的主要内容(两分)<br>This article addresses the issue of …</p>
+<a id="more"></a>
+<h1 id="Structure"><a href="#Structure" class="headerlink" title="Structure"></a>Structure</h1><p>分析文章的结构，按逻辑顺序概括出每部分的大意和关键信息。<br>提取主要信息，删减次要信息，注意不要遗漏原文的主要观点和关键信息。</p>
+<h1 id="Not-Copy"><a href="#Not-Copy" class="headerlink" title="Not Copy"></a>Not Copy</h1><p>千万不要照抄原文。<br>重述原文的重要信息，用自己的话替换原文的语言结构和表达方式，不允许照抄、摘录或者引用连续5个词以上的原文。</p>
+<h1 id="Neutral-Opinion"><a href="#Neutral-Opinion" class="headerlink" title="Neutral Opinion"></a>Neutral Opinion</h1><p>必须要客观，不要出现 I think之类的。<br>准确理解原文的意思和观点，写作时不要添加新的信息和与原文无关的信息，不要偷换概念， 也不要评论原文的观点。 </p>
+]]></content>
+      <categories>
+        <category>课程总结</category>
+      </categories>
+      <tags>
+        <tag>商务英语</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>计算机网络系列(1)--计算机网络和因特网</title>
     <url>/Computer-Network-and-Internet/</url>
     <content><![CDATA[<h1 id="计算机网络和Internet发展史"><a href="#计算机网络和Internet发展史" class="headerlink" title="计算机网络和Internet发展史"></a>计算机网络和Internet发展史</h1><blockquote>
