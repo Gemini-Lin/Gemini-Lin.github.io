@@ -58,7 +58,7 @@
       </tags>
   </entry>
   <entry>
-    <title>Database-Programming</title>
+    <title>Database Programming</title>
     <url>/Database-Programming/</url>
     <content><![CDATA[<h1 id="数据定义SQL语句"><a href="#数据定义SQL语句" class="headerlink" title="数据定义SQL语句"></a>数据定义SQL语句</h1><h2 id="基本数据类型"><a href="#基本数据类型" class="headerlink" title="基本数据类型"></a>基本数据类型</h2><ol>
 <li>字符串型varchar(n)、char(n)<blockquote>
@@ -166,6 +166,12 @@
 <li>指明触发的条件信息<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">CREATE</span> <span class="keyword">TRIGGER</span> score_audit_trigger </span><br><span class="line"><span class="keyword">AFTER</span> <span class="keyword">INSERT</span> <span class="keyword">OR</span> <span class="keyword">UPDATE</span> <span class="keyword">OR</span> <span class="keyword">DELETE</span> <span class="keyword">ON</span> Stu_score </span><br><span class="line"><span class="keyword">FOR</span> <span class="keyword">EACH</span> <span class="keyword">ROW</span> <span class="keyword">EXECUTE</span> <span class="keyword">PROCEDURE</span> score_audit();</span><br></pre></td></tr></table></figure></li>
 </ol>
 ]]></content>
+      <categories>
+        <category>课程总结</category>
+      </categories>
+      <tags>
+        <tag>SQL</tag>
+      </tags>
   </entry>
   <entry>
     <title>Operating System</title>
