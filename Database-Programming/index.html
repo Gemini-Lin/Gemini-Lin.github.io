@@ -75,7 +75,7 @@
 
 
 
-  <meta name="keywords" content="数据库编程," />
+  <meta name="keywords" content="Hexo, NexT" />
 
 
 
@@ -88,16 +88,15 @@
 
 <meta name="description" content="数据定义SQL语句基本数据类型 字符串型varchar(n)、char(n) varchar长度可变、char固定长度   整数型int、smallint 定点数型numerica(p,d) numeric(p,d)为定点数，p 为定点数的总位数，d 为定点数的小数位数。该数据类型可以表示带小数的数值。   浮点数型real、double(n,d) 货币型money 逻辑性bit 日期型date">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Database Programming">
+<meta property="og:title" content="Database-Programming">
 <meta property="og:url" content="https:&#x2F;&#x2F;gemini-lin.github.io&#x2F;Database-Programming&#x2F;index.html">
 <meta property="og:site_name" content="GeminiPlanet">
 <meta property="og:description" content="数据定义SQL语句基本数据类型 字符串型varchar(n)、char(n) varchar长度可变、char固定长度   整数型int、smallint 定点数型numerica(p,d) numeric(p,d)为定点数，p 为定点数的总位数，d 为定点数的小数位数。该数据类型可以表示带小数的数值。   浮点数型real、double(n,d) 货币型money 逻辑性bit 日期型date">
 <meta property="og:image" content="https:&#x2F;&#x2F;s1.ax1x.com&#x2F;2020&#x2F;06&#x2F;10&#x2F;t71ljg.png">
 <meta property="og:image" content="https:&#x2F;&#x2F;s1.ax1x.com&#x2F;2020&#x2F;06&#x2F;10&#x2F;t78nl8.png">
-<meta property="article:published_time" content="2020-06-07T10:53:42.000Z">
-<meta property="article:modified_time" content="2020-06-10T15:10:00.028Z">
+<meta property="article:published_time" content="2020-06-07T10:53:42.930Z">
+<meta property="article:modified_time" content="2020-06-11T05:10:54.200Z">
 <meta property="article:author" content="Gemini-Lin">
-<meta property="article:tag" content="数据库编程">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https:&#x2F;&#x2F;s1.ax1x.com&#x2F;2020&#x2F;06&#x2F;10&#x2F;t71ljg.png">
 
@@ -135,7 +134,7 @@
 
 
 
-  <title>Database Programming | GeminiPlanet</title>
+  <title>Database-Programming | GeminiPlanet</title>
   
 
 
@@ -324,7 +323,7 @@
 
         
         
-          <h2 class="post-title" itemprop="name headline">Database Programming</h2>
+          <h2 class="post-title" itemprop="name headline">Database-Programming</h2>
         
 
         <div class="post-meta">
@@ -352,34 +351,12 @@
               
                 <span class="post-meta-item-text">更新于&#58;</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2020-06-10T23:10:00+08:00">
-                2020-06-10
+              <time title="更新于" itemprop="dateModified" datetime="2020-06-11T13:10:54+08:00">
+                2020-06-11
               </time>
             
           </span>
 
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E8%AF%BE%E7%A8%8B%E6%80%BB%E7%BB%93/" itemprop="url" rel="index">
-                    <span itemprop="name">课程总结</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
           
 
           
@@ -468,16 +445,27 @@
 
 <ol>
 <li><p>列约束关键词</p>
-<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br></pre></td><td class="code"><pre><span class="line">PRIMARY KEY、NOT NULL、NULL 、UNIQUE、<span class="keyword">CHECK</span>、<span class="keyword">DEFAULT</span> </span><br><span class="line">&gt; </span><br><span class="line"><span class="keyword">CREATE</span>　<span class="keyword">TABLE</span>　Course( </span><br><span class="line">CourseID　　　 <span class="built_in">char</span>(<span class="number">4</span>)　　　PRIMARY　<span class="keyword">Key</span>, </span><br><span class="line">CourseName　　 <span class="built_in">varchar</span>(<span class="number">20</span>) <span class="keyword">NOT</span>　<span class="literal">NULL</span>　<span class="keyword">UNIQUE</span>, </span><br><span class="line">CourseType　　 <span class="built_in">varchar</span>(<span class="number">10</span>) <span class="literal">NULL</span>　<span class="keyword">CHECK</span>(CourseType <span class="keyword">IN</span>(’基础课’,’专业’,’选修’)), </span><br><span class="line">CourseCredit　<span class="built_in">smallint</span>　　<span class="literal">NULL</span>, </span><br><span class="line">CoursePeriod　<span class="built_in">smallint</span>　　<span class="literal">NULL</span>, </span><br><span class="line">TestMethod　　 <span class="built_in">char</span>(<span class="number">10</span>)　　<span class="keyword">NOT</span>　<span class="literal">NULL</span>　<span class="keyword">DEFAULT</span>　’闭卷考试’ </span><br><span class="line">);</span><br><span class="line">``` </span><br><span class="line"></span><br><span class="line">2. 表约束关键词</span><br><span class="line">``` SQL</span><br><span class="line">CONSTRAINT 复合主键名_PK PRIMARY Key(列名)</span><br><span class="line">&gt; </span><br><span class="line"><span class="keyword">CREATE</span>　<span class="keyword">TABLE</span>　Plan(</span><br><span class="line">CourseID　　　 <span class="built_in">char</span>(<span class="number">4</span>)　　　　　<span class="keyword">NOT</span>　<span class="literal">NULL</span>, </span><br><span class="line">TeacherID　　 <span class="built_in">char</span>(<span class="number">4</span>)　　　　　<span class="keyword">NOT</span>　<span class="literal">NULL</span>, </span><br><span class="line">CourseRoom　　<span class="built_in">varchar</span>(<span class="number">30</span>), </span><br><span class="line">CourseTime　　<span class="built_in">varchar</span>(<span class="number">30</span>), </span><br><span class="line">Note　　　　　<span class="built_in">varchar</span>(<span class="number">50</span>), </span><br><span class="line"><span class="keyword">CONSTRAINT</span>　　CoursePlan_PK　　PRIMARY <span class="keyword">Key</span>(CourseID,TeacherID) </span><br><span class="line">);</span><br><span class="line">``` </span><br><span class="line"></span><br><span class="line">3. 表约束定义代理键</span><br><span class="line">``` SQL</span><br><span class="line">serial 代理键</span><br><span class="line">&gt; </span><br><span class="line"><span class="keyword">CREATE</span>　<span class="keyword">TABLE</span>　Plan(</span><br><span class="line">CoursePlanID　<span class="built_in">serial</span>　　　 <span class="keyword">NOT</span>　<span class="literal">NULL</span>, </span><br><span class="line">CourseID　　　<span class="built_in">char</span>(<span class="number">4</span>)　　　<span class="keyword">NOT</span>　<span class="literal">NULL</span>, </span><br><span class="line">TeacherID　　 <span class="built_in">char</span>(<span class="number">4</span>)　　　<span class="keyword">NOT</span>　<span class="literal">NULL</span>, </span><br><span class="line">CourseRoom　　<span class="built_in">varchar</span>(<span class="number">30</span>), </span><br><span class="line">CourseTime　　<span class="built_in">varchar</span>(<span class="number">30</span>), </span><br><span class="line">Note　　　　　<span class="built_in">varchar</span>(<span class="number">50</span>), </span><br><span class="line"><span class="keyword">CONSTRAINT</span>　　CoursePlan_PK　　PRIMARY <span class="keyword">Key</span>(CoursePlanID) </span><br><span class="line">);</span><br><span class="line">``` </span><br><span class="line"></span><br><span class="line">4. 表约束定义外键</span><br><span class="line">``` SQL</span><br><span class="line">CONSTRAINT 外键名_FK FOREIGN KEY(列名)</span><br><span class="line">REFERENCES 关联的表名(列名)</span><br><span class="line">    ON <span class="keyword">DELETE</span> <span class="keyword">CASCADE</span></span><br><span class="line">    <span class="keyword">ON</span> <span class="keyword">UPDATE</span> <span class="keyword">CASCADE</span></span><br><span class="line">&gt;</span><br><span class="line"><span class="keyword">CREATE</span>　<span class="keyword">TABLE</span>　<span class="keyword">Register</span>( </span><br><span class="line">    CourseRegID　　　<span class="built_in">serial</span>　　<span class="keyword">NOT</span>　<span class="literal">NULL</span>, </span><br><span class="line">    CoursePlanID　　 <span class="built_in">int</span>　　　 <span class="keyword">NOT</span>　<span class="literal">NULL</span>, </span><br><span class="line">    StudentID　　　　<span class="built_in">char</span>(<span class="number">13</span>), </span><br><span class="line">    Note　　　　　　 <span class="built_in">varchar</span>(<span class="number">30</span>), </span><br><span class="line">    <span class="keyword">CONSTRAINT</span>　　　 CourseRegID_PK　　PRIMARY <span class="keyword">Key</span>(CourseRegID), <span class="keyword">CONSTRAINT</span>　　　 CoursePlanID_FK　 <span class="keyword">FOREIGN</span> <span class="keyword">Key</span>(CoursePlanID) <span class="keyword">REFERENCES</span>　Plan(CoursePlanID) </span><br><span class="line">        <span class="keyword">ON</span> <span class="keyword">DELETE</span> <span class="keyword">CASCADE</span>, </span><br><span class="line">    <span class="keyword">CONSTRAINT</span>　　　 StudentID_FK　<span class="keyword">FOREIGN</span> <span class="keyword">KEY</span>(StudentID) <span class="keyword">REFERENCES</span>　Student(StudentID) </span><br><span class="line">        <span class="keyword">ON</span> <span class="keyword">DELETE</span> <span class="keyword">CASCADE</span> </span><br><span class="line">);</span><br><span class="line">``` </span><br><span class="line"></span><br><span class="line"><span class="comment">### 数据库表修改</span></span><br><span class="line">``` SQL</span><br><span class="line"><span class="keyword">ALTER</span> <span class="keyword">TABLE</span> &lt;表名&gt; &lt;修改方式&gt;;</span><br></pre></td></tr></table></figure>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">PRIMARY KEY、NOT NULL、NULL 、UNIQUE、<span class="keyword">CHECK</span>、<span class="keyword">DEFAULT</span> </span><br><span class="line">&gt; </span><br><span class="line"><span class="keyword">CREATE</span>　<span class="keyword">TABLE</span>　Course( </span><br><span class="line">CourseID　　　 <span class="built_in">char</span>(<span class="number">4</span>)　　　PRIMARY　<span class="keyword">Key</span>, </span><br><span class="line">CourseName　　 <span class="built_in">varchar</span>(<span class="number">20</span>) <span class="keyword">NOT</span>　<span class="literal">NULL</span>　<span class="keyword">UNIQUE</span>, </span><br><span class="line">CourseType　　 <span class="built_in">varchar</span>(<span class="number">10</span>) <span class="literal">NULL</span>　<span class="keyword">CHECK</span>(CourseType <span class="keyword">IN</span>(’基础课’,’专业’,’选修’)), </span><br><span class="line">CourseCredit　<span class="built_in">smallint</span>　　<span class="literal">NULL</span>, </span><br><span class="line">CoursePeriod　<span class="built_in">smallint</span>　　<span class="literal">NULL</span>, </span><br><span class="line">TestMethod　　 <span class="built_in">char</span>(<span class="number">10</span>)　　<span class="keyword">NOT</span>　<span class="literal">NULL</span>　<span class="keyword">DEFAULT</span>　’闭卷考试’ </span><br><span class="line">);</span><br></pre></td></tr></table></figure>
 </li>
-<li><p>ADD</p>
-<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">用于增加新列或列完整性约束</span><br><span class="line"><span class="keyword">ALTER</span> <span class="keyword">TABLE</span> &lt;表名&gt; <span class="keyword">ADD</span> &lt;新列名称&gt;&lt;数据类型&gt;[完整性约束];</span><br><span class="line">&gt;</span><br><span class="line"><span class="keyword">ALTER</span> <span class="keyword">TABLE</span> Student <span class="keyword">ADD</span> Email <span class="built_in">varchar</span>(<span class="number">20</span>);</span><br></pre></td></tr></table></figure></li>
-<li><p>DROP</p>
-<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">用于删除指定列或列的完整性约束条件</span><br><span class="line"><span class="keyword">ALTER</span> <span class="keyword">TABLE</span>&lt;表名&gt; <span class="keyword">DROP</span> <span class="keyword">COLUMN</span> &lt;列名&gt;;</span><br><span class="line"><span class="keyword">ALTER</span> <span class="keyword">TABLE</span>&lt;表名&gt; <span class="keyword">DROP</span> <span class="keyword">CONSTRAINT</span>&lt;完整性约束名&gt;; </span><br><span class="line">&gt;</span><br><span class="line"><span class="keyword">ALTER</span> <span class="keyword">TABLE</span> Student <span class="keyword">DROP</span> <span class="keyword">COLUMN</span> StudentPhone;</span><br></pre></td></tr></table></figure></li>
-<li><p>RENAME</p>
-<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">用于修改表名称、列名称</span><br><span class="line"><span class="keyword">ALTER</span> <span class="keyword">TABLE</span> &lt;表名&gt; <span class="keyword">RENAME</span> <span class="keyword">TO</span> &lt;新表名&gt;; </span><br><span class="line"><span class="keyword">ALTER</span> <span class="keyword">TABLE</span> &lt;表名&gt; <span class="keyword">RENAME</span> &lt;原列名&gt; <span class="keyword">TO</span> &lt;新列名&gt;;</span><br></pre></td></tr></table></figure></li>
-<li><p>ALTER</p>
-<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">用于修改列的数据类型，</span><br><span class="line"><span class="keyword">ALTER</span> <span class="keyword">TABLE</span> &lt;表名&gt; <span class="keyword">ALTER</span> <span class="keyword">COLUMN</span> &lt;列名&gt; <span class="keyword">TYPE</span>&lt;新的数据类型&gt;;</span><br></pre></td></tr></table></figure>
+<li><p>表约束关键词</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">CONSTRAINT 复合主键名_PK PRIMARY Key(列名)</span><br><span class="line">&gt; </span><br><span class="line"><span class="keyword">CREATE</span>　<span class="keyword">TABLE</span>　Plan(</span><br><span class="line">CourseID　　　 <span class="built_in">char</span>(<span class="number">4</span>)　　　　　<span class="keyword">NOT</span>　<span class="literal">NULL</span>, </span><br><span class="line">TeacherID　　 <span class="built_in">char</span>(<span class="number">4</span>)　　　　　<span class="keyword">NOT</span>　<span class="literal">NULL</span>, </span><br><span class="line">CourseRoom　　<span class="built_in">varchar</span>(<span class="number">30</span>), </span><br><span class="line">CourseTime　　<span class="built_in">varchar</span>(<span class="number">30</span>), </span><br><span class="line">Note　　　　　<span class="built_in">varchar</span>(<span class="number">50</span>), </span><br><span class="line"><span class="keyword">CONSTRAINT</span>　　CoursePlan_PK　　PRIMARY <span class="keyword">Key</span>(CourseID,TeacherID) </span><br><span class="line">);</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>表约束定义代理键</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">serial 代理键</span><br><span class="line">&gt; </span><br><span class="line"><span class="keyword">CREATE</span>　<span class="keyword">TABLE</span>　Plan(</span><br><span class="line">CoursePlanID　<span class="built_in">serial</span>　　　 <span class="keyword">NOT</span>　<span class="literal">NULL</span>, </span><br><span class="line">CourseID　　　<span class="built_in">char</span>(<span class="number">4</span>)　　　<span class="keyword">NOT</span>　<span class="literal">NULL</span>, </span><br><span class="line">TeacherID　　 <span class="built_in">char</span>(<span class="number">4</span>)　　　<span class="keyword">NOT</span>　<span class="literal">NULL</span>, </span><br><span class="line">CourseRoom　　<span class="built_in">varchar</span>(<span class="number">30</span>), </span><br><span class="line">CourseTime　　<span class="built_in">varchar</span>(<span class="number">30</span>), </span><br><span class="line">Note　　　　　<span class="built_in">varchar</span>(<span class="number">50</span>), </span><br><span class="line"><span class="keyword">CONSTRAINT</span>　　CoursePlan_PK　　PRIMARY <span class="keyword">Key</span>(CoursePlanID) </span><br><span class="line">);</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>表约束定义外键</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">CONSTRAINT 外键名_FK FOREIGN KEY(列名)</span><br><span class="line">REFERENCES 关联的表名(列名)</span><br><span class="line">    ON <span class="keyword">DELETE</span> <span class="keyword">CASCADE</span></span><br><span class="line">    <span class="keyword">ON</span> <span class="keyword">UPDATE</span> <span class="keyword">CASCADE</span></span><br><span class="line">&gt;</span><br><span class="line"><span class="keyword">CREATE</span>　<span class="keyword">TABLE</span>　<span class="keyword">Register</span>( </span><br><span class="line">    CourseRegID　　　<span class="built_in">serial</span>　　<span class="keyword">NOT</span>　<span class="literal">NULL</span>, </span><br><span class="line">    CoursePlanID　　 <span class="built_in">int</span>　　　 <span class="keyword">NOT</span>　<span class="literal">NULL</span>, </span><br><span class="line">    StudentID　　　　<span class="built_in">char</span>(<span class="number">13</span>), </span><br><span class="line">    Note　　　　　　 <span class="built_in">varchar</span>(<span class="number">30</span>), </span><br><span class="line">    <span class="keyword">CONSTRAINT</span>　　　 CourseRegID_PK　　PRIMARY <span class="keyword">Key</span>(CourseRegID), <span class="keyword">CONSTRAINT</span>　　　 CoursePlanID_FK　 <span class="keyword">FOREIGN</span> <span class="keyword">Key</span>(CoursePlanID) <span class="keyword">REFERENCES</span>　Plan(CoursePlanID) </span><br><span class="line">        <span class="keyword">ON</span> <span class="keyword">DELETE</span> <span class="keyword">CASCADE</span>, </span><br><span class="line">    <span class="keyword">CONSTRAINT</span>　　　 StudentID_FK　<span class="keyword">FOREIGN</span> <span class="keyword">KEY</span>(StudentID) <span class="keyword">REFERENCES</span>　Student(StudentID) </span><br><span class="line">        <span class="keyword">ON</span> <span class="keyword">DELETE</span> <span class="keyword">CASCADE</span> </span><br><span class="line">);</span><br></pre></td></tr></table></figure>
+
+
+</li>
+</ol>
+<h3 id="数据库表修改"><a href="#数据库表修改" class="headerlink" title="数据库表修改"></a>数据库表修改</h3><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">ALTER</span> <span class="keyword">TABLE</span> &lt;表名&gt; &lt;修改方式&gt;;</span><br></pre></td></tr></table></figure>
+
+<ol>
+<li>ADD<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">用于增加新列或列完整性约束</span><br><span class="line"><span class="keyword">ALTER</span> <span class="keyword">TABLE</span> &lt;表名&gt; <span class="keyword">ADD</span> &lt;新列名称&gt;&lt;数据类型&gt;[完整性约束];</span><br><span class="line">&gt;</span><br><span class="line"><span class="keyword">ALTER</span> <span class="keyword">TABLE</span> Student <span class="keyword">ADD</span> Email <span class="built_in">varchar</span>(<span class="number">20</span>);</span><br></pre></td></tr></table></figure></li>
+<li>DROP<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">用于删除指定列或列的完整性约束条件</span><br><span class="line"><span class="keyword">ALTER</span> <span class="keyword">TABLE</span>&lt;表名&gt; <span class="keyword">DROP</span> <span class="keyword">COLUMN</span> &lt;列名&gt;;</span><br><span class="line"><span class="keyword">ALTER</span> <span class="keyword">TABLE</span>&lt;表名&gt; <span class="keyword">DROP</span> <span class="keyword">CONSTRAINT</span>&lt;完整性约束名&gt;; </span><br><span class="line">&gt;</span><br><span class="line"><span class="keyword">ALTER</span> <span class="keyword">TABLE</span> Student <span class="keyword">DROP</span> <span class="keyword">COLUMN</span> StudentPhone;</span><br></pre></td></tr></table></figure></li>
+<li>RENAME<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">用于修改表名称、列名称</span><br><span class="line"><span class="keyword">ALTER</span> <span class="keyword">TABLE</span> &lt;表名&gt; <span class="keyword">RENAME</span> <span class="keyword">TO</span> &lt;新表名&gt;; </span><br><span class="line"><span class="keyword">ALTER</span> <span class="keyword">TABLE</span> &lt;表名&gt; <span class="keyword">RENAME</span> &lt;原列名&gt; <span class="keyword">TO</span> &lt;新列名&gt;;</span><br></pre></td></tr></table></figure></li>
+<li>ALTER<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">用于修改列的数据类型，</span><br><span class="line"><span class="keyword">ALTER</span> <span class="keyword">TABLE</span> &lt;表名&gt; <span class="keyword">ALTER</span> <span class="keyword">COLUMN</span> &lt;列名&gt; <span class="keyword">TYPE</span>&lt;新的数据类型&gt;;</span><br></pre></td></tr></table></figure>
 
 </li>
 </ol>
@@ -597,90 +585,9 @@
     
 
     
-      <div>
-        <!-- JS库 clipboard 拷贝内容到粘贴板-->
-<script src="https://cdn.bootcss.com/clipboard.js/2.0.1/clipboard.min.js"></script>
-
-<!-- JS库 sweetalert 显示提示信息-->
-<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
-
-<ul class="post-copyright">
-  <!-- 本文标题 -->
-  <li>
-    <strong>本文标题： </strong>
-    Database Programming
-  </li>
-
-  <!-- 本文作者 -->
-  <li class="post-copyright-author">
-    <strong>本文作者： </strong>
-    Gemini-Lin
-  </li>
-
-  <!-- 创建时间 -->
-  <li>
-    <strong>创建于： </strong>
-    2020年06月07日 - 18时06分
-  </li>
-
-  <!-- 修改时间 -->
-  <li>
-    <strong>更新于： </strong>
-    2020年06月10日 - 23时06分
-  </li>
-
-  <!-- 引用链接 -->
-  <li class="post-copyright-link">
-    <strong>引用链接：</strong>
-    <a href="https://gemini-lin.github.io/Database-Programming/" title="Database Programming"
-      >https://gemini-lin.github.io/Database-Programming/</a
-    >
-    <span class="copy-path" title="点击复制引用链接"
-      ><i
-        style="cursor: pointer"
-        class="fa fa-clipboard"
-        data-clipboard-text="['s Blog | Database Programming](https://gemini-lin.github.io/Database-Programming/)"
-        aria-label="post.copy_success"
-      ></i
-    ></span>
-  </li>
-
-  <!-- 版权声明 -->
-  <li class="post-copyright-license">
-    <strong
-      >版权声明：
-    </strong>
-    本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="external nofollow" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明出处！
-  </li>
-</ul>
-
-<script>
-  var clipboard = new ClipboardJS(".fa-clipboard");
-  clipboard.on("success", function(target) {
-    var message = document.createElement("div");
-    message.innerHTML =
-      '<i class="fa fa-check-circle message-icon"></i><span class="message-content">' +
-      target.trigger.getAttribute("aria-label") +
-      "</span>";
-    swal({
-      content: message,
-      className: "copy-success-message",
-      timer: 1000,
-      button: false
-    });
-  });
-</script>
-      </div>
-    
 
     
     <footer class="post-footer">
-      
-        <div class="post-tags">
-          
-            <a href="/tags/%E6%95%B0%E6%8D%AE%E5%BA%93%E7%BC%96%E7%A8%8B/" rel="tag"># 数据库编程</a>
-          
-        </div>
       
 
       
@@ -906,7 +813,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#数据定义SQL语句"><span class="nav-number">1.</span> <span class="nav-text">数据定义SQL语句</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#基本数据类型"><span class="nav-number">1.1.</span> <span class="nav-text">基本数据类型</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#数据库定义"><span class="nav-number">1.2.</span> <span class="nav-text">数据库定义</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#创建数据库"><span class="nav-number">1.2.1.</span> <span class="nav-text">创建数据库</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#修改数据库"><span class="nav-number">1.2.2.</span> <span class="nav-text">修改数据库</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#删除数据库"><span class="nav-number">1.2.3.</span> <span class="nav-text">删除数据库</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#数据库表对象的定义"><span class="nav-number">1.3.</span> <span class="nav-text">数据库表对象的定义</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#数据库表创建"><span class="nav-number">1.3.1.</span> <span class="nav-text">数据库表创建</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#数据库删除"><span class="nav-number">1.3.2.</span> <span class="nav-text">数据库删除</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#数据表索引对象的定义"><span class="nav-number">1.4.</span> <span class="nav-text">数据表索引对象的定义</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#创建索引对象"><span class="nav-number">1.4.1.</span> <span class="nav-text">创建索引对象</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#修改索引对象"><span class="nav-number">1.4.2.</span> <span class="nav-text">修改索引对象</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#删除索引对象"><span class="nav-number">1.4.3.</span> <span class="nav-text">删除索引对象</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#数据操纵-插入、更新、删除"><span class="nav-number">1.5.</span> <span class="nav-text">数据操纵(插入、更新、删除)</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#数据插入"><span class="nav-number">1.5.1.</span> <span class="nav-text">数据插入</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#数据更新"><span class="nav-number">1.5.2.</span> <span class="nav-text">数据更新</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#数据删除"><span class="nav-number">1.5.3.</span> <span class="nav-text">数据删除</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#数据查询"><span class="nav-number">1.6.</span> <span class="nav-text">数据查询</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#内置函数"><span class="nav-number">1.6.1.</span> <span class="nav-text">内置函数</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#子查询"><span class="nav-number">1.6.2.</span> <span class="nav-text">子查询</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#数据控制"><span class="nav-number">1.7.</span> <span class="nav-text">数据控制</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#GRANT赋予权限"><span class="nav-number">1.7.1.</span> <span class="nav-text">GRANT赋予权限</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#REVOKE收回权限"><span class="nav-number">1.7.2.</span> <span class="nav-text">REVOKE收回权限</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#DENY拒绝授权"><span class="nav-number">1.7.3.</span> <span class="nav-text">DENY拒绝授权</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#视图"><span class="nav-number">1.8.</span> <span class="nav-text">视图</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#视图创建"><span class="nav-number">1.8.1.</span> <span class="nav-text">视图创建</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#视图删除"><span class="nav-number">1.8.2.</span> <span class="nav-text">视图删除</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#视图使用"><span class="nav-number">1.8.3.</span> <span class="nav-text">视图使用</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#数据库应用编程"><span class="nav-number">2.</span> <span class="nav-text">数据库应用编程</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#存储过程编程"><span class="nav-number">2.1.</span> <span class="nav-text">存储过程编程</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#触发器编程"><span class="nav-number">2.2.</span> <span class="nav-text">触发器编程</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#创建触发器"><span class="nav-number">2.2.1.</span> <span class="nav-text">创建触发器</span></a></li></ol></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#数据定义SQL语句"><span class="nav-number">1.</span> <span class="nav-text">数据定义SQL语句</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#基本数据类型"><span class="nav-number">1.1.</span> <span class="nav-text">基本数据类型</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#数据库定义"><span class="nav-number">1.2.</span> <span class="nav-text">数据库定义</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#创建数据库"><span class="nav-number">1.2.1.</span> <span class="nav-text">创建数据库</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#修改数据库"><span class="nav-number">1.2.2.</span> <span class="nav-text">修改数据库</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#删除数据库"><span class="nav-number">1.2.3.</span> <span class="nav-text">删除数据库</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#数据库表对象的定义"><span class="nav-number">1.3.</span> <span class="nav-text">数据库表对象的定义</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#数据库表创建"><span class="nav-number">1.3.1.</span> <span class="nav-text">数据库表创建</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#数据库表修改"><span class="nav-number">1.3.2.</span> <span class="nav-text">数据库表修改</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#数据库删除"><span class="nav-number">1.3.3.</span> <span class="nav-text">数据库删除</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#数据表索引对象的定义"><span class="nav-number">1.4.</span> <span class="nav-text">数据表索引对象的定义</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#创建索引对象"><span class="nav-number">1.4.1.</span> <span class="nav-text">创建索引对象</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#修改索引对象"><span class="nav-number">1.4.2.</span> <span class="nav-text">修改索引对象</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#删除索引对象"><span class="nav-number">1.4.3.</span> <span class="nav-text">删除索引对象</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#数据操纵-插入、更新、删除"><span class="nav-number">1.5.</span> <span class="nav-text">数据操纵(插入、更新、删除)</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#数据插入"><span class="nav-number">1.5.1.</span> <span class="nav-text">数据插入</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#数据更新"><span class="nav-number">1.5.2.</span> <span class="nav-text">数据更新</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#数据删除"><span class="nav-number">1.5.3.</span> <span class="nav-text">数据删除</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#数据查询"><span class="nav-number">1.6.</span> <span class="nav-text">数据查询</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#内置函数"><span class="nav-number">1.6.1.</span> <span class="nav-text">内置函数</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#子查询"><span class="nav-number">1.6.2.</span> <span class="nav-text">子查询</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#数据控制"><span class="nav-number">1.7.</span> <span class="nav-text">数据控制</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#GRANT赋予权限"><span class="nav-number">1.7.1.</span> <span class="nav-text">GRANT赋予权限</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#REVOKE收回权限"><span class="nav-number">1.7.2.</span> <span class="nav-text">REVOKE收回权限</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#DENY拒绝授权"><span class="nav-number">1.7.3.</span> <span class="nav-text">DENY拒绝授权</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#视图"><span class="nav-number">1.8.</span> <span class="nav-text">视图</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#视图创建"><span class="nav-number">1.8.1.</span> <span class="nav-text">视图创建</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#视图删除"><span class="nav-number">1.8.2.</span> <span class="nav-text">视图删除</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#视图使用"><span class="nav-number">1.8.3.</span> <span class="nav-text">视图使用</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#数据库应用编程"><span class="nav-number">2.</span> <span class="nav-text">数据库应用编程</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#存储过程编程"><span class="nav-number">2.1.</span> <span class="nav-text">存储过程编程</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#触发器编程"><span class="nav-number">2.2.</span> <span class="nav-text">触发器编程</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#创建触发器"><span class="nav-number">2.2.1.</span> <span class="nav-text">创建触发器</span></a></li></ol></li></ol></li></ol></div>
             
 
           </div>
