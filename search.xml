@@ -1,6 +1,34 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>Operating System(2)</title>
+    <url>/Operating-System-2/</url>
+    <content><![CDATA[<h1 id="进程"><a href="#进程" class="headerlink" title="进程"></a>进程</h1><h2 id="进程与线程"><a href="#进程与线程" class="headerlink" title="进程与线程"></a>进程与线程</h2><h3 id="进程-1"><a href="#进程-1" class="headerlink" title="进程"></a>进程</h3><p>进程是系统进行资源分配和调度的一个独立单位。<br>进程控制块(Process Control Block,PCB)描述进程的基本信息和活动过程，进而控制进程和管理进程。<br>特征：动态性、并发性、独立性、异步性。</p>
+<h3 id="线程"><a href="#线程" class="headerlink" title="线程"></a>线程</h3><p>线程作为调度和分派的基本单位。<br>线程是进程的进一步划分，一个进程可以有多个线程，他们共享进程资源。</p>
+<h3 id="比较"><a href="#比较" class="headerlink" title="比较"></a>比较</h3><ol>
+<li>进程是资源分配的基本单位，但是线程不拥有系统资源，仅有少量能保证独立运行的资源。(一些必备的寄存器，如程序计数器等)同时线程共享进程的资源。</li>
+<li>进程的切换开销大，线程是独立调动的基本单位，切换线程的开销更小。</li>
+</ol>
+<h2 id="进程状态"><a href="#进程状态" class="headerlink" title="进程状态"></a>进程状态</h2><p><img src="https://s1.ax1x.com/2020/06/12/tLBcTI.png" alt="五种状态转换"></p>
+<ul>
+<li>就绪状态：资源已经准备好了，就差CPU调度</li>
+<li>阻塞状态：被某些事件给中断了，缺少必要的资源(除CPU时间)</li>
+</ul>
+<h3 id="挂起与激活"><a href="#挂起与激活" class="headerlink" title="挂起与激活"></a>挂起与激活</h3><p><img src="https://s1.ax1x.com/2020/06/12/tLDjUI.png" alt="挂起与激活"></p>
+<ul>
+<li>若进程处于就绪状态，挂起操作执行后，则由活动就绪转为禁止就绪</li>
+<li>若进程处于阻塞状态，挂起操作执行后，则由活动阻塞转为禁止阻塞</li>
+</ul>
+<h2 id="进程同步"><a href="#进程同步" class="headerlink" title="进程同步"></a>进程同步</h2><h3 id="1-临界区"><a href="#1-临界区" class="headerlink" title="1. 临界区"></a>1. 临界区</h3><p>对临界资源进行访问的那段代码称为临界区。<br>为了互斥访问临界资源，每个进程在进入临界区之前，需要先进行检查。</p>
+<h3 id="2-信号量"><a href="#2-信号量" class="headerlink" title="2. 信号量"></a>2. 信号量</h3><h3 id="3-管程"><a href="#3-管程" class="headerlink" title="3. 管程"></a>3. 管程</h3>]]></content>
+      <categories>
+        <category>课程总结</category>
+      </categories>
+      <tags>
+        <tag>OS</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Computer Network</title>
     <url>/Computer-Network/</url>
     <content><![CDATA[<h1 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h1><p><img src="https://s1.ax1x.com/2020/06/08/tRorRg.png" alt="tRorRg.png"></p>
@@ -56,6 +84,44 @@
       <tags>
         <tag>计算机网络</tag>
       </tags>
+  </entry>
+  <entry>
+    <title>Operating-System-1</title>
+    <url>/Operating-System-1/</url>
+    <content><![CDATA[<h2 id="https-zhuanlan-zhihu-com-p-147752800"><a href="#https-zhuanlan-zhihu-com-p-147752800" class="headerlink" title="#! https://zhuanlan.zhihu.com/p/147752800"></a>#! <a href="https://zhuanlan.zhihu.com/p/147752800" target="_blank" rel="noopener">https://zhuanlan.zhihu.com/p/147752800</a></h2><p>title: Operating System(1)<br>date: 2020-06-07 18:53:11<br>tags:</p>
+<ul>
+<li>OS<br>categories: 课程总结<br>copyright: true</li>
+</ul>
+<hr>
+<h1 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h1><h2 id="操作系统的目标和作用"><a href="#操作系统的目标和作用" class="headerlink" title="操作系统的目标和作用"></a>操作系统的目标和作用</h2><h3 id="目标"><a href="#目标" class="headerlink" title="目标"></a>目标</h3><p>方便性、有效性、可扩充性、开放性。</p>
+<h3 id="作用"><a href="#作用" class="headerlink" title="作用"></a>作用</h3><ol>
+<li>作为用户与计算机硬件之间的接口</li>
+<li>作为计算机系统资源的管理者</li>
+<li>实现了对计算机资源的抽象<a id="more"></a>
+
+</li>
+</ol>
+<h2 id="操作系统的发展过程"><a href="#操作系统的发展过程" class="headerlink" title="操作系统的发展过程"></a>操作系统的发展过程</h2><h3 id="批处理系统"><a href="#批处理系统" class="headerlink" title="批处理系统"></a>批处理系统</h3><p>主要动力是提高资源利用率和系统吞吐量。<br>批处理是指用户将一批作业提交给操作系统后就不再干预，由操作系统控制它们自动运行。<br>批处理系统分为单道批处理系统和多道批处理系统。</p>
+<ol>
+<li>单道批处理系统<br><img src="https://s1.ax1x.com/2020/06/11/tqmjI0.png" alt="tqmjI0.png"><br>在内存中始终仅存一道作业运行。</li>
+<li>多道批处理系统<br><img src="https://s1.ax1x.com/2020/06/11/tqnwLj.png" alt="tqnwLj.png"></li>
+</ol>
+<h3 id="分时系统"><a href="#分时系统" class="headerlink" title="分时系统"></a>分时系统</h3><p>主要动力是满足用户对人机交互的需求。<br>系统允许多个用户同时通过自己的终端，以交互的方式使用计算机，共享主机的资源。<br>主要特征：多路性(多个用户)、独立性、及时性、交互性。</p>
+<h3 id="实时系统"><a href="#实时系统" class="headerlink" title="实时系统"></a>实时系统</h3><p>系统能及时相应外部的请求，在规定时间内完成对该事件的处理。<br>分为硬实时和软实时，前者必须满足绝对的截止时间，后者可以容忍一定的超时。</p>
+<h2 id="基本特征"><a href="#基本特征" class="headerlink" title="基本特征"></a>基本特征</h2><h3 id="1-并发"><a href="#1-并发" class="headerlink" title="1.并发"></a>1.并发</h3><p>并发性是指两个或多个事件在同一时间间隔内发生，并行性是指两个或多个事件在同一时刻发生。<br>并行是真正的同时，需要硬件支持；<br>并发是看起来的同时，可以通过时间片轮转调度进程来实现。</p>
+<h3 id="2-共享"><a href="#2-共享" class="headerlink" title="2.共享"></a>2.共享</h3><p>共享是指系统中的资源可供内存中多个并发执行的进程共同使用。<br>有两种共享方式：互斥共享和实时共享。<br>互斥共享的资源称为临界资源，在一段时间内只允许一个进程访问的资源，如打印机等。</p>
+<h3 id="3-虚拟"><a href="#3-虚拟" class="headerlink" title="3.虚拟"></a>3.虚拟</h3><p>虚拟是把一个物理实体变为若干个逻辑实体。<br>有两种虚拟技术：时分复用和空分复用。<br>多个进程能在同一个处理器上并发执行使用了时分复用技术，让每个进程轮流占用处理器，每次只执行一小个时间片并快速切换。<br>虚拟内存使用了空分复用技术，它将物理内存抽象为地址空间，每个进程都有各自的地址空间。地址空间的页被映射到物理内存，地址空间的页并不需要全部在物理内存中，当使用到一个没有在物理内存的页时，执行页面置换算法，将该页置换到内存中。</p>
+<h3 id="4-异步"><a href="#4-异步" class="headerlink" title="4.异步"></a>4.异步</h3><p>异步是指进程不是一次性执行完毕，而是停停走走。</p>
+<h2 id="主要功能"><a href="#主要功能" class="headerlink" title="主要功能"></a>主要功能</h2><h3 id="1-进程管理"><a href="#1-进程管理" class="headerlink" title="1.进程管理"></a>1.进程管理</h3><p>进程控制、进程同步、进程通信、进程调度等。</p>
+<h3 id="2-内存管理"><a href="#2-内存管理" class="headerlink" title="2.内存管理"></a>2.内存管理</h3><p>内存分配、内存保护、地址映射、内存扩充等。</p>
+<h3 id="3-设备管理"><a href="#3-设备管理" class="headerlink" title="3.设备管理"></a>3.设备管理</h3><p>缓冲管理、设备分配、设备处理等。</p>
+<h3 id="4-文件管理"><a href="#4-文件管理" class="headerlink" title="4.文件管理"></a>4.文件管理</h3><p>文件存储空间的管理、目录管理、文件读/写管理和保护等。</p>
+<p><strong>参考资料：</strong></p>
+<ol>
+<li>汤小丹、梁红兵、哲风屏、汤子瀛 计算机操作系统(第四版)：西安电子科技大学出版社</li>
+<li><a href="https://cyc2018.github.io/CS-Notes/#/notes/%E8%AE%A1%E7%AE%97%E6%9C%BA%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%20-%20%E7%9B%AE%E5%BD%951" target="_blank" rel="noopener">CS-Notes</a></li>
+</ol>
+]]></content>
   </entry>
   <entry>
     <title>Database Programming</title>
@@ -171,36 +237,6 @@
       </categories>
       <tags>
         <tag>SQL</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Operating System</title>
-    <url>/Operating-System/</url>
-    <content><![CDATA[<h1 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h1><h2 id="操作系统的目标和作用"><a href="#操作系统的目标和作用" class="headerlink" title="操作系统的目标和作用"></a>操作系统的目标和作用</h2><h3 id="目标"><a href="#目标" class="headerlink" title="目标"></a>目标</h3><p>方便性、有效性、可扩充性、开放性。</p>
-<h3 id="作用"><a href="#作用" class="headerlink" title="作用"></a>作用</h3><ol>
-<li>作为用户与计算机硬件之间的接口</li>
-<li>作为计算机系统资源的管理者</li>
-<li>实现了对计算机资源的抽象<a id="more"></a>
-<h2 id="操作系统的发展过程"><a href="#操作系统的发展过程" class="headerlink" title="操作系统的发展过程"></a>操作系统的发展过程</h2><h3 id="批处理系统"><a href="#批处理系统" class="headerlink" title="批处理系统"></a>批处理系统</h3>主要动力是提高资源利用率和系统吞吐量。<br>批处理是指用户将一批作业提交给操作系统后就不再干预，由操作系统控制它们自动运行。<br>批处理系统分为单道批处理系统和多道批处理系统。</li>
-<li>单道批处理系统<br><img src="https://s1.ax1x.com/2020/06/11/tqmjI0.png" alt="tqmjI0.png"><br>在内存中始终仅存一道作业运行。</li>
-<li>多道批处理系统<br><img src="https://s1.ax1x.com/2020/06/11/tqnwLj.png" alt="tqnwLj.png"></li>
-</ol>
-<h3 id="分时系统"><a href="#分时系统" class="headerlink" title="分时系统"></a>分时系统</h3><p>主要动力是满足用户对人机交互的需求。<br>系统允许多个用户同时通过自己的终端，以交互的方式使用计算机，共享主机的资源。<br>主要特征：多路性(多个用户)、独立性、及时性、交互性。</p>
-<h3 id="实时系统"><a href="#实时系统" class="headerlink" title="实时系统"></a>实时系统</h3><p>系统能及时相应外部的请求，在规定时间内完成对该事件的处理。</p>
-<h2 id="基本特征"><a href="#基本特征" class="headerlink" title="基本特征"></a>基本特征</h2><h3 id="1-并发"><a href="#1-并发" class="headerlink" title="1.并发"></a>1.并发</h3><p>并发性是指两个或多个事件在同一时间间隔内发生，并行性是指两个或多个事件在同一时刻发生。<br>并行是真正的同时，需要硬件支持；<br>并发是看起来的同时，可以通过时间片轮转调度进程来实现。</p>
-<h3 id="2-共享"><a href="#2-共享" class="headerlink" title="2.共享"></a>2.共享</h3><p>共享是指系统中的资源可供内存中多个并发执行的进程共同使用。<br>有两种共享方式：互斥共享和实时共享。<br>互斥共享的资源称为临界资源，在一段时间内只允许一个进程访问的资源，如打印机等。</p>
-<h3 id="3-虚拟"><a href="#3-虚拟" class="headerlink" title="3.虚拟"></a>3.虚拟</h3><p>虚拟是把一个物理实体变为若干个逻辑实体。<br>有两种虚拟技术：时分复用和空分复用。<br>多个进程能在同一个处理器上并发执行使用了时分复用技术，让每个进程轮流占用处理器，每次只执行一小个时间片并快速切换。<br>虚拟内存使用了空分复用技术，它将物理内存抽象为地址空间，每个进程都有各自的地址空间。地址空间的页被映射到物理内存，地址空间的页并不需要全部在物理内存中，当使用到一个没有在物理内存的页时，执行页面置换算法，将该页置换到内存中。</p>
-<h3 id="4-异步"><a href="#4-异步" class="headerlink" title="4.异步"></a>4.异步</h3><p>异步是指进程不是一次性执行完毕，而是停停走走。</p>
-<h2 id="主要功能"><a href="#主要功能" class="headerlink" title="主要功能"></a>主要功能</h2><h3 id="1-进程管理"><a href="#1-进程管理" class="headerlink" title="1.进程管理"></a>1.进程管理</h3><p>进程控制、进程同步、进程通信、进程调度等。</p>
-<h3 id="2-内存管理"><a href="#2-内存管理" class="headerlink" title="2.内存管理"></a>2.内存管理</h3><p>内存分配、内存保护、地址映射、内存扩充等。</p>
-<h3 id="3-设备管理"><a href="#3-设备管理" class="headerlink" title="3.设备管理"></a>3.设备管理</h3><p>缓冲管理、设备分配、设备处理等。</p>
-<h3 id="4-文件管理"><a href="#4-文件管理" class="headerlink" title="4.文件管理"></a>4.文件管理</h3><p>文件存储空间的管理、目录管理、文件读/写管理和保护等。</p>
-]]></content>
-      <categories>
-        <category>课程总结</category>
-      </categories>
-      <tags>
-        <tag>OS</tag>
       </tags>
   </entry>
   <entry>
