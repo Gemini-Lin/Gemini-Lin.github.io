@@ -7,9 +7,9 @@
 <h3 id="线程"><a href="#线程" class="headerlink" title="线程"></a>线程</h3><p>线程作为调度和分派的基本单位。<br>线程是进程的进一步划分，一个进程可以有多个线程，他们共享进程资源。</p>
 <h3 id="比较"><a href="#比较" class="headerlink" title="比较"></a>比较</h3><ol>
 <li>进程是资源分配的基本单位，但是线程不拥有系统资源，仅有少量能保证独立运行的资源。(一些必备的寄存器，如程序计数器等)同时线程共享进程的资源。</li>
-<li>进程的切换开销大，线程是独立调动的基本单位，切换线程的开销更小。</li>
+<li>进程的切换开销大，线程是独立调动的基本单位，切换线程的开销更小。<a id="more"></a>
+<h2 id="进程状态"><a href="#进程状态" class="headerlink" title="进程状态"></a>进程状态</h2><img src="https://s1.ax1x.com/2020/06/12/tLBcTI.png" alt="五种状态转换"></li>
 </ol>
-<h2 id="进程状态"><a href="#进程状态" class="headerlink" title="进程状态"></a>进程状态</h2><p><img src="https://s1.ax1x.com/2020/06/12/tLBcTI.png" alt="五种状态转换"></p>
 <ul>
 <li>就绪状态：资源已经准备好了，就差CPU调度</li>
 <li>阻塞状态：被某些事件给中断了，缺少必要的资源(除CPU时间)</li>
