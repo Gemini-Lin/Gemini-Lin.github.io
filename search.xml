@@ -1,6 +1,49 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>正则表达式</title>
+    <url>/regex/</url>
+    <content><![CDATA[<h1 id="Free-Talk"><a href="#Free-Talk" class="headerlink" title="Free Talk"></a>Free Talk</h1><p>在学习编程的这两年里，无数次的遇到正则表达式，不管是在Python还是Java中，正则表达式都是绕不开的话题。<br>今天打算写一篇正则表达式的总结文章，一是为了学习，二是为了日后查阅复制方便。<br>发现了Github上有一个超好的学习资料，将在上面做一些修改，作为总结。<a href="https://github.com/ziishaned/learn-regex" target="_blank" rel="noopener">learn-regex</a></p>
+<a id="more"></a>
+<h1 id="1-基本匹配"><a href="#1-基本匹配" class="headerlink" title="1.基本匹配"></a>1.基本匹配</h1><p>正则表达式其实就是在执行搜索时的格式，它由一些字母和数字组合而成。 例如：一个正则表达式 the，它表示一个规则：由字母t开始，接着是h，再接着是e。<br>同时正则表达式是大小写的敏感的，所以the不会匹配The。</p>
+<h1 id="2-元字符"><a href="#2-元字符" class="headerlink" title="2.元字符"></a>2.元字符</h1><p>正则表达式的核心就是元字符的匹配，元字符的描述如下图所示。<br><img src="https://s1.ax1x.com/2020/06/18/NeplQJ.png" alt="NeplQJ.png"></p>
+<h2 id="2-1点运算符"><a href="#2-1点运算符" class="headerlink" title="2.1点运算符."></a>2.1点运算符.</h2><p>.是元字符中最简单的例子。 .匹配任意单个字符，但不匹配换行符。</p>
+<figure class="highlight coq"><table><tr><td class="code"><pre><span class="line"><span class="string">".ar"</span> =&gt; The car parked <span class="built_in">in</span> the garage.</span><br></pre></td></tr></table></figure>
+<h2 id="2-2字符集"><a href="#2-2字符集" class="headerlink" title="2.2字符集"></a>2.2字符集</h2><p>[ ]方括号用来指定一个字符集。在[ ]方括号中使用连字符-来指定字符集的范围。<br>在方括号中的字符集不关心顺序。例如，表达式<code>[Tt]he</code> 匹配 the 和 The。</p>
+<figure class="highlight coq"><table><tr><td class="code"><pre><span class="line"><span class="string">"[Tt]he"</span> =&gt; The car parked <span class="built_in">in</span> the garage.</span><br></pre></td></tr></table></figure>
+<p>方括号中的句号就表示句号。表达式 ar[.] 匹配 ar.字符串</p>
+<figure class="highlight livecodeserver"><table><tr><td class="code"><pre><span class="line"><span class="string">"ar[.]"</span> =&gt; A garage is <span class="keyword">a</span> good place <span class="built_in">to</span> park <span class="keyword">a</span> car.</span><br></pre></td></tr></table></figure>
+<h3 id="2-2-1否定字符集"><a href="#2-2-1否定字符集" class="headerlink" title="2.2.1否定字符集"></a>2.2.1否定字符集</h3><p>一般来说 <code>^</code> 表示一个字符串的开头，但它用在一个方括号的开头<code>[^]</code>的时候，它表示这个字符集是否定的。 例如，表达式<code>[^c]ar</code> 匹配一个ar前面非c的任意字符。如下面的par、gar而非car。</p>
+<figure class="highlight coq"><table><tr><td class="code"><pre><span class="line"><span class="string">"[^c]ar"</span> =&gt; The car parked <span class="built_in">in</span> the garage.</span><br></pre></td></tr></table></figure>
+<h2 id="2-3重复次数"><a href="#2-3重复次数" class="headerlink" title="2.3重复次数"></a>2.3重复次数</h2><p>后面跟着元字符 <code>+</code>，<code>*</code> or <code>?</code> 的，用来指定匹配子模式的次数。 这些元字符在不同的情况下有着不同的意思。</p>
+<h3 id="2-3-1-号"><a href="#2-3-1-号" class="headerlink" title="2.3.1*号"></a>2.3.1*号</h3><p><code>*</code>号匹配在 <code>*</code>之前的字符出现<strong>大于等于0次</strong>。 例如，表达式 <code>a*</code> 匹配0或更多个以a开头的字符。表达式<code>[a-z]*</code> 匹配一个行中所有以小写字母开头的字符串。</p>
+<figure class="highlight livecodeserver"><table><tr><td class="code"><pre><span class="line"><span class="string">"[a-z]*"</span> =&gt; The car parked <span class="keyword">in</span> <span class="keyword">the</span> garage <span class="comment">#21.</span></span><br></pre></td></tr></table></figure>
+<p><code>*</code>字符和<code>.</code>字符搭配可以匹配所有的字符<code>.*</code>。 <code>*</code>和表示匹配空格的符号<code>\s</code>连起来用，如表达式<code>\s*cat\s*</code>匹配0或更多个空格开头和0或更多个空格结尾的cat字符串。</p>
+<figure class="highlight dart"><table><tr><td class="code"><pre><span class="line"><span class="string">"\s*cat\s*"</span> =&gt; The fat cat sat <span class="keyword">on</span> the concatenation.</span><br></pre></td></tr></table></figure>
+<h3 id="2-3-2-号"><a href="#2-3-2-号" class="headerlink" title="2.3.2+号"></a>2.3.2+号</h3><p><code>+</code>号匹配<code>+</code>号之前的字符出现 <strong>&gt;=1 次</strong>。 例如表达式<code>c.+t</code>匹配以首字母c开头以t结尾，中间跟着至少一个字符的字符串。</p>
+<figure class="highlight stata"><table><tr><td class="code"><pre><span class="line"><span class="string">"c.+t"</span> =&gt; The fat <span class="keyword">cat</span> sat <span class="keyword">on</span> the <span class="keyword">mat</span>.</span><br></pre></td></tr></table></figure>
+<h3 id="2-3-3-号"><a href="#2-3-3-号" class="headerlink" title="2.3.3?号"></a>2.3.3?号</h3><p>在正则表达式中元字符 <code>?</code>标记在符号前面的字符为可选，即<strong>出现 0 或 1 次</strong>。 例如，表达式 <code>[T]?he</code> 匹配字符串 he 和 The。</p>
+<figure class="highlight dart"><table><tr><td class="code"><pre><span class="line"><span class="string">"[T]he"</span> =&gt; The car <span class="keyword">is</span> parked <span class="keyword">in</span> the garage.</span><br><span class="line"><span class="string">"[T]?he"</span> =&gt; The car <span class="keyword">is</span> parked <span class="keyword">in</span> the garage.</span><br></pre></td></tr></table></figure>
+<h2 id="2-4-号"><a href="#2-4-号" class="headerlink" title="2.4{}号"></a>2.4{}号</h2><p>在正则表达式中 <code>{}</code>是一个量词，常用来限定一个或一组字符可以重复出现的次数。 例如，表达式 <code>[0-9]{2,3}</code>匹配最少 2 位最多 3 位 0~9 的数字。</p>
+<figure class="highlight livescript"><table><tr><td class="code"><pre><span class="line"><span class="string">"[0-9]&#123;2,3&#125;"</span> =&gt; The number was <span class="number">9.9997</span> but we rounded <span class="literal">it</span> <span class="literal">off</span> <span class="keyword">to</span> <span class="number">10.0</span>.</span><br></pre></td></tr></table></figure>
+<p>我们可以省略第二个参数。 例如，<code>[0-9]{2,}</code> 匹配至少两位 0~9 的数字。</p>
+<figure class="highlight livescript"><table><tr><td class="code"><pre><span class="line"><span class="string">"[0-9]&#123;2,&#125;"</span> =&gt; The number was <span class="number">9.9997</span> but we rounded <span class="literal">it</span> <span class="literal">off</span> <span class="keyword">to</span> <span class="number">10.0</span>.</span><br></pre></td></tr></table></figure>
+<p>如果逗号也省略掉则表示重复固定的次数。 例如，[0-9]{3} 匹配3位数字。</p>
+<figure class="highlight livescript"><table><tr><td class="code"><pre><span class="line"><span class="string">"[0-9]&#123;3&#125;"</span> =&gt; The number was <span class="number">9.9997</span> but we rounded <span class="literal">it</span> <span class="literal">off</span> <span class="keyword">to</span> <span class="number">10.0</span>.</span><br></pre></td></tr></table></figure>
+<h2 id="2-5-…-特征标群"><a href="#2-5-…-特征标群" class="headerlink" title="2.5(…)特征标群"></a>2.5(…)特征标群</h2><p><code>(...)</code>里面的内容可以看作一个整体。例如，表达式 <code>(ab)*</code>匹配连续出现 0 或更多个 ab。如果没有使用 <code>(...)</code> ，那么表达式 <code>ab*</code> 将匹配连续出现 0 或更多个 b 。<br>我们还可以在 <code>()</code>中用或字符 <code>|</code> 表示或。例如，<code>(c|g|p)ar</code> 匹配 car 或 gar 或 par.</p>
+<figure class="highlight dart"><table><tr><td class="code"><pre><span class="line"><span class="string">"(c|g|p)ar"</span> =&gt; The car <span class="keyword">is</span> parked <span class="keyword">in</span> the garage.</span><br></pre></td></tr></table></figure>
+<h2 id="2-6-或运算符"><a href="#2-6-或运算符" class="headerlink" title="2.6|或运算符"></a>2.6|或运算符</h2><p>或运算符就表示或，用作判断条件。<br>例如 <code>(T|t)he|car</code>匹配 <code>(T|t)he 或 car</code>。</p>
+<figure class="highlight dart"><table><tr><td class="code"><pre><span class="line"><span class="string">"(T|t)he|car"</span> =&gt; The car <span class="keyword">is</span> parked <span class="keyword">in</span> the garage.</span><br></pre></td></tr></table></figure>
+<h2 id="2-7-转码特殊字符"><a href="#2-7-转码特殊字符" class="headerlink" title="2.7\转码特殊字符"></a>2.7\转码特殊字符</h2><p>反斜线<code>\</code>在表达式中用于转码紧跟其后的字符。用于指定 <code>{ } [ ] / \ + * . $ ^ | ?</code>这些特殊字符。如果想要匹配这些特殊字符则要在其前面加上反斜线<code>\</code>。<br>例如 <code>.</code>是用来匹配除换行符外的所有字符的。如果想要匹配句子中的<code>.</code> 则要写成<code>\.</code>以下这个例子 <code>\.?</code>是选择性匹配.</p>
+<figure class="highlight stata"><table><tr><td class="code"><pre><span class="line"><span class="string">"(f|c|m)at\.?"</span> =&gt; The fat <span class="keyword">cat</span> sat <span class="keyword">on</span> the <span class="keyword">mat</span>.</span><br></pre></td></tr></table></figure>]]></content>
+      <categories>
+        <category>java后端开发</category>
+      </categories>
+      <tags>
+        <tag>正则表达式</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>SQL Test</title>
     <url>/SQL-Test/</url>
     <content><![CDATA[<h1 id="TABLE-Student"><a href="#TABLE-Student" class="headerlink" title="TABLE Student"></a>TABLE Student</h1><figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">CREATE</span> <span class="keyword">TABLE</span> Student_2018091601004(</span><br><span class="line">	StudentID <span class="built_in">char</span>(<span class="number">13</span>) PRIMARY <span class="keyword">KEY</span>,</span><br><span class="line">	StudentName <span class="built_in">varchar</span>(<span class="number">10</span>) <span class="keyword">NOT</span> <span class="literal">NULL</span>,</span><br><span class="line">	Sex <span class="built_in">char</span>(<span class="number">2</span>) <span class="keyword">NOT</span> <span class="literal">NULL</span></span><br><span class="line">);</span><br></pre></td></tr></table></figure>
