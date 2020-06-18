@@ -3,7 +3,7 @@
   <entry>
     <title>正则表达式</title>
     <url>/regex/</url>
-    <content><![CDATA[<h1 id="Free-Talk"><a href="#Free-Talk" class="headerlink" title="Free Talk"></a>Free Talk</h1><p>在学习编程的这两年里，无数次的遇到正则表达式，不管是在Python还是Java中，正则表达式都是绕不开的话题。<br>今天打算写一篇正则表达式的总结文章，一是为了学习，二是为了日后查阅复制方便。<br>发现了Github上有一个超好的学习资料，将在上面做一些修改，作为总结。<a href="https://github.com/ziishaned/learn-regex" target="_blank" rel="noopener">learn-regex</a></p>
+    <content><![CDATA[<h1 id="Free-Talk"><a href="#Free-Talk" class="headerlink" title="Free Talk"></a>Free Talk</h1><p>在学习编程的这两年里，无数次的遇到正则表达式，不管是在Python还是Java中，正则表达式都是绕不开的话题。<br>今天打算写一篇正则表达式的总结文章，一是为了学习，二是为了日后查阅复制方便。<br>发现了Github上有一个超好的学习资料，将在上面做一些修改，作为总结。同时限于篇幅，只写了常用部分，更多内容请见<a href="https://github.com/ziishaned/learn-regex" target="_blank" rel="noopener">learn-regex</a></p>
 <a id="more"></a>
 <h1 id="1-基本匹配"><a href="#1-基本匹配" class="headerlink" title="1.基本匹配"></a>1.基本匹配</h1><p>正则表达式其实就是在执行搜索时的格式，它由一些字母和数字组合而成。 例如：一个正则表达式 the，它表示一个规则：由字母t开始，接着是h，再接着是e。<br>同时正则表达式是大小写的敏感的，所以the不会匹配The。</p>
 <h1 id="2-元字符"><a href="#2-元字符" class="headerlink" title="2.元字符"></a>2.元字符</h1><p>正则表达式的核心就是元字符的匹配，元字符的描述如下图所示。<br><img src="https://s1.ax1x.com/2020/06/18/NeplQJ.png" alt="NeplQJ.png"></p>
@@ -35,7 +35,10 @@
 <h2 id="2-6-或运算符"><a href="#2-6-或运算符" class="headerlink" title="2.6|或运算符"></a>2.6|或运算符</h2><p>或运算符就表示或，用作判断条件。<br>例如 <code>(T|t)he|car</code>匹配 <code>(T|t)he 或 car</code>。</p>
 <figure class="highlight dart"><table><tr><td class="code"><pre><span class="line"><span class="string">"(T|t)he|car"</span> =&gt; The car <span class="keyword">is</span> parked <span class="keyword">in</span> the garage.</span><br></pre></td></tr></table></figure>
 <h2 id="2-7-转码特殊字符"><a href="#2-7-转码特殊字符" class="headerlink" title="2.7\转码特殊字符"></a>2.7\转码特殊字符</h2><p>反斜线<code>\</code>在表达式中用于转码紧跟其后的字符。用于指定 <code>{ } [ ] / \ + * . $ ^ | ?</code>这些特殊字符。如果想要匹配这些特殊字符则要在其前面加上反斜线<code>\</code>。<br>例如 <code>.</code>是用来匹配除换行符外的所有字符的。如果想要匹配句子中的<code>.</code> 则要写成<code>\.</code>以下这个例子 <code>\.?</code>是选择性匹配.</p>
-<figure class="highlight stata"><table><tr><td class="code"><pre><span class="line"><span class="string">"(f|c|m)at\.?"</span> =&gt; The fat <span class="keyword">cat</span> sat <span class="keyword">on</span> the <span class="keyword">mat</span>.</span><br></pre></td></tr></table></figure>]]></content>
+<figure class="highlight stata"><table><tr><td class="code"><pre><span class="line"><span class="string">"(f|c|m)at\.?"</span> =&gt; The fat <span class="keyword">cat</span> sat <span class="keyword">on</span> the <span class="keyword">mat</span>.</span><br></pre></td></tr></table></figure>
+<h2 id="2-8锚点"><a href="#2-8锚点" class="headerlink" title="2.8锚点"></a>2.8锚点</h2><p>在正则表达式中，想要匹配指定开头或结尾的字符串就要使用到锚点。<code>^</code>指定开头，<code>$</code>指定结尾。</p>
+<h1 id="3-简写字符集"><a href="#3-简写字符集" class="headerlink" title="3.简写字符集"></a>3.简写字符集</h1><p><img src="https://s1.ax1x.com/2020/06/18/NevH1J.png" alt="NevH1J.png"></p>
+]]></content>
       <categories>
         <category>java后端开发</category>
       </categories>
