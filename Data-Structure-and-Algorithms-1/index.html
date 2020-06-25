@@ -1,123 +1,9 @@
-<!DOCTYPE html>
-
-
-
-  
-
-
-<html class="theme-next gemini use-motion" lang="zh-Hans">
-<head>
-  <meta charset="UTF-8"/>
-<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
-<meta name="theme-color" content="#222">
-
-
-
-  
-  
-    
-    
-  <script src="/lib/pace/pace.min.js?v=1.0.2"></script>
-  <link href="/lib/pace/pace-theme-center-atom.min.css?v=1.0.2" rel="stylesheet">
-
-
-
-
-
-
-
-<meta http-equiv="Cache-Control" content="no-transform" />
-<meta http-equiv="Cache-Control" content="no-siteapp" />
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  
-  
-  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
-
-
-
-
-  
-  
-  
-  
-
-  
-    
-    
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-    
-    
-    <link href="https://fonts.loli.net/css?family=Noto Serif SC:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
-  
-
-
-
-
-
-
-<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
-
-<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css" />
-
-
-  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
-
-
-  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon.ico?v=5.1.4">
-
-
-  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
-
-
-  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
-
-
-
-
-
-  <meta name="keywords" content="数据结构," />
-
-
-
-
-
-
-
-
-
-
-<meta name="description" content="红黑树原理二叉查找树二叉查找树具有以下的特性：  某节点的左子树节点值仅包含小于该节点值 某节点的右子树节点值仅包含大于该节点值 左右子树每个也必须是二叉查找树  简单的讲：越小的放在越左边。">
+<!DOCTYPE html><html lang="zh-Hans"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="format-detection" content="telephone=no"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="black"><meta name="theme-color" content="#54bcff"><link rel="manifest" href="/manifest.json?v=2.0.1"><link rel="icon" href="/images/icons/favicon.ico?v=2.0.1" type="image/png" sizes="16x16"><link rel="icon" href="/images/icons/favicon.ico?v=2.0.1" type="image/png" sizes="32x32"><meta name="baidu-site-verification" content="aNcFXL0dwD"><meta name="description" content="红黑树原理                           二叉查找树       二叉查找树具有以下的特性：  某节点的左子树节点值仅包含小于该节点值 某节点的右子树节点值仅包含大于该节点值 左右子树每个也必须是二叉查找树  简单的讲：越小的放在越左边。">
 <meta property="og:type" content="article">
 <meta property="og:title" content="数据结构与算法篇(一) -- 红黑树">
 <meta property="og:url" content="https:&#x2F;&#x2F;gemini-lin.github.io&#x2F;Data-Structure-and-Algorithms-1&#x2F;index.html">
 <meta property="og:site_name" content="GeminiPlanet">
-<meta property="og:description" content="红黑树原理二叉查找树二叉查找树具有以下的特性：  某节点的左子树节点值仅包含小于该节点值 某节点的右子树节点值仅包含大于该节点值 左右子树每个也必须是二叉查找树  简单的讲：越小的放在越左边。">
+<meta property="og:description" content="红黑树原理                           二叉查找树       二叉查找树具有以下的特性：  某节点的左子树节点值仅包含小于该节点值 某节点的右子树节点值仅包含大于该节点值 左右子树每个也必须是二叉查找树  简单的讲：越小的放在越左边。">
 <meta property="og:image" content="https:&#x2F;&#x2F;s1.ax1x.com&#x2F;2020&#x2F;05&#x2F;30&#x2F;tQrsc6.png">
 <meta property="og:image" content="https:&#x2F;&#x2F;s1.ax1x.com&#x2F;2020&#x2F;05&#x2F;30&#x2F;tQrfNd.png">
 <meta property="og:image" content="https:&#x2F;&#x2F;s1.ax1x.com&#x2F;2020&#x2F;05&#x2F;30&#x2F;tQs3UH.png">
@@ -137,353 +23,36 @@
 <meta property="article:author" content="Gemini-Lin">
 <meta property="article:tag" content="数据结构">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https:&#x2F;&#x2F;s1.ax1x.com&#x2F;2020&#x2F;05&#x2F;30&#x2F;tQrsc6.png">
+<meta name="twitter:image" content="https:&#x2F;&#x2F;s1.ax1x.com&#x2F;2020&#x2F;05&#x2F;30&#x2F;tQrsc6.png"><meta name="keywords" content="Gemini-Lin, GeminiPlanet"><meta name="description" content="If you want to tame a person,    you should risk tears."><title>数据结构与算法篇(一) -- 红黑树 | GeminiPlanet</title><link ref="canonical" href="https://gemini-lin.github.io/Data-Structure-and-Algorithms-1/"><link rel="dns-prefetch" href="https://cdn.jsdelivr.net"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.12.1/css/all.min.css" type="text/css"><link rel="stylesheet" href="/css/index.css?v=2.0.1"><script>var Stun = window.Stun || {};
+var CONFIG = {
+  root: '/',
+  algolia: undefined,
+  fontIcon: {"prompt":{"success":"fas fa-check-circle","info":"fas fa-arrow-circle-right","warning":"fas fa-exclamation-circle","error":"fas fa-times-circle"},"copyBtn":"fas fa-copy"},
+  sidebar: {"offsetTop":"20px","tocMaxDepth":6},
+  header: {"enable":true,"showOnPost":false,"scrollDownIcon":true},
+  postWidget: {"endText":true},
+  nightMode: {"enable":true},
+  back2top: {"enable":true},
+  codeblock: {"style":"carbon","highlight":"dark","wordWrap":true},
+  reward: true,
+  fancybox: false,
+  zoomImage: {"gapAside":"20px"},
+  galleryWaterfall: undefined,
+  lazyload: false,
+  pjax: undefined,
+  externalLink: {"icon":{"enable":true,"name":"fas fa-external-link-alt"}},
+  shortcuts: undefined,
+  prompt: {"copyButton":"复制","copySuccess":"复制成功","copyError":"复制失败"},
+  sourcePath: {"js":"js","css":"css","images":"images"},
+};
 
-
-
-<script type="text/javascript" id="hexo.configurations">
-  var NexT = window.NexT || {};
-  var CONFIG = {
-    root: '/',
-    scheme: 'Gemini',
-    version: '5.1.4',
-    sidebar: {"position":"left","display":"post","offset":12,"b2t":true,"scrollpercent":true,"onmobile":false},
-    fancybox: true,
-    tabs: true,
-    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
-    duoshuo: {
-      userId: '0',
-      author: '博主'
-    },
-    algolia: {
-      applicationID: '',
-      apiKey: '',
-      indexName: '',
-      hits: {"per_page":10},
-      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
-    }
-  };
-</script>
-
-
-
-  <link rel="canonical" href="https://Gemini-Lin.github.io/Data-Structure-and-Algorithms-1/"/>
-
-
-
-
-
-
-
-  <title>数据结构与算法篇(一) -- 红黑树 | GeminiPlanet</title>
-  
-
-
-
-
-
-
-
-
-<meta name="generator" content="Hexo 4.1.1"></head>
-
-<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
-
-  
-  
-    
-  
-
-  <div class="container sidebar-position-left page-post-detail">
-    <div class="headband"></div>
-    <a href="https://github.com/Gemini-Lin" target="_blank" rel="noopener" class="github-corner" aria-label="View source on GitHub"><svg width="80" height="80" viewBox="0 0 250 250" style="fill:#151513; color:#fff; position: absolute; top: 0; border: 0; right: 0;" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a><style>.github-corner:hover .octo-arm{animation:octocat-wave 560ms ease-in-out}@keyframes octocat-wave{0%,100%{transform:rotate(0)}20%,60%{transform:rotate(-25deg)}40%,80%{transform:rotate(10deg)}}@media (max-width:500px){.github-corner:hover .octo-arm{animation:none}.github-corner .octo-arm{animation:octocat-wave 560ms ease-in-out}}</style>
-
-    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
-      <div class="header-inner"><div class="site-brand-wrapper">
-  <div class="site-meta ">
-    
-
-    <div class="custom-logo-site-title">
-      <a href="/"  class="brand" rel="start">
-        <span class="logo-line-before"><i></i></span>
-        <span class="site-title">GeminiPlanet</span>
-        <span class="logo-line-after"><i></i></span>
-      </a>
-    </div>
+window.CONFIG = CONFIG;</script><meta name="generator" content="Hexo 4.1.1"></head><body><div class="container" id="container"><header class="header" id="header"><div class="header-inner header-inner--height header-inner--bgcolor"><nav class="header-nav header-nav--sticky"><div class="header-nav-inner"><div class="header-nav-menubtn"><i class="fas fa-bars"></i></div><div class="header-nav-menu"><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/"><span class="header-nav-menu-item__icon"><i class="fas fa-home"></i></span><span class="header-nav-menu-item__text">首页</span></a></div><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/archives/"><span class="header-nav-menu-item__icon"><i class="fas fa-folder-open"></i></span><span class="header-nav-menu-item__text">归档</span></a></div><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/categories/"><span class="header-nav-menu-item__icon"><i class="fas fa-layer-group"></i></span><span class="header-nav-menu-item__text">分类</span></a></div><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/tags/"><span class="header-nav-menu-item__icon"><i class="fas fa-tags"></i></span><span class="header-nav-menu-item__text">标签</span></a></div><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/about/"><span class="header-nav-menu-item__icon"><i class="fas fa-user"></i></span><span class="header-nav-menu-item__text">关于</span></a></div></div><div class="header-nav-mode"><div class="mode"><div class="mode-track"><span class="mode-track-moon"></span><span class="mode-track-sun"></span></div><div class="mode-thumb"></div></div></div></div></nav></div></header><main class="main" id="main"><div class="main-inner"><div class="content-wrap" id="content-wrap"><div class="content" id="content"><!-- Just used to judge whether it is an article page--><div id="is-post"></div><div class="post"><header class="post-header"><h1 class="post-title">数据结构与算法篇(一) -- 红黑树</h1><div class="post-meta"><span class="post-meta-item post-meta-item--createtime"><span class="post-meta-item__icon"><i class="far fa-calendar-plus"></i></span><span class="post-meta-item__info">发表于</span><span class="post-meta-item__value">2020-05-29</span></span><span class="post-meta-item post-meta-item--updatetime"><span class="post-meta-item__icon"><i class="far fa-calendar-check"></i></span><span class="post-meta-item__info">更新于</span><span class="post-meta-item__value">2020-05-31</span></span><span class="post-meta-item post-meta-item--wordcount"><span class="post-meta-item__icon"><i class="far fa-file-word"></i></span><span class="post-meta-item__info">字数统计</span><span class="post-meta-item__value">2.7k</span></span><span class="post-meta-item post-meta-item--readtime"><span class="post-meta-item__icon"><i class="far fa-clock"></i></span><span class="post-meta-item__info">阅读时长</span><span class="post-meta-item__value">22分</span></span><span class="post-meta-item post-meta-item--visitors"><span class="post-meta-item__icon"><i class="fas fa-eye"></i></span><span class="post-meta-item__info">阅读次数</span><span class="post-meta-item__value" id="busuanzi_value_page_pv"></span></span></div></header><div class="post-body">
+        <h1 id="红黑树原理"   >
+          <a href="#红黑树原理" class="heading-link"><i class="fas fa-link"></i></a>红黑树原理</h1>
       
-        <h1 class="site-subtitle" itemprop="description">Hello，My Little Prince !</h1>
-      
-  </div>
-
-  <div class="site-nav-toggle">
-    <button>
-      <span class="btn-bar"></span>
-      <span class="btn-bar"></span>
-      <span class="btn-bar"></span>
-    </button>
-  </div>
-</div>
-
-<nav class="site-nav">
-  
-
-  
-    <ul id="menu" class="menu">
-      
-        
-        <li class="menu-item menu-item-home">
-          <a href="/" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
-            
-            首页
-          </a>
-        </li>
-      
-        
-        <li class="menu-item menu-item-about">
-          <a href="/about/" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
-            
-            关于
-          </a>
-        </li>
-      
-        
-        <li class="menu-item menu-item-tags">
-          <a href="/tags/" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
-            
-            标签
-          </a>
-        </li>
-      
-        
-        <li class="menu-item menu-item-categories">
-          <a href="/categories/" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
-            
-            分类
-          </a>
-        </li>
-      
-        
-        <li class="menu-item menu-item-archives">
-          <a href="/archives/" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
-            
-            归档
-          </a>
-        </li>
-      
-
-      
-        <li class="menu-item menu-item-search">
-          
-            <a href="javascript:;" class="popup-trigger">
-          
-            
-              <i class="menu-item-icon fa fa-search fa-fw"></i> <br />
-            
-            搜索
-          </a>
-        </li>
-      
-    </ul>
-  
-
-  
-    <div class="site-search">
-      
-  <div class="popup search-popup local-search-popup">
-  <div class="local-search-header clearfix">
-    <span class="search-icon">
-      <i class="fa fa-search"></i>
-    </span>
-    <span class="popup-btn-close">
-      <i class="fa fa-times-circle"></i>
-    </span>
-    <div class="local-search-input-wrapper">
-      <input autocomplete="off"
-             placeholder="搜索..." spellcheck="false"
-             type="text" id="local-search-input">
-    </div>
-  </div>
-  <div id="local-search-result"></div>
-</div>
-
-
-
-    </div>
-  
-</nav>
-
-
- </div>
-    </header>
-
-    <main id="main" class="main">
-      <div class="main-inner">
-        <div class="content-wrap">
-          <div id="content" class="content">
-            
-
-  <div id="posts" class="posts-expand">
-    
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://Gemini-Lin.github.io/Data-Structure-and-Algorithms-1/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Gemini-Lin">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="https://s1.ax1x.com/2020/05/14/YD6wTI.png">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="GeminiPlanet">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h2 class="post-title" itemprop="name headline">数据结构与算法篇(一) -- 红黑树</h2>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2020-05-29T01:59:55+08:00">
-                2020-05-29
-              </time>
-            
-
-            
-              <span class="post-meta-divider">|</span>
-            
-
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-check-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">更新于&#58;</span>
-              
-              <time title="更新于" itemprop="dateModified" datetime="2020-05-31T19:40:06+08:00">
-                2020-05-31
-              </time>
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E8%AF%BE%E7%A8%8B%E6%80%BB%E7%BB%93/" itemprop="url" rel="index">
-                    <span itemprop="name">课程总结</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-            <span class="post-meta-divider">|</span>
-            <span class="page-pv">本文总阅读量<i class="fa fa-file-o"></i>
-            <span class="busuanzi-value" id="busuanzi_value_page_pv" ></span>次
-            </span>
-          
-
-          
-            <div class="post-wordcount">
-              
-                
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-file-word-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">字数统计&#58;</span>
-                
-                <span title="字数统计">
-                  2.7k
-                </span>
-              
-
-              
-                <span class="post-meta-divider">|</span>
-              
-
-              
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-clock-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
-                
-                <span title="阅读时长">
-                  11
-                </span>
-              
-            </div>
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        <h1 id="红黑树原理"><a href="#红黑树原理" class="headerlink" title="红黑树原理"></a>红黑树原理</h1><h2 id="二叉查找树"><a href="#二叉查找树" class="headerlink" title="二叉查找树"></a>二叉查找树</h2><p>二叉查找树具有以下的特性：</p>
+        <h2 id="二叉查找树"   >
+          <a href="#二叉查找树" class="heading-link"><i class="fas fa-link"></i></a>二叉查找树</h2>
+      <p>二叉查找树具有以下的特性：</p>
 <ol>
 <li>某节点的左子树节点值仅包含小于该节点值</li>
 <li>某节点的右子树节点值仅包含大于该节点值</li>
@@ -492,8 +61,14 @@
 <p>简单的讲：<em>越小的放在越左边</em>。</p>
 <a id="more"></a>
 <p><strong>你以为的二叉查找树</strong><br><img src="https://s1.ax1x.com/2020/05/30/tQrsc6.png" alt="image"><br><strong>变态的二叉查找树</strong><br><img src="https://s1.ax1x.com/2020/05/30/tQrfNd.png" alt="image"><br>这种畸形的二叉查找树就会退化成<strong>链表</strong>，查找节点的时间复杂度就会从<strong>O($ log_2^n $)退化成O(n)</strong>。而根据我们在小学二年级就学过的[去除顶端优势]，我们引入了红黑树，达到树的平衡。</p>
-<h2 id="红黑树简介"><a href="#红黑树简介" class="headerlink" title="红黑树简介"></a>红黑树简介</h2><p><strong>R-B Tree</strong>，全称是Red-Black Tree，又称为“红黑树”，它一种特殊的<strong>二叉查找树</strong>。红黑树的每个节点上都有存储位表示节点的颜色，可以是红(Red)或黑(Black)。</p>
-<h3 id="特性"><a href="#特性" class="headerlink" title="特性"></a>特性</h3><ol>
+
+        <h2 id="红黑树简介"   >
+          <a href="#红黑树简介" class="heading-link"><i class="fas fa-link"></i></a>红黑树简介</h2>
+      <p><strong>R-B Tree</strong>，全称是Red-Black Tree，又称为“红黑树”，它一种特殊的<strong>二叉查找树</strong>。红黑树的每个节点上都有存储位表示节点的颜色，可以是红(Red)或黑(Black)。</p>
+
+        <h3 id="特性"   >
+          <a href="#特性" class="heading-link"><i class="fas fa-link"></i></a>特性</h3>
+      <ol>
 <li>每个节点或者是黑色，或者是红色。(<em>没啥用</em>)</li>
 <li>根节点是<strong>黑色</strong>。</li>
 <li><em>每个叶子节点是黑色的</em>。</li>
@@ -504,9 +79,18 @@
 </li>
 </ol>
 <p>示意图如下：<br><img src="https://s1.ax1x.com/2020/05/30/tQs3UH.png" alt="image"></p>
-<h3 id="应用"><a href="#应用" class="headerlink" title="应用"></a>应用</h3><p>主要是用来储存有序的数据，时间复杂度为O($log_2^n$)，效率非常高。<br>例如：Java集合中的<strong>TreeSet、TreeMap</strong>，C++ STL中的<strong>set、map</strong>，以及Linux中<strong>虚拟内存</strong>的管理等。</p>
-<h1 id="Recolor-and-Rotation"><a href="#Recolor-and-Rotation" class="headerlink" title="Recolor and Rotation"></a>Recolor and Rotation</h1><p><strong>Recolor:</strong> 重新标记节点为黑色或红色<br><strong>Rotation:</strong> 旋转，达到树的平衡</p>
-<h2 id="插入"><a href="#插入" class="headerlink" title="插入"></a>插入</h2><p>当我们插入一个新的节点X时，要遵循如下公式：</p>
+
+        <h3 id="应用"   >
+          <a href="#应用" class="heading-link"><i class="fas fa-link"></i></a>应用</h3>
+      <p>主要是用来储存有序的数据，时间复杂度为O($log_2^n$)，效率非常高。<br>例如：Java集合中的<strong>TreeSet、TreeMap</strong>，C++ STL中的<strong>set、map</strong>，以及Linux中<strong>虚拟内存</strong>的管理等。</p>
+
+        <h1 id="Recolor-and-Rotation"   >
+          <a href="#Recolor-and-Rotation" class="heading-link"><i class="fas fa-link"></i></a>Recolor and Rotation</h1>
+      <p><strong>Recolor:</strong> 重新标记节点为黑色或红色<br><strong>Rotation:</strong> 旋转，达到树的平衡</p>
+
+        <h2 id="插入"   >
+          <a href="#插入" class="heading-link"><i class="fas fa-link"></i></a>插入</h2>
+      <p>当我们插入一个新的节点X时，要遵循如下公式：</p>
 <ol>
 <li>将新插入的节点标记为红色</li>
 <li>如果X是根节点，则标记为黑色</li>
@@ -541,24 +125,39 @@
 <li>发现 G 是根结点，标记为黑色</li>
 <li>结束</li>
 </ol>
-<h3 id="左左"><a href="#左左" class="headerlink" title="左左"></a>左左</h3><p><strong>p在g的左边，x在p的左边</strong></p>
+
+        <h3 id="左左"   >
+          <a href="#左左" class="heading-link"><i class="fas fa-link"></i></a>左左</h3>
+      <p><strong>p在g的左边，x在p的左边</strong></p>
 <ol>
 <li>右旋g</li>
 <li>交换g和p的颜色<br><img src="https://s1.ax1x.com/2020/05/30/tQsdr8.png" alt="image"></li>
 </ol>
-<h3 id="左右"><a href="#左右" class="headerlink" title="左右"></a>左右</h3><ol>
+
+        <h3 id="左右"   >
+          <a href="#左右" class="heading-link"><i class="fas fa-link"></i></a>左右</h3>
+      <ol>
 <li>左旋p</li>
 <li>变成左左了<br><img src="https://s1.ax1x.com/2020/05/30/tQsDaQ.png" alt="image"></li>
 </ol>
-<h3 id="右右"><a href="#右右" class="headerlink" title="右右"></a>右右</h3><ol>
+
+        <h3 id="右右"   >
+          <a href="#右右" class="heading-link"><i class="fas fa-link"></i></a>右右</h3>
+      <ol>
 <li>左旋g</li>
 <li>交换g和p的颜色<br><img src="https://s1.ax1x.com/2020/05/30/tQsc2q.png" alt="image"></li>
 </ol>
-<h3 id="右左"><a href="#右左" class="headerlink" title="右左"></a>右左</h3><ol>
+
+        <h3 id="右左"   >
+          <a href="#右左" class="heading-link"><i class="fas fa-link"></i></a>右左</h3>
+      <ol>
 <li>右旋p</li>
 <li>变成右右了<br><img src="https://s1.ax1x.com/2020/05/30/tQsWrT.png" alt="image"></li>
 </ol>
-<h2 id="案例演示"><a href="#案例演示" class="headerlink" title="案例演示"></a>案例演示</h2><p>插入 10，20，30，15 到一个空树中</p>
+
+        <h2 id="案例演示"   >
+          <a href="#案例演示" class="heading-link"><i class="fas fa-link"></i></a>案例演示</h2>
+      <p>插入 10，20，30，15 到一个空树中</p>
 <ol>
 <li>向空树中第一次插入数字 10，肯定是 root 节点</li>
 <li>root 节点标记成黑色<br><img src="https://image-static.segmentfault.com/313/178/313178228-5d37b7346452f_articlex" alt="image"></li>
@@ -577,1179 +176,92 @@
 <li>让 15 节点 grand parent 20 的颜色与 15 节点的颜色一样，变为红色</li>
 <li>20 为根结点，将其改为黑色<br><img src="https://image-static.segmentfault.com/842/419/842419664-5d37b734b8439_articlex" alt="image"></li>
 </ol>
-<h1 id="C语言实现"><a href="#C语言实现" class="headerlink" title="C语言实现"></a>C语言实现</h1><h2 id="基本定义"><a href="#基本定义" class="headerlink" title="基本定义"></a>基本定义</h2><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">define</span> RED        0    <span class="comment">// 红色节点</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> BLACK    1    <span class="comment">// 黑色节点</span></span></span><br><span class="line"></span><br><span class="line"><span class="keyword">typedef</span> <span class="keyword">int</span> Type;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 红黑树的节点</span></span><br><span class="line"><span class="keyword">typedef</span> <span class="class"><span class="keyword">struct</span> <span class="title">RBTreeNode</span>&#123;</span></span><br><span class="line">    <span class="keyword">unsigned</span> <span class="keyword">char</span> color;        <span class="comment">// 颜色(RED 或 BLACK)</span></span><br><span class="line">    Type   key;                    <span class="comment">// 关键字(键值)</span></span><br><span class="line">    <span class="class"><span class="keyword">struct</span> <span class="title">RBTreeNode</span> *<span class="title">left</span>;</span>    <span class="comment">// 左孩子</span></span><br><span class="line">    <span class="class"><span class="keyword">struct</span> <span class="title">RBTreeNode</span> *<span class="title">right</span>;</span>    <span class="comment">// 右孩子</span></span><br><span class="line">    <span class="class"><span class="keyword">struct</span> <span class="title">RBTreeNode</span> *<span class="title">parent</span>;</span>    <span class="comment">// 父结点</span></span><br><span class="line">&#125;Node, *RBTree;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 红黑树的根</span></span><br><span class="line"><span class="keyword">typedef</span> <span class="class"><span class="keyword">struct</span> <span class="title">rb_root</span>&#123;</span></span><br><span class="line">    Node *node;</span><br><span class="line">&#125;RBRoot;</span><br></pre></td></tr></table></figure>
-<h2 id="左旋"><a href="#左旋" class="headerlink" title="左旋"></a>左旋</h2><p><img src="https://s1.ax1x.com/2020/05/30/tQWj1J.png" alt="image"></p>
-<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">define</span> RED        0    <span class="comment">// 红色节点</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> BLACK    1    <span class="comment">// 黑色节点</span></span></span><br><span class="line"></span><br><span class="line"><span class="keyword">typedef</span> <span class="keyword">int</span> Type;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 红黑树的节点</span></span><br><span class="line"><span class="keyword">typedef</span> <span class="class"><span class="keyword">struct</span> <span class="title">RBTreeNode</span>&#123;</span></span><br><span class="line">    <span class="keyword">unsigned</span> <span class="keyword">char</span> color;        <span class="comment">// 颜色(RED 或 BLACK)</span></span><br><span class="line">    Type   key;                    <span class="comment">// 关键字(键值)</span></span><br><span class="line">    <span class="class"><span class="keyword">struct</span> <span class="title">RBTreeNode</span> *<span class="title">left</span>;</span>    <span class="comment">// 左孩子</span></span><br><span class="line">    <span class="class"><span class="keyword">struct</span> <span class="title">RBTreeNode</span> *<span class="title">right</span>;</span>    <span class="comment">// 右孩子</span></span><br><span class="line">    <span class="class"><span class="keyword">struct</span> <span class="title">RBTreeNode</span> *<span class="title">parent</span>;</span>    <span class="comment">// 父结点</span></span><br><span class="line">&#125;Node, *RBTree;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 红黑树的根</span></span><br><span class="line"><span class="keyword">typedef</span> <span class="class"><span class="keyword">struct</span> <span class="title">rb_root</span>&#123;</span></span><br><span class="line">    Node *node;</span><br><span class="line">&#125;RBRoot;</span><br></pre></td></tr></table></figure>
 
-<h2 id="右旋"><a href="#右旋" class="headerlink" title="右旋"></a>右旋</h2><p><img src="https://s1.ax1x.com/2020/05/30/tQWvc9.png" alt="image"></p>
-<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/* </span></span><br><span class="line"><span class="comment"> * 对红黑树的节点(y)进行右旋转</span></span><br><span class="line"><span class="comment"> *</span></span><br><span class="line"><span class="comment"> * 右旋示意图(对节点y进行左旋)：</span></span><br><span class="line"><span class="comment"> *            py                               py</span></span><br><span class="line"><span class="comment"> *           /                                /</span></span><br><span class="line"><span class="comment"> *          y                                x                  </span></span><br><span class="line"><span class="comment"> *         /  \      --(右旋)--&gt;            /  \                     #</span></span><br><span class="line"><span class="comment"> *        x   ry                           lx   y  </span></span><br><span class="line"><span class="comment"> *       / \                                   / \                   #</span></span><br><span class="line"><span class="comment"> *      lx  rx                                rx  ry</span></span><br><span class="line"><span class="comment"> * </span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="function"><span class="keyword">static</span> <span class="keyword">void</span> <span class="title">rbtree_right_rotate</span><span class="params">(RBRoot *root, Node *y)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="comment">// 设置x是当前节点的左孩子。</span></span><br><span class="line">    Node *x = y-&gt;left;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 将 “x的右孩子” 设为 “y的左孩子”；</span></span><br><span class="line">    <span class="comment">// 如果"x的右孩子"不为空的话，将 “y” 设为 “x的右孩子的父亲”</span></span><br><span class="line">    y-&gt;left = x-&gt;right;</span><br><span class="line">    <span class="keyword">if</span> (x-&gt;right != <span class="literal">NULL</span>)</span><br><span class="line">        x-&gt;right-&gt;parent = y;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 将 “y的父亲” 设为 “x的父亲”</span></span><br><span class="line">    x-&gt;parent = y-&gt;parent;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">if</span> (y-&gt;parent == <span class="literal">NULL</span>) </span><br><span class="line">    &#123;</span><br><span class="line">        <span class="comment">//tree = x;            // 如果 “y的父亲” 是空节点，则将x设为根节点</span></span><br><span class="line">        root-&gt;node = x;            <span class="comment">// 如果 “y的父亲” 是空节点，则将x设为根节点</span></span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">else</span></span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">if</span> (y == y-&gt;parent-&gt;right)</span><br><span class="line">            y-&gt;parent-&gt;right = x;    <span class="comment">// 如果 y是它父节点的右孩子，则将x设为“y的父节点的右孩子”</span></span><br><span class="line">        <span class="keyword">else</span></span><br><span class="line">            y-&gt;parent-&gt;left = x;    <span class="comment">// (y是它父节点的左孩子) 将x设为“x的父节点的左孩子”</span></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 将 “y” 设为 “x的右孩子”</span></span><br><span class="line">    x-&gt;right = y;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 将 “y的父节点” 设为 “x”</span></span><br><span class="line">    y-&gt;parent = x;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h2 id="添加"><a href="#添加" class="headerlink" title="添加"></a>添加</h2><h3 id="直接插入"><a href="#直接插入" class="headerlink" title="直接插入"></a>直接插入</h3><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment"> * 添加节点：将节点(node)插入到红黑树中</span></span><br><span class="line"><span class="comment"> *</span></span><br><span class="line"><span class="comment"> * 参数说明：</span></span><br><span class="line"><span class="comment"> *     root 红黑树的根</span></span><br><span class="line"><span class="comment"> *     node 插入的结点        // 对应《算法导论》中的z</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="function"><span class="keyword">static</span> <span class="keyword">void</span> <span class="title">rbtree_insert</span><span class="params">(RBRoot *root, Node *node)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    Node *y = <span class="literal">NULL</span>;</span><br><span class="line">    Node *x = root-&gt;node;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 1. 将红黑树当作一颗二叉查找树，将节点添加到二叉查找树中。</span></span><br><span class="line">    <span class="keyword">while</span> (x != <span class="literal">NULL</span>)</span><br><span class="line">    &#123;</span><br><span class="line">        y = x;</span><br><span class="line">        <span class="keyword">if</span> (node-&gt;key &lt; x-&gt;key)</span><br><span class="line">            x = x-&gt;left;</span><br><span class="line">        <span class="keyword">else</span></span><br><span class="line">            x = x-&gt;right;</span><br><span class="line">    &#125;</span><br><span class="line">    rb_parent(node) = y;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">if</span> (y != <span class="literal">NULL</span>)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">if</span> (node-&gt;key &lt; y-&gt;key)</span><br><span class="line">            y-&gt;left = node;                <span class="comment">// 情况2：若“node所包含的值” &lt; “y所包含的值”，则将node设为“y的左孩子”</span></span><br><span class="line">        <span class="keyword">else</span></span><br><span class="line">            y-&gt;right = node;            <span class="comment">// 情况3：(“node所包含的值” &gt;= “y所包含的值”)将node设为“y的右孩子” </span></span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">else</span></span><br><span class="line">    &#123;</span><br><span class="line">        root-&gt;node = node;                <span class="comment">// 情况1：若y是空节点，则将node设为根</span></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 2. 设置节点的颜色为红色</span></span><br><span class="line">    node-&gt;color = RED;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 3. 将它重新修正为一颗二叉查找树</span></span><br><span class="line">    rbtree_insert_fixup(root, node);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h3 id="修正"><a href="#修正" class="headerlink" title="修正"></a>修正</h3><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment"> * 添加节点：将节点(node)插入到红黑树中</span></span><br><span class="line"><span class="comment"> *</span></span><br><span class="line"><span class="comment"> * 参数说明：</span></span><br><span class="line"><span class="comment"> *     root 红黑树的根</span></span><br><span class="line"><span class="comment"> *     node 插入的结点        // 对应《算法导论》中的z</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="function"><span class="keyword">static</span> <span class="keyword">void</span> <span class="title">rbtree_insert</span><span class="params">(RBRoot *root, Node *node)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    Node *y = <span class="literal">NULL</span>;</span><br><span class="line">    Node *x = root-&gt;node;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 1. 将红黑树当作一颗二叉查找树，将节点添加到二叉查找树中。</span></span><br><span class="line">    <span class="keyword">while</span> (x != <span class="literal">NULL</span>)</span><br><span class="line">    &#123;</span><br><span class="line">        y = x;</span><br><span class="line">        <span class="keyword">if</span> (node-&gt;key &lt; x-&gt;key)</span><br><span class="line">            x = x-&gt;left;</span><br><span class="line">        <span class="keyword">else</span></span><br><span class="line">            x = x-&gt;right;</span><br><span class="line">    &#125;</span><br><span class="line">    rb_parent(node) = y;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">if</span> (y != <span class="literal">NULL</span>)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">if</span> (node-&gt;key &lt; y-&gt;key)</span><br><span class="line">            y-&gt;left = node;                <span class="comment">// 情况2：若“node所包含的值” &lt; “y所包含的值”，则将node设为“y的左孩子”</span></span><br><span class="line">        <span class="keyword">else</span></span><br><span class="line">            y-&gt;right = node;            <span class="comment">// 情况3：(“node所包含的值” &gt;= “y所包含的值”)将node设为“y的右孩子” </span></span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">else</span></span><br><span class="line">    &#123;</span><br><span class="line">        root-&gt;node = node;                <span class="comment">// 情况1：若y是空节点，则将node设为根</span></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 2. 设置节点的颜色为红色</span></span><br><span class="line">    node-&gt;color = RED;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 3. 将它重新修正为一颗二叉查找树</span></span><br><span class="line">    rbtree_insert_fixup(root, node);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h2 id="删除"><a href="#删除" class="headerlink" title="删除"></a>删除</h2><h3 id="直接删除"><a href="#直接删除" class="headerlink" title="直接删除"></a>直接删除</h3><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment"> * 添加节点：将节点(node)插入到红黑树中</span></span><br><span class="line"><span class="comment"> *</span></span><br><span class="line"><span class="comment"> * 参数说明：</span></span><br><span class="line"><span class="comment"> *     root 红黑树的根</span></span><br><span class="line"><span class="comment"> *     node 插入的结点        // 对应《算法导论》中的z</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="function"><span class="keyword">static</span> <span class="keyword">void</span> <span class="title">rbtree_insert</span><span class="params">(RBRoot *root, Node *node)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    Node *y = <span class="literal">NULL</span>;</span><br><span class="line">    Node *x = root-&gt;node;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 1. 将红黑树当作一颗二叉查找树，将节点添加到二叉查找树中。</span></span><br><span class="line">    <span class="keyword">while</span> (x != <span class="literal">NULL</span>)</span><br><span class="line">    &#123;</span><br><span class="line">        y = x;</span><br><span class="line">        <span class="keyword">if</span> (node-&gt;key &lt; x-&gt;key)</span><br><span class="line">            x = x-&gt;left;</span><br><span class="line">        <span class="keyword">else</span></span><br><span class="line">            x = x-&gt;right;</span><br><span class="line">    &#125;</span><br><span class="line">    rb_parent(node) = y;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">if</span> (y != <span class="literal">NULL</span>)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">if</span> (node-&gt;key &lt; y-&gt;key)</span><br><span class="line">            y-&gt;left = node;                <span class="comment">// 情况2：若“node所包含的值” &lt; “y所包含的值”，则将node设为“y的左孩子”</span></span><br><span class="line">        <span class="keyword">else</span></span><br><span class="line">            y-&gt;right = node;            <span class="comment">// 情况3：(“node所包含的值” &gt;= “y所包含的值”)将node设为“y的右孩子” </span></span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">else</span></span><br><span class="line">    &#123;</span><br><span class="line">        root-&gt;node = node;                <span class="comment">// 情况1：若y是空节点，则将node设为根</span></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 2. 设置节点的颜色为红色</span></span><br><span class="line">    node-&gt;color = RED;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 3. 将它重新修正为一颗二叉查找树</span></span><br><span class="line">    rbtree_insert_fixup(root, node);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h3 id="修正-1"><a href="#修正-1" class="headerlink" title="修正"></a>修正</h3><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment"> * 添加节点：将节点(node)插入到红黑树中</span></span><br><span class="line"><span class="comment"> *</span></span><br><span class="line"><span class="comment"> * 参数说明：</span></span><br><span class="line"><span class="comment"> *     root 红黑树的根</span></span><br><span class="line"><span class="comment"> *     node 插入的结点        // 对应《算法导论》中的z</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="function"><span class="keyword">static</span> <span class="keyword">void</span> <span class="title">rbtree_insert</span><span class="params">(RBRoot *root, Node *node)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    Node *y = <span class="literal">NULL</span>;</span><br><span class="line">    Node *x = root-&gt;node;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 1. 将红黑树当作一颗二叉查找树，将节点添加到二叉查找树中。</span></span><br><span class="line">    <span class="keyword">while</span> (x != <span class="literal">NULL</span>)</span><br><span class="line">    &#123;</span><br><span class="line">        y = x;</span><br><span class="line">        <span class="keyword">if</span> (node-&gt;key &lt; x-&gt;key)</span><br><span class="line">            x = x-&gt;left;</span><br><span class="line">        <span class="keyword">else</span></span><br><span class="line">            x = x-&gt;right;</span><br><span class="line">    &#125;</span><br><span class="line">    rb_parent(node) = y;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">if</span> (y != <span class="literal">NULL</span>)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">if</span> (node-&gt;key &lt; y-&gt;key)</span><br><span class="line">            y-&gt;left = node;                <span class="comment">// 情况2：若“node所包含的值” &lt; “y所包含的值”，则将node设为“y的左孩子”</span></span><br><span class="line">        <span class="keyword">else</span></span><br><span class="line">            y-&gt;right = node;            <span class="comment">// 情况3：(“node所包含的值” &gt;= “y所包含的值”)将node设为“y的右孩子” </span></span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">else</span></span><br><span class="line">    &#123;</span><br><span class="line">        root-&gt;node = node;                <span class="comment">// 情况1：若y是空节点，则将node设为根</span></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 2. 设置节点的颜色为红色</span></span><br><span class="line">    node-&gt;color = RED;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 3. 将它重新修正为一颗二叉查找树</span></span><br><span class="line">    rbtree_insert_fixup(root, node);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h1 id="Free-Talk"><a href="#Free-Talk" class="headerlink" title="Free Talk"></a>Free Talk</h1><p>我打算在今后的板块中都增加一个Free Talk的环节，讲讲自己的感受。<br>其实之前一直有听说过红黑树的名字，就是没有深入了解，正好在家待着没事干，就打算写一个数据结构与算法的系列，就当做是复习和进一步学习吧。<br>这次的博客主要是参考了两篇文章，一篇是比较详细的讲解算法实现和原理，一篇特点是动图易懂。自己写完了这篇博客也只能算是懂了第二篇，算法的后半部分确实没啃动。感觉一开始就将红黑树有些硬核，面试应该不可能有手写代码吧。<br>接下打算就是把JVM的系列和数据结构与算法的系列穿插着写，然后算法的系列会加入LeetCode模块，JVM的系列还没有考虑好要怎么用代码实现学习。<br><strong>To be a better man!</strong></p>
-<p>参考链接：<br><a href="https://www.cnblogs.com/skywang12345/p/3245399.html" target="_blank" rel="noopener">博客园</a><br><a href="https://segmentfault.com/a/1190000020118044" target="_blank" rel="noopener">segment</a></p>
-
+        <h1 id="C语言实现"   >
+          <a href="#C语言实现" class="heading-link"><i class="fas fa-link"></i></a>C语言实现</h1>
       
-    </div>
-    
-    
-    
+        <h2 id="基本定义"   >
+          <a href="#基本定义" class="heading-link"><i class="fas fa-link"></i></a>基本定义</h2>
+      <figure class="highlight c"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">define</span> RED        0    <span class="comment">// 红色节点</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> BLACK    1    <span class="comment">// 黑色节点</span></span></span><br><span class="line"></span><br><span class="line"><span class="keyword">typedef</span> <span class="keyword">int</span> Type;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 红黑树的节点</span></span><br><span class="line"><span class="keyword">typedef</span> <span class="class"><span class="keyword">struct</span> <span class="title">RBTreeNode</span>&#123;</span></span><br><span class="line">    <span class="keyword">unsigned</span> <span class="keyword">char</span> color;        <span class="comment">// 颜色(RED 或 BLACK)</span></span><br><span class="line">    Type   key;                    <span class="comment">// 关键字(键值)</span></span><br><span class="line">    <span class="class"><span class="keyword">struct</span> <span class="title">RBTreeNode</span> *<span class="title">left</span>;</span>    <span class="comment">// 左孩子</span></span><br><span class="line">    <span class="class"><span class="keyword">struct</span> <span class="title">RBTreeNode</span> *<span class="title">right</span>;</span>    <span class="comment">// 右孩子</span></span><br><span class="line">    <span class="class"><span class="keyword">struct</span> <span class="title">RBTreeNode</span> *<span class="title">parent</span>;</span>    <span class="comment">// 父结点</span></span><br><span class="line">&#125;Node, *RBTree;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 红黑树的根</span></span><br><span class="line"><span class="keyword">typedef</span> <span class="class"><span class="keyword">struct</span> <span class="title">rb_root</span>&#123;</span></span><br><span class="line">    Node *node;</span><br><span class="line">&#125;RBRoot;</span><br></pre></td></tr></table></div></figure>
 
-    
-      <div>
-      <div>
-    
-        <div style="text-align:center;color: #ccc;font-size:14px;">-------------本文结束<i class="fa fa-paw"></i>感谢您的阅读-------------</div>
-    
-</div>
-      </div>
-    
+        <h2 id="左旋"   >
+          <a href="#左旋" class="heading-link"><i class="fas fa-link"></i></a>左旋</h2>
+      <p><img src="https://s1.ax1x.com/2020/05/30/tQWj1J.png" alt="image"></p>
+<figure class="highlight c"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">define</span> RED        0    <span class="comment">// 红色节点</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> BLACK    1    <span class="comment">// 黑色节点</span></span></span><br><span class="line"></span><br><span class="line"><span class="keyword">typedef</span> <span class="keyword">int</span> Type;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 红黑树的节点</span></span><br><span class="line"><span class="keyword">typedef</span> <span class="class"><span class="keyword">struct</span> <span class="title">RBTreeNode</span>&#123;</span></span><br><span class="line">    <span class="keyword">unsigned</span> <span class="keyword">char</span> color;        <span class="comment">// 颜色(RED 或 BLACK)</span></span><br><span class="line">    Type   key;                    <span class="comment">// 关键字(键值)</span></span><br><span class="line">    <span class="class"><span class="keyword">struct</span> <span class="title">RBTreeNode</span> *<span class="title">left</span>;</span>    <span class="comment">// 左孩子</span></span><br><span class="line">    <span class="class"><span class="keyword">struct</span> <span class="title">RBTreeNode</span> *<span class="title">right</span>;</span>    <span class="comment">// 右孩子</span></span><br><span class="line">    <span class="class"><span class="keyword">struct</span> <span class="title">RBTreeNode</span> *<span class="title">parent</span>;</span>    <span class="comment">// 父结点</span></span><br><span class="line">&#125;Node, *RBTree;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 红黑树的根</span></span><br><span class="line"><span class="keyword">typedef</span> <span class="class"><span class="keyword">struct</span> <span class="title">rb_root</span>&#123;</span></span><br><span class="line">    Node *node;</span><br><span class="line">&#125;RBRoot;</span><br></pre></td></tr></table></div></figure>
 
-    
-      <div>
-        <div id="wechat_subscriber" style="display: block; padding: 10px 0; margin: 20px auto; width: 100%; text-align: center">
-    <img id="wechat_subscriber_qcode" src="https://s1.ax1x.com/2020/04/24/J0wpss.png" alt="Gemini-Lin wechat" style="width: 200px; max-width: 100%;"/>
-    <div>扫一扫上面的二维码就可以关注我哦！</div>
-</div>
 
-      </div>
-    
+        <h2 id="右旋"   >
+          <a href="#右旋" class="heading-link"><i class="fas fa-link"></i></a>右旋</h2>
+      <p><img src="https://s1.ax1x.com/2020/05/30/tQWvc9.png" alt="image"></p>
+<figure class="highlight c"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/* </span></span><br><span class="line"><span class="comment"> * 对红黑树的节点(y)进行右旋转</span></span><br><span class="line"><span class="comment"> *</span></span><br><span class="line"><span class="comment"> * 右旋示意图(对节点y进行左旋)：</span></span><br><span class="line"><span class="comment"> *            py                               py</span></span><br><span class="line"><span class="comment"> *           /                                /</span></span><br><span class="line"><span class="comment"> *          y                                x                  </span></span><br><span class="line"><span class="comment"> *         /  \      --(右旋)--&gt;            /  \                     #</span></span><br><span class="line"><span class="comment"> *        x   ry                           lx   y  </span></span><br><span class="line"><span class="comment"> *       / \                                   / \                   #</span></span><br><span class="line"><span class="comment"> *      lx  rx                                rx  ry</span></span><br><span class="line"><span class="comment"> * </span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="function"><span class="keyword">static</span> <span class="keyword">void</span> <span class="title">rbtree_right_rotate</span><span class="params">(RBRoot *root, Node *y)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="comment">// 设置x是当前节点的左孩子。</span></span><br><span class="line">    Node *x = y-&gt;left;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 将 “x的右孩子” 设为 “y的左孩子”；</span></span><br><span class="line">    <span class="comment">// 如果"x的右孩子"不为空的话，将 “y” 设为 “x的右孩子的父亲”</span></span><br><span class="line">    y-&gt;left = x-&gt;right;</span><br><span class="line">    <span class="keyword">if</span> (x-&gt;right != <span class="literal">NULL</span>)</span><br><span class="line">        x-&gt;right-&gt;parent = y;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 将 “y的父亲” 设为 “x的父亲”</span></span><br><span class="line">    x-&gt;parent = y-&gt;parent;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">if</span> (y-&gt;parent == <span class="literal">NULL</span>) </span><br><span class="line">    &#123;</span><br><span class="line">        <span class="comment">//tree = x;            // 如果 “y的父亲” 是空节点，则将x设为根节点</span></span><br><span class="line">        root-&gt;node = x;            <span class="comment">// 如果 “y的父亲” 是空节点，则将x设为根节点</span></span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">else</span></span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">if</span> (y == y-&gt;parent-&gt;right)</span><br><span class="line">            y-&gt;parent-&gt;right = x;    <span class="comment">// 如果 y是它父节点的右孩子，则将x设为“y的父节点的右孩子”</span></span><br><span class="line">        <span class="keyword">else</span></span><br><span class="line">            y-&gt;parent-&gt;left = x;    <span class="comment">// (y是它父节点的左孩子) 将x设为“x的父节点的左孩子”</span></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 将 “y” 设为 “x的右孩子”</span></span><br><span class="line">    x-&gt;right = y;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 将 “y的父节点” 设为 “x”</span></span><br><span class="line">    y-&gt;parent = x;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></div></figure>
 
-    
-      <div>
-        <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center;">
-  <div>您的支持是对我最大的肯定</div>
-  <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
-    <span>打赏</span>
-  </button>
-  <div id="QR" style="display: none;">
-
-    
-      <div id="wechat" style="display: inline-block">
-        <img id="wechat_qr" src="/images/wechatpay.jpg" alt="Gemini-Lin 微信支付"/>
-        <p>微信支付</p>
-      </div>
-    
-
-    
-      <div id="alipay" style="display: inline-block">
-        <img id="alipay_qr" src="/images/alipay.jpg" alt="Gemini-Lin 支付宝"/>
-        <p>支付宝</p>
-      </div>
-    
-
-    
-
-  </div>
-</div>
-
-      </div>
-    
-
-    
-      <div>
-        <!-- JS库 clipboard 拷贝内容到粘贴板-->
-<script src="https://cdn.bootcss.com/clipboard.js/2.0.1/clipboard.min.js"></script>
-
-<!-- JS库 sweetalert 显示提示信息-->
-<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
-
-<ul class="post-copyright">
-  <!-- 本文标题 -->
-  <li>
-    <strong>本文标题： </strong>
-    数据结构与算法篇(一) -- 红黑树
-  </li>
-
-  <!-- 本文作者 -->
-  <li class="post-copyright-author">
-    <strong>本文作者： </strong>
-    Gemini-Lin
-  </li>
-
-  <!-- 创建时间 -->
-  <li>
-    <strong>创建于： </strong>
-    2020年05月29日 - 01时05分
-  </li>
-
-  <!-- 修改时间 -->
-  <li>
-    <strong>更新于： </strong>
-    2020年05月31日 - 19时05分
-  </li>
-
-  <!-- 引用链接 -->
-  <li class="post-copyright-link">
-    <strong>引用链接：</strong>
-    <a href="https://gemini-lin.github.io/Data-Structure-and-Algorithms-1/" title="数据结构与算法篇(一) -- 红黑树"
-      >https://gemini-lin.github.io/Data-Structure-and-Algorithms-1/</a
-    >
-    <span class="copy-path" title="点击复制引用链接"
-      ><i
-        style="cursor: pointer"
-        class="fa fa-clipboard"
-        data-clipboard-text="[Gemini-lin's Blog | 数据结构与算法篇(一) -- 红黑树](https://gemini-lin.github.io/Data-Structure-and-Algorithms-1/)"
-        aria-label="post.copy_success"
-      ></i
-    ></span>
-  </li>
-
-  <!-- 版权声明 -->
-  <li class="post-copyright-license">
-    <strong
-      >版权声明：
-    </strong>
-    本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="external nofollow" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明出处！
-  </li>
-</ul>
-
-<script>
-  var clipboard = new ClipboardJS(".fa-clipboard");
-  clipboard.on("success", function(target) {
-    var message = document.createElement("div");
-    message.innerHTML =
-      '<i class="fa fa-check-circle message-icon"></i><span class="message-content">' +
-      target.trigger.getAttribute("aria-label") +
-      "</span>";
-    swal({
-      content: message,
-      className: "copy-success-message",
-      timer: 1000,
-      button: false
-    });
-  });
-</script>
-      </div>
-    
-
-    
-    <footer class="post-footer">
+        <h2 id="添加"   >
+          <a href="#添加" class="heading-link"><i class="fas fa-link"></i></a>添加</h2>
       
-        <div class="post-tags">
-          
-            <a href="/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/" rel="tag"># 数据结构</a>
-          
-        </div>
+        <h3 id="直接插入"   >
+          <a href="#直接插入" class="heading-link"><i class="fas fa-link"></i></a>直接插入</h3>
+      <figure class="highlight c"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment"> * 添加节点：将节点(node)插入到红黑树中</span></span><br><span class="line"><span class="comment"> *</span></span><br><span class="line"><span class="comment"> * 参数说明：</span></span><br><span class="line"><span class="comment"> *     root 红黑树的根</span></span><br><span class="line"><span class="comment"> *     node 插入的结点        // 对应《算法导论》中的z</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="function"><span class="keyword">static</span> <span class="keyword">void</span> <span class="title">rbtree_insert</span><span class="params">(RBRoot *root, Node *node)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    Node *y = <span class="literal">NULL</span>;</span><br><span class="line">    Node *x = root-&gt;node;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 1. 将红黑树当作一颗二叉查找树，将节点添加到二叉查找树中。</span></span><br><span class="line">    <span class="keyword">while</span> (x != <span class="literal">NULL</span>)</span><br><span class="line">    &#123;</span><br><span class="line">        y = x;</span><br><span class="line">        <span class="keyword">if</span> (node-&gt;key &lt; x-&gt;key)</span><br><span class="line">            x = x-&gt;left;</span><br><span class="line">        <span class="keyword">else</span></span><br><span class="line">            x = x-&gt;right;</span><br><span class="line">    &#125;</span><br><span class="line">    rb_parent(node) = y;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">if</span> (y != <span class="literal">NULL</span>)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">if</span> (node-&gt;key &lt; y-&gt;key)</span><br><span class="line">            y-&gt;left = node;                <span class="comment">// 情况2：若“node所包含的值” &lt; “y所包含的值”，则将node设为“y的左孩子”</span></span><br><span class="line">        <span class="keyword">else</span></span><br><span class="line">            y-&gt;right = node;            <span class="comment">// 情况3：(“node所包含的值” &gt;= “y所包含的值”)将node设为“y的右孩子” </span></span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">else</span></span><br><span class="line">    &#123;</span><br><span class="line">        root-&gt;node = node;                <span class="comment">// 情况1：若y是空节点，则将node设为根</span></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 2. 设置节点的颜色为红色</span></span><br><span class="line">    node-&gt;color = RED;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 3. 将它重新修正为一颗二叉查找树</span></span><br><span class="line">    rbtree_insert_fixup(root, node);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></div></figure>
+
+        <h3 id="修正"   >
+          <a href="#修正" class="heading-link"><i class="fas fa-link"></i></a>修正</h3>
+      <figure class="highlight c"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment"> * 添加节点：将节点(node)插入到红黑树中</span></span><br><span class="line"><span class="comment"> *</span></span><br><span class="line"><span class="comment"> * 参数说明：</span></span><br><span class="line"><span class="comment"> *     root 红黑树的根</span></span><br><span class="line"><span class="comment"> *     node 插入的结点        // 对应《算法导论》中的z</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="function"><span class="keyword">static</span> <span class="keyword">void</span> <span class="title">rbtree_insert</span><span class="params">(RBRoot *root, Node *node)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    Node *y = <span class="literal">NULL</span>;</span><br><span class="line">    Node *x = root-&gt;node;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 1. 将红黑树当作一颗二叉查找树，将节点添加到二叉查找树中。</span></span><br><span class="line">    <span class="keyword">while</span> (x != <span class="literal">NULL</span>)</span><br><span class="line">    &#123;</span><br><span class="line">        y = x;</span><br><span class="line">        <span class="keyword">if</span> (node-&gt;key &lt; x-&gt;key)</span><br><span class="line">            x = x-&gt;left;</span><br><span class="line">        <span class="keyword">else</span></span><br><span class="line">            x = x-&gt;right;</span><br><span class="line">    &#125;</span><br><span class="line">    rb_parent(node) = y;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">if</span> (y != <span class="literal">NULL</span>)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">if</span> (node-&gt;key &lt; y-&gt;key)</span><br><span class="line">            y-&gt;left = node;                <span class="comment">// 情况2：若“node所包含的值” &lt; “y所包含的值”，则将node设为“y的左孩子”</span></span><br><span class="line">        <span class="keyword">else</span></span><br><span class="line">            y-&gt;right = node;            <span class="comment">// 情况3：(“node所包含的值” &gt;= “y所包含的值”)将node设为“y的右孩子” </span></span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">else</span></span><br><span class="line">    &#123;</span><br><span class="line">        root-&gt;node = node;                <span class="comment">// 情况1：若y是空节点，则将node设为根</span></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 2. 设置节点的颜色为红色</span></span><br><span class="line">    node-&gt;color = RED;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 3. 将它重新修正为一颗二叉查找树</span></span><br><span class="line">    rbtree_insert_fixup(root, node);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></div></figure>
+
+        <h2 id="删除"   >
+          <a href="#删除" class="heading-link"><i class="fas fa-link"></i></a>删除</h2>
       
-
-      
-      
-        <div class="post-widgets">
-        
-
-        
-
-        
-          
-          <div id="needsharebutton-postbottom">
-            <span class="btn">
-              <i class="fa fa-share-alt" aria-hidden="true"></i>
-            </span>
-          </div>
-        
-        </div>
-      
-      
-
-      
-        <div class="post-nav">
-          <div class="post-nav-next post-nav-item">
-            
-              <a href="/JVM%E7%B3%BB%E5%88%97%EF%BC%88%E4%BA%8C%EF%BC%89-Java%E5%86%85%E5%AD%98%E7%AE%A1%E7%90%86/" rel="next" title="JVM系列（二）-- Java内存管理">
-                <i class="fa fa-chevron-left"></i> JVM系列（二）-- Java内存管理
-              </a>
-            
-          </div>
-
-          <span class="post-nav-divider"></span>
-
-          <div class="post-nav-prev post-nav-item">
-            
-              <a href="/Garbage-Collection/" rel="prev" title="JVM系列（三）-- 垃圾收集基础(GC)">
-                JVM系列（三）-- 垃圾收集基础(GC) <i class="fa fa-chevron-right"></i>
-              </a>
-            
-          </div>
-        </div>
-      
-
-      
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-
-    <div class="post-spread">
-      
-        
-<script>
-  with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='//bdimg.share.baidu.com/static/api/js/share.js?cdnversion='+~(-new Date()/36e5)];
-</script>
-
-      
-    </div>
-  </div>
-
-
-          </div>
-          
-
-
-          
-
-  
-    <div class="comments" id="comments">
-      <div id="lv-container" data-id="city" data-uid="MTAyMC80ODI3NS8yNDc2OQ"></div>
-    </div>
-
-  
-
-
-
-        </div>
-        
-          
-  
-  <div class="sidebar-toggle">
-    <div class="sidebar-toggle-line-wrap">
-      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
-      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
-      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
-    </div>
-  </div>
-
-  <aside id="sidebar" class="sidebar">
-    
-    <div class="sidebar-inner">
-
-      
-
-      
-        <ul class="sidebar-nav motion-element">
-          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
-            文章目录
-          </li>
-          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
-            站点概览
-          </li>
-        </ul>
-      
-
-
-      <section class="site-overview-wrap sidebar-panel">
-        <div class="site-overview">
-          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
-            
-              <img class="site-author-image" itemprop="image"
-                src="https://s1.ax1x.com/2020/05/14/YD6wTI.png"
-                alt="Gemini-Lin" />
-            
-              <p class="site-author-name" itemprop="name">Gemini-Lin</p>
-              <p class="site-description motion-element" itemprop="description"></p>
-          </div>
-
-          <nav class="site-state motion-element">
-
-            
-              <div class="site-state-item site-state-posts">
-              
-                <a href="/archives/">
-              
-                  <span class="site-state-item-count">23</span>
-                  <span class="site-state-item-name">日志</span>
-                </a>
-              </div>
-            
-
-            
-              
-              
-              <div class="site-state-item site-state-categories">
-                <a href="/categories/index.html">
-                  <span class="site-state-item-count">6</span>
-                  <span class="site-state-item-name">分类</span>
-                </a>
-              </div>
-            
-
-            
-              
-              
-              <div class="site-state-item site-state-tags">
-                <a href="/tags/index.html">
-                  <span class="site-state-item-count">22</span>
-                  <span class="site-state-item-name">标签</span>
-                </a>
-              </div>
-            
-
-          </nav>
-
-          
-
-          
-            <div class="links-of-author motion-element">
-                
-                  <span class="links-of-author-item">
-                    <a href="https://github.com/Gemini-Lin" target="_blank" title="GitHub">
-                      
-                        <i class="fa fa-fw fa-github"></i>GitHub</a>
-                  </span>
-                
-                  <span class="links-of-author-item">
-                    <a href="mailto:geminilin@gmail.com" target="_blank" title="E-Mail">
-                      
-                        <i class="fa fa-fw fa-envelope"></i>E-Mail</a>
-                  </span>
-                
-            </div>
-          
-
-          
-          
-
-          
-
-          
-          
-            <div class="links-of-blogroll motion-element links-of-blogroll-block">
-              <div class="links-of-blogroll-title">
-                <i class="fa  fa-fw fa-link"></i>
-                Links
-              </div>
-              <ul class="links-of-blogroll-list">
-                
-                  <li class="links-of-blogroll-item">
-                    <a href="https://www.zhihu.com/people/iye-kong-zhong-zui-liang-de-xing-i/activities" title="ZhiHu" target="_blank">ZhiHu</a>
-                  </li>
-                
-                  <li class="links-of-blogroll-item">
-                    <a href="http://www.zer0-nu1l.com/" title="ZER0-Nu1L" target="_blank">ZER0-Nu1L</a>
-                  </li>
-                
-                  <li class="links-of-blogroll-item">
-                    <a href="https://f1ed.github.io/" title="Fred" target="_blank">Fred</a>
-                  </li>
-                
-              </ul>
-            </div>
-          
-
-          
-
-  <div class="links-of-blogroll motion-element links-of-blogroll-block">
-    <div class="links-of-blogroll-title">
-      <i class="fa  fa-fw fa-history"></i>
-      最新文章
-    </div>
-    <ul class="links-of-blogroll-list">
-      
-      
-	<li class="links-of-blogroll-item">
-	  <a href="/regex/" title="正则表达式" target="_blank">正则表达式</a>
-	</li>
-      
-	<li class="links-of-blogroll-item">
-	  <a href="/SQL-Test/" title="SQL Test" target="_blank">SQL Test</a>
-	</li>
-      
-	<li class="links-of-blogroll-item">
-	  <a href="/twenty/" title="十七又三" target="_blank">十七又三</a>
-	</li>
-      
-	<li class="links-of-blogroll-item">
-	  <a href="/Operating-System-2/" title="Operating System(2)" target="_blank">Operating System(2)</a>
-	</li>
-      
-	<li class="links-of-blogroll-item">
-	  <a href="/Computer-Network/" title="Computer Network" target="_blank">Computer Network</a>
-	</li>
-      
-    </ul>
-  </div>
-
-
-
-        </div>
-      </section>
-
-      
-      <!--noindex-->
-        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
-          <div class="post-toc">
-
-            
-              
-            
-
-            
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#红黑树原理"><span class="nav-number">1.</span> <span class="nav-text">红黑树原理</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#二叉查找树"><span class="nav-number">1.1.</span> <span class="nav-text">二叉查找树</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#红黑树简介"><span class="nav-number">1.2.</span> <span class="nav-text">红黑树简介</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#特性"><span class="nav-number">1.2.1.</span> <span class="nav-text">特性</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#应用"><span class="nav-number">1.2.2.</span> <span class="nav-text">应用</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Recolor-and-Rotation"><span class="nav-number">2.</span> <span class="nav-text">Recolor and Rotation</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#插入"><span class="nav-number">2.1.</span> <span class="nav-text">插入</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#左左"><span class="nav-number">2.1.1.</span> <span class="nav-text">左左</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#左右"><span class="nav-number">2.1.2.</span> <span class="nav-text">左右</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#右右"><span class="nav-number">2.1.3.</span> <span class="nav-text">右右</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#右左"><span class="nav-number">2.1.4.</span> <span class="nav-text">右左</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#案例演示"><span class="nav-number">2.2.</span> <span class="nav-text">案例演示</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#C语言实现"><span class="nav-number">3.</span> <span class="nav-text">C语言实现</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#基本定义"><span class="nav-number">3.1.</span> <span class="nav-text">基本定义</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#左旋"><span class="nav-number">3.2.</span> <span class="nav-text">左旋</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#右旋"><span class="nav-number">3.3.</span> <span class="nav-text">右旋</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#添加"><span class="nav-number">3.4.</span> <span class="nav-text">添加</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#直接插入"><span class="nav-number">3.4.1.</span> <span class="nav-text">直接插入</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#修正"><span class="nav-number">3.4.2.</span> <span class="nav-text">修正</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#删除"><span class="nav-number">3.5.</span> <span class="nav-text">删除</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#直接删除"><span class="nav-number">3.5.1.</span> <span class="nav-text">直接删除</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#修正-1"><span class="nav-number">3.5.2.</span> <span class="nav-text">修正</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Free-Talk"><span class="nav-number">4.</span> <span class="nav-text">Free Talk</span></a></li></ol></div>
-            
-
-          </div>
-        </section>
-      <!--/noindex-->
-      
-
-      
-        <div class="back-to-top">
-          <i class="fa fa-arrow-up"></i>
-          
-            <span id="scrollpercent"><span>0</span>%</span>
-          
-        </div>
-      
-
-    </div>
-  </aside>
-
-
-        
-      </div>
-
-            <!-- 此处为新加的代码 -->
-        <script src="https://cdn.staticfile.org/jquery/3.1.1/jquery.min.js"></script>
-<script>
-    //暂时储存文章中的内容
-    var div = $('.post-body');
-    //暂时储存目录的内容
-    var toc=$('.post-toc')
-    function password() {
-        if(''){
-            //将文章内容删除
-            div.remove();
-            //将目录删除
-            toc.remove();
-            //将文章删除后，向原来文章的地方添加，应该出现的提示用户输入密码的样式
-            //下面这里的第一个用textarea是因为如果在手机端的时候只能显示一部分文字，
-            //只是拓展:input里面的字只能显示一行，不会自动换行，目前上网搜索没有发现好的办法，所以用了textarea，右下角的小三角通过resize:none 去掉。
-            $('.post-header').after(
-            '<span class="description" value="请输入密码，然后按 Enter 键阅读" style="font-style: oblique;font-weight: bold;border: none;display: block;'+
-            'width: 60%;margin: 0 auto;text-align: center;outline: none;margin-bottom: 40px;resize:none ">'+
-            '<i class="fa fa-heartbeat" id="myheartbeat"></i>'+
-            '请输入密码，然后按 Enter 键阅读' +
-            '<i class="fa fa-heartbeat" id="myheartbeat"></i>'+
-            '</span>' +
-            '<div class="qiang" style="height: 100px;width: 60%;margin:0 auto">' +
-            '<input class="password"  type="password" autocomplete="new-password" autofocus="autofocus" value="" style="border-radius: 5px;height: 30px;border: none;display: block;border-bottom: 1px solid #ccc;' +
-            'margin: 0 auto;outline: none;width:95%"/>' +
-            '</div>')
-            //绑定点击事件，如果是点击的.password 这个div就改变样式，如果是document中除了div之外的其他任何元素，就变回原来的样式。
-            document.onclick = function (event) {
-                var e = event || window.event;
-                var elem = e.srcElement || e.target;
-
-                while (elem) {
-                    if (elem != document) {
-                        if (elem.className == "password") {
-                            //$(".password").animate({paddingTop:"30px",width:"100%",borderWidth:"2px"},300)
-                            return;
-                        }
-                        elem = elem.parentNode;
-                    } else {
-                        //$(".password").animate({paddingTop:"0px",width:"95%",borderWidth:"1px"},300)
-                        return;
-                    }
-                }
-            }
-            //绑定enter键按下后离开的事件
-            $(document).keyup(function(event){
-                if(event.keyCode ==13&&$('.password').length>0){
-                    //console.log($('.password').val())
-                    //console.log('')
-                    if ($('.password').val() == '') {
-                        //恢复文章内容
-                        (div).appendTo($(".post-header"))
-                        //恢复目录
-                        toc.appendTo($(".sidebar-inner"))
-                        //删除本页面的输入密码组件
-                        $(".description").remove();
-                        $(".qiang").remove();
-                        $(".password").remove();
-
-                        //重新处理pjax事件,如果没有加pjax的从下面这行起到下面的else之间的代码需要去掉。
-                        //图片懒加载，没有加入此功能的这个函数需要去掉
-                        $('img').lazyload({
-                            placeholder: '/images/loading.gif',
-                            effect: 'fadeIn',
-                            threshold : 100,
-                            failure_limit : 20,
-                            skip_invisible : false
-                        });
-                        //pjax后出现文章不显示，没有pjax的下面四行需要去掉
-                        $(".post-block").css({opacity:1});
-                        $(".post-header").css({opacity:1});
-                        $(".post-body").css({opacity:1});
-                        $(".pagination").css({opacity:1});
-                    }else {
-                        alert("对不起，密码输入错误。")
-                    }
-                }
-                //将document的keyup移除，防止在pjax的情况下会重复绑定事件
-            });
-        }
-    }
-    password();
-</script>
-        
-    </main>
-
-    <footer id="footer" class="footer">
-      <div class="footer-inner">
-        <div class="copyright">&copy; <span itemprop="copyrightYear">2020</span>
-  <span class="with-love">
-    <i class="fa fa-user"></i>
-  </span>
-  <span class="author" itemprop="copyrightHolder">Gemini-Lin</span>
-  
-  
-    <span class="post-meta-divider">|</span>
-    <span class="post-meta-item-icon">
-      <i class="fa fa-area-chart"></i>
-    </span>
-    
-    
-      <span class="post-meta-item-text">Site words total count&#58;</span>
-    
-    <span title="Site words total count">34.9k</span>
-  <span class="post-meta-divider">|</span>
-  <div style="display:inline-block;">
-        <a target="_blank" href="http://www.beian.miit.gov.cn/" ><img src="https://static.dy208.cn/o_1dfilp8ruo521thr1hvf18ji17soa.png" style="float:left"></a>
-        <a href="http://www.beian.miit.gov.cn/"  style="color:#f72b07" target="_blank">闽ICP备-20012376号</a>
-    </div> 
-</div>
-
-<!--
-  <div class="powered-by">由 <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> 强力驱动</div>
-
-
-
-  <span class="post-meta-divider">|</span>
-
-
-
-  <div class="theme-info">主题 &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Gemini</a> v5.1.4</div>
--->
-
-
-
-
-        
-<div class="busuanzi-count">
-  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
-
-  
-    <span class="site-uv">
-      本站访客数<i class="fa fa-user"></i>
-      <span class="busuanzi-value" id="busuanzi_value_site_uv"></span>
-      人次
-    </span>
-  
-
-  
-    <span class="site-pv">
-      本站总访问量<i class="fa fa-eye"></i>
-      <span class="busuanzi-value" id="busuanzi_value_site_pv"></span>
-      次
-    </span>
-  
-</div>
-
-
-
-
-
-
-
-
-        
-      </div>
-    </footer>
-
-    
-
-    
-      <div id="needsharebutton-float">
-        <span class="btn">
-          <i class="fa fa-share-alt" aria-hidden="true"></i>
-        </span>
-      </div>
-    
-
-  </div>
-
-  
-
-<script type="text/javascript">
-  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
-    window.Promise = null;
+        <h3 id="直接删除"   >
+          <a href="#直接删除" class="heading-link"><i class="fas fa-link"></i></a>直接删除</h3>
+      <figure class="highlight c"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment"> * 添加节点：将节点(node)插入到红黑树中</span></span><br><span class="line"><span class="comment"> *</span></span><br><span class="line"><span class="comment"> * 参数说明：</span></span><br><span class="line"><span class="comment"> *     root 红黑树的根</span></span><br><span class="line"><span class="comment"> *     node 插入的结点        // 对应《算法导论》中的z</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="function"><span class="keyword">static</span> <span class="keyword">void</span> <span class="title">rbtree_insert</span><span class="params">(RBRoot *root, Node *node)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    Node *y = <span class="literal">NULL</span>;</span><br><span class="line">    Node *x = root-&gt;node;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 1. 将红黑树当作一颗二叉查找树，将节点添加到二叉查找树中。</span></span><br><span class="line">    <span class="keyword">while</span> (x != <span class="literal">NULL</span>)</span><br><span class="line">    &#123;</span><br><span class="line">        y = x;</span><br><span class="line">        <span class="keyword">if</span> (node-&gt;key &lt; x-&gt;key)</span><br><span class="line">            x = x-&gt;left;</span><br><span class="line">        <span class="keyword">else</span></span><br><span class="line">            x = x-&gt;right;</span><br><span class="line">    &#125;</span><br><span class="line">    rb_parent(node) = y;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">if</span> (y != <span class="literal">NULL</span>)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">if</span> (node-&gt;key &lt; y-&gt;key)</span><br><span class="line">            y-&gt;left = node;                <span class="comment">// 情况2：若“node所包含的值” &lt; “y所包含的值”，则将node设为“y的左孩子”</span></span><br><span class="line">        <span class="keyword">else</span></span><br><span class="line">            y-&gt;right = node;            <span class="comment">// 情况3：(“node所包含的值” &gt;= “y所包含的值”)将node设为“y的右孩子” </span></span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">else</span></span><br><span class="line">    &#123;</span><br><span class="line">        root-&gt;node = node;                <span class="comment">// 情况1：若y是空节点，则将node设为根</span></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 2. 设置节点的颜色为红色</span></span><br><span class="line">    node-&gt;color = RED;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 3. 将它重新修正为一颗二叉查找树</span></span><br><span class="line">    rbtree_insert_fixup(root, node);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></div></figure>
+
+        <h3 id="修正-1"   >
+          <a href="#修正-1" class="heading-link"><i class="fas fa-link"></i></a>修正</h3>
+      <figure class="highlight c"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment"> * 添加节点：将节点(node)插入到红黑树中</span></span><br><span class="line"><span class="comment"> *</span></span><br><span class="line"><span class="comment"> * 参数说明：</span></span><br><span class="line"><span class="comment"> *     root 红黑树的根</span></span><br><span class="line"><span class="comment"> *     node 插入的结点        // 对应《算法导论》中的z</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="function"><span class="keyword">static</span> <span class="keyword">void</span> <span class="title">rbtree_insert</span><span class="params">(RBRoot *root, Node *node)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    Node *y = <span class="literal">NULL</span>;</span><br><span class="line">    Node *x = root-&gt;node;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 1. 将红黑树当作一颗二叉查找树，将节点添加到二叉查找树中。</span></span><br><span class="line">    <span class="keyword">while</span> (x != <span class="literal">NULL</span>)</span><br><span class="line">    &#123;</span><br><span class="line">        y = x;</span><br><span class="line">        <span class="keyword">if</span> (node-&gt;key &lt; x-&gt;key)</span><br><span class="line">            x = x-&gt;left;</span><br><span class="line">        <span class="keyword">else</span></span><br><span class="line">            x = x-&gt;right;</span><br><span class="line">    &#125;</span><br><span class="line">    rb_parent(node) = y;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">if</span> (y != <span class="literal">NULL</span>)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">if</span> (node-&gt;key &lt; y-&gt;key)</span><br><span class="line">            y-&gt;left = node;                <span class="comment">// 情况2：若“node所包含的值” &lt; “y所包含的值”，则将node设为“y的左孩子”</span></span><br><span class="line">        <span class="keyword">else</span></span><br><span class="line">            y-&gt;right = node;            <span class="comment">// 情况3：(“node所包含的值” &gt;= “y所包含的值”)将node设为“y的右孩子” </span></span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">else</span></span><br><span class="line">    &#123;</span><br><span class="line">        root-&gt;node = node;                <span class="comment">// 情况1：若y是空节点，则将node设为根</span></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 2. 设置节点的颜色为红色</span></span><br><span class="line">    node-&gt;color = RED;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 3. 将它重新修正为一颗二叉查找树</span></span><br><span class="line">    rbtree_insert_fixup(root, node);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></div></figure>
+
+        <h1 id="Free-Talk"   >
+          <a href="#Free-Talk" class="heading-link"><i class="fas fa-link"></i></a>Free Talk</h1>
+      <p>我打算在今后的板块中都增加一个Free Talk的环节，讲讲自己的感受。<br>其实之前一直有听说过红黑树的名字，就是没有深入了解，正好在家待着没事干，就打算写一个数据结构与算法的系列，就当做是复习和进一步学习吧。<br>这次的博客主要是参考了两篇文章，一篇是比较详细的讲解算法实现和原理，一篇特点是动图易懂。自己写完了这篇博客也只能算是懂了第二篇，算法的后半部分确实没啃动。感觉一开始就将红黑树有些硬核，面试应该不可能有手写代码吧。<br>接下打算就是把JVM的系列和数据结构与算法的系列穿插着写，然后算法的系列会加入LeetCode模块，JVM的系列还没有考虑好要怎么用代码实现学习。<br><strong>To be a better man!</strong></p>
+<p>参考链接：<br><span class="exturl"><a class="exturl__link"   href="https://www.cnblogs.com/skywang12345/p/3245399.html"  target="_blank" rel="noopener">博客园</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span><br><span class="exturl"><a class="exturl__link"   href="https://segmentfault.com/a/1190000020118044"  target="_blank" rel="noopener">segment</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></p>
+</div><footer class="post-footer"><div class="post-ending ending"><div class="ending__text">------ 本文结束，感谢您的阅读 ------</div></div><div class="post-copyright copyright"><div class="copyright-author"><span class="copyright-author__name">本文作者: </span><span class="copyright-author__value"><a href="https://Gemini-Lin.github.io">Gemini-Lin</a></span></div><div class="copyright-link"><span class="copyright-link__name">本文链接: </span><span class="copyright-link__value"><a href="https://gemini-lin.github.io/Data-Structure-and-Algorithms-1/">https://gemini-lin.github.io/Data-Structure-and-Algorithms-1/</a></span></div><div class="copyright-notice"><span class="copyright-notice__name">版权声明: </span><span class="copyright-notice__value">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en" rel="external nofollow" target="_blank">BY-NC-SA</a> 许可协议。转载请注明出处！</span></div></div><div class="post-tags"><span class="post-tags-item"><span class="post-tags-item__icon"><i class="fas fa-tag"></i></span><a class="post-tags-item__link" href="https://gemini-lin.github.io/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/">数据结构</a></span></div><div class="post-reward reward"><div class="reward-button">请我喝杯咖啡~</div><div class="reward-qrcode"><span class="reward-qrcode-alipay"><img class="reward-qrcode-alipay__img" src="/images/alipay.jpg"><div class="reward-qrcode-alipay__text">支付宝打赏</div></span><span class="reward-qrcode-wechat"><img class="reward-qrcode-wechat__img" src="/images/wechatpay.jpg"><div class="reward-qrcode-wechat__text">微信打赏</div></span></div></div><nav class="post-paginator paginator"><div class="paginator-prev"><a class="paginator-prev__link" href="/Garbage-Collection/"><span class="paginator-prev__icon"><i class="fas fa-angle-left"></i></span><span class="paginator-prev__text">JVM系列（三）-- 垃圾收集基础(GC)</span></a></div><div class="paginator-next"><a class="paginator-next__link" href="/JVM%E7%B3%BB%E5%88%97%EF%BC%88%E4%BA%8C%EF%BC%89-Java%E5%86%85%E5%AD%98%E7%AE%A1%E7%90%86/"><span class="paginator-prev__text">JVM系列（二）-- Java内存管理</span><span class="paginator-next__icon"><i class="fas fa-angle-right"></i></span></a></div></nav></footer></div></div><div class="comments" id="comments"><div id="lv-container" data-id="city" data-uid="MTAyMC80ODI3NS8yNDc2OQ"></div></div></div><div class="sidebar-wrap" id="sidebar-wrap"><aside class="sidebar" id="sidebar"><div class="sidebar-nav"><span class="sidebar-nav-toc current">文章目录</span><span class="sidebar-nav-ov">站点概览</span></div><section class="sidebar-toc"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#红黑树原理"><span class="toc-number">1.</span> <span class="toc-text">
+          红黑树原理</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#二叉查找树"><span class="toc-number">1.1.</span> <span class="toc-text">
+          二叉查找树</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#红黑树简介"><span class="toc-number">1.2.</span> <span class="toc-text">
+          红黑树简介</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#特性"><span class="toc-number">1.2.1.</span> <span class="toc-text">
+          特性</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#应用"><span class="toc-number">1.2.2.</span> <span class="toc-text">
+          应用</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Recolor-and-Rotation"><span class="toc-number">2.</span> <span class="toc-text">
+          Recolor and Rotation</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#插入"><span class="toc-number">2.1.</span> <span class="toc-text">
+          插入</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#左左"><span class="toc-number">2.1.1.</span> <span class="toc-text">
+          左左</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#左右"><span class="toc-number">2.1.2.</span> <span class="toc-text">
+          左右</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#右右"><span class="toc-number">2.1.3.</span> <span class="toc-text">
+          右右</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#右左"><span class="toc-number">2.1.4.</span> <span class="toc-text">
+          右左</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#案例演示"><span class="toc-number">2.2.</span> <span class="toc-text">
+          案例演示</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#C语言实现"><span class="toc-number">3.</span> <span class="toc-text">
+          C语言实现</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#基本定义"><span class="toc-number">3.1.</span> <span class="toc-text">
+          基本定义</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#左旋"><span class="toc-number">3.2.</span> <span class="toc-text">
+          左旋</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#右旋"><span class="toc-number">3.3.</span> <span class="toc-text">
+          右旋</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#添加"><span class="toc-number">3.4.</span> <span class="toc-text">
+          添加</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#直接插入"><span class="toc-number">3.4.1.</span> <span class="toc-text">
+          直接插入</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#修正"><span class="toc-number">3.4.2.</span> <span class="toc-text">
+          修正</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#删除"><span class="toc-number">3.5.</span> <span class="toc-text">
+          删除</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#直接删除"><span class="toc-number">3.5.1.</span> <span class="toc-text">
+          直接删除</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#修正-1"><span class="toc-number">3.5.2.</span> <span class="toc-text">
+          修正</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Free-Talk"><span class="toc-number">4.</span> <span class="toc-text">
+          Free Talk</span></a></li></ol></section><!-- ov = overview--><section class="sidebar-ov hide"><div class="sidebar-ov-author"><div class="sidebar-ov-author__avatar"><img class="sidebar-ov-author__avatar_img" src="https://s1.ax1x.com/2020/05/14/YD6wTI.png" alt="avatar"></div><p class="sidebar-ov-author__text">In me the tiger sniffs the rose</p></div><div class="sidebar-ov-social"><a class="sidebar-ov-social-item" href="https://github.com/Gemini-Lin" target="_blank" rel="noopener" data-popover="Github" data-popover-pos="up"><span class="sidebar-ov-social-item__icon"><i class="fab fa-github"></i></span></a><a class="sidebar-ov-social-item" href="https://www.zhihu.com/people/iye-kong-zhong-zui-liang-de-xing-i" target="_blank" rel="noopener" data-popover="知乎" data-popover-pos="up"><span class="sidebar-ov-social-item__icon">知</span></a><a class="sidebar-ov-social-item" href="https://space.bilibili.com/313103161" target="_blank" rel="noopener" data-popover="social.bilibili" data-popover-pos="up"><span class="sidebar-ov-social-item__icon">B</span></a><a class="sidebar-ov-social-item" href="mailto:geminilin@gmail.com" target="_blank" rel="noopener" data-popover="social.E-Mail" data-popover-pos="up"><span class="sidebar-ov-social-item__icon"><i class="fab fa-envelope"></i></span></a></div><div class="sidebar-ov-state"><a class="sidebar-ov-state-item sidebar-ov-state-item--posts" href="/archives/"><div class="sidebar-ov-state-item__count">23</div><div class="sidebar-ov-state-item__name">归档</div></a><a class="sidebar-ov-state-item sidebar-ov-state-item--categories" href="/categories/"><div class="sidebar-ov-state-item__count">6</div><div class="sidebar-ov-state-item__name">分类</div></a><a class="sidebar-ov-state-item sidebar-ov-state-item--tags" href="/tags/"><div class="sidebar-ov-state-item__count">22</div><div class="sidebar-ov-state-item__name">标签</div></a></div><div class="sidebar-ov-cc"><a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en" target="_blank" rel="noopener" data-popover="知识共享许可协议" data-popover-pos="up"><img src="/images/cc-by-nc-sa.svg"></a></div></section><div class="sidebar-reading"><div class="sidebar-reading-info"><span class="sidebar-reading-info__text">你已阅读了 </span><span class="sidebar-reading-info__num">0</span></div><div class="sidebar-reading-line"></div></div></aside></div><div class="clearfix"></div></div></main><footer class="footer" id="footer"><div class="footer-inner"><div><span>Copyright © 2020</span><span class="footer__icon"><i class="fas fa-heart"></i></span><span>Gemini-Lin</span><span class="footer__devider">|</span><span>闽ICP备20012376号</span></div><div class="busuanzi"><span class="busuanzi-siteuv"><span class="busuanzi-siteuv__icon"><i class="fas fa-user"></i></span><span class="busuanzi-siteuv__info">访问人数</span><span class="busuanzi-siteuv__value" id="busuanzi_value_site_uv"></span></span><span class="busuanzi-sitepv"><span class="busuanzi-siteuv__icon"><i class="fas fa-eye"></i></span><span class="busuanzi-siteuv__info">浏览总量</span><span class="busuanzi-siteuv__value" id="busuanzi_value_site_pv"></span></span></div></div></footer><div class="loading-bar" id="loading-bar"><div class="loading-bar__progress"></div></div><div class="back2top" id="back2top"><span class="back2top__icon"><i class="fas fa-rocket"></i></span></div></div><script src="https://cdn.jsdelivr.net/npm/jquery@v3.4.1/dist/jquery.min.js"></script><script src="https://cdn.jsdelivr.net/npm/velocity-animate@1.5.2/velocity.min.js"></script><script src="https://cdn.jsdelivr.net/npm/velocity-animate@1.5.2/velocity.ui.min.js"></script><script src="https://cdn.jsdelivr.net/gh/sukkaw/busuanzi@latest/bsz.pure.mini.js" async></script><script>function loadLivere () {
+  var d = document, s = d.createElement('script');
+
+  if (!d.getElementById('lv-container')) {
+    return;
   }
-</script>
-
-
-
-
-
-
-
-
-
-  
-
-
-  
-
-
-
-
-
-
-
-
-
-
-
-  
-  
-    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
-  
-
-  
-  
-    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
-  
-
-  
-  
-    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
-  
-
-  
-  
-    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
-  
-
-  
-  
-    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
-  
-
-  
-  
-    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
-  
-
-  
-  
-    <script type="text/javascript" src="/lib/canvas-nest/canvas-nest.min.js"></script>
-  
-
-
-  
-
-
-  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
-
-  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
-
-
-
-  
-  
-
-
-  <script type="text/javascript" src="/js/src/affix.js?v=5.1.4"></script>
-
-  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.4"></script>
-
-
-
-  
-  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
-<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
-
-
-
-  
-
-
-  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
-
-
-
-  
-
-
-  
-
-
-
-
-	
-
-
-
-
-
-  
-
-
-
-
-
-  
-    <script type="text/javascript">
-      (function(d, s) {
-        var j, e = d.getElementsByTagName(s)[0];
-        if (typeof LivereTower === 'function') { return; }
-        j = d.createElement(s);
-        j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
-        j.async = true;
-        e.parentNode.insertBefore(j, e);
-      })(document, 'script');
-    </script>
-  
-
-
-
-
-
-
-
-
-
-
-
-
-  
-
-  <script type="text/javascript">
-    // Popup Window;
-    var isfetched = false;
-    var isXml = true;
-    // Search DB path;
-    var search_path = "search.xml";
-    if (search_path.length === 0) {
-      search_path = "search.xml";
-    } else if (/json$/i.test(search_path)) {
-      isXml = false;
-    }
-    var path = "/" + search_path;
-    // monitor main search box;
-
-    var onPopupClose = function (e) {
-      $('.popup').hide();
-      $('#local-search-input').val('');
-      $('.search-result-list').remove();
-      $('#no-result').remove();
-      $(".local-search-pop-overlay").remove();
-      $('body').css('overflow', '');
-    }
-
-    function proceedsearch() {
-      $("body")
-        .append('<div class="search-popup-overlay local-search-pop-overlay"></div>')
-        .css('overflow', 'hidden');
-      $('.search-popup-overlay').click(onPopupClose);
-      $('.popup').toggle();
-      var $localSearchInput = $('#local-search-input');
-      $localSearchInput.attr("autocapitalize", "none");
-      $localSearchInput.attr("autocorrect", "off");
-      $localSearchInput.focus();
-    }
-
-    // search function;
-    var searchFunc = function(path, search_id, content_id) {
-      'use strict';
-
-      // start loading animation
-      $("body")
-        .append('<div class="search-popup-overlay local-search-pop-overlay">' +
-          '<div id="search-loading-icon">' +
-          '<i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>' +
-          '</div>' +
-          '</div>')
-        .css('overflow', 'hidden');
-      $("#search-loading-icon").css('margin', '20% auto 0 auto').css('text-align', 'center');
-
-      $.ajax({
-        url: path,
-        dataType: isXml ? "xml" : "json",
-        async: true,
-        success: function(res) {
-          // get the contents from search data
-          isfetched = true;
-          $('.popup').detach().appendTo('.header-inner');
-          var datas = isXml ? $("entry", res).map(function() {
-            return {
-              title: $("title", this).text(),
-              content: $("content",this).text(),
-              url: $("url" , this).text()
-            };
-          }).get() : res;
-          var input = document.getElementById(search_id);
-          var resultContent = document.getElementById(content_id);
-          var inputEventFunction = function() {
-            var searchText = input.value.trim().toLowerCase();
-            var keywords = searchText.split(/[\s\-]+/);
-            if (keywords.length > 1) {
-              keywords.push(searchText);
-            }
-            var resultItems = [];
-            if (searchText.length > 0) {
-              // perform local searching
-              datas.forEach(function(data) {
-                var isMatch = false;
-                var hitCount = 0;
-                var searchTextCount = 0;
-                var title = data.title.trim();
-                var titleInLowerCase = title.toLowerCase();
-                var content = data.content.trim().replace(/<[^>]+>/g,"");
-                var contentInLowerCase = content.toLowerCase();
-                var articleUrl = decodeURIComponent(data.url);
-                var indexOfTitle = [];
-                var indexOfContent = [];
-                // only match articles with not empty titles
-                if(title != '') {
-                  keywords.forEach(function(keyword) {
-                    function getIndexByWord(word, text, caseSensitive) {
-                      var wordLen = word.length;
-                      if (wordLen === 0) {
-                        return [];
-                      }
-                      var startPosition = 0, position = [], index = [];
-                      if (!caseSensitive) {
-                        text = text.toLowerCase();
-                        word = word.toLowerCase();
-                      }
-                      while ((position = text.indexOf(word, startPosition)) > -1) {
-                        index.push({position: position, word: word});
-                        startPosition = position + wordLen;
-                      }
-                      return index;
-                    }
-
-                    indexOfTitle = indexOfTitle.concat(getIndexByWord(keyword, titleInLowerCase, false));
-                    indexOfContent = indexOfContent.concat(getIndexByWord(keyword, contentInLowerCase, false));
-                  });
-                  if (indexOfTitle.length > 0 || indexOfContent.length > 0) {
-                    isMatch = true;
-                    hitCount = indexOfTitle.length + indexOfContent.length;
-                  }
-                }
-
-                // show search results
-
-                if (isMatch) {
-                  // sort index by position of keyword
-
-                  [indexOfTitle, indexOfContent].forEach(function (index) {
-                    index.sort(function (itemLeft, itemRight) {
-                      if (itemRight.position !== itemLeft.position) {
-                        return itemRight.position - itemLeft.position;
-                      } else {
-                        return itemLeft.word.length - itemRight.word.length;
-                      }
-                    });
-                  });
-
-                  // merge hits into slices
-
-                  function mergeIntoSlice(text, start, end, index) {
-                    var item = index[index.length - 1];
-                    var position = item.position;
-                    var word = item.word;
-                    var hits = [];
-                    var searchTextCountInSlice = 0;
-                    while (position + word.length <= end && index.length != 0) {
-                      if (word === searchText) {
-                        searchTextCountInSlice++;
-                      }
-                      hits.push({position: position, length: word.length});
-                      var wordEnd = position + word.length;
-
-                      // move to next position of hit
-
-                      index.pop();
-                      while (index.length != 0) {
-                        item = index[index.length - 1];
-                        position = item.position;
-                        word = item.word;
-                        if (wordEnd > position) {
-                          index.pop();
-                        } else {
-                          break;
-                        }
-                      }
-                    }
-                    searchTextCount += searchTextCountInSlice;
-                    return {
-                      hits: hits,
-                      start: start,
-                      end: end,
-                      searchTextCount: searchTextCountInSlice
-                    };
-                  }
-
-                  var slicesOfTitle = [];
-                  if (indexOfTitle.length != 0) {
-                    slicesOfTitle.push(mergeIntoSlice(title, 0, title.length, indexOfTitle));
-                  }
-
-                  var slicesOfContent = [];
-                  while (indexOfContent.length != 0) {
-                    var item = indexOfContent[indexOfContent.length - 1];
-                    var position = item.position;
-                    var word = item.word;
-                    // cut out 100 characters
-                    var start = position - 20;
-                    var end = position + 80;
-                    if(start < 0){
-                      start = 0;
-                    }
-                    if (end < position + word.length) {
-                      end = position + word.length;
-                    }
-                    if(end > content.length){
-                      end = content.length;
-                    }
-                    slicesOfContent.push(mergeIntoSlice(content, start, end, indexOfContent));
-                  }
-
-                  // sort slices in content by search text's count and hits' count
-
-                  slicesOfContent.sort(function (sliceLeft, sliceRight) {
-                    if (sliceLeft.searchTextCount !== sliceRight.searchTextCount) {
-                      return sliceRight.searchTextCount - sliceLeft.searchTextCount;
-                    } else if (sliceLeft.hits.length !== sliceRight.hits.length) {
-                      return sliceRight.hits.length - sliceLeft.hits.length;
-                    } else {
-                      return sliceLeft.start - sliceRight.start;
-                    }
-                  });
-
-                  // select top N slices in content
-
-                  var upperBound = parseInt('1');
-                  if (upperBound >= 0) {
-                    slicesOfContent = slicesOfContent.slice(0, upperBound);
-                  }
-
-                  // highlight title and content
-
-                  function highlightKeyword(text, slice) {
-                    var result = '';
-                    var prevEnd = slice.start;
-                    slice.hits.forEach(function (hit) {
-                      result += text.substring(prevEnd, hit.position);
-                      var end = hit.position + hit.length;
-                      result += '<b class="search-keyword">' + text.substring(hit.position, end) + '</b>';
-                      prevEnd = end;
-                    });
-                    result += text.substring(prevEnd, slice.end);
-                    return result;
-                  }
-
-                  var resultItem = '';
-
-                  if (slicesOfTitle.length != 0) {
-                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</a>";
-                  } else {
-                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + title + "</a>";
-                  }
-
-                  slicesOfContent.forEach(function (slice) {
-                    resultItem += "<a href='" + articleUrl + "'>" +
-                      "<p class=\"search-result\">" + highlightKeyword(content, slice) +
-                      "...</p>" + "</a>";
-                  });
-
-                  resultItem += "</li>";
-                  resultItems.push({
-                    item: resultItem,
-                    searchTextCount: searchTextCount,
-                    hitCount: hitCount,
-                    id: resultItems.length
-                  });
-                }
-              })
-            };
-            if (keywords.length === 1 && keywords[0] === "") {
-              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-search fa-5x" /></div>'
-            } else if (resultItems.length === 0) {
-              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-frown-o fa-5x" /></div>'
-            } else {
-              resultItems.sort(function (resultLeft, resultRight) {
-                if (resultLeft.searchTextCount !== resultRight.searchTextCount) {
-                  return resultRight.searchTextCount - resultLeft.searchTextCount;
-                } else if (resultLeft.hitCount !== resultRight.hitCount) {
-                  return resultRight.hitCount - resultLeft.hitCount;
-                } else {
-                  return resultRight.id - resultLeft.id;
-                }
-              });
-              var searchResultList = '<ul class=\"search-result-list\">';
-              resultItems.forEach(function (result) {
-                searchResultList += result.item;
-              })
-              searchResultList += "</ul>";
-              resultContent.innerHTML = searchResultList;
-            }
-          }
-
-          if ('auto' === 'auto') {
-            input.addEventListener('input', inputEventFunction);
-          } else {
-            $('.search-icon').click(inputEventFunction);
-            input.addEventListener('keypress', function (event) {
-              if (event.keyCode === 13) {
-                inputEventFunction();
-              }
-            });
-          }
-
-          // remove loading animation
-          $(".local-search-pop-overlay").remove();
-          $('body').css('overflow', '');
-
-          proceedsearch();
-        }
-      });
-    }
-
-    // handle and trigger popup window;
-    $('.popup-trigger').click(function(e) {
-      e.stopPropagation();
-      if (isfetched === false) {
-        searchFunc(path, 'local-search-input', 'local-search-result');
-      } else {
-        proceedsearch();
-      };
-    });
-
-    $('.popup-btn-close').click(onPopupClose);
-    $('.popup').click(function(e){
-      e.stopPropagation();
-    });
-    $(document).on('keyup', function (event) {
-      var shouldDismissSearchPopup = event.which === 27 &&
-        $('.search-popup').is(':visible');
-      if (shouldDismissSearchPopup) {
-        onPopupClose();
-      }
-    });
-  </script>
-
-
-
-
-
-  
-
-  
-
-  
-<script>
-(function(){
-    var bp = document.createElement('script');
-    var curProtocol = window.location.protocol.split(':')[0];
-    if (curProtocol === 'https') {
-        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';        
-    }
-    else {
-        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
-    }
-    var s = document.getElementsByTagName("script")[0];
-    s.parentNode.insertBefore(bp, s);
-})();
-</script>
-
-
-  
-  
-  
-  <link rel="stylesheet" href="/lib/needsharebutton/needsharebutton.css">
-
-  
-  
-  <script src="/lib/needsharebutton/needsharebutton.js"></script>
-
-  <script>
-    
-      pbOptions = {};
-      
-          pbOptions.iconStyle = "default";
-      
-          pbOptions.boxForm = "horizontal";
-      
-          pbOptions.position = "bottomCenter";
-      
-          pbOptions.networks = "Weibo,Wechat,Douban,QQZone,Twitter,Facebook";
-      
-      new needShareButton('#needsharebutton-postbottom', pbOptions);
-    
-    
-      flOptions = {};
-      
-          flOptions.iconStyle = "default";
-      
-          flOptions.boxForm = "horizontal";
-      
-          flOptions.position = "middleRight";
-      
-          flOptions.networks = "Weibo,Wechat,Douban,QQZone,Twitter,Facebook";
-      
-      new needShareButton('#needsharebutton-float', flOptions);
-    
-  </script>
-
-  
-
-  
-  
-    <script type="text/x-mathjax-config">
-      MathJax.Hub.Config({
-        tex2jax: {
-          inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
-          processEscapes: true,
-          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
-        }
-      });
-    </script>
-
-    <script type="text/x-mathjax-config">
-      MathJax.Hub.Queue(function() {
-        var all = MathJax.Hub.getAllJax(), i;
-        for (i=0; i < all.length; i += 1) {
-          all[i].SourceElement().parentNode.className += ' has-jax';
-        }
-      });
-    </script>
-    <script type="text/javascript" src="//cdn.bootcss.com/mathjax/2.7.1/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
-  
-
-
-  
-
-  
-  <script type="text/javascript" src="/js/src/exturl.js?v=5.1.4"></script>
-
-
-<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"log":false,"pluginJsPath":"lib/","pluginModelPath":"assets/","pluginRootPath":"live2dw/","tagMode":false});</script></body>
-</html>
-
-
-   <canvas class="fireworks" style="position: fixed;left: 0;top: 0;z-index: 1; pointer-events: none;" ></canvas> 
-   <script type="text/javascript" src="//cdn.bootcss.com/animejs/2.2.0/anime.min.js"></script> 
-   <script type="text/javascript" src="/js/src/fireworks.js"></script>
-
-
-<!-- 页面点击小红心 -->
-<script type="text/javascript" src="/js/src/clicklove.js"></script>
+  if (typeof LivereTower === 'function') {
+    return;
+  }
+  s.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+  if (false) {
+    s.setAttribute('data-pjax-rm', '');
+  }
+  (d.head || d.body).appendChild(s);
+}
+
+if (false) {
+  loadLivere();
+} else {
+  window.addEventListener('DOMContentLoaded', loadLivere, false);
+}</script><script src="/js/utils.js?v=2.0.1"></script><script src="/js/stun-boot.js?v=2.0.1"></script><script src="/js/scroll.js?v=2.0.1"></script><script src="/js/header.js?v=2.0.1"></script><script src="/js/sidebar.js?v=2.0.1"></script><script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"log":false,"pluginJsPath":"lib/","pluginModelPath":"assets/","pluginRootPath":"live2dw/","tagMode":false});</script></body></html>
