@@ -2098,7 +2098,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #6cc181;
+  background: #867cc1;
 }
 .links-of-blogroll {
   font-size: 13px;
@@ -3419,20 +3419,12 @@ pre .javascript .function {
     margin: 8px 0 0;
   }
 }
-body {
-  background: url("https://s1.ax1x.com/2020/03/29/GVyqeI.png");
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-position: 50% 50%;
-  color: #000;
-}
 .main-inner {
   background: #fff;
-  opacity: 0.9;
+  opacity: 1;
 }
 .header-inner {
-  opacity: 0.9;
+  opacity: 1;
 }
 .post-toc .nav .nav-child {
   display: block;
