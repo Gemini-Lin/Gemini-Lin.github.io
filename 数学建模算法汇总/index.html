@@ -1,84 +1,84 @@
-<!DOCTYPE html><html lang="zh-Hans"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="format-detection" content="telephone=no"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="black"><meta name="theme-color" content="#54bcff"><link rel="manifest" href="/manifest.json?v=2.0.1"><link rel="icon" href="/images/icons/favicon.ico?v=2.0.1" type="image/png" sizes="16x16"><link rel="icon" href="/images/icons/favicon.ico?v=2.0.1" type="image/png" sizes="32x32"><meta name="google-site-verification" content="_T_d70fQRwnF8GQJNmmDRbHpjKelZbY-RFDWgS--hAw"><meta name="baidu-site-verification" content="XoICYdb3Ey"><meta name="description" content="优化模型">
+<!DOCTYPE html><html lang="zh-Hans"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="format-detection" content="telephone=no"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="black"><meta name="theme-color" content="#54bcff"><link rel="manifest" href="/manifest.json?v=2.0.1"><link rel="icon" href="/images/icons/favicon.ico?v=2.0.1" type="image/png" sizes="16x16"><link rel="icon" href="/images/icons/favicon.ico?v=2.0.1" type="image/png" sizes="32x32"><meta name="google-site-verification" content="_T_d70fQRwnF8GQJNmmDRbHpjKelZbY-RFDWgS--hAw"><meta name="baidu-site-verification" content="AM9It5Uqy8"><meta name="description" content="优化模型">
 <meta property="og:type" content="article">
 <meta property="og:title" content="数学建模算法汇总">
-<meta property="og:url" content="https:&#x2F;&#x2F;gemini-lin.github.io&#x2F;%E6%95%B0%E5%AD%A6%E5%BB%BA%E6%A8%A1%E7%AE%97%E6%B3%95%E6%B1%87%E6%80%BB&#x2F;index.html">
+<meta property="og:url" content="https://gemini-lin.github.io/%E6%95%B0%E5%AD%A6%E5%BB%BA%E6%A8%A1%E7%AE%97%E6%B3%95%E6%B1%87%E6%80%BB/index.html">
 <meta property="og:site_name" content="GeminiPlanet">
 <meta property="og:description" content="优化模型">
-<meta property="og:image" content="https:&#x2F;&#x2F;i.loli.net&#x2F;2020&#x2F;02&#x2F;03&#x2F;AiDVdhUEBgYKtQz.png">
-<meta property="og:image" content="https:&#x2F;&#x2F;i.loli.net&#x2F;2020&#x2F;02&#x2F;03&#x2F;zVPmxnUyRLS1Q57.png">
-<meta property="og:image" content="https:&#x2F;&#x2F;i.loli.net&#x2F;2020&#x2F;02&#x2F;03&#x2F;fwNLboBKaz4qVDI.png">
-<meta property="og:image" content="https:&#x2F;&#x2F;i.loli.net&#x2F;2020&#x2F;02&#x2F;03&#x2F;T9FYRqJgzxSw4am.png">
-<meta property="og:image" content="https:&#x2F;&#x2F;i.loli.net&#x2F;2020&#x2F;02&#x2F;03&#x2F;peAd9XNOTvlDib6.png">
-<meta property="og:image" content="https:&#x2F;&#x2F;i.loli.net&#x2F;2020&#x2F;02&#x2F;03&#x2F;SHIw21EnNCq4mZO.png">
-<meta property="og:image" content="https:&#x2F;&#x2F;i.loli.net&#x2F;2020&#x2F;02&#x2F;03&#x2F;RvLaVzcdrN3umXO.png">
-<meta property="og:image" content="https:&#x2F;&#x2F;i.loli.net&#x2F;2020&#x2F;02&#x2F;03&#x2F;PJ9D8QyEMj1sFml.png">
-<meta property="og:image" content="https:&#x2F;&#x2F;i.loli.net&#x2F;2020&#x2F;02&#x2F;03&#x2F;gJQO9F2SepzR6xy.png">
-<meta property="og:image" content="https:&#x2F;&#x2F;i.loli.net&#x2F;2020&#x2F;02&#x2F;03&#x2F;ZGHkLWOPjENM6Vg.png">
-<meta property="og:image" content="https:&#x2F;&#x2F;i.loli.net&#x2F;2020&#x2F;02&#x2F;03&#x2F;3iC2xhWNXGuq8v6.png">
-<meta property="og:image" content="https:&#x2F;&#x2F;i.loli.net&#x2F;2020&#x2F;02&#x2F;03&#x2F;d58hrDcQ14k7JwV.png">
-<meta property="og:image" content="https:&#x2F;&#x2F;i.loli.net&#x2F;2020&#x2F;02&#x2F;03&#x2F;hWeQFEwxgnAORzX.png">
-<meta property="og:image" content="https:&#x2F;&#x2F;i.loli.net&#x2F;2020&#x2F;02&#x2F;03&#x2F;MlcEqYBx6ny3kUK.png">
-<meta property="og:image" content="https:&#x2F;&#x2F;i.loli.net&#x2F;2020&#x2F;02&#x2F;03&#x2F;r6WleBKoTV4cSta.png">
-<meta property="og:image" content="https:&#x2F;&#x2F;i.loli.net&#x2F;2020&#x2F;02&#x2F;03&#x2F;4zCUAPQHEgwFdaV.png">
-<meta property="og:image" content="https:&#x2F;&#x2F;i.loli.net&#x2F;2020&#x2F;02&#x2F;03&#x2F;UF7ujBXEA4ZR9yH.png">
-<meta property="og:image" content="https:&#x2F;&#x2F;i.loli.net&#x2F;2020&#x2F;02&#x2F;03&#x2F;K2E7bxswA8mhCDc.png">
-<meta property="og:image" content="https:&#x2F;&#x2F;i.loli.net&#x2F;2020&#x2F;02&#x2F;03&#x2F;KAxoXkQFC6sv7g5.png">
-<meta property="og:image" content="https:&#x2F;&#x2F;i.loli.net&#x2F;2020&#x2F;02&#x2F;03&#x2F;VzoeUjYAB5s6G41.png">
-<meta property="og:image" content="https:&#x2F;&#x2F;i.loli.net&#x2F;2020&#x2F;02&#x2F;03&#x2F;4XY9DRtmj3Blgre.png">
-<meta property="og:image" content="https:&#x2F;&#x2F;i.loli.net&#x2F;2020&#x2F;02&#x2F;03&#x2F;GWXCzd8Ue9nKurm.png">
-<meta property="og:image" content="https:&#x2F;&#x2F;i.loli.net&#x2F;2020&#x2F;02&#x2F;03&#x2F;fqDx69TcVwPe35U.png">
-<meta property="og:image" content="https:&#x2F;&#x2F;i.loli.net&#x2F;2020&#x2F;02&#x2F;03&#x2F;B1OwxPuFb7HNYXc.png">
-<meta property="og:image" content="https:&#x2F;&#x2F;i.loli.net&#x2F;2020&#x2F;02&#x2F;03&#x2F;WzCBA6ThL7qoPMX.png">
-<meta property="og:image" content="https:&#x2F;&#x2F;i.loli.net&#x2F;2020&#x2F;02&#x2F;03&#x2F;EuC8jnDwX24JrPp.png">
-<meta property="og:image" content="https:&#x2F;&#x2F;i.loli.net&#x2F;2020&#x2F;02&#x2F;03&#x2F;tb9lHuMQKn7xAhy.png">
-<meta property="og:image" content="https:&#x2F;&#x2F;i.loli.net&#x2F;2020&#x2F;02&#x2F;03&#x2F;BtPiv147VgqfpZK.png">
-<meta property="og:image" content="https:&#x2F;&#x2F;i.loli.net&#x2F;2020&#x2F;02&#x2F;03&#x2F;5sDUoVdkzvMcNnw.png">
-<meta property="og:image" content="https:&#x2F;&#x2F;i.loli.net&#x2F;2020&#x2F;02&#x2F;03&#x2F;94McTKJ7N5gDpaF.png">
-<meta property="og:image" content="https:&#x2F;&#x2F;i.loli.net&#x2F;2020&#x2F;02&#x2F;03&#x2F;kKFmwp79qXNgCtW.png">
-<meta property="og:image" content="https:&#x2F;&#x2F;i.loli.net&#x2F;2020&#x2F;02&#x2F;03&#x2F;QHGD2U6Wpjtb5mI.png">
-<meta property="og:image" content="https:&#x2F;&#x2F;i.loli.net&#x2F;2020&#x2F;02&#x2F;03&#x2F;cpMKNXrnLdsvh1I.png">
-<meta property="og:image" content="https:&#x2F;&#x2F;i.loli.net&#x2F;2020&#x2F;02&#x2F;03&#x2F;p6rTQwKsfRkEPtO.png">
-<meta property="og:image" content="https:&#x2F;&#x2F;i.loli.net&#x2F;2020&#x2F;02&#x2F;03&#x2F;HzjDa4dU3FyQESt.png">
-<meta property="og:image" content="https:&#x2F;&#x2F;i.loli.net&#x2F;2020&#x2F;02&#x2F;03&#x2F;O5hTurW7HfLawyz.png">
-<meta property="og:image" content="https:&#x2F;&#x2F;i.loli.net&#x2F;2020&#x2F;02&#x2F;03&#x2F;HnYr2uSxUCVblRN.png">
-<meta property="og:image" content="https:&#x2F;&#x2F;i.loli.net&#x2F;2020&#x2F;02&#x2F;03&#x2F;jug7q39TyOEl5Uv.png">
-<meta property="og:image" content="https:&#x2F;&#x2F;i.loli.net&#x2F;2020&#x2F;02&#x2F;03&#x2F;KYwmGE1IiACNlty.png">
-<meta property="og:image" content="https:&#x2F;&#x2F;i.loli.net&#x2F;2020&#x2F;02&#x2F;03&#x2F;V9K8yAF5ovqpfYu.png">
-<meta property="og:image" content="https:&#x2F;&#x2F;i.loli.net&#x2F;2020&#x2F;02&#x2F;03&#x2F;NSJts5pRYHabmuI.png">
-<meta property="og:image" content="https:&#x2F;&#x2F;i.loli.net&#x2F;2020&#x2F;02&#x2F;03&#x2F;FIMcE7QACyBJi8V.png">
-<meta property="og:image" content="https:&#x2F;&#x2F;i.loli.net&#x2F;2020&#x2F;02&#x2F;03&#x2F;ULvH9CngXNY2SfQ.png">
-<meta property="og:image" content="https:&#x2F;&#x2F;i.loli.net&#x2F;2020&#x2F;02&#x2F;03&#x2F;r2xmuBJeasM6NVH.png">
-<meta property="og:image" content="https:&#x2F;&#x2F;i.loli.net&#x2F;2020&#x2F;02&#x2F;03&#x2F;t5v4yEAY6UeLSPj.png">
-<meta property="og:image" content="https:&#x2F;&#x2F;i.loli.net&#x2F;2020&#x2F;02&#x2F;03&#x2F;h4aLlNPW1IiD6nT.png">
-<meta property="og:image" content="https:&#x2F;&#x2F;i.loli.net&#x2F;2020&#x2F;02&#x2F;03&#x2F;94XMJRnPa8bYE3e.png">
-<meta property="og:image" content="https:&#x2F;&#x2F;i.loli.net&#x2F;2020&#x2F;02&#x2F;03&#x2F;i9XoDwdpzhObqcH.png">
-<meta property="og:image" content="https:&#x2F;&#x2F;i.loli.net&#x2F;2020&#x2F;02&#x2F;03&#x2F;xiKTcGe6zON7d8L.png">
-<meta property="og:image" content="https:&#x2F;&#x2F;i.loli.net&#x2F;2020&#x2F;02&#x2F;04&#x2F;iWFAPeQa3kc96Kt.png">
-<meta property="og:image" content="https:&#x2F;&#x2F;i.loli.net&#x2F;2020&#x2F;02&#x2F;04&#x2F;Ar3expYbJXVCj7L.png">
-<meta property="og:image" content="https:&#x2F;&#x2F;i.loli.net&#x2F;2020&#x2F;02&#x2F;04&#x2F;pH26unJlESLYKZ9.png">
-<meta property="og:image" content="https:&#x2F;&#x2F;i.loli.net&#x2F;2020&#x2F;02&#x2F;04&#x2F;WN4a9Knukd5oh1H.png">
-<meta property="og:image" content="https:&#x2F;&#x2F;i.loli.net&#x2F;2020&#x2F;02&#x2F;04&#x2F;OIoYlxQjsV1greF.png">
-<meta property="og:image" content="https:&#x2F;&#x2F;i.loli.net&#x2F;2020&#x2F;02&#x2F;04&#x2F;njQg5yq93vuCXYN.png">
-<meta property="og:image" content="https:&#x2F;&#x2F;i.loli.net&#x2F;2020&#x2F;02&#x2F;04&#x2F;dLfOj9tx2JHqBP5.png">
-<meta property="og:image" content="https:&#x2F;&#x2F;i.loli.net&#x2F;2020&#x2F;02&#x2F;04&#x2F;GUTEVZDzRcYHXv3.png">
-<meta property="og:image" content="https:&#x2F;&#x2F;i.loli.net&#x2F;2020&#x2F;02&#x2F;04&#x2F;TmEJY6WvuNxO23t.png">
-<meta property="og:image" content="https:&#x2F;&#x2F;i.loli.net&#x2F;2020&#x2F;02&#x2F;04&#x2F;uqkzCd7jrvbMpmw.png">
-<meta property="og:image" content="https:&#x2F;&#x2F;i.loli.net&#x2F;2020&#x2F;02&#x2F;04&#x2F;wJ1NAbS9aigzop8.png">
-<meta property="og:image" content="https:&#x2F;&#x2F;i.loli.net&#x2F;2020&#x2F;02&#x2F;04&#x2F;pJHBimPk5DGd1rF.png">
-<meta property="og:image" content="https:&#x2F;&#x2F;i.loli.net&#x2F;2020&#x2F;02&#x2F;04&#x2F;syupZ7jMd6L2e91.png">
-<meta property="og:image" content="https:&#x2F;&#x2F;i.loli.net&#x2F;2020&#x2F;02&#x2F;04&#x2F;tR4zIEkOQeBnDKC.png">
-<meta property="og:image" content="https:&#x2F;&#x2F;i.loli.net&#x2F;2020&#x2F;02&#x2F;04&#x2F;tlK5C3Sfb1BPpHF.png">
-<meta property="og:image" content="https:&#x2F;&#x2F;i.loli.net&#x2F;2020&#x2F;02&#x2F;04&#x2F;GncTOyBzp1a9IXS.png">
-<meta property="og:image" content="https:&#x2F;&#x2F;i.loli.net&#x2F;2020&#x2F;02&#x2F;04&#x2F;Qu71vcEz8mYPlgB.png">
-<meta property="og:image" content="https:&#x2F;&#x2F;i.loli.net&#x2F;2020&#x2F;02&#x2F;04&#x2F;28EWzgrPiL7TuIj.png">
-<meta property="og:image" content="https:&#x2F;&#x2F;i.loli.net&#x2F;2020&#x2F;02&#x2F;04&#x2F;JVjoiPvfyt5XaO3.png">
-<meta property="og:image" content="https:&#x2F;&#x2F;i.loli.net&#x2F;2020&#x2F;02&#x2F;04&#x2F;87J914AgkoSaNQT.png">
+<meta property="og:image" content="https://i.loli.net/2020/02/03/AiDVdhUEBgYKtQz.png">
+<meta property="og:image" content="https://i.loli.net/2020/02/03/zVPmxnUyRLS1Q57.png">
+<meta property="og:image" content="https://i.loli.net/2020/02/03/fwNLboBKaz4qVDI.png">
+<meta property="og:image" content="https://i.loli.net/2020/02/03/T9FYRqJgzxSw4am.png">
+<meta property="og:image" content="https://i.loli.net/2020/02/03/peAd9XNOTvlDib6.png">
+<meta property="og:image" content="https://i.loli.net/2020/02/03/SHIw21EnNCq4mZO.png">
+<meta property="og:image" content="https://i.loli.net/2020/02/03/RvLaVzcdrN3umXO.png">
+<meta property="og:image" content="https://i.loli.net/2020/02/03/PJ9D8QyEMj1sFml.png">
+<meta property="og:image" content="https://i.loli.net/2020/02/03/gJQO9F2SepzR6xy.png">
+<meta property="og:image" content="https://i.loli.net/2020/02/03/ZGHkLWOPjENM6Vg.png">
+<meta property="og:image" content="https://i.loli.net/2020/02/03/3iC2xhWNXGuq8v6.png">
+<meta property="og:image" content="https://i.loli.net/2020/02/03/d58hrDcQ14k7JwV.png">
+<meta property="og:image" content="https://i.loli.net/2020/02/03/hWeQFEwxgnAORzX.png">
+<meta property="og:image" content="https://i.loli.net/2020/02/03/MlcEqYBx6ny3kUK.png">
+<meta property="og:image" content="https://i.loli.net/2020/02/03/r6WleBKoTV4cSta.png">
+<meta property="og:image" content="https://i.loli.net/2020/02/03/4zCUAPQHEgwFdaV.png">
+<meta property="og:image" content="https://i.loli.net/2020/02/03/UF7ujBXEA4ZR9yH.png">
+<meta property="og:image" content="https://i.loli.net/2020/02/03/K2E7bxswA8mhCDc.png">
+<meta property="og:image" content="https://i.loli.net/2020/02/03/KAxoXkQFC6sv7g5.png">
+<meta property="og:image" content="https://i.loli.net/2020/02/03/VzoeUjYAB5s6G41.png">
+<meta property="og:image" content="https://i.loli.net/2020/02/03/4XY9DRtmj3Blgre.png">
+<meta property="og:image" content="https://i.loli.net/2020/02/03/GWXCzd8Ue9nKurm.png">
+<meta property="og:image" content="https://i.loli.net/2020/02/03/fqDx69TcVwPe35U.png">
+<meta property="og:image" content="https://i.loli.net/2020/02/03/B1OwxPuFb7HNYXc.png">
+<meta property="og:image" content="https://i.loli.net/2020/02/03/WzCBA6ThL7qoPMX.png">
+<meta property="og:image" content="https://i.loli.net/2020/02/03/EuC8jnDwX24JrPp.png">
+<meta property="og:image" content="https://i.loli.net/2020/02/03/tb9lHuMQKn7xAhy.png">
+<meta property="og:image" content="https://i.loli.net/2020/02/03/BtPiv147VgqfpZK.png">
+<meta property="og:image" content="https://i.loli.net/2020/02/03/5sDUoVdkzvMcNnw.png">
+<meta property="og:image" content="https://i.loli.net/2020/02/03/94McTKJ7N5gDpaF.png">
+<meta property="og:image" content="https://i.loli.net/2020/02/03/kKFmwp79qXNgCtW.png">
+<meta property="og:image" content="https://i.loli.net/2020/02/03/QHGD2U6Wpjtb5mI.png">
+<meta property="og:image" content="https://i.loli.net/2020/02/03/cpMKNXrnLdsvh1I.png">
+<meta property="og:image" content="https://i.loli.net/2020/02/03/p6rTQwKsfRkEPtO.png">
+<meta property="og:image" content="https://i.loli.net/2020/02/03/HzjDa4dU3FyQESt.png">
+<meta property="og:image" content="https://i.loli.net/2020/02/03/O5hTurW7HfLawyz.png">
+<meta property="og:image" content="https://i.loli.net/2020/02/03/HnYr2uSxUCVblRN.png">
+<meta property="og:image" content="https://i.loli.net/2020/02/03/jug7q39TyOEl5Uv.png">
+<meta property="og:image" content="https://i.loli.net/2020/02/03/KYwmGE1IiACNlty.png">
+<meta property="og:image" content="https://i.loli.net/2020/02/03/V9K8yAF5ovqpfYu.png">
+<meta property="og:image" content="https://i.loli.net/2020/02/03/NSJts5pRYHabmuI.png">
+<meta property="og:image" content="https://i.loli.net/2020/02/03/FIMcE7QACyBJi8V.png">
+<meta property="og:image" content="https://i.loli.net/2020/02/03/ULvH9CngXNY2SfQ.png">
+<meta property="og:image" content="https://i.loli.net/2020/02/03/r2xmuBJeasM6NVH.png">
+<meta property="og:image" content="https://i.loli.net/2020/02/03/t5v4yEAY6UeLSPj.png">
+<meta property="og:image" content="https://i.loli.net/2020/02/03/h4aLlNPW1IiD6nT.png">
+<meta property="og:image" content="https://i.loli.net/2020/02/03/94XMJRnPa8bYE3e.png">
+<meta property="og:image" content="https://i.loli.net/2020/02/03/i9XoDwdpzhObqcH.png">
+<meta property="og:image" content="https://i.loli.net/2020/02/03/xiKTcGe6zON7d8L.png">
+<meta property="og:image" content="https://i.loli.net/2020/02/04/iWFAPeQa3kc96Kt.png">
+<meta property="og:image" content="https://i.loli.net/2020/02/04/Ar3expYbJXVCj7L.png">
+<meta property="og:image" content="https://i.loli.net/2020/02/04/pH26unJlESLYKZ9.png">
+<meta property="og:image" content="https://i.loli.net/2020/02/04/WN4a9Knukd5oh1H.png">
+<meta property="og:image" content="https://i.loli.net/2020/02/04/OIoYlxQjsV1greF.png">
+<meta property="og:image" content="https://i.loli.net/2020/02/04/njQg5yq93vuCXYN.png">
+<meta property="og:image" content="https://i.loli.net/2020/02/04/dLfOj9tx2JHqBP5.png">
+<meta property="og:image" content="https://i.loli.net/2020/02/04/GUTEVZDzRcYHXv3.png">
+<meta property="og:image" content="https://i.loli.net/2020/02/04/TmEJY6WvuNxO23t.png">
+<meta property="og:image" content="https://i.loli.net/2020/02/04/uqkzCd7jrvbMpmw.png">
+<meta property="og:image" content="https://i.loli.net/2020/02/04/wJ1NAbS9aigzop8.png">
+<meta property="og:image" content="https://i.loli.net/2020/02/04/pJHBimPk5DGd1rF.png">
+<meta property="og:image" content="https://i.loli.net/2020/02/04/syupZ7jMd6L2e91.png">
+<meta property="og:image" content="https://i.loli.net/2020/02/04/tR4zIEkOQeBnDKC.png">
+<meta property="og:image" content="https://i.loli.net/2020/02/04/tlK5C3Sfb1BPpHF.png">
+<meta property="og:image" content="https://i.loli.net/2020/02/04/GncTOyBzp1a9IXS.png">
+<meta property="og:image" content="https://i.loli.net/2020/02/04/Qu71vcEz8mYPlgB.png">
+<meta property="og:image" content="https://i.loli.net/2020/02/04/28EWzgrPiL7TuIj.png">
+<meta property="og:image" content="https://i.loli.net/2020/02/04/JVjoiPvfyt5XaO3.png">
+<meta property="og:image" content="https://i.loli.net/2020/02/04/87J914AgkoSaNQT.png">
 <meta property="article:published_time" content="2020-02-02T13:07:00.000Z">
 <meta property="article:modified_time" content="2020-05-28T18:01:04.903Z">
 <meta property="article:author" content="Gemini-Lin">
 <meta property="article:tag" content="建模算法">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https:&#x2F;&#x2F;i.loli.net&#x2F;2020&#x2F;02&#x2F;03&#x2F;AiDVdhUEBgYKtQz.png"><meta name="keywords" content="Gemini-Lin, GeminiPlanet"><meta name="description" content="If you want to tame a person,    you should risk tears."><title>数学建模算法汇总 | GeminiPlanet</title><link ref="canonical" href="https://gemini-lin.github.io/%E6%95%B0%E5%AD%A6%E5%BB%BA%E6%A8%A1%E7%AE%97%E6%B3%95%E6%B1%87%E6%80%BB/"><link rel="dns-prefetch" href="https://cdn.jsdelivr.net"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.12.1/css/all.min.css" type="text/css"><link rel="stylesheet" href="/css/index.css?v=2.0.1"><script>var Stun = window.Stun || {};
+<meta name="twitter:image" content="https://i.loli.net/2020/02/03/AiDVdhUEBgYKtQz.png"><meta name="keywords" content="Gemini-Lin, GeminiPlanet"><meta name="description" content="If you want to tame a person,    you should risk tears."><title>数学建模算法汇总 | GeminiPlanet</title><link ref="canonical" href="https://gemini-lin.github.io/%E6%95%B0%E5%AD%A6%E5%BB%BA%E6%A8%A1%E7%AE%97%E6%B3%95%E6%B1%87%E6%80%BB/"><link rel="alternate" href="/atom.xml" type="application/atom+xml"><link rel="dns-prefetch" href="https://cdn.jsdelivr.net"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.12.1/css/all.min.css" type="text/css"><link rel="stylesheet" href="/css/index.css?v=2.0.1"><script>var Stun = window.Stun || {};
 var CONFIG = {
   root: '/',
   algolia: undefined,
@@ -101,7 +101,7 @@ var CONFIG = {
   sourcePath: {"js":"js","css":"css","images":"images"},
 };
 
-window.CONFIG = CONFIG;</script><meta name="generator" content="Hexo 4.1.1"></head><body><div class="container" id="container"><header class="header" id="header"><div class="header-inner header-inner--height header-inner--bgcolor"><nav class="header-nav header-nav--sticky"><div class="header-nav-inner"><div class="header-nav-menubtn"><i class="fas fa-bars"></i></div><div class="header-nav-menu"><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/"><span class="header-nav-menu-item__icon"><i class="fas fa-home"></i></span><span class="header-nav-menu-item__text">Home</span></a></div><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/archives/"><span class="header-nav-menu-item__icon"><i class="fas fa-folder-open"></i></span><span class="header-nav-menu-item__text">Archives</span></a></div><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/categories/"><span class="header-nav-menu-item__icon"><i class="fas fa-layer-group"></i></span><span class="header-nav-menu-item__text">Categories</span></a></div><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/tags/"><span class="header-nav-menu-item__icon"><i class="fas fa-tags"></i></span><span class="header-nav-menu-item__text">Tags</span></a></div><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/about/"><span class="header-nav-menu-item__icon"><i class="fas fa-user"></i></span><span class="header-nav-menu-item__text">About</span></a></div></div><div class="header-nav-mode"><div class="mode"><div class="mode-track"><span class="mode-track-moon"></span><span class="mode-track-sun"></span></div><div class="mode-thumb"></div></div></div></div></nav></div></header><main class="main" id="main"><div class="main-inner"><div class="content-wrap" id="content-wrap"><div class="content" id="content"><!-- Just used to judge whether it is an article page--><div id="is-post"></div><div class="post"><header class="post-header"><h1 class="post-title">数学建模算法汇总</h1><div class="post-meta"><span class="post-meta-item post-meta-item--createtime"><span class="post-meta-item__icon"><i class="far fa-calendar-plus"></i></span><span class="post-meta-item__info">Created</span><span class="post-meta-item__value">2020-02-02</span></span><span class="post-meta-item post-meta-item--updatetime"><span class="post-meta-item__icon"><i class="far fa-calendar-check"></i></span><span class="post-meta-item__info">Updated</span><span class="post-meta-item__value">2020-05-29</span></span><span class="post-meta-item post-meta-item--wordcount"><span class="post-meta-item__icon"><i class="far fa-file-word"></i></span><span class="post-meta-item__info">Words</span><span class="post-meta-item__value">6.4k</span></span><span class="post-meta-item post-meta-item--readtime"><span class="post-meta-item__icon"><i class="far fa-clock"></i></span><span class="post-meta-item__info">Reading</span><span class="post-meta-item__value">46m</span></span><span class="post-meta-item post-meta-item--visitors"><span class="post-meta-item__icon"><i class="fas fa-eye"></i></span><span class="post-meta-item__info">Visited</span><span class="post-meta-item__value" id="busuanzi_value_page_pv"></span></span></div></header><div class="post-body"><p><img src="https://i.loli.net/2020/02/03/AiDVdhUEBgYKtQz.png" alt="image.png"></p>
+window.CONFIG = CONFIG;</script><meta name="generator" content="Hexo 4.2.1"></head><body><div class="container" id="container"><header class="header" id="header"><div class="header-inner header-inner--height header-inner--bgcolor"><nav class="header-nav header-nav--sticky"><div class="header-nav-inner"><div class="header-nav-menubtn"><i class="fas fa-bars"></i></div><div class="header-nav-menu"><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/"><span class="header-nav-menu-item__icon"><i class="fas fa-home"></i></span><span class="header-nav-menu-item__text">Home</span></a></div><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/archives/"><span class="header-nav-menu-item__icon"><i class="fas fa-folder-open"></i></span><span class="header-nav-menu-item__text">Archives</span></a></div><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/categories/"><span class="header-nav-menu-item__icon"><i class="fas fa-layer-group"></i></span><span class="header-nav-menu-item__text">Categories</span></a></div><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/tags/"><span class="header-nav-menu-item__icon"><i class="fas fa-tags"></i></span><span class="header-nav-menu-item__text">Tags</span></a></div><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/about/"><span class="header-nav-menu-item__icon"><i class="fas fa-user"></i></span><span class="header-nav-menu-item__text">About</span></a></div></div><div class="header-nav-mode"><div class="mode"><div class="mode-track"><span class="mode-track-moon"></span><span class="mode-track-sun"></span></div><div class="mode-thumb"></div></div></div></div></nav></div></header><main class="main" id="main"><div class="main-inner"><div class="content-wrap" id="content-wrap"><div class="content" id="content"><!-- Just used to judge whether it is an article page--><div id="is-post"></div><div class="post"><header class="post-header"><h1 class="post-title">数学建模算法汇总</h1><div class="post-meta"><span class="post-meta-item post-meta-item--createtime"><span class="post-meta-item__icon"><i class="far fa-calendar-plus"></i></span><span class="post-meta-item__info">Created</span><span class="post-meta-item__value">2020-02-02</span></span><span class="post-meta-item post-meta-item--updatetime"><span class="post-meta-item__icon"><i class="far fa-calendar-check"></i></span><span class="post-meta-item__info">Updated</span><span class="post-meta-item__value">2020-05-29</span></span><span class="post-meta-item post-meta-item--wordcount"><span class="post-meta-item__icon"><i class="far fa-file-word"></i></span><span class="post-meta-item__info">Words</span><span class="post-meta-item__value">6.4k</span></span><span class="post-meta-item post-meta-item--readtime"><span class="post-meta-item__icon"><i class="far fa-clock"></i></span><span class="post-meta-item__info">Reading</span><span class="post-meta-item__value">46m</span></span><span class="post-meta-item post-meta-item--visitors"><span class="post-meta-item__icon"><i class="fas fa-eye"></i></span><span class="post-meta-item__info">Visited</span><span class="post-meta-item__value" id="busuanzi_value_page_pv"></span></span></div></header><div class="post-body"><p><img src="https://i.loli.net/2020/02/03/AiDVdhUEBgYKtQz.png" alt="image.png"></p>
 
         <h1 id="优化模型"   >
           <a href="#优化模型" class="heading-link"><i class="fas fa-link"></i></a>优化模型</h1>
@@ -573,7 +573,7 @@ window.CONFIG = CONFIG;</script><meta name="generator" content="Hexo 4.1.1"></he
           主成分分析(Principal components analysis,PCA)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#主成分回归评价-principle-component-regression；PCR"><span class="toc-number">4.3.2.</span> <span class="toc-text">
           主成分回归评价(principle component regression；PCR)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#主成分解释"><span class="toc-number">4.3.3.</span> <span class="toc-text">
           主成分解释</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#数据包络分析-Data-Envelopment-Analysis-DEA"><span class="toc-number">4.3.4.</span> <span class="toc-text">
-          数据包络分析(Data Envelopment Analysis,DEA)</span></a></li></ol></li></ol></li></ol></section><!-- ov = overview--><section class="sidebar-ov hide"><div class="sidebar-ov-author"><div class="sidebar-ov-author__avatar"><img class="sidebar-ov-author__avatar_img" src="https://s1.ax1x.com/2020/05/14/YD6wTI.png" alt="avatar"></div><p class="sidebar-ov-author__text">In me the tiger sniffs the rose</p></div><div class="sidebar-ov-social"><a class="sidebar-ov-social-item" href="https://github.com/Gemini-Lin" target="_blank" rel="noopener" data-popover="Github" data-popover-pos="up"><span class="sidebar-ov-social-item__icon"><i class="fab fa-github"></i></span></a><a class="sidebar-ov-social-item" href="https://www.zhihu.com/people/iye-kong-zhong-zui-liang-de-xing-i" target="_blank" rel="noopener" data-popover="Zhihu" data-popover-pos="up"><span class="sidebar-ov-social-item__icon">知</span></a><a class="sidebar-ov-social-item" href="https://space.bilibili.com/313103161" target="_blank" rel="noopener" data-popover="social.bilibili" data-popover-pos="up"><span class="sidebar-ov-social-item__icon">B</span></a><a class="sidebar-ov-social-item" href="mailto:geminilin@gmail.com" target="_blank" rel="noopener" data-popover="social.E-Mail" data-popover-pos="up"><span class="sidebar-ov-social-item__icon"><i class="fab fa-envelope"></i></span></a></div><div class="sidebar-ov-state"><a class="sidebar-ov-state-item sidebar-ov-state-item--posts" href="/archives/"><div class="sidebar-ov-state-item__count">23</div><div class="sidebar-ov-state-item__name">Archives</div></a><a class="sidebar-ov-state-item sidebar-ov-state-item--categories" href="/categories/"><div class="sidebar-ov-state-item__count">6</div><div class="sidebar-ov-state-item__name">Categories</div></a><a class="sidebar-ov-state-item sidebar-ov-state-item--tags" href="/tags/"><div class="sidebar-ov-state-item__count">22</div><div class="sidebar-ov-state-item__name">Tags</div></a></div><div class="sidebar-ov-cc"><a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en" target="_blank" rel="noopener" data-popover="Creative Commons" data-popover-pos="up"><img src="/images/cc-by-nc-sa.svg"></a></div></section><div class="sidebar-reading"><div class="sidebar-reading-info"><span class="sidebar-reading-info__text">You have read </span><span class="sidebar-reading-info__num">0</span></div><div class="sidebar-reading-line"></div></div></aside></div><div class="clearfix"></div></div></main><footer class="footer" id="footer"><div class="footer-inner"><div><span>Copyright © 2020</span><span class="footer__icon"><i class="fas fa-heart"></i></span><span>Gemini-Lin</span><span class="footer__devider">|</span><span>闽ICP备20012376号</span></div><div class="busuanzi"><span class="busuanzi-siteuv"><span class="busuanzi-siteuv__icon"><i class="fas fa-user"></i></span><span class="busuanzi-siteuv__info">Visitors</span><span class="busuanzi-siteuv__value" id="busuanzi_value_site_uv"></span></span><span class="busuanzi-sitepv"><span class="busuanzi-siteuv__icon"><i class="fas fa-eye"></i></span><span class="busuanzi-siteuv__info">Views</span><span class="busuanzi-siteuv__value" id="busuanzi_value_site_pv"></span></span></div></div></footer><div class="loading-bar" id="loading-bar"><div class="loading-bar__progress"></div></div><div class="back2top" id="back2top"><span class="back2top__icon"><i class="fas fa-rocket"></i></span></div></div><script src="https://cdn.jsdelivr.net/npm/jquery@v3.4.1/dist/jquery.min.js"></script><script src="https://cdn.jsdelivr.net/npm/velocity-animate@1.5.2/velocity.min.js"></script><script src="https://cdn.jsdelivr.net/npm/velocity-animate@1.5.2/velocity.ui.min.js"></script><script src="https://cdn.jsdelivr.net/gh/sukkaw/busuanzi@latest/bsz.pure.mini.js" async></script><script>function loadLivere () {
+          数据包络分析(Data Envelopment Analysis,DEA)</span></a></li></ol></li></ol></li></ol></section><!-- ov = overview--><section class="sidebar-ov hide"><div class="sidebar-ov-author"><div class="sidebar-ov-author__avatar"><img class="sidebar-ov-author__avatar_img" src="https://s1.ax1x.com/2020/05/14/YD6wTI.png" alt="avatar"></div><p class="sidebar-ov-author__text">In me the tiger sniffs the rose</p></div><div class="sidebar-ov-social"><a class="sidebar-ov-social-item" href="https://github.com/Gemini-Lin" target="_blank" rel="noopener" data-popover="Github" data-popover-pos="up"><span class="sidebar-ov-social-item__icon"><i class="fab fa-github"></i></span></a><a class="sidebar-ov-social-item" href="https://www.zhihu.com/people/iye-kong-zhong-zui-liang-de-xing-i" target="_blank" rel="noopener" data-popover="Zhihu" data-popover-pos="up"><span class="sidebar-ov-social-item__icon">知</span></a><a class="sidebar-ov-social-item" href="https://space.bilibili.com/313103161" target="_blank" rel="noopener" data-popover="social.bilibili" data-popover-pos="up"><span class="sidebar-ov-social-item__icon">B</span></a><a class="sidebar-ov-social-item" href="1009712456" target="_blank" rel="noopener" data-popover="QQ" data-popover-pos="up"><span class="sidebar-ov-social-item__icon"><i class="fab fa-qq"></i></span></a><a class="sidebar-ov-social-item" href="mailto:geminilin@gmail.com" target="_blank" rel="noopener" data-popover="social.E-Mail" data-popover-pos="up"><span class="sidebar-ov-social-item__icon"><i class="fab fa-envelope"></i></span></a></div><div class="sidebar-ov-feed"><span class="sidebar-ov-feed-rss"><a class="sidebar-ov-feed-rss__link" href="/atom.xml" target="_blank" rel="noopener"><span class="sidebar-ov-feed-rss__icon"><i class="fas fa-rss"></i></span><span>RSS Subscribe</span></a></span></div><div class="sidebar-ov-state"><a class="sidebar-ov-state-item sidebar-ov-state-item--posts" href="/archives/"><div class="sidebar-ov-state-item__count">23</div><div class="sidebar-ov-state-item__name">Archives</div></a><a class="sidebar-ov-state-item sidebar-ov-state-item--categories" href="/categories/"><div class="sidebar-ov-state-item__count">6</div><div class="sidebar-ov-state-item__name">Categories</div></a><a class="sidebar-ov-state-item sidebar-ov-state-item--tags" href="/tags/"><div class="sidebar-ov-state-item__count">22</div><div class="sidebar-ov-state-item__name">Tags</div></a></div><div class="sidebar-ov-cc"><a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en" target="_blank" rel="noopener" data-popover="Creative Commons" data-popover-pos="up"><img src="/images/cc-by-nc-sa.svg"></a></div></section><div class="sidebar-reading"><div class="sidebar-reading-info"><span class="sidebar-reading-info__text">You have read </span><span class="sidebar-reading-info__num">0</span></div><div class="sidebar-reading-line"></div></div></aside></div><div class="clearfix"></div></div></main><footer class="footer" id="footer"><div class="footer-inner"><div><span>Copyright © 2020</span><span class="footer__icon"><i class="fas fa-heart"></i></span><span>Gemini-Lin</span><span class="footer__devider">|</span><span>闽ICP备20012376号</span></div><div class="busuanzi"><span class="busuanzi-siteuv"><span class="busuanzi-siteuv__icon"><i class="fas fa-user"></i></span><span class="busuanzi-siteuv__info">Visitors</span><span class="busuanzi-siteuv__value" id="busuanzi_value_site_uv"></span></span><span class="busuanzi-sitepv"><span class="busuanzi-siteuv__icon"><i class="fas fa-eye"></i></span><span class="busuanzi-siteuv__info">Views</span><span class="busuanzi-siteuv__value" id="busuanzi_value_site_pv"></span></span></div></div></footer><div class="loading-bar" id="loading-bar"><div class="loading-bar__progress"></div></div><div class="back2top" id="back2top"><span class="back2top__icon"><i class="fas fa-rocket"></i></span></div></div><script src="https://cdn.jsdelivr.net/npm/jquery@v3.4.1/dist/jquery.min.js"></script><script src="https://cdn.jsdelivr.net/npm/velocity-animate@1.5.2/velocity.min.js"></script><script src="https://cdn.jsdelivr.net/npm/velocity-animate@1.5.2/velocity.ui.min.js"></script><script src="https://cdn.jsdelivr.net/gh/sukkaw/busuanzi@latest/bsz.pure.mini.js" async></script><script>function loadLivere () {
   var d = document, s = d.createElement('script');
 
   if (!d.getElementById('lv-container')) {
