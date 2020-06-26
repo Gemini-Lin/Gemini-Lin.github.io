@@ -1356,42 +1356,6 @@ kbd {
   color: var(--color-gray-100);
   background-color: #4dbaff;
 }
-.sidebar-ov-feed {
-  padding: 0.5rem 0;
-  text-align: center;
-}
-.sidebar-ov-feed-icon {
-  margin-right: 0.3em;
-}
-.sidebar-ov-feed-email,
-.sidebar-ov-feed-rss {
-  display: inline-block;
-  width: 50%;
-}
-.sidebar-ov-feed-email__link,
-.sidebar-ov-feed-rss__link {
-  -webkit-transition: color 0.2s ease;
-  -moz-transition: color 0.2s ease;
-  -o-transition: color 0.2s ease;
-  -ms-transition: color 0.2s ease;
-  transition: color 0.2s ease;
-}
-.sidebar-ov-feed-email__icon,
-.sidebar-ov-feed-rss__icon {
-  margin-right: 0.2rem;
-}
-.sidebar-ov-feed-email__link {
-  color: #54bcff;
-}
-.sidebar-ov-feed-email__link:hover {
-  color: #10a1ff;
-}
-.sidebar-ov-feed-rss__link {
-  color: #ff8956;
-}
-.sidebar-ov-feed-rss__link:hover {
-  color: #ff5912;
-}
 .sidebar-ov-state {
   padding: 0.5rem 0;
   text-align: center;
