@@ -1,9 +1,10 @@
-<!DOCTYPE html><html lang="zh-Hans"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="format-detection" content="telephone=no"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="black"><meta name="theme-color" content="#54bcff"><link rel="manifest" href="/manifest.json?v=2.0.1"><link rel="icon" href="/images/icons/favicon.ico?v=2.0.1" type="image/png" sizes="16x16"><link rel="icon" href="/images/icons/favicon.ico?v=2.0.1" type="image/png" sizes="32x32"><meta name="google-site-verification" content="_T_d70fQRwnF8GQJNmmDRbHpjKelZbY-RFDWgS--hAw"><meta name="baidu-site-verification" content="AM9It5Uqy8"><meta name="description" content="运行时数据区域                            程序计数器       程序计数器就是一块较小的内存空间，可以看作是当前线程所执行的字节码的行号指示器，和计组中学到的大致一样。">
+<!DOCTYPE html><html lang="zh-CN"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="format-detection" content="telephone=no"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="black"><meta name="theme-color" content="#54bcff"><link rel="manifest" href="/manifest.json?v=2.0.1"><link rel="icon" href="/images/icons/favicon.ico?v=2.0.1" type="image/png" sizes="16x16"><link rel="icon" href="/images/icons/favicon.ico?v=2.0.1" type="image/png" sizes="32x32"><meta name="google-site-verification" content="_T_d70fQRwnF8GQJNmmDRbHpjKelZbY-RFDWgS--hAw"><meta name="baidu-site-verification" content="AM9It5Uqy8"><meta name="description" content="运行时数据区域                            程序计数器       程序计数器就是一块较小的内存空间，可以看作是当前线程所执行的字节码的行号指示器，和计组中学到的大致一样。">
 <meta property="og:type" content="article">
 <meta property="og:title" content="JVM系列（二）-- Java内存管理">
 <meta property="og:url" content="https://gemini-lin.github.io/JVM%E7%B3%BB%E5%88%97%EF%BC%88%E4%BA%8C%EF%BC%89-Java%E5%86%85%E5%AD%98%E7%AE%A1%E7%90%86/index.html">
 <meta property="og:site_name" content="GeminiPlanet">
 <meta property="og:description" content="运行时数据区域                            程序计数器       程序计数器就是一块较小的内存空间，可以看作是当前线程所执行的字节码的行号指示器，和计组中学到的大致一样。">
+<meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://s1.ax1x.com/2020/05/28/tmAiTO.md.png">
 <meta property="og:image" content="http://ifeve.com/wp-content/uploads/2015/05/JUtH_20121024_RuntimeDataAreas_2_MemoryModel-1.png">
 <meta property="og:image" content="https://s1.ax1x.com/2020/05/28/te5Rcq.png">
@@ -31,19 +32,18 @@ var CONFIG = {
   zoomImage: {"gapAside":"20px"},
   galleryWaterfall: undefined,
   lazyload: false,
-  pjax: undefined,
+  pjax: {"avoidBanner":false},
   externalLink: {"icon":{"enable":true,"name":"fas fa-external-link-alt"}},
   shortcuts: undefined,
-  prompt: {"copyButton":"Copy","copySuccess":"Copy Success","copyError":"Copy Error"},
+  prompt: {"copyButton":"复制","copySuccess":"复制成功","copyError":"复制失败"},
   sourcePath: {"js":"js","css":"css","images":"images"},
 };
 
-window.CONFIG = CONFIG;</script><meta name="generator" content="Hexo 4.2.1"></head><body><div class="container" id="container"><header class="header" id="header"><div class="header-inner header-inner--height header-inner--bgcolor"><nav class="header-nav header-nav--sticky"><div class="header-nav-inner"><div class="header-nav-menubtn"><i class="fas fa-bars"></i></div><div class="header-nav-menu"><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/"><span class="header-nav-menu-item__icon"><i class="fas fa-home"></i></span><span class="header-nav-menu-item__text">Home</span></a></div><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/archives/"><span class="header-nav-menu-item__icon"><i class="fas fa-folder-open"></i></span><span class="header-nav-menu-item__text">Archives</span></a></div><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/categories/"><span class="header-nav-menu-item__icon"><i class="fas fa-layer-group"></i></span><span class="header-nav-menu-item__text">Categories</span></a></div><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/tags/"><span class="header-nav-menu-item__icon"><i class="fas fa-tags"></i></span><span class="header-nav-menu-item__text">Tags</span></a></div><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/about/"><span class="header-nav-menu-item__icon"><i class="fas fa-user"></i></span><span class="header-nav-menu-item__text">About</span></a></div></div><div class="header-nav-search"><span class="header-nav-search__icon"><i class="fas fa-search"></i></span><span class="header-nav-search__text">Search</span></div><div class="header-nav-mode"><div class="mode"><div class="mode-track"><span class="mode-track-moon"></span><span class="mode-track-sun"></span></div><div class="mode-thumb"></div></div></div></div></nav></div></header><main class="main" id="main"><div class="main-inner"><div class="content-wrap" id="content-wrap"><div class="content" id="content"><!-- Just used to judge whether it is an article page--><div id="is-post"></div><div class="post"><header class="post-header"><h1 class="post-title">JVM系列（二）-- Java内存管理</h1><div class="post-meta"><span class="post-meta-item post-meta-item--createtime"><span class="post-meta-item__icon"><i class="far fa-calendar-plus"></i></span><span class="post-meta-item__info">Created</span><span class="post-meta-item__value">2020-05-28</span></span><span class="post-meta-item post-meta-item--updatetime"><span class="post-meta-item__icon"><i class="far fa-calendar-check"></i></span><span class="post-meta-item__info">Updated</span><span class="post-meta-item__value">2020-05-31</span></span><span class="post-meta-item post-meta-item--wordcount"><span class="post-meta-item__icon"><i class="far fa-file-word"></i></span><span class="post-meta-item__info">Words</span><span class="post-meta-item__value">3.2k</span></span><span class="post-meta-item post-meta-item--readtime"><span class="post-meta-item__icon"><i class="far fa-clock"></i></span><span class="post-meta-item__info">Reading</span><span class="post-meta-item__value">22m</span></span><span class="post-meta-item post-meta-item--visitors"><span class="post-meta-item__icon"><i class="fas fa-eye"></i></span><span class="post-meta-item__info">Visited</span><span class="post-meta-item__value" id="busuanzi_value_page_pv"></span></span></div></header><div class="post-body">
-        <h1 id="运行时数据区域"   >
+window.CONFIG = CONFIG;</script><meta name="generator" content="Hexo 4.2.1"></head><body><div class="container" id="container"><header class="header" id="header"><div class="header-inner header-inner--height header-inner--bgcolor"><nav class="header-nav header-nav--sticky"><div class="header-nav-inner"><div class="header-nav-menubtn"><i class="fas fa-bars"></i></div><div class="header-nav-menu"><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/"><span class="header-nav-menu-item__icon"><i class="fas fa-home"></i></span><span class="header-nav-menu-item__text">首页</span></a></div><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/archives/"><span class="header-nav-menu-item__icon"><i class="fas fa-folder-open"></i></span><span class="header-nav-menu-item__text">归档</span></a></div><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/categories/"><span class="header-nav-menu-item__icon"><i class="fas fa-layer-group"></i></span><span class="header-nav-menu-item__text">分类</span></a></div><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/tags/"><span class="header-nav-menu-item__icon"><i class="fas fa-tags"></i></span><span class="header-nav-menu-item__text">标签</span></a></div><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/about/"><span class="header-nav-menu-item__icon"><i class="fas fa-user"></i></span><span class="header-nav-menu-item__text">关于</span></a></div></div><div class="header-nav-search"><span class="header-nav-search__icon"><i class="fas fa-search"></i></span><span class="header-nav-search__text">搜索</span></div><div class="header-nav-mode"><div class="mode"><div class="mode-track"><span class="mode-track-moon"></span><span class="mode-track-sun"></span></div><div class="mode-thumb"></div></div></div></div></nav></div></header><main class="main" id="main"><div class="main-inner"><div class="content-wrap" id="content-wrap"><div class="content" id="content"><!-- Just used to judge whether it is an article page--><div id="is-post"></div><div class="post"><header class="post-header"><h1 class="post-title">JVM系列（二）-- Java内存管理</h1><div class="post-meta"><span class="post-meta-item post-meta-item--createtime"><span class="post-meta-item__icon"><i class="far fa-calendar-plus"></i></span><span class="post-meta-item__info">发表于</span><span class="post-meta-item__value">2020-05-28</span></span><span class="post-meta-item post-meta-item--updatetime"><span class="post-meta-item__icon"><i class="far fa-calendar-check"></i></span><span class="post-meta-item__info">更新于</span><span class="post-meta-item__value">2020-05-31</span></span><span class="post-meta-item post-meta-item--wordcount"><span class="post-meta-item__icon"><i class="far fa-file-word"></i></span><span class="post-meta-item__info">字数统计</span><span class="post-meta-item__value">3.3k</span></span><span class="post-meta-item post-meta-item--readtime"><span class="post-meta-item__icon"><i class="far fa-clock"></i></span><span class="post-meta-item__info">阅读时长</span><span class="post-meta-item__value">23分</span></span><span class="post-meta-item post-meta-item--visitors"><span class="post-meta-item__icon"><i class="fas fa-eye"></i></span><span class="post-meta-item__info">阅读次数</span><span class="post-meta-item__value" id="busuanzi_value_page_pv"></span></span></div></header><div class="post-body"><h1 id="运行时数据区域">
           <a href="#运行时数据区域" class="heading-link"><i class="fas fa-link"></i></a>运行时数据区域</h1>
       <p><a href="https://imgchr.com/i/tmAiTO" target="_blank" rel="noopener"><img src="https://s1.ax1x.com/2020/05/28/tmAiTO.md.png" alt="tmAiTO.md.png"></a></p>
 
-        <h2 id="程序计数器"   >
+        <h2 id="程序计数器">
           <a href="#程序计数器" class="heading-link"><i class="fas fa-link"></i></a>程序计数器</h2>
       <p>程序计数器就是一块较小的内存空间，可以看作是当前线程所执行的字节码的行号指示器，和计组中学到的大致一样。</p>
 <a id="more"></a>
@@ -51,11 +51,11 @@ window.CONFIG = CONFIG;</script><meta name="generator" content="Hexo 4.2.1"></he
 <p>如果线程正在执行的是一个Java方法，这个计算器记录的是正在执行的虚拟机字节码指令的地址；<br>如果正在执行的是本地(Native)方法，这个计数器值则应为空(Undefined)。<br>此内存区域是唯一一个在《Java虚拟机规范》中没有规定任何<code>OutOfMemoryError</code>情况的区域。</p>
 <!--more-->
 
-        <h2 id="Java虚拟机栈"   >
+        <h2 id="Java虚拟机栈">
           <a href="#Java虚拟机栈" class="heading-link"><i class="fas fa-link"></i></a>Java虚拟机栈</h2>
       <p>与程序计数器一样，Java虚拟机栈(Java Virtual Machine Stack)也是<em>线程私有</em>的，它的生命周期与线程相同。虚拟机站描述的是<strong>Java方法执行的线程内存模型</strong>：每个方法被执行的时候，Java虚拟机都会同步创建一个栈帧(Stack Frame:是方法运行期很重要的基础数据结构，后面会补充)用于存储局部变量表、操作数栈、动态连接、方法出口等信息。每一个方法被调用直至执行完毕的过程，就对应着一个栈帧在虚拟机栈中从入栈到出栈。</p>
 
-        <h3 id="局部变量表"   >
+        <h3 id="局部变量表">
           <a href="#局部变量表" class="heading-link"><i class="fas fa-link"></i></a>局部变量表</h3>
       <p>局部变量表存放了编译期可知的各种Java虚拟机<strong>基本数据类型</strong>(boolean、byte、char、short、int、float、long、double)、<strong>对象引用</strong>(reference类型，它并不等同于对象本身，可能是一个指向对象起始地址的引用指针，也可能是指向一个代表对象的句柄或者其他与此对象相关的位置)和<code>returnAddress</code>类型(指向了一条字节码指令的地址)。</p>
 <blockquote>
@@ -72,17 +72,17 @@ window.CONFIG = CONFIG;</script><meta name="generator" content="Hexo 4.2.1"></he
 <p><strong>动态扩展：</strong>HotSpot虚拟机的栈容量是不可以动态扩展的，以前的Classic虚拟机倒是可以。所以在Hotspot虚拟机上是不会由于虚拟机栈无法扩展而导致<code>OutOfMemoryError</code>异常–只要线程申请栈空间成功了就不会有OOM，但是如果申请时失败，仍然是会出现OOM异常的。</p>
 </blockquote>
 
-        <h2 id="本地方法栈"   >
+        <h2 id="本地方法栈">
           <a href="#本地方法栈" class="heading-link"><i class="fas fa-link"></i></a>本地方法栈</h2>
       <p>本地方法栈(Native Method Stacks)与虚拟机栈所发挥的作用是非常相似的，其区别只是虚拟机栈为<em>虚拟机执行Java方法(也就是字节码)服务</em>，而本地方法栈则是<strong>为虚拟机使用到的本地(Native)方法服务</strong>。</p>
 <p>《Java虚拟机规范》对本地方法栈中方法使用的语言、使用方式与数据结构并没有任何强制规定，因此具体的虚拟机可以根据需要自由实现它，甚至有的Java虚拟机（譬如Hot-Spot虚拟机）直接就把本地方法栈和虚拟机栈合二为一。与虚拟机栈一样，本地方法栈也会在栈深度溢出或者栈扩展失败时分别抛出StackOverflowError和OutOfMemoryError异常。</p>
 
-        <h3 id="Native-Method"   >
+        <h3 id="Native-Method">
           <a href="#Native-Method" class="heading-link"><i class="fas fa-link"></i></a>Native Method</h3>
       <p>Native Method就是一个java调用非java代码的接口。一个Native Method是这样一个java的方法：该方法的实现由非java语言实现，比如C。这个特征并非java所特有，很多其它的编程语言都有这一机制，比如在C++中，你可以用extern “C”告知C++编译器去调用一个C的函数。</p>
-<p><span class="exturl"><a class="exturl__link"   href="https://blog.csdn.net/wike163/article/details/6635321"  target="_blank" rel="noopener">详细介绍</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></p>
+<p><span class="exturl"><a class="exturl__link" href="https://blog.csdn.net/wike163/article/details/6635321" target="_blank" rel="noopener">详细介绍</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></p>
 
-        <h2 id="Java堆"   >
+        <h2 id="Java堆">
           <a href="#Java堆" class="heading-link"><i class="fas fa-link"></i></a>Java堆</h2>
       <p>对于Java应用程序来说，<strong>Java堆(Java Heap)</strong>是虚拟机所管理的内存中最大的一块。Java堆是被所有线程共享的一块内存区域，在虚拟机启动时创建。此内存区域的唯一目的就是<strong>存放对象实例</strong>，Java世界里“几乎”所有对象实例都在这里分配内存。</p>
 <blockquote>
@@ -93,20 +93,20 @@ window.CONFIG = CONFIG;</script><meta name="generator" content="Hexo 4.2.1"></he
 <p>根据Java虚拟机规范的规定，Java堆可以处于<strong>物理上不连续的内存空间中，只要逻辑上是连续的即可</strong>，就像我们的磁盘空间一样。在实现时，既可以实现成固定大小的，也可以是可扩展的，不过当前主流的虚拟机都是按照可扩展来实现的（通过-Xmx和-Xms控制）。</p>
 <p>如果在堆中没有内存完成实例分配，并且堆也无法再扩展时，将会抛出<code>OutOfMemoryError</code>异常。</p>
 
-        <h2 id="方法区"   >
+        <h2 id="方法区">
           <a href="#方法区" class="heading-link"><i class="fas fa-link"></i></a>方法区</h2>
       <p>方法区(Method Area)与Java堆一样，是各个线程共享的内存区域，它用于<strong>存储已被虚拟机加载的类型信息、常量、静态变量、即时编译器编译后的代码缓存</strong>等数据。</p>
 <p>方法的执行都是伴随着线程的。<strong>原始类型的本地变量以及引用</strong>都存放在<strong>线程栈</strong>中。而<strong>引用关联的对象</strong>比如String，都存在在<strong>堆中</strong>。</p>
 
-        <h3 id="运行时常量池"   >
+        <h3 id="运行时常量池">
           <a href="#运行时常量池" class="heading-link"><i class="fas fa-link"></i></a>运行时常量池</h3>
       <p><strong>运行时常量池（Runtime Constant Pool）</strong>是方法区的一部分。Class文件中除了有类的版本、字段、方法、接口等描述信息外，还有一项信息是常量池表（Constant PoolTable），用于存放<strong>编译期生成的各种字面量与符号引用</strong>，这部分内容将在类加载后存放到方法区的运行时常量池中。</p>
 
-        <h1 id="HotSpot虚拟机对象"   >
+        <h1 id="HotSpot虚拟机对象">
           <a href="#HotSpot虚拟机对象" class="heading-link"><i class="fas fa-link"></i></a>HotSpot虚拟机对象</h1>
       <p>HotSpot虚拟机在Java堆中对象分配、布局和访问的全过程。</p>
 
-        <h2 id="对象的创建"   >
+        <h2 id="对象的创建">
           <a href="#对象的创建" class="heading-link"><i class="fas fa-link"></i></a>对象的创建</h2>
       <p>遇到一条new指令时的创建过程：</p>
 <ol>
@@ -118,7 +118,7 @@ window.CONFIG = CONFIG;</script><meta name="generator" content="Hexo 4.2.1"></he
 <li>此时，从虚拟机的角度看，对象已经创建好了，但从Java程序的角度看，对象创建才刚刚开始，构造函数还没有执行。</li>
 </ol>
 
-        <h3 id="如何在堆中为新对象划分可用的内存？"   >
+        <h3 id="如何在堆中为新对象划分可用的内存？">
           <a href="#如何在堆中为新对象划分可用的内存？" class="heading-link"><i class="fas fa-link"></i></a>如何在堆中为新对象划分可用的内存？</h3>
       <p><strong>指针碰撞(内存分配规整)</strong></p>
 <ul>
@@ -131,7 +131,7 @@ window.CONFIG = CONFIG;</script><meta name="generator" content="Hexo 4.2.1"></he
 <li>分配内存时，从列表上选取一块足够大的空间分配给对象，并更新列表上的记录。</li>
 </ul>
 
-        <h3 id="如何处理多线程创建对象时，划分内存的指针的同步问题？"   >
+        <h3 id="如何处理多线程创建对象时，划分内存的指针的同步问题？">
           <a href="#如何处理多线程创建对象时，划分内存的指针的同步问题？" class="heading-link"><i class="fas fa-link"></i></a>如何处理多线程创建对象时，划分内存的指针的同步问题？</h3>
       <ul>
 <li>对分配内存空间的动作进行<strong>同步处理(CAS)</strong>;</li>
@@ -143,11 +143,11 @@ window.CONFIG = CONFIG;</script><meta name="generator" content="Hexo 4.2.1"></he
 </li>
 </ul>
 
-        <h2 id="对象的内存布局"   >
+        <h2 id="对象的内存布局">
           <a href="#对象的内存布局" class="heading-link"><i class="fas fa-link"></i></a>对象的内存布局</h2>
       <p>在Hotspot虚拟机里，对象在堆内存中的存储布局可以划分为三个部分：<strong>对象头(Header)、实例数据(Instance Data)和对齐填充(Padding)</strong>。</p>
 
-        <h3 id="对象头"   >
+        <h3 id="对象头">
           <a href="#对象头" class="heading-link"><i class="fas fa-link"></i></a>对象头</h3>
       <p><strong>对象头部分</strong>包括两类信息：</p>
 <ol>
@@ -155,7 +155,7 @@ window.CONFIG = CONFIG;</script><meta name="generator" content="Hexo 4.2.1"></he
 <li><strong>类型指针：</strong>即对象指向它的类型元数据的指针，Java虚拟机通过这个指针确定该对象是哪个类的实例。</li>
 </ol>
 
-        <h3 id="实例数据"   >
+        <h3 id="实例数据">
           <a href="#实例数据" class="heading-link"><i class="fas fa-link"></i></a>实例数据</h3>
       <p>实例数据部分是对象真正存储的有效信息，即我们在程序代码里面所定义的<strong>各种类型的字段内容</strong>，无论是从父类继承下来的，还是在子类中定义的字段都必须记录起来。</p>
 <ul>
@@ -163,25 +163,43 @@ window.CONFIG = CONFIG;</script><meta name="generator" content="Hexo 4.2.1"></he
 <li>默认分配顺序下，父类字段会被分配在子类字段前面。</li>
 </ul>
 
-        <h3 id="对齐填充"   >
+        <h3 id="对齐填充">
           <a href="#对齐填充" class="heading-link"><i class="fas fa-link"></i></a>对齐填充</h3>
       <p>对象的第三部分是对齐填充，这并不是必然存在的，也没有特别的含义，它仅仅起着<strong>占位符</strong>的作用。<br>HotSpot VM要求对象的起始地址必须是<strong>8字节的整数倍</strong>，所以不够要补齐。</p>
 
-        <h2 id="对象的访问定位"   >
+        <h2 id="对象的访问定位">
           <a href="#对象的访问定位" class="heading-link"><i class="fas fa-link"></i></a>对象的访问定位</h2>
       <p>Java 程序需要通过虚拟机栈上的 <strong>reference 数据</strong>来操作堆上的具体对象，reference 数据是一个指向对象的引用，不过如何通过这个引用定位到具体的对象，目前主要有以下两种访问方式：<strong>句柄访问和直接指针访问</strong>。</p>
 
-        <h3 id="句柄访问"   >
+        <h3 id="句柄访问">
           <a href="#句柄访问" class="heading-link"><i class="fas fa-link"></i></a>句柄访问</h3>
       <p>句柄访问会在Java堆中划分一块内存作为句柄池，每一个句柄存放着对象类型数据的指针。</p>
 <p><strong>优势：</strong>对象移动的时候(这在垃圾回收时十分常见)只需改变句柄池中<strong>对象实例数据的指针</strong>，不需要修改Reference本身。<br><img src="https://s1.ax1x.com/2020/05/28/te7VDx.png" alt="te7VDx.png"></p>
 
-        <h3 id="直接指针访问"   >
+        <h3 id="直接指针访问">
           <a href="#直接指针访问" class="heading-link"><i class="fas fa-link"></i></a>直接指针访问</h3>
       <p>直接指针访问方式在Java堆对象的实例数据中存放了一个指向对象实例数据和对象类型数据的指针，在HotSpot中，这个指针会被存放在对象头中。</p>
 <p><strong>优势：</strong>减少了一次指针定位对象实例数据的开销，速度更快。<br><img src="https://s1.ax1x.com/2020/05/28/teHwTK.png" alt="teHwTK.png"></p>
-<p>参考目录：<br><span class="exturl"><a class="exturl__link"   href="http://www.ityouknow.com/jvm/2017/08/25/jvm-memory-structure.html"  target="_blank" rel="noopener">纯洁的微笑</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span><br><span class="exturl"><a class="exturl__link"   href="https://github.com/TangBean/understanding-the-jvm/blob/master/Ch1-Java%E5%86%85%E5%AD%98%E7%AE%A1%E7%90%86%E6%9C%BA%E5%88%B6/00-Java%E5%86%85%E5%AD%98%E5%8C%BA%E5%9F%9F%E8%AF%A6%E8%A7%A3.md"  target="_blank" rel="noopener">Github笔记总结</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span><br>《深入理解java虚拟机》</p>
-</div><footer class="post-footer"><div class="post-ending ending"><div class="ending__text">------ END ------</div></div><div class="post-copyright copyright"><div class="copyright-author"><span class="copyright-author__name">Author: </span><span class="copyright-author__value"><a href="https://Gemini-Lin.github.io">Gemini-Lin</a></span></div><div class="copyright-link"><span class="copyright-link__name">Link: </span><span class="copyright-link__value"><a href="https://gemini-lin.github.io/JVM%E7%B3%BB%E5%88%97%EF%BC%88%E4%BA%8C%EF%BC%89-Java%E5%86%85%E5%AD%98%E7%AE%A1%E7%90%86/">https://gemini-lin.github.io/JVM%E7%B3%BB%E5%88%97%EF%BC%88%E4%BA%8C%EF%BC%89-Java%E5%86%85%E5%AD%98%E7%AE%A1%E7%90%86/</a></span></div><div class="copyright-notice"><span class="copyright-notice__name">Copyright: </span><span class="copyright-notice__value">All articles in this blog are licensed under <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en" rel="external nofollow" target="_blank">BY-NC-SA</a> unless stating additionally</span></div></div><div class="post-tags"><span class="post-tags-item"><span class="post-tags-item__icon"><i class="fas fa-tag"></i></span><a class="post-tags-item__link" href="https://gemini-lin.github.io/tags/JVM/">JVM</a></span><span class="post-tags-item"><span class="post-tags-item__icon"><i class="fas fa-tag"></i></span><a class="post-tags-item__link" href="https://gemini-lin.github.io/tags/%E5%86%85%E5%AD%98%E7%AE%A1%E7%90%86/">内存管理</a></span></div><div class="post-reward reward"><div class="reward-button">Buy me a coffee</div><div class="reward-qrcode"><span class="reward-qrcode-alipay"><img class="reward-qrcode-alipay__img" src="/images/alipay.jpg"><div class="reward-qrcode-alipay__text">Alipay</div></span><span class="reward-qrcode-wechat"><img class="reward-qrcode-wechat__img" src="/images/wechatpay.jpg"><div class="reward-qrcode-wechat__text">Wechat</div></span></div></div><nav class="post-paginator paginator"><div class="paginator-prev"><a class="paginator-prev__link" href="/Data-Structure-and-Algorithms-1/"><span class="paginator-prev__icon"><i class="fas fa-angle-left"></i></span><span class="paginator-prev__text">数据结构与算法篇(一) -- 红黑树</span></a></div><div class="paginator-next"><a class="paginator-next__link" href="/JVM-1/"><span class="paginator-prev__text">JVM系列（一）--Java类的加载机制</span><span class="paginator-next__icon"><i class="fas fa-angle-right"></i></span></a></div></nav></footer></div></div><div class="comments" id="comments"><div id="valine-container"></div></div></div><div class="sidebar-wrap" id="sidebar-wrap"><aside class="sidebar" id="sidebar"><div class="sidebar-nav"><span class="sidebar-nav-toc current">Catalog</span><span class="sidebar-nav-ov">Overview</span></div><section class="sidebar-toc"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#运行时数据区域"><span class="toc-number">1.</span> <span class="toc-text">
+<p>参考目录：<br><span class="exturl"><a class="exturl__link" href="http://www.ityouknow.com/jvm/2017/08/25/jvm-memory-structure.html" target="_blank" rel="noopener">纯洁的微笑</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span><br><span class="exturl"><a class="exturl__link" href="https://github.com/TangBean/understanding-the-jvm/blob/master/Ch1-Java%E5%86%85%E5%AD%98%E7%AE%A1%E7%90%86%E6%9C%BA%E5%88%B6/00-Java%E5%86%85%E5%AD%98%E5%8C%BA%E5%9F%9F%E8%AF%A6%E8%A7%A3.md" target="_blank" rel="noopener">Github笔记总结</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span><br>《深入理解java虚拟机》</p>
+<script>
+        document.querySelectorAll('.github-emoji')
+          .forEach(el => {
+            if (!el.dataset.src) { return; }
+            const img = document.createElement('img');
+            img.style = 'display:none !important;';
+            img.src = el.dataset.src;
+            img.addEventListener('error', () => {
+              img.remove();
+              el.style.color = 'inherit';
+              el.style.backgroundImage = 'none';
+              el.style.background = 'none';
+            });
+            img.addEventListener('load', () => {
+              img.remove();
+            });
+            document.body.appendChild(img);
+          });
+      </script></div><footer class="post-footer"><div class="post-ending ending"><div class="ending__text">------ 本文结束，感谢您的阅读 ------</div></div><div class="post-copyright copyright"><div class="copyright-author"><span class="copyright-author__name">本文作者: </span><span class="copyright-author__value"><a href="https://Gemini-Lin.github.io">Gemini-Lin</a></span></div><div class="copyright-link"><span class="copyright-link__name">本文链接: </span><span class="copyright-link__value"><a href="https://gemini-lin.github.io/JVM%E7%B3%BB%E5%88%97%EF%BC%88%E4%BA%8C%EF%BC%89-Java%E5%86%85%E5%AD%98%E7%AE%A1%E7%90%86/">https://gemini-lin.github.io/JVM%E7%B3%BB%E5%88%97%EF%BC%88%E4%BA%8C%EF%BC%89-Java%E5%86%85%E5%AD%98%E7%AE%A1%E7%90%86/</a></span></div><div class="copyright-notice"><span class="copyright-notice__name">版权声明: </span><span class="copyright-notice__value">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en" rel="external nofollow" target="_blank">BY-NC-SA</a> 许可协议。转载请注明出处！</span></div></div><div class="post-tags"><span class="post-tags-item"><span class="post-tags-item__icon"><i class="fas fa-tag"></i></span><a class="post-tags-item__link" href="https://gemini-lin.github.io/tags/JVM/">JVM</a></span><span class="post-tags-item"><span class="post-tags-item__icon"><i class="fas fa-tag"></i></span><a class="post-tags-item__link" href="https://gemini-lin.github.io/tags/%E5%86%85%E5%AD%98%E7%AE%A1%E7%90%86/">内存管理</a></span></div><div class="post-reward reward"><div class="reward-button">请我喝杯咖啡~</div><div class="reward-qrcode"><span class="reward-qrcode-alipay"><img class="reward-qrcode-alipay__img" src="/images/alipay.jpg"><div class="reward-qrcode-alipay__text">支付宝打赏</div></span><span class="reward-qrcode-wechat"><img class="reward-qrcode-wechat__img" src="/images/wechatpay.jpg"><div class="reward-qrcode-wechat__text">微信打赏</div></span></div></div><nav class="post-paginator paginator"><div class="paginator-prev"><a class="paginator-prev__link" href="/Data-Structure-and-Algorithms-1/"><span class="paginator-prev__icon"><i class="fas fa-angle-left"></i></span><span class="paginator-prev__text">数据结构与算法篇(一) -- 红黑树</span></a></div><div class="paginator-next"><a class="paginator-next__link" href="/JVM-1/"><span class="paginator-prev__text">JVM系列（一）--Java类的加载机制</span><span class="paginator-next__icon"><i class="fas fa-angle-right"></i></span></a></div></nav></footer></div></div><div class="comments" id="comments"><div id="valine-container"></div></div></div><div class="sidebar-wrap" id="sidebar-wrap"><aside class="sidebar" id="sidebar"><div class="sidebar-nav"><span class="sidebar-nav-toc current">文章目录</span><span class="sidebar-nav-ov">站点概览</span></div><section class="sidebar-toc"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#运行时数据区域"><span class="toc-number">1.</span> <span class="toc-text">
           运行时数据区域</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#程序计数器"><span class="toc-number">1.1.</span> <span class="toc-text">
           程序计数器</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Java虚拟机栈"><span class="toc-number">1.2.</span> <span class="toc-text">
           Java虚拟机栈</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#局部变量表"><span class="toc-number">1.2.1.</span> <span class="toc-text">
@@ -201,7 +219,7 @@ window.CONFIG = CONFIG;</script><meta name="generator" content="Hexo 4.2.1"></he
           对齐填充</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#对象的访问定位"><span class="toc-number">2.3.</span> <span class="toc-text">
           对象的访问定位</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#句柄访问"><span class="toc-number">2.3.1.</span> <span class="toc-text">
           句柄访问</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#直接指针访问"><span class="toc-number">2.3.2.</span> <span class="toc-text">
-          直接指针访问</span></a></li></ol></li></ol></li></ol></section><!-- ov = overview--><section class="sidebar-ov hide"><div class="sidebar-ov-author"><div class="sidebar-ov-author__avatar"><img class="sidebar-ov-author__avatar_img" src="https://s1.ax1x.com/2020/05/14/YD6wTI.png" alt="avatar"></div><p class="sidebar-ov-author__text">In me the tiger sniffs the rose</p></div><div class="sidebar-ov-social"><a class="sidebar-ov-social-item" href="https://github.com/Gemini-Lin" target="_blank" rel="noopener" data-popover="Github" data-popover-pos="up"><span class="sidebar-ov-social-item__icon"><i class="fab fa-github"></i></span></a><a class="sidebar-ov-social-item" href="https://www.zhihu.com/people/iye-kong-zhong-zui-liang-de-xing-i" target="_blank" rel="noopener" data-popover="Zhihu" data-popover-pos="up"><span class="sidebar-ov-social-item__icon">知</span></a><a class="sidebar-ov-social-item" href="https://space.bilibili.com/313103161" target="_blank" rel="noopener" data-popover="social.bilibili" data-popover-pos="up"><span class="sidebar-ov-social-item__icon">B</span></a><a class="sidebar-ov-social-item" href="1009712456" target="_blank" rel="noopener" data-popover="QQ" data-popover-pos="up"><span class="sidebar-ov-social-item__icon"><i class="fab fa-qq"></i></span></a><a class="sidebar-ov-social-item" href="mailto:geminilin@gmail.com" target="_blank" rel="noopener" data-popover="social.E-Mail" data-popover-pos="up"><span class="sidebar-ov-social-item__icon"><i class="fab fa-envelope"></i></span></a></div><div class="sidebar-ov-state"><a class="sidebar-ov-state-item sidebar-ov-state-item--posts" href="/archives/"><div class="sidebar-ov-state-item__count">24</div><div class="sidebar-ov-state-item__name">Archives</div></a><a class="sidebar-ov-state-item sidebar-ov-state-item--categories" href="/categories/"><div class="sidebar-ov-state-item__count">6</div><div class="sidebar-ov-state-item__name">Categories</div></a><a class="sidebar-ov-state-item sidebar-ov-state-item--tags" href="/tags/"><div class="sidebar-ov-state-item__count">23</div><div class="sidebar-ov-state-item__name">Tags</div></a></div><div class="sidebar-ov-cc"><a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en" target="_blank" rel="noopener" data-popover="Creative Commons" data-popover-pos="up"><img src="/images/cc-by-nc-sa.svg"></a></div></section><div class="sidebar-reading"><div class="sidebar-reading-info"><span class="sidebar-reading-info__text">You have read </span><span class="sidebar-reading-info__num">0</span></div><div class="sidebar-reading-line"></div></div></aside></div><div class="clearfix"></div></div></main><footer class="footer" id="footer"><div class="footer-inner"><div><span>Copyright © 2020</span><span class="footer__icon"><i class="fas fa-heart"></i></span><span>Gemini-Lin</span><span class="footer__devider">|</span><span>闽ICP备20012376号</span></div><div class="busuanzi"><span class="busuanzi-siteuv"><span class="busuanzi-siteuv__icon"><i class="fas fa-user"></i></span><span class="busuanzi-siteuv__info">Visitors</span><span class="busuanzi-siteuv__value" id="busuanzi_value_site_uv"></span></span><span class="busuanzi-sitepv"><span class="busuanzi-siteuv__icon"><i class="fas fa-eye"></i></span><span class="busuanzi-siteuv__info">Views</span><span class="busuanzi-siteuv__value" id="busuanzi_value_site_pv"></span></span></div></div></footer><div class="loading-bar" id="loading-bar"><div class="loading-bar__progress"></div></div><div class="back2top" id="back2top"><span class="back2top__icon"><i class="fas fa-rocket"></i></span></div></div><div class="search-mask"></div><div class="search-popup"><span class="search-close"></span><div class="search-input"><input placeholder="Search for Posts (Support multiple keywords)"></div><div class="search-results"></div></div><script src="https://cdn.jsdelivr.net/npm/jquery@v3.4.1/dist/jquery.min.js"></script><script src="https://cdn.jsdelivr.net/npm/velocity-animate@1.5.2/velocity.min.js"></script><script src="https://cdn.jsdelivr.net/npm/velocity-animate@1.5.2/velocity.ui.min.js"></script><script src="https://cdn.jsdelivr.net/npm/ribbon.js@latest/dist/ribbon.min.js" size="150" alpha="0.6" zIndex="-1"></script><script>function initSearch() {
+          直接指针访问</span></a></li></ol></li></ol></li></ol></section><!-- ov = overview--><section class="sidebar-ov hide"><div class="sidebar-ov-author"><div class="sidebar-ov-author__avatar"><img class="sidebar-ov-author__avatar_img" src="https://s1.ax1x.com/2020/05/14/YD6wTI.png" alt="avatar"></div><p class="sidebar-ov-author__text">In me the tiger sniffs the rose</p></div><div class="sidebar-ov-social"><a class="sidebar-ov-social-item" href="https://github.com/Gemini-Lin" target="_blank" rel="noopener" data-popover="Github" data-popover-pos="up"><span class="sidebar-ov-social-item__icon"><i class="fab fa-github"></i></span></a><a class="sidebar-ov-social-item" href="https://www.zhihu.com/people/iye-kong-zhong-zui-liang-de-xing-i" target="_blank" rel="noopener" data-popover="知乎" data-popover-pos="up"><span class="sidebar-ov-social-item__icon">知</span></a><a class="sidebar-ov-social-item" href="https://space.bilibili.com/313103161" target="_blank" rel="noopener" data-popover="social.bilibili" data-popover-pos="up"><span class="sidebar-ov-social-item__icon">B</span></a><a class="sidebar-ov-social-item" href="1009712456" target="_blank" rel="noopener" data-popover="QQ" data-popover-pos="up"><span class="sidebar-ov-social-item__icon"><i class="fab fa-qq"></i></span></a><a class="sidebar-ov-social-item" href="mailto:geminilin@gmail.com" target="_blank" rel="noopener" data-popover="social.E-Mail" data-popover-pos="up"><span class="sidebar-ov-social-item__icon"><i class="fab fa-envelope"></i></span></a></div><div class="sidebar-ov-feed"><span class="sidebar-ov-feed-rss"><a class="sidebar-ov-feed-rss__link" href="/atom.xml" target="_blank" rel="noopener"><span class="sidebar-ov-feed-rss__icon"><i class="fas fa-rss"></i></span><span>RSS 订阅</span></a></span></div><div class="sidebar-ov-state"><a class="sidebar-ov-state-item sidebar-ov-state-item--posts" href="/archives/"><div class="sidebar-ov-state-item__count">24</div><div class="sidebar-ov-state-item__name">归档</div></a><a class="sidebar-ov-state-item sidebar-ov-state-item--categories" href="/categories/"><div class="sidebar-ov-state-item__count">6</div><div class="sidebar-ov-state-item__name">分类</div></a><a class="sidebar-ov-state-item sidebar-ov-state-item--tags" href="/tags/"><div class="sidebar-ov-state-item__count">23</div><div class="sidebar-ov-state-item__name">标签</div></a></div><div class="sidebar-ov-cc"><a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en" target="_blank" rel="noopener" data-popover="知识共享许可协议" data-popover-pos="up"><img src="/images/cc-by-nc-sa.svg"></a></div></section><div class="sidebar-reading"><div class="sidebar-reading-info"><span class="sidebar-reading-info__text">你已阅读了 </span><span class="sidebar-reading-info__num">0</span></div><div class="sidebar-reading-line"></div></div></aside></div><div class="clearfix"></div></div></main><footer class="footer" id="footer"><div class="footer-inner"><div><span>Copyright © 2020</span><span class="footer__icon"><i class="fas fa-heart"></i></span><span>Gemini-Lin</span><span class="footer__devider">|</span><span>闽ICP备20012376号</span></div><div class="busuanzi"><span class="busuanzi-siteuv"><span class="busuanzi-siteuv__icon"><i class="fas fa-user"></i></span><span class="busuanzi-siteuv__info">访问人数</span><span class="busuanzi-siteuv__value" id="busuanzi_value_site_uv"></span></span><span class="busuanzi-sitepv"><span class="busuanzi-siteuv__icon"><i class="fas fa-eye"></i></span><span class="busuanzi-siteuv__info">浏览总量</span><span class="busuanzi-siteuv__value" id="busuanzi_value_site_pv"></span></span></div></div></footer><div class="loading-bar" id="loading-bar"><div class="loading-bar__progress"></div></div><div class="back2top" id="back2top"><span class="back2top__icon"><i class="fas fa-rocket"></i></span></div></div><div class="search-mask"></div><div class="search-popup"><span class="search-close"></span><div class="search-input"><input placeholder="搜索文章（支持多关键词，请用空格分隔）"></div><div class="search-results"></div></div><script src="https://cdn.jsdelivr.net/npm/jquery@v3.4.1/dist/jquery.min.js"></script><script src="https://cdn.jsdelivr.net/npm/velocity-animate@1.5.2/velocity.min.js"></script><script src="https://cdn.jsdelivr.net/npm/velocity-animate@1.5.2/velocity.ui.min.js"></script><script src="https://cdn.jsdelivr.net/npm/ribbon.js@latest/dist/ribbon.min.js" size="150" alpha="0.6" zIndex="-1"></script><script>function initSearch() {
   var isXML = true;
   var search_path = 'search.xml';
 
@@ -245,7 +263,7 @@ window.CONFIG = CONFIG;</script><meta name="generator" content="Hexo 4.2.1"></he
           datas.forEach(function (data) {
             var isMatch  = false;
             // 没有标题的文章使用预设的 i18n 变量代替
-            var title = (data.title && data.title.trim()) || '[ Untitled ]';
+            var title = (data.title && data.title.trim()) || '[ 文章无标题 ]';
             var titleLower = title && title.toLowerCase();
             // 删除 HTML 标签 和 所有空白字符
             var content = data.content && data.content.replace(/<[^>]+>/g, '');
@@ -441,7 +459,85 @@ window.addEventListener('DOMContentLoaded', function () {
   };
 
   Stun.utils.pjaxReloadLocalSearch();
-}, false);</script><script src="https://cdn.jsdelivr.net/gh/sukkaw/busuanzi@latest/bsz.pure.mini.js" async></script><script src="https://cdn.jsdelivr.net/npm/leancloud-storage@latest/dist/av-min.js"></script><script src="https://cdn.jsdelivr.net/npm/valine@latest/dist/Valine.min.js"></script><script>function loadValine () {
+}, false);</script><script src="https://cdn.jsdelivr.net/npm/pjax@latest/pjax.min.js"></script><script>window.addEventListener('DOMContentLoaded', function () {
+  var pjax = new Pjax({"selectors":["head title","#main",".pjax-reload",".header-inner"],"history":true,"scrollTo":false,"scrollRestoration":false,"cacheBust":false,"debug":false,"currentUrlFullReload":false,"timeout":0});
+  // 加载进度条的计时器
+  var loadingTimer = null;
+
+  // 重置页面 Y 方向上的滚动偏移量
+  document.addEventListener('pjax:send', function () {
+    $('.header-nav-menu').removeClass('show');
+    if (CONFIG.pjax && CONFIG.pjax.avoidBanner) {
+      $('html').velocity('scroll', {
+        duration: 500,
+        offset: $('#header').height(),
+        easing: 'easeInOutCubic'
+      });
+    }
+
+    var loadingBarWidth = 20;
+    var MAX_LOADING_WIDTH = 95;
+
+    $('.loading-bar').addClass('loading');
+    $('.loading-bar__progress').css('width', loadingBarWidth + '%');
+    clearInterval(loadingTimer);
+    loadingTimer = setInterval(function () {
+      loadingBarWidth += 3;
+      if (loadingBarWidth > MAX_LOADING_WIDTH) {
+        loadingBarWidth = MAX_LOADING_WIDTH;
+      }
+      $('.loading-bar__progress').css('width', loadingBarWidth + '%');
+    }, 500);
+  }, false);
+
+  window.addEventListener('pjax:complete', function () {
+    clearInterval(loadingTimer);
+    $('.loading-bar__progress').css('width', '100%');
+    $('.loading-bar').removeClass('loading');
+    setTimeout(function () {
+      $('.loading-bar__progress').css('width', '0');
+    }, 400);
+    $('link[rel=prefetch], script[data-pjax-rm]').each(function () {
+      $(this).remove();
+    });
+    $('script[data-pjax], #pjax-reload script').each(function () {
+      $(this).parent().append($(this).remove());
+    });
+
+    if (Stun.utils.pjaxReloadBoot) {
+      Stun.utils.pjaxReloadBoot();
+    }
+    if (Stun.utils.pjaxReloadScroll) {
+      Stun.utils.pjaxReloadScroll();
+    }
+    if (Stun.utils.pjaxReloadSidebar) {
+      Stun.utils.pjaxReloadSidebar();
+    }
+    if (true) {
+      if (Stun.utils.pjaxReloadHeader) {
+        Stun.utils.pjaxReloadHeader();
+      }
+      if (Stun.utils.pjaxReloadScrollIcon) {
+        Stun.utils.pjaxReloadScrollIcon();
+      }
+      if (Stun.utils.pjaxReloadLocalSearch) {
+        Stun.utils.pjaxReloadLocalSearch();
+      }
+    }
+  }, false);
+}, false);</script><div id="pjax-reload"><script src="https://cdn.jsdelivr.net/npm/quicklink@1.0.1/dist/quicklink.umd.js"></script><script>function initQuicklink() {
+  quicklink({
+    timeout: '10000',
+    priority: true,
+    ignores: [uri => uri.includes('#'), uri => uri === 'https://gemini-lin.github.io/JVM%E7%B3%BB%E5%88%97%EF%BC%88%E4%BA%8C%EF%BC%89-Java%E5%86%85%E5%AD%98%E7%AE%A1%E7%90%86/', /\/api\/?/,uri => uri.includes('.xml'),uri => uri.includes('.zip'),(uri, el) => el.hasAttribute('nofollow'),(uri, el) => el.hasAttribute('noprefetch')]
+  });
+}
+
+if (true || false) {
+  initQuicklink();
+} else {
+  window.addEventListener('DOMContentLoaded', initQuicklink, false);
+}</script><script src="https://cdn.jsdelivr.net/gh/sukkaw/busuanzi@latest/bsz.pure.mini.js" async></script></div><script src="https://cdn.jsdelivr.net/npm/leancloud-storage@latest/dist/av-min.js"></script><script src="https://cdn.jsdelivr.net/npm/valine@latest/dist/Valine.min.js"></script><script data-pjax="">function loadValine () {
   var GUEST_INFO = ['nick', 'mail', 'link'];
   var guest_info = 'nick,mail,link';
 
@@ -465,8 +561,8 @@ window.addEventListener('DOMContentLoaded', function () {
   });
 }
 
-if (false) {
+if (true) {
   loadValine();
 } else {
   window.addEventListener('DOMContentLoaded', loadValine, false);
-}</script><script src="/js/utils.js?v=2.0.1"></script><script src="/js/stun-boot.js?v=2.0.1"></script><script src="/js/scroll.js?v=2.0.1"></script><script src="/js/header.js?v=2.0.1"></script><script src="/js/sidebar.js?v=2.0.1"></script><script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"log":false,"pluginJsPath":"lib/","pluginModelPath":"assets/","pluginRootPath":"live2dw/","tagMode":false});</script></body></html>
+}</script><script src="/js/utils.js?v=2.0.1"></script><script src="/js/stun-boot.js?v=2.0.1"></script><script src="/js/scroll.js?v=2.0.1"></script><script src="/js/header.js?v=2.0.1"></script><script src="/js/sidebar.js?v=2.0.1"></script></body></html>

@@ -1,13 +1,14 @@
-<!DOCTYPE html><html lang="zh-Hans"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="format-detection" content="telephone=no"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="black"><meta name="theme-color" content="#54bcff"><link rel="manifest" href="/manifest.json?v=2.0.1"><link rel="icon" href="/images/icons/favicon.ico?v=2.0.1" type="image/png" sizes="16x16"><link rel="icon" href="/images/icons/favicon.ico?v=2.0.1" type="image/png" sizes="32x32"><meta name="google-site-verification" content="_T_d70fQRwnF8GQJNmmDRbHpjKelZbY-RFDWgS--hAw"><meta name="baidu-site-verification" content="AM9It5Uqy8"><meta name="description" content="Free Talk       在学习编程的这两年里，无数次的遇到正则表达式，不管是在Python还是Java中，正则表达式都是绕不开的话题。今天打算写一篇正则表达式的总结文章，一是为了学习，二是为了日后查阅复制方便。发现了Github上有一个超好的学习资料，将在上面做一些修改，作为总结。同时限于篇幅，只写了常用部分，更多内容请见learn-regex">
+<!DOCTYPE html><html lang="zh-CN"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="format-detection" content="telephone=no"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="black"><meta name="theme-color" content="#54bcff"><link rel="manifest" href="/manifest.json?v=2.0.1"><link rel="icon" href="/images/icons/favicon.ico?v=2.0.1" type="image/png" sizes="16x16"><link rel="icon" href="/images/icons/favicon.ico?v=2.0.1" type="image/png" sizes="32x32"><meta name="google-site-verification" content="_T_d70fQRwnF8GQJNmmDRbHpjKelZbY-RFDWgS--hAw"><meta name="baidu-site-verification" content="AM9It5Uqy8"><meta name="description" content="Free Talk       在学习编程的这两年里，无数次的遇到正则表达式，不管是在Python还是Java中，正则表达式都是绕不开的话题。今天打算写一篇正则表达式的总结文章，一是为了学习，二是为了日后查阅复制方便。发现了Github上有一个超好的学习资料，将在上面做一些修改，作为总结。同时限于篇幅，只写了常用部分，更多内容请见learn-regex">
 <meta property="og:type" content="article">
 <meta property="og:title" content="正则表达式">
 <meta property="og:url" content="https://gemini-lin.github.io/regex/index.html">
 <meta property="og:site_name" content="GeminiPlanet">
 <meta property="og:description" content="Free Talk       在学习编程的这两年里，无数次的遇到正则表达式，不管是在Python还是Java中，正则表达式都是绕不开的话题。今天打算写一篇正则表达式的总结文章，一是为了学习，二是为了日后查阅复制方便。发现了Github上有一个超好的学习资料，将在上面做一些修改，作为总结。同时限于篇幅，只写了常用部分，更多内容请见learn-regex">
+<meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://s1.ax1x.com/2020/06/18/NeplQJ.png">
 <meta property="og:image" content="https://s1.ax1x.com/2020/06/18/NevH1J.png">
 <meta property="article:published_time" content="2020-06-17T13:04:57.000Z">
-<meta property="article:modified_time" content="2020-06-25T11:24:02.658Z">
+<meta property="article:modified_time" content="2020-06-28T08:45:28.283Z">
 <meta property="article:author" content="Gemini-Lin">
 <meta property="article:tag" content="正则表达式">
 <meta name="twitter:card" content="summary">
@@ -27,97 +28,114 @@ var CONFIG = {
   zoomImage: {"gapAside":"20px"},
   galleryWaterfall: undefined,
   lazyload: false,
-  pjax: undefined,
+  pjax: {"avoidBanner":false},
   externalLink: {"icon":{"enable":true,"name":"fas fa-external-link-alt"}},
   shortcuts: undefined,
-  prompt: {"copyButton":"Copy","copySuccess":"Copy Success","copyError":"Copy Error"},
+  prompt: {"copyButton":"复制","copySuccess":"复制成功","copyError":"复制失败"},
   sourcePath: {"js":"js","css":"css","images":"images"},
 };
 
-window.CONFIG = CONFIG;</script><meta name="generator" content="Hexo 4.2.1"></head><body><div class="container" id="container"><header class="header" id="header"><div class="header-inner header-inner--height header-inner--bgcolor"><nav class="header-nav header-nav--sticky"><div class="header-nav-inner"><div class="header-nav-menubtn"><i class="fas fa-bars"></i></div><div class="header-nav-menu"><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/"><span class="header-nav-menu-item__icon"><i class="fas fa-home"></i></span><span class="header-nav-menu-item__text">Home</span></a></div><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/archives/"><span class="header-nav-menu-item__icon"><i class="fas fa-folder-open"></i></span><span class="header-nav-menu-item__text">Archives</span></a></div><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/categories/"><span class="header-nav-menu-item__icon"><i class="fas fa-layer-group"></i></span><span class="header-nav-menu-item__text">Categories</span></a></div><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/tags/"><span class="header-nav-menu-item__icon"><i class="fas fa-tags"></i></span><span class="header-nav-menu-item__text">Tags</span></a></div><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/about/"><span class="header-nav-menu-item__icon"><i class="fas fa-user"></i></span><span class="header-nav-menu-item__text">About</span></a></div></div><div class="header-nav-search"><span class="header-nav-search__icon"><i class="fas fa-search"></i></span><span class="header-nav-search__text">Search</span></div><div class="header-nav-mode"><div class="mode"><div class="mode-track"><span class="mode-track-moon"></span><span class="mode-track-sun"></span></div><div class="mode-thumb"></div></div></div></div></nav></div></header><main class="main" id="main"><div class="main-inner"><div class="content-wrap" id="content-wrap"><div class="content" id="content"><!-- Just used to judge whether it is an article page--><div id="is-post"></div><div class="post"><header class="post-header"><h1 class="post-title">正则表达式</h1><div class="post-meta"><span class="post-meta-item post-meta-item--createtime"><span class="post-meta-item__icon"><i class="far fa-calendar-plus"></i></span><span class="post-meta-item__info">Created</span><span class="post-meta-item__value">2020-06-17</span></span><span class="post-meta-item post-meta-item--updatetime"><span class="post-meta-item__icon"><i class="far fa-calendar-check"></i></span><span class="post-meta-item__info">Updated</span><span class="post-meta-item__value">2020-06-25</span></span><span class="post-meta-item post-meta-item--wordcount"><span class="post-meta-item__icon"><i class="far fa-file-word"></i></span><span class="post-meta-item__info">Words</span><span class="post-meta-item__value">1.3k</span></span><span class="post-meta-item post-meta-item--readtime"><span class="post-meta-item__icon"><i class="far fa-clock"></i></span><span class="post-meta-item__info">Reading</span><span class="post-meta-item__value">10m</span></span><span class="post-meta-item post-meta-item--visitors"><span class="post-meta-item__icon"><i class="fas fa-eye"></i></span><span class="post-meta-item__info">Visited</span><span class="post-meta-item__value" id="busuanzi_value_page_pv"></span></span></div></header><div class="post-body">
-        <h1 id="Free-Talk"   >
+window.CONFIG = CONFIG;</script><meta name="generator" content="Hexo 4.2.1"></head><body><div class="container" id="container"><header class="header" id="header"><div class="header-inner header-inner--height header-inner--bgcolor"><nav class="header-nav header-nav--sticky"><div class="header-nav-inner"><div class="header-nav-menubtn"><i class="fas fa-bars"></i></div><div class="header-nav-menu"><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/"><span class="header-nav-menu-item__icon"><i class="fas fa-home"></i></span><span class="header-nav-menu-item__text">首页</span></a></div><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/archives/"><span class="header-nav-menu-item__icon"><i class="fas fa-folder-open"></i></span><span class="header-nav-menu-item__text">归档</span></a></div><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/categories/"><span class="header-nav-menu-item__icon"><i class="fas fa-layer-group"></i></span><span class="header-nav-menu-item__text">分类</span></a></div><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/tags/"><span class="header-nav-menu-item__icon"><i class="fas fa-tags"></i></span><span class="header-nav-menu-item__text">标签</span></a></div><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/about/"><span class="header-nav-menu-item__icon"><i class="fas fa-user"></i></span><span class="header-nav-menu-item__text">关于</span></a></div></div><div class="header-nav-search"><span class="header-nav-search__icon"><i class="fas fa-search"></i></span><span class="header-nav-search__text">搜索</span></div><div class="header-nav-mode"><div class="mode"><div class="mode-track"><span class="mode-track-moon"></span><span class="mode-track-sun"></span></div><div class="mode-thumb"></div></div></div></div></nav></div></header><main class="main" id="main"><div class="main-inner"><div class="content-wrap" id="content-wrap"><div class="content" id="content"><!-- Just used to judge whether it is an article page--><div id="is-post"></div><div class="post"><header class="post-header"><h1 class="post-title">正则表达式</h1><div class="post-meta"><span class="post-meta-item post-meta-item--createtime"><span class="post-meta-item__icon"><i class="far fa-calendar-plus"></i></span><span class="post-meta-item__info">发表于</span><span class="post-meta-item__value">2020-06-17</span></span><span class="post-meta-item post-meta-item--updatetime"><span class="post-meta-item__icon"><i class="far fa-calendar-check"></i></span><span class="post-meta-item__info">更新于</span><span class="post-meta-item__value">2020-06-28</span></span><span class="post-meta-item post-meta-item--wordcount"><span class="post-meta-item__icon"><i class="far fa-file-word"></i></span><span class="post-meta-item__info">字数统计</span><span class="post-meta-item__value">1.3k</span></span><span class="post-meta-item post-meta-item--readtime"><span class="post-meta-item__icon"><i class="far fa-clock"></i></span><span class="post-meta-item__info">阅读时长</span><span class="post-meta-item__value">11分</span></span><span class="post-meta-item post-meta-item--visitors"><span class="post-meta-item__icon"><i class="fas fa-eye"></i></span><span class="post-meta-item__info">阅读次数</span><span class="post-meta-item__value" id="busuanzi_value_page_pv"></span></span></div></header><div class="post-body"><h1 id="Free-Talk">
           <a href="#Free-Talk" class="heading-link"><i class="fas fa-link"></i></a>Free Talk</h1>
-      <p>在学习编程的这两年里，无数次的遇到正则表达式，不管是在Python还是Java中，正则表达式都是绕不开的话题。<br>今天打算写一篇正则表达式的总结文章，一是为了学习，二是为了日后查阅复制方便。<br>发现了Github上有一个超好的学习资料，将在上面做一些修改，作为总结。同时限于篇幅，只写了常用部分，更多内容请见<span class="exturl"><a class="exturl__link"   href="https://github.com/ziishaned/learn-regex"  target="_blank" rel="noopener">learn-regex</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></p>
+      <p>在学习编程的这两年里，无数次的遇到正则表达式，不管是在Python还是Java中，正则表达式都是绕不开的话题。<br>今天打算写一篇正则表达式的总结文章，一是为了学习，二是为了日后查阅复制方便。<br>发现了Github上有一个超好的学习资料，将在上面做一些修改，作为总结。同时限于篇幅，只写了常用部分，更多内容请见<span class="exturl"><a class="exturl__link" href="https://github.com/ziishaned/learn-regex" target="_blank" rel="noopener">learn-regex</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></p>
 <a id="more"></a>
 
-        <h1 id="1-基本匹配"   >
+        <h1 id="1-基本匹配">
           <a href="#1-基本匹配" class="heading-link"><i class="fas fa-link"></i></a>1.基本匹配</h1>
       <p>正则表达式其实就是在执行搜索时的格式，它由一些字母和数字组合而成。 例如：一个正则表达式 the，它表示一个规则：由字母t开始，接着是h，再接着是e。<br>同时正则表达式是大小写的敏感的，所以the不会匹配The。</p>
 
-        <h1 id="2-元字符"   >
+        <h1 id="2-元字符">
           <a href="#2-元字符" class="heading-link"><i class="fas fa-link"></i></a>2.元字符</h1>
       <p>正则表达式的核心就是元字符的匹配，元字符的描述如下图所示。<br><img src="https://s1.ax1x.com/2020/06/18/NeplQJ.png" alt="NeplQJ.png"></p>
 
-        <h2 id="2-1点运算符"   >
+        <h2 id="2-1点运算符">
           <a href="#2-1点运算符" class="heading-link"><i class="fas fa-link"></i></a>2.1点运算符.</h2>
       <p>.是元字符中最简单的例子。 .匹配任意单个字符，但不匹配换行符。</p>
-<figure class="highlight coq"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">".ar"</span> =&gt; The car parked <span class="built_in">in</span> the garage.</span><br></pre></td></tr></table></div></figure>
+<figure class="highlight coq"><div class="table-container"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">".ar"</span> =&gt; The car parked <span class="built_in">in</span> the garage.</span><br></pre></td></tr></tbody></table></div></figure>
 
-        <h2 id="2-2字符集"   >
+        <h2 id="2-2字符集">
           <a href="#2-2字符集" class="heading-link"><i class="fas fa-link"></i></a>2.2字符集</h2>
       <p>[ ]方括号用来指定一个字符集。在[ ]方括号中使用连字符-来指定字符集的范围。<br>在方括号中的字符集不关心顺序。例如，表达式<code>[Tt]he</code> 匹配 the 和 The。</p>
-<figure class="highlight coq"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">"[Tt]he"</span> =&gt; The car parked <span class="built_in">in</span> the garage.</span><br></pre></td></tr></table></div></figure>
+<figure class="highlight coq"><div class="table-container"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">"[Tt]he"</span> =&gt; The car parked <span class="built_in">in</span> the garage.</span><br></pre></td></tr></tbody></table></div></figure>
 <p>方括号中的句号就表示句号。表达式 ar[.] 匹配 ar.字符串</p>
-<figure class="highlight livecodeserver"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">"ar[.]"</span> =&gt; A garage is <span class="keyword">a</span> good place <span class="built_in">to</span> park <span class="keyword">a</span> car.</span><br></pre></td></tr></table></div></figure>
+<figure class="highlight livecodeserver"><div class="table-container"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">"ar[.]"</span> =&gt; A garage is <span class="keyword">a</span> good place <span class="built_in">to</span> park <span class="keyword">a</span> car.</span><br></pre></td></tr></tbody></table></div></figure>
 
-        <h3 id="2-2-1否定字符集"   >
+        <h3 id="2-2-1否定字符集">
           <a href="#2-2-1否定字符集" class="heading-link"><i class="fas fa-link"></i></a>2.2.1否定字符集</h3>
       <p>一般来说 <code>^</code> 表示一个字符串的开头，但它用在一个方括号的开头<code>[^]</code>的时候，它表示这个字符集是否定的。 例如，表达式<code>[^c]ar</code> 匹配一个ar前面非c的任意字符。如下面的par、gar而非car。</p>
-<figure class="highlight coq"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">"[^c]ar"</span> =&gt; The car parked <span class="built_in">in</span> the garage.</span><br></pre></td></tr></table></div></figure>
+<figure class="highlight coq"><div class="table-container"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">"[^c]ar"</span> =&gt; The car parked <span class="built_in">in</span> the garage.</span><br></pre></td></tr></tbody></table></div></figure>
 
-        <h2 id="2-3重复次数"   >
+        <h2 id="2-3重复次数">
           <a href="#2-3重复次数" class="heading-link"><i class="fas fa-link"></i></a>2.3重复次数</h2>
       <p>后面跟着元字符 <code>+</code>，<code>*</code> or <code>?</code> 的，用来指定匹配子模式的次数。 这些元字符在不同的情况下有着不同的意思。</p>
 
-        <h3 id="2-3-1-号"   >
+        <h3 id="2-3-1-号">
           <a href="#2-3-1-号" class="heading-link"><i class="fas fa-link"></i></a>2.3.1*号</h3>
       <p><code>*</code>号匹配在 <code>*</code>之前的字符出现<strong>大于等于0次</strong>。 例如，表达式 <code>a*</code> 匹配0或更多个以a开头的字符。表达式<code>[a-z]*</code> 匹配一个行中所有以小写字母开头的字符串。</p>
-<figure class="highlight livecodeserver"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">"[a-z]*"</span> =&gt; The car parked <span class="keyword">in</span> <span class="keyword">the</span> garage <span class="comment">#21.</span></span><br></pre></td></tr></table></div></figure>
+<figure class="highlight livecodeserver"><div class="table-container"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">"[a-z]*"</span> =&gt; The car parked <span class="keyword">in</span> <span class="keyword">the</span> garage <span class="comment">#21.</span></span><br></pre></td></tr></tbody></table></div></figure>
 <p><code>*</code>字符和<code>.</code>字符搭配可以匹配所有的字符<code>.*</code>。 <code>*</code>和表示匹配空格的符号<code>\s</code>连起来用，如表达式<code>\s*cat\s*</code>匹配0或更多个空格开头和0或更多个空格结尾的cat字符串。</p>
-<figure class="highlight dart"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">"\s*cat\s*"</span> =&gt; The fat cat sat <span class="keyword">on</span> the concatenation.</span><br></pre></td></tr></table></div></figure>
+<figure class="highlight dart"><div class="table-container"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">"\s*cat\s*"</span> =&gt; The fat cat sat <span class="keyword">on</span> the concatenation.</span><br></pre></td></tr></tbody></table></div></figure>
 
-        <h3 id="2-3-2-号"   >
+        <h3 id="2-3-2-号">
           <a href="#2-3-2-号" class="heading-link"><i class="fas fa-link"></i></a>2.3.2+号</h3>
       <p><code>+</code>号匹配<code>+</code>号之前的字符出现 <strong>&gt;=1 次</strong>。 例如表达式<code>c.+t</code>匹配以首字母c开头以t结尾，中间跟着至少一个字符的字符串。</p>
-<figure class="highlight stata"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">"c.+t"</span> =&gt; The fat <span class="keyword">cat</span> sat <span class="keyword">on</span> the <span class="keyword">mat</span>.</span><br></pre></td></tr></table></div></figure>
+<figure class="highlight stata"><div class="table-container"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">"c.+t"</span> =&gt; The fat <span class="keyword">cat</span> sat <span class="keyword">on</span> the <span class="keyword">mat</span>.</span><br></pre></td></tr></tbody></table></div></figure>
 
-        <h3 id="2-3-3-号"   >
+        <h3 id="2-3-3-号">
           <a href="#2-3-3-号" class="heading-link"><i class="fas fa-link"></i></a>2.3.3?号</h3>
       <p>在正则表达式中元字符 <code>?</code>标记在符号前面的字符为可选，即<strong>出现 0 或 1 次</strong>。 例如，表达式 <code>[T]?he</code> 匹配字符串 he 和 The。</p>
-<figure class="highlight dart"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">"[T]he"</span> =&gt; The car <span class="keyword">is</span> parked <span class="keyword">in</span> the garage.</span><br><span class="line"><span class="string">"[T]?he"</span> =&gt; The car <span class="keyword">is</span> parked <span class="keyword">in</span> the garage.</span><br></pre></td></tr></table></div></figure>
+<figure class="highlight dart"><div class="table-container"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">"[T]he"</span> =&gt; The car <span class="keyword">is</span> parked <span class="keyword">in</span> the garage.</span><br><span class="line"><span class="string">"[T]?he"</span> =&gt; The car <span class="keyword">is</span> parked <span class="keyword">in</span> the garage.</span><br></pre></td></tr></tbody></table></div></figure>
 
-        <h2 id="2-4-号"   >
+        <h2 id="2-4-号">
           <a href="#2-4-号" class="heading-link"><i class="fas fa-link"></i></a>2.4{}号</h2>
       <p>在正则表达式中 <code>{}</code>是一个量词，常用来限定一个或一组字符可以重复出现的次数。 例如，表达式 <code>[0-9]{2,3}</code>匹配最少 2 位最多 3 位 0~9 的数字。</p>
-<figure class="highlight livescript"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">"[0-9]&#123;2,3&#125;"</span> =&gt; The number was <span class="number">9.9997</span> but we rounded <span class="literal">it</span> <span class="literal">off</span> <span class="keyword">to</span> <span class="number">10.0</span>.</span><br></pre></td></tr></table></div></figure>
+<figure class="highlight livescript"><div class="table-container"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">"[0-9]{2,3}"</span> =&gt; The number was <span class="number">9.9997</span> but we rounded <span class="literal">it</span> <span class="literal">off</span> <span class="keyword">to</span> <span class="number">10.0</span>.</span><br></pre></td></tr></tbody></table></div></figure>
 <p>我们可以省略第二个参数。 例如，<code>[0-9]{2,}</code> 匹配至少两位 0~9 的数字。</p>
-<figure class="highlight livescript"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">"[0-9]&#123;2,&#125;"</span> =&gt; The number was <span class="number">9.9997</span> but we rounded <span class="literal">it</span> <span class="literal">off</span> <span class="keyword">to</span> <span class="number">10.0</span>.</span><br></pre></td></tr></table></div></figure>
+<figure class="highlight livescript"><div class="table-container"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">"[0-9]{2,}"</span> =&gt; The number was <span class="number">9.9997</span> but we rounded <span class="literal">it</span> <span class="literal">off</span> <span class="keyword">to</span> <span class="number">10.0</span>.</span><br></pre></td></tr></tbody></table></div></figure>
 <p>如果逗号也省略掉则表示重复固定的次数。 例如，[0-9]{3} 匹配3位数字。</p>
-<figure class="highlight livescript"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">"[0-9]&#123;3&#125;"</span> =&gt; The number was <span class="number">9.9997</span> but we rounded <span class="literal">it</span> <span class="literal">off</span> <span class="keyword">to</span> <span class="number">10.0</span>.</span><br></pre></td></tr></table></div></figure>
+<figure class="highlight livescript"><div class="table-container"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">"[0-9]{3}"</span> =&gt; The number was <span class="number">9.9997</span> but we rounded <span class="literal">it</span> <span class="literal">off</span> <span class="keyword">to</span> <span class="number">10.0</span>.</span><br></pre></td></tr></tbody></table></div></figure>
 
-        <h2 id="2-5-…-特征标群"   >
+        <h2 id="2-5-…-特征标群">
           <a href="#2-5-…-特征标群" class="heading-link"><i class="fas fa-link"></i></a>2.5(…)特征标群</h2>
       <p><code>(...)</code>里面的内容可以看作一个整体。例如，表达式 <code>(ab)*</code>匹配连续出现 0 或更多个 ab。如果没有使用 <code>(...)</code> ，那么表达式 <code>ab*</code> 将匹配连续出现 0 或更多个 b 。<br>我们还可以在 <code>()</code>中用或字符 <code>|</code> 表示或。例如，<code>(c|g|p)ar</code> 匹配 car 或 gar 或 par.</p>
-<figure class="highlight dart"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">"(c|g|p)ar"</span> =&gt; The car <span class="keyword">is</span> parked <span class="keyword">in</span> the garage.</span><br></pre></td></tr></table></div></figure>
+<figure class="highlight dart"><div class="table-container"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">"(c|g|p)ar"</span> =&gt; The car <span class="keyword">is</span> parked <span class="keyword">in</span> the garage.</span><br></pre></td></tr></tbody></table></div></figure>
 
-        <h2 id="2-6-或运算符"   >
+        <h2 id="2-6-或运算符">
           <a href="#2-6-或运算符" class="heading-link"><i class="fas fa-link"></i></a>2.6|或运算符</h2>
       <p>或运算符就表示或，用作判断条件。<br>例如 <code>(T|t)he|car</code>匹配 <code>(T|t)he 或 car</code>。</p>
-<figure class="highlight dart"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">"(T|t)he|car"</span> =&gt; The car <span class="keyword">is</span> parked <span class="keyword">in</span> the garage.</span><br></pre></td></tr></table></div></figure>
+<figure class="highlight dart"><div class="table-container"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">"(T|t)he|car"</span> =&gt; The car <span class="keyword">is</span> parked <span class="keyword">in</span> the garage.</span><br></pre></td></tr></tbody></table></div></figure>
 
-        <h2 id="2-7-转码特殊字符"   >
+        <h2 id="2-7-转码特殊字符">
           <a href="#2-7-转码特殊字符" class="heading-link"><i class="fas fa-link"></i></a>2.7\转码特殊字符</h2>
       <p>反斜线<code>\</code>在表达式中用于转码紧跟其后的字符。用于指定 <code>{ } [ ] / \ + * . $ ^ | ?</code>这些特殊字符。如果想要匹配这些特殊字符则要在其前面加上反斜线<code>\</code>。<br>例如 <code>.</code>是用来匹配除换行符外的所有字符的。如果想要匹配句子中的<code>.</code> 则要写成<code>\.</code>以下这个例子 <code>\.?</code>是选择性匹配.</p>
-<figure class="highlight stata"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">"(f|c|m)at\.?"</span> =&gt; The fat <span class="keyword">cat</span> sat <span class="keyword">on</span> the <span class="keyword">mat</span>.</span><br></pre></td></tr></table></div></figure>
+<figure class="highlight stata"><div class="table-container"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">"(f|c|m)at\.?"</span> =&gt; The fat <span class="keyword">cat</span> sat <span class="keyword">on</span> the <span class="keyword">mat</span>.</span><br></pre></td></tr></tbody></table></div></figure>
 
-        <h2 id="2-8锚点"   >
+        <h2 id="2-8锚点">
           <a href="#2-8锚点" class="heading-link"><i class="fas fa-link"></i></a>2.8锚点</h2>
       <p>在正则表达式中，想要匹配指定开头或结尾的字符串就要使用到锚点。<code>^</code>指定开头，<code>$</code>指定结尾。</p>
 
-        <h1 id="3-简写字符集"   >
+        <h1 id="3-简写字符集">
           <a href="#3-简写字符集" class="heading-link"><i class="fas fa-link"></i></a>3.简写字符集</h1>
       <p><img src="https://s1.ax1x.com/2020/06/18/NevH1J.png" alt="NevH1J.png"></p>
-</div><footer class="post-footer"><div class="post-ending ending"><div class="ending__text">------ END ------</div></div><div class="post-copyright copyright"><div class="copyright-author"><span class="copyright-author__name">Author: </span><span class="copyright-author__value"><a href="https://Gemini-Lin.github.io">Gemini-Lin</a></span></div><div class="copyright-link"><span class="copyright-link__name">Link: </span><span class="copyright-link__value"><a href="https://gemini-lin.github.io/regex/">https://gemini-lin.github.io/regex/</a></span></div><div class="copyright-notice"><span class="copyright-notice__name">Copyright: </span><span class="copyright-notice__value">All articles in this blog are licensed under <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en" rel="external nofollow" target="_blank">BY-NC-SA</a> unless stating additionally</span></div></div><div class="post-tags"><span class="post-tags-item"><span class="post-tags-item__icon"><i class="fas fa-tag"></i></span><a class="post-tags-item__link" href="https://gemini-lin.github.io/tags/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/">正则表达式</a></span></div><div class="post-reward reward"><div class="reward-button">Buy me a coffee</div><div class="reward-qrcode"><span class="reward-qrcode-alipay"><img class="reward-qrcode-alipay__img" src="/images/alipay.jpg"><div class="reward-qrcode-alipay__text">Alipay</div></span><span class="reward-qrcode-wechat"><img class="reward-qrcode-wechat__img" src="/images/wechatpay.jpg"><div class="reward-qrcode-wechat__text">Wechat</div></span></div></div><nav class="post-paginator paginator"><div class="paginator-prev"><a class="paginator-prev__link" href="/docker/"><span class="paginator-prev__icon"><i class="fas fa-angle-left"></i></span><span class="paginator-prev__text">Docker入门教程</span></a></div><div class="paginator-next"><a class="paginator-next__link" href="/SQL-Test/"><span class="paginator-prev__text">SQL Test</span><span class="paginator-next__icon"><i class="fas fa-angle-right"></i></span></a></div></nav></footer></div></div><div class="comments" id="comments"><div id="valine-container"></div></div></div><div class="sidebar-wrap" id="sidebar-wrap"><aside class="sidebar" id="sidebar"><div class="sidebar-nav"><span class="sidebar-nav-toc current">Catalog</span><span class="sidebar-nav-ov">Overview</span></div><section class="sidebar-toc"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Free-Talk"><span class="toc-number">1.</span> <span class="toc-text">
+<script>
+        document.querySelectorAll('.github-emoji')
+          .forEach(el => {
+            if (!el.dataset.src) { return; }
+            const img = document.createElement('img');
+            img.style = 'display:none !important;';
+            img.src = el.dataset.src;
+            img.addEventListener('error', () => {
+              img.remove();
+              el.style.color = 'inherit';
+              el.style.backgroundImage = 'none';
+              el.style.background = 'none';
+            });
+            img.addEventListener('load', () => {
+              img.remove();
+            });
+            document.body.appendChild(img);
+          });
+      </script></div><footer class="post-footer"><div class="post-ending ending"><div class="ending__text">------ 本文结束，感谢您的阅读 ------</div></div><div class="post-copyright copyright"><div class="copyright-author"><span class="copyright-author__name">本文作者: </span><span class="copyright-author__value"><a href="https://Gemini-Lin.github.io">Gemini-Lin</a></span></div><div class="copyright-link"><span class="copyright-link__name">本文链接: </span><span class="copyright-link__value"><a href="https://gemini-lin.github.io/regex/">https://gemini-lin.github.io/regex/</a></span></div><div class="copyright-notice"><span class="copyright-notice__name">版权声明: </span><span class="copyright-notice__value">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en" rel="external nofollow" target="_blank">BY-NC-SA</a> 许可协议。转载请注明出处！</span></div></div><div class="post-tags"><span class="post-tags-item"><span class="post-tags-item__icon"><i class="fas fa-tag"></i></span><a class="post-tags-item__link" href="https://gemini-lin.github.io/tags/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/">正则表达式</a></span></div><div class="post-reward reward"><div class="reward-button">请我喝杯咖啡~</div><div class="reward-qrcode"><span class="reward-qrcode-alipay"><img class="reward-qrcode-alipay__img" src="/images/alipay.jpg"><div class="reward-qrcode-alipay__text">支付宝打赏</div></span><span class="reward-qrcode-wechat"><img class="reward-qrcode-wechat__img" src="/images/wechatpay.jpg"><div class="reward-qrcode-wechat__text">微信打赏</div></span></div></div><nav class="post-paginator paginator"><div class="paginator-prev"><a class="paginator-prev__link" href="/docker/"><span class="paginator-prev__icon"><i class="fas fa-angle-left"></i></span><span class="paginator-prev__text">Docker入门教程</span></a></div><div class="paginator-next"><a class="paginator-next__link" href="/SQL-Test/"><span class="paginator-prev__text">SQL Test</span><span class="paginator-next__icon"><i class="fas fa-angle-right"></i></span></a></div></nav></footer></div></div><div class="comments" id="comments"><div id="valine-container"></div></div></div><div class="sidebar-wrap" id="sidebar-wrap"><aside class="sidebar" id="sidebar"><div class="sidebar-nav"><span class="sidebar-nav-toc current">文章目录</span><span class="sidebar-nav-ov">站点概览</span></div><section class="sidebar-toc"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Free-Talk"><span class="toc-number">1.</span> <span class="toc-text">
           Free Talk</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#1-基本匹配"><span class="toc-number">2.</span> <span class="toc-text">
           1.基本匹配</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#2-元字符"><span class="toc-number">3.</span> <span class="toc-text">
           2.元字符</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#2-1点运算符"><span class="toc-number">3.1.</span> <span class="toc-text">
@@ -133,7 +151,7 @@ window.CONFIG = CONFIG;</script><meta name="generator" content="Hexo 4.2.1"></he
           2.6|或运算符</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-7-转码特殊字符"><span class="toc-number">3.7.</span> <span class="toc-text">
           2.7\转码特殊字符</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-8锚点"><span class="toc-number">3.8.</span> <span class="toc-text">
           2.8锚点</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#3-简写字符集"><span class="toc-number">4.</span> <span class="toc-text">
-          3.简写字符集</span></a></li></ol></section><!-- ov = overview--><section class="sidebar-ov hide"><div class="sidebar-ov-author"><div class="sidebar-ov-author__avatar"><img class="sidebar-ov-author__avatar_img" src="https://s1.ax1x.com/2020/05/14/YD6wTI.png" alt="avatar"></div><p class="sidebar-ov-author__text">In me the tiger sniffs the rose</p></div><div class="sidebar-ov-social"><a class="sidebar-ov-social-item" href="https://github.com/Gemini-Lin" target="_blank" rel="noopener" data-popover="Github" data-popover-pos="up"><span class="sidebar-ov-social-item__icon"><i class="fab fa-github"></i></span></a><a class="sidebar-ov-social-item" href="https://www.zhihu.com/people/iye-kong-zhong-zui-liang-de-xing-i" target="_blank" rel="noopener" data-popover="Zhihu" data-popover-pos="up"><span class="sidebar-ov-social-item__icon">知</span></a><a class="sidebar-ov-social-item" href="https://space.bilibili.com/313103161" target="_blank" rel="noopener" data-popover="social.bilibili" data-popover-pos="up"><span class="sidebar-ov-social-item__icon">B</span></a><a class="sidebar-ov-social-item" href="1009712456" target="_blank" rel="noopener" data-popover="QQ" data-popover-pos="up"><span class="sidebar-ov-social-item__icon"><i class="fab fa-qq"></i></span></a><a class="sidebar-ov-social-item" href="mailto:geminilin@gmail.com" target="_blank" rel="noopener" data-popover="social.E-Mail" data-popover-pos="up"><span class="sidebar-ov-social-item__icon"><i class="fab fa-envelope"></i></span></a></div><div class="sidebar-ov-state"><a class="sidebar-ov-state-item sidebar-ov-state-item--posts" href="/archives/"><div class="sidebar-ov-state-item__count">24</div><div class="sidebar-ov-state-item__name">Archives</div></a><a class="sidebar-ov-state-item sidebar-ov-state-item--categories" href="/categories/"><div class="sidebar-ov-state-item__count">6</div><div class="sidebar-ov-state-item__name">Categories</div></a><a class="sidebar-ov-state-item sidebar-ov-state-item--tags" href="/tags/"><div class="sidebar-ov-state-item__count">23</div><div class="sidebar-ov-state-item__name">Tags</div></a></div><div class="sidebar-ov-cc"><a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en" target="_blank" rel="noopener" data-popover="Creative Commons" data-popover-pos="up"><img src="/images/cc-by-nc-sa.svg"></a></div></section><div class="sidebar-reading"><div class="sidebar-reading-info"><span class="sidebar-reading-info__text">You have read </span><span class="sidebar-reading-info__num">0</span></div><div class="sidebar-reading-line"></div></div></aside></div><div class="clearfix"></div></div></main><footer class="footer" id="footer"><div class="footer-inner"><div><span>Copyright © 2020</span><span class="footer__icon"><i class="fas fa-heart"></i></span><span>Gemini-Lin</span><span class="footer__devider">|</span><span>闽ICP备20012376号</span></div><div class="busuanzi"><span class="busuanzi-siteuv"><span class="busuanzi-siteuv__icon"><i class="fas fa-user"></i></span><span class="busuanzi-siteuv__info">Visitors</span><span class="busuanzi-siteuv__value" id="busuanzi_value_site_uv"></span></span><span class="busuanzi-sitepv"><span class="busuanzi-siteuv__icon"><i class="fas fa-eye"></i></span><span class="busuanzi-siteuv__info">Views</span><span class="busuanzi-siteuv__value" id="busuanzi_value_site_pv"></span></span></div></div></footer><div class="loading-bar" id="loading-bar"><div class="loading-bar__progress"></div></div><div class="back2top" id="back2top"><span class="back2top__icon"><i class="fas fa-rocket"></i></span></div></div><div class="search-mask"></div><div class="search-popup"><span class="search-close"></span><div class="search-input"><input placeholder="Search for Posts (Support multiple keywords)"></div><div class="search-results"></div></div><script src="https://cdn.jsdelivr.net/npm/jquery@v3.4.1/dist/jquery.min.js"></script><script src="https://cdn.jsdelivr.net/npm/velocity-animate@1.5.2/velocity.min.js"></script><script src="https://cdn.jsdelivr.net/npm/velocity-animate@1.5.2/velocity.ui.min.js"></script><script src="https://cdn.jsdelivr.net/npm/ribbon.js@latest/dist/ribbon.min.js" size="150" alpha="0.6" zIndex="-1"></script><script>function initSearch() {
+          3.简写字符集</span></a></li></ol></section><!-- ov = overview--><section class="sidebar-ov hide"><div class="sidebar-ov-author"><div class="sidebar-ov-author__avatar"><img class="sidebar-ov-author__avatar_img" src="https://s1.ax1x.com/2020/05/14/YD6wTI.png" alt="avatar"></div><p class="sidebar-ov-author__text">In me the tiger sniffs the rose</p></div><div class="sidebar-ov-social"><a class="sidebar-ov-social-item" href="https://github.com/Gemini-Lin" target="_blank" rel="noopener" data-popover="Github" data-popover-pos="up"><span class="sidebar-ov-social-item__icon"><i class="fab fa-github"></i></span></a><a class="sidebar-ov-social-item" href="https://www.zhihu.com/people/iye-kong-zhong-zui-liang-de-xing-i" target="_blank" rel="noopener" data-popover="知乎" data-popover-pos="up"><span class="sidebar-ov-social-item__icon">知</span></a><a class="sidebar-ov-social-item" href="https://space.bilibili.com/313103161" target="_blank" rel="noopener" data-popover="social.bilibili" data-popover-pos="up"><span class="sidebar-ov-social-item__icon">B</span></a><a class="sidebar-ov-social-item" href="1009712456" target="_blank" rel="noopener" data-popover="QQ" data-popover-pos="up"><span class="sidebar-ov-social-item__icon"><i class="fab fa-qq"></i></span></a><a class="sidebar-ov-social-item" href="mailto:geminilin@gmail.com" target="_blank" rel="noopener" data-popover="social.E-Mail" data-popover-pos="up"><span class="sidebar-ov-social-item__icon"><i class="fab fa-envelope"></i></span></a></div><div class="sidebar-ov-feed"><span class="sidebar-ov-feed-rss"><a class="sidebar-ov-feed-rss__link" href="/atom.xml" target="_blank" rel="noopener"><span class="sidebar-ov-feed-rss__icon"><i class="fas fa-rss"></i></span><span>RSS 订阅</span></a></span></div><div class="sidebar-ov-state"><a class="sidebar-ov-state-item sidebar-ov-state-item--posts" href="/archives/"><div class="sidebar-ov-state-item__count">24</div><div class="sidebar-ov-state-item__name">归档</div></a><a class="sidebar-ov-state-item sidebar-ov-state-item--categories" href="/categories/"><div class="sidebar-ov-state-item__count">6</div><div class="sidebar-ov-state-item__name">分类</div></a><a class="sidebar-ov-state-item sidebar-ov-state-item--tags" href="/tags/"><div class="sidebar-ov-state-item__count">23</div><div class="sidebar-ov-state-item__name">标签</div></a></div><div class="sidebar-ov-cc"><a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en" target="_blank" rel="noopener" data-popover="知识共享许可协议" data-popover-pos="up"><img src="/images/cc-by-nc-sa.svg"></a></div></section><div class="sidebar-reading"><div class="sidebar-reading-info"><span class="sidebar-reading-info__text">你已阅读了 </span><span class="sidebar-reading-info__num">0</span></div><div class="sidebar-reading-line"></div></div></aside></div><div class="clearfix"></div></div></main><footer class="footer" id="footer"><div class="footer-inner"><div><span>Copyright © 2020</span><span class="footer__icon"><i class="fas fa-heart"></i></span><span>Gemini-Lin</span><span class="footer__devider">|</span><span>闽ICP备20012376号</span></div><div class="busuanzi"><span class="busuanzi-siteuv"><span class="busuanzi-siteuv__icon"><i class="fas fa-user"></i></span><span class="busuanzi-siteuv__info">访问人数</span><span class="busuanzi-siteuv__value" id="busuanzi_value_site_uv"></span></span><span class="busuanzi-sitepv"><span class="busuanzi-siteuv__icon"><i class="fas fa-eye"></i></span><span class="busuanzi-siteuv__info">浏览总量</span><span class="busuanzi-siteuv__value" id="busuanzi_value_site_pv"></span></span></div></div></footer><div class="loading-bar" id="loading-bar"><div class="loading-bar__progress"></div></div><div class="back2top" id="back2top"><span class="back2top__icon"><i class="fas fa-rocket"></i></span></div></div><div class="search-mask"></div><div class="search-popup"><span class="search-close"></span><div class="search-input"><input placeholder="搜索文章（支持多关键词，请用空格分隔）"></div><div class="search-results"></div></div><script src="https://cdn.jsdelivr.net/npm/jquery@v3.4.1/dist/jquery.min.js"></script><script src="https://cdn.jsdelivr.net/npm/velocity-animate@1.5.2/velocity.min.js"></script><script src="https://cdn.jsdelivr.net/npm/velocity-animate@1.5.2/velocity.ui.min.js"></script><script src="https://cdn.jsdelivr.net/npm/ribbon.js@latest/dist/ribbon.min.js" size="150" alpha="0.6" zIndex="-1"></script><script>function initSearch() {
   var isXML = true;
   var search_path = 'search.xml';
 
@@ -177,7 +195,7 @@ window.CONFIG = CONFIG;</script><meta name="generator" content="Hexo 4.2.1"></he
           datas.forEach(function (data) {
             var isMatch  = false;
             // 没有标题的文章使用预设的 i18n 变量代替
-            var title = (data.title && data.title.trim()) || '[ Untitled ]';
+            var title = (data.title && data.title.trim()) || '[ 文章无标题 ]';
             var titleLower = title && title.toLowerCase();
             // 删除 HTML 标签 和 所有空白字符
             var content = data.content && data.content.replace(/<[^>]+>/g, '');
@@ -373,7 +391,85 @@ window.addEventListener('DOMContentLoaded', function () {
   };
 
   Stun.utils.pjaxReloadLocalSearch();
-}, false);</script><script src="https://cdn.jsdelivr.net/gh/sukkaw/busuanzi@latest/bsz.pure.mini.js" async></script><script src="https://cdn.jsdelivr.net/npm/leancloud-storage@latest/dist/av-min.js"></script><script src="https://cdn.jsdelivr.net/npm/valine@latest/dist/Valine.min.js"></script><script>function loadValine () {
+}, false);</script><script src="https://cdn.jsdelivr.net/npm/pjax@latest/pjax.min.js"></script><script>window.addEventListener('DOMContentLoaded', function () {
+  var pjax = new Pjax({"selectors":["head title","#main",".pjax-reload",".header-inner"],"history":true,"scrollTo":false,"scrollRestoration":false,"cacheBust":false,"debug":false,"currentUrlFullReload":false,"timeout":0});
+  // 加载进度条的计时器
+  var loadingTimer = null;
+
+  // 重置页面 Y 方向上的滚动偏移量
+  document.addEventListener('pjax:send', function () {
+    $('.header-nav-menu').removeClass('show');
+    if (CONFIG.pjax && CONFIG.pjax.avoidBanner) {
+      $('html').velocity('scroll', {
+        duration: 500,
+        offset: $('#header').height(),
+        easing: 'easeInOutCubic'
+      });
+    }
+
+    var loadingBarWidth = 20;
+    var MAX_LOADING_WIDTH = 95;
+
+    $('.loading-bar').addClass('loading');
+    $('.loading-bar__progress').css('width', loadingBarWidth + '%');
+    clearInterval(loadingTimer);
+    loadingTimer = setInterval(function () {
+      loadingBarWidth += 3;
+      if (loadingBarWidth > MAX_LOADING_WIDTH) {
+        loadingBarWidth = MAX_LOADING_WIDTH;
+      }
+      $('.loading-bar__progress').css('width', loadingBarWidth + '%');
+    }, 500);
+  }, false);
+
+  window.addEventListener('pjax:complete', function () {
+    clearInterval(loadingTimer);
+    $('.loading-bar__progress').css('width', '100%');
+    $('.loading-bar').removeClass('loading');
+    setTimeout(function () {
+      $('.loading-bar__progress').css('width', '0');
+    }, 400);
+    $('link[rel=prefetch], script[data-pjax-rm]').each(function () {
+      $(this).remove();
+    });
+    $('script[data-pjax], #pjax-reload script').each(function () {
+      $(this).parent().append($(this).remove());
+    });
+
+    if (Stun.utils.pjaxReloadBoot) {
+      Stun.utils.pjaxReloadBoot();
+    }
+    if (Stun.utils.pjaxReloadScroll) {
+      Stun.utils.pjaxReloadScroll();
+    }
+    if (Stun.utils.pjaxReloadSidebar) {
+      Stun.utils.pjaxReloadSidebar();
+    }
+    if (true) {
+      if (Stun.utils.pjaxReloadHeader) {
+        Stun.utils.pjaxReloadHeader();
+      }
+      if (Stun.utils.pjaxReloadScrollIcon) {
+        Stun.utils.pjaxReloadScrollIcon();
+      }
+      if (Stun.utils.pjaxReloadLocalSearch) {
+        Stun.utils.pjaxReloadLocalSearch();
+      }
+    }
+  }, false);
+}, false);</script><div id="pjax-reload"><script src="https://cdn.jsdelivr.net/npm/quicklink@1.0.1/dist/quicklink.umd.js"></script><script>function initQuicklink() {
+  quicklink({
+    timeout: '10000',
+    priority: true,
+    ignores: [uri => uri.includes('#'), uri => uri === 'https://gemini-lin.github.io/regex/', /\/api\/?/,uri => uri.includes('.xml'),uri => uri.includes('.zip'),(uri, el) => el.hasAttribute('nofollow'),(uri, el) => el.hasAttribute('noprefetch')]
+  });
+}
+
+if (true || false) {
+  initQuicklink();
+} else {
+  window.addEventListener('DOMContentLoaded', initQuicklink, false);
+}</script><script src="https://cdn.jsdelivr.net/gh/sukkaw/busuanzi@latest/bsz.pure.mini.js" async></script></div><script src="https://cdn.jsdelivr.net/npm/leancloud-storage@latest/dist/av-min.js"></script><script src="https://cdn.jsdelivr.net/npm/valine@latest/dist/Valine.min.js"></script><script data-pjax="">function loadValine () {
   var GUEST_INFO = ['nick', 'mail', 'link'];
   var guest_info = 'nick,mail,link';
 
@@ -397,8 +493,8 @@ window.addEventListener('DOMContentLoaded', function () {
   });
 }
 
-if (false) {
+if (true) {
   loadValine();
 } else {
   window.addEventListener('DOMContentLoaded', loadValine, false);
-}</script><script src="/js/utils.js?v=2.0.1"></script><script src="/js/stun-boot.js?v=2.0.1"></script><script src="/js/scroll.js?v=2.0.1"></script><script src="/js/header.js?v=2.0.1"></script><script src="/js/sidebar.js?v=2.0.1"></script><script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"log":false,"pluginJsPath":"lib/","pluginModelPath":"assets/","pluginRootPath":"live2dw/","tagMode":false});</script></body></html>
+}</script><script src="/js/utils.js?v=2.0.1"></script><script src="/js/stun-boot.js?v=2.0.1"></script><script src="/js/scroll.js?v=2.0.1"></script><script src="/js/header.js?v=2.0.1"></script><script src="/js/sidebar.js?v=2.0.1"></script></body></html>

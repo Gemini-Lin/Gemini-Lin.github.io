@@ -1381,6 +1381,42 @@ kbd {
   color: var(--color-gray-100);
   background-color: #4dbaff;
 }
+.sidebar-ov-feed {
+  padding: 0.5rem 0;
+  text-align: center;
+}
+.sidebar-ov-feed-icon {
+  margin-right: 0.3em;
+}
+.sidebar-ov-feed-email,
+.sidebar-ov-feed-rss {
+  display: inline-block;
+  width: 50%;
+}
+.sidebar-ov-feed-email__link,
+.sidebar-ov-feed-rss__link {
+  -webkit-transition: color 0.2s ease;
+  -moz-transition: color 0.2s ease;
+  -o-transition: color 0.2s ease;
+  -ms-transition: color 0.2s ease;
+  transition: color 0.2s ease;
+}
+.sidebar-ov-feed-email__icon,
+.sidebar-ov-feed-rss__icon {
+  margin-right: 0.2rem;
+}
+.sidebar-ov-feed-email__link {
+  color: #54bcff;
+}
+.sidebar-ov-feed-email__link:hover {
+  color: #10a1ff;
+}
+.sidebar-ov-feed-rss__link {
+  color: #ff8956;
+}
+.sidebar-ov-feed-rss__link:hover {
+  color: #ff5912;
+}
 .sidebar-ov-state {
   padding: 0.5rem 0;
   text-align: center;
@@ -2472,6 +2508,47 @@ kbd {
   z-index: 2;
   cursor: zoom-out;
   will-change: transform;
+}
+.loading-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 99999;
+  opacity: 0;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+  filter: alpha(opacity=0);
+  -webkit-transition: opacity 0.4s linear;
+  -moz-transition: opacity 0.4s linear;
+  -o-transition: opacity 0.4s linear;
+  -ms-transition: opacity 0.4s linear;
+  transition: opacity 0.4s linear;
+}
+.loading-bar__progress {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: #77b6ff;
+  -webkit-box-shadow: 0 0 10px rgba(119,182,255,0.7);
+  box-shadow: 0 0 10px rgba(119,182,255,0.7);
+}
+.loading-bar.loading {
+  opacity: 1;
+  -ms-filter: none;
+  filter: none;
+  -webkit-transition: none;
+  -moz-transition: none;
+  -o-transition: none;
+  -ms-transition: none;
+  transition: none;
+}
+.loading-bar.loading .loading-bar__progress {
+  -webkit-transition: width 0.4s ease;
+  -moz-transition: width 0.4s ease;
+  -o-transition: width 0.4s ease;
+  -ms-transition: width 0.4s ease;
+  transition: width 0.4s ease;
 }
 .mode {
   position: relative;

@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://gemini-lin.github.io/"/>
-  <updated>2020-06-28T08:18:32.048Z</updated>
+  <updated>2020-06-28T08:54:19.500Z</updated>
   <id>https://gemini-lin.github.io/</id>
   
   <author>
@@ -21,13 +21,13 @@
     <link href="https://gemini-lin.github.io/docker/"/>
     <id>https://gemini-lin.github.io/docker/</id>
     <published>2020-06-28T01:52:57.000Z</published>
-    <updated>2020-06-28T08:18:32.048Z</updated>
+    <updated>2020-06-28T08:54:19.500Z</updated>
     
     <summary type="html">
     
-      &lt;h1 id=&quot;Free-Talk&quot;   &gt;
+      &lt;h1 id=&quot;Free-Talk&quot;&gt;
           &lt;a href=&quot;#Free-Talk&quot; class=&quot;heading-link&quot;&gt;&lt;i class=&quot;fas fa-link&quot;&gt;&lt;/i&gt;&lt;/a&gt;Free Talk&lt;/h1&gt;
-      &lt;p&gt;&lt;img src=&quot;http://www.ruanyifeng.com/blogimg/asset/2018/bg2018020901.png&quot; alt=&quot;image&quot;&gt;&lt;br&gt;我之前一直都听过鼎鼎大名的Docker,但都没有仔细地了解一下，有一次给后端接Mysql数据库时，本来想下一个Mysql的，但是安装配置太麻烦，就直接从Docker上下了一个镜像就解决了，这就是我的Docker初体验。&lt;br&gt;接下来，就请乘坐我的宇宙航线，开启Docker之旅。&lt;/p&gt;
+      &lt;p&gt;&lt;img src=&quot;http://www.ruanyifeng.com/blogimg/asset/2018/bg2018020901.png&quot; alt=&quot;image&quot;&gt;&lt;br&gt;我之前一直都听过鼎鼎大名的Docker,但都没有仔细地了解一下，有一次给后端接Mysql数据库时，本来想下一个Mysql的，但是安装配置太麻烦，就直接从Docker上下了一个镜像就解决了，这就是我的Docker初体验。&lt;br&gt;接下来，就请乘坐我的宇宙航线，开启Docker之旅&lt;span class=&quot;github-emoji&quot; style=&quot;color: transparent;background:no-repeat url(https://github.githubassets.com/images/icons/emoji/unicode/2728.png?v8) center/contain&quot; data-src=&quot;https://github.githubassets.com/images/icons/emoji/unicode/2728.png?v8&quot;&gt;✨&lt;/span&gt;。&lt;/p&gt;
     
     </summary>
     
@@ -44,13 +44,13 @@
     <link href="https://gemini-lin.github.io/regex/"/>
     <id>https://gemini-lin.github.io/regex/</id>
     <published>2020-06-17T13:04:57.000Z</published>
-    <updated>2020-06-25T11:24:02.658Z</updated>
+    <updated>2020-06-28T08:45:28.283Z</updated>
     
     <summary type="html">
     
-      &lt;h1 id=&quot;Free-Talk&quot;   &gt;
+      &lt;h1 id=&quot;Free-Talk&quot;&gt;
           &lt;a href=&quot;#Free-Talk&quot; class=&quot;heading-link&quot;&gt;&lt;i class=&quot;fas fa-link&quot;&gt;&lt;/i&gt;&lt;/a&gt;Free Talk&lt;/h1&gt;
-      &lt;p&gt;在学习编程的这两年里，无数次的遇到正则表达式，不管是在Python还是Java中，正则表达式都是绕不开的话题。&lt;br&gt;今天打算写一篇正则表达式的总结文章，一是为了学习，二是为了日后查阅复制方便。&lt;br&gt;发现了Github上有一个超好的学习资料，将在上面做一些修改，作为总结。同时限于篇幅，只写了常用部分，更多内容请见&lt;span class=&quot;exturl&quot;&gt;&lt;a class=&quot;exturl__link&quot;   href=&quot;https://github.com/ziishaned/learn-regex&quot;  target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;learn-regex&lt;/a&gt;&lt;span class=&quot;exturl__icon&quot;&gt;&lt;i class=&quot;fas fa-external-link-alt&quot;&gt;&lt;/i&gt;&lt;/span&gt;&lt;/span&gt;&lt;/p&gt;
+      &lt;p&gt;在学习编程的这两年里，无数次的遇到正则表达式，不管是在Python还是Java中，正则表达式都是绕不开的话题。&lt;br&gt;今天打算写一篇正则表达式的总结文章，一是为了学习，二是为了日后查阅复制方便。&lt;br&gt;发现了Github上有一个超好的学习资料，将在上面做一些修改，作为总结。同时限于篇幅，只写了常用部分，更多内容请见&lt;span class=&quot;exturl&quot;&gt;&lt;a class=&quot;exturl__link&quot; href=&quot;https://github.com/ziishaned/learn-regex&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;learn-regex&lt;/a&gt;&lt;span class=&quot;exturl__icon&quot;&gt;&lt;i class=&quot;fas fa-external-link-alt&quot;&gt;&lt;/i&gt;&lt;/span&gt;&lt;/span&gt;&lt;/p&gt;
     
     </summary>
     
@@ -71,9 +71,9 @@
     
     <summary type="html">
     
-      &lt;h1 id=&quot;TABLE-Student&quot;   &gt;
+      &lt;h1 id=&quot;TABLE-Student&quot;&gt;
           &lt;a href=&quot;#TABLE-Student&quot; class=&quot;heading-link&quot;&gt;&lt;i class=&quot;fas fa-link&quot;&gt;&lt;/i&gt;&lt;/a&gt;TABLE Student&lt;/h1&gt;
-      &lt;figure class=&quot;highlight sql&quot;&gt;&lt;div class=&quot;table-container&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;CREATE&lt;/span&gt; &lt;span class=&quot;keyword&quot;&gt;TABLE&lt;/span&gt; Student_2018091601004(&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	StudentID &lt;span class=&quot;built_in&quot;&gt;char&lt;/span&gt;(&lt;span class=&quot;number&quot;&gt;13&lt;/span&gt;) PRIMARY &lt;span class=&quot;keyword&quot;&gt;KEY&lt;/span&gt;,&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	StudentName &lt;span class=&quot;built_in&quot;&gt;varchar&lt;/span&gt;(&lt;span class=&quot;number&quot;&gt;10&lt;/span&gt;) &lt;span class=&quot;keyword&quot;&gt;NOT&lt;/span&gt; &lt;span class=&quot;literal&quot;&gt;NULL&lt;/span&gt;,&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	Sex &lt;span class=&quot;built_in&quot;&gt;char&lt;/span&gt;(&lt;span class=&quot;number&quot;&gt;2&lt;/span&gt;) &lt;span class=&quot;keyword&quot;&gt;NOT&lt;/span&gt; &lt;span class=&quot;literal&quot;&gt;NULL&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;);&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/div&gt;&lt;/figure&gt;
+      &lt;figure class=&quot;highlight sql&quot;&gt;&lt;div class=&quot;table-container&quot;&gt;&lt;table&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;CREATE&lt;/span&gt; &lt;span class=&quot;keyword&quot;&gt;TABLE&lt;/span&gt; Student_2018091601004(&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	StudentID &lt;span class=&quot;built_in&quot;&gt;char&lt;/span&gt;(&lt;span class=&quot;number&quot;&gt;13&lt;/span&gt;) PRIMARY &lt;span class=&quot;keyword&quot;&gt;KEY&lt;/span&gt;,&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	StudentName &lt;span class=&quot;built_in&quot;&gt;varchar&lt;/span&gt;(&lt;span class=&quot;number&quot;&gt;10&lt;/span&gt;) &lt;span class=&quot;keyword&quot;&gt;NOT&lt;/span&gt; &lt;span class=&quot;literal&quot;&gt;NULL&lt;/span&gt;,&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	Sex &lt;span class=&quot;built_in&quot;&gt;char&lt;/span&gt;(&lt;span class=&quot;number&quot;&gt;2&lt;/span&gt;) &lt;span class=&quot;keyword&quot;&gt;NOT&lt;/span&gt; &lt;span class=&quot;literal&quot;&gt;NULL&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;);&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/div&gt;&lt;/figure&gt;
     
     </summary>
     
@@ -94,7 +94,7 @@
     
     <summary type="html">
     
-      &lt;h1 id=&quot;十七又三&quot;   &gt;
+      &lt;h1 id=&quot;十七又三&quot;&gt;
           &lt;a href=&quot;#十七又三&quot; class=&quot;heading-link&quot;&gt;&lt;i class=&quot;fas fa-link&quot;&gt;&lt;/i&gt;&lt;/a&gt;十七又三&lt;/h1&gt;
       &lt;p&gt;今年的生日本来不打算写着什么的&lt;br&gt;想让日子就这么静静地流逝着&lt;br&gt;十一点多却又在床上翻来覆去&lt;br&gt;习惯性的失眠，胡思乱想&lt;br&gt;还是开灯从床上爬起&lt;br&gt;让回忆从指尖沙沙流过&lt;/p&gt;
     
@@ -117,25 +117,25 @@
     
     <summary type="html">
     
-      &lt;h1 id=&quot;进程&quot;   &gt;
+      &lt;h1 id=&quot;进程&quot;&gt;
           &lt;a href=&quot;#进程&quot; class=&quot;heading-link&quot;&gt;&lt;i class=&quot;fas fa-link&quot;&gt;&lt;/i&gt;&lt;/a&gt;进程&lt;/h1&gt;
       
-        &lt;h2 id=&quot;进程与线程&quot;   &gt;
+        &lt;h2 id=&quot;进程与线程&quot;&gt;
           &lt;a href=&quot;#进程与线程&quot; class=&quot;heading-link&quot;&gt;&lt;i class=&quot;fas fa-link&quot;&gt;&lt;/i&gt;&lt;/a&gt;进程与线程&lt;/h2&gt;
       
-        &lt;h3 id=&quot;进程-1&quot;   &gt;
+        &lt;h3 id=&quot;进程-1&quot;&gt;
           &lt;a href=&quot;#进程-1&quot; class=&quot;heading-link&quot;&gt;&lt;i class=&quot;fas fa-link&quot;&gt;&lt;/i&gt;&lt;/a&gt;进程&lt;/h3&gt;
       &lt;p&gt;进程是系统进行资源分配和调度的一个独立单位。&lt;br&gt;进程控制块(Process Control Block,PCB)描述进程的基本信息和活动过程，进而控制进程和管理进程。&lt;br&gt;特征：动态性、并发性、独立性、异步性。&lt;/p&gt;
 
-        &lt;h3 id=&quot;线程&quot;   &gt;
+        &lt;h3 id=&quot;线程&quot;&gt;
           &lt;a href=&quot;#线程&quot; class=&quot;heading-link&quot;&gt;&lt;i class=&quot;fas fa-link&quot;&gt;&lt;/i&gt;&lt;/a&gt;线程&lt;/h3&gt;
       &lt;p&gt;线程作为调度和分派的基本单位。&lt;br&gt;线程是进程的进一步划分，一个进程可以有多个线程，他们共享进程资源。&lt;/p&gt;
 
-        &lt;h3 id=&quot;比较&quot;   &gt;
+        &lt;h3 id=&quot;比较&quot;&gt;
           &lt;a href=&quot;#比较&quot; class=&quot;heading-link&quot;&gt;&lt;i class=&quot;fas fa-link&quot;&gt;&lt;/i&gt;&lt;/a&gt;比较&lt;/h3&gt;
       &lt;ol&gt;
 &lt;li&gt;进程是资源分配的基本单位，但是线程不拥有系统资源，仅有少量能保证独立运行的资源。(一些必备的寄存器，如程序计数器等)同时线程共享进程的资源。&lt;/li&gt;
-&lt;li&gt;进程的切换开销大，线程是独立调动的基本单位，切换线程的开销更小。
+&lt;li&gt;进程的切换开销大，线程是独立调动的基本单位，切换线程的开销更小。&lt;/li&gt;&lt;/ol&gt;
     
     </summary>
     
@@ -156,7 +156,7 @@
     
     <summary type="html">
     
-      &lt;h1 id=&quot;概述&quot;   &gt;
+      &lt;h1 id=&quot;概述&quot;&gt;
           &lt;a href=&quot;#概述&quot; class=&quot;heading-link&quot;&gt;&lt;i class=&quot;fas fa-link&quot;&gt;&lt;/i&gt;&lt;/a&gt;概述&lt;/h1&gt;
       &lt;p&gt;&lt;img src=&quot;https://s1.ax1x.com/2020/06/08/tRorRg.png&quot; alt=&quot;tRorRg.png&quot;&gt;&lt;/p&gt;
 &lt;blockquote&gt;
@@ -182,10 +182,10 @@
     
     <summary type="html">
     
-      &lt;h1 id=&quot;数据定义SQL语句&quot;   &gt;
+      &lt;h1 id=&quot;数据定义SQL语句&quot;&gt;
           &lt;a href=&quot;#数据定义SQL语句&quot; class=&quot;heading-link&quot;&gt;&lt;i class=&quot;fas fa-link&quot;&gt;&lt;/i&gt;&lt;/a&gt;数据定义SQL语句&lt;/h1&gt;
       
-        &lt;h2 id=&quot;基本数据类型&quot;   &gt;
+        &lt;h2 id=&quot;基本数据类型&quot;&gt;
           &lt;a href=&quot;#基本数据类型&quot; class=&quot;heading-link&quot;&gt;&lt;i class=&quot;fas fa-link&quot;&gt;&lt;/i&gt;&lt;/a&gt;基本数据类型&lt;/h2&gt;
       &lt;ol&gt;
 &lt;li&gt;字符串型varchar(n)、char(n)&lt;blockquote&gt;
@@ -203,12 +203,12 @@
 &lt;li&gt;日期型date&lt;/li&gt;
 &lt;/ol&gt;
 
-        &lt;h2 id=&quot;数据库定义&quot;   &gt;
+        &lt;h2 id=&quot;数据库定义&quot;&gt;
           &lt;a href=&quot;#数据库定义&quot; class=&quot;heading-link&quot;&gt;&lt;i class=&quot;fas fa-link&quot;&gt;&lt;/i&gt;&lt;/a&gt;数据库定义&lt;/h2&gt;
       
-        &lt;h3 id=&quot;创建数据库&quot;   &gt;
+        &lt;h3 id=&quot;创建数据库&quot;&gt;
           &lt;a href=&quot;#创建数据库&quot; class=&quot;heading-link&quot;&gt;&lt;i class=&quot;fas fa-link&quot;&gt;&lt;/i&gt;&lt;/a&gt;创建数据库&lt;/h3&gt;
-      &lt;figure class=&quot;highlight&quot;&gt;&lt;div class=&quot;table-container&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;CREATE&lt;/span&gt; &lt;span class=&quot;keyword&quot;&gt;DATABASE&lt;/span&gt; &amp;lt;&lt;span class=&quot;keyword&quot;&gt;NAME&lt;/span&gt;&amp;gt;;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;gt; CERATE DATABASE HR;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/div&gt;&lt;/figure&gt;
+      &lt;figure class=&quot;highlight&quot;&gt;&lt;div class=&quot;table-container&quot;&gt;&lt;table&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;CREATE&lt;/span&gt; &lt;span class=&quot;keyword&quot;&gt;DATABASE&lt;/span&gt; &amp;lt;&lt;span class=&quot;keyword&quot;&gt;NAME&lt;/span&gt;&amp;gt;;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;gt; CERATE DATABASE HR;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/div&gt;&lt;/figure&gt;
     
     </summary>
     
@@ -229,22 +229,22 @@
     
     <summary type="html">
     
-      &lt;h1 id=&quot;概述&quot;   &gt;
+      &lt;h1 id=&quot;概述&quot;&gt;
           &lt;a href=&quot;#概述&quot; class=&quot;heading-link&quot;&gt;&lt;i class=&quot;fas fa-link&quot;&gt;&lt;/i&gt;&lt;/a&gt;概述&lt;/h1&gt;
       
-        &lt;h2 id=&quot;操作系统的目标和作用&quot;   &gt;
+        &lt;h2 id=&quot;操作系统的目标和作用&quot;&gt;
           &lt;a href=&quot;#操作系统的目标和作用&quot; class=&quot;heading-link&quot;&gt;&lt;i class=&quot;fas fa-link&quot;&gt;&lt;/i&gt;&lt;/a&gt;操作系统的目标和作用&lt;/h2&gt;
       
-        &lt;h3 id=&quot;目标&quot;   &gt;
+        &lt;h3 id=&quot;目标&quot;&gt;
           &lt;a href=&quot;#目标&quot; class=&quot;heading-link&quot;&gt;&lt;i class=&quot;fas fa-link&quot;&gt;&lt;/i&gt;&lt;/a&gt;目标&lt;/h3&gt;
       &lt;p&gt;方便性、有效性、可扩充性、开放性。&lt;/p&gt;
 
-        &lt;h3 id=&quot;作用&quot;   &gt;
+        &lt;h3 id=&quot;作用&quot;&gt;
           &lt;a href=&quot;#作用&quot; class=&quot;heading-link&quot;&gt;&lt;i class=&quot;fas fa-link&quot;&gt;&lt;/i&gt;&lt;/a&gt;作用&lt;/h3&gt;
       &lt;ol&gt;
 &lt;li&gt;作为用户与计算机硬件之间的接口&lt;/li&gt;
 &lt;li&gt;作为计算机系统资源的管理者&lt;/li&gt;
-&lt;li&gt;实现了对计算机资源的抽象
+&lt;li&gt;实现了对计算机资源的抽象&lt;/li&gt;&lt;/ol&gt;
     
     </summary>
     
@@ -265,11 +265,11 @@
     
     <summary type="html">
     
-      &lt;h1 id=&quot;Introduction&quot;   &gt;
+      &lt;h1 id=&quot;Introduction&quot;&gt;
           &lt;a href=&quot;#Introduction&quot; class=&quot;heading-link&quot;&gt;&lt;i class=&quot;fas fa-link&quot;&gt;&lt;/i&gt;&lt;/a&gt;Introduction&lt;/h1&gt;
       &lt;p&gt;撰写读后摘要是2018级专用英语期末笔试写作部分的第一题，满分10分，占总分10%。 题目要求考生先阅读一篇长度为 300-350 词的短文，然后概括、浓缩其主旨大意及主要内容， 并撰写一篇长度 100-120 词的摘要。阅读短文主要涉及议论性、说明性和学术性内容&lt;/p&gt;
 
-        &lt;h1 id=&quot;Find-out-theme-of-article&quot;   &gt;
+        &lt;h1 id=&quot;Find-out-theme-of-article&quot;&gt;
           &lt;a href=&quot;#Find-out-theme-of-article&quot; class=&quot;heading-link&quot;&gt;&lt;i class=&quot;fas fa-link&quot;&gt;&lt;/i&gt;&lt;/a&gt;Find out theme of article&lt;/h1&gt;
       &lt;p&gt;用一段话来高度概括文章的主要内容(两分)&lt;br&gt;This article addresses the issue of …&lt;/p&gt;
     
@@ -292,7 +292,7 @@
     
     <summary type="html">
     
-      &lt;h1 id=&quot;计算机网络和Internet发展史&quot;   &gt;
+      &lt;h1 id=&quot;计算机网络和Internet发展史&quot;&gt;
           &lt;a href=&quot;#计算机网络和Internet发展史&quot; class=&quot;heading-link&quot;&gt;&lt;i class=&quot;fas fa-link&quot;&gt;&lt;/i&gt;&lt;/a&gt;计算机网络和Internet发展史&lt;/h1&gt;
       &lt;blockquote&gt;
 &lt;ol&gt;
@@ -304,10 +304,10 @@
 &lt;/ol&gt;
 &lt;/blockquote&gt;
 
-        &lt;h1 id=&quot;什么是Internet？&quot;   &gt;
+        &lt;h1 id=&quot;什么是Internet？&quot;&gt;
           &lt;a href=&quot;#什么是Internet？&quot; class=&quot;heading-link&quot;&gt;&lt;i class=&quot;fas fa-link&quot;&gt;&lt;/i&gt;&lt;/a&gt;什么是Internet？&lt;/h1&gt;
       
-        &lt;h2 id=&quot;计算机网络&quot;   &gt;
+        &lt;h2 id=&quot;计算机网络&quot;&gt;
           &lt;a href=&quot;#计算机网络&quot; class=&quot;heading-link&quot;&gt;&lt;i class=&quot;fas fa-link&quot;&gt;&lt;/i&gt;&lt;/a&gt;计算机网络&lt;/h2&gt;
       &lt;p&gt;&lt;strong&gt;计算机网络：&lt;/strong&gt; 两台以上具有独立操作系统的计算机通过某些介质连接成的相互共享软硬件资源的集合体。&lt;br&gt;&lt;strong&gt;两大功能：&lt;/strong&gt; 连通性和共享&lt;/p&gt;
     
@@ -330,16 +330,16 @@
     
     <summary type="html">
     
-      &lt;h1 id=&quot;概述&quot;   &gt;
+      &lt;h1 id=&quot;概述&quot;&gt;
           &lt;a href=&quot;#概述&quot; class=&quot;heading-link&quot;&gt;&lt;i class=&quot;fas fa-link&quot;&gt;&lt;/i&gt;&lt;/a&gt;概述&lt;/h1&gt;
       
-        &lt;h2 id=&quot;起源&quot;   &gt;
+        &lt;h2 id=&quot;起源&quot;&gt;
           &lt;a href=&quot;#起源&quot; class=&quot;heading-link&quot;&gt;&lt;i class=&quot;fas fa-link&quot;&gt;&lt;/i&gt;&lt;/a&gt;起源&lt;/h2&gt;
       &lt;p&gt;&lt;strong&gt;误解:&lt;/strong&gt; 垃圾收集(Garbage Collection,简称GC)是Java语言的伴生产物。&lt;br&gt;事实上，垃圾收集的历史远远比Java久远，在1960年诞生于麻省理工学院的Lisp是第一门开始使用内存动态分配和垃圾收集技术的语言。当Lisp还在胚胎时期时，其作者John McCarthy就思考过垃圾收集需要完成的三件事情：&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;哪些内存需要回收？&lt;/li&gt;
 &lt;li&gt;什么时候回收？&lt;/li&gt;
-&lt;li&gt;如何回收？
+&lt;li&gt;如何回收？&lt;/li&gt;&lt;/ul&gt;
     
     </summary>
     
@@ -362,10 +362,10 @@
     
     <summary type="html">
     
-      &lt;h1 id=&quot;红黑树原理&quot;   &gt;
+      &lt;h1 id=&quot;红黑树原理&quot;&gt;
           &lt;a href=&quot;#红黑树原理&quot; class=&quot;heading-link&quot;&gt;&lt;i class=&quot;fas fa-link&quot;&gt;&lt;/i&gt;&lt;/a&gt;红黑树原理&lt;/h1&gt;
       
-        &lt;h2 id=&quot;二叉查找树&quot;   &gt;
+        &lt;h2 id=&quot;二叉查找树&quot;&gt;
           &lt;a href=&quot;#二叉查找树&quot; class=&quot;heading-link&quot;&gt;&lt;i class=&quot;fas fa-link&quot;&gt;&lt;/i&gt;&lt;/a&gt;二叉查找树&lt;/h2&gt;
       &lt;p&gt;二叉查找树具有以下的特性：&lt;/p&gt;
 &lt;ol&gt;
@@ -394,11 +394,11 @@
     
     <summary type="html">
     
-      &lt;h1 id=&quot;运行时数据区域&quot;   &gt;
+      &lt;h1 id=&quot;运行时数据区域&quot;&gt;
           &lt;a href=&quot;#运行时数据区域&quot; class=&quot;heading-link&quot;&gt;&lt;i class=&quot;fas fa-link&quot;&gt;&lt;/i&gt;&lt;/a&gt;运行时数据区域&lt;/h1&gt;
       &lt;p&gt;&lt;a href=&quot;https://imgchr.com/i/tmAiTO&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;&lt;img src=&quot;https://s1.ax1x.com/2020/05/28/tmAiTO.md.png&quot; alt=&quot;tmAiTO.md.png&quot;&gt;&lt;/a&gt;&lt;/p&gt;
 
-        &lt;h2 id=&quot;程序计数器&quot;   &gt;
+        &lt;h2 id=&quot;程序计数器&quot;&gt;
           &lt;a href=&quot;#程序计数器&quot; class=&quot;heading-link&quot;&gt;&lt;i class=&quot;fas fa-link&quot;&gt;&lt;/i&gt;&lt;/a&gt;程序计数器&lt;/h2&gt;
       &lt;p&gt;程序计数器就是一块较小的内存空间，可以看作是当前线程所执行的字节码的行号指示器，和计组中学到的大致一样。&lt;/p&gt;
     
@@ -423,7 +423,7 @@
     
     <summary type="html">
     
-      &lt;h1 id=&quot;类的加载定义&quot;   &gt;
+      &lt;h1 id=&quot;类的加载定义&quot;&gt;
           &lt;a href=&quot;#类的加载定义&quot; class=&quot;heading-link&quot;&gt;&lt;i class=&quot;fas fa-link&quot;&gt;&lt;/i&gt;&lt;/a&gt;类的加载定义&lt;/h1&gt;
       &lt;p&gt;类的加载指的是将类的.class文件中的二进制数据读入到内存中，将其放在运行时数据区的方法区内，然后在堆区创建一个&lt;code&gt;java.lang.Class&lt;/code&gt;对象，用来封装类在方法区内的数据结构。&lt;/p&gt;
 &lt;p&gt;&lt;img src=&quot;http://favorites.ren/assets/images/2017/jvm/jvm-1.png&quot; alt=&quot;image&quot;&gt;&lt;/p&gt;
@@ -454,10 +454,10 @@
     
     <summary type="html">
     
-      &lt;h1 id=&quot;CALL和RET指令&quot;   &gt;
+      &lt;h1 id=&quot;CALL和RET指令&quot;&gt;
           &lt;a href=&quot;#CALL和RET指令&quot; class=&quot;heading-link&quot;&gt;&lt;i class=&quot;fas fa-link&quot;&gt;&lt;/i&gt;&lt;/a&gt;CALL和RET指令&lt;/h1&gt;
       
-        &lt;h2 id=&quot;ret和retf&quot;   &gt;
+        &lt;h2 id=&quot;ret和retf&quot;&gt;
           &lt;a href=&quot;#ret和retf&quot; class=&quot;heading-link&quot;&gt;&lt;i class=&quot;fas fa-link&quot;&gt;&lt;/i&gt;&lt;/a&gt;ret和retf&lt;/h2&gt;
       &lt;p&gt;&lt;strong&gt;ret 指令&lt;/strong&gt;用栈中的数据，&lt;strong&gt;修改IP的内容&lt;/strong&gt;，从而实现近转移；&lt;br&gt;&lt;strong&gt;retf 指令&lt;/strong&gt;用栈中的数据，&lt;strong&gt;修改CS和IP的内容&lt;/strong&gt;，从而实现远转移。&lt;/p&gt;
 &lt;p&gt;ret 指令相当于&lt;/p&gt;
@@ -488,7 +488,7 @@
     
     <summary type="html">
     
-      &lt;h1 id=&quot;JAVA学习路线&quot;   &gt;
+      &lt;h1 id=&quot;JAVA学习路线&quot;&gt;
           &lt;a href=&quot;#JAVA学习路线&quot; class=&quot;heading-link&quot;&gt;&lt;i class=&quot;fas fa-link&quot;&gt;&lt;/i&gt;&lt;/a&gt;JAVA学习路线&lt;/h1&gt;
       &lt;p&gt;&lt;img src=&quot;http://assets.processon.com/chart_image/5ec28f620791290fe06e73f8.png&quot; alt=&quot;思维导图&quot;&gt;&lt;/p&gt;
     
@@ -511,15 +511,15 @@
     
     <summary type="html">
     
-      &lt;h1 id=&quot;GitHub入门教学（Git，界面介绍，搜索）&quot;   &gt;
+      &lt;h1 id=&quot;GitHub入门教学（Git，界面介绍，搜索）&quot;&gt;
           &lt;a href=&quot;#GitHub入门教学（Git，界面介绍，搜索）&quot; class=&quot;heading-link&quot;&gt;&lt;i class=&quot;fas fa-link&quot;&gt;&lt;/i&gt;&lt;/a&gt;GitHub入门教学（Git，界面介绍，搜索）&lt;/h1&gt;
       
-        &lt;h2 id=&quot;前提：Git使用&quot;   &gt;
+        &lt;h2 id=&quot;前提：Git使用&quot;&gt;
           &lt;a href=&quot;#前提：Git使用&quot; class=&quot;heading-link&quot;&gt;&lt;i class=&quot;fas fa-link&quot;&gt;&lt;/i&gt;&lt;/a&gt;前提：Git使用&lt;/h2&gt;
       &lt;p&gt;GitHub是基于Git开发得到，学习Git是了解GitHub的前提，在这里我推荐一个特别喜欢的学习教程。&lt;/p&gt;
-&lt;p&gt;&lt;span class=&quot;exturl&quot;&gt;&lt;a class=&quot;exturl__link&quot;   href=&quot;https://www.liaoxuefeng.com/wiki/896043488029600&quot;  target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;廖雪峰Git教学&lt;/a&gt;&lt;span class=&quot;exturl__icon&quot;&gt;&lt;i class=&quot;fas fa-external-link-alt&quot;&gt;&lt;/i&gt;&lt;/span&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span class=&quot;exturl&quot;&gt;&lt;a class=&quot;exturl__link&quot; href=&quot;https://www.liaoxuefeng.com/wiki/896043488029600&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;廖雪峰Git教学&lt;/a&gt;&lt;span class=&quot;exturl__icon&quot;&gt;&lt;i class=&quot;fas fa-external-link-alt&quot;&gt;&lt;/i&gt;&lt;/span&gt;&lt;/span&gt;&lt;/p&gt;
 &lt;p&gt;简单示例&lt;/p&gt;
-&lt;figure class=&quot;highlight avrasm&quot;&gt;&lt;div class=&quot;table-container&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;10&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;mkdir learngit &lt;span class=&quot;meta&quot;&gt;#创建一个空白目录&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;cd learngit &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;git init &lt;span class=&quot;meta&quot;&gt;#把这个目录变成Git可以管理的仓库&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;git &lt;span class=&quot;keyword&quot;&gt;add&lt;/span&gt; readme.txt &lt;span class=&quot;meta&quot;&gt;#把文件添加到仓库&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;git commit -m &lt;span class=&quot;string&quot;&gt;&quot;wrote a readme file&quot;&lt;/span&gt; &lt;span class=&quot;meta&quot;&gt;#把文件提交给仓库&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;git &lt;span class=&quot;keyword&quot;&gt;push&lt;/span&gt; -u origin master &lt;span class=&quot;meta&quot;&gt;#把本地仓库中的所有内容上传到远程库&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/div&gt;&lt;/figure&gt;
+&lt;figure class=&quot;highlight avrasm&quot;&gt;&lt;div class=&quot;table-container&quot;&gt;&lt;table&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;10&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;mkdir learngit &lt;span class=&quot;meta&quot;&gt;#创建一个空白目录&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;cd learngit &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;git init &lt;span class=&quot;meta&quot;&gt;#把这个目录变成Git可以管理的仓库&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;git &lt;span class=&quot;keyword&quot;&gt;add&lt;/span&gt; readme.txt &lt;span class=&quot;meta&quot;&gt;#把文件添加到仓库&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;git commit -m &lt;span class=&quot;string&quot;&gt;&quot;wrote a readme file&quot;&lt;/span&gt; &lt;span class=&quot;meta&quot;&gt;#把文件提交给仓库&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;git &lt;span class=&quot;keyword&quot;&gt;push&lt;/span&gt; -u origin master &lt;span class=&quot;meta&quot;&gt;#把本地仓库中的所有内容上传到远程库&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/div&gt;&lt;/figure&gt;
 &lt;p&gt;&lt;img src=&quot;https://s1.ax1x.com/2020/06/01/t8gefS.png&quot; alt=&quot;t8gefS.png&quot;&gt;&lt;/p&gt;
     
     </summary>
@@ -543,7 +543,7 @@
     
       &lt;p&gt;&lt;img src=&quot;https://i.loli.net/2020/02/03/AiDVdhUEBgYKtQz.png&quot; alt=&quot;image.png&quot;&gt;&lt;/p&gt;
 
-        &lt;h1 id=&quot;优化模型&quot;   &gt;
+        &lt;h1 id=&quot;优化模型&quot;&gt;
           &lt;a href=&quot;#优化模型&quot; class=&quot;heading-link&quot;&gt;&lt;i class=&quot;fas fa-link&quot;&gt;&lt;/i&gt;&lt;/a&gt;优化模型&lt;/h1&gt;
     
     </summary>
@@ -565,19 +565,19 @@
     
     <summary type="html">
     
-      &lt;h1 id=&quot;美赛写作套路&quot;   &gt;
+      &lt;h1 id=&quot;美赛写作套路&quot;&gt;
           &lt;a href=&quot;#美赛写作套路&quot; class=&quot;heading-link&quot;&gt;&lt;i class=&quot;fas fa-link&quot;&gt;&lt;/i&gt;&lt;/a&gt;美赛写作套路&lt;/h1&gt;
       
-        &lt;h2 id=&quot;Word还是LaTex&quot;   &gt;
+        &lt;h2 id=&quot;Word还是LaTex&quot;&gt;
           &lt;a href=&quot;#Word还是LaTex&quot; class=&quot;heading-link&quot;&gt;&lt;i class=&quot;fas fa-link&quot;&gt;&lt;/i&gt;&lt;/a&gt;Word还是LaTex&lt;/h2&gt;
       &lt;blockquote&gt;
-&lt;p&gt;倾向于使用Word进行写作，有利于论文的最后的协同合作&lt;br&gt;LaTex最新模板地址:&lt;span class=&quot;exturl&quot;&gt;&lt;a class=&quot;exturl__link&quot;   href=&quot;https://github.com/latexstudio-org/mcmthesis/releases/tag/6.3&quot;  target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;https://github.com/latexstudio-org/mcmthesis/releases/tag/6.3&lt;/a&gt;&lt;span class=&quot;exturl__icon&quot;&gt;&lt;i class=&quot;fas fa-external-link-alt&quot;&gt;&lt;/i&gt;&lt;/span&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;倾向于使用Word进行写作，有利于论文的最后的协同合作&lt;br&gt;LaTex最新模板地址:&lt;span class=&quot;exturl&quot;&gt;&lt;a class=&quot;exturl__link&quot; href=&quot;https://github.com/latexstudio-org/mcmthesis/releases/tag/6.3&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;https://github.com/latexstudio-org/mcmthesis/releases/tag/6.3&lt;/a&gt;&lt;span class=&quot;exturl__icon&quot;&gt;&lt;i class=&quot;fas fa-external-link-alt&quot;&gt;&lt;/i&gt;&lt;/span&gt;&lt;/span&gt;&lt;/p&gt;
 &lt;/blockquote&gt;
 
-        &lt;h2 id=&quot;美赛论文怎么翻译&quot;   &gt;
+        &lt;h2 id=&quot;美赛论文怎么翻译&quot;&gt;
           &lt;a href=&quot;#美赛论文怎么翻译&quot; class=&quot;heading-link&quot;&gt;&lt;i class=&quot;fas fa-link&quot;&gt;&lt;/i&gt;&lt;/a&gt;美赛论文怎么翻译&lt;/h2&gt;
       &lt;blockquote&gt;
-&lt;p&gt;谷歌翻译:&lt;span class=&quot;exturl&quot;&gt;&lt;a class=&quot;exturl__link&quot;   href=&quot;https://translate.google.cn/&quot;  target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;https://translate.google.cn/&lt;/a&gt;&lt;span class=&quot;exturl__icon&quot;&gt;&lt;i class=&quot;fas fa-external-link-alt&quot;&gt;&lt;/i&gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;strong&gt;有以下几点要注意：&lt;/strong&gt;&lt;br&gt;（1） 翻译完成后再排版，记住，排版永远放在最后一步；&lt;br&gt;（2）第一次翻译完成后一定要再次核对语法、通顺程度、专有名词等，初次翻译出来的结果是不能看的，后面我再教给大家怎么修改；&lt;br&gt;（3）中文版用word写，后续翻译完成并修改后再用latex模板套用，因为latex导出来的就直接是pdf版本了，谷歌翻译对word的识别要远好于pdf。&lt;/p&gt;
+&lt;p&gt;谷歌翻译:&lt;span class=&quot;exturl&quot;&gt;&lt;a class=&quot;exturl__link&quot; href=&quot;https://translate.google.cn/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;https://translate.google.cn/&lt;/a&gt;&lt;span class=&quot;exturl__icon&quot;&gt;&lt;i class=&quot;fas fa-external-link-alt&quot;&gt;&lt;/i&gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;strong&gt;有以下几点要注意：&lt;/strong&gt;&lt;br&gt;（1） 翻译完成后再排版，记住，排版永远放在最后一步；&lt;br&gt;（2）第一次翻译完成后一定要再次核对语法、通顺程度、专有名词等，初次翻译出来的结果是不能看的，后面我再教给大家怎么修改；&lt;br&gt;（3）中文版用word写，后续翻译完成并修改后再用latex模板套用，因为latex导出来的就直接是pdf版本了，谷歌翻译对word的识别要远好于pdf。&lt;/p&gt;
 &lt;/blockquote&gt;
     
     </summary>
@@ -599,7 +599,7 @@
     
     <summary type="html">
     
-      &lt;h2 id=&quot;开头句型写法&quot;   &gt;
+      &lt;h2 id=&quot;开头句型写法&quot;&gt;
           &lt;a href=&quot;#开头句型写法&quot; class=&quot;heading-link&quot;&gt;&lt;i class=&quot;fas fa-link&quot;&gt;&lt;/i&gt;&lt;/a&gt;开头句型写法&lt;/h2&gt;
       &lt;blockquote&gt;
 &lt;p&gt;Mention polygamy in Canada and waht might come to mind is Bountiful ,a suitably named town in British Columbia .&lt;/p&gt;
