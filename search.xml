@@ -1,13 +1,82 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>Docker简介</title>
+    <title>Docker入门教程</title>
     <url>/docker/</url>
     <content><![CDATA[
         <h1 id="Free-Talk"   >
           <a href="#Free-Talk" class="heading-link"><i class="fas fa-link"></i></a>Free Talk</h1>
-      <p><img src="http://www.ruanyifeng.com/blogimg/asset/2018/bg2018020901.png" alt="image"><br>我之前一直都听过鼎鼎大名的Docker,但都没有仔细地了解一下，有一次给后端接Mysql数据库时，本来想下一个Mysql的，但是安装配置太麻烦，就直接从docker上下了一个镜像就解决了，这就是我的Docker初体验。<br>接下来就好好讲一下，What is Docker?Why need it?And How it works?</p>
+      <p><img src="http://www.ruanyifeng.com/blogimg/asset/2018/bg2018020901.png" alt="image"><br>我之前一直都听过鼎鼎大名的Docker,但都没有仔细地了解一下，有一次给后端接Mysql数据库时，本来想下一个Mysql的，但是安装配置太麻烦，就直接从Docker上下了一个镜像就解决了，这就是我的Docker初体验。<br>接下来，就请乘坐我的宇宙航线，开启Docker之旅。</p>
 <a id="more"></a>
+
+        <h1 id="What-is-Dcoker"   >
+          <a href="#What-is-Dcoker" class="heading-link"><i class="fas fa-link"></i></a>What is Dcoker?</h1>
+      <p>在讲述Docker前，我们需要了解一下的它的诞生起源，也就是<strong>Why need it?</strong></p>
+
+        <h2 id="环境配置"   >
+          <a href="#环境配置" class="heading-link"><i class="fas fa-link"></i></a>环境配置</h2>
+      <p>软件开发过程中，遇到最麻烦的问题就各种环境的安装，从一开始的C语言到Java到数据库postgresql等,很多时候自己的程序在本机跑没有问题，但是别人的机子就跑不通。这个时候开发者经常说“<strong>it works on my machine</strong>”,其实往往在别的机子不行。<br>于是聪明的开发者就想，我能不能把环境一起安装呢?也就是说，我在安装的软件程序的时候，不仅仅安装程序应用本身，而且把它所需要的环境依赖都一同安装下来。</p>
+
+        <h2 id="虚拟机"   >
+          <a href="#虚拟机" class="heading-link"><i class="fas fa-link"></i></a>虚拟机</h2>
+      <p>虚拟机(Virtual Machine)其实就是一种很好的解决方案，我只要使用Vmware安装Linux虚拟机，就可以在Windows系统中运行Linux虚拟环境。虽然用户可以通过虚拟机还原软件的原始环境。但是，这个方案有几个缺点。</p>
+<ol>
+<li>占用内存空间<blockquote>
+<p>我自己在运行Linux虚拟机就要划分80GB的磁盘空间，而且一跑起来风扇就开始快速转动。</p>
+</blockquote>
+</li>
+<li>启动慢<blockquote>
+<p>启动操作系统虚拟多久，启动虚拟机就要多久。我因为之前划分了磁盘，每次启动要几分钟的时间。</p>
+</blockquote>
+</li>
+<li>操作不便捷<blockquote>
+<p>虚拟机是完整的操作系统，想要启动一个服务，往往需要冗余步骤。</p>
+</blockquote>
+</li>
+</ol>
+
+        <h2 id="Linux容器"   >
+          <a href="#Linux容器" class="heading-link"><i class="fas fa-link"></i></a>Linux容器</h2>
+      <p>针对前面提到的虚拟机存在的问题，Linux发展出另一种虚拟化技术(Linux Containers),也就是<strong>Linux容器</strong>。<br><img   src="https://user-gold-cdn.xitu.io/2018/6/17/1640cae21c18e404?imageView2/0/w/1280/h/960/format/webp/ignore-error/1" style=""  alt="container"></p>
+<blockquote>
+<p>关于容器的概念我们可以把它通俗地理解为一个个集装箱，每一个集装箱之间是相互隔离运行的，但是在运输的时候又共享同一艘货轮(操作系统)，也就是说每一个容器都是一个进程，共享操作系统的资源。</p>
+</blockquote>
+
+        <h3 id="容器VS虚拟机"   >
+          <a href="#容器VS虚拟机" class="heading-link"><i class="fas fa-link"></i></a>容器VS虚拟机</h3>
+      <p>虚拟机技术是虚拟化一整套硬件，在上面运行一个完整的操作系统。<br>而容器虚拟化的是操作系统，而不是硬件，容器之间是共享同一个操作系统资源的。</p>
+
+        <h2 id="Docker"   >
+          <a href="#Docker" class="heading-link"><i class="fas fa-link"></i></a>Docker</h2>
+      <p>Docker 属于 Linux 容器的一种<strong>封装</strong>，提供简单易用的容器使用接口。它是目前最流行的 Linux 容器解决方案。</p>
+<p>Docker 将应用程序与该程序的依赖，打包在一个文件里面。运行这个文件，就会生成一个虚拟容器。程序在这个虚拟容器里运行，就好像在真实的物理机上运行一样。有了 Docker，就不用担心环境问题。</p>
+<p>总体来说，Docker 的接口相当简单，用户可以方便地创建和使用容器，把自己的应用放入容器。容器还可以进行版本管理、复制、分享、修改，就像管理普通的代码一样。</p>
+
+        <h1 id="Docker的基本概念"   >
+          <a href="#Docker的基本概念" class="heading-link"><i class="fas fa-link"></i></a>Docker的基本概念</h1>
+      <p><img   src="https://user-gold-cdn.xitu.io/2018/6/18/164109e4900357a9?imageView2/0/w/1280/h/960/format/webp/ignore-error/1" style=""  alt="docker"></p>
+
+        <h2 id="Image镜像"   >
+          <a href="#Image镜像" class="heading-link"><i class="fas fa-link"></i></a>Image镜像</h2>
+      <p>我们可以把镜像理解成是一个特殊的文件系统。</p>
+<blockquote>
+<p>对于Linux操作系统而言，内核模块启动后，会挂载root文件系统为其提供用户空间的支持。而Docker镜像就相当于是一个root文件系统。</p>
+</blockquote>
+<p>Docker 把应用程序及其依赖，打包在 image 文件里面。只有通过这个文件，才能生成 Docker 容器。image 文件可以看作是容器的<strong>模板</strong>。Docker 根据 image 文件生成容器的实例。同一个 image 文件，可以生成多个同时运行的容器实例。</p>
+<p>因为Docker在设计时，采用的是Union FS的技术，将其设计为<strong>分层存储</strong>的架构。<br><strong>因此在镜像构建时，会一层层地构建，前一层是后一层地基础。</strong>每一层构建完就不会再发生改变，后一层上的任何改变只会影响到自己这一层。可以见上图中的镜像层次分布。</p>
+
+        <h2 id="Container容器"   >
+          <a href="#Container容器" class="heading-link"><i class="fas fa-link"></i></a>Container容器</h2>
+      <p>镜像（Image）和容器（Container）的关系，就像是面向对象程序设计中的 类 和 实例 一样，镜像是静态的定义，<strong>容器是镜像运行时的实体。容器可以被创建、启动、停止、删除、暂停等。</strong></p>
+
+        <h2 id="Repository仓库"   >
+          <a href="#Repository仓库" class="heading-link"><i class="fas fa-link"></i></a>Repository仓库</h2>
+      <p>仓库就是一个集中存放镜像文件的地方。</p>
+
+        <h1 id="Docker常用命令"   >
+          <a href="#Docker常用命令" class="heading-link"><i class="fas fa-link"></i></a>Docker常用命令</h1>
+      <figure class="highlight docker"><div class="table-container"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 启动Docker服务</span></span><br><span class="line">sudo service docker start</span><br><span class="line"><span class="comment"># Pull Docker镜像</span></span><br><span class="line">docker image pull library/hello-world</span><br><span class="line"><span class="comment"># 运行image镜像,生成容器实例</span></span><br><span class="line">docker container <span class="keyword">run</span><span class="bash"> hello-world</span></span><br><span class="line"><span class="comment"># 结束实例进程</span></span><br><span class="line">docker container kill[containerID]</span><br></pre></td></tr></table></div></figure>
+<p>参考资料：<br><span class="exturl"><a class="exturl__link"   href="https://www.ruanyifeng.com/blog/2018/02/docker-tutorial.html"  target="_blank" rel="noopener">https://www.ruanyifeng.com/blog/2018/02/docker-tutorial.html</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span><br><span class="exturl"><a class="exturl__link"   href="https://juejin.im/post/5b260ec26fb9a00e8e4b031a#heading-6"  target="_blank" rel="noopener">https://juejin.im/post/5b260ec26fb9a00e8e4b031a#heading-6</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></p>
 ]]></content>
       <categories>
         <category>java后端开发</category>
