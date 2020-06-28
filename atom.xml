@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://gemini-lin.github.io/"/>
-  <updated>2020-06-25T11:24:02.658Z</updated>
+  <updated>2020-06-28T02:03:35.632Z</updated>
   <id>https://gemini-lin.github.io/</id>
   
   <author>
@@ -15,6 +15,29 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Docker简介</title>
+    <link href="https://gemini-lin.github.io/docker/"/>
+    <id>https://gemini-lin.github.io/docker/</id>
+    <published>2020-06-28T01:52:57.000Z</published>
+    <updated>2020-06-28T02:03:35.632Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;Free-Talk&quot;   &gt;
+          &lt;a href=&quot;#Free-Talk&quot; class=&quot;heading-link&quot;&gt;&lt;i class=&quot;fas fa-link&quot;&gt;&lt;/i&gt;&lt;/a&gt;Free Talk&lt;/h1&gt;
+      &lt;p&gt;&lt;img src=&quot;http://www.ruanyifeng.com/blogimg/asset/2018/bg2018020901.png&quot; alt=&quot;image&quot;&gt;&lt;br&gt;我之前一直都听过鼎鼎大名的Docker,但都没有仔细地了解一下，有一次给后端接Mysql数据库时，本来想下一个Mysql的，但是安装配置太麻烦，就直接从docker上下了一个镜像就解决了，这就是我的Docker初体验。&lt;br&gt;接下来就好好讲一下，What is Docker?Why need it?And How it works?&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="java后端开发" scheme="https://Gemini-Lin.github.io/categories/java%E5%90%8E%E7%AB%AF%E5%BC%80%E5%8F%91/"/>
+    
+    
+      <category term="Docker" scheme="https://Gemini-Lin.github.io/tags/Docker/"/>
+    
+  </entry>
   
   <entry>
     <title>正则表达式</title>
@@ -590,33 +613,6 @@
     
     
       <category term="英文写作句型" scheme="https://Gemini-Lin.github.io/tags/%E8%8B%B1%E6%96%87%E5%86%99%E4%BD%9C%E5%8F%A5%E5%9E%8B/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>日语学习常用句式（一）</title>
-    <link href="https://gemini-lin.github.io/%E6%97%A5%E8%AF%AD%E5%AD%A6%E4%B9%A0%E5%B8%B8%E7%94%A8%E5%8F%A5%E5%BC%8F%EF%BC%88%E4%B8%80%EF%BC%89/"/>
-    <id>https://gemini-lin.github.io/%E6%97%A5%E8%AF%AD%E5%AD%A6%E4%B9%A0%E5%B8%B8%E7%94%A8%E5%8F%A5%E5%BC%8F%EF%BC%88%E4%B8%80%EF%BC%89/</id>
-    <published>2020-01-31T08:20:40.000Z</published>
-    <updated>2020-05-28T18:01:08.098Z</updated>
-    
-    <summary type="html">
-    
-      &lt;h2 id=&quot;常用句式&quot;   &gt;
-          &lt;a href=&quot;#常用句式&quot; class=&quot;heading-link&quot;&gt;&lt;i class=&quot;fas fa-link&quot;&gt;&lt;/i&gt;&lt;/a&gt;常用句式&lt;/h2&gt;
-      &lt;p&gt;Su go ku o I si i&lt;br&gt;すごく　おいしい　&lt;br&gt;超级好吃&lt;/p&gt;
-&lt;p&gt;Su go ku ta no si i&lt;br&gt;すごく　たのしい&lt;br&gt;超级开心&lt;/p&gt;
-&lt;p&gt;I ta da ki ma su&lt;br&gt;いただきます&lt;br&gt;我要开动啦&lt;/p&gt;
-    
-    </summary>
-    
-    
-      <category term="日语学习" scheme="https://Gemini-Lin.github.io/categories/%E6%97%A5%E8%AF%AD%E5%AD%A6%E4%B9%A0/"/>
-    
-    
-      <category term="日语常用句式" scheme="https://Gemini-Lin.github.io/tags/%E6%97%A5%E8%AF%AD%E5%B8%B8%E7%94%A8%E5%8F%A5%E5%BC%8F/"/>
-    
-      <category term="五十音" scheme="https://Gemini-Lin.github.io/tags/%E4%BA%94%E5%8D%81%E9%9F%B3/"/>
     
   </entry>
   
