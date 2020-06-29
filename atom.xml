@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://gemini-lin.github.io/"/>
-  <updated>2020-06-28T08:54:19.500Z</updated>
+  <updated>2020-06-29T08:35:05.654Z</updated>
   <id>https://gemini-lin.github.io/</id>
   
   <author>
@@ -15,6 +15,29 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>SM2算法分析</title>
+    <link href="https://gemini-lin.github.io/SM2/"/>
+    <id>https://gemini-lin.github.io/SM2/</id>
+    <published>2020-06-29T07:35:49.000Z</published>
+    <updated>2020-06-29T08:35:05.654Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;基本参数确定&quot;&gt;
+          &lt;a href=&quot;#基本参数确定&quot; class=&quot;heading-link&quot;&gt;&lt;i class=&quot;fas fa-link&quot;&gt;&lt;/i&gt;&lt;/a&gt;基本参数确定&lt;/h1&gt;
+      &lt;figure class=&quot;highlight python&quot;&gt;&lt;div class=&quot;table-container&quot;&gt;&lt;table&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;11&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;# 选择素域，设置椭圆曲线参数&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;# m 为256bit长&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;default_ecc_table = {&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;string&quot;&gt;&#39;n&#39;&lt;/span&gt;: &lt;span class=&quot;string&quot;&gt;&#39;FFFFFFFEFFFFFFFFFFFFFFFFFFFFFFFF7203DF6B21C6052B53BBF40939D54123&#39;&lt;/span&gt;,&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;string&quot;&gt;&#39;p&#39;&lt;/span&gt;: &lt;span class=&quot;string&quot;&gt;&#39;FFFFFFFEFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF00000000FFFFFFFFFFFFFFFF&#39;&lt;/span&gt;,&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;# 基点G&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;string&quot;&gt;&#39;g&#39;&lt;/span&gt;: &lt;span class=&quot;string&quot;&gt;&#39;32c4ae2c1f1981195f9904466a39c9948fe30bbff2660be1715a4589334c74c7&#39;&lt;/span&gt;\&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;string&quot;&gt;&#39;bc3736a2f4f6779c59bdcee36b692153d0a9877cc62a474002df32e52139f0a0&#39;&lt;/span&gt;,&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;string&quot;&gt;&#39;a&#39;&lt;/span&gt;: &lt;span class=&quot;string&quot;&gt;&#39;FFFFFFFEFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF00000000FFFFFFFFFFFFFFFC&#39;&lt;/span&gt;,&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;string&quot;&gt;&#39;b&#39;&lt;/span&gt;: &lt;span class=&quot;string&quot;&gt;&#39;28E9FA9E9D9F5E344D5A9E4BCF6509A7F39789F515AB8F92DDBCBD414D940E93&#39;&lt;/span&gt;,&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;}&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/div&gt;&lt;/figure&gt;
+    
+    </summary>
+    
+    
+      <category term="课程总结" scheme="https://Gemini-Lin.github.io/categories/%E8%AF%BE%E7%A8%8B%E6%80%BB%E7%BB%93/"/>
+    
+    
+      <category term="SM2" scheme="https://Gemini-Lin.github.io/tags/SM2/"/>
+    
+  </entry>
   
   <entry>
     <title>Docker入门教程</title>
@@ -587,32 +610,6 @@
     
     
       <category term="论文写作" scheme="https://Gemini-Lin.github.io/tags/%E8%AE%BA%E6%96%87%E5%86%99%E4%BD%9C/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>美赛论文句式</title>
-    <link href="https://gemini-lin.github.io/%E7%BE%8E%E8%B5%9B%E8%AE%BA%E6%96%87%E5%8F%A5%E5%BC%8F/"/>
-    <id>https://gemini-lin.github.io/%E7%BE%8E%E8%B5%9B%E8%AE%BA%E6%96%87%E5%8F%A5%E5%BC%8F/</id>
-    <published>2020-02-01T08:04:32.000Z</published>
-    <updated>2020-05-28T18:01:14.113Z</updated>
-    
-    <summary type="html">
-    
-      &lt;h2 id=&quot;开头句型写法&quot;&gt;
-          &lt;a href=&quot;#开头句型写法&quot; class=&quot;heading-link&quot;&gt;&lt;i class=&quot;fas fa-link&quot;&gt;&lt;/i&gt;&lt;/a&gt;开头句型写法&lt;/h2&gt;
-      &lt;blockquote&gt;
-&lt;p&gt;Mention polygamy in Canada and waht might come to mind is Bountiful ,a suitably named town in British Columbia .&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;&lt;strong&gt;Mention…and what comes to mind is …&lt;/strong&gt;&lt;br&gt;提及……时我们第一个想到的是……&lt;br&gt;当我们要介绍某个地方、人物或者作品时，就可以用上该句型&lt;br&gt;Mention A and what comes to mind is B&lt;br&gt;A 一般是与事物有关的品质或者特点 B是事物本身&lt;br&gt;eg:&lt;br&gt;Mention  innovative thinking and what comes to mind is Steve Jobs ,a man who was ahead of his time and who reshaped the IT industry .&lt;/p&gt;
-    
-    </summary>
-    
-    
-      <category term="数学建模" scheme="https://Gemini-Lin.github.io/categories/%E6%95%B0%E5%AD%A6%E5%BB%BA%E6%A8%A1/"/>
-    
-    
-      <category term="英文写作句型" scheme="https://Gemini-Lin.github.io/tags/%E8%8B%B1%E6%96%87%E5%86%99%E4%BD%9C%E5%8F%A5%E5%9E%8B/"/>
     
   </entry>
   
