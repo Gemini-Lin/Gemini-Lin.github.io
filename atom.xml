@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://gemini-lin.github.io/"/>
-  <updated>2020-06-29T08:35:05.654Z</updated>
+  <updated>2020-06-29T12:33:46.811Z</updated>
   <id>https://gemini-lin.github.io/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="https://gemini-lin.github.io/SM2/"/>
     <id>https://gemini-lin.github.io/SM2/</id>
     <published>2020-06-29T07:35:49.000Z</published>
-    <updated>2020-06-29T08:35:05.654Z</updated>
+    <updated>2020-06-29T12:33:46.811Z</updated>
     
     <summary type="html">
     
@@ -197,6 +197,42 @@
   </entry>
   
   <entry>
+    <title>Operating System(1)</title>
+    <link href="https://gemini-lin.github.io/Operating-System-1/"/>
+    <id>https://gemini-lin.github.io/Operating-System-1/</id>
+    <published>2020-06-07T10:53:11.000Z</published>
+    <updated>2020-06-12T06:43:02.738Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;概述&quot;&gt;
+          &lt;a href=&quot;#概述&quot; class=&quot;heading-link&quot;&gt;&lt;i class=&quot;fas fa-link&quot;&gt;&lt;/i&gt;&lt;/a&gt;概述&lt;/h1&gt;
+      
+        &lt;h2 id=&quot;操作系统的目标和作用&quot;&gt;
+          &lt;a href=&quot;#操作系统的目标和作用&quot; class=&quot;heading-link&quot;&gt;&lt;i class=&quot;fas fa-link&quot;&gt;&lt;/i&gt;&lt;/a&gt;操作系统的目标和作用&lt;/h2&gt;
+      
+        &lt;h3 id=&quot;目标&quot;&gt;
+          &lt;a href=&quot;#目标&quot; class=&quot;heading-link&quot;&gt;&lt;i class=&quot;fas fa-link&quot;&gt;&lt;/i&gt;&lt;/a&gt;目标&lt;/h3&gt;
+      &lt;p&gt;方便性、有效性、可扩充性、开放性。&lt;/p&gt;
+
+        &lt;h3 id=&quot;作用&quot;&gt;
+          &lt;a href=&quot;#作用&quot; class=&quot;heading-link&quot;&gt;&lt;i class=&quot;fas fa-link&quot;&gt;&lt;/i&gt;&lt;/a&gt;作用&lt;/h3&gt;
+      &lt;ol&gt;
+&lt;li&gt;作为用户与计算机硬件之间的接口&lt;/li&gt;
+&lt;li&gt;作为计算机系统资源的管理者&lt;/li&gt;
+&lt;li&gt;实现了对计算机资源的抽象&lt;/li&gt;&lt;/ol&gt;
+    
+    </summary>
+    
+    
+      <category term="课程总结" scheme="https://Gemini-Lin.github.io/categories/%E8%AF%BE%E7%A8%8B%E6%80%BB%E7%BB%93/"/>
+    
+    
+      <category term="OS" scheme="https://Gemini-Lin.github.io/tags/OS/"/>
+    
+  </entry>
+  
+  <entry>
     <title>Database Programming</title>
     <link href="https://gemini-lin.github.io/Database-Programming/"/>
     <id>https://gemini-lin.github.io/Database-Programming/</id>
@@ -240,42 +276,6 @@
     
     
       <category term="SQL" scheme="https://Gemini-Lin.github.io/tags/SQL/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Operating System(1)</title>
-    <link href="https://gemini-lin.github.io/Operating-System-1/"/>
-    <id>https://gemini-lin.github.io/Operating-System-1/</id>
-    <published>2020-06-07T10:53:11.000Z</published>
-    <updated>2020-06-12T06:43:02.738Z</updated>
-    
-    <summary type="html">
-    
-      &lt;h1 id=&quot;概述&quot;&gt;
-          &lt;a href=&quot;#概述&quot; class=&quot;heading-link&quot;&gt;&lt;i class=&quot;fas fa-link&quot;&gt;&lt;/i&gt;&lt;/a&gt;概述&lt;/h1&gt;
-      
-        &lt;h2 id=&quot;操作系统的目标和作用&quot;&gt;
-          &lt;a href=&quot;#操作系统的目标和作用&quot; class=&quot;heading-link&quot;&gt;&lt;i class=&quot;fas fa-link&quot;&gt;&lt;/i&gt;&lt;/a&gt;操作系统的目标和作用&lt;/h2&gt;
-      
-        &lt;h3 id=&quot;目标&quot;&gt;
-          &lt;a href=&quot;#目标&quot; class=&quot;heading-link&quot;&gt;&lt;i class=&quot;fas fa-link&quot;&gt;&lt;/i&gt;&lt;/a&gt;目标&lt;/h3&gt;
-      &lt;p&gt;方便性、有效性、可扩充性、开放性。&lt;/p&gt;
-
-        &lt;h3 id=&quot;作用&quot;&gt;
-          &lt;a href=&quot;#作用&quot; class=&quot;heading-link&quot;&gt;&lt;i class=&quot;fas fa-link&quot;&gt;&lt;/i&gt;&lt;/a&gt;作用&lt;/h3&gt;
-      &lt;ol&gt;
-&lt;li&gt;作为用户与计算机硬件之间的接口&lt;/li&gt;
-&lt;li&gt;作为计算机系统资源的管理者&lt;/li&gt;
-&lt;li&gt;实现了对计算机资源的抽象&lt;/li&gt;&lt;/ol&gt;
-    
-    </summary>
-    
-    
-      <category term="课程总结" scheme="https://Gemini-Lin.github.io/categories/%E8%AF%BE%E7%A8%8B%E6%80%BB%E7%BB%93/"/>
-    
-    
-      <category term="OS" scheme="https://Gemini-Lin.github.io/tags/OS/"/>
     
   </entry>
   
