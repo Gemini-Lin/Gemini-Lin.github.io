@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://gemini-lin.github.io/twenty/</loc>
+    
+    <lastmod>2020-06-30T01:17:30.432Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://gemini-lin.github.io/SM2/</loc>
     
     <lastmod>2020-06-29T12:33:46.811Z</lastmod>
@@ -40,13 +47,6 @@
     <loc>https://gemini-lin.github.io/SQL-Test/</loc>
     
     <lastmod>2020-06-16T09:06:26.329Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://gemini-lin.github.io/twenty/</loc>
-    
-    <lastmod>2020-06-14T08:08:26.633Z</lastmod>
     
   </url>
   
