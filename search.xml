@@ -1,110 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>计算机网络系列(1)--计算机网络和因特网</title>
-    <url>/Computer-Network-and-Internet/</url>
-    <content><![CDATA[<h1 id="计算机网络和Internet发展史">
-          <a href="#计算机网络和Internet发展史" class="heading-link"><i class="fas fa-link"></i></a>计算机网络和Internet发展史</h1>
-      <blockquote>
-<ol>
-<li>分组交换原理的早期发展与演化：1961-1972</li>
-<li>网际互连与新兴的专属网络：1972-1980</li>
-<li>TCP/IP新协议与网络数量激增：1980-1990</li>
-<li>商业化, Web, 新的网络应用：1990-2000</li>
-<li>移动互联网：21世纪10年代中期——至今</li>
-</ol>
-</blockquote>
-
-        <h1 id="什么是Internet？">
-          <a href="#什么是Internet？" class="heading-link"><i class="fas fa-link"></i></a>什么是Internet？</h1>
-      
-        <h2 id="计算机网络">
-          <a href="#计算机网络" class="heading-link"><i class="fas fa-link"></i></a>计算机网络</h2>
-      <p><strong>计算机网络：</strong> 两台以上具有独立操作系统的计算机通过某些介质连接成的相互共享软硬件资源的集合体。<br><strong>两大功能：</strong> 连通性和共享</p>
-<a id="more"></a>
-
-        <h2 id="Internet">
-          <a href="#Internet" class="heading-link"><i class="fas fa-link"></i></a>Internet</h2>
-      <p><strong>由网络构成的网络</strong></p>
-<p><strong>具体构成描述：</strong></p>
-<ol>
-<li>数以亿计的计算互联设备：主机、应用程序</li>
-<li>通信链路：双绞线、光纤、卫星</li>
-<li>分组交换：路由器和交换机</li>
-</ol>
-<p><strong>服务上描述：</strong></p>
-<ol>
-<li>提供网络应用基础架构</li>
-<li>为分布式应用程序提供的通信服务接口<ul>
-<li>无连接服务connectionless</li>
-<li>面向连接服务connection-oriented</li>
-<li>不提供数据传递时间保证（发送端到接收端）的服务</li>
-</ul>
-</li>
-</ol>
-
-        <h2 id="协议–划重点">
-          <a href="#协议–划重点" class="heading-link"><i class="fas fa-link"></i></a>协议–划重点</h2>
-      <p><strong>协议：</strong>定义了两个或多个通信实体间所交换报文的<strong>格式和次序</strong>，以及在报文发送/或接收或者其他事件方面所采取的<strong>行动（响应）</strong>。</p>
-
-        <h2 id="RFC文档">
-          <a href="#RFC文档" class="heading-link"><i class="fas fa-link"></i></a>RFC文档</h2>
-      <ul>
-<li>所有的因特网标准都以RFC（<strong>Request For Comments</strong>,请求评论）的形式在因特网上发表。</li>
-<li>正式标准要经历四个阶段：<ol>
-<li>因特网草案（Internet Draft）－不是RFC文档</li>
-<li>建议标准（Proposed Standard） －开始成为RFC文档</li>
-<li>草案标准（Draft Standard）</li>
-<li>因特网标准（Internet Standard）<br><img src="https://s1.ax1x.com/2020/05/31/t3CKat.png" alt="t3CKat.png"><br><span class="exturl"><a class="exturl__link" href="http://www.rfceditor.org/RFCoverview.html" target="_blank" rel="noopener">详细介绍</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></li>
-</ol>
-</li>
-</ul>
-<p><strong>协议的基本要素：语法、语义和同步</strong></p>
-
-        <h1 id="网络边缘部分">
-          <a href="#网络边缘部分" class="heading-link"><i class="fas fa-link"></i></a>网络边缘部分</h1>
-      
-        <h1 id="网络核心部分">
-          <a href="#网络核心部分" class="heading-link"><i class="fas fa-link"></i></a>网络核心部分</h1>
-      
-        <h1 id="Internet主干-ISPs的结构组成">
-          <a href="#Internet主干-ISPs的结构组成" class="heading-link"><i class="fas fa-link"></i></a>Internet主干/ISPs的结构组成</h1>
-      
-        <h1 id="分组交换网络中延迟和丢失">
-          <a href="#分组交换网络中延迟和丢失" class="heading-link"><i class="fas fa-link"></i></a>分组交换网络中延迟和丢失</h1>
-      
-        <h1 id="协议层及其服务模型">
-          <a href="#协议层及其服务模型" class="heading-link"><i class="fas fa-link"></i></a>协议层及其服务模型</h1>
-      
-        <h1 id="攻击威胁下的网络">
-          <a href="#攻击威胁下的网络" class="heading-link"><i class="fas fa-link"></i></a>攻击威胁下的网络</h1>
-      <script>
-        document.querySelectorAll('.github-emoji')
-          .forEach(el => {
-            if (!el.dataset.src) { return; }
-            const img = document.createElement('img');
-            img.style = 'display:none !important;';
-            img.src = el.dataset.src;
-            img.addEventListener('error', () => {
-              img.remove();
-              el.style.color = 'inherit';
-              el.style.backgroundImage = 'none';
-              el.style.background = 'none';
-            });
-            img.addEventListener('load', () => {
-              img.remove();
-            });
-            document.body.appendChild(img);
-          });
-      </script>]]></content>
-      <categories>
-        <category>课程总结</category>
-      </categories>
-      <tags>
-        <tag>计算机网络</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Computer Network</title>
     <url>/Computer-Network/</url>
     <content><![CDATA[<h1 id="概述">
@@ -344,6 +240,263 @@
       </categories>
       <tags>
         <tag>计算机网络</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>计算机网络系列(1)--计算机网络和因特网</title>
+    <url>/Computer-Network-and-Internet/</url>
+    <content><![CDATA[<h1 id="计算机网络和Internet发展史">
+          <a href="#计算机网络和Internet发展史" class="heading-link"><i class="fas fa-link"></i></a>计算机网络和Internet发展史</h1>
+      <blockquote>
+<ol>
+<li>分组交换原理的早期发展与演化：1961-1972</li>
+<li>网际互连与新兴的专属网络：1972-1980</li>
+<li>TCP/IP新协议与网络数量激增：1980-1990</li>
+<li>商业化, Web, 新的网络应用：1990-2000</li>
+<li>移动互联网：21世纪10年代中期——至今</li>
+</ol>
+</blockquote>
+
+        <h1 id="什么是Internet？">
+          <a href="#什么是Internet？" class="heading-link"><i class="fas fa-link"></i></a>什么是Internet？</h1>
+      
+        <h2 id="计算机网络">
+          <a href="#计算机网络" class="heading-link"><i class="fas fa-link"></i></a>计算机网络</h2>
+      <p><strong>计算机网络：</strong> 两台以上具有独立操作系统的计算机通过某些介质连接成的相互共享软硬件资源的集合体。<br><strong>两大功能：</strong> 连通性和共享</p>
+<a id="more"></a>
+
+        <h2 id="Internet">
+          <a href="#Internet" class="heading-link"><i class="fas fa-link"></i></a>Internet</h2>
+      <p><strong>由网络构成的网络</strong></p>
+<p><strong>具体构成描述：</strong></p>
+<ol>
+<li>数以亿计的计算互联设备：主机、应用程序</li>
+<li>通信链路：双绞线、光纤、卫星</li>
+<li>分组交换：路由器和交换机</li>
+</ol>
+<p><strong>服务上描述：</strong></p>
+<ol>
+<li>提供网络应用基础架构</li>
+<li>为分布式应用程序提供的通信服务接口<ul>
+<li>无连接服务connectionless</li>
+<li>面向连接服务connection-oriented</li>
+<li>不提供数据传递时间保证（发送端到接收端）的服务</li>
+</ul>
+</li>
+</ol>
+
+        <h2 id="协议–划重点">
+          <a href="#协议–划重点" class="heading-link"><i class="fas fa-link"></i></a>协议–划重点</h2>
+      <p><strong>协议：</strong>定义了两个或多个通信实体间所交换报文的<strong>格式和次序</strong>，以及在报文发送/或接收或者其他事件方面所采取的<strong>行动（响应）</strong>。</p>
+
+        <h2 id="RFC文档">
+          <a href="#RFC文档" class="heading-link"><i class="fas fa-link"></i></a>RFC文档</h2>
+      <ul>
+<li>所有的因特网标准都以RFC（<strong>Request For Comments</strong>,请求评论）的形式在因特网上发表。</li>
+<li>正式标准要经历四个阶段：<ol>
+<li>因特网草案（Internet Draft）－不是RFC文档</li>
+<li>建议标准（Proposed Standard） －开始成为RFC文档</li>
+<li>草案标准（Draft Standard）</li>
+<li>因特网标准（Internet Standard）<br><img src="https://s1.ax1x.com/2020/05/31/t3CKat.png" alt="t3CKat.png"><br><span class="exturl"><a class="exturl__link" href="http://www.rfceditor.org/RFCoverview.html" target="_blank" rel="noopener">详细介绍</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></li>
+</ol>
+</li>
+</ul>
+<p><strong>协议的基本要素：语法、语义和同步</strong></p>
+
+        <h1 id="网络边缘部分">
+          <a href="#网络边缘部分" class="heading-link"><i class="fas fa-link"></i></a>网络边缘部分</h1>
+      
+        <h1 id="网络核心部分">
+          <a href="#网络核心部分" class="heading-link"><i class="fas fa-link"></i></a>网络核心部分</h1>
+      
+        <h1 id="Internet主干-ISPs的结构组成">
+          <a href="#Internet主干-ISPs的结构组成" class="heading-link"><i class="fas fa-link"></i></a>Internet主干/ISPs的结构组成</h1>
+      
+        <h1 id="分组交换网络中延迟和丢失">
+          <a href="#分组交换网络中延迟和丢失" class="heading-link"><i class="fas fa-link"></i></a>分组交换网络中延迟和丢失</h1>
+      
+        <h1 id="协议层及其服务模型">
+          <a href="#协议层及其服务模型" class="heading-link"><i class="fas fa-link"></i></a>协议层及其服务模型</h1>
+      
+        <h1 id="攻击威胁下的网络">
+          <a href="#攻击威胁下的网络" class="heading-link"><i class="fas fa-link"></i></a>攻击威胁下的网络</h1>
+      <script>
+        document.querySelectorAll('.github-emoji')
+          .forEach(el => {
+            if (!el.dataset.src) { return; }
+            const img = document.createElement('img');
+            img.style = 'display:none !important;';
+            img.src = el.dataset.src;
+            img.addEventListener('error', () => {
+              img.remove();
+              el.style.color = 'inherit';
+              el.style.backgroundImage = 'none';
+              el.style.background = 'none';
+            });
+            img.addEventListener('load', () => {
+              img.remove();
+            });
+            document.body.appendChild(img);
+          });
+      </script>]]></content>
+      <categories>
+        <category>课程总结</category>
+      </categories>
+      <tags>
+        <tag>计算机网络</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>JVM系列（三）-- 垃圾收集基础(GC)</title>
+    <url>/Garbage-Collection/</url>
+    <content><![CDATA[<h1 id="概述">
+          <a href="#概述" class="heading-link"><i class="fas fa-link"></i></a>概述</h1>
+      
+        <h2 id="起源">
+          <a href="#起源" class="heading-link"><i class="fas fa-link"></i></a>起源</h2>
+      <p><strong>误解:</strong> 垃圾收集(Garbage Collection,简称GC)是Java语言的伴生产物。<br>事实上，垃圾收集的历史远远比Java久远，在1960年诞生于麻省理工学院的Lisp是第一门开始使用内存动态分配和垃圾收集技术的语言。当Lisp还在胚胎时期时，其作者John McCarthy就思考过垃圾收集需要完成的三件事情：</p>
+<ul>
+<li>哪些内存需要回收？</li>
+<li>什么时候回收？</li>
+<li>如何回收？<a id="more"></a>
+
+</li>
+</ul>
+
+        <h2 id="Why-need-it？">
+          <a href="#Why-need-it？" class="heading-link"><i class="fas fa-link"></i></a>Why need it？</h2>
+      <p>经过半个世纪的发展，今天的内存动态分配与内存回收技术已经相当成熟，一切看起来都进入了“自动化”时代，那为什么我们还要去了解垃圾收集和内存分配？</p>
+<p><strong>答案很简单：</strong>当需要排查<strong>各种内存溢出、内存泄漏问题</strong>时，当垃圾收集成为系统达到更高并发量的瓶颈时，我们就必须对这些“自动化”的技术实施必要的监控和调节。</p>
+
+        <h2 id="对象">
+          <a href="#对象" class="heading-link"><i class="fas fa-link"></i></a>对象</h2>
+      <p>我们在系列2中学习了Java内存运行各个区域，分别为<strong>程序计数器、虚拟机栈、本地方法栈、Java堆、方法区</strong>。(<em>如果忘记了，快回头复习</em>)</p>
+<p>其中程序计数器、虚拟机栈、本地方法栈3个区域随线程而生，随线程而灭，栈中的栈帧随着方法的进入和退出而有条不紊地执行着出栈和入栈操作。每一个栈帧中分配多少内存基本上是在类结构确定下来时就已知的，因此这几个区域的内存分配和回收都具备确定性，在这几个区域内就不需要过多考虑如何回收的问题，当方法结束或者线程结束时，内存自然就跟随着回收了。</p>
+<p>而<strong>Java堆和方法区</strong>有很显著的不确定性：一个接口的多个实现类需要的内存可能会不一样，一个方法所执行的不同条件分支所需要的内存也可能不一样，只有处于运行期间，我们才能知道程序究竟会创建哪些对象，创建多少个对象，这个不分内存的分配和回收是动态的。<strong>这也就是GC所关注的对象！</strong><br>这里我们就回答了之前提出的第一个问题 – 哪些内存需要回收。</p>
+
+        <h1 id="判断对象生死">
+          <a href="#判断对象生死" class="heading-link"><i class="fas fa-link"></i></a>判断对象生死</h1>
+      <p>在垃圾收集器对内存进行回收时，第一步就是要判断对象的状态。</p>
+
+        <h2 id="引用计数算法">
+          <a href="#引用计数算法" class="heading-link"><i class="fas fa-link"></i></a>引用计数算法</h2>
+      <p><strong>引用计数算法：</strong><br>在对象中添加一个引用计数器，每当有一个地方引用它时，计数器值就加一；<br>当引用失效时，计数器值就减一；<br>任何时刻计算器为零的对象就是不可能再被使用的。</p>
+<p><em>这种方法是我编程中最常用的了，这里被狠狠地打脸了。</em><br>这个算法面临的问题：<strong>无法解决对象之间相互循环引用的问题。</strong></p>
+<blockquote>
+<p>即 <code>objA.instance = objB; objB.instance = objA;</code>objA 和 objB 都不会再被访问后，它们仍然相互引用着对方，所以它们的引用计数器不为 0，将永远不能被判为不可用。<br>(可以好好思考一下)</p>
+</blockquote>
+
+        <h2 id="可达性分析算法">
+          <a href="#可达性分析算法" class="heading-link"><i class="fas fa-link"></i></a>可达性分析算法</h2>
+      <p><strong>基本思路：</strong> 当前对象到根对象(GC Roots)是否是可达的 <em>(图论知识)</em></p>
+<ul>
+<li>从 “GC Roots” 对象作为起点开始向下搜索，走过的路径称为引用链（Reference Chain）；</li>
+<li>从 “GC Roots” 开始，不可达的对象被判为不可用。</li>
+</ul>
+<blockquote>
+<p>如下图所示，对象object 5、object 6、object 7虽然互有关联，但是它们到GC Roots是不可达的，因此它们将会被判定为可回收的对象。</p>
+</blockquote>
+<p><img src="https://s1.ax1x.com/2020/05/31/tl4Qv4.png" alt="tl4Qv4.png"></p>
+
+        <h3 id="Java中可作为GC-Roots的对象">
+          <a href="#Java中可作为GC-Roots的对象" class="heading-link"><i class="fas fa-link"></i></a>Java中可作为GC Roots的对象</h3>
+      <ol>
+<li>栈中(本地变量表中的Reference)<ul>
+<li>虚拟机栈中，栈帧中的本地变量表所引用的对象；</li>
+<li>本地方法栈中，JNI引用的对象(native方法)</li>
+</ul>
+</li>
+<li>方法区中<ul>
+<li>类的静态属性引用的对象；</li>
+<li>常量引用的对象；<blockquote>
+<p>这上面的对象没搞懂</p>
+</blockquote>
+</li>
+</ul>
+</li>
+</ol>
+<p>即便如此，一个对象也不是一旦被判为不可达，就立即死去的，宣告一个的死亡需要经过两次标记过程。</p>
+
+        <h2 id="引用">
+          <a href="#引用" class="heading-link"><i class="fas fa-link"></i></a>引用</h2>
+      <p>无论是通过引用计数算法判断对象的引用数量，还是通过可达性分析算法判断对象是否引用链可达，判定对象是否存活都和“引用”离不开关系。</p>
+<p>在JDK 1.2版以前，Java里面的引用是很传统的<strong>定义：</strong>如果reference类型的数据中存储的数值代表的是另外一块内存的起始地址，就称该reference数据是代表某块内存、某个对象的引用。–<em>我自己的以往理解也是这样的</em></p>
+<p>在JDK 1.2版之后，Java对引用的概念进行了扩充，将引用分为<strong>强引用（Strongly Re-ference）、软引用（SoftReference）、弱引用（Weak Reference）和虚引用（Phantom Reference）</strong>4种，这4种引用强度依次逐渐减弱。</p>
+
+        <h3 id="4种引用">
+          <a href="#4种引用" class="heading-link"><i class="fas fa-link"></i></a>4种引用</h3>
+      <ol>
+<li><strong>强引用：</strong> 像<code>Object obj = new Object()</code>这种，只要强引用还存在，垃圾收集器就永远不会回收掉被引用的对象。</li>
+<li><strong>软引用：</strong> 用来描述还有用但非必须的对象。对于软引用对象，在OOM（OutOfMemory)前，虚拟机会把这些对象列入回收范围中进行第二次回收，如果这次回收后，内存还是不够用，就OOM。实现类：<code>SoftReference</code>。</li>
+<li><strong>弱引用：</strong> 跟软引用类似，比它更弱一点。被弱引用关联的对象只能生存到下一次垃圾收集发生为止。当垃圾收集器开始工作，无论当前内存是否足够，都会回收掉只被弱引用关联的对象。实现类：<code>WeakReference</code>。</li>
+<li><strong>虚引用：</strong> 也称为“幽灵引用”或者“幻影引用”，它是最弱的一种引用关系。唯一作用就是为了能在这个对象被收集器回收时收到一个系统通知。实现类：<code>PhantomReference</code>。</li>
+</ol>
+
+        <h2 id="To-be-or-not-to-be">
+          <a href="#To-be-or-not-to-be" class="heading-link"><i class="fas fa-link"></i></a>To be or not to be?</h2>
+      <p>要真正宣告一个对象死亡，至少要经历两次标记过程：</p>
+<ol>
+<li><strong>第一次标记：</strong> 如果对象在进行可达性分析后发现没有与GC Roots相连接的引用链，那它将会被第一次标记；</li>
+<li><strong>第二次标记：</strong> 筛选此对象是否有必要执行<code>finalize()</code>方法。假如对象没有覆盖finalize()方法，或者finalize()方法已经被虚拟机调用过，那么虚拟机将这两种情况都视为“没有必要执行”。</li>
+</ol>
+
+        <h3 id="finalize方法">
+          <a href="#finalize方法" class="heading-link"><i class="fas fa-link"></i></a>finalize方法</h3>
+      <p>如果这个对象被判定为确有必要执行finalize()方法，那么该对象将会被放置在一个名为F-Queue的队列之中，并在稍后由一条由虚拟机自动建立的、低调度优先级的Finalizer线程去执行它们的finalize()方法。</p>
+<blockquote>
+<p>这里所说的“执行”是指虚拟机会触发这个方法开始运行，但并不承诺一定会等待它运行结束。<br>这样做的原因是，如果某个对象的finalize()方法执行缓慢，或者更极端地发生了死循环，将很可能导致F-Queue队列中的其他对象永久处于等待，甚至导致整个内存回收子系统的崩溃。</p>
+</blockquote>
+<p><strong>存活方式：</strong><br>如果对象要在finalize()中成功拯救自己–只要重新与引用链上的任何一个对象建立关联即可，譬如把自己（this关键字）赋值给某个类变量或者对象的成员变量，那在第二次标记时它将被移出“即将回收”的集合；</p>
+<blockquote>
+<p>finalize()能做的所有工作，使用try-finally或者其他方式都可以做得更好、更及时，所以笔者建议大家完全可以忘掉Java语言里面的这个方法。</p>
+</blockquote>
+
+        <h2 id="回收方法区">
+          <a href="#回收方法区" class="heading-link"><i class="fas fa-link"></i></a>回收方法区</h2>
+      <blockquote>
+<p>方法区垃圾收集的“性价比”通常也是比较低的：在Java堆中，尤其是在新生代中，对常规应用进行一次垃圾收集通常可以回收70%至99%的内存空间，相比之下，方法区回收囿于苛刻的判定条件，其区域垃圾收集的回收成果往往远低于此。</p>
+</blockquote>
+<p>回收的内容：<strong>废弃的常量和不再使用的类型</strong></p>
+<ul>
+<li><strong>废弃常量：</strong> 例如一个字符串”abc”，当没有任何引用指向”abc”时，它就是废弃常量了。</li>
+<li><strong>无用的类：</strong> 同时满足一下3个条件的类。<ol>
+<li>该类的所有实例已被回收，Java堆中不存在该类的任何实例；</li>
+<li>加载该类的Classloader已被回收；</li>
+<li>该类的Class对象没有被任何地方引用，即无法在任何地方通过反射访问该类的方法。</li>
+</ol>
+</li>
+</ul>
+
+        <h1 id="Free-Talk">
+          <a href="#Free-Talk" class="heading-link"><i class="fas fa-link"></i></a>Free Talk</h1>
+      <p>今天的垃圾收集基础部分算是写完，本来打算把算法部分也讲了，但是发现算法部分另起一篇的效果更好一点，同时打算补一篇Java基础，发现自己上学期学的Java遗忘的比较厉害了，而且上学期学的时候也没有学全，再拿来复习学习一下比较好。然后我发现自己对内存管理里面的数据区域了解的太少了，遇到了总是弄不清楚。  </p>
+<p><strong>热爱未知，比如宇宙和清晨</strong><br><img src="https://s1.ax1x.com/2020/05/31/t1Spex.png" alt="image"></p>
+<p>参考资料：<br><span class="exturl"><a class="exturl__link" href="https://github.com/TangBean/understanding-the-jvm/blob/master/Ch1-Java%E5%86%85%E5%AD%98%E7%AE%A1%E7%90%86%E6%9C%BA%E5%88%B6/02-%E5%9E%83%E5%9C%BE%E6%94%B6%E9%9B%86(GC).md" target="_blank" rel="noopener">Github</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span><br>《深入理解java虚拟机》</p>
+<script>
+        document.querySelectorAll('.github-emoji')
+          .forEach(el => {
+            if (!el.dataset.src) { return; }
+            const img = document.createElement('img');
+            img.style = 'display:none !important;';
+            img.src = el.dataset.src;
+            img.addEventListener('error', () => {
+              img.remove();
+              el.style.color = 'inherit';
+              el.style.backgroundImage = 'none';
+              el.style.background = 'none';
+            });
+            img.addEventListener('load', () => {
+              img.remove();
+            });
+            document.body.appendChild(img);
+          });
+      </script>]]></content>
+      <categories>
+        <category>java后端开发</category>
+      </categories>
+      <tags>
+        <tag>JVM</tag>
+        <tag>垃圾收集</tag>
       </tags>
   </entry>
   <entry>
@@ -782,159 +935,6 @@
       </tags>
   </entry>
   <entry>
-    <title>JVM系列（三）-- 垃圾收集基础(GC)</title>
-    <url>/Garbage-Collection/</url>
-    <content><![CDATA[<h1 id="概述">
-          <a href="#概述" class="heading-link"><i class="fas fa-link"></i></a>概述</h1>
-      
-        <h2 id="起源">
-          <a href="#起源" class="heading-link"><i class="fas fa-link"></i></a>起源</h2>
-      <p><strong>误解:</strong> 垃圾收集(Garbage Collection,简称GC)是Java语言的伴生产物。<br>事实上，垃圾收集的历史远远比Java久远，在1960年诞生于麻省理工学院的Lisp是第一门开始使用内存动态分配和垃圾收集技术的语言。当Lisp还在胚胎时期时，其作者John McCarthy就思考过垃圾收集需要完成的三件事情：</p>
-<ul>
-<li>哪些内存需要回收？</li>
-<li>什么时候回收？</li>
-<li>如何回收？<a id="more"></a>
-
-</li>
-</ul>
-
-        <h2 id="Why-need-it？">
-          <a href="#Why-need-it？" class="heading-link"><i class="fas fa-link"></i></a>Why need it？</h2>
-      <p>经过半个世纪的发展，今天的内存动态分配与内存回收技术已经相当成熟，一切看起来都进入了“自动化”时代，那为什么我们还要去了解垃圾收集和内存分配？</p>
-<p><strong>答案很简单：</strong>当需要排查<strong>各种内存溢出、内存泄漏问题</strong>时，当垃圾收集成为系统达到更高并发量的瓶颈时，我们就必须对这些“自动化”的技术实施必要的监控和调节。</p>
-
-        <h2 id="对象">
-          <a href="#对象" class="heading-link"><i class="fas fa-link"></i></a>对象</h2>
-      <p>我们在系列2中学习了Java内存运行各个区域，分别为<strong>程序计数器、虚拟机栈、本地方法栈、Java堆、方法区</strong>。(<em>如果忘记了，快回头复习</em>)</p>
-<p>其中程序计数器、虚拟机栈、本地方法栈3个区域随线程而生，随线程而灭，栈中的栈帧随着方法的进入和退出而有条不紊地执行着出栈和入栈操作。每一个栈帧中分配多少内存基本上是在类结构确定下来时就已知的，因此这几个区域的内存分配和回收都具备确定性，在这几个区域内就不需要过多考虑如何回收的问题，当方法结束或者线程结束时，内存自然就跟随着回收了。</p>
-<p>而<strong>Java堆和方法区</strong>有很显著的不确定性：一个接口的多个实现类需要的内存可能会不一样，一个方法所执行的不同条件分支所需要的内存也可能不一样，只有处于运行期间，我们才能知道程序究竟会创建哪些对象，创建多少个对象，这个不分内存的分配和回收是动态的。<strong>这也就是GC所关注的对象！</strong><br>这里我们就回答了之前提出的第一个问题 – 哪些内存需要回收。</p>
-
-        <h1 id="判断对象生死">
-          <a href="#判断对象生死" class="heading-link"><i class="fas fa-link"></i></a>判断对象生死</h1>
-      <p>在垃圾收集器对内存进行回收时，第一步就是要判断对象的状态。</p>
-
-        <h2 id="引用计数算法">
-          <a href="#引用计数算法" class="heading-link"><i class="fas fa-link"></i></a>引用计数算法</h2>
-      <p><strong>引用计数算法：</strong><br>在对象中添加一个引用计数器，每当有一个地方引用它时，计数器值就加一；<br>当引用失效时，计数器值就减一；<br>任何时刻计算器为零的对象就是不可能再被使用的。</p>
-<p><em>这种方法是我编程中最常用的了，这里被狠狠地打脸了。</em><br>这个算法面临的问题：<strong>无法解决对象之间相互循环引用的问题。</strong></p>
-<blockquote>
-<p>即 <code>objA.instance = objB; objB.instance = objA;</code>objA 和 objB 都不会再被访问后，它们仍然相互引用着对方，所以它们的引用计数器不为 0，将永远不能被判为不可用。<br>(可以好好思考一下)</p>
-</blockquote>
-
-        <h2 id="可达性分析算法">
-          <a href="#可达性分析算法" class="heading-link"><i class="fas fa-link"></i></a>可达性分析算法</h2>
-      <p><strong>基本思路：</strong> 当前对象到根对象(GC Roots)是否是可达的 <em>(图论知识)</em></p>
-<ul>
-<li>从 “GC Roots” 对象作为起点开始向下搜索，走过的路径称为引用链（Reference Chain）；</li>
-<li>从 “GC Roots” 开始，不可达的对象被判为不可用。</li>
-</ul>
-<blockquote>
-<p>如下图所示，对象object 5、object 6、object 7虽然互有关联，但是它们到GC Roots是不可达的，因此它们将会被判定为可回收的对象。</p>
-</blockquote>
-<p><img src="https://s1.ax1x.com/2020/05/31/tl4Qv4.png" alt="tl4Qv4.png"></p>
-
-        <h3 id="Java中可作为GC-Roots的对象">
-          <a href="#Java中可作为GC-Roots的对象" class="heading-link"><i class="fas fa-link"></i></a>Java中可作为GC Roots的对象</h3>
-      <ol>
-<li>栈中(本地变量表中的Reference)<ul>
-<li>虚拟机栈中，栈帧中的本地变量表所引用的对象；</li>
-<li>本地方法栈中，JNI引用的对象(native方法)</li>
-</ul>
-</li>
-<li>方法区中<ul>
-<li>类的静态属性引用的对象；</li>
-<li>常量引用的对象；<blockquote>
-<p>这上面的对象没搞懂</p>
-</blockquote>
-</li>
-</ul>
-</li>
-</ol>
-<p>即便如此，一个对象也不是一旦被判为不可达，就立即死去的，宣告一个的死亡需要经过两次标记过程。</p>
-
-        <h2 id="引用">
-          <a href="#引用" class="heading-link"><i class="fas fa-link"></i></a>引用</h2>
-      <p>无论是通过引用计数算法判断对象的引用数量，还是通过可达性分析算法判断对象是否引用链可达，判定对象是否存活都和“引用”离不开关系。</p>
-<p>在JDK 1.2版以前，Java里面的引用是很传统的<strong>定义：</strong>如果reference类型的数据中存储的数值代表的是另外一块内存的起始地址，就称该reference数据是代表某块内存、某个对象的引用。–<em>我自己的以往理解也是这样的</em></p>
-<p>在JDK 1.2版之后，Java对引用的概念进行了扩充，将引用分为<strong>强引用（Strongly Re-ference）、软引用（SoftReference）、弱引用（Weak Reference）和虚引用（Phantom Reference）</strong>4种，这4种引用强度依次逐渐减弱。</p>
-
-        <h3 id="4种引用">
-          <a href="#4种引用" class="heading-link"><i class="fas fa-link"></i></a>4种引用</h3>
-      <ol>
-<li><strong>强引用：</strong> 像<code>Object obj = new Object()</code>这种，只要强引用还存在，垃圾收集器就永远不会回收掉被引用的对象。</li>
-<li><strong>软引用：</strong> 用来描述还有用但非必须的对象。对于软引用对象，在OOM（OutOfMemory)前，虚拟机会把这些对象列入回收范围中进行第二次回收，如果这次回收后，内存还是不够用，就OOM。实现类：<code>SoftReference</code>。</li>
-<li><strong>弱引用：</strong> 跟软引用类似，比它更弱一点。被弱引用关联的对象只能生存到下一次垃圾收集发生为止。当垃圾收集器开始工作，无论当前内存是否足够，都会回收掉只被弱引用关联的对象。实现类：<code>WeakReference</code>。</li>
-<li><strong>虚引用：</strong> 也称为“幽灵引用”或者“幻影引用”，它是最弱的一种引用关系。唯一作用就是为了能在这个对象被收集器回收时收到一个系统通知。实现类：<code>PhantomReference</code>。</li>
-</ol>
-
-        <h2 id="To-be-or-not-to-be">
-          <a href="#To-be-or-not-to-be" class="heading-link"><i class="fas fa-link"></i></a>To be or not to be?</h2>
-      <p>要真正宣告一个对象死亡，至少要经历两次标记过程：</p>
-<ol>
-<li><strong>第一次标记：</strong> 如果对象在进行可达性分析后发现没有与GC Roots相连接的引用链，那它将会被第一次标记；</li>
-<li><strong>第二次标记：</strong> 筛选此对象是否有必要执行<code>finalize()</code>方法。假如对象没有覆盖finalize()方法，或者finalize()方法已经被虚拟机调用过，那么虚拟机将这两种情况都视为“没有必要执行”。</li>
-</ol>
-
-        <h3 id="finalize方法">
-          <a href="#finalize方法" class="heading-link"><i class="fas fa-link"></i></a>finalize方法</h3>
-      <p>如果这个对象被判定为确有必要执行finalize()方法，那么该对象将会被放置在一个名为F-Queue的队列之中，并在稍后由一条由虚拟机自动建立的、低调度优先级的Finalizer线程去执行它们的finalize()方法。</p>
-<blockquote>
-<p>这里所说的“执行”是指虚拟机会触发这个方法开始运行，但并不承诺一定会等待它运行结束。<br>这样做的原因是，如果某个对象的finalize()方法执行缓慢，或者更极端地发生了死循环，将很可能导致F-Queue队列中的其他对象永久处于等待，甚至导致整个内存回收子系统的崩溃。</p>
-</blockquote>
-<p><strong>存活方式：</strong><br>如果对象要在finalize()中成功拯救自己–只要重新与引用链上的任何一个对象建立关联即可，譬如把自己（this关键字）赋值给某个类变量或者对象的成员变量，那在第二次标记时它将被移出“即将回收”的集合；</p>
-<blockquote>
-<p>finalize()能做的所有工作，使用try-finally或者其他方式都可以做得更好、更及时，所以笔者建议大家完全可以忘掉Java语言里面的这个方法。</p>
-</blockquote>
-
-        <h2 id="回收方法区">
-          <a href="#回收方法区" class="heading-link"><i class="fas fa-link"></i></a>回收方法区</h2>
-      <blockquote>
-<p>方法区垃圾收集的“性价比”通常也是比较低的：在Java堆中，尤其是在新生代中，对常规应用进行一次垃圾收集通常可以回收70%至99%的内存空间，相比之下，方法区回收囿于苛刻的判定条件，其区域垃圾收集的回收成果往往远低于此。</p>
-</blockquote>
-<p>回收的内容：<strong>废弃的常量和不再使用的类型</strong></p>
-<ul>
-<li><strong>废弃常量：</strong> 例如一个字符串”abc”，当没有任何引用指向”abc”时，它就是废弃常量了。</li>
-<li><strong>无用的类：</strong> 同时满足一下3个条件的类。<ol>
-<li>该类的所有实例已被回收，Java堆中不存在该类的任何实例；</li>
-<li>加载该类的Classloader已被回收；</li>
-<li>该类的Class对象没有被任何地方引用，即无法在任何地方通过反射访问该类的方法。</li>
-</ol>
-</li>
-</ul>
-
-        <h1 id="Free-Talk">
-          <a href="#Free-Talk" class="heading-link"><i class="fas fa-link"></i></a>Free Talk</h1>
-      <p>今天的垃圾收集基础部分算是写完，本来打算把算法部分也讲了，但是发现算法部分另起一篇的效果更好一点，同时打算补一篇Java基础，发现自己上学期学的Java遗忘的比较厉害了，而且上学期学的时候也没有学全，再拿来复习学习一下比较好。然后我发现自己对内存管理里面的数据区域了解的太少了，遇到了总是弄不清楚。  </p>
-<p><strong>热爱未知，比如宇宙和清晨</strong><br><img src="https://s1.ax1x.com/2020/05/31/t1Spex.png" alt="image"></p>
-<p>参考资料：<br><span class="exturl"><a class="exturl__link" href="https://github.com/TangBean/understanding-the-jvm/blob/master/Ch1-Java%E5%86%85%E5%AD%98%E7%AE%A1%E7%90%86%E6%9C%BA%E5%88%B6/02-%E5%9E%83%E5%9C%BE%E6%94%B6%E9%9B%86(GC).md" target="_blank" rel="noopener">Github</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span><br>《深入理解java虚拟机》</p>
-<script>
-        document.querySelectorAll('.github-emoji')
-          .forEach(el => {
-            if (!el.dataset.src) { return; }
-            const img = document.createElement('img');
-            img.style = 'display:none !important;';
-            img.src = el.dataset.src;
-            img.addEventListener('error', () => {
-              img.remove();
-              el.style.color = 'inherit';
-              el.style.backgroundImage = 'none';
-              el.style.background = 'none';
-            });
-            img.addEventListener('load', () => {
-              img.remove();
-            });
-            document.body.appendChild(img);
-          });
-      </script>]]></content>
-      <categories>
-        <category>java后端开发</category>
-      </categories>
-      <tags>
-        <tag>JVM</tag>
-        <tag>垃圾收集</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Github入门教学</title>
     <url>/Github%E5%85%A5%E9%97%A8%E6%95%99%E5%AD%A6/</url>
     <content><![CDATA[<h1 id="GitHub入门教学（Git，界面介绍，搜索）">
@@ -992,28 +992,211 @@
       </tags>
   </entry>
   <entry>
-    <title>How to write a summary</title>
-    <url>/How-to-write-a-summary/</url>
-    <content><![CDATA[<h1 id="Introduction">
-          <a href="#Introduction" class="heading-link"><i class="fas fa-link"></i></a>Introduction</h1>
-      <p>撰写读后摘要是2018级专用英语期末笔试写作部分的第一题，满分10分，占总分10%。 题目要求考生先阅读一篇长度为 300-350 词的短文，然后概括、浓缩其主旨大意及主要内容， 并撰写一篇长度 100-120 词的摘要。阅读短文主要涉及议论性、说明性和学术性内容</p>
-
-        <h1 id="Find-out-theme-of-article">
-          <a href="#Find-out-theme-of-article" class="heading-link"><i class="fas fa-link"></i></a>Find out theme of article</h1>
-      <p>用一段话来高度概括文章的主要内容(两分)<br>This article addresses the issue of …</p>
+    <title>JVM系列（一）--Java类的加载机制</title>
+    <url>/JVM-1/</url>
+    <content><![CDATA[<h1 id="类的加载定义">
+          <a href="#类的加载定义" class="heading-link"><i class="fas fa-link"></i></a>类的加载定义</h1>
+      <p>类的加载指的是将类的.class文件中的二进制数据读入到内存中，将其放在运行时数据区的方法区内，然后在堆区创建一个<code>java.lang.Class</code>对象，用来封装类在方法区内的数据结构。</p>
+<p><img src="http://favorites.ren/assets/images/2017/jvm/jvm-1.png" alt="image"></p>
+<p>类的最终加载产品是位于堆区中的Class对象，Class对象封装了类在方法区内的数据结构，并向Java程序提供访问接口。</p>
+<p>与C语言的类比：C语言 –&gt; 二进制文件 –&gt; 计算机硬件；Java –&gt; 字节码文件 –&gt; JVM</p>
+<blockquote>
+<p><strong>注意事项：</strong>类加载器并不需要等到某个类被“首次主动使用”时再加载，JVM规范允许类加载器在预料某个类将要被使用时就预先加载它，但是如果这个类在加载中遇到错误，只有在主动使用此类时才会报错(LinkageError)。</p>
+</blockquote>
 <a id="more"></a>
 
-        <h1 id="Structure">
-          <a href="#Structure" class="heading-link"><i class="fas fa-link"></i></a>Structure</h1>
-      <p>分析文章的结构，按逻辑顺序概括出每部分的大意和关键信息。<br>提取主要信息，删减次要信息，注意不要遗漏原文的主要观点和关键信息。</p>
 
-        <h1 id="Not-Copy">
-          <a href="#Not-Copy" class="heading-link"><i class="fas fa-link"></i></a>Not Copy</h1>
-      <p>千万不要照抄原文。<br>重述原文的重要信息，用自己的话替换原文的语言结构和表达方式，不允许照抄、摘录或者引用连续5个词以上的原文。</p>
+        <h1 id="类的生命周期">
+          <a href="#类的生命周期" class="heading-link"><i class="fas fa-link"></i></a>类的生命周期</h1>
+      <p>加载(Loading) –&gt;  <strong>验证(Verification) –&gt; 准备(Preparation) –&gt; 解析(Resolution)</strong> –&gt; 初始化(Intialization) –&gt; 使用(Using) –&gt; 卸载(Unloading) 共七个阶段；其中验证、准备和解析又统称为<strong>连接(Linking)阶段</strong>。</p>
+<p><img src="https://imgconvert.csdnimg.cn/aHR0cHM6Ly9tbWJpei5xcGljLmNuL21tYml6X3BuZy80QUc2dGljNjhBR2JSNnc4bWQ5cW1vcmdldjV5cHN0aWF3ekRKNk5kNmFONUZJRzVzaWFyYmlhTUFSSmljeFQ0UmR2ZzZtaDRhUWdnSVlmQ0xZNTAwMHVIRGliUS82NDA_d3hfZm10PXBuZw?x-oss-process=image/format,png" style="" alt="image"></p>
+<blockquote>
+<p>在前五个阶段中，加载、验证、准备、初始化的顺序是确定的，但是解析阶段不一定，它在某些情况下可以在初始化阶段之前开始，这是为了支持Java的动态绑定。</p>
+</blockquote>
 
-        <h1 id="Neutral-Opinion">
-          <a href="#Neutral-Opinion" class="heading-link"><i class="fas fa-link"></i></a>Neutral Opinion</h1>
-      <p>必须要客观，不要出现 I think之类的。<br>准确理解原文的意思和观点，写作时不要添加新的信息和与原文无关的信息，不要偷换概念， 也不要评论原文的观点。 </p>
+        <h2 id="加载">
+          <a href="#加载" class="heading-link"><i class="fas fa-link"></i></a>加载</h2>
+      <p><strong>三个任务：</strong></p>
+<blockquote>
+<ul>
+<li>通过一个类的全限定名来获取其定义的二进制字节流</li>
+<li>将这个字节流所代表的<strong>静态存储结构</strong>转化为方法区的运行时<strong>数据结构</strong></li>
+<li>在Java堆中生成一个代表这个类的<code>java.lang.Class</code>对象，作为对方法区中数据的访问入口</li>
+</ul>
+</blockquote>
+
+        <h2 id="验证：确保被加载的类的正确性">
+          <a href="#验证：确保被加载的类的正确性" class="heading-link"><i class="fas fa-link"></i></a>验证：确保被加载的类的正确性</h2>
+      <p><strong>四个阶段：</strong></p>
+<blockquote>
+<ul>
+<li><strong>文件格式验证</strong>：验证字节流是否符合Class文件格式规范；</li>
+<li><strong>云数据验证</strong>：对字节码描述的信息进行语义分析，以保证满足java语言的规范</li>
+<li><strong>字节码验证</strong>：通过数据流和控制流，确保程序语义是合法的、符合逻辑的。</li>
+<li><strong>符号引用验证</strong>：确保解析动作能够正确执行</li>
+</ul>
+</blockquote>
+<blockquote>
+<p>ps: 验证阶段非常重要，但是不是必须的，如果引用的类已经经过反复验证了，就可以使用<code>-Xverifynone</code>参数来关闭大部分的类验证措施，以缩短虚拟机类加载的时间。</p>
+</blockquote>
+
+        <h2 id="准备：为类的静态变量分配内存，并将其初始化为默认值">
+          <a href="#准备：为类的静态变量分配内存，并将其初始化为默认值" class="heading-link"><i class="fas fa-link"></i></a>准备：为类的静态变量分配内存，并将其初始化为默认值</h2>
+      <ol>
+<li>这时候进行内存分配的仅包括类变量(static)，而不包括实例变量，实例变量会在对象实例化时随着对象一块分配在java堆中。</li>
+<li>这里所设置的初始值通常情况下是数据类型默认的零值(如0，null,false),而不是被在java代码中显示赋予的值。</li>
+<li>如果类字段的字段属性表中存在<code>ConstantValue</code>属性，即同时被final和static修饰，那么在准备阶段变量value就会被初始化为ConstValue属性所指定的值。</li>
+</ol>
+<p><strong>示例：</strong></p>
+<blockquote>
+<p>假设一个类变量的定义为：<code>public static int value = 3;</code><br>那么变量value在准备阶段过后的初始值为0，而不是3。因为此时尚未执行任何java方法，而赋值为3是在程序编译后，存放于类构造器<code>&lt;clinit&gt;()</code>方法中的，在初始化阶段执行。</p>
+</blockquote>
+<p> 这里还需要注意如下几点：</p>
+<blockquote>
+<ul>
+<li>对基本数据类型来说，对于类变量（static）和全局变量，如果不显式地对其赋值而直接使用，则系统会为其赋予默认的零值，而对于局部变量来说，在使用前必须显式地为其赋值，否则编译时不通过。</li>
+<li>对于同时被static和final修饰的常量，必须在声明的时候就为其显式地赋值，否则编译时不通过；而只被final修饰的常量则既可以在声明时显式地为其赋值，也可以在类初始化时显式地为其赋值，总之，在使用前必须为其显式地赋值，系统不会为其赋予默认零值。</li>
+<li>对于引用数据类型reference来说，如数组引用、对象引用等，如果没有对其进行显式地赋值而直接使用，系统都会为其赋予默认的零值，即null。<ul>
+<li>如果在数组初始化时没有对数组中的各元素赋值，那么其中的元素将根据对应的数据类型而被赋予默认的零值。</li>
+</ul>
+</li>
+</ul>
+</blockquote>
+
+        <h2 id="解析">
+          <a href="#解析" class="heading-link"><i class="fas fa-link"></i></a>解析</h2>
+      <p>解析阶段是虚拟机将<strong>常量池内的符号引用替换为直接引用</strong>的过程。<br>符号引用就是一组符号来描述目标，可以是任何字面量。<br>直接引用就是直接指向目标的指针、相对偏移量或一个间接定位到目标的句柄。</p>
+
+        <h2 id="初始化">
+          <a href="#初始化" class="heading-link"><i class="fas fa-link"></i></a>初始化</h2>
+      <p>初始化：为类的静态变量赋予正确的初始值，JVM负责对类进行初始化，主要对类变量进行初始化。在java中对类变量进行初始值设定有两种方式：</p>
+<blockquote>
+<ol>
+<li>声明类变量是指定初始值</li>
+<li>使用静态代码块为类变量指定初始值</li>
+</ol>
+</blockquote>
+<p><strong>JVM初始化步骤</strong></p>
+<blockquote>
+<ol>
+<li>假如这个类还没有被加载和连接，则程序先加载并连接该类</li>
+<li>假如该类的直接父类还没有被初始化，则先初始化其直接父类</li>
+<li>假如类中有初始化语句，则系统依次执行这些初始化语句</li>
+</ol>
+</blockquote>
+<p>类初始化时机：只有当对类的主动引用的时候才会导致类的初始化。<br><strong>类的主动引用</strong>包括以下六种：</p>
+<blockquote>
+<ol>
+<li>创建类的实例，也就是new的方式</li>
+<li>访问某个类或接口的静态变量，或者对该静态变量赋值</li>
+<li>调用类的静态方法</li>
+<li>反射（如 Class.forName(“com.shengsiyuan.Test”)）</li>
+<li>初始化某个类的子类，则其父类也会被初始化</li>
+<li>Java虚拟机启动时被标明为启动类的类（ JavaTest），直接使用 java.exe命令来运行某个主类</li>
+</ol>
+</blockquote>
+<p>被动引用：</p>
+<blockquote>
+<ol>
+<li>通过子类引用父类静态字段，不会导致子类初始化；</li>
+<li>Array[] arr = new Array[10]; 不会触发 Array 类初始化；</li>
+<li>static final VAR 在编译阶段会存入调用类的常量池，通过 ClassName.VAR 引用不会触发 ClassName 初始化。</li>
+</ol>
+</blockquote>
+
+        <h2 id="介绍生命周期">
+          <a href="#介绍生命周期" class="heading-link"><i class="fas fa-link"></i></a>介绍生命周期</h2>
+      <p>以下四种情况：</p>
+<blockquote>
+<ul>
+<li>执行了 System.exit()方法</li>
+<li>程序正常执行结束</li>
+<li>程序在执行过程中遇到了异常或错误而异常终止</li>
+<li>由于操作系统出现错误而导致Java虚拟机进程终止</li>
+</ul>
+</blockquote>
+
+        <h1 id="类加载器">
+          <a href="#类加载器" class="heading-link"><i class="fas fa-link"></i></a>类加载器</h1>
+      <p><img src="http://favorites.ren/assets/images/2017/jvm/calssloader.png" alt="image"></p>
+<p>站在Java虚拟机的角度来讲，只存在两种不同的类加载器：<br><strong>启动类加载器：</strong><br>它使用C++实现（这里仅限于Hotspot，也就是JDK1.5之后默认的虚拟机，有很多其他的虚拟机是用Java语言实现的），是虚拟机自身的一部分；<br><strong>所有其它的类加载器：</strong><br>这些类加载器都由Java语言实现，独立于虚拟机之外，并且全部继承自抽象类 <code>java.lang.ClassLoader</code>，这些类加载器需要由启动类加载器加载到内存中之后才能去加载其他的类。</p>
+<p>站在Java开发人员的角度来看，类加载器可以大致划分为以下三类：</p>
+<p><strong>启动类加载器：</strong><code>BootstrapClassLoader</code>，负责加载存放在 <code>JDK\jre\lib</code>(JDK代表JDK的安装目录，下同)下，或被 <code>-Xbootclasspath</code>参数指定的路径中的，并且能被虚拟机识别的类库（如rt.jar，所有的java.开头的类均被 <code>BootstrapClassLoader</code>加载）。启动类加载器是无法被Java程序直接引用的。<br><strong>扩展类加载器：</strong><code>ExtensionClassLoader</code>，该加载器由 <code>sun.misc.Launcher$ExtClassLoader</code>实现，它负责加载 <code>JDK\jre\lib\ext</code>目录中，或者由 <code>java.ext.dirs</code>系统变量指定的路径中的所有类库（如javax.开头的类），开发者可以直接使用扩展类加载器。<br><strong>应用程序类加载器：</strong><code>ApplicationClassLoader</code>，该类加载器由 <code>sun.misc.Launcher$AppClassLoader</code>来实现，它负责加载用户类路径（ClassPath）所指定的类，开发者可以直接使用该类加载器，如果应用程序中没有自定义过自己的类加载器，一般情况下这个就是程序中默认的类加载器。</p>
+
+        <h2 id="JVM类加载机制">
+          <a href="#JVM类加载机制" class="heading-link"><i class="fas fa-link"></i></a>JVM类加载机制</h2>
+      <ul>
+<li><strong>全盘负责：</strong>当一个类加载器负责加载某个Class时，该Class所依赖的和引用的其他Class也将由该类加载器负责载入，除非显示使用另外一个类加载器来载入；</li>
+<li><strong>父类委托：</strong>先让父类加载器试图加载该类，只有在父类加载器无法加载该类时才尝试从自己的类路径中加载该类；</li>
+<li><strong>缓存机制：</strong>缓存机制将会保证所有加载过的Class都会被缓存，当程序中需要使用某个Class时，类加载器先从缓冲区寻找该Class，只有缓存区不存在，系统才会读取该类对应的二进制数据，并将其转换成Class对象，存入缓存区。*这就是为什么修改了Class后，必须重启JVM，程序的修改才会生效。</li>
+</ul>
+
+        <h1 id="类的加载">
+          <a href="#类的加载" class="heading-link"><i class="fas fa-link"></i></a>类的加载</h1>
+      
+        <h2 id="显式加载">
+          <a href="#显式加载" class="heading-link"><i class="fas fa-link"></i></a>显式加载</h2>
+      <p>调用<code>ClassLoader#loadClass(className)</code>或<code>Class.forName(className)</code>。<br>区别：</p>
+<blockquote>
+<ol>
+<li>Class.forName()：将类的.class文件加载到jvm中之外，还会对类进行解释，执行类中的static块；</li>
+<li>ClassLoader.loadClass()：只干一件事情，就是将.class文件加载到jvm中，不会执行static中的内容,只有在newInstance才会去执行static块。</li>
+<li>Class.forName(name,initialize,loader)带参函数也可控制是否加载static块。并且只有调用了newInstance()方法采用调用构造函数，创建类的对象 。</li>
+</ol>
+</blockquote>
+
+        <h2 id="隐式加载">
+          <a href="#隐式加载" class="heading-link"><i class="fas fa-link"></i></a>隐式加载</h2>
+      <ol>
+<li>new类对象；</li>
+<li>使用类的静态域；</li>
+<li>创建子类对象；</li>
+<li>使用子类的静态域；</li>
+<li>其他的隐式加载，在JVM启动时：<blockquote>
+<ul>
+<li>BootStrapLoader 会加载一些 JVM 自身运行所需的 Class；</li>
+<li>ExtClassLoader 会加载指定目录下一些特殊的 Class；</li>
+<li>AppClassLoader 会加载 classpath 路径下的 Class，以及 main 函数所在的类的 Class 文件。</li>
+</ul>
+</blockquote>
+</li>
+</ol>
+
+        <h1 id="双亲委派模型">
+          <a href="#双亲委派模型" class="heading-link"><i class="fas fa-link"></i></a>双亲委派模型</h1>
+      <p><strong>工作流程：</strong>如果一个类加载器收到了类加载的请求，它首先不会自己去尝试加载这个类，而是把请求委托给父加载器去完成，依次向上，因此，所有的类加载请求最终都应该被传递到顶层的启动类加载器中，只有当父加载器在它的搜索范围中没有找到所需的类时，即无法完成该加载，子加载器才会尝试自己去加载该类。</p>
+<p><strong>双亲委派机制：</strong></p>
+<ol>
+<li><p>当 <code>AppClassLoader</code>加载一个class时，它首先不会自己去尝试加载这个类，而是把类加载请求委派给父类加载器<code>ExtClassLoader</code>去完成。</p>
+</li>
+<li><p>当 <code>ExtClassLoader</code>加载一个class时，它首先也不会自己去尝试加载这个类，而是把类加载请求委派给<code>BootStrapClassLoader</code>去完成。</p>
+</li>
+<li><p>如果 <code>BootStrapClassLoader</code>加载失败（例如在 $JAVA_HOME/jre/lib里未查找到该class），会使用 <code>ExtClassLoader</code>来尝试加载；</p>
+</li>
+<li><p>若<code>ExtClassLoader</code>也加载失败，则会使用 <code>AppClassLoader</code>来加载，如果 <code>AppClassLoader</code>也加载失败，则会报出异常 <code>ClassNotFoundException</code>。</p>
+</li>
+</ol>
+
+        <h1 id="面试问题">
+          <a href="#面试问题" class="heading-link"><i class="fas fa-link"></i></a>面试问题</h1>
+      <ol>
+<li><p>简单讲下JVM中的类加载过程</p>
+</li>
+<li><p>JVM中的类加载和卸载的时机？</p>
+</li>
+<li><p>如何理解JVM中不同类加载器的概念和作用？</p>
+</li>
+<li><p>简单讲下JVM中的双亲委派模型？</p>
+</li>
+<li><p>什么情况下会破坏双亲委派模型？为什么？可否举个例子？</p>
+</li>
+<li><p>Tomcat中的类加载机制有了解吗？为什么这么设计？</p>
+</li>
+<li><p>实际开发中有遇到哪些类加载器相关的问题？你又是如何解决的？</p>
+</li>
+<li><p>JVM之上的弱类型语言例如Groovy是如何实现？简单讲下动态类加载机制？<br>参考资料：<br><span class="exturl"><a class="exturl__link" href="https://mp.weixin.qq.com/s?__biz=MzI4NDY5Mjc1Mg==&amp;mid=2247483934&amp;idx=1&amp;sn=41c46eceb2add54b7cde9eeb01412a90&amp;chksm=ebf6da61dc81537721d36aadb5d20613b0449762842f9128753e716ce5fefe2b659d8654c4e8&amp;scene=21#wechat_redirect" target="_blank" rel="noopener">微信公众号</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span><br><span class="exturl"><a class="exturl__link" href="https://github.com/TangBean/understanding-the-jvm/blob/master/Ch2-Java%E8%99%9A%E6%8B%9F%E6%9C%BA%E7%A8%8B%E5%BA%8F%E6%89%A7%E8%A1%8C/01-%E8%99%9A%E6%8B%9F%E6%9C%BA%E7%9A%84%E7%B1%BB%E5%8A%A0%E8%BD%BD%E6%9C%BA%E5%88%B6.md" target="_blank" rel="noopener">Github博主</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span><br><span class="exturl"><a class="exturl__link" href="https://blog.csdn.net/duqi_2009/article/details/101877579" target="_blank" rel="noopener">Blog</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></p>
+</li>
+</ol>
 <script>
         document.querySelectorAll('.github-emoji')
           .forEach(el => {
@@ -1034,10 +1217,11 @@
           });
       </script>]]></content>
       <categories>
-        <category>课程总结</category>
+        <category>java后端开发</category>
       </categories>
       <tags>
-        <tag>商务英语</tag>
+        <tag>JVM</tag>
+        <tag>java类</tag>
       </tags>
   </entry>
   <entry>
@@ -1334,212 +1518,58 @@
       </tags>
   </entry>
   <entry>
-    <title>JVM系列（一）--Java类的加载机制</title>
-    <url>/JVM-1/</url>
-    <content><![CDATA[<h1 id="类的加载定义">
-          <a href="#类的加载定义" class="heading-link"><i class="fas fa-link"></i></a>类的加载定义</h1>
-      <p>类的加载指的是将类的.class文件中的二进制数据读入到内存中，将其放在运行时数据区的方法区内，然后在堆区创建一个<code>java.lang.Class</code>对象，用来封装类在方法区内的数据结构。</p>
-<p><img src="http://favorites.ren/assets/images/2017/jvm/jvm-1.png" alt="image"></p>
-<p>类的最终加载产品是位于堆区中的Class对象，Class对象封装了类在方法区内的数据结构，并向Java程序提供访问接口。</p>
-<p>与C语言的类比：C语言 –&gt; 二进制文件 –&gt; 计算机硬件；Java –&gt; 字节码文件 –&gt; JVM</p>
-<blockquote>
-<p><strong>注意事项：</strong>类加载器并不需要等到某个类被“首次主动使用”时再加载，JVM规范允许类加载器在预料某个类将要被使用时就预先加载它，但是如果这个类在加载中遇到错误，只有在主动使用此类时才会报错(LinkageError)。</p>
-</blockquote>
-<a id="more"></a>
-
-
-        <h1 id="类的生命周期">
-          <a href="#类的生命周期" class="heading-link"><i class="fas fa-link"></i></a>类的生命周期</h1>
-      <p>加载(Loading) –&gt;  <strong>验证(Verification) –&gt; 准备(Preparation) –&gt; 解析(Resolution)</strong> –&gt; 初始化(Intialization) –&gt; 使用(Using) –&gt; 卸载(Unloading) 共七个阶段；其中验证、准备和解析又统称为<strong>连接(Linking)阶段</strong>。</p>
-<p><img src="https://imgconvert.csdnimg.cn/aHR0cHM6Ly9tbWJpei5xcGljLmNuL21tYml6X3BuZy80QUc2dGljNjhBR2JSNnc4bWQ5cW1vcmdldjV5cHN0aWF3ekRKNk5kNmFONUZJRzVzaWFyYmlhTUFSSmljeFQ0UmR2ZzZtaDRhUWdnSVlmQ0xZNTAwMHVIRGliUS82NDA_d3hfZm10PXBuZw?x-oss-process=image/format,png" style="" alt="image"></p>
-<blockquote>
-<p>在前五个阶段中，加载、验证、准备、初始化的顺序是确定的，但是解析阶段不一定，它在某些情况下可以在初始化阶段之前开始，这是为了支持Java的动态绑定。</p>
-</blockquote>
-
-        <h2 id="加载">
-          <a href="#加载" class="heading-link"><i class="fas fa-link"></i></a>加载</h2>
-      <p><strong>三个任务：</strong></p>
-<blockquote>
-<ul>
-<li>通过一个类的全限定名来获取其定义的二进制字节流</li>
-<li>将这个字节流所代表的<strong>静态存储结构</strong>转化为方法区的运行时<strong>数据结构</strong></li>
-<li>在Java堆中生成一个代表这个类的<code>java.lang.Class</code>对象，作为对方法区中数据的访问入口</li>
-</ul>
-</blockquote>
-
-        <h2 id="验证：确保被加载的类的正确性">
-          <a href="#验证：确保被加载的类的正确性" class="heading-link"><i class="fas fa-link"></i></a>验证：确保被加载的类的正确性</h2>
-      <p><strong>四个阶段：</strong></p>
-<blockquote>
-<ul>
-<li><strong>文件格式验证</strong>：验证字节流是否符合Class文件格式规范；</li>
-<li><strong>云数据验证</strong>：对字节码描述的信息进行语义分析，以保证满足java语言的规范</li>
-<li><strong>字节码验证</strong>：通过数据流和控制流，确保程序语义是合法的、符合逻辑的。</li>
-<li><strong>符号引用验证</strong>：确保解析动作能够正确执行</li>
-</ul>
-</blockquote>
-<blockquote>
-<p>ps: 验证阶段非常重要，但是不是必须的，如果引用的类已经经过反复验证了，就可以使用<code>-Xverifynone</code>参数来关闭大部分的类验证措施，以缩短虚拟机类加载的时间。</p>
-</blockquote>
-
-        <h2 id="准备：为类的静态变量分配内存，并将其初始化为默认值">
-          <a href="#准备：为类的静态变量分配内存，并将其初始化为默认值" class="heading-link"><i class="fas fa-link"></i></a>准备：为类的静态变量分配内存，并将其初始化为默认值</h2>
-      <ol>
-<li>这时候进行内存分配的仅包括类变量(static)，而不包括实例变量，实例变量会在对象实例化时随着对象一块分配在java堆中。</li>
-<li>这里所设置的初始值通常情况下是数据类型默认的零值(如0，null,false),而不是被在java代码中显示赋予的值。</li>
-<li>如果类字段的字段属性表中存在<code>ConstantValue</code>属性，即同时被final和static修饰，那么在准备阶段变量value就会被初始化为ConstValue属性所指定的值。</li>
-</ol>
-<p><strong>示例：</strong></p>
-<blockquote>
-<p>假设一个类变量的定义为：<code>public static int value = 3;</code><br>那么变量value在准备阶段过后的初始值为0，而不是3。因为此时尚未执行任何java方法，而赋值为3是在程序编译后，存放于类构造器<code>&lt;clinit&gt;()</code>方法中的，在初始化阶段执行。</p>
-</blockquote>
-<p> 这里还需要注意如下几点：</p>
-<blockquote>
-<ul>
-<li>对基本数据类型来说，对于类变量（static）和全局变量，如果不显式地对其赋值而直接使用，则系统会为其赋予默认的零值，而对于局部变量来说，在使用前必须显式地为其赋值，否则编译时不通过。</li>
-<li>对于同时被static和final修饰的常量，必须在声明的时候就为其显式地赋值，否则编译时不通过；而只被final修饰的常量则既可以在声明时显式地为其赋值，也可以在类初始化时显式地为其赋值，总之，在使用前必须为其显式地赋值，系统不会为其赋予默认零值。</li>
-<li>对于引用数据类型reference来说，如数组引用、对象引用等，如果没有对其进行显式地赋值而直接使用，系统都会为其赋予默认的零值，即null。<ul>
-<li>如果在数组初始化时没有对数组中的各元素赋值，那么其中的元素将根据对应的数据类型而被赋予默认的零值。</li>
-</ul>
-</li>
-</ul>
-</blockquote>
-
-        <h2 id="解析">
-          <a href="#解析" class="heading-link"><i class="fas fa-link"></i></a>解析</h2>
-      <p>解析阶段是虚拟机将<strong>常量池内的符号引用替换为直接引用</strong>的过程。<br>符号引用就是一组符号来描述目标，可以是任何字面量。<br>直接引用就是直接指向目标的指针、相对偏移量或一个间接定位到目标的句柄。</p>
-
-        <h2 id="初始化">
-          <a href="#初始化" class="heading-link"><i class="fas fa-link"></i></a>初始化</h2>
-      <p>初始化：为类的静态变量赋予正确的初始值，JVM负责对类进行初始化，主要对类变量进行初始化。在java中对类变量进行初始值设定有两种方式：</p>
-<blockquote>
-<ol>
-<li>声明类变量是指定初始值</li>
-<li>使用静态代码块为类变量指定初始值</li>
-</ol>
-</blockquote>
-<p><strong>JVM初始化步骤</strong></p>
-<blockquote>
-<ol>
-<li>假如这个类还没有被加载和连接，则程序先加载并连接该类</li>
-<li>假如该类的直接父类还没有被初始化，则先初始化其直接父类</li>
-<li>假如类中有初始化语句，则系统依次执行这些初始化语句</li>
-</ol>
-</blockquote>
-<p>类初始化时机：只有当对类的主动引用的时候才会导致类的初始化。<br><strong>类的主动引用</strong>包括以下六种：</p>
-<blockquote>
-<ol>
-<li>创建类的实例，也就是new的方式</li>
-<li>访问某个类或接口的静态变量，或者对该静态变量赋值</li>
-<li>调用类的静态方法</li>
-<li>反射（如 Class.forName(“com.shengsiyuan.Test”)）</li>
-<li>初始化某个类的子类，则其父类也会被初始化</li>
-<li>Java虚拟机启动时被标明为启动类的类（ JavaTest），直接使用 java.exe命令来运行某个主类</li>
-</ol>
-</blockquote>
-<p>被动引用：</p>
-<blockquote>
-<ol>
-<li>通过子类引用父类静态字段，不会导致子类初始化；</li>
-<li>Array[] arr = new Array[10]; 不会触发 Array 类初始化；</li>
-<li>static final VAR 在编译阶段会存入调用类的常量池，通过 ClassName.VAR 引用不会触发 ClassName 初始化。</li>
-</ol>
-</blockquote>
-
-        <h2 id="介绍生命周期">
-          <a href="#介绍生命周期" class="heading-link"><i class="fas fa-link"></i></a>介绍生命周期</h2>
-      <p>以下四种情况：</p>
-<blockquote>
-<ul>
-<li>执行了 System.exit()方法</li>
-<li>程序正常执行结束</li>
-<li>程序在执行过程中遇到了异常或错误而异常终止</li>
-<li>由于操作系统出现错误而导致Java虚拟机进程终止</li>
-</ul>
-</blockquote>
-
-        <h1 id="类加载器">
-          <a href="#类加载器" class="heading-link"><i class="fas fa-link"></i></a>类加载器</h1>
-      <p><img src="http://favorites.ren/assets/images/2017/jvm/calssloader.png" alt="image"></p>
-<p>站在Java虚拟机的角度来讲，只存在两种不同的类加载器：<br><strong>启动类加载器：</strong><br>它使用C++实现（这里仅限于Hotspot，也就是JDK1.5之后默认的虚拟机，有很多其他的虚拟机是用Java语言实现的），是虚拟机自身的一部分；<br><strong>所有其它的类加载器：</strong><br>这些类加载器都由Java语言实现，独立于虚拟机之外，并且全部继承自抽象类 <code>java.lang.ClassLoader</code>，这些类加载器需要由启动类加载器加载到内存中之后才能去加载其他的类。</p>
-<p>站在Java开发人员的角度来看，类加载器可以大致划分为以下三类：</p>
-<p><strong>启动类加载器：</strong><code>BootstrapClassLoader</code>，负责加载存放在 <code>JDK\jre\lib</code>(JDK代表JDK的安装目录，下同)下，或被 <code>-Xbootclasspath</code>参数指定的路径中的，并且能被虚拟机识别的类库（如rt.jar，所有的java.开头的类均被 <code>BootstrapClassLoader</code>加载）。启动类加载器是无法被Java程序直接引用的。<br><strong>扩展类加载器：</strong><code>ExtensionClassLoader</code>，该加载器由 <code>sun.misc.Launcher$ExtClassLoader</code>实现，它负责加载 <code>JDK\jre\lib\ext</code>目录中，或者由 <code>java.ext.dirs</code>系统变量指定的路径中的所有类库（如javax.开头的类），开发者可以直接使用扩展类加载器。<br><strong>应用程序类加载器：</strong><code>ApplicationClassLoader</code>，该类加载器由 <code>sun.misc.Launcher$AppClassLoader</code>来实现，它负责加载用户类路径（ClassPath）所指定的类，开发者可以直接使用该类加载器，如果应用程序中没有自定义过自己的类加载器，一般情况下这个就是程序中默认的类加载器。</p>
-
-        <h2 id="JVM类加载机制">
-          <a href="#JVM类加载机制" class="heading-link"><i class="fas fa-link"></i></a>JVM类加载机制</h2>
-      <ul>
-<li><strong>全盘负责：</strong>当一个类加载器负责加载某个Class时，该Class所依赖的和引用的其他Class也将由该类加载器负责载入，除非显示使用另外一个类加载器来载入；</li>
-<li><strong>父类委托：</strong>先让父类加载器试图加载该类，只有在父类加载器无法加载该类时才尝试从自己的类路径中加载该类；</li>
-<li><strong>缓存机制：</strong>缓存机制将会保证所有加载过的Class都会被缓存，当程序中需要使用某个Class时，类加载器先从缓冲区寻找该Class，只有缓存区不存在，系统才会读取该类对应的二进制数据，并将其转换成Class对象，存入缓存区。*这就是为什么修改了Class后，必须重启JVM，程序的修改才会生效。</li>
-</ul>
-
-        <h1 id="类的加载">
-          <a href="#类的加载" class="heading-link"><i class="fas fa-link"></i></a>类的加载</h1>
+    <title>Operating System(2)</title>
+    <url>/Operating-System-2/</url>
+    <content><![CDATA[<h1 id="进程">
+          <a href="#进程" class="heading-link"><i class="fas fa-link"></i></a>进程</h1>
       
-        <h2 id="显式加载">
-          <a href="#显式加载" class="heading-link"><i class="fas fa-link"></i></a>显式加载</h2>
-      <p>调用<code>ClassLoader#loadClass(className)</code>或<code>Class.forName(className)</code>。<br>区别：</p>
-<blockquote>
-<ol>
-<li>Class.forName()：将类的.class文件加载到jvm中之外，还会对类进行解释，执行类中的static块；</li>
-<li>ClassLoader.loadClass()：只干一件事情，就是将.class文件加载到jvm中，不会执行static中的内容,只有在newInstance才会去执行static块。</li>
-<li>Class.forName(name,initialize,loader)带参函数也可控制是否加载static块。并且只有调用了newInstance()方法采用调用构造函数，创建类的对象 。</li>
-</ol>
-</blockquote>
+        <h2 id="进程与线程">
+          <a href="#进程与线程" class="heading-link"><i class="fas fa-link"></i></a>进程与线程</h2>
+      
+        <h3 id="进程-1">
+          <a href="#进程-1" class="heading-link"><i class="fas fa-link"></i></a>进程</h3>
+      <p>进程是系统进行资源分配和调度的一个独立单位。<br>进程控制块(Process Control Block,PCB)描述进程的基本信息和活动过程，进而控制进程和管理进程。<br>特征：动态性、并发性、独立性、异步性。</p>
 
-        <h2 id="隐式加载">
-          <a href="#隐式加载" class="heading-link"><i class="fas fa-link"></i></a>隐式加载</h2>
+        <h3 id="线程">
+          <a href="#线程" class="heading-link"><i class="fas fa-link"></i></a>线程</h3>
+      <p>线程作为调度和分派的基本单位。<br>线程是进程的进一步划分，一个进程可以有多个线程，他们共享进程资源。</p>
+
+        <h3 id="比较">
+          <a href="#比较" class="heading-link"><i class="fas fa-link"></i></a>比较</h3>
       <ol>
-<li>new类对象；</li>
-<li>使用类的静态域；</li>
-<li>创建子类对象；</li>
-<li>使用子类的静态域；</li>
-<li>其他的隐式加载，在JVM启动时：<blockquote>
+<li>进程是资源分配的基本单位，但是线程不拥有系统资源，仅有少量能保证独立运行的资源。(一些必备的寄存器，如程序计数器等)同时线程共享进程的资源。</li>
+<li>进程的切换开销大，线程是独立调动的基本单位，切换线程的开销更小。<a id="more"></a>
+
+        <h2 id="进程状态">
+          <a href="#进程状态" class="heading-link"><i class="fas fa-link"></i></a>进程状态</h2>
+      <img src="https://s1.ax1x.com/2020/06/12/tLBcTI.png" alt="五种状态转换"></li>
+</ol>
 <ul>
-<li>BootStrapLoader 会加载一些 JVM 自身运行所需的 Class；</li>
-<li>ExtClassLoader 会加载指定目录下一些特殊的 Class；</li>
-<li>AppClassLoader 会加载 classpath 路径下的 Class，以及 main 函数所在的类的 Class 文件。</li>
+<li>就绪状态：资源已经准备好了，就差CPU调度</li>
+<li>阻塞状态：被某些事件给中断了，缺少必要的资源(除CPU时间)</li>
 </ul>
-</blockquote>
-</li>
-</ol>
 
-        <h1 id="双亲委派模型">
-          <a href="#双亲委派模型" class="heading-link"><i class="fas fa-link"></i></a>双亲委派模型</h1>
-      <p><strong>工作流程：</strong>如果一个类加载器收到了类加载的请求，它首先不会自己去尝试加载这个类，而是把请求委托给父加载器去完成，依次向上，因此，所有的类加载请求最终都应该被传递到顶层的启动类加载器中，只有当父加载器在它的搜索范围中没有找到所需的类时，即无法完成该加载，子加载器才会尝试自己去加载该类。</p>
-<p><strong>双亲委派机制：</strong></p>
-<ol>
-<li><p>当 <code>AppClassLoader</code>加载一个class时，它首先不会自己去尝试加载这个类，而是把类加载请求委派给父类加载器<code>ExtClassLoader</code>去完成。</p>
-</li>
-<li><p>当 <code>ExtClassLoader</code>加载一个class时，它首先也不会自己去尝试加载这个类，而是把类加载请求委派给<code>BootStrapClassLoader</code>去完成。</p>
-</li>
-<li><p>如果 <code>BootStrapClassLoader</code>加载失败（例如在 $JAVA_HOME/jre/lib里未查找到该class），会使用 <code>ExtClassLoader</code>来尝试加载；</p>
-</li>
-<li><p>若<code>ExtClassLoader</code>也加载失败，则会使用 <code>AppClassLoader</code>来加载，如果 <code>AppClassLoader</code>也加载失败，则会报出异常 <code>ClassNotFoundException</code>。</p>
-</li>
-</ol>
+        <h3 id="挂起与激活">
+          <a href="#挂起与激活" class="heading-link"><i class="fas fa-link"></i></a>挂起与激活</h3>
+      <p><img src="https://s1.ax1x.com/2020/06/12/tLDjUI.png" alt="挂起与激活"></p>
+<ul>
+<li>若进程处于就绪状态，挂起操作执行后，则由活动就绪转为禁止就绪</li>
+<li>若进程处于阻塞状态，挂起操作执行后，则由活动阻塞转为禁止阻塞</li>
+</ul>
 
-        <h1 id="面试问题">
-          <a href="#面试问题" class="heading-link"><i class="fas fa-link"></i></a>面试问题</h1>
-      <ol>
-<li><p>简单讲下JVM中的类加载过程</p>
-</li>
-<li><p>JVM中的类加载和卸载的时机？</p>
-</li>
-<li><p>如何理解JVM中不同类加载器的概念和作用？</p>
-</li>
-<li><p>简单讲下JVM中的双亲委派模型？</p>
-</li>
-<li><p>什么情况下会破坏双亲委派模型？为什么？可否举个例子？</p>
-</li>
-<li><p>Tomcat中的类加载机制有了解吗？为什么这么设计？</p>
-</li>
-<li><p>实际开发中有遇到哪些类加载器相关的问题？你又是如何解决的？</p>
-</li>
-<li><p>JVM之上的弱类型语言例如Groovy是如何实现？简单讲下动态类加载机制？<br>参考资料：<br><span class="exturl"><a class="exturl__link" href="https://mp.weixin.qq.com/s?__biz=MzI4NDY5Mjc1Mg==&amp;mid=2247483934&amp;idx=1&amp;sn=41c46eceb2add54b7cde9eeb01412a90&amp;chksm=ebf6da61dc81537721d36aadb5d20613b0449762842f9128753e716ce5fefe2b659d8654c4e8&amp;scene=21#wechat_redirect" target="_blank" rel="noopener">微信公众号</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span><br><span class="exturl"><a class="exturl__link" href="https://github.com/TangBean/understanding-the-jvm/blob/master/Ch2-Java%E8%99%9A%E6%8B%9F%E6%9C%BA%E7%A8%8B%E5%BA%8F%E6%89%A7%E8%A1%8C/01-%E8%99%9A%E6%8B%9F%E6%9C%BA%E7%9A%84%E7%B1%BB%E5%8A%A0%E8%BD%BD%E6%9C%BA%E5%88%B6.md" target="_blank" rel="noopener">Github博主</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span><br><span class="exturl"><a class="exturl__link" href="https://blog.csdn.net/duqi_2009/article/details/101877579" target="_blank" rel="noopener">Blog</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></p>
-</li>
-</ol>
-<script>
+        <h2 id="进程同步">
+          <a href="#进程同步" class="heading-link"><i class="fas fa-link"></i></a>进程同步</h2>
+      
+        <h3 id="1-临界区">
+          <a href="#1-临界区" class="heading-link"><i class="fas fa-link"></i></a>1. 临界区</h3>
+      <p>对临界资源进行访问的那段代码称为临界区。<br>为了互斥访问临界资源，每个进程在进入临界区之前，需要先进行检查。</p>
+
+        <h3 id="2-信号量">
+          <a href="#2-信号量" class="heading-link"><i class="fas fa-link"></i></a>2. 信号量</h3>
+      
+        <h3 id="3-管程">
+          <a href="#3-管程" class="heading-link"><i class="fas fa-link"></i></a>3. 管程</h3>
+      <script>
         document.querySelectorAll('.github-emoji')
           .forEach(el => {
             if (!el.dataset.src) { return; }
@@ -1559,11 +1589,10 @@
           });
       </script>]]></content>
       <categories>
-        <category>java后端开发</category>
+        <category>课程总结</category>
       </categories>
       <tags>
-        <tag>JVM</tag>
-        <tag>java类</tag>
+        <tag>OS</tag>
       </tags>
   </entry>
   <entry>
@@ -1677,107 +1706,28 @@
       </tags>
   </entry>
   <entry>
-    <title>Operating System(2)</title>
-    <url>/Operating-System-2/</url>
-    <content><![CDATA[<h1 id="进程">
-          <a href="#进程" class="heading-link"><i class="fas fa-link"></i></a>进程</h1>
-      
-        <h2 id="进程与线程">
-          <a href="#进程与线程" class="heading-link"><i class="fas fa-link"></i></a>进程与线程</h2>
-      
-        <h3 id="进程-1">
-          <a href="#进程-1" class="heading-link"><i class="fas fa-link"></i></a>进程</h3>
-      <p>进程是系统进行资源分配和调度的一个独立单位。<br>进程控制块(Process Control Block,PCB)描述进程的基本信息和活动过程，进而控制进程和管理进程。<br>特征：动态性、并发性、独立性、异步性。</p>
+    <title>How to write a summary</title>
+    <url>/How-to-write-a-summary/</url>
+    <content><![CDATA[<h1 id="Introduction">
+          <a href="#Introduction" class="heading-link"><i class="fas fa-link"></i></a>Introduction</h1>
+      <p>撰写读后摘要是2018级专用英语期末笔试写作部分的第一题，满分10分，占总分10%。 题目要求考生先阅读一篇长度为 300-350 词的短文，然后概括、浓缩其主旨大意及主要内容， 并撰写一篇长度 100-120 词的摘要。阅读短文主要涉及议论性、说明性和学术性内容</p>
 
-        <h3 id="线程">
-          <a href="#线程" class="heading-link"><i class="fas fa-link"></i></a>线程</h3>
-      <p>线程作为调度和分派的基本单位。<br>线程是进程的进一步划分，一个进程可以有多个线程，他们共享进程资源。</p>
-
-        <h3 id="比较">
-          <a href="#比较" class="heading-link"><i class="fas fa-link"></i></a>比较</h3>
-      <ol>
-<li>进程是资源分配的基本单位，但是线程不拥有系统资源，仅有少量能保证独立运行的资源。(一些必备的寄存器，如程序计数器等)同时线程共享进程的资源。</li>
-<li>进程的切换开销大，线程是独立调动的基本单位，切换线程的开销更小。<a id="more"></a>
-
-        <h2 id="进程状态">
-          <a href="#进程状态" class="heading-link"><i class="fas fa-link"></i></a>进程状态</h2>
-      <img src="https://s1.ax1x.com/2020/06/12/tLBcTI.png" alt="五种状态转换"></li>
-</ol>
-<ul>
-<li>就绪状态：资源已经准备好了，就差CPU调度</li>
-<li>阻塞状态：被某些事件给中断了，缺少必要的资源(除CPU时间)</li>
-</ul>
-
-        <h3 id="挂起与激活">
-          <a href="#挂起与激活" class="heading-link"><i class="fas fa-link"></i></a>挂起与激活</h3>
-      <p><img src="https://s1.ax1x.com/2020/06/12/tLDjUI.png" alt="挂起与激活"></p>
-<ul>
-<li>若进程处于就绪状态，挂起操作执行后，则由活动就绪转为禁止就绪</li>
-<li>若进程处于阻塞状态，挂起操作执行后，则由活动阻塞转为禁止阻塞</li>
-</ul>
-
-        <h2 id="进程同步">
-          <a href="#进程同步" class="heading-link"><i class="fas fa-link"></i></a>进程同步</h2>
-      
-        <h3 id="1-临界区">
-          <a href="#1-临界区" class="heading-link"><i class="fas fa-link"></i></a>1. 临界区</h3>
-      <p>对临界资源进行访问的那段代码称为临界区。<br>为了互斥访问临界资源，每个进程在进入临界区之前，需要先进行检查。</p>
-
-        <h3 id="2-信号量">
-          <a href="#2-信号量" class="heading-link"><i class="fas fa-link"></i></a>2. 信号量</h3>
-      
-        <h3 id="3-管程">
-          <a href="#3-管程" class="heading-link"><i class="fas fa-link"></i></a>3. 管程</h3>
-      <script>
-        document.querySelectorAll('.github-emoji')
-          .forEach(el => {
-            if (!el.dataset.src) { return; }
-            const img = document.createElement('img');
-            img.style = 'display:none !important;';
-            img.src = el.dataset.src;
-            img.addEventListener('error', () => {
-              img.remove();
-              el.style.color = 'inherit';
-              el.style.backgroundImage = 'none';
-              el.style.background = 'none';
-            });
-            img.addEventListener('load', () => {
-              img.remove();
-            });
-            document.body.appendChild(img);
-          });
-      </script>]]></content>
-      <categories>
-        <category>课程总结</category>
-      </categories>
-      <tags>
-        <tag>OS</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>SM2算法分析</title>
-    <url>/SM2/</url>
-    <content><![CDATA[<h1 id="基本参数确定">
-          <a href="#基本参数确定" class="heading-link"><i class="fas fa-link"></i></a>基本参数确定</h1>
-      <figure class="highlight python"><div class="table-container"><table><tbody><tr><td class="code"><pre><span class="line"><span class="comment"># 选择素域，设置椭圆曲线参数</span></span><br><span class="line"><span class="comment"># m 为256bit长</span></span><br><span class="line">default_ecc_table = {</span><br><span class="line"><span class="string">'n'</span>: <span class="string">'FFFFFFFEFFFFFFFFFFFFFFFFFFFFFFFF7203DF6B21C6052B53BBF40939D54123'</span>,</span><br><span class="line"><span class="string">'p'</span>: <span class="string">'FFFFFFFEFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF00000000FFFFFFFFFFFFFFFF'</span>,</span><br><span class="line"><span class="comment"># 基点G</span></span><br><span class="line"><span class="string">'g'</span>: <span class="string">'32c4ae2c1f1981195f9904466a39c9948fe30bbff2660be1715a4589334c74c7'</span>\</span><br><span class="line">    <span class="string">'bc3736a2f4f6779c59bdcee36b692153d0a9877cc62a474002df32e52139f0a0'</span>,</span><br><span class="line"><span class="string">'a'</span>: <span class="string">'FFFFFFFEFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF00000000FFFFFFFFFFFFFFFC'</span>,</span><br><span class="line"><span class="string">'b'</span>: <span class="string">'28E9FA9E9D9F5E344D5A9E4BCF6509A7F39789F515AB8F92DDBCBD414D940E93'</span>,</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></div></figure>
+        <h1 id="Find-out-theme-of-article">
+          <a href="#Find-out-theme-of-article" class="heading-link"><i class="fas fa-link"></i></a>Find out theme of article</h1>
+      <p>用一段话来高度概括文章的主要内容(两分)<br>This article addresses the issue of …</p>
 <a id="more"></a>
 
-        <h1 id="加密算法">
-          <a href="#加密算法" class="heading-link"><i class="fas fa-link"></i></a>加密算法</h1>
-      <figure class="highlight python"><div class="table-container"><table><tbody><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">encrypt</span><span class="params">(self, data)</span>:</span></span><br><span class="line">    <span class="comment"># 加密函数，data消息(bytes)</span></span><br><span class="line">    msg = data.hex() <span class="comment"># 消息转化为16进制字符串</span></span><br><span class="line">    <span class="comment"># 选择随机数k</span></span><br><span class="line">    k = func.random_hex(self.para_len)</span><br><span class="line">    <span class="comment"># 进行点乘运算，计算椭圆曲线点C1=kG</span></span><br><span class="line">    C1 = self._kg(int(k,<span class="number">16</span>),self.ecc_table[<span class="string">'g'</span>])</span><br><span class="line">    <span class="comment"># 这里缺少了一步验证过程，S=hP_B</span></span><br><span class="line">    <span class="comment"># 计算椭圆曲线点kP_B</span></span><br><span class="line">    xy = self._kg(int(k,<span class="number">16</span>),self.public_key)</span><br><span class="line">    <span class="comment"># 从xy比特串中取出(x2,y2)</span></span><br><span class="line">    x2 = xy[<span class="number">0</span>:self.para_len]</span><br><span class="line">    y2 = xy[self.para_len:<span class="number">2</span>*self.para_len]</span><br><span class="line">    ml = len(msg)</span><br><span class="line">    <span class="comment"># KDF密钥派生函数，用SM3算法产生伪随机数</span></span><br><span class="line">    t = sm3.sm3_kdf(xy.encode(<span class="string">'utf8'</span>), ml/<span class="number">2</span>)</span><br><span class="line">    <span class="keyword">if</span> int(t,<span class="number">16</span>)==<span class="number">0</span>:</span><br><span class="line">        <span class="keyword">return</span> <span class="literal">None</span></span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        <span class="comment"># 这边这个语法没搞懂，估计是取ml长的字符串，前面以0填充</span></span><br><span class="line">        form = <span class="string">'%%0%dx'</span> % ml</span><br><span class="line">        <span class="comment"># C2 = M⊕t</span></span><br><span class="line">        C2 = form % (int(msg, <span class="number">16</span>) ^ int(t, <span class="number">16</span>))</span><br><span class="line">        <span class="comment"># C3 = Hash(x2||M||y2)</span></span><br><span class="line">        C3 = sm3.sm3_hash([</span><br><span class="line">            i <span class="keyword">for</span> i <span class="keyword">in</span> bytes.fromhex(<span class="string">'%s%s%s'</span>% (x2,msg,y2))</span><br><span class="line">        ])</span><br><span class="line">        <span class="keyword">return</span> bytes.fromhex(<span class="string">'%s%s%s'</span> % (C1,C3,C2))</span><br></pre></td></tr></tbody></table></div></figure>
+        <h1 id="Structure">
+          <a href="#Structure" class="heading-link"><i class="fas fa-link"></i></a>Structure</h1>
+      <p>分析文章的结构，按逻辑顺序概括出每部分的大意和关键信息。<br>提取主要信息，删减次要信息，注意不要遗漏原文的主要观点和关键信息。</p>
 
-        <h1 id="解密函数">
-          <a href="#解密函数" class="heading-link"><i class="fas fa-link"></i></a>解密函数</h1>
-      <figure class="highlight python"><div class="table-container"><table><tbody><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">decrypt</span><span class="params">(self, data)</span>:</span></span><br><span class="line">    <span class="comment"># 解密函数，data密文（bytes）</span></span><br><span class="line">    data = data.hex() <span class="comment"># 消息转化为16进制字符串</span></span><br><span class="line">    len_2 = <span class="number">2</span> * self.para_len</span><br><span class="line">    len_3 = len_2 + <span class="number">64</span></span><br><span class="line">    <span class="comment"># 从data中取出C1、C2、C3</span></span><br><span class="line">    C1 = data[<span class="number">0</span>:len_2]</span><br><span class="line">    C3 = data[len_2:len_3]</span><br><span class="line">    C2 = data[len_3:]</span><br><span class="line">    <span class="comment"># 利用私钥d_B,计算d_BC1=xy</span></span><br><span class="line">    xy = self._kg(int(self.private_key,<span class="number">16</span>),C1)</span><br><span class="line">    <span class="comment"># print('xy = %s' % xy)</span></span><br><span class="line">    x2 = xy[<span class="number">0</span>:self.para_len]</span><br><span class="line">    y2 = xy[self.para_len:len_2]</span><br><span class="line">    cl = len(C2)</span><br><span class="line">    <span class="comment"># 计算t=KDF(x2||y2,klen),klen=self.pare_len</span></span><br><span class="line">    t = sm3.sm3_kdf(xy.encode(<span class="string">'utf8'</span>), cl/<span class="number">2</span>)</span><br><span class="line">    <span class="keyword">if</span> int(t, <span class="number">16</span>) == <span class="number">0</span>:</span><br><span class="line">        <span class="keyword">return</span> <span class="literal">None</span></span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        <span class="comment"># 作用同上，格式化输出</span></span><br><span class="line">        form = <span class="string">'%%0%dx'</span> % cl</span><br><span class="line">        <span class="comment"># M = C2⊕t</span></span><br><span class="line">        M = form % (int(C2,<span class="number">16</span>) ^ int(t,<span class="number">16</span>))</span><br><span class="line">        <span class="comment"># u = Hash(x2||M||y2)</span></span><br><span class="line">        u = sm3.sm3_hash([</span><br><span class="line">            i <span class="keyword">for</span> i <span class="keyword">in</span> bytes.fromhex(<span class="string">'%s%s%s'</span>% (x2,M,y2))</span><br><span class="line">        ])</span><br><span class="line">        <span class="keyword">return</span> bytes.fromhex(M)</span><br></pre></td></tr></tbody></table></div></figure>
+        <h1 id="Not-Copy">
+          <a href="#Not-Copy" class="heading-link"><i class="fas fa-link"></i></a>Not Copy</h1>
+      <p>千万不要照抄原文。<br>重述原文的重要信息，用自己的话替换原文的语言结构和表达方式，不允许照抄、摘录或者引用连续5个词以上的原文。</p>
 
-        <h1 id="签名函数">
-          <a href="#签名函数" class="heading-link"><i class="fas fa-link"></i></a>签名函数</h1>
-      <figure class="highlight python"><div class="table-container"><table><tbody><tr><td class="code"><pre><span class="line"><span class="comment"># 签名函数, data消息的hash，private_key私钥，K随机数，均为16进制字符串</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">sign</span><span class="params">(self, data, K)</span>:</span>  </span><br><span class="line">    E = data.hex() <span class="comment"># 消息转化为16进制字符串</span></span><br><span class="line">    e = int(E, <span class="number">16</span>)</span><br><span class="line">    <span class="comment"># d 为16进制的私钥</span></span><br><span class="line">    d = int(self.private_key, <span class="number">16</span>)</span><br><span class="line">    k = int(K, <span class="number">16</span>)</span><br><span class="line"></span><br><span class="line">    <span class="comment"># 计算椭圆曲线点P1=kG=(x,y)</span></span><br><span class="line">    P1 = self._kg(k, self.ecc_table[<span class="string">'g'</span>])</span><br><span class="line"></span><br><span class="line">    x = int(P1[<span class="number">0</span>:self.para_len], <span class="number">16</span>)</span><br><span class="line">    <span class="comment"># 计算R=(e+x)mod n</span></span><br><span class="line">    R = ((e + x) % int(self.ecc_table[<span class="string">'n'</span>], base=<span class="number">16</span>))</span><br><span class="line">    <span class="keyword">if</span> R == <span class="number">0</span> <span class="keyword">or</span> R + k == int(self.ecc_table[<span class="string">'n'</span>], base=<span class="number">16</span>):<span class="comment"># 纠错</span></span><br><span class="line">        <span class="keyword">return</span> <span class="literal">None</span></span><br><span class="line">    <span class="comment"># d_1 = (d+1)^(n-2) mod n</span></span><br><span class="line">    <span class="comment"># 我觉得这边的写法主要是避免了求逆的计算</span></span><br><span class="line">    d_1 = pow(d+<span class="number">1</span>, int(self.ecc_table[<span class="string">'n'</span>], base=<span class="number">16</span>) - <span class="number">2</span>, int(self.ecc_table[<span class="string">'n'</span>], base=<span class="number">16</span>))</span><br><span class="line">    <span class="comment"># s = (d+1)^-1 * (k-Rd) mod n</span></span><br><span class="line">    S = (d_1*(k + R) - R) % int(self.ecc_table[<span class="string">'n'</span>], base=<span class="number">16</span>)</span><br><span class="line">    <span class="keyword">if</span> S == <span class="number">0</span>:</span><br><span class="line">        <span class="keyword">return</span> <span class="literal">None</span></span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        <span class="keyword">return</span> <span class="string">'%064x%064x'</span> % (R,S)</span><br></pre></td></tr></tbody></table></div></figure>
-
-        <h1 id="验证函数">
-          <a href="#验证函数" class="heading-link"><i class="fas fa-link"></i></a>验证函数</h1>
-      <figure class="highlight python"><div class="table-container"><table><tbody><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">verify</span><span class="params">(self, Sign, data)</span>:</span></span><br><span class="line">    <span class="comment"># 验签函数，sign签名r||s，E消息hash，public_key公钥</span></span><br><span class="line">    r = int(Sign[<span class="number">0</span>:self.para_len], <span class="number">16</span>)</span><br><span class="line">    s = int(Sign[self.para_len:<span class="number">2</span>*self.para_len], <span class="number">16</span>)</span><br><span class="line">    e = int(data.hex(), <span class="number">16</span>)</span><br><span class="line">    <span class="comment"># t = (r + s) mod n</span></span><br><span class="line">    t = (r + s) % int(self.ecc_table[<span class="string">'n'</span>], base=<span class="number">16</span>)</span><br><span class="line">    <span class="keyword">if</span> t == <span class="number">0</span>:</span><br><span class="line">        <span class="keyword">return</span> <span class="number">0</span></span><br><span class="line"></span><br><span class="line">    <span class="comment"># P1 = sG</span></span><br><span class="line">    P1 = self._kg(s, self.ecc_table[<span class="string">'g'</span>])</span><br><span class="line">    <span class="comment"># P2 = tP</span></span><br><span class="line">    P2 = self._kg(t, self.public_key)</span><br><span class="line">    <span class="comment"># print(P1)</span></span><br><span class="line">    <span class="comment"># print(P2)</span></span><br><span class="line">    <span class="comment"># 有限域上的椭圆曲线加法公式</span></span><br><span class="line">    <span class="keyword">if</span> P1 == P2:</span><br><span class="line">        P1 = <span class="string">'%s%s'</span> % (P1, <span class="number">1</span>)</span><br><span class="line">        P1 = self._double_point(P1)</span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        P1 = <span class="string">'%s%s'</span> % (P1, <span class="number">1</span>)</span><br><span class="line">        P1 = self._add_point(P1, P2)</span><br><span class="line">        P1 = self._convert_jacb_to_nor(P1)</span><br><span class="line"></span><br><span class="line">    x = int(P1[<span class="number">0</span>:self.para_len], <span class="number">16</span>)</span><br><span class="line">    <span class="comment"># R = (e + x) mod n 验证 R=r是否成立</span></span><br><span class="line">    <span class="keyword">return</span> (r == ((e + x) % int(self.ecc_table[<span class="string">'n'</span>], base=<span class="number">16</span>)))</span><br></pre></td></tr></tbody></table></div></figure>
-<p><span class="exturl"><a class="exturl__link" href="https://github.com/duanhongyi/gmssl/blob/master/gmssl/sm2.py" target="_blank" rel="noopener">完整源码</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></p>
+        <h1 id="Neutral-Opinion">
+          <a href="#Neutral-Opinion" class="heading-link"><i class="fas fa-link"></i></a>Neutral Opinion</h1>
+      <p>必须要客观，不要出现 I think之类的。<br>准确理解原文的意思和观点，写作时不要添加新的信息和与原文无关的信息，不要偷换概念， 也不要评论原文的观点。 </p>
 <script>
         document.querySelectorAll('.github-emoji')
           .forEach(el => {
@@ -1801,101 +1751,7 @@
         <category>课程总结</category>
       </categories>
       <tags>
-        <tag>SM2</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>SQL Test</title>
-    <url>/SQL-Test/</url>
-    <content><![CDATA[<h1 id="TABLE-Student">
-          <a href="#TABLE-Student" class="heading-link"><i class="fas fa-link"></i></a>TABLE Student</h1>
-      <figure class="highlight sql"><div class="table-container"><table><tbody><tr><td class="code"><pre><span class="line"><span class="keyword">CREATE</span> <span class="keyword">TABLE</span> Student_2018091601004(</span><br><span class="line">	StudentID <span class="built_in">char</span>(<span class="number">13</span>) PRIMARY <span class="keyword">KEY</span>,</span><br><span class="line">	StudentName <span class="built_in">varchar</span>(<span class="number">10</span>) <span class="keyword">NOT</span> <span class="literal">NULL</span>,</span><br><span class="line">	Sex <span class="built_in">char</span>(<span class="number">2</span>) <span class="keyword">NOT</span> <span class="literal">NULL</span></span><br><span class="line">);</span><br></pre></td></tr></tbody></table></div></figure>
-<a id="more"></a>
-
-        <h1 id="TABLE-Teacher">
-          <a href="#TABLE-Teacher" class="heading-link"><i class="fas fa-link"></i></a>TABLE Teacher</h1>
-      <figure class="highlight sql"><div class="table-container"><table><tbody><tr><td class="code"><pre><span class="line"><span class="keyword">CREATE</span> <span class="keyword">TABLE</span> Teacher_2018091601004(</span><br><span class="line">	TeacherID <span class="built_in">char</span>(<span class="number">7</span>) PRIMARY <span class="keyword">KEY</span>,</span><br><span class="line">	TeacherName <span class="built_in">varchar</span>(<span class="number">10</span>) <span class="keyword">NOT</span> <span class="literal">NULL</span>,</span><br><span class="line">	Title <span class="built_in">varchar</span>(<span class="number">10</span>) <span class="keyword">NOT</span> <span class="literal">NULL</span> <span class="keyword">CHECK</span>(Title <span class="keyword">IN</span>(<span class="string">'教授'</span>,<span class="string">'副教授'</span>,<span class="string">'讲师'</span>))</span><br><span class="line">);</span><br></pre></td></tr></tbody></table></div></figure>
-
-
-        <h1 id="TABLE-Course">
-          <a href="#TABLE-Course" class="heading-link"><i class="fas fa-link"></i></a>TABLE Course</h1>
-      <figure class="highlight sql"><div class="table-container"><table><tbody><tr><td class="code"><pre><span class="line"><span class="keyword">CREATE</span> <span class="keyword">TABLE</span> Course_2018091601004(</span><br><span class="line">	CourseID <span class="built_in">char</span>(<span class="number">10</span>) PRIMARY <span class="keyword">KEY</span>,</span><br><span class="line">	CourseName <span class="built_in">varchar</span>(<span class="number">20</span>) <span class="keyword">NOT</span> <span class="literal">NULL</span>,</span><br><span class="line">	TeacherID <span class="built_in">char</span>(<span class="number">7</span>) <span class="keyword">NOT</span> <span class="literal">NULL</span>,</span><br><span class="line">	Credit <span class="built_in">int</span> <span class="keyword">NOT</span> <span class="literal">NULL</span> <span class="keyword">CHECK</span>(Credit <span class="keyword">IN</span>(<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>)),</span><br><span class="line">	<span class="keyword">CONSTRAINT</span> TeacherID_FK <span class="keyword">FOREIGN</span> <span class="keyword">KEY</span>(TeacherID)</span><br><span class="line">	<span class="keyword">REFERENCES</span> Teacher_2018091601004(TeacherID)</span><br><span class="line">		<span class="keyword">ON</span> <span class="keyword">DELETE</span> <span class="keyword">CASCADE</span></span><br><span class="line">		<span class="keyword">ON</span> <span class="keyword">UPDATE</span> <span class="keyword">CASCADE</span></span><br><span class="line">);</span><br></pre></td></tr></tbody></table></div></figure>
-
-
-        <h1 id="TABLE-Grade">
-          <a href="#TABLE-Grade" class="heading-link"><i class="fas fa-link"></i></a>TABLE Grade</h1>
-      <figure class="highlight sql"><div class="table-container"><table><tbody><tr><td class="code"><pre><span class="line"><span class="keyword">CREATE</span> <span class="keyword">TABLE</span> Grade_2018091601004(</span><br><span class="line">	StudentID <span class="built_in">char</span>(<span class="number">13</span>) <span class="keyword">NOT</span> <span class="literal">NULL</span>,</span><br><span class="line">	CourseID <span class="built_in">char</span>(<span class="number">10</span>) <span class="keyword">NOT</span> <span class="literal">NULL</span>,</span><br><span class="line">	Score <span class="built_in">int</span> <span class="keyword">NOT</span> <span class="literal">NULL</span> <span class="keyword">CHECK</span>(Score&gt;=<span class="number">0</span> <span class="keyword">and</span> Score&lt;=<span class="number">100</span>),</span><br><span class="line">	<span class="keyword">CONSTRAINT</span> Grade_PK PRIMARY <span class="keyword">KEY</span>(StudentID,CourseID),</span><br><span class="line">	<span class="keyword">CONSTRAINT</span> Student_FK <span class="keyword">FOREIGN</span> <span class="keyword">KEY</span>(StudentID)</span><br><span class="line">	<span class="keyword">REFERENCES</span> Student_2018091601004(StudentID)</span><br><span class="line">		<span class="keyword">ON</span> <span class="keyword">DELETE</span> <span class="keyword">CASCADE</span></span><br><span class="line">		<span class="keyword">ON</span> <span class="keyword">UPDATE</span> <span class="keyword">CASCADE</span>,</span><br><span class="line">	<span class="keyword">CONSTRAINT</span> CourseID <span class="keyword">FOREIGN</span> <span class="keyword">KEY</span>(CourseID)</span><br><span class="line">	<span class="keyword">REFERENCES</span> Course_2018091601004(CourseID)</span><br><span class="line">		<span class="keyword">ON</span> <span class="keyword">DELETE</span> <span class="keyword">CASCADE</span></span><br><span class="line">		<span class="keyword">ON</span> <span class="keyword">UPDATE</span> <span class="keyword">CASCADE</span></span><br><span class="line">);</span><br></pre></td></tr></tbody></table></div></figure>
-
-
-        <h1 id="INSERT-Student">
-          <a href="#INSERT-Student" class="heading-link"><i class="fas fa-link"></i></a>INSERT Student</h1>
-      <figure class="highlight sql"><div class="table-container"><table><tbody><tr><td class="code"><pre><span class="line"><span class="keyword">INSERT</span> <span class="keyword">INTO</span> Student_2018091601004 <span class="keyword">VALUES</span>(<span class="string">'2018090015201'</span>,<span class="string">'李同学'</span>,<span class="string">'男'</span>);</span><br><span class="line"><span class="keyword">INSERT</span> <span class="keyword">INTO</span> Student_2018091601004 <span class="keyword">VALUES</span>(<span class="string">'2018090015202'</span>,<span class="string">'赵同学'</span>,<span class="string">'女'</span>);</span><br><span class="line"><span class="keyword">INSERT</span> <span class="keyword">INTO</span> Student_2018091601004 <span class="keyword">VALUES</span>(<span class="string">'2018091601004'</span>,<span class="string">'林俊'</span>,<span class="string">'男'</span>);</span><br></pre></td></tr></tbody></table></div></figure>
-
-
-        <h1 id="INSERT-Teacher">
-          <a href="#INSERT-Teacher" class="heading-link"><i class="fas fa-link"></i></a>INSERT Teacher</h1>
-      <figure class="highlight sql"><div class="table-container"><table><tbody><tr><td class="code"><pre><span class="line"><span class="keyword">INSERT</span> <span class="keyword">INTO</span> Teacher_2018091601004 <span class="keyword">VALUES</span>(<span class="string">'3202211'</span>,<span class="string">'张老师'</span>,<span class="string">'教授'</span>);</span><br><span class="line"><span class="keyword">INSERT</span> <span class="keyword">INTO</span> Teacher_2018091601004 <span class="keyword">VALUES</span>(<span class="string">'3202212'</span>,<span class="string">'刘老师'</span>,<span class="string">'副教授'</span>);</span><br><span class="line"><span class="keyword">INSERT</span> <span class="keyword">INTO</span> Teacher_2018091601004 <span class="keyword">VALUES</span>(<span class="string">'1601004'</span>,<span class="string">'林俊'</span>,<span class="string">'讲师'</span>);</span><br></pre></td></tr></tbody></table></div></figure>
-
-
-        <h1 id="INSERT-Course">
-          <a href="#INSERT-Course" class="heading-link"><i class="fas fa-link"></i></a>INSERT Course</h1>
-      <figure class="highlight sql"><div class="table-container"><table><tbody><tr><td class="code"><pre><span class="line"><span class="keyword">INSERT</span> <span class="keyword">INTO</span> Course_2018091601004 <span class="keyword">VALUES</span>(<span class="string">'C001'</span>,<span class="string">'数据库原理'</span>,<span class="string">'3202211'</span>,<span class="number">3</span>);</span><br><span class="line"><span class="keyword">INSERT</span> <span class="keyword">INTO</span> Course_2018091601004 <span class="keyword">VALUES</span>(<span class="string">'C002'</span>,<span class="string">'软件工程原理'</span>,<span class="string">'3202212'</span>,<span class="number">3</span>);</span><br><span class="line"><span class="keyword">INSERT</span> <span class="keyword">INTO</span> Course_2018091601004 <span class="keyword">VALUES</span>(<span class="string">'C003'</span>,<span class="string">'林俊'</span>,<span class="string">'3202212'</span>,<span class="number">2</span>);</span><br></pre></td></tr></tbody></table></div></figure>
-
-
-        <h1 id="INSERT-Grade">
-          <a href="#INSERT-Grade" class="heading-link"><i class="fas fa-link"></i></a>INSERT Grade</h1>
-      <figure class="highlight sql"><div class="table-container"><table><tbody><tr><td class="code"><pre><span class="line"><span class="keyword">INSERT</span> <span class="keyword">INTO</span> Grade_2018091601004 <span class="keyword">VALUES</span>(<span class="string">'2018091601004'</span>,<span class="string">'C001'</span>,<span class="number">90</span>);</span><br><span class="line"><span class="keyword">INSERT</span> <span class="keyword">INTO</span> Grade_2018091601004 <span class="keyword">VALUES</span>(<span class="string">'2018091601004'</span>,<span class="string">'C002'</span>,<span class="number">80</span>);</span><br><span class="line"><span class="keyword">INSERT</span> <span class="keyword">INTO</span> Grade_2018091601004 <span class="keyword">VALUES</span>(<span class="string">'2018090015201'</span>,<span class="string">'C001'</span>,<span class="number">92</span>);</span><br><span class="line"><span class="keyword">INSERT</span> <span class="keyword">INTO</span> Grade_2018091601004 <span class="keyword">VALUES</span>(<span class="string">'2018090015201'</span>,<span class="string">'C002'</span>,<span class="number">45</span>);</span><br><span class="line"><span class="keyword">INSERT</span> <span class="keyword">INTO</span> Grade_2018091601004 <span class="keyword">VALUES</span>(<span class="string">'2018090015202'</span>,<span class="string">'C001'</span>,<span class="number">56</span>);</span><br><span class="line"><span class="keyword">INSERT</span> <span class="keyword">INTO</span> Grade_2018091601004 <span class="keyword">VALUES</span>(<span class="string">'2018090015202'</span>,<span class="string">'C002'</span>,<span class="number">35</span>);</span><br></pre></td></tr></tbody></table></div></figure>
-
-
-        <h1 id="SELECT-join-on">
-          <a href="#SELECT-join-on" class="heading-link"><i class="fas fa-link"></i></a>SELECT join on</h1>
-      <figure class="highlight sql"><div class="table-container"><table><tbody><tr><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> A.StudentID,A.StudentName,B.Score,C.CourseName</span><br><span class="line"><span class="keyword">FROM</span> Student_2018091601004 <span class="keyword">as</span> A <span class="keyword">join</span> Grade_2018091601004 <span class="keyword">as</span> B </span><br><span class="line"><span class="keyword">on</span> A.StudentID=B.StudentID <span class="keyword">join</span> Course_2018091601004 <span class="keyword">as</span> C </span><br><span class="line"><span class="keyword">on</span> B.CourseID=C.CourseID</span><br><span class="line"><span class="keyword">WHERE</span> A.StudentID=<span class="string">'2018091601004'</span>;</span><br></pre></td></tr></tbody></table></div></figure>
-
-
-        <h1 id="CREATE-VIEW">
-          <a href="#CREATE-VIEW" class="heading-link"><i class="fas fa-link"></i></a>CREATE VIEW</h1>
-      <figure class="highlight sql"><div class="table-container"><table><tbody><tr><td class="code"><pre><span class="line"><span class="keyword">CREATE</span> <span class="keyword">VIEW</span> View_Grade_2018091601004 <span class="keyword">as</span></span><br><span class="line"><span class="keyword">SELECT</span> A.CourseID <span class="keyword">as</span> 课程编号,</span><br><span class="line">	   A.CourseName <span class="keyword">as</span> 课程名称,</span><br><span class="line">	   B.TeacherName <span class="keyword">as</span> 任课教师,</span><br><span class="line">	   <span class="keyword">count</span>(C.StudentID) <span class="keyword">as</span> 不及格人数</span><br><span class="line"><span class="keyword">FROM</span> Course_2018091601004 <span class="keyword">as</span> A </span><br><span class="line">	<span class="keyword">join</span> Teacher_2018091601004 <span class="keyword">as</span> B <span class="keyword">on</span> A.TeacherID=B.TeacherID</span><br><span class="line">	<span class="keyword">join</span> Grade_2018091601004 <span class="keyword">as</span> C <span class="keyword">on</span> A.CourseID=C.CourseID</span><br><span class="line"><span class="keyword">WHERE</span> C.Score&lt;<span class="number">60</span></span><br><span class="line"><span class="keyword">GROUP</span> <span class="keyword">by</span> A.CourseID,B.TeacherName</span><br><span class="line"><span class="keyword">ORDER</span> <span class="keyword">by</span> A.CourseID;</span><br><span class="line"></span><br><span class="line"><span class="keyword">SELECT</span>* <span class="keyword">FROM</span>  View_Grade_2018091601004;</span><br></pre></td></tr></tbody></table></div></figure>
-
-
-        <h1 id="CREATE-ROLE">
-          <a href="#CREATE-ROLE" class="heading-link"><i class="fas fa-link"></i></a>CREATE ROLE</h1>
-      <figure class="highlight sql"><div class="table-container"><table><tbody><tr><td class="code"><pre><span class="line"><span class="keyword">CREATE</span> <span class="keyword">ROLE</span> <span class="string">"Role_Student_2018091601004"</span> <span class="keyword">WITH</span> LOGIN</span><br><span class="line">NOSUPERUSER</span><br><span class="line">NOCREATEDB</span><br><span class="line">NOCREATEROLE </span><br><span class="line">INHERIT </span><br><span class="line">NOREPLICATION </span><br><span class="line"><span class="keyword">CONNECTION</span> <span class="keyword">LIMIT</span> <span class="number">-1</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">CREATE</span> <span class="keyword">ROLE</span> <span class="string">"Role_Teacher_2018091601004"</span> <span class="keyword">WITH</span> LOGIN</span><br><span class="line">NOSUPERUSER</span><br><span class="line">NOCREATEDB</span><br><span class="line">NOCREATEROLE </span><br><span class="line">INHERIT </span><br><span class="line">NOREPLICATION </span><br><span class="line"><span class="keyword">CONNECTION</span> <span class="keyword">LIMIT</span> <span class="number">-1</span>;	</span><br><span class="line"></span><br><span class="line"><span class="keyword">CREATE</span> <span class="keyword">ROLE</span> <span class="string">"Role_TAdmin_2018091601004"</span> <span class="keyword">WITH</span> LOGIN</span><br><span class="line">NOSUPERUSER</span><br><span class="line">NOCREATEDB</span><br><span class="line">NOCREATEROLE </span><br><span class="line">INHERIT </span><br><span class="line">NOREPLICATION </span><br><span class="line"><span class="keyword">CONNECTION</span> <span class="keyword">LIMIT</span> <span class="number">-1</span>;</span><br></pre></td></tr></tbody></table></div></figure>
-
-
-        <h1 id="GRANT-ROLE">
-          <a href="#GRANT-ROLE" class="heading-link"><i class="fas fa-link"></i></a>GRANT ROLE</h1>
-      <figure class="highlight sql"><div class="table-container"><table><tbody><tr><td class="code"><pre><span class="line"><span class="keyword">GRANT</span> <span class="keyword">SELECT</span>,<span class="keyword">UPDATE</span> <span class="keyword">ON</span> Student_2018091601004 <span class="keyword">TO</span> <span class="string">"Role_Student_2018091601004"</span>;</span><br><span class="line"><span class="keyword">GRANT</span> <span class="keyword">SELECT</span> <span class="keyword">ON</span> Teacher_2018091601004 <span class="keyword">TO</span> <span class="string">"Role_Student_2018091601004"</span>;</span><br><span class="line"><span class="keyword">GRANT</span> <span class="keyword">SELECT</span> <span class="keyword">ON</span> Course_2018091601004 <span class="keyword">TO</span> <span class="string">"Role_Student_2018091601004"</span>;</span><br><span class="line"><span class="keyword">GRANT</span> <span class="keyword">SELECT</span> <span class="keyword">ON</span> Grade_2018091601004 <span class="keyword">TO</span> <span class="string">"Role_Student_2018091601004"</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">GRANT</span> <span class="keyword">SELECT</span> <span class="keyword">ON</span> Student_2018091601004 <span class="keyword">TO</span> <span class="string">"Role_Teacher_2018091601004"</span>;</span><br><span class="line"><span class="keyword">GRANT</span> <span class="keyword">SELECT</span>,<span class="keyword">UPDATE</span> <span class="keyword">ON</span> Teacher_2018091601004 <span class="keyword">TO</span> <span class="string">"Role_Teacher_2018091601004"</span>;</span><br><span class="line"><span class="keyword">GRANT</span> <span class="keyword">SELECT</span> <span class="keyword">ON</span> Course_2018091601004 <span class="keyword">TO</span> <span class="string">"Role_Teacher_2018091601004"</span>;</span><br><span class="line"><span class="keyword">GRANT</span> <span class="keyword">SELECT</span>,<span class="keyword">UPDATE</span>,<span class="keyword">DELETE</span>,<span class="keyword">INSERT</span> <span class="keyword">ON</span> Grade_2018091601004 <span class="keyword">TO</span> <span class="string">"Role_Teacher_2018091601004"</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">GRANT</span> <span class="keyword">SELECT</span> <span class="keyword">ON</span> Student_2018091601004 <span class="keyword">TO</span> <span class="string">"Role_TAdmin_2018091601004"</span>;</span><br><span class="line"><span class="keyword">GRANT</span> <span class="keyword">SELECT</span> <span class="keyword">ON</span> Teacher_2018091601004 <span class="keyword">TO</span> <span class="string">"Role_TAdmin_2018091601004"</span>;</span><br><span class="line"><span class="keyword">GRANT</span> <span class="keyword">SELECT</span>,<span class="keyword">UPDATE</span>,<span class="keyword">DELETE</span>,<span class="keyword">INSERT</span> <span class="keyword">ON</span> Course_2018091601004 <span class="keyword">TO</span> <span class="string">"Role_TAdmin_2018091601004"</span>;</span><br><span class="line"><span class="keyword">GRANT</span> <span class="keyword">SELECT</span> <span class="keyword">ON</span> Grade_2018091601004 <span class="keyword">TO</span> <span class="string">"Role_TAdmin_2018091601004"</span>;</span><br></pre></td></tr></tbody></table></div></figure>
-
-
-
-
-
-
-
-<script>
-        document.querySelectorAll('.github-emoji')
-          .forEach(el => {
-            if (!el.dataset.src) { return; }
-            const img = document.createElement('img');
-            img.style = 'display:none !important;';
-            img.src = el.dataset.src;
-            img.addEventListener('error', () => {
-              img.remove();
-              el.style.color = 'inherit';
-              el.style.backgroundImage = 'none';
-              el.style.background = 'none';
-            });
-            img.addEventListener('load', () => {
-              img.remove();
-            });
-            document.body.appendChild(img);
-          });
-      </script>]]></content>
-      <categories>
-        <category>课程总结</category>
-      </categories>
-      <tags>
-        <tag>SQL</tag>
+        <tag>商务英语</tag>
       </tags>
   </entry>
   <entry>
@@ -2061,6 +1917,205 @@
       </tags>
   </entry>
   <entry>
+    <title>SQL Test</title>
+    <url>/SQL-Test/</url>
+    <content><![CDATA[<h1 id="TABLE-Student">
+          <a href="#TABLE-Student" class="heading-link"><i class="fas fa-link"></i></a>TABLE Student</h1>
+      <figure class="highlight sql"><div class="table-container"><table><tbody><tr><td class="code"><pre><span class="line"><span class="keyword">CREATE</span> <span class="keyword">TABLE</span> Student_2018091601004(</span><br><span class="line">	StudentID <span class="built_in">char</span>(<span class="number">13</span>) PRIMARY <span class="keyword">KEY</span>,</span><br><span class="line">	StudentName <span class="built_in">varchar</span>(<span class="number">10</span>) <span class="keyword">NOT</span> <span class="literal">NULL</span>,</span><br><span class="line">	Sex <span class="built_in">char</span>(<span class="number">2</span>) <span class="keyword">NOT</span> <span class="literal">NULL</span></span><br><span class="line">);</span><br></pre></td></tr></tbody></table></div></figure>
+<a id="more"></a>
+
+        <h1 id="TABLE-Teacher">
+          <a href="#TABLE-Teacher" class="heading-link"><i class="fas fa-link"></i></a>TABLE Teacher</h1>
+      <figure class="highlight sql"><div class="table-container"><table><tbody><tr><td class="code"><pre><span class="line"><span class="keyword">CREATE</span> <span class="keyword">TABLE</span> Teacher_2018091601004(</span><br><span class="line">	TeacherID <span class="built_in">char</span>(<span class="number">7</span>) PRIMARY <span class="keyword">KEY</span>,</span><br><span class="line">	TeacherName <span class="built_in">varchar</span>(<span class="number">10</span>) <span class="keyword">NOT</span> <span class="literal">NULL</span>,</span><br><span class="line">	Title <span class="built_in">varchar</span>(<span class="number">10</span>) <span class="keyword">NOT</span> <span class="literal">NULL</span> <span class="keyword">CHECK</span>(Title <span class="keyword">IN</span>(<span class="string">'教授'</span>,<span class="string">'副教授'</span>,<span class="string">'讲师'</span>))</span><br><span class="line">);</span><br></pre></td></tr></tbody></table></div></figure>
+
+
+        <h1 id="TABLE-Course">
+          <a href="#TABLE-Course" class="heading-link"><i class="fas fa-link"></i></a>TABLE Course</h1>
+      <figure class="highlight sql"><div class="table-container"><table><tbody><tr><td class="code"><pre><span class="line"><span class="keyword">CREATE</span> <span class="keyword">TABLE</span> Course_2018091601004(</span><br><span class="line">	CourseID <span class="built_in">char</span>(<span class="number">10</span>) PRIMARY <span class="keyword">KEY</span>,</span><br><span class="line">	CourseName <span class="built_in">varchar</span>(<span class="number">20</span>) <span class="keyword">NOT</span> <span class="literal">NULL</span>,</span><br><span class="line">	TeacherID <span class="built_in">char</span>(<span class="number">7</span>) <span class="keyword">NOT</span> <span class="literal">NULL</span>,</span><br><span class="line">	Credit <span class="built_in">int</span> <span class="keyword">NOT</span> <span class="literal">NULL</span> <span class="keyword">CHECK</span>(Credit <span class="keyword">IN</span>(<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>)),</span><br><span class="line">	<span class="keyword">CONSTRAINT</span> TeacherID_FK <span class="keyword">FOREIGN</span> <span class="keyword">KEY</span>(TeacherID)</span><br><span class="line">	<span class="keyword">REFERENCES</span> Teacher_2018091601004(TeacherID)</span><br><span class="line">		<span class="keyword">ON</span> <span class="keyword">DELETE</span> <span class="keyword">CASCADE</span></span><br><span class="line">		<span class="keyword">ON</span> <span class="keyword">UPDATE</span> <span class="keyword">CASCADE</span></span><br><span class="line">);</span><br></pre></td></tr></tbody></table></div></figure>
+
+
+        <h1 id="TABLE-Grade">
+          <a href="#TABLE-Grade" class="heading-link"><i class="fas fa-link"></i></a>TABLE Grade</h1>
+      <figure class="highlight sql"><div class="table-container"><table><tbody><tr><td class="code"><pre><span class="line"><span class="keyword">CREATE</span> <span class="keyword">TABLE</span> Grade_2018091601004(</span><br><span class="line">	StudentID <span class="built_in">char</span>(<span class="number">13</span>) <span class="keyword">NOT</span> <span class="literal">NULL</span>,</span><br><span class="line">	CourseID <span class="built_in">char</span>(<span class="number">10</span>) <span class="keyword">NOT</span> <span class="literal">NULL</span>,</span><br><span class="line">	Score <span class="built_in">int</span> <span class="keyword">NOT</span> <span class="literal">NULL</span> <span class="keyword">CHECK</span>(Score&gt;=<span class="number">0</span> <span class="keyword">and</span> Score&lt;=<span class="number">100</span>),</span><br><span class="line">	<span class="keyword">CONSTRAINT</span> Grade_PK PRIMARY <span class="keyword">KEY</span>(StudentID,CourseID),</span><br><span class="line">	<span class="keyword">CONSTRAINT</span> Student_FK <span class="keyword">FOREIGN</span> <span class="keyword">KEY</span>(StudentID)</span><br><span class="line">	<span class="keyword">REFERENCES</span> Student_2018091601004(StudentID)</span><br><span class="line">		<span class="keyword">ON</span> <span class="keyword">DELETE</span> <span class="keyword">CASCADE</span></span><br><span class="line">		<span class="keyword">ON</span> <span class="keyword">UPDATE</span> <span class="keyword">CASCADE</span>,</span><br><span class="line">	<span class="keyword">CONSTRAINT</span> CourseID <span class="keyword">FOREIGN</span> <span class="keyword">KEY</span>(CourseID)</span><br><span class="line">	<span class="keyword">REFERENCES</span> Course_2018091601004(CourseID)</span><br><span class="line">		<span class="keyword">ON</span> <span class="keyword">DELETE</span> <span class="keyword">CASCADE</span></span><br><span class="line">		<span class="keyword">ON</span> <span class="keyword">UPDATE</span> <span class="keyword">CASCADE</span></span><br><span class="line">);</span><br></pre></td></tr></tbody></table></div></figure>
+
+
+        <h1 id="INSERT-Student">
+          <a href="#INSERT-Student" class="heading-link"><i class="fas fa-link"></i></a>INSERT Student</h1>
+      <figure class="highlight sql"><div class="table-container"><table><tbody><tr><td class="code"><pre><span class="line"><span class="keyword">INSERT</span> <span class="keyword">INTO</span> Student_2018091601004 <span class="keyword">VALUES</span>(<span class="string">'2018090015201'</span>,<span class="string">'李同学'</span>,<span class="string">'男'</span>);</span><br><span class="line"><span class="keyword">INSERT</span> <span class="keyword">INTO</span> Student_2018091601004 <span class="keyword">VALUES</span>(<span class="string">'2018090015202'</span>,<span class="string">'赵同学'</span>,<span class="string">'女'</span>);</span><br><span class="line"><span class="keyword">INSERT</span> <span class="keyword">INTO</span> Student_2018091601004 <span class="keyword">VALUES</span>(<span class="string">'2018091601004'</span>,<span class="string">'林俊'</span>,<span class="string">'男'</span>);</span><br></pre></td></tr></tbody></table></div></figure>
+
+
+        <h1 id="INSERT-Teacher">
+          <a href="#INSERT-Teacher" class="heading-link"><i class="fas fa-link"></i></a>INSERT Teacher</h1>
+      <figure class="highlight sql"><div class="table-container"><table><tbody><tr><td class="code"><pre><span class="line"><span class="keyword">INSERT</span> <span class="keyword">INTO</span> Teacher_2018091601004 <span class="keyword">VALUES</span>(<span class="string">'3202211'</span>,<span class="string">'张老师'</span>,<span class="string">'教授'</span>);</span><br><span class="line"><span class="keyword">INSERT</span> <span class="keyword">INTO</span> Teacher_2018091601004 <span class="keyword">VALUES</span>(<span class="string">'3202212'</span>,<span class="string">'刘老师'</span>,<span class="string">'副教授'</span>);</span><br><span class="line"><span class="keyword">INSERT</span> <span class="keyword">INTO</span> Teacher_2018091601004 <span class="keyword">VALUES</span>(<span class="string">'1601004'</span>,<span class="string">'林俊'</span>,<span class="string">'讲师'</span>);</span><br></pre></td></tr></tbody></table></div></figure>
+
+
+        <h1 id="INSERT-Course">
+          <a href="#INSERT-Course" class="heading-link"><i class="fas fa-link"></i></a>INSERT Course</h1>
+      <figure class="highlight sql"><div class="table-container"><table><tbody><tr><td class="code"><pre><span class="line"><span class="keyword">INSERT</span> <span class="keyword">INTO</span> Course_2018091601004 <span class="keyword">VALUES</span>(<span class="string">'C001'</span>,<span class="string">'数据库原理'</span>,<span class="string">'3202211'</span>,<span class="number">3</span>);</span><br><span class="line"><span class="keyword">INSERT</span> <span class="keyword">INTO</span> Course_2018091601004 <span class="keyword">VALUES</span>(<span class="string">'C002'</span>,<span class="string">'软件工程原理'</span>,<span class="string">'3202212'</span>,<span class="number">3</span>);</span><br><span class="line"><span class="keyword">INSERT</span> <span class="keyword">INTO</span> Course_2018091601004 <span class="keyword">VALUES</span>(<span class="string">'C003'</span>,<span class="string">'林俊'</span>,<span class="string">'3202212'</span>,<span class="number">2</span>);</span><br></pre></td></tr></tbody></table></div></figure>
+
+
+        <h1 id="INSERT-Grade">
+          <a href="#INSERT-Grade" class="heading-link"><i class="fas fa-link"></i></a>INSERT Grade</h1>
+      <figure class="highlight sql"><div class="table-container"><table><tbody><tr><td class="code"><pre><span class="line"><span class="keyword">INSERT</span> <span class="keyword">INTO</span> Grade_2018091601004 <span class="keyword">VALUES</span>(<span class="string">'2018091601004'</span>,<span class="string">'C001'</span>,<span class="number">90</span>);</span><br><span class="line"><span class="keyword">INSERT</span> <span class="keyword">INTO</span> Grade_2018091601004 <span class="keyword">VALUES</span>(<span class="string">'2018091601004'</span>,<span class="string">'C002'</span>,<span class="number">80</span>);</span><br><span class="line"><span class="keyword">INSERT</span> <span class="keyword">INTO</span> Grade_2018091601004 <span class="keyword">VALUES</span>(<span class="string">'2018090015201'</span>,<span class="string">'C001'</span>,<span class="number">92</span>);</span><br><span class="line"><span class="keyword">INSERT</span> <span class="keyword">INTO</span> Grade_2018091601004 <span class="keyword">VALUES</span>(<span class="string">'2018090015201'</span>,<span class="string">'C002'</span>,<span class="number">45</span>);</span><br><span class="line"><span class="keyword">INSERT</span> <span class="keyword">INTO</span> Grade_2018091601004 <span class="keyword">VALUES</span>(<span class="string">'2018090015202'</span>,<span class="string">'C001'</span>,<span class="number">56</span>);</span><br><span class="line"><span class="keyword">INSERT</span> <span class="keyword">INTO</span> Grade_2018091601004 <span class="keyword">VALUES</span>(<span class="string">'2018090015202'</span>,<span class="string">'C002'</span>,<span class="number">35</span>);</span><br></pre></td></tr></tbody></table></div></figure>
+
+
+        <h1 id="SELECT-join-on">
+          <a href="#SELECT-join-on" class="heading-link"><i class="fas fa-link"></i></a>SELECT join on</h1>
+      <figure class="highlight sql"><div class="table-container"><table><tbody><tr><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> A.StudentID,A.StudentName,B.Score,C.CourseName</span><br><span class="line"><span class="keyword">FROM</span> Student_2018091601004 <span class="keyword">as</span> A <span class="keyword">join</span> Grade_2018091601004 <span class="keyword">as</span> B </span><br><span class="line"><span class="keyword">on</span> A.StudentID=B.StudentID <span class="keyword">join</span> Course_2018091601004 <span class="keyword">as</span> C </span><br><span class="line"><span class="keyword">on</span> B.CourseID=C.CourseID</span><br><span class="line"><span class="keyword">WHERE</span> A.StudentID=<span class="string">'2018091601004'</span>;</span><br></pre></td></tr></tbody></table></div></figure>
+
+
+        <h1 id="CREATE-VIEW">
+          <a href="#CREATE-VIEW" class="heading-link"><i class="fas fa-link"></i></a>CREATE VIEW</h1>
+      <figure class="highlight sql"><div class="table-container"><table><tbody><tr><td class="code"><pre><span class="line"><span class="keyword">CREATE</span> <span class="keyword">VIEW</span> View_Grade_2018091601004 <span class="keyword">as</span></span><br><span class="line"><span class="keyword">SELECT</span> A.CourseID <span class="keyword">as</span> 课程编号,</span><br><span class="line">	   A.CourseName <span class="keyword">as</span> 课程名称,</span><br><span class="line">	   B.TeacherName <span class="keyword">as</span> 任课教师,</span><br><span class="line">	   <span class="keyword">count</span>(C.StudentID) <span class="keyword">as</span> 不及格人数</span><br><span class="line"><span class="keyword">FROM</span> Course_2018091601004 <span class="keyword">as</span> A </span><br><span class="line">	<span class="keyword">join</span> Teacher_2018091601004 <span class="keyword">as</span> B <span class="keyword">on</span> A.TeacherID=B.TeacherID</span><br><span class="line">	<span class="keyword">join</span> Grade_2018091601004 <span class="keyword">as</span> C <span class="keyword">on</span> A.CourseID=C.CourseID</span><br><span class="line"><span class="keyword">WHERE</span> C.Score&lt;<span class="number">60</span></span><br><span class="line"><span class="keyword">GROUP</span> <span class="keyword">by</span> A.CourseID,B.TeacherName</span><br><span class="line"><span class="keyword">ORDER</span> <span class="keyword">by</span> A.CourseID;</span><br><span class="line"></span><br><span class="line"><span class="keyword">SELECT</span>* <span class="keyword">FROM</span>  View_Grade_2018091601004;</span><br></pre></td></tr></tbody></table></div></figure>
+
+
+        <h1 id="CREATE-ROLE">
+          <a href="#CREATE-ROLE" class="heading-link"><i class="fas fa-link"></i></a>CREATE ROLE</h1>
+      <figure class="highlight sql"><div class="table-container"><table><tbody><tr><td class="code"><pre><span class="line"><span class="keyword">CREATE</span> <span class="keyword">ROLE</span> <span class="string">"Role_Student_2018091601004"</span> <span class="keyword">WITH</span> LOGIN</span><br><span class="line">NOSUPERUSER</span><br><span class="line">NOCREATEDB</span><br><span class="line">NOCREATEROLE </span><br><span class="line">INHERIT </span><br><span class="line">NOREPLICATION </span><br><span class="line"><span class="keyword">CONNECTION</span> <span class="keyword">LIMIT</span> <span class="number">-1</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">CREATE</span> <span class="keyword">ROLE</span> <span class="string">"Role_Teacher_2018091601004"</span> <span class="keyword">WITH</span> LOGIN</span><br><span class="line">NOSUPERUSER</span><br><span class="line">NOCREATEDB</span><br><span class="line">NOCREATEROLE </span><br><span class="line">INHERIT </span><br><span class="line">NOREPLICATION </span><br><span class="line"><span class="keyword">CONNECTION</span> <span class="keyword">LIMIT</span> <span class="number">-1</span>;	</span><br><span class="line"></span><br><span class="line"><span class="keyword">CREATE</span> <span class="keyword">ROLE</span> <span class="string">"Role_TAdmin_2018091601004"</span> <span class="keyword">WITH</span> LOGIN</span><br><span class="line">NOSUPERUSER</span><br><span class="line">NOCREATEDB</span><br><span class="line">NOCREATEROLE </span><br><span class="line">INHERIT </span><br><span class="line">NOREPLICATION </span><br><span class="line"><span class="keyword">CONNECTION</span> <span class="keyword">LIMIT</span> <span class="number">-1</span>;</span><br></pre></td></tr></tbody></table></div></figure>
+
+
+        <h1 id="GRANT-ROLE">
+          <a href="#GRANT-ROLE" class="heading-link"><i class="fas fa-link"></i></a>GRANT ROLE</h1>
+      <figure class="highlight sql"><div class="table-container"><table><tbody><tr><td class="code"><pre><span class="line"><span class="keyword">GRANT</span> <span class="keyword">SELECT</span>,<span class="keyword">UPDATE</span> <span class="keyword">ON</span> Student_2018091601004 <span class="keyword">TO</span> <span class="string">"Role_Student_2018091601004"</span>;</span><br><span class="line"><span class="keyword">GRANT</span> <span class="keyword">SELECT</span> <span class="keyword">ON</span> Teacher_2018091601004 <span class="keyword">TO</span> <span class="string">"Role_Student_2018091601004"</span>;</span><br><span class="line"><span class="keyword">GRANT</span> <span class="keyword">SELECT</span> <span class="keyword">ON</span> Course_2018091601004 <span class="keyword">TO</span> <span class="string">"Role_Student_2018091601004"</span>;</span><br><span class="line"><span class="keyword">GRANT</span> <span class="keyword">SELECT</span> <span class="keyword">ON</span> Grade_2018091601004 <span class="keyword">TO</span> <span class="string">"Role_Student_2018091601004"</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">GRANT</span> <span class="keyword">SELECT</span> <span class="keyword">ON</span> Student_2018091601004 <span class="keyword">TO</span> <span class="string">"Role_Teacher_2018091601004"</span>;</span><br><span class="line"><span class="keyword">GRANT</span> <span class="keyword">SELECT</span>,<span class="keyword">UPDATE</span> <span class="keyword">ON</span> Teacher_2018091601004 <span class="keyword">TO</span> <span class="string">"Role_Teacher_2018091601004"</span>;</span><br><span class="line"><span class="keyword">GRANT</span> <span class="keyword">SELECT</span> <span class="keyword">ON</span> Course_2018091601004 <span class="keyword">TO</span> <span class="string">"Role_Teacher_2018091601004"</span>;</span><br><span class="line"><span class="keyword">GRANT</span> <span class="keyword">SELECT</span>,<span class="keyword">UPDATE</span>,<span class="keyword">DELETE</span>,<span class="keyword">INSERT</span> <span class="keyword">ON</span> Grade_2018091601004 <span class="keyword">TO</span> <span class="string">"Role_Teacher_2018091601004"</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">GRANT</span> <span class="keyword">SELECT</span> <span class="keyword">ON</span> Student_2018091601004 <span class="keyword">TO</span> <span class="string">"Role_TAdmin_2018091601004"</span>;</span><br><span class="line"><span class="keyword">GRANT</span> <span class="keyword">SELECT</span> <span class="keyword">ON</span> Teacher_2018091601004 <span class="keyword">TO</span> <span class="string">"Role_TAdmin_2018091601004"</span>;</span><br><span class="line"><span class="keyword">GRANT</span> <span class="keyword">SELECT</span>,<span class="keyword">UPDATE</span>,<span class="keyword">DELETE</span>,<span class="keyword">INSERT</span> <span class="keyword">ON</span> Course_2018091601004 <span class="keyword">TO</span> <span class="string">"Role_TAdmin_2018091601004"</span>;</span><br><span class="line"><span class="keyword">GRANT</span> <span class="keyword">SELECT</span> <span class="keyword">ON</span> Grade_2018091601004 <span class="keyword">TO</span> <span class="string">"Role_TAdmin_2018091601004"</span>;</span><br></pre></td></tr></tbody></table></div></figure>
+
+
+
+
+
+
+
+<script>
+        document.querySelectorAll('.github-emoji')
+          .forEach(el => {
+            if (!el.dataset.src) { return; }
+            const img = document.createElement('img');
+            img.style = 'display:none !important;';
+            img.src = el.dataset.src;
+            img.addEventListener('error', () => {
+              img.remove();
+              el.style.color = 'inherit';
+              el.style.backgroundImage = 'none';
+              el.style.background = 'none';
+            });
+            img.addEventListener('load', () => {
+              img.remove();
+            });
+            document.body.appendChild(img);
+          });
+      </script>]]></content>
+      <categories>
+        <category>课程总结</category>
+      </categories>
+      <tags>
+        <tag>SQL</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>十七又三</title>
+    <url>/twenty/</url>
+    <content><![CDATA[<h1 id="十七又三">
+          <a href="#十七又三" class="heading-link"><i class="fas fa-link"></i></a>十七又三</h1>
+      <p>今年的生日本来不打算写着什么的<br>想让日子就这么静静地流逝着<br>十一点多却又在床上翻来覆去<br>习惯性的失眠，胡思乱想<br>还是开灯从床上爬起<br>让回忆从指尖沙沙流过</p>
+<a id="more"></a>
+<p>在古时，二十岁即是加冠之年，寓意成年。<br>成年之时，我想谈谈关于过去，关于未来，关于穿越时空的旅行。</p>
+
+        <h1 id="友情">
+          <a href="#友情" class="heading-link"><i class="fas fa-link"></i></a>友情</h1>
+      <p>首先谈的是友情<br>从初中到高中再到大学<br>收获了一批批的沉甸甸的友情</p>
+<p>在前天和初中同学们在群里彻夜长谈，讲十四岁的故事，我想起自己在当时唱的“十七岁的雨季”，那时的我总觉得十七岁好遥远啊，是十四岁的我怎么也想不到的，而如今一转眼就二十了。有个初中同学说，他很羡慕我，说我那时候敢说敢做，什么都不怕，每天都在一直笑。其实我也羡慕那个时候的自己，天真傻憨，想说就说，想做就做，没有顾及。我总感觉上了大学，我不快乐，我不会把自己的想法轻易地暴露出来，学会了伪装自己，在大学里的友情，更多的是君子之交淡如水。</p>
+<p>上个月去泉州玩的时候，我骑着电动车在江滨大道驰行，吹着海风上了高架桥，那一刻我的思绪回到了17岁那年在厦门的夏天。当时和几个高中同学，高二暑假一放假就跑到厦门，一到厦门就被骗了票钱，骑着自行车满厦门的追，到晚上又一群人走丢了，骑着自行车上了高架桥，回到宾馆大家挤在一个小房间吃着夜宵。那是关于高中的友情，就在刚刚远在澳洲的班长又在零点给了发了祝福。</p>
+<p>我很庆幸在大学的时候阴差阳错地进入了至微支教队，在这里我遇到了一群交心的朋友，他们陪着我度过了一整年，现在都在偷偷地给我准备着生日祝福。</p>
+
+        <h1 id="爱情">
+          <a href="#爱情" class="heading-link"><i class="fas fa-link"></i></a>爱情</h1>
+      <p>之后我想谈谈爱情</p>
+<p>在去年，我谈了人生第一场恋爱，即使现在结束了，回想起来还是很美好，很多画面仍然还在脑海里闪现。<br>在这过去的一年里，我一直在想怎么样才算是真正地爱一个人，才能做到不亏待别人也不委屈自己，我只能不停地去找寻，去试探。<br>心动也许不是恋爱，等心定下来了，那便有了答案。</p>
+
+        <h1 id="事业">
+          <a href="#事业" class="heading-link"><i class="fas fa-link"></i></a>事业</h1>
+      <p>最后我想谈谈学习事业</p>
+<p>我很愧疚自己没有远大的目标，很多的时候我是在模仿，别人怎么样，我变怎么样。大家都朝着计算机跑去，我也便来了。大家浩浩荡荡地抢占着保研，我便也裹挟地前进，我也很无奈，但却是囿于生活，所有的诗和远方，脱离了经济的土壤，变成了无根之萍。<br>我希望在接下来的日子，我能走出一条自己的路，一条独一无二的路！</p>
+
+        <h1 id="未来">
+          <a href="#未来" class="heading-link"><i class="fas fa-link"></i></a>未来</h1>
+      <p>To be a better man !</p>
+<script>
+        document.querySelectorAll('.github-emoji')
+          .forEach(el => {
+            if (!el.dataset.src) { return; }
+            const img = document.createElement('img');
+            img.style = 'display:none !important;';
+            img.src = el.dataset.src;
+            img.addEventListener('error', () => {
+              img.remove();
+              el.style.color = 'inherit';
+              el.style.backgroundImage = 'none';
+              el.style.background = 'none';
+            });
+            img.addEventListener('load', () => {
+              img.remove();
+            });
+            document.body.appendChild(img);
+          });
+      </script>]]></content>
+      <categories>
+        <category>大学生活</category>
+      </categories>
+      <tags>
+        <tag>体验</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>SM2算法分析</title>
+    <url>/SM2/</url>
+    <content><![CDATA[<h1 id="基本参数确定">
+          <a href="#基本参数确定" class="heading-link"><i class="fas fa-link"></i></a>基本参数确定</h1>
+      <figure class="highlight python"><div class="table-container"><table><tbody><tr><td class="code"><pre><span class="line"><span class="comment"># 选择素域，设置椭圆曲线参数</span></span><br><span class="line"><span class="comment"># m 为256bit长</span></span><br><span class="line">default_ecc_table = {</span><br><span class="line"><span class="string">'n'</span>: <span class="string">'FFFFFFFEFFFFFFFFFFFFFFFFFFFFFFFF7203DF6B21C6052B53BBF40939D54123'</span>,</span><br><span class="line"><span class="string">'p'</span>: <span class="string">'FFFFFFFEFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF00000000FFFFFFFFFFFFFFFF'</span>,</span><br><span class="line"><span class="comment"># 基点G</span></span><br><span class="line"><span class="string">'g'</span>: <span class="string">'32c4ae2c1f1981195f9904466a39c9948fe30bbff2660be1715a4589334c74c7'</span>\</span><br><span class="line">    <span class="string">'bc3736a2f4f6779c59bdcee36b692153d0a9877cc62a474002df32e52139f0a0'</span>,</span><br><span class="line"><span class="string">'a'</span>: <span class="string">'FFFFFFFEFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF00000000FFFFFFFFFFFFFFFC'</span>,</span><br><span class="line"><span class="string">'b'</span>: <span class="string">'28E9FA9E9D9F5E344D5A9E4BCF6509A7F39789F515AB8F92DDBCBD414D940E93'</span>,</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></div></figure>
+<a id="more"></a>
+
+        <h1 id="加密算法">
+          <a href="#加密算法" class="heading-link"><i class="fas fa-link"></i></a>加密算法</h1>
+      <figure class="highlight python"><div class="table-container"><table><tbody><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">encrypt</span><span class="params">(self, data)</span>:</span></span><br><span class="line">    <span class="comment"># 加密函数，data消息(bytes)</span></span><br><span class="line">    msg = data.hex() <span class="comment"># 消息转化为16进制字符串</span></span><br><span class="line">    <span class="comment"># 选择随机数k</span></span><br><span class="line">    k = func.random_hex(self.para_len)</span><br><span class="line">    <span class="comment"># 进行点乘运算，计算椭圆曲线点C1=kG</span></span><br><span class="line">    C1 = self._kg(int(k,<span class="number">16</span>),self.ecc_table[<span class="string">'g'</span>])</span><br><span class="line">    <span class="comment"># 这里缺少了一步验证过程，S=hP_B</span></span><br><span class="line">    <span class="comment"># 计算椭圆曲线点kP_B</span></span><br><span class="line">    xy = self._kg(int(k,<span class="number">16</span>),self.public_key)</span><br><span class="line">    <span class="comment"># 从xy比特串中取出(x2,y2)</span></span><br><span class="line">    x2 = xy[<span class="number">0</span>:self.para_len]</span><br><span class="line">    y2 = xy[self.para_len:<span class="number">2</span>*self.para_len]</span><br><span class="line">    ml = len(msg)</span><br><span class="line">    <span class="comment"># KDF密钥派生函数，用SM3算法产生伪随机数</span></span><br><span class="line">    t = sm3.sm3_kdf(xy.encode(<span class="string">'utf8'</span>), ml/<span class="number">2</span>)</span><br><span class="line">    <span class="keyword">if</span> int(t,<span class="number">16</span>)==<span class="number">0</span>:</span><br><span class="line">        <span class="keyword">return</span> <span class="literal">None</span></span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        <span class="comment"># 这边这个语法没搞懂，估计是取ml长的字符串，前面以0填充</span></span><br><span class="line">        form = <span class="string">'%%0%dx'</span> % ml</span><br><span class="line">        <span class="comment"># C2 = M⊕t</span></span><br><span class="line">        C2 = form % (int(msg, <span class="number">16</span>) ^ int(t, <span class="number">16</span>))</span><br><span class="line">        <span class="comment"># C3 = Hash(x2||M||y2)</span></span><br><span class="line">        C3 = sm3.sm3_hash([</span><br><span class="line">            i <span class="keyword">for</span> i <span class="keyword">in</span> bytes.fromhex(<span class="string">'%s%s%s'</span>% (x2,msg,y2))</span><br><span class="line">        ])</span><br><span class="line">        <span class="keyword">return</span> bytes.fromhex(<span class="string">'%s%s%s'</span> % (C1,C3,C2))</span><br></pre></td></tr></tbody></table></div></figure>
+
+        <h1 id="解密函数">
+          <a href="#解密函数" class="heading-link"><i class="fas fa-link"></i></a>解密函数</h1>
+      <figure class="highlight python"><div class="table-container"><table><tbody><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">decrypt</span><span class="params">(self, data)</span>:</span></span><br><span class="line">    <span class="comment"># 解密函数，data密文（bytes）</span></span><br><span class="line">    data = data.hex() <span class="comment"># 消息转化为16进制字符串</span></span><br><span class="line">    len_2 = <span class="number">2</span> * self.para_len</span><br><span class="line">    len_3 = len_2 + <span class="number">64</span></span><br><span class="line">    <span class="comment"># 从data中取出C1、C2、C3</span></span><br><span class="line">    C1 = data[<span class="number">0</span>:len_2]</span><br><span class="line">    C3 = data[len_2:len_3]</span><br><span class="line">    C2 = data[len_3:]</span><br><span class="line">    <span class="comment"># 利用私钥d_B,计算d_BC1=xy</span></span><br><span class="line">    xy = self._kg(int(self.private_key,<span class="number">16</span>),C1)</span><br><span class="line">    <span class="comment"># print('xy = %s' % xy)</span></span><br><span class="line">    x2 = xy[<span class="number">0</span>:self.para_len]</span><br><span class="line">    y2 = xy[self.para_len:len_2]</span><br><span class="line">    cl = len(C2)</span><br><span class="line">    <span class="comment"># 计算t=KDF(x2||y2,klen),klen=self.pare_len</span></span><br><span class="line">    t = sm3.sm3_kdf(xy.encode(<span class="string">'utf8'</span>), cl/<span class="number">2</span>)</span><br><span class="line">    <span class="keyword">if</span> int(t, <span class="number">16</span>) == <span class="number">0</span>:</span><br><span class="line">        <span class="keyword">return</span> <span class="literal">None</span></span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        <span class="comment"># 作用同上，格式化输出</span></span><br><span class="line">        form = <span class="string">'%%0%dx'</span> % cl</span><br><span class="line">        <span class="comment"># M = C2⊕t</span></span><br><span class="line">        M = form % (int(C2,<span class="number">16</span>) ^ int(t,<span class="number">16</span>))</span><br><span class="line">        <span class="comment"># u = Hash(x2||M||y2)</span></span><br><span class="line">        u = sm3.sm3_hash([</span><br><span class="line">            i <span class="keyword">for</span> i <span class="keyword">in</span> bytes.fromhex(<span class="string">'%s%s%s'</span>% (x2,M,y2))</span><br><span class="line">        ])</span><br><span class="line">        <span class="keyword">return</span> bytes.fromhex(M)</span><br></pre></td></tr></tbody></table></div></figure>
+
+        <h1 id="签名函数">
+          <a href="#签名函数" class="heading-link"><i class="fas fa-link"></i></a>签名函数</h1>
+      <figure class="highlight python"><div class="table-container"><table><tbody><tr><td class="code"><pre><span class="line"><span class="comment"># 签名函数, data消息的hash，private_key私钥，K随机数，均为16进制字符串</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">sign</span><span class="params">(self, data, K)</span>:</span>  </span><br><span class="line">    E = data.hex() <span class="comment"># 消息转化为16进制字符串</span></span><br><span class="line">    e = int(E, <span class="number">16</span>)</span><br><span class="line">    <span class="comment"># d 为16进制的私钥</span></span><br><span class="line">    d = int(self.private_key, <span class="number">16</span>)</span><br><span class="line">    k = int(K, <span class="number">16</span>)</span><br><span class="line"></span><br><span class="line">    <span class="comment"># 计算椭圆曲线点P1=kG=(x,y)</span></span><br><span class="line">    P1 = self._kg(k, self.ecc_table[<span class="string">'g'</span>])</span><br><span class="line"></span><br><span class="line">    x = int(P1[<span class="number">0</span>:self.para_len], <span class="number">16</span>)</span><br><span class="line">    <span class="comment"># 计算R=(e+x)mod n</span></span><br><span class="line">    R = ((e + x) % int(self.ecc_table[<span class="string">'n'</span>], base=<span class="number">16</span>))</span><br><span class="line">    <span class="keyword">if</span> R == <span class="number">0</span> <span class="keyword">or</span> R + k == int(self.ecc_table[<span class="string">'n'</span>], base=<span class="number">16</span>):<span class="comment"># 纠错</span></span><br><span class="line">        <span class="keyword">return</span> <span class="literal">None</span></span><br><span class="line">    <span class="comment"># d_1 = (d+1)^(n-2) mod n</span></span><br><span class="line">    <span class="comment"># 我觉得这边的写法主要是避免了求逆的计算</span></span><br><span class="line">    d_1 = pow(d+<span class="number">1</span>, int(self.ecc_table[<span class="string">'n'</span>], base=<span class="number">16</span>) - <span class="number">2</span>, int(self.ecc_table[<span class="string">'n'</span>], base=<span class="number">16</span>))</span><br><span class="line">    <span class="comment"># s = (d+1)^-1 * (k-Rd) mod n</span></span><br><span class="line">    S = (d_1*(k + R) - R) % int(self.ecc_table[<span class="string">'n'</span>], base=<span class="number">16</span>)</span><br><span class="line">    <span class="keyword">if</span> S == <span class="number">0</span>:</span><br><span class="line">        <span class="keyword">return</span> <span class="literal">None</span></span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        <span class="keyword">return</span> <span class="string">'%064x%064x'</span> % (R,S)</span><br></pre></td></tr></tbody></table></div></figure>
+
+        <h1 id="验证函数">
+          <a href="#验证函数" class="heading-link"><i class="fas fa-link"></i></a>验证函数</h1>
+      <figure class="highlight python"><div class="table-container"><table><tbody><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">verify</span><span class="params">(self, Sign, data)</span>:</span></span><br><span class="line">    <span class="comment"># 验签函数，sign签名r||s，E消息hash，public_key公钥</span></span><br><span class="line">    r = int(Sign[<span class="number">0</span>:self.para_len], <span class="number">16</span>)</span><br><span class="line">    s = int(Sign[self.para_len:<span class="number">2</span>*self.para_len], <span class="number">16</span>)</span><br><span class="line">    e = int(data.hex(), <span class="number">16</span>)</span><br><span class="line">    <span class="comment"># t = (r + s) mod n</span></span><br><span class="line">    t = (r + s) % int(self.ecc_table[<span class="string">'n'</span>], base=<span class="number">16</span>)</span><br><span class="line">    <span class="keyword">if</span> t == <span class="number">0</span>:</span><br><span class="line">        <span class="keyword">return</span> <span class="number">0</span></span><br><span class="line"></span><br><span class="line">    <span class="comment"># P1 = sG</span></span><br><span class="line">    P1 = self._kg(s, self.ecc_table[<span class="string">'g'</span>])</span><br><span class="line">    <span class="comment"># P2 = tP</span></span><br><span class="line">    P2 = self._kg(t, self.public_key)</span><br><span class="line">    <span class="comment"># print(P1)</span></span><br><span class="line">    <span class="comment"># print(P2)</span></span><br><span class="line">    <span class="comment"># 有限域上的椭圆曲线加法公式</span></span><br><span class="line">    <span class="keyword">if</span> P1 == P2:</span><br><span class="line">        P1 = <span class="string">'%s%s'</span> % (P1, <span class="number">1</span>)</span><br><span class="line">        P1 = self._double_point(P1)</span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        P1 = <span class="string">'%s%s'</span> % (P1, <span class="number">1</span>)</span><br><span class="line">        P1 = self._add_point(P1, P2)</span><br><span class="line">        P1 = self._convert_jacb_to_nor(P1)</span><br><span class="line"></span><br><span class="line">    x = int(P1[<span class="number">0</span>:self.para_len], <span class="number">16</span>)</span><br><span class="line">    <span class="comment"># R = (e + x) mod n 验证 R=r是否成立</span></span><br><span class="line">    <span class="keyword">return</span> (r == ((e + x) % int(self.ecc_table[<span class="string">'n'</span>], base=<span class="number">16</span>)))</span><br></pre></td></tr></tbody></table></div></figure>
+<p><span class="exturl"><a class="exturl__link" href="https://github.com/duanhongyi/gmssl/blob/master/gmssl/sm2.py" target="_blank" rel="noopener">完整源码</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></p>
+<script>
+        document.querySelectorAll('.github-emoji')
+          .forEach(el => {
+            if (!el.dataset.src) { return; }
+            const img = document.createElement('img');
+            img.style = 'display:none !important;';
+            img.src = el.dataset.src;
+            img.addEventListener('error', () => {
+              img.remove();
+              el.style.color = 'inherit';
+              el.style.backgroundImage = 'none';
+              el.style.background = 'none';
+            });
+            img.addEventListener('load', () => {
+              img.remove();
+            });
+            document.body.appendChild(img);
+          });
+      </script>]]></content>
+      <categories>
+        <category>课程总结</category>
+      </categories>
+      <tags>
+        <tag>SM2</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>正则表达式</title>
     <url>/regex/</url>
     <content><![CDATA[<h1 id="Free-Talk">
@@ -2172,34 +2227,35 @@
       </tags>
   </entry>
   <entry>
-    <title>十七又三</title>
-    <url>/twenty/</url>
-    <content><![CDATA[<h1 id="十七又三">
-          <a href="#十七又三" class="heading-link"><i class="fas fa-link"></i></a>十七又三</h1>
-      <p>今年的生日本来不打算写着什么的<br>想让日子就这么静静地流逝着<br>十一点多却又在床上翻来覆去<br>习惯性的失眠，胡思乱想<br>还是开灯从床上爬起<br>让回忆从指尖沙沙流过</p>
+    <title>日语学习常用句式（一）</title>
+    <url>/%E6%97%A5%E8%AF%AD%E5%AD%A6%E4%B9%A0%E5%B8%B8%E7%94%A8%E5%8F%A5%E5%BC%8F%EF%BC%88%E4%B8%80%EF%BC%89/</url>
+    <content><![CDATA[<h2 id="常用句式">
+          <a href="#常用句式" class="heading-link"><i class="fas fa-link"></i></a>常用句式</h2>
+      <p>Su go ku o I si i<br>すごく　おいしい　<br>超级好吃</p>
+<p>Su go ku ta no si i<br>すごく　たのしい<br>超级开心</p>
+<p>I ta da ki ma su<br>いただきます<br>我要开动啦</p>
 <a id="more"></a>
-<p>在古时，二十岁即是加冠之年，寓意成年。<br>成年之时，我想谈谈关于过去，关于未来，关于穿越时空的旅行。</p>
+<p>O I si i<br>おいしい<br>好吃（女生）</p>
+<p>U ma i　<br>うまい<br>好吃（男生）</p>
+<p>I ma do ko<br>いま、どこ？<br>你现在在哪儿？</p>
+<p>E ki da<br>えきだ<br>在车站呢</p>
+<p>Ge nn ki<br>げんき<br>元気<br>ん拨音<br>身体健康</p>
+<p>O ge nn ki de su ka<br>おげんきですか<br>你的身体还健康吗？<br>お：尊敬语<br>A na ka do<br>あなかど<br>你的<br>です：是<br>か：吗</p>
+<p>Se nn se i<br>せんせい<br>先生</p>
+<p>Yo ro shi ku<br>よろしく<br>请多关照</p>
+<p>Sa yo na ra<br>さよなら<br>再见</p>
 
-        <h1 id="友情">
-          <a href="#友情" class="heading-link"><i class="fas fa-link"></i></a>友情</h1>
-      <p>首先谈的是友情<br>从初中到高中再到大学<br>收获了一批批的沉甸甸的友情</p>
-<p>在前天和初中同学们在群里彻夜长谈，讲十四岁的故事，我想起自己在当时唱的“十七岁的雨季”，那时的我总觉得十七岁好遥远啊，是十四岁的我怎么也想不到的，而如今一转眼就二十了。有个初中同学说，他很羡慕我，说我那时候敢说敢做，什么都不怕，每天都在一直笑。其实我也羡慕那个时候的自己，天真傻憨，想说就说，想做就做，没有顾及。我总感觉上了大学，我不快乐，我不会把自己的想法轻易地暴露出来，学会了伪装自己，在大学里的友情，更多的是君子之交淡如水。</p>
-<p>上个月去泉州玩的时候，我骑着电动车在江滨大道驰行，吹着海风上了高架桥，那一刻我的思绪回到了17岁那年在厦门的夏天。当时和几个高中同学，高二暑假一放假就跑到厦门，一到厦门就被骗了票钱，骑着自行车满厦门的追，到晚上又一群人走丢了，骑着自行车上了高架桥，回到宾馆大家挤在一个小房间吃着夜宵。那是关于高中的友情，就在刚刚远在澳洲的班长又在零点给了发了祝福。</p>
-<p>我很庆幸在大学的时候阴差阳错地进入了至微支教队，在这里我遇到了一群交心的朋友，他们陪着我度过了一整年，现在都在偷偷地给我准备着生日祝福。</p>
-
-        <h1 id="爱情">
-          <a href="#爱情" class="heading-link"><i class="fas fa-link"></i></a>爱情</h1>
-      <p>之后我想谈谈爱情</p>
-<p>在去年，我谈了人生第一场恋爱，即使现在结束了，回想起来还是很美好，很多画面仍然还在脑海里闪现。<br>在这过去的一年里，我一直在想怎么样才算是真正地爱一个人，才能做到不亏待别人也不委屈自己，我只能不停地去找寻，去试探。<br>心动也许不是恋爱，等心定下来了，那便有了答案。</p>
-
-        <h1 id="事业">
-          <a href="#事业" class="heading-link"><i class="fas fa-link"></i></a>事业</h1>
-      <p>最后我想谈谈学习事业</p>
-<p>我很愧疚自己没有远大的目标，很多的时候我是在模仿，别人怎么样，我变怎么样。大家都朝着计算机跑去，我也便来了。大家浩浩荡荡地抢占着保研，我便也裹挟地前进，我也很无奈，但却是囿于生活，所有的诗和远方，脱离了经济的土壤，变成了无根之萍。<br>我希望在接下来的日子，我能走出一条自己的路，一条独一无二的路！</p>
-
-        <h1 id="未来">
-          <a href="#未来" class="heading-link"><i class="fas fa-link"></i></a>未来</h1>
-      <p>To be a better man !</p>
+        <h2 id="五十音">
+          <a href="#五十音" class="heading-link"><i class="fas fa-link"></i></a>五十音</h2>
+      <p>A I u e o<br>あえうえお</p>
+<p>Ka ki ku ke ko<br>かきくけこ</p>
+<p>Sa shi su se so<br>さしすせそ</p>
+<p>Ta chi tsu te to<br>たちつてと</p>
+<p>Na ni nu ne no<br>なにぬねの</p>
+<p>Ha hi fu he ho<br>はひふへほ</p>
+<p>Ma mi mu me mo<br>まみむめも</p>
+<p>Ya yu yo<br>やゆよ</p>
+<p>Ra ri ru re ro<br>らりるれろ</p>
 <script>
         document.querySelectorAll('.github-emoji')
           .forEach(el => {
@@ -2220,10 +2276,100 @@
           });
       </script>]]></content>
       <categories>
-        <category>大学生活</category>
+        <category>日语学习</category>
       </categories>
       <tags>
-        <tag>体验</tag>
+        <tag>日语常用句式</tag>
+        <tag>五十音</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>美赛写作套路</title>
+    <url>/%E7%BE%8E%E8%B5%9B%E5%86%99%E4%BD%9C%E5%A5%97%E8%B7%AF/</url>
+    <content><![CDATA[<h1 id="美赛写作套路">
+          <a href="#美赛写作套路" class="heading-link"><i class="fas fa-link"></i></a>美赛写作套路</h1>
+      
+        <h2 id="Word还是LaTex">
+          <a href="#Word还是LaTex" class="heading-link"><i class="fas fa-link"></i></a>Word还是LaTex</h2>
+      <blockquote>
+<p>倾向于使用Word进行写作，有利于论文的最后的协同合作<br>LaTex最新模板地址:<span class="exturl"><a class="exturl__link" href="https://github.com/latexstudio-org/mcmthesis/releases/tag/6.3" target="_blank" rel="noopener">https://github.com/latexstudio-org/mcmthesis/releases/tag/6.3</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></p>
+</blockquote>
+
+        <h2 id="美赛论文怎么翻译">
+          <a href="#美赛论文怎么翻译" class="heading-link"><i class="fas fa-link"></i></a>美赛论文怎么翻译</h2>
+      <blockquote>
+<p>谷歌翻译:<span class="exturl"><a class="exturl__link" href="https://translate.google.cn/" target="_blank" rel="noopener">https://translate.google.cn/</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span><br><strong>有以下几点要注意：</strong><br>（1） 翻译完成后再排版，记住，排版永远放在最后一步；<br>（2）第一次翻译完成后一定要再次核对语法、通顺程度、专有名词等，初次翻译出来的结果是不能看的，后面我再教给大家怎么修改；<br>（3）中文版用word写，后续翻译完成并修改后再用latex模板套用，因为latex导出来的就直接是pdf版本了，谷歌翻译对word的识别要远好于pdf。</p>
+</blockquote>
+<a id="more"></a>
+
+        <h2 id="语法和拼写错误检测">
+          <a href="#语法和拼写错误检测" class="heading-link"><i class="fas fa-link"></i></a>语法和拼写错误检测</h2>
+      
+        <h2 id="专有名词翻译">
+          <a href="#专有名词翻译" class="heading-link"><i class="fas fa-link"></i></a>专有名词翻译</h2>
+      <blockquote>
+<p><strong>CNKI翻译助手：</strong><span class="exturl"><a class="exturl__link" href="http://dict.cnki.net/" target="_blank" rel="noopener">http://dict.cnki.net/</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></p>
+</blockquote>
+
+        <h2 id="模型介绍的翻译">
+          <a href="#模型介绍的翻译" class="heading-link"><i class="fas fa-link"></i></a>模型介绍的翻译</h2>
+      
+        <h3 id="20个常用模型的美赛论文解读">
+          <a href="#20个常用模型的美赛论文解读" class="heading-link"><i class="fas fa-link"></i></a>20个常用模型的美赛论文解读</h3>
+      
+        <h3 id="应对查重的小技巧">
+          <a href="#应对查重的小技巧" class="heading-link"><i class="fas fa-link"></i></a>应对查重的小技巧</h3>
+      
+        <h4 id="代码查重问题">
+          <a href="#代码查重问题" class="heading-link"><i class="fas fa-link"></i></a>代码查重问题</h4>
+      <p>1.添加注释<br>2.改变变量名</p>
+
+        <h4 id="文章查重问题">
+          <a href="#文章查重问题" class="heading-link"><i class="fas fa-link"></i></a>文章查重问题</h4>
+      <p>1.模型介绍、优缺点等尽量自己写<br>2.可以使用流程图来介绍算法</p>
+
+        <h2 id="Word公式编辑和LaTeX公式语法">
+          <a href="#Word公式编辑和LaTeX公式语法" class="heading-link"><i class="fas fa-link"></i></a>Word公式编辑和LaTeX公式语法</h2>
+      <blockquote>
+<p><strong>Axmath</strong>进行公式排版，同时也支持转换为LaTeX代码</p>
+</blockquote>
+
+        <h2 id="美赛数据下载网站">
+          <a href="#美赛数据下载网站" class="heading-link"><i class="fas fa-link"></i></a>美赛数据下载网站</h2>
+      <p>1.data.gov( <span class="exturl"><a class="exturl__link" href="https://www.data.gov/" target="_blank" rel="noopener">https://www.data.gov/</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span> )<br>2.Googledatasets<br>( <span class="exturl"><a class="exturl__link" href="https://cloud.google.com/bigquery/public‐data/" target="_blank" rel="noopener">https://cloud.google.com/bigquery/public‐data/</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span> )<br>3.WorldBank( <span class="exturl"><a class="exturl__link" href="http://data.worldbank.org/" target="_blank" rel="noopener">http://data.worldbank.org/</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span> ) </p>
+
+        <h2 id="统计图表的绘制">
+          <a href="#统计图表的绘制" class="heading-link"><i class="fas fa-link"></i></a>统计图表的绘制</h2>
+      
+        <h3 id="使用Excel绘制统计图的视频">
+          <a href="#使用Excel绘制统计图的视频" class="heading-link"><i class="fas fa-link"></i></a>使用Excel绘制统计图的视频</h3>
+      <blockquote>
+<p>数学建模：用EXCEL绘制统计图第1部分——饼图  <span class="exturl"><a class="exturl__link" href="https://www.bilibili.com/video/av78475931" target="_blank" rel="noopener">https://www.bilibili.com/video/av78475931</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span><br>数学建模：用EXCEL绘制统计图第2部分——柱状图和条形图  <span class="exturl"><a class="exturl__link" href="https://www.bilibili.com/video/av78476106" target="_blank" rel="noopener">https://www.bilibili.com/video/av78476106</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span><br>数学建模：用EXCEL绘制统计图第3部分——直方图  <span class="exturl"><a class="exturl__link" href="https://www.bilibili.com/video/av78476359" target="_blank" rel="noopener">https://www.bilibili.com/video/av78476359</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span><br>数学建模：用EXCEL绘制统计图第4部分——折线图  <span class="exturl"><a class="exturl__link" href="https://www.bilibili.com/video/av78476554" target="_blank" rel="noopener">https://www.bilibili.com/video/av78476554</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span><br>数学建模：用EXCEL绘制统计图第5部分——散点图  <span class="exturl"><a class="exturl__link" href="https://www.bilibili.com/video/av78442212" target="_blank" rel="noopener">https://www.bilibili.com/video/av78442212</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span><br>数学建模：用EXCEL绘制统计图第6部分——箱线图 <span class="exturl"><a class="exturl__link" href="https://www.bilibili.com/video/av78476715" target="_blank" rel="noopener">https://www.bilibili.com/video/av78476715</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></p>
+</blockquote>
+<script>
+        document.querySelectorAll('.github-emoji')
+          .forEach(el => {
+            if (!el.dataset.src) { return; }
+            const img = document.createElement('img');
+            img.style = 'display:none !important;';
+            img.src = el.dataset.src;
+            img.addEventListener('error', () => {
+              img.remove();
+              el.style.color = 'inherit';
+              el.style.backgroundImage = 'none';
+              el.style.background = 'none';
+            });
+            img.addEventListener('load', () => {
+              img.remove();
+            });
+            document.body.appendChild(img);
+          });
+      </script>]]></content>
+      <categories>
+        <category>数学建模</category>
+      </categories>
+      <tags>
+        <tag>论文写作</tag>
       </tags>
   </entry>
   <entry>
@@ -2299,6 +2445,70 @@
       <tags>
         <tag>体验</tag>
         <tag>支教</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>美赛论文句式</title>
+    <url>/%E7%BE%8E%E8%B5%9B%E8%AE%BA%E6%96%87%E5%8F%A5%E5%BC%8F/</url>
+    <content><![CDATA[<h2 id="开头句型写法">
+          <a href="#开头句型写法" class="heading-link"><i class="fas fa-link"></i></a>开头句型写法</h2>
+      <blockquote>
+<p>Mention polygamy in Canada and waht might come to mind is Bountiful ,a suitably named town in British Columbia .</p>
+</blockquote>
+<p><strong>Mention…and what comes to mind is …</strong><br>提及……时我们第一个想到的是……<br>当我们要介绍某个地方、人物或者作品时，就可以用上该句型<br>Mention A and what comes to mind is B<br>A 一般是与事物有关的品质或者特点 B是事物本身<br>eg:<br>Mention  innovative thinking and what comes to mind is Steve Jobs ,a man who was ahead of his time and who reshaped the IT industry .</p>
+<a id="more"></a>
+
+        <h2 id="积累转折句型">
+          <a href="#积累转折句型" class="heading-link"><i class="fas fa-link"></i></a>积累转折句型</h2>
+      <blockquote>
+<p>For all the talk of a global market for talent ,chief executives in Britain still earn considerably less than their counterparts in the United States .</p>
+</blockquote>
+<p><strong>For all the talk of … still …</strong><br>尽管关于……有很多的讨论，……仍然……<br>eg:<br>For all the talk of equal rights For women ,gender discrimination is still rife in the workplace .</p>
+
+        <h2 id="表达背道而驰">
+          <a href="#表达背道而驰" class="heading-link"><i class="fas fa-link"></i></a>表达背道而驰</h2>
+      <blockquote>
+<p>Mr Trump certainly has the poewr to wreak trade havoc .A big blanket tariff would slice through supply chains ,hurt American consumers and fly in the face of the global system of trade rules overseen by the World Trade Organization (WTO).</p>
+</blockquote>
+<p><strong>fly in the face of something</strong><br>与(人们认为合理或正常的事情)背道而驰，这种事情可以指法律法规，也可以指传统、常识、逻辑等。<br>eg:<br>Staying up late flies in the face of healthy living .</p>
+
+        <h2 id="表达带来严重后果">
+          <a href="#表达带来严重后果" class="heading-link"><i class="fas fa-link"></i></a>表达带来严重后果</h2>
+      <blockquote>
+<p>Commentators recently said that Clean Reader,the app that bowdlerises ebooks ,puts us on a slippery slope towards total literary censorship .</p>
+</blockquote>
+<p><strong>a slippery slope</strong><br>(过程或者习惯等)带来严重后果，使人走向极坏的境地<br>eg:<br>Once he had tried that first cigarette ,he was on the slippery slope to being a smoker .</p>
+
+        <h2 id="写对比句">
+          <a href="#写对比句" class="heading-link"><i class="fas fa-link"></i></a>写对比句</h2>
+      <blockquote>
+<p>Despite the mystery, Dr Charcot’s colleagues never thought to question the scientific value of the experiment. The same cannot be said of Mario Beauregard, a brain-imager from the University of Montreal, who has also experimented with mescaline.</p>
+</blockquote>
+<p><strong>the same cannot be said of…</strong><br>同样的说法/情况并不能用在……身上<br>eg:<br>In big cities it is always easy to find a movie theater, karaoke hall or fitness studio. However, the same cannot be said of remote villages.</p>
+<script>
+        document.querySelectorAll('.github-emoji')
+          .forEach(el => {
+            if (!el.dataset.src) { return; }
+            const img = document.createElement('img');
+            img.style = 'display:none !important;';
+            img.src = el.dataset.src;
+            img.addEventListener('error', () => {
+              img.remove();
+              el.style.color = 'inherit';
+              el.style.backgroundImage = 'none';
+              el.style.background = 'none';
+            });
+            img.addEventListener('load', () => {
+              img.remove();
+            });
+            document.body.appendChild(img);
+          });
+      </script>]]></content>
+      <categories>
+        <category>数学建模</category>
+      </categories>
+      <tags>
+        <tag>英文写作句型</tag>
       </tags>
   </entry>
   <entry>
@@ -2732,6 +2942,61 @@
       </tags>
   </entry>
   <entry>
+    <title>谷歌访问助手</title>
+    <url>/%E8%B0%B7%E6%AD%8C%E6%9C%8D%E5%8A%A1%E5%8A%A9%E6%89%8B/</url>
+    <content><![CDATA[<h1 id="谷歌访问助手插件安装">
+          <a href="#谷歌访问助手插件安装" class="heading-link"><i class="fas fa-link"></i></a>谷歌访问助手插件安装</h1>
+      <p>1.<span class="exturl"><a class="exturl__link" href="https://www.google.com/intl/zh-CN/chrome/" target="_blank" rel="noopener">点击文字安装谷歌浏览器</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></p>
+<p>2.<span class="exturl"><a class="exturl__link" href="https://github.com/Gemini-Lin/Tookits" target="_blank" rel="noopener">点击文字下载谷歌访问助手</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></p>
+<a id="more"></a>
+<p>3.安装谷歌访问助手插件<br> <img src="https://s1.ax1x.com/2020/03/29/GVceEt.png" alt="GVceEt.png"></p>
+<blockquote>
+<p>Step1: 进入谷歌浏览器的扩展程序</p>
+</blockquote>
+<blockquote>
+<p>Step2: 勾选开发者选项</p>
+</blockquote>
+<blockquote>
+<p>Step3: 点击加载已解压的扩展程序</p>
+</blockquote>
+<blockquote>
+<p>Step4: 选择下载后解压的文件</p>
+</blockquote>
+<blockquote>
+<p>Step5: 安装成功<br><img src="https://s1.ax1x.com/2020/03/29/GVcM8S.png" alt="GVcM8S.png"><br> <img src="https://s1.ax1x.com/2020/03/29/GVcQgg.png" alt="GVcQgg.png"></p>
+</blockquote>
+
+        <h2 id="VPN推荐">
+          <a href="#VPN推荐" class="heading-link"><i class="fas fa-link"></i></a>VPN推荐</h2>
+      <p>20元一个月，特别稳定，网速快。</p>
+<p><span class="exturl"><a class="exturl__link" href="https://efanccyun.net/" target="_blank" rel="noopener">饿饭CC云</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></p>
+<script>
+        document.querySelectorAll('.github-emoji')
+          .forEach(el => {
+            if (!el.dataset.src) { return; }
+            const img = document.createElement('img');
+            img.style = 'display:none !important;';
+            img.src = el.dataset.src;
+            img.addEventListener('error', () => {
+              img.remove();
+              el.style.color = 'inherit';
+              el.style.backgroundImage = 'none';
+              el.style.background = 'none';
+            });
+            img.addEventListener('load', () => {
+              img.remove();
+            });
+            document.body.appendChild(img);
+          });
+      </script>]]></content>
+      <categories>
+        <category>工具分享</category>
+      </categories>
+      <tags>
+        <tag>Google</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>汇编语言学习总结</title>
     <url>/%E6%B1%87%E7%BC%96%E8%AF%AD%E8%A8%80%E5%AD%A6%E4%B9%A0%E6%80%BB%E7%BB%93/</url>
     <content><![CDATA[<h1 id="CALL和RET指令">
@@ -2902,271 +3167,6 @@
       </categories>
       <tags>
         <tag>汇编语言</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>日语学习常用句式（一）</title>
-    <url>/%E6%97%A5%E8%AF%AD%E5%AD%A6%E4%B9%A0%E5%B8%B8%E7%94%A8%E5%8F%A5%E5%BC%8F%EF%BC%88%E4%B8%80%EF%BC%89/</url>
-    <content><![CDATA[<h2 id="常用句式">
-          <a href="#常用句式" class="heading-link"><i class="fas fa-link"></i></a>常用句式</h2>
-      <p>Su go ku o I si i<br>すごく　おいしい　<br>超级好吃</p>
-<p>Su go ku ta no si i<br>すごく　たのしい<br>超级开心</p>
-<p>I ta da ki ma su<br>いただきます<br>我要开动啦</p>
-<a id="more"></a>
-<p>O I si i<br>おいしい<br>好吃（女生）</p>
-<p>U ma i　<br>うまい<br>好吃（男生）</p>
-<p>I ma do ko<br>いま、どこ？<br>你现在在哪儿？</p>
-<p>E ki da<br>えきだ<br>在车站呢</p>
-<p>Ge nn ki<br>げんき<br>元気<br>ん拨音<br>身体健康</p>
-<p>O ge nn ki de su ka<br>おげんきですか<br>你的身体还健康吗？<br>お：尊敬语<br>A na ka do<br>あなかど<br>你的<br>です：是<br>か：吗</p>
-<p>Se nn se i<br>せんせい<br>先生</p>
-<p>Yo ro shi ku<br>よろしく<br>请多关照</p>
-<p>Sa yo na ra<br>さよなら<br>再见</p>
-
-        <h2 id="五十音">
-          <a href="#五十音" class="heading-link"><i class="fas fa-link"></i></a>五十音</h2>
-      <p>A I u e o<br>あえうえお</p>
-<p>Ka ki ku ke ko<br>かきくけこ</p>
-<p>Sa shi su se so<br>さしすせそ</p>
-<p>Ta chi tsu te to<br>たちつてと</p>
-<p>Na ni nu ne no<br>なにぬねの</p>
-<p>Ha hi fu he ho<br>はひふへほ</p>
-<p>Ma mi mu me mo<br>まみむめも</p>
-<p>Ya yu yo<br>やゆよ</p>
-<p>Ra ri ru re ro<br>らりるれろ</p>
-<script>
-        document.querySelectorAll('.github-emoji')
-          .forEach(el => {
-            if (!el.dataset.src) { return; }
-            const img = document.createElement('img');
-            img.style = 'display:none !important;';
-            img.src = el.dataset.src;
-            img.addEventListener('error', () => {
-              img.remove();
-              el.style.color = 'inherit';
-              el.style.backgroundImage = 'none';
-              el.style.background = 'none';
-            });
-            img.addEventListener('load', () => {
-              img.remove();
-            });
-            document.body.appendChild(img);
-          });
-      </script>]]></content>
-      <categories>
-        <category>日语学习</category>
-      </categories>
-      <tags>
-        <tag>日语常用句式</tag>
-        <tag>五十音</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>美赛写作套路</title>
-    <url>/%E7%BE%8E%E8%B5%9B%E5%86%99%E4%BD%9C%E5%A5%97%E8%B7%AF/</url>
-    <content><![CDATA[<h1 id="美赛写作套路">
-          <a href="#美赛写作套路" class="heading-link"><i class="fas fa-link"></i></a>美赛写作套路</h1>
-      
-        <h2 id="Word还是LaTex">
-          <a href="#Word还是LaTex" class="heading-link"><i class="fas fa-link"></i></a>Word还是LaTex</h2>
-      <blockquote>
-<p>倾向于使用Word进行写作，有利于论文的最后的协同合作<br>LaTex最新模板地址:<span class="exturl"><a class="exturl__link" href="https://github.com/latexstudio-org/mcmthesis/releases/tag/6.3" target="_blank" rel="noopener">https://github.com/latexstudio-org/mcmthesis/releases/tag/6.3</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></p>
-</blockquote>
-
-        <h2 id="美赛论文怎么翻译">
-          <a href="#美赛论文怎么翻译" class="heading-link"><i class="fas fa-link"></i></a>美赛论文怎么翻译</h2>
-      <blockquote>
-<p>谷歌翻译:<span class="exturl"><a class="exturl__link" href="https://translate.google.cn/" target="_blank" rel="noopener">https://translate.google.cn/</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span><br><strong>有以下几点要注意：</strong><br>（1） 翻译完成后再排版，记住，排版永远放在最后一步；<br>（2）第一次翻译完成后一定要再次核对语法、通顺程度、专有名词等，初次翻译出来的结果是不能看的，后面我再教给大家怎么修改；<br>（3）中文版用word写，后续翻译完成并修改后再用latex模板套用，因为latex导出来的就直接是pdf版本了，谷歌翻译对word的识别要远好于pdf。</p>
-</blockquote>
-<a id="more"></a>
-
-        <h2 id="语法和拼写错误检测">
-          <a href="#语法和拼写错误检测" class="heading-link"><i class="fas fa-link"></i></a>语法和拼写错误检测</h2>
-      
-        <h2 id="专有名词翻译">
-          <a href="#专有名词翻译" class="heading-link"><i class="fas fa-link"></i></a>专有名词翻译</h2>
-      <blockquote>
-<p><strong>CNKI翻译助手：</strong><span class="exturl"><a class="exturl__link" href="http://dict.cnki.net/" target="_blank" rel="noopener">http://dict.cnki.net/</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></p>
-</blockquote>
-
-        <h2 id="模型介绍的翻译">
-          <a href="#模型介绍的翻译" class="heading-link"><i class="fas fa-link"></i></a>模型介绍的翻译</h2>
-      
-        <h3 id="20个常用模型的美赛论文解读">
-          <a href="#20个常用模型的美赛论文解读" class="heading-link"><i class="fas fa-link"></i></a>20个常用模型的美赛论文解读</h3>
-      
-        <h3 id="应对查重的小技巧">
-          <a href="#应对查重的小技巧" class="heading-link"><i class="fas fa-link"></i></a>应对查重的小技巧</h3>
-      
-        <h4 id="代码查重问题">
-          <a href="#代码查重问题" class="heading-link"><i class="fas fa-link"></i></a>代码查重问题</h4>
-      <p>1.添加注释<br>2.改变变量名</p>
-
-        <h4 id="文章查重问题">
-          <a href="#文章查重问题" class="heading-link"><i class="fas fa-link"></i></a>文章查重问题</h4>
-      <p>1.模型介绍、优缺点等尽量自己写<br>2.可以使用流程图来介绍算法</p>
-
-        <h2 id="Word公式编辑和LaTeX公式语法">
-          <a href="#Word公式编辑和LaTeX公式语法" class="heading-link"><i class="fas fa-link"></i></a>Word公式编辑和LaTeX公式语法</h2>
-      <blockquote>
-<p><strong>Axmath</strong>进行公式排版，同时也支持转换为LaTeX代码</p>
-</blockquote>
-
-        <h2 id="美赛数据下载网站">
-          <a href="#美赛数据下载网站" class="heading-link"><i class="fas fa-link"></i></a>美赛数据下载网站</h2>
-      <p>1.data.gov( <span class="exturl"><a class="exturl__link" href="https://www.data.gov/" target="_blank" rel="noopener">https://www.data.gov/</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span> )<br>2.Googledatasets<br>( <span class="exturl"><a class="exturl__link" href="https://cloud.google.com/bigquery/public‐data/" target="_blank" rel="noopener">https://cloud.google.com/bigquery/public‐data/</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span> )<br>3.WorldBank( <span class="exturl"><a class="exturl__link" href="http://data.worldbank.org/" target="_blank" rel="noopener">http://data.worldbank.org/</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span> ) </p>
-
-        <h2 id="统计图表的绘制">
-          <a href="#统计图表的绘制" class="heading-link"><i class="fas fa-link"></i></a>统计图表的绘制</h2>
-      
-        <h3 id="使用Excel绘制统计图的视频">
-          <a href="#使用Excel绘制统计图的视频" class="heading-link"><i class="fas fa-link"></i></a>使用Excel绘制统计图的视频</h3>
-      <blockquote>
-<p>数学建模：用EXCEL绘制统计图第1部分——饼图  <span class="exturl"><a class="exturl__link" href="https://www.bilibili.com/video/av78475931" target="_blank" rel="noopener">https://www.bilibili.com/video/av78475931</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span><br>数学建模：用EXCEL绘制统计图第2部分——柱状图和条形图  <span class="exturl"><a class="exturl__link" href="https://www.bilibili.com/video/av78476106" target="_blank" rel="noopener">https://www.bilibili.com/video/av78476106</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span><br>数学建模：用EXCEL绘制统计图第3部分——直方图  <span class="exturl"><a class="exturl__link" href="https://www.bilibili.com/video/av78476359" target="_blank" rel="noopener">https://www.bilibili.com/video/av78476359</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span><br>数学建模：用EXCEL绘制统计图第4部分——折线图  <span class="exturl"><a class="exturl__link" href="https://www.bilibili.com/video/av78476554" target="_blank" rel="noopener">https://www.bilibili.com/video/av78476554</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span><br>数学建模：用EXCEL绘制统计图第5部分——散点图  <span class="exturl"><a class="exturl__link" href="https://www.bilibili.com/video/av78442212" target="_blank" rel="noopener">https://www.bilibili.com/video/av78442212</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span><br>数学建模：用EXCEL绘制统计图第6部分——箱线图 <span class="exturl"><a class="exturl__link" href="https://www.bilibili.com/video/av78476715" target="_blank" rel="noopener">https://www.bilibili.com/video/av78476715</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></p>
-</blockquote>
-<script>
-        document.querySelectorAll('.github-emoji')
-          .forEach(el => {
-            if (!el.dataset.src) { return; }
-            const img = document.createElement('img');
-            img.style = 'display:none !important;';
-            img.src = el.dataset.src;
-            img.addEventListener('error', () => {
-              img.remove();
-              el.style.color = 'inherit';
-              el.style.backgroundImage = 'none';
-              el.style.background = 'none';
-            });
-            img.addEventListener('load', () => {
-              img.remove();
-            });
-            document.body.appendChild(img);
-          });
-      </script>]]></content>
-      <categories>
-        <category>数学建模</category>
-      </categories>
-      <tags>
-        <tag>论文写作</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>美赛论文句式</title>
-    <url>/%E7%BE%8E%E8%B5%9B%E8%AE%BA%E6%96%87%E5%8F%A5%E5%BC%8F/</url>
-    <content><![CDATA[<h2 id="开头句型写法">
-          <a href="#开头句型写法" class="heading-link"><i class="fas fa-link"></i></a>开头句型写法</h2>
-      <blockquote>
-<p>Mention polygamy in Canada and waht might come to mind is Bountiful ,a suitably named town in British Columbia .</p>
-</blockquote>
-<p><strong>Mention…and what comes to mind is …</strong><br>提及……时我们第一个想到的是……<br>当我们要介绍某个地方、人物或者作品时，就可以用上该句型<br>Mention A and what comes to mind is B<br>A 一般是与事物有关的品质或者特点 B是事物本身<br>eg:<br>Mention  innovative thinking and what comes to mind is Steve Jobs ,a man who was ahead of his time and who reshaped the IT industry .</p>
-<a id="more"></a>
-
-        <h2 id="积累转折句型">
-          <a href="#积累转折句型" class="heading-link"><i class="fas fa-link"></i></a>积累转折句型</h2>
-      <blockquote>
-<p>For all the talk of a global market for talent ,chief executives in Britain still earn considerably less than their counterparts in the United States .</p>
-</blockquote>
-<p><strong>For all the talk of … still …</strong><br>尽管关于……有很多的讨论，……仍然……<br>eg:<br>For all the talk of equal rights For women ,gender discrimination is still rife in the workplace .</p>
-
-        <h2 id="表达背道而驰">
-          <a href="#表达背道而驰" class="heading-link"><i class="fas fa-link"></i></a>表达背道而驰</h2>
-      <blockquote>
-<p>Mr Trump certainly has the poewr to wreak trade havoc .A big blanket tariff would slice through supply chains ,hurt American consumers and fly in the face of the global system of trade rules overseen by the World Trade Organization (WTO).</p>
-</blockquote>
-<p><strong>fly in the face of something</strong><br>与(人们认为合理或正常的事情)背道而驰，这种事情可以指法律法规，也可以指传统、常识、逻辑等。<br>eg:<br>Staying up late flies in the face of healthy living .</p>
-
-        <h2 id="表达带来严重后果">
-          <a href="#表达带来严重后果" class="heading-link"><i class="fas fa-link"></i></a>表达带来严重后果</h2>
-      <blockquote>
-<p>Commentators recently said that Clean Reader,the app that bowdlerises ebooks ,puts us on a slippery slope towards total literary censorship .</p>
-</blockquote>
-<p><strong>a slippery slope</strong><br>(过程或者习惯等)带来严重后果，使人走向极坏的境地<br>eg:<br>Once he had tried that first cigarette ,he was on the slippery slope to being a smoker .</p>
-
-        <h2 id="写对比句">
-          <a href="#写对比句" class="heading-link"><i class="fas fa-link"></i></a>写对比句</h2>
-      <blockquote>
-<p>Despite the mystery, Dr Charcot’s colleagues never thought to question the scientific value of the experiment. The same cannot be said of Mario Beauregard, a brain-imager from the University of Montreal, who has also experimented with mescaline.</p>
-</blockquote>
-<p><strong>the same cannot be said of…</strong><br>同样的说法/情况并不能用在……身上<br>eg:<br>In big cities it is always easy to find a movie theater, karaoke hall or fitness studio. However, the same cannot be said of remote villages.</p>
-<script>
-        document.querySelectorAll('.github-emoji')
-          .forEach(el => {
-            if (!el.dataset.src) { return; }
-            const img = document.createElement('img');
-            img.style = 'display:none !important;';
-            img.src = el.dataset.src;
-            img.addEventListener('error', () => {
-              img.remove();
-              el.style.color = 'inherit';
-              el.style.backgroundImage = 'none';
-              el.style.background = 'none';
-            });
-            img.addEventListener('load', () => {
-              img.remove();
-            });
-            document.body.appendChild(img);
-          });
-      </script>]]></content>
-      <categories>
-        <category>数学建模</category>
-      </categories>
-      <tags>
-        <tag>英文写作句型</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>谷歌访问助手</title>
-    <url>/%E8%B0%B7%E6%AD%8C%E6%9C%8D%E5%8A%A1%E5%8A%A9%E6%89%8B/</url>
-    <content><![CDATA[<h1 id="谷歌访问助手插件安装">
-          <a href="#谷歌访问助手插件安装" class="heading-link"><i class="fas fa-link"></i></a>谷歌访问助手插件安装</h1>
-      <p>1.<span class="exturl"><a class="exturl__link" href="https://www.google.com/intl/zh-CN/chrome/" target="_blank" rel="noopener">点击文字安装谷歌浏览器</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></p>
-<p>2.<span class="exturl"><a class="exturl__link" href="https://github.com/Gemini-Lin/Tookits" target="_blank" rel="noopener">点击文字下载谷歌访问助手</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></p>
-<a id="more"></a>
-<p>3.安装谷歌访问助手插件<br> <img src="https://s1.ax1x.com/2020/03/29/GVceEt.png" alt="GVceEt.png"></p>
-<blockquote>
-<p>Step1: 进入谷歌浏览器的扩展程序</p>
-</blockquote>
-<blockquote>
-<p>Step2: 勾选开发者选项</p>
-</blockquote>
-<blockquote>
-<p>Step3: 点击加载已解压的扩展程序</p>
-</blockquote>
-<blockquote>
-<p>Step4: 选择下载后解压的文件</p>
-</blockquote>
-<blockquote>
-<p>Step5: 安装成功<br><img src="https://s1.ax1x.com/2020/03/29/GVcM8S.png" alt="GVcM8S.png"><br> <img src="https://s1.ax1x.com/2020/03/29/GVcQgg.png" alt="GVcQgg.png"></p>
-</blockquote>
-
-        <h2 id="VPN推荐">
-          <a href="#VPN推荐" class="heading-link"><i class="fas fa-link"></i></a>VPN推荐</h2>
-      <p>20元一个月，特别稳定，网速快。</p>
-<p><span class="exturl"><a class="exturl__link" href="https://efanccyun.net/" target="_blank" rel="noopener">饿饭CC云</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></p>
-<script>
-        document.querySelectorAll('.github-emoji')
-          .forEach(el => {
-            if (!el.dataset.src) { return; }
-            const img = document.createElement('img');
-            img.style = 'display:none !important;';
-            img.src = el.dataset.src;
-            img.addEventListener('error', () => {
-              img.remove();
-              el.style.color = 'inherit';
-              el.style.backgroundImage = 'none';
-              el.style.background = 'none';
-            });
-            img.addEventListener('load', () => {
-              img.remove();
-            });
-            document.body.appendChild(img);
-          });
-      </script>]]></content>
-      <categories>
-        <category>工具分享</category>
-      </categories>
-      <tags>
-        <tag>Google</tag>
       </tags>
   </entry>
 </search>
