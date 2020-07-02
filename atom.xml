@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://gemini-lin.github.io/"/>
-  <updated>2020-07-02T08:49:29.609Z</updated>
+  <updated>2020-07-02T11:36:55.718Z</updated>
   <id>https://gemini-lin.github.io/</id>
   
   <author>
@@ -15,6 +15,29 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>密码学的安全性</title>
+    <link href="https://gemini-lin.github.io/safety/"/>
+    <id>https://gemini-lin.github.io/safety/</id>
+    <published>2020-07-02T11:08:37.000Z</published>
+    <updated>2020-07-02T11:36:55.718Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;Free-Talk&quot;&gt;
+          &lt;a href=&quot;#Free-Talk&quot; class=&quot;heading-link&quot;&gt;&lt;i class=&quot;fas fa-link&quot;&gt;&lt;/i&gt;&lt;/a&gt;Free Talk&lt;/h1&gt;
+      &lt;p&gt;这次做综合课设的时候，队员发了一篇关于安全性的文章，我看完觉得有一种豁然开朗的感觉。这篇文章用非常通俗的语言，总结了密码系统的安全性，把我在密码学课上零散的知识给整合了起来。我在这边的文章的基础上，做了一些简单的调整修改。&lt;span class=&quot;exturl&quot;&gt;&lt;a class=&quot;exturl__link&quot; href=&quot;https://www.cnblogs.com/xdyixia/p/11610091.html&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;原文链接&lt;/a&gt;&lt;span class=&quot;exturl__icon&quot;&gt;&lt;i class=&quot;fas fa-external-link-alt&quot;&gt;&lt;/i&gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;img src=&quot;https://s1.ax1x.com/2020/07/02/NqodIJ.png&quot; alt=&quot;NqodIJ.png&quot;&gt;&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="课程总结" scheme="https://Gemini-Lin.github.io/categories/%E8%AF%BE%E7%A8%8B%E6%80%BB%E7%BB%93/"/>
+    
+    
+      <category term="密码学" scheme="https://Gemini-Lin.github.io/tags/%E5%AF%86%E7%A0%81%E5%AD%A6/"/>
+    
+  </entry>
   
   <entry>
     <title>Summer</title>
@@ -575,30 +598,6 @@
     
     
       <category term="GitHub" scheme="https://Gemini-Lin.github.io/tags/GitHub/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>数学建模算法汇总</title>
-    <link href="https://gemini-lin.github.io/%E6%95%B0%E5%AD%A6%E5%BB%BA%E6%A8%A1%E7%AE%97%E6%B3%95%E6%B1%87%E6%80%BB/"/>
-    <id>https://gemini-lin.github.io/%E6%95%B0%E5%AD%A6%E5%BB%BA%E6%A8%A1%E7%AE%97%E6%B3%95%E6%B1%87%E6%80%BB/</id>
-    <published>2020-02-02T13:07:00.000Z</published>
-    <updated>2020-05-28T18:01:04.903Z</updated>
-    
-    <summary type="html">
-    
-      &lt;p&gt;&lt;img src=&quot;https://i.loli.net/2020/02/03/AiDVdhUEBgYKtQz.png&quot; alt=&quot;image.png&quot;&gt;&lt;/p&gt;
-
-        &lt;h1 id=&quot;优化模型&quot;&gt;
-          &lt;a href=&quot;#优化模型&quot; class=&quot;heading-link&quot;&gt;&lt;i class=&quot;fas fa-link&quot;&gt;&lt;/i&gt;&lt;/a&gt;优化模型&lt;/h1&gt;
-    
-    </summary>
-    
-    
-      <category term="数学建模" scheme="https://Gemini-Lin.github.io/categories/%E6%95%B0%E5%AD%A6%E5%BB%BA%E6%A8%A1/"/>
-    
-    
-      <category term="建模算法" scheme="https://Gemini-Lin.github.io/tags/%E5%BB%BA%E6%A8%A1%E7%AE%97%E6%B3%95/"/>
     
   </entry>
   
