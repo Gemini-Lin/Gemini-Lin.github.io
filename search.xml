@@ -3169,4 +3169,52 @@
         <tag>Google</tag>
       </tags>
   </entry>
+  <entry>
+    <title>Summer</title>
+    <url>/summer/</url>
+    <content><![CDATA[<h1 id="菊次郎的夏天">
+          <a href="#菊次郎的夏天" class="heading-link"><i class="fas fa-link"></i></a>菊次郎的夏天</h1>
+      <p>夏天伴随着海边吹来的暖风，和西瓜一起来了。<br><img src="https://s1.ax1x.com/2020/07/02/NqENRI.png?size=400x400" style="width: 400px;height: 400px;" alt="NqENRI.png"><br>每年到了夏天，都想看一边菊次郎的夏天;<br>每次伤心时候，都会单曲循环播放着Summer;<br><span class="exturl"><a class="exturl__link" href="http://music.163.com/song?id=443242&amp;userid=369654532" target="_blank" rel="noopener">Summer</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span>–点击播放音乐</p>
+<a id="more"></a>
+<p>下面一篇文章是去年看完菊次郎的夏天后，写来参加一个征文比赛的小小说。</p>
+
+        <h1 id="汪翔的夏天">
+          <a href="#汪翔的夏天" class="heading-link"><i class="fas fa-link"></i></a>汪翔的夏天</h1>
+      <p>十一年前的一天下午，窗外的风吹进了房间，吹开了书本的封面，里面歪歪扭扭地写着“6年3班汪翔”，随后“嘀嘀嘀”的闹铃声响起，一个身穿蓝色条纹睡衣的小男孩，不情愿地关掉闹钟，从床上爬起，开始收拾书包，准备下午上课。</p>
+<p>他走出家门，抬头望了一下天空，飘着一朵巨大的云。然后看了一眼手表，北京时间14:20，离上课只剩下10分钟，他连忙向学校跑去。</p>
+<p>在他刚刚走进教室的那一刻，地板开始震动，教室的墙壁出现裂缝，天花板上的风扇掉了下来，直直地砸中了他的头部，一瞬间世界只剩下了黑暗。</p>
+<p>“滴滴滴”一阵赤耳的地震预警铃声，在宜宾市公安厅响起，一辆辆救援车队，朝着长宁县疾驰而去。</p>
+<p>那是一座已坍塌的楼房，在瓦砾堆中，一张稚嫩的脸的出现在眼前。那是一个小男孩，泥巴夹着杂草，涂抹在他的脸上，还依稀看得清哭过后，留下的几道泪痕，他的眼里充满着血丝，透露出绝望。他想要大声地叫喊，嘴巴不停地开合着，却发不出一丝声音。突然间，一束光照了进来，地面上传来了救援人员的声音“小孩子，你不要怕，我们正在救你”。此时地面上一个二十岁出头的救援人员，正在拼命地用手抛开瓦砾，直到双手伤痕累累，沾满鲜血也不停止。终于小男孩得救了，呼吸到了地面上新鲜的空气，喝到了一口口甘甜的水。</p>
+<p>小男孩向那个救援人员问到：“叔叔，你叫什么名字?”</p>
+<p>救援人员笑了笑，答道：“汪翔”。</p>
+
+        <h1 id="友链">
+          <a href="#友链" class="heading-link"><i class="fas fa-link"></i></a>友链</h1>
+      <p>我发现最近半年，身边很多的朋友都陆续建了自己的博客网站。<br>不论你是陌生人，还是我的朋友，想要加友链的，都可以在下方留言自己的博客和友链备注名称。<br>相遇有缘，一起成长吧！</p>
+<script>
+        document.querySelectorAll('.github-emoji')
+          .forEach(el => {
+            if (!el.dataset.src) { return; }
+            const img = document.createElement('img');
+            img.style = 'display:none !important;';
+            img.src = el.dataset.src;
+            img.addEventListener('error', () => {
+              img.remove();
+              el.style.color = 'inherit';
+              el.style.backgroundImage = 'none';
+              el.style.background = 'none';
+            });
+            img.addEventListener('load', () => {
+              img.remove();
+            });
+            document.body.appendChild(img);
+          });
+      </script>]]></content>
+      <categories>
+        <category>大学生活</category>
+      </categories>
+      <tags>
+        <tag>体验</tag>
+      </tags>
+  </entry>
 </search>

@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://gemini-lin.github.io/"/>
-  <updated>2020-06-29T12:33:46.811Z</updated>
+  <updated>2020-07-02T08:49:29.609Z</updated>
   <id>https://gemini-lin.github.io/</id>
   
   <author>
@@ -15,6 +15,29 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Summer</title>
+    <link href="https://gemini-lin.github.io/summer/"/>
+    <id>https://gemini-lin.github.io/summer/</id>
+    <published>2020-07-02T08:31:04.000Z</published>
+    <updated>2020-07-02T08:49:29.609Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;菊次郎的夏天&quot;&gt;
+          &lt;a href=&quot;#菊次郎的夏天&quot; class=&quot;heading-link&quot;&gt;&lt;i class=&quot;fas fa-link&quot;&gt;&lt;/i&gt;&lt;/a&gt;菊次郎的夏天&lt;/h1&gt;
+      &lt;p&gt;夏天伴随着海边吹来的暖风，和西瓜一起来了。&lt;br&gt;&lt;img src=&quot;https://s1.ax1x.com/2020/07/02/NqENRI.png?size=400x400&quot; style=&quot;width: 400px;height: 400px;&quot; alt=&quot;NqENRI.png&quot;&gt;&lt;br&gt;每年到了夏天，都想看一边菊次郎的夏天;&lt;br&gt;每次伤心时候，都会单曲循环播放着Summer;&lt;br&gt;&lt;span class=&quot;exturl&quot;&gt;&lt;a class=&quot;exturl__link&quot; href=&quot;http://music.163.com/song?id=443242&amp;amp;userid=369654532&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Summer&lt;/a&gt;&lt;span class=&quot;exturl__icon&quot;&gt;&lt;i class=&quot;fas fa-external-link-alt&quot;&gt;&lt;/i&gt;&lt;/span&gt;&lt;/span&gt;–点击播放音乐&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="大学生活" scheme="https://Gemini-Lin.github.io/categories/%E5%A4%A7%E5%AD%A6%E7%94%9F%E6%B4%BB/"/>
+    
+    
+      <category term="体验" scheme="https://Gemini-Lin.github.io/tags/%E4%BD%93%E9%AA%8C/"/>
+    
+  </entry>
   
   <entry>
     <title>SM2算法分析</title>
@@ -576,40 +599,6 @@
     
     
       <category term="建模算法" scheme="https://Gemini-Lin.github.io/tags/%E5%BB%BA%E6%A8%A1%E7%AE%97%E6%B3%95/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>美赛写作套路</title>
-    <link href="https://gemini-lin.github.io/%E7%BE%8E%E8%B5%9B%E5%86%99%E4%BD%9C%E5%A5%97%E8%B7%AF/"/>
-    <id>https://gemini-lin.github.io/%E7%BE%8E%E8%B5%9B%E5%86%99%E4%BD%9C%E5%A5%97%E8%B7%AF/</id>
-    <published>2020-02-02T02:23:43.000Z</published>
-    <updated>2020-05-28T18:01:11.341Z</updated>
-    
-    <summary type="html">
-    
-      &lt;h1 id=&quot;美赛写作套路&quot;&gt;
-          &lt;a href=&quot;#美赛写作套路&quot; class=&quot;heading-link&quot;&gt;&lt;i class=&quot;fas fa-link&quot;&gt;&lt;/i&gt;&lt;/a&gt;美赛写作套路&lt;/h1&gt;
-      
-        &lt;h2 id=&quot;Word还是LaTex&quot;&gt;
-          &lt;a href=&quot;#Word还是LaTex&quot; class=&quot;heading-link&quot;&gt;&lt;i class=&quot;fas fa-link&quot;&gt;&lt;/i&gt;&lt;/a&gt;Word还是LaTex&lt;/h2&gt;
-      &lt;blockquote&gt;
-&lt;p&gt;倾向于使用Word进行写作，有利于论文的最后的协同合作&lt;br&gt;LaTex最新模板地址:&lt;span class=&quot;exturl&quot;&gt;&lt;a class=&quot;exturl__link&quot; href=&quot;https://github.com/latexstudio-org/mcmthesis/releases/tag/6.3&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;https://github.com/latexstudio-org/mcmthesis/releases/tag/6.3&lt;/a&gt;&lt;span class=&quot;exturl__icon&quot;&gt;&lt;i class=&quot;fas fa-external-link-alt&quot;&gt;&lt;/i&gt;&lt;/span&gt;&lt;/span&gt;&lt;/p&gt;
-&lt;/blockquote&gt;
-
-        &lt;h2 id=&quot;美赛论文怎么翻译&quot;&gt;
-          &lt;a href=&quot;#美赛论文怎么翻译&quot; class=&quot;heading-link&quot;&gt;&lt;i class=&quot;fas fa-link&quot;&gt;&lt;/i&gt;&lt;/a&gt;美赛论文怎么翻译&lt;/h2&gt;
-      &lt;blockquote&gt;
-&lt;p&gt;谷歌翻译:&lt;span class=&quot;exturl&quot;&gt;&lt;a class=&quot;exturl__link&quot; href=&quot;https://translate.google.cn/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;https://translate.google.cn/&lt;/a&gt;&lt;span class=&quot;exturl__icon&quot;&gt;&lt;i class=&quot;fas fa-external-link-alt&quot;&gt;&lt;/i&gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;strong&gt;有以下几点要注意：&lt;/strong&gt;&lt;br&gt;（1） 翻译完成后再排版，记住，排版永远放在最后一步；&lt;br&gt;（2）第一次翻译完成后一定要再次核对语法、通顺程度、专有名词等，初次翻译出来的结果是不能看的，后面我再教给大家怎么修改；&lt;br&gt;（3）中文版用word写，后续翻译完成并修改后再用latex模板套用，因为latex导出来的就直接是pdf版本了，谷歌翻译对word的识别要远好于pdf。&lt;/p&gt;
-&lt;/blockquote&gt;
-    
-    </summary>
-    
-    
-      <category term="数学建模" scheme="https://Gemini-Lin.github.io/categories/%E6%95%B0%E5%AD%A6%E5%BB%BA%E6%A8%A1/"/>
-    
-    
-      <category term="论文写作" scheme="https://Gemini-Lin.github.io/tags/%E8%AE%BA%E6%96%87%E5%86%99%E4%BD%9C/"/>
     
   </entry>
   
