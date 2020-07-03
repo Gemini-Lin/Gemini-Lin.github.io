@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://gemini-lin.github.io/"/>
-  <updated>2020-07-02T11:36:55.718Z</updated>
+  <updated>2020-07-03T03:45:43.758Z</updated>
   <id>https://gemini-lin.github.io/</id>
   
   <author>
@@ -17,11 +17,38 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>Tightly-Secure</title>
+    <link href="https://gemini-lin.github.io/Tightly-Secure/"/>
+    <id>https://gemini-lin.github.io/Tightly-Secure/</id>
+    <published>2020-07-03T03:09:51.000Z</published>
+    <updated>2020-07-03T03:45:43.758Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;Free-Talk&quot;&gt;
+          &lt;a href=&quot;#Free-Talk&quot; class=&quot;heading-link&quot;&gt;&lt;i class=&quot;fas fa-link&quot;&gt;&lt;/i&gt;&lt;/a&gt;Free Talk&lt;/h1&gt;
+      &lt;p&gt;&lt;img src=&quot;https://s1.ax1x.com/2020/07/03/NOdOj1.png&quot; alt=&quot;NOdOj1.png&quot;&gt;&lt;br&gt;本文是一篇关于紧安全的数字签名及身份验证的密钥交换的论文分析。&lt;br&gt;&lt;span class=&quot;exturl&quot;&gt;&lt;a class=&quot;exturl__link&quot; href=&quot;http://www.nds.ruhr-uni-bochum.de/media/nds/veroeffentlichungen/2014/12/27/main.pdf&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Practical and Tightly-Secure Digital Signatures and Authenticated Key Exchange&lt;/a&gt;&lt;span class=&quot;exturl__icon&quot;&gt;&lt;i class=&quot;fas fa-external-link-alt&quot;&gt;&lt;/i&gt;&lt;/span&gt;&lt;/span&gt;&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="课程总结" scheme="https://Gemini-Lin.github.io/categories/%E8%AF%BE%E7%A8%8B%E6%80%BB%E7%BB%93/"/>
+    
+      <category term="密码学" scheme="https://Gemini-Lin.github.io/categories/%E8%AF%BE%E7%A8%8B%E6%80%BB%E7%BB%93/%E5%AF%86%E7%A0%81%E5%AD%A6/"/>
+    
+    
+      <category term="密码学" scheme="https://Gemini-Lin.github.io/tags/%E5%AF%86%E7%A0%81%E5%AD%A6/"/>
+    
+      <category term="Tightly-Secure" scheme="https://Gemini-Lin.github.io/tags/Tightly-Secure/"/>
+    
+  </entry>
+  
+  <entry>
     <title>密码学的安全性</title>
     <link href="https://gemini-lin.github.io/safety/"/>
     <id>https://gemini-lin.github.io/safety/</id>
     <published>2020-07-02T11:08:37.000Z</published>
-    <updated>2020-07-02T11:36:55.718Z</updated>
+    <updated>2020-07-03T03:18:32.767Z</updated>
     
     <summary type="html">
     
@@ -34,8 +61,10 @@
     
       <category term="课程总结" scheme="https://Gemini-Lin.github.io/categories/%E8%AF%BE%E7%A8%8B%E6%80%BB%E7%BB%93/"/>
     
+      <category term="密码学" scheme="https://Gemini-Lin.github.io/categories/%E8%AF%BE%E7%A8%8B%E6%80%BB%E7%BB%93/%E5%AF%86%E7%A0%81%E5%AD%A6/"/>
     
-      <category term="密码学" scheme="https://Gemini-Lin.github.io/tags/%E5%AF%86%E7%A0%81%E5%AD%A6/"/>
+    
+      <category term="安全分析" scheme="https://Gemini-Lin.github.io/tags/%E5%AE%89%E5%85%A8%E5%88%86%E6%9E%90/"/>
     
   </entry>
   
@@ -44,7 +73,7 @@
     <link href="https://gemini-lin.github.io/summer/"/>
     <id>https://gemini-lin.github.io/summer/</id>
     <published>2020-07-02T08:31:04.000Z</published>
-    <updated>2020-07-02T08:49:29.609Z</updated>
+    <updated>2020-07-03T03:19:44.738Z</updated>
     
     <summary type="html">
     
@@ -57,6 +86,8 @@
     
       <category term="大学生活" scheme="https://Gemini-Lin.github.io/categories/%E5%A4%A7%E5%AD%A6%E7%94%9F%E6%B4%BB/"/>
     
+      <category term="小小说" scheme="https://Gemini-Lin.github.io/categories/%E5%A4%A7%E5%AD%A6%E7%94%9F%E6%B4%BB/%E5%B0%8F%E5%B0%8F%E8%AF%B4/"/>
+    
     
       <category term="体验" scheme="https://Gemini-Lin.github.io/tags/%E4%BD%93%E9%AA%8C/"/>
     
@@ -67,7 +98,7 @@
     <link href="https://gemini-lin.github.io/SM2/"/>
     <id>https://gemini-lin.github.io/SM2/</id>
     <published>2020-06-29T07:35:49.000Z</published>
-    <updated>2020-06-29T12:33:46.811Z</updated>
+    <updated>2020-07-03T03:20:06.975Z</updated>
     
     <summary type="html">
     
@@ -80,6 +111,8 @@
     
       <category term="课程总结" scheme="https://Gemini-Lin.github.io/categories/%E8%AF%BE%E7%A8%8B%E6%80%BB%E7%BB%93/"/>
     
+      <category term="密码学" scheme="https://Gemini-Lin.github.io/categories/%E8%AF%BE%E7%A8%8B%E6%80%BB%E7%BB%93/%E5%AF%86%E7%A0%81%E5%AD%A6/"/>
+    
     
       <category term="SM2" scheme="https://Gemini-Lin.github.io/tags/SM2/"/>
     
@@ -90,7 +123,7 @@
     <link href="https://gemini-lin.github.io/docker/"/>
     <id>https://gemini-lin.github.io/docker/</id>
     <published>2020-06-28T01:52:57.000Z</published>
-    <updated>2020-06-29T11:52:02.845Z</updated>
+    <updated>2020-07-03T03:26:43.219Z</updated>
     
     <summary type="html">
     
@@ -103,6 +136,8 @@
     
       <category term="java后端开发" scheme="https://Gemini-Lin.github.io/categories/java%E5%90%8E%E7%AB%AF%E5%BC%80%E5%8F%91/"/>
     
+      <category term="常用知识" scheme="https://Gemini-Lin.github.io/categories/java%E5%90%8E%E7%AB%AF%E5%BC%80%E5%8F%91/%E5%B8%B8%E7%94%A8%E7%9F%A5%E8%AF%86/"/>
+    
     
       <category term="Docker" scheme="https://Gemini-Lin.github.io/tags/Docker/"/>
     
@@ -113,7 +148,7 @@
     <link href="https://gemini-lin.github.io/regex/"/>
     <id>https://gemini-lin.github.io/regex/</id>
     <published>2020-06-17T13:04:57.000Z</published>
-    <updated>2020-06-28T08:45:28.283Z</updated>
+    <updated>2020-07-03T03:20:35.147Z</updated>
     
     <summary type="html">
     
@@ -126,6 +161,8 @@
     
       <category term="java后端开发" scheme="https://Gemini-Lin.github.io/categories/java%E5%90%8E%E7%AB%AF%E5%BC%80%E5%8F%91/"/>
     
+      <category term="常用知识" scheme="https://Gemini-Lin.github.io/categories/java%E5%90%8E%E7%AB%AF%E5%BC%80%E5%8F%91/%E5%B8%B8%E7%94%A8%E7%9F%A5%E8%AF%86/"/>
+    
     
       <category term="正则表达式" scheme="https://Gemini-Lin.github.io/tags/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/"/>
     
@@ -136,7 +173,7 @@
     <link href="https://gemini-lin.github.io/SQL-Test/"/>
     <id>https://gemini-lin.github.io/SQL-Test/</id>
     <published>2020-06-16T08:58:27.000Z</published>
-    <updated>2020-06-16T09:06:26.329Z</updated>
+    <updated>2020-07-03T03:19:56.766Z</updated>
     
     <summary type="html">
     
@@ -149,6 +186,8 @@
     
       <category term="课程总结" scheme="https://Gemini-Lin.github.io/categories/%E8%AF%BE%E7%A8%8B%E6%80%BB%E7%BB%93/"/>
     
+      <category term="数据库" scheme="https://Gemini-Lin.github.io/categories/%E8%AF%BE%E7%A8%8B%E6%80%BB%E7%BB%93/%E6%95%B0%E6%8D%AE%E5%BA%93/"/>
+    
     
       <category term="SQL" scheme="https://Gemini-Lin.github.io/tags/SQL/"/>
     
@@ -159,7 +198,7 @@
     <link href="https://gemini-lin.github.io/twenty/"/>
     <id>https://gemini-lin.github.io/twenty/</id>
     <published>2020-06-14T08:05:00.000Z</published>
-    <updated>2020-06-30T01:17:30.432Z</updated>
+    <updated>2020-07-03T03:19:26.331Z</updated>
     
     <summary type="html">
     
@@ -172,6 +211,8 @@
     
       <category term="大学生活" scheme="https://Gemini-Lin.github.io/categories/%E5%A4%A7%E5%AD%A6%E7%94%9F%E6%B4%BB/"/>
     
+      <category term="二十" scheme="https://Gemini-Lin.github.io/categories/%E5%A4%A7%E5%AD%A6%E7%94%9F%E6%B4%BB/%E4%BA%8C%E5%8D%81/"/>
+    
     
       <category term="体验" scheme="https://Gemini-Lin.github.io/tags/%E4%BD%93%E9%AA%8C/"/>
     
@@ -182,7 +223,7 @@
     <link href="https://gemini-lin.github.io/Operating-System-2/"/>
     <id>https://gemini-lin.github.io/Operating-System-2/</id>
     <published>2020-06-12T02:53:07.000Z</published>
-    <updated>2020-06-12T11:37:14.445Z</updated>
+    <updated>2020-07-03T03:20:49.390Z</updated>
     
     <summary type="html">
     
@@ -211,6 +252,8 @@
     
       <category term="课程总结" scheme="https://Gemini-Lin.github.io/categories/%E8%AF%BE%E7%A8%8B%E6%80%BB%E7%BB%93/"/>
     
+      <category term="操作系统" scheme="https://Gemini-Lin.github.io/categories/%E8%AF%BE%E7%A8%8B%E6%80%BB%E7%BB%93/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/"/>
+    
     
       <category term="OS" scheme="https://Gemini-Lin.github.io/tags/OS/"/>
     
@@ -221,7 +264,7 @@
     <link href="https://gemini-lin.github.io/Computer-Network/"/>
     <id>https://gemini-lin.github.io/Computer-Network/</id>
     <published>2020-06-08T00:41:18.000Z</published>
-    <updated>2020-06-11T14:05:58.751Z</updated>
+    <updated>2020-07-03T03:26:20.389Z</updated>
     
     <summary type="html">
     
@@ -237,6 +280,8 @@
     
       <category term="课程总结" scheme="https://Gemini-Lin.github.io/categories/%E8%AF%BE%E7%A8%8B%E6%80%BB%E7%BB%93/"/>
     
+      <category term="计算机网络" scheme="https://Gemini-Lin.github.io/categories/%E8%AF%BE%E7%A8%8B%E6%80%BB%E7%BB%93/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/"/>
+    
     
       <category term="计算机网络" scheme="https://Gemini-Lin.github.io/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/"/>
     
@@ -247,7 +292,7 @@
     <link href="https://gemini-lin.github.io/Database-Programming/"/>
     <id>https://gemini-lin.github.io/Database-Programming/</id>
     <published>2020-06-07T10:53:11.000Z</published>
-    <updated>2020-06-11T14:04:04.795Z</updated>
+    <updated>2020-07-03T03:26:50.859Z</updated>
     
     <summary type="html">
     
@@ -284,6 +329,8 @@
     
       <category term="课程总结" scheme="https://Gemini-Lin.github.io/categories/%E8%AF%BE%E7%A8%8B%E6%80%BB%E7%BB%93/"/>
     
+      <category term="数据库" scheme="https://Gemini-Lin.github.io/categories/%E8%AF%BE%E7%A8%8B%E6%80%BB%E7%BB%93/%E6%95%B0%E6%8D%AE%E5%BA%93/"/>
+    
     
       <category term="SQL" scheme="https://Gemini-Lin.github.io/tags/SQL/"/>
     
@@ -294,7 +341,7 @@
     <link href="https://gemini-lin.github.io/Operating-System-1/"/>
     <id>https://gemini-lin.github.io/Operating-System-1/</id>
     <published>2020-06-07T10:53:11.000Z</published>
-    <updated>2020-06-12T06:43:02.738Z</updated>
+    <updated>2020-07-03T03:20:59.487Z</updated>
     
     <summary type="html">
     
@@ -320,6 +367,8 @@
     
       <category term="课程总结" scheme="https://Gemini-Lin.github.io/categories/%E8%AF%BE%E7%A8%8B%E6%80%BB%E7%BB%93/"/>
     
+      <category term="操作系统" scheme="https://Gemini-Lin.github.io/categories/%E8%AF%BE%E7%A8%8B%E6%80%BB%E7%BB%93/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/"/>
+    
     
       <category term="OS" scheme="https://Gemini-Lin.github.io/tags/OS/"/>
     
@@ -330,7 +379,7 @@
     <link href="https://gemini-lin.github.io/How-to-write-a-summary/"/>
     <id>https://gemini-lin.github.io/How-to-write-a-summary/</id>
     <published>2020-06-02T02:47:10.000Z</published>
-    <updated>2020-06-08T02:54:57.554Z</updated>
+    <updated>2020-07-03T03:21:54.470Z</updated>
     
     <summary type="html">
     
@@ -347,6 +396,8 @@
     
       <category term="课程总结" scheme="https://Gemini-Lin.github.io/categories/%E8%AF%BE%E7%A8%8B%E6%80%BB%E7%BB%93/"/>
     
+      <category term="商务英语" scheme="https://Gemini-Lin.github.io/categories/%E8%AF%BE%E7%A8%8B%E6%80%BB%E7%BB%93/%E5%95%86%E5%8A%A1%E8%8B%B1%E8%AF%AD/"/>
+    
     
       <category term="商务英语" scheme="https://Gemini-Lin.github.io/tags/%E5%95%86%E5%8A%A1%E8%8B%B1%E8%AF%AD/"/>
     
@@ -357,7 +408,7 @@
     <link href="https://gemini-lin.github.io/Computer-Network-and-Internet/"/>
     <id>https://gemini-lin.github.io/Computer-Network-and-Internet/</id>
     <published>2020-05-31T11:23:35.000Z</published>
-    <updated>2020-06-01T03:58:56.150Z</updated>
+    <updated>2020-07-03T03:26:15.253Z</updated>
     
     <summary type="html">
     
@@ -385,6 +436,8 @@
     
       <category term="课程总结" scheme="https://Gemini-Lin.github.io/categories/%E8%AF%BE%E7%A8%8B%E6%80%BB%E7%BB%93/"/>
     
+      <category term="计算机网络" scheme="https://Gemini-Lin.github.io/categories/%E8%AF%BE%E7%A8%8B%E6%80%BB%E7%BB%93/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/"/>
+    
     
       <category term="计算机网络" scheme="https://Gemini-Lin.github.io/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/"/>
     
@@ -395,7 +448,7 @@
     <link href="https://gemini-lin.github.io/Garbage-Collection/"/>
     <id>https://gemini-lin.github.io/Garbage-Collection/</id>
     <published>2020-05-30T14:01:31.000Z</published>
-    <updated>2020-05-31T06:41:00.319Z</updated>
+    <updated>2020-07-03T03:22:12.433Z</updated>
     
     <summary type="html">
     
@@ -415,6 +468,8 @@
     
       <category term="java后端开发" scheme="https://Gemini-Lin.github.io/categories/java%E5%90%8E%E7%AB%AF%E5%BC%80%E5%8F%91/"/>
     
+      <category term="JVM" scheme="https://Gemini-Lin.github.io/categories/java%E5%90%8E%E7%AB%AF%E5%BC%80%E5%8F%91/JVM/"/>
+    
     
       <category term="JVM" scheme="https://Gemini-Lin.github.io/tags/JVM/"/>
     
@@ -427,7 +482,7 @@
     <link href="https://gemini-lin.github.io/Data-Structure-and-Algorithms-1/"/>
     <id>https://gemini-lin.github.io/Data-Structure-and-Algorithms-1/</id>
     <published>2020-05-28T17:59:55.000Z</published>
-    <updated>2020-05-31T11:40:06.567Z</updated>
+    <updated>2020-07-03T03:26:46.472Z</updated>
     
     <summary type="html">
     
@@ -449,6 +504,8 @@
     
       <category term="课程总结" scheme="https://Gemini-Lin.github.io/categories/%E8%AF%BE%E7%A8%8B%E6%80%BB%E7%BB%93/"/>
     
+      <category term="数据结构" scheme="https://Gemini-Lin.github.io/categories/%E8%AF%BE%E7%A8%8B%E6%80%BB%E7%BB%93/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/"/>
+    
     
       <category term="数据结构" scheme="https://Gemini-Lin.github.io/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/"/>
     
@@ -459,7 +516,7 @@
     <link href="https://gemini-lin.github.io/JVM%E7%B3%BB%E5%88%97%EF%BC%88%E4%BA%8C%EF%BC%89-Java%E5%86%85%E5%AD%98%E7%AE%A1%E7%90%86/"/>
     <id>https://gemini-lin.github.io/JVM%E7%B3%BB%E5%88%97%EF%BC%88%E4%BA%8C%EF%BC%89-Java%E5%86%85%E5%AD%98%E7%AE%A1%E7%90%86/</id>
     <published>2020-05-28T07:45:04.000Z</published>
-    <updated>2020-05-31T02:43:07.320Z</updated>
+    <updated>2020-07-03T03:21:16.444Z</updated>
     
     <summary type="html">
     
@@ -476,6 +533,8 @@
     
       <category term="java后端开发" scheme="https://Gemini-Lin.github.io/categories/java%E5%90%8E%E7%AB%AF%E5%BC%80%E5%8F%91/"/>
     
+      <category term="JVM" scheme="https://Gemini-Lin.github.io/categories/java%E5%90%8E%E7%AB%AF%E5%BC%80%E5%8F%91/JVM/"/>
+    
     
       <category term="JVM" scheme="https://Gemini-Lin.github.io/tags/JVM/"/>
     
@@ -488,7 +547,7 @@
     <link href="https://gemini-lin.github.io/JVM-1/"/>
     <id>https://gemini-lin.github.io/JVM-1/</id>
     <published>2020-05-27T08:52:42.000Z</published>
-    <updated>2020-06-11T04:54:43.211Z</updated>
+    <updated>2020-07-03T03:21:30.643Z</updated>
     
     <summary type="html">
     
@@ -507,6 +566,8 @@
     
       <category term="java后端开发" scheme="https://Gemini-Lin.github.io/categories/java%E5%90%8E%E7%AB%AF%E5%BC%80%E5%8F%91/"/>
     
+      <category term="JVM" scheme="https://Gemini-Lin.github.io/categories/java%E5%90%8E%E7%AB%AF%E5%BC%80%E5%8F%91/JVM/"/>
+    
     
       <category term="JVM" scheme="https://Gemini-Lin.github.io/tags/JVM/"/>
     
@@ -519,7 +580,7 @@
     <link href="https://gemini-lin.github.io/%E6%B1%87%E7%BC%96%E8%AF%AD%E8%A8%80%E5%AD%A6%E4%B9%A0%E6%80%BB%E7%BB%93/"/>
     <id>https://gemini-lin.github.io/%E6%B1%87%E7%BC%96%E8%AF%AD%E8%A8%80%E5%AD%A6%E4%B9%A0%E6%80%BB%E7%BB%93/</id>
     <published>2020-05-19T09:07:02.000Z</published>
-    <updated>2020-06-11T13:25:01.888Z</updated>
+    <updated>2020-07-03T03:26:29.036Z</updated>
     
     <summary type="html">
     
@@ -543,6 +604,8 @@
     
       <category term="课程总结" scheme="https://Gemini-Lin.github.io/categories/%E8%AF%BE%E7%A8%8B%E6%80%BB%E7%BB%93/"/>
     
+      <category term="汇编语言" scheme="https://Gemini-Lin.github.io/categories/%E8%AF%BE%E7%A8%8B%E6%80%BB%E7%BB%93/%E6%B1%87%E7%BC%96%E8%AF%AD%E8%A8%80/"/>
+    
     
       <category term="汇编语言" scheme="https://Gemini-Lin.github.io/tags/%E6%B1%87%E7%BC%96%E8%AF%AD%E8%A8%80/"/>
     
@@ -553,7 +616,7 @@
     <link href="https://gemini-lin.github.io/java%E5%90%8E%E7%AB%AF%E5%BC%80%E5%8F%91%E5%AD%A6%E4%B9%A0%E8%B7%AF%E7%BA%BF/"/>
     <id>https://gemini-lin.github.io/java%E5%90%8E%E7%AB%AF%E5%BC%80%E5%8F%91%E5%AD%A6%E4%B9%A0%E8%B7%AF%E7%BA%BF/</id>
     <published>2020-05-18T13:39:47.000Z</published>
-    <updated>2020-05-28T18:00:42.077Z</updated>
+    <updated>2020-07-03T03:25:59.204Z</updated>
     
     <summary type="html">
     
@@ -566,38 +629,10 @@
     
       <category term="java后端开发" scheme="https://Gemini-Lin.github.io/categories/java%E5%90%8E%E7%AB%AF%E5%BC%80%E5%8F%91/"/>
     
+      <category term="路线" scheme="https://Gemini-Lin.github.io/categories/java%E5%90%8E%E7%AB%AF%E5%BC%80%E5%8F%91/%E8%B7%AF%E7%BA%BF/"/>
+    
     
       <category term="java" scheme="https://Gemini-Lin.github.io/tags/java/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Github入门教学</title>
-    <link href="https://gemini-lin.github.io/Github%E5%85%A5%E9%97%A8%E6%95%99%E5%AD%A6/"/>
-    <id>https://gemini-lin.github.io/Github%E5%85%A5%E9%97%A8%E6%95%99%E5%AD%A6/</id>
-    <published>2020-05-14T05:12:28.000Z</published>
-    <updated>2020-06-01T04:47:16.863Z</updated>
-    
-    <summary type="html">
-    
-      &lt;h1 id=&quot;GitHub入门教学（Git，界面介绍，搜索）&quot;&gt;
-          &lt;a href=&quot;#GitHub入门教学（Git，界面介绍，搜索）&quot; class=&quot;heading-link&quot;&gt;&lt;i class=&quot;fas fa-link&quot;&gt;&lt;/i&gt;&lt;/a&gt;GitHub入门教学（Git，界面介绍，搜索）&lt;/h1&gt;
-      
-        &lt;h2 id=&quot;前提：Git使用&quot;&gt;
-          &lt;a href=&quot;#前提：Git使用&quot; class=&quot;heading-link&quot;&gt;&lt;i class=&quot;fas fa-link&quot;&gt;&lt;/i&gt;&lt;/a&gt;前提：Git使用&lt;/h2&gt;
-      &lt;p&gt;GitHub是基于Git开发得到，学习Git是了解GitHub的前提，在这里我推荐一个特别喜欢的学习教程。&lt;/p&gt;
-&lt;p&gt;&lt;span class=&quot;exturl&quot;&gt;&lt;a class=&quot;exturl__link&quot; href=&quot;https://www.liaoxuefeng.com/wiki/896043488029600&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;廖雪峰Git教学&lt;/a&gt;&lt;span class=&quot;exturl__icon&quot;&gt;&lt;i class=&quot;fas fa-external-link-alt&quot;&gt;&lt;/i&gt;&lt;/span&gt;&lt;/span&gt;&lt;/p&gt;
-&lt;p&gt;简单示例&lt;/p&gt;
-&lt;figure class=&quot;highlight avrasm&quot;&gt;&lt;div class=&quot;table-container&quot;&gt;&lt;table&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;10&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;mkdir learngit &lt;span class=&quot;meta&quot;&gt;#创建一个空白目录&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;cd learngit &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;git init &lt;span class=&quot;meta&quot;&gt;#把这个目录变成Git可以管理的仓库&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;git &lt;span class=&quot;keyword&quot;&gt;add&lt;/span&gt; readme.txt &lt;span class=&quot;meta&quot;&gt;#把文件添加到仓库&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;git commit -m &lt;span class=&quot;string&quot;&gt;&quot;wrote a readme file&quot;&lt;/span&gt; &lt;span class=&quot;meta&quot;&gt;#把文件提交给仓库&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;git &lt;span class=&quot;keyword&quot;&gt;push&lt;/span&gt; -u origin master &lt;span class=&quot;meta&quot;&gt;#把本地仓库中的所有内容上传到远程库&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/div&gt;&lt;/figure&gt;
-&lt;p&gt;&lt;img src=&quot;https://s1.ax1x.com/2020/06/01/t8gefS.png&quot; alt=&quot;t8gefS.png&quot;&gt;&lt;/p&gt;
-    
-    </summary>
-    
-    
-      <category term="工具分享" scheme="https://Gemini-Lin.github.io/categories/%E5%B7%A5%E5%85%B7%E5%88%86%E4%BA%AB/"/>
-    
-    
-      <category term="GitHub" scheme="https://Gemini-Lin.github.io/tags/GitHub/"/>
     
   </entry>
   
