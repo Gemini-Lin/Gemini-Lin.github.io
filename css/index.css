@@ -1957,7 +1957,7 @@ kbd {
 }
 .highlight figcaption span:first-child::before {
   margin: 0 0.6rem 0 0;
-  color: rgba(171,178,191,0.6);
+  color: var(--color-gray-600);
 }
 .highlight.markdown figcaption span:first-child::before {
   content: 'markdown';
@@ -2095,8 +2095,8 @@ kbd {
   margin: 0 0 1rem;
   width: 100%;
   line-height: 1.7;
-  color: #abb2bf;
-  background-color: #282c34;
+  color: var(--color-gray-800);
+  background-color: var(--color-gray-200);
   border-radius: 0.25rem;
 }
 .highlight pre,
@@ -2114,8 +2114,8 @@ kbd {
 .highlight figcaption {
   position: relative;
   width: 100%;
-  color: #abb2bf;
-  background-color: #282c34;
+  color: var(--color-gray-600);
+  background-color: var(--color-gray-200);
   zoom: 1;
   border-top-left-radius: 0.25rem;
   border-top-right-radius: 0.25rem;
@@ -2131,7 +2131,7 @@ kbd {
 .highlight figcaption span:first-child {
   float: left;
   margin-left: 0.5rem;
-  color: #abb2bf;
+  color: var(--color-gray-600);
 }
 .highlight figcaption span.external-link {
   float: right;
@@ -2149,7 +2149,7 @@ kbd {
 .highlight figcaption.custom .custom-lang {
   float: left;
   margin: 0 0.6rem;
-  color: rgba(171,178,191,0.6);
+  color: var(--color-gray-600);
 }
 .highlight figcaption.custom .custom-carbon {
   display: -webkit-box;
@@ -2184,7 +2184,7 @@ kbd {
   background-color: #27c93f;
 }
 .highlight figcaption:not(.custom) {
-  background-color: #24282f;
+  background-color: var(--color-gray-250);
 }
 .highlight figcaption:not(.custom) + .table-container td.code,
 .highlight figcaption:not(.custom) + table td.code {
@@ -2201,27 +2201,27 @@ kbd {
   padding: 0 0.8rem 0 0.4rem;
   min-width: 1rem;
   text-align: right;
-  color: #4e5767;
-  background-color: #24282f;
+  color: var(--color-gray-600);
+  background-color: var(--color-gray-250);
   counter-increment: line;
 }
 .highlight td.gutter {
   padding: 0.4rem 0.6rem;
   width: 2rem;
-  background-color: #24282f;
+  background-color: var(--color-gray-250);
   display: none;
 }
 .highlight td.gutter pre {
   text-align: right;
   white-space: nowrap;
-  color: #4e5767;
+  color: var(--color-gray-600);
   background-color: inherit;
 }
 .highlight td.code {
   padding: 0.5rem 0.75rem;
 }
 .highlight .marked {
-  background-color: #464646;
+  background-color: var(--color-gray-300);
 }
 .highlight .emphasis {
   font-style: italic;
@@ -2230,11 +2230,11 @@ kbd {
   font-weight: bold;
 }
 .highlight .comment {
-  color: #5c6370;
+  color: #969896;
 }
 .highlight .quote,
 .highlight .params {
-  color: #abb2bf;
+  color: var(--color-gray-800);
 }
 .highlight .selector-tag,
 .highlight .template-variable,
@@ -2243,7 +2243,7 @@ kbd {
 .highlight .regexp,
 .highlight .name,
 .highlight .tag {
-  color: #f45a5a;
+  color: #c82829;
 }
 .highlight .builtin-name,
 .highlight .literal,
@@ -2251,12 +2251,12 @@ kbd {
 .highlight .type,
 .highlight .meta,
 .highlight .link {
-  color: #de812c;
+  color: #ee8019;
 }
 .highlight .class .keyword:first-child + .title,
 .highlight .built_in,
 .highlight .attribute {
-  color: #eedc6e;
+  color: #eab700;
 }
 .highlight .class .keyword ~ .title,
 .highlight .string .template-variable,
@@ -2265,17 +2265,17 @@ kbd {
 .highlight .class,
 .highlight .subst,
 .highlight .regexp {
-  color: #56b6c2;
+  color: #4eb4b4;
 }
 .highlight .string,
 .highlight .symbol,
 .highlight .bullet,
 .highlight .addition {
-  color: #98c379;
+  color: #4dc14c;
 }
 .highlight .title,
 .highlight .section {
-  color: #4a98d8;
+  color: #2a75c8;
 }
 .highlight .meta-keyword,
 .highlight .doctag,
@@ -2286,11 +2286,11 @@ kbd {
 .highlight .function,
 .highlight .tag .attr,
 .highlight .keyword {
-  color: #be74d5;
+  color: #be4dbc;
 }
 .bash .meta,
 .rust .meta {
-  color: #5c6370;
+  color: #969896;
 }
 .c\+\+ .built_in,
 .cpp .built_in,
@@ -2301,21 +2301,21 @@ kbd {
 .scss .variable,
 .styl .variable,
 .stylus .variable {
-  color: #abb2bf;
+  color: var(--color-gray-800);
 }
 .html .meta,
 .xml .meta,
 .yaml .attr,
 .yml .attr {
-  color: #f45a5a;
+  color: #c82829;
 }
 .js .params,
 .javascript .params {
-  color: #de812c;
+  color: #ee8019;
 }
 .json .attr,
 .swift .type {
-  color: #eedc6e;
+  color: #eab700;
 }
 .variable .variable,
 .bash .variable,
@@ -2324,13 +2324,13 @@ kbd {
 .c\# .meta,
 .css .number,
 .diff .meta {
-  color: #56b6c2;
+  color: #4eb4b4;
 }
 .md .section,
 .markdown .section,
 .py .string .meta,
 .python .string .meta {
-  color: #98c379;
+  color: #4dc14c;
 }
 .bash .built_in,
 .css .built_in,
@@ -2340,20 +2340,26 @@ kbd {
 .shell .meta,
 .shell .keyword,
 .shell .built_in {
-  color: #4a98d8;
+  color: #2a75c8;
 }
 .ini .attr,
 .objectivec .meta,
 .yaml .type,
 .yml .type {
-  color: #be74d5;
+  color: #be4dbc;
 }
 .diff .addition {
   color: #292;
-  background-color: transparent;
+  background-color: #f0fff4;
 }
 .diff .deletion {
   color: #d44;
+  background-color: #ffeef0;
+}
+.nightmode .diff .addition {
+  background-color: transparent;
+}
+.nightmode .diff .deletion {
   background-color: transparent;
 }
 .ending {
@@ -2734,7 +2740,7 @@ html.nightmode {
   cursor: pointer;
 }
 .copy-button i {
-  color: rgba(171,178,191,0.7);
+  color: var(--color-gray-600);
 }
 .sticky-top {
   position: absolute;
