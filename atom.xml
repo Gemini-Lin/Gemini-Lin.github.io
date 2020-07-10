@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://gemini-lin.github.io/"/>
-  <updated>2020-07-03T03:45:43.758Z</updated>
+  <updated>2020-07-10T09:05:03.677Z</updated>
   <id>https://gemini-lin.github.io/</id>
   
   <author>
@@ -15,6 +15,32 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Java基础语法</title>
+    <link href="https://gemini-lin.github.io/java-basic-grammer/"/>
+    <id>https://gemini-lin.github.io/java-basic-grammer/</id>
+    <published>2020-07-10T07:54:46.000Z</published>
+    <updated>2020-07-10T09:05:03.677Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;Free-Talk&quot;&gt;
+          &lt;a href=&quot;#Free-Talk&quot; class=&quot;heading-link&quot;&gt;&lt;i class=&quot;fas fa-link&quot;&gt;&lt;/i&gt;&lt;/a&gt;Free Talk&lt;/h1&gt;
+      &lt;p&gt;最近在JavaGuide博客里面兜兜转转了几天，一边等华为的实训消息，一边随便看点Java后端开发的知识。但是这一周总感觉看了就忘，而且光看也很容易走神发呆，要不然就是去打王者啥的。决定还要按照直接写的Java后端学习路线一点点走下去，一篇篇写博客敦促自己，上个月的时候写了一些JVM相关的文章，现在把之前鸽的Java语言基础先补上。&lt;/p&gt;
+&lt;p&gt;这边Java基础语言主要参照&lt;span class=&quot;exturl&quot;&gt;&lt;a class=&quot;exturl__link&quot; href=&quot;https://www.runoob.com/java/java-basic-syntax.html&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;菜鸟教程&lt;/a&gt;&lt;span class=&quot;exturl__icon&quot;&gt;&lt;i class=&quot;fas fa-external-link-alt&quot;&gt;&lt;/i&gt;&lt;/span&gt;&lt;/span&gt;和&lt;span class=&quot;exturl&quot;&gt;&lt;a class=&quot;exturl__link&quot; href=&quot;https://snailclimb.gitee.io/javaguide/#/docs/java/basic/final,static,this,super?id=final-%e5%85%b3%e9%94%ae%e5%ad%97&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;JavaGuide&lt;/a&gt;&lt;span class=&quot;exturl__icon&quot;&gt;&lt;i class=&quot;fas fa-external-link-alt&quot;&gt;&lt;/i&gt;&lt;/span&gt;&lt;/span&gt;完成的，&lt;strong&gt;计划在今明两天完成Java语言基础系列博客。&lt;/strong&gt;&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="java后端开发" scheme="https://Gemini-Lin.github.io/categories/java%E5%90%8E%E7%AB%AF%E5%BC%80%E5%8F%91/"/>
+    
+      <category term="Java语言基础" scheme="https://Gemini-Lin.github.io/categories/java%E5%90%8E%E7%AB%AF%E5%BC%80%E5%8F%91/Java%E8%AF%AD%E8%A8%80%E5%9F%BA%E7%A1%80/"/>
+    
+    
+      <category term="Java" scheme="https://Gemini-Lin.github.io/tags/Java/"/>
+    
+  </entry>
   
   <entry>
     <title>Tightly-Secure</title>
@@ -608,31 +634,6 @@
     
     
       <category term="汇编语言" scheme="https://Gemini-Lin.github.io/tags/%E6%B1%87%E7%BC%96%E8%AF%AD%E8%A8%80/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>JAVA后端开发学习路线</title>
-    <link href="https://gemini-lin.github.io/java%E5%90%8E%E7%AB%AF%E5%BC%80%E5%8F%91%E5%AD%A6%E4%B9%A0%E8%B7%AF%E7%BA%BF/"/>
-    <id>https://gemini-lin.github.io/java%E5%90%8E%E7%AB%AF%E5%BC%80%E5%8F%91%E5%AD%A6%E4%B9%A0%E8%B7%AF%E7%BA%BF/</id>
-    <published>2020-05-18T13:39:47.000Z</published>
-    <updated>2020-07-03T03:25:59.204Z</updated>
-    
-    <summary type="html">
-    
-      &lt;h1 id=&quot;JAVA学习路线&quot;&gt;
-          &lt;a href=&quot;#JAVA学习路线&quot; class=&quot;heading-link&quot;&gt;&lt;i class=&quot;fas fa-link&quot;&gt;&lt;/i&gt;&lt;/a&gt;JAVA学习路线&lt;/h1&gt;
-      &lt;p&gt;&lt;img src=&quot;http://assets.processon.com/chart_image/5ec28f620791290fe06e73f8.png&quot; alt=&quot;思维导图&quot;&gt;&lt;/p&gt;
-    
-    </summary>
-    
-    
-      <category term="java后端开发" scheme="https://Gemini-Lin.github.io/categories/java%E5%90%8E%E7%AB%AF%E5%BC%80%E5%8F%91/"/>
-    
-      <category term="路线" scheme="https://Gemini-Lin.github.io/categories/java%E5%90%8E%E7%AB%AF%E5%BC%80%E5%8F%91/%E8%B7%AF%E7%BA%BF/"/>
-    
-    
-      <category term="java" scheme="https://Gemini-Lin.github.io/tags/java/"/>
     
   </entry>
   
