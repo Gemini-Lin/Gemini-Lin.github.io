@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://gemini-lin.github.io/"/>
-  <updated>2020-07-11T07:54:12.593Z</updated>
+  <updated>2020-07-11T09:12:54.053Z</updated>
   <id>https://gemini-lin.github.io/</id>
   
   <author>
@@ -17,11 +17,38 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>Java反射(Reflection)</title>
+    <link href="https://gemini-lin.github.io/Reflection/"/>
+    <id>https://gemini-lin.github.io/Reflection/</id>
+    <published>2020-07-11T08:28:34.000Z</published>
+    <updated>2020-07-11T09:12:54.053Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;Free-Talk&quot;&gt;
+          &lt;a href=&quot;#Free-Talk&quot; class=&quot;heading-link&quot;&gt;&lt;i class=&quot;fas fa-link&quot;&gt;&lt;/i&gt;&lt;/a&gt;Free Talk&lt;/h1&gt;
+      &lt;p&gt;本篇文章会从Class类、访问字段等角度深度理解Java反射的特性。&lt;br&gt;同时文章基本上都是直接照搬廖雪峰的反射博客，他真的写的太好了，通俗易懂，我有种班门弄斧的感觉，甚至产生放弃写博客的念头。&lt;br&gt;&lt;span class=&quot;exturl&quot;&gt;&lt;a class=&quot;exturl__link&quot; href=&quot;https://www.liaoxuefeng.com/wiki/1252599548343744/1264799402020448&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;廖雪峰博客&lt;/a&gt;&lt;span class=&quot;exturl__icon&quot;&gt;&lt;i class=&quot;fas fa-external-link-alt&quot;&gt;&lt;/i&gt;&lt;/span&gt;&lt;/span&gt;&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="Java后端开发" scheme="https://Gemini-Lin.github.io/categories/Java%E5%90%8E%E7%AB%AF%E5%BC%80%E5%8F%91/"/>
+    
+      <category term="Java语言基础" scheme="https://Gemini-Lin.github.io/categories/Java%E5%90%8E%E7%AB%AF%E5%BC%80%E5%8F%91/Java%E8%AF%AD%E8%A8%80%E5%9F%BA%E7%A1%80/"/>
+    
+    
+      <category term="Java" scheme="https://Gemini-Lin.github.io/tags/Java/"/>
+    
+      <category term="反射" scheme="https://Gemini-Lin.github.io/tags/%E5%8F%8D%E5%B0%84/"/>
+    
+  </entry>
+  
+  <entry>
     <title>Java枚举(enum)</title>
     <link href="https://gemini-lin.github.io/enumerate/"/>
     <id>https://gemini-lin.github.io/enumerate/</id>
     <published>2020-07-11T03:21:02.000Z</published>
-    <updated>2020-07-11T07:54:12.593Z</updated>
+    <updated>2020-07-11T08:29:29.943Z</updated>
     
     <summary type="html">
     
@@ -32,9 +59,9 @@
     </summary>
     
     
-      <category term="java后端开发" scheme="https://Gemini-Lin.github.io/categories/java%E5%90%8E%E7%AB%AF%E5%BC%80%E5%8F%91/"/>
+      <category term="Java后端开发" scheme="https://Gemini-Lin.github.io/categories/Java%E5%90%8E%E7%AB%AF%E5%BC%80%E5%8F%91/"/>
     
-      <category term="Java语言基础" scheme="https://Gemini-Lin.github.io/categories/java%E5%90%8E%E7%AB%AF%E5%BC%80%E5%8F%91/Java%E8%AF%AD%E8%A8%80%E5%9F%BA%E7%A1%80/"/>
+      <category term="Java语言基础" scheme="https://Gemini-Lin.github.io/categories/Java%E5%90%8E%E7%AB%AF%E5%BC%80%E5%8F%91/Java%E8%AF%AD%E8%A8%80%E5%9F%BA%E7%A1%80/"/>
     
     
       <category term="Java" scheme="https://Gemini-Lin.github.io/tags/Java/"/>
@@ -50,7 +77,7 @@
     <link href="https://gemini-lin.github.io/Java-Object-oriented/"/>
     <id>https://gemini-lin.github.io/Java-Object-oriented/</id>
     <published>2020-07-10T09:28:43.000Z</published>
-    <updated>2020-07-11T03:14:53.943Z</updated>
+    <updated>2020-07-11T08:29:42.993Z</updated>
     
     <summary type="html">
     
@@ -61,9 +88,9 @@
     </summary>
     
     
-      <category term="java后端开发" scheme="https://Gemini-Lin.github.io/categories/java%E5%90%8E%E7%AB%AF%E5%BC%80%E5%8F%91/"/>
+      <category term="Java后端开发" scheme="https://Gemini-Lin.github.io/categories/Java%E5%90%8E%E7%AB%AF%E5%BC%80%E5%8F%91/"/>
     
-      <category term="Java语言基础" scheme="https://Gemini-Lin.github.io/categories/java%E5%90%8E%E7%AB%AF%E5%BC%80%E5%8F%91/Java%E8%AF%AD%E8%A8%80%E5%9F%BA%E7%A1%80/"/>
+      <category term="Java语言基础" scheme="https://Gemini-Lin.github.io/categories/Java%E5%90%8E%E7%AB%AF%E5%BC%80%E5%8F%91/Java%E8%AF%AD%E8%A8%80%E5%9F%BA%E7%A1%80/"/>
     
     
       <category term="Java" scheme="https://Gemini-Lin.github.io/tags/Java/"/>
@@ -77,7 +104,7 @@
     <link href="https://gemini-lin.github.io/java-basic-grammer/"/>
     <id>https://gemini-lin.github.io/java-basic-grammer/</id>
     <published>2020-07-10T07:54:46.000Z</published>
-    <updated>2020-07-10T09:29:27.880Z</updated>
+    <updated>2020-07-11T08:29:48.058Z</updated>
     
     <summary type="html">
     
@@ -89,9 +116,9 @@
     </summary>
     
     
-      <category term="java后端开发" scheme="https://Gemini-Lin.github.io/categories/java%E5%90%8E%E7%AB%AF%E5%BC%80%E5%8F%91/"/>
+      <category term="Java后端开发" scheme="https://Gemini-Lin.github.io/categories/Java%E5%90%8E%E7%AB%AF%E5%BC%80%E5%8F%91/"/>
     
-      <category term="Java语言基础" scheme="https://Gemini-Lin.github.io/categories/java%E5%90%8E%E7%AB%AF%E5%BC%80%E5%8F%91/Java%E8%AF%AD%E8%A8%80%E5%9F%BA%E7%A1%80/"/>
+      <category term="Java语言基础" scheme="https://Gemini-Lin.github.io/categories/Java%E5%90%8E%E7%AB%AF%E5%BC%80%E5%8F%91/Java%E8%AF%AD%E8%A8%80%E5%9F%BA%E7%A1%80/"/>
     
     
       <category term="Java" scheme="https://Gemini-Lin.github.io/tags/Java/"/>
@@ -207,7 +234,7 @@
     <link href="https://gemini-lin.github.io/docker/"/>
     <id>https://gemini-lin.github.io/docker/</id>
     <published>2020-06-28T01:52:57.000Z</published>
-    <updated>2020-07-03T03:26:43.219Z</updated>
+    <updated>2020-07-11T08:29:59.878Z</updated>
     
     <summary type="html">
     
@@ -218,9 +245,9 @@
     </summary>
     
     
-      <category term="java后端开发" scheme="https://Gemini-Lin.github.io/categories/java%E5%90%8E%E7%AB%AF%E5%BC%80%E5%8F%91/"/>
+      <category term="Java后端开发" scheme="https://Gemini-Lin.github.io/categories/Java%E5%90%8E%E7%AB%AF%E5%BC%80%E5%8F%91/"/>
     
-      <category term="常用知识" scheme="https://Gemini-Lin.github.io/categories/java%E5%90%8E%E7%AB%AF%E5%BC%80%E5%8F%91/%E5%B8%B8%E7%94%A8%E7%9F%A5%E8%AF%86/"/>
+      <category term="常用知识" scheme="https://Gemini-Lin.github.io/categories/Java%E5%90%8E%E7%AB%AF%E5%BC%80%E5%8F%91/%E5%B8%B8%E7%94%A8%E7%9F%A5%E8%AF%86/"/>
     
     
       <category term="Docker" scheme="https://Gemini-Lin.github.io/tags/Docker/"/>
@@ -532,7 +559,7 @@
     <link href="https://gemini-lin.github.io/Garbage-Collection/"/>
     <id>https://gemini-lin.github.io/Garbage-Collection/</id>
     <published>2020-05-30T14:01:31.000Z</published>
-    <updated>2020-07-03T03:22:12.433Z</updated>
+    <updated>2020-07-11T08:30:09.039Z</updated>
     
     <summary type="html">
     
@@ -550,9 +577,9 @@
     </summary>
     
     
-      <category term="java后端开发" scheme="https://Gemini-Lin.github.io/categories/java%E5%90%8E%E7%AB%AF%E5%BC%80%E5%8F%91/"/>
+      <category term="Java后端开发" scheme="https://Gemini-Lin.github.io/categories/Java%E5%90%8E%E7%AB%AF%E5%BC%80%E5%8F%91/"/>
     
-      <category term="JVM" scheme="https://Gemini-Lin.github.io/categories/java%E5%90%8E%E7%AB%AF%E5%BC%80%E5%8F%91/JVM/"/>
+      <category term="JVM" scheme="https://Gemini-Lin.github.io/categories/Java%E5%90%8E%E7%AB%AF%E5%BC%80%E5%8F%91/JVM/"/>
     
     
       <category term="JVM" scheme="https://Gemini-Lin.github.io/tags/JVM/"/>
@@ -592,37 +619,6 @@
     
     
       <category term="数据结构" scheme="https://Gemini-Lin.github.io/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>JVM系列（二）-- Java内存管理</title>
-    <link href="https://gemini-lin.github.io/JVM%E7%B3%BB%E5%88%97%EF%BC%88%E4%BA%8C%EF%BC%89-Java%E5%86%85%E5%AD%98%E7%AE%A1%E7%90%86/"/>
-    <id>https://gemini-lin.github.io/JVM%E7%B3%BB%E5%88%97%EF%BC%88%E4%BA%8C%EF%BC%89-Java%E5%86%85%E5%AD%98%E7%AE%A1%E7%90%86/</id>
-    <published>2020-05-28T07:45:04.000Z</published>
-    <updated>2020-07-03T03:21:16.444Z</updated>
-    
-    <summary type="html">
-    
-      &lt;h1 id=&quot;运行时数据区域&quot;&gt;
-          &lt;a href=&quot;#运行时数据区域&quot; class=&quot;heading-link&quot;&gt;&lt;i class=&quot;fas fa-link&quot;&gt;&lt;/i&gt;&lt;/a&gt;运行时数据区域&lt;/h1&gt;
-      &lt;p&gt;&lt;a href=&quot;https://imgchr.com/i/tmAiTO&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;&lt;img src=&quot;https://s1.ax1x.com/2020/05/28/tmAiTO.md.png&quot; alt=&quot;tmAiTO.md.png&quot;&gt;&lt;/a&gt;&lt;/p&gt;
-
-        &lt;h2 id=&quot;程序计数器&quot;&gt;
-          &lt;a href=&quot;#程序计数器&quot; class=&quot;heading-link&quot;&gt;&lt;i class=&quot;fas fa-link&quot;&gt;&lt;/i&gt;&lt;/a&gt;程序计数器&lt;/h2&gt;
-      &lt;p&gt;程序计数器就是一块较小的内存空间，可以看作是当前线程所执行的字节码的行号指示器，和计组中学到的大致一样。&lt;/p&gt;
-    
-    </summary>
-    
-    
-      <category term="java后端开发" scheme="https://Gemini-Lin.github.io/categories/java%E5%90%8E%E7%AB%AF%E5%BC%80%E5%8F%91/"/>
-    
-      <category term="JVM" scheme="https://Gemini-Lin.github.io/categories/java%E5%90%8E%E7%AB%AF%E5%BC%80%E5%8F%91/JVM/"/>
-    
-    
-      <category term="JVM" scheme="https://Gemini-Lin.github.io/tags/JVM/"/>
-    
-      <category term="内存管理" scheme="https://Gemini-Lin.github.io/tags/%E5%86%85%E5%AD%98%E7%AE%A1%E7%90%86/"/>
     
   </entry>
   

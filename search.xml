@@ -57,6 +57,83 @@
       </tags>
   </entry>
   <entry>
+    <title>Java反射(Reflection)</title>
+    <url>/Reflection/</url>
+    <content><![CDATA[<h1 id="Free-Talk">
+          <a href="#Free-Talk" class="heading-link"><i class="fas fa-link"></i></a>Free Talk</h1>
+      <p>本篇文章会从Class类、访问字段等角度深度理解Java反射的特性。<br>同时文章基本上都是直接照搬廖雪峰的反射博客，他真的写的太好了，通俗易懂，我有种班门弄斧的感觉，甚至产生放弃写博客的念头。<br><span class="exturl"><a class="exturl__link" href="https://www.liaoxuefeng.com/wiki/1252599548343744/1264799402020448" target="_blank" rel="noopener">廖雪峰博客</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></p>
+<a id="more"></a>
+
+        <h1 id="简述">
+          <a href="#简述" class="heading-link"><i class="fas fa-link"></i></a>简述</h1>
+      <p><strong>Java的反射是指程序在运行期间可以拿到一个对象的所有信息。</strong><br>正常情况下，如果我们要调用一个对象的方法，或者访问一个对象的字段，通常会传入对象实例：</p>
+<figure class="highlight java"><div class="table-container"><table><tbody><tr><td class="code"><pre><span class="line"><span class="comment">// Main.java</span></span><br><span class="line"><span class="keyword">import</span> com.itranswarp.learnjava.Person;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Main</span> </span>{</span><br><span class="line">    <span class="function">String <span class="title">getFullName</span><span class="params">(Person p)</span> </span>{</span><br><span class="line">        <span class="keyword">return</span> p.getFirstName() + <span class="string">" "</span> + p.getLastName();</span><br><span class="line">    }</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></div></figure>
+<p>但是，如果不能获得<code>Person</code>类，只有一个<code>Object</code>实例，比如这样：</p>
+<figure class="highlight java"><div class="table-container"><table><tbody><tr><td class="code"><pre><span class="line"><span class="function">String <span class="title">getFullName</span><span class="params">(Object obj)</span> </span>{</span><br><span class="line">    <span class="keyword">return</span> ???</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></div></figure>
+<p>怎么办？有童鞋会说：强制转型啊！</p>
+<figure class="highlight java"><div class="table-container"><table><tbody><tr><td class="code"><pre><span class="line"><span class="function">String <span class="title">getFullName</span><span class="params">(Object obj)</span> </span>{</span><br><span class="line">    Person p = (Person) obj;</span><br><span class="line">    <span class="keyword">return</span> p.getFirstName() + <span class="string">" "</span> + p.getLastName();</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></div></figure>
+<p>强制转型的时候，你会发现一个问题：编译上面的代码，仍然需要引用<code>Person</code>类。不然，去掉<code>import</code>语句，你看能不能编译通过？</p>
+<p><strong>所以，反射是为了解决在运行期，对某个实例一无所知的情况下，如何调用其方法。</strong></p>
+
+        <h1 id="Class类">
+          <a href="#Class类" class="heading-link"><i class="fas fa-link"></i></a>Class类</h1>
+      <p><code>JVM</code>在执行过程中动态记载<code>class</code>类，<code>JVM</code>在第一次读取到一种<code>class</code>类型时，将其加载进内存中。<br>每加载一种<code>class</code>,<code>JVM</code>就为其创建一个<code>Class</code>类型的实例，并关联起来。</p>
+
+    <div class="note-plugin success no-icon">
+      
+      <p>这里的<code>Class</code>类型是一个名叫<code>Class</code>的<code>class</code>:</p><figure class="highlight java"><div class="table-container"><table><tbody><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">final</span> <span class="class"><span class="keyword">class</span> <span class="title">Class</span> </span>{</span><br><span class="line">    <span class="function"><span class="keyword">private</span> <span class="title">Class</span><span class="params">()</span> </span>{}</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></div></figure>
+    </div>
+  
+<p>通过<code>Class</code>实例获取<code>class</code>信息的方法称为反射（Reflection）。<br>获取<code>Class</code>实例的方法有以下三种。</p>
+
+        <h2 id="class方法">
+          <a href="#class方法" class="heading-link"><i class="fas fa-link"></i></a>class方法</h2>
+      <p>直接通过一个<code>class</code>的静态变量<code>class</code>获取：</p>
+<figure class="highlight java"><div class="table-container"><table><tbody><tr><td class="code"><pre><span class="line">Class cls = String<span class="class">.<span class="keyword">class</span></span>;</span><br></pre></td></tr></tbody></table></div></figure>
+
+        <h2 id="getClass-方法">
+          <a href="#getClass-方法" class="heading-link"><i class="fas fa-link"></i></a>getClass()方法</h2>
+      <p>如果我们有一个实例变量，可以通过该实例变量提供的<code>getClass()</code>方法获取：</p>
+<figure class="highlight java"><div class="table-container"><table><tbody><tr><td class="code"><pre><span class="line">String s = <span class="string">"Hello"</span>;</span><br><span class="line">Class cls = s.getClass();</span><br></pre></td></tr></tbody></table></div></figure>
+
+        <h2 id="Class-forName-方法">
+          <a href="#Class-forName-方法" class="heading-link"><i class="fas fa-link"></i></a>Class.forName()方法</h2>
+      <p>如果知道一个<code>class</code>的完整类名，可以通过静态方法<code>Class.forName()</code>获取：</p>
+<figure class="highlight java"><div class="table-container"><table><tbody><tr><td class="code"><pre><span class="line">Class cls = Class.forName(<span class="string">"java.lang.String"</span>);</span><br></pre></td></tr></tbody></table></div></figure>
+
+    <div class="note-plugin success no-icon">
+      
+      <p>因为<code>Class</code>实例在<code>JVM</code>中是唯一的，所以，上述方法获取的<code>Class</code>实例是同一个实例。可以用<code>==</code>比较两个<code>Class</code>实例：</p><figure class="highlight java"><div class="table-container"><table><tbody><tr><td class="code"><pre><span class="line">Class cls1 = String<span class="class">.<span class="keyword">class</span></span>;</span><br><span class="line"></span><br><span class="line">String s = <span class="string">"Hello"</span>;</span><br><span class="line">Class cls2 = s.getClass();</span><br><span class="line"></span><br><span class="line"><span class="keyword">boolean</span> sameClass = cls1 == cls2; <span class="comment">// true</span></span><br></pre></td></tr></tbody></table></div></figure>
+    </div>
+  <script>
+        document.querySelectorAll('.github-emoji')
+          .forEach(el => {
+            if (!el.dataset.src) { return; }
+            const img = document.createElement('img');
+            img.style = 'display:none !important;';
+            img.src = el.dataset.src;
+            img.addEventListener('error', () => {
+              img.remove();
+              el.style.color = 'inherit';
+              el.style.backgroundImage = 'none';
+              el.style.background = 'none';
+            });
+            img.addEventListener('load', () => {
+              img.remove();
+            });
+            document.body.appendChild(img);
+          });
+      </script>]]></content>
+      <categories>
+        <category>Java后端开发</category>
+        <category>Java语言基础</category>
+      </categories>
+      <tags>
+        <tag>Java</tag>
+        <tag>反射</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Java枚举(enum)</title>
     <url>/enumerate/</url>
     <content><![CDATA[<h1 id="Free-Talk">
@@ -143,7 +220,7 @@
           });
       </script>]]></content>
       <categories>
-        <category>java后端开发</category>
+        <category>Java后端开发</category>
         <category>Java语言基础</category>
       </categories>
       <tags>
@@ -245,7 +322,7 @@
           });
       </script>]]></content>
       <categories>
-        <category>java后端开发</category>
+        <category>Java后端开发</category>
         <category>Java语言基础</category>
       </categories>
       <tags>
@@ -388,7 +465,7 @@
           });
       </script>]]></content>
       <categories>
-        <category>java后端开发</category>
+        <category>Java后端开发</category>
         <category>Java语言基础</category>
       </categories>
       <tags>
@@ -737,7 +814,7 @@
           });
       </script>]]></content>
       <categories>
-        <category>java后端开发</category>
+        <category>Java后端开发</category>
         <category>常用知识</category>
       </categories>
       <tags>
@@ -1918,7 +1995,7 @@
           });
       </script>]]></content>
       <categories>
-        <category>java后端开发</category>
+        <category>Java后端开发</category>
         <category>JVM</category>
       </categories>
       <tags>
@@ -2295,7 +2372,7 @@
           });
       </script>]]></content>
       <categories>
-        <category>java后端开发</category>
+        <category>Java后端开发</category>
         <category>JVM</category>
       </categories>
       <tags>
@@ -2529,7 +2606,7 @@
           });
       </script>]]></content>
       <categories>
-        <category>java后端开发</category>
+        <category>Java后端开发</category>
         <category>JVM</category>
       </categories>
       <tags>
@@ -2765,7 +2842,7 @@
           });
       </script>]]></content>
       <categories>
-        <category>java后端开发</category>
+        <category>Java后端开发</category>
         <category>路线</category>
       </categories>
       <tags>
