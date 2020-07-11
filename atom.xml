@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://gemini-lin.github.io/"/>
-  <updated>2020-07-11T03:14:53.943Z</updated>
+  <updated>2020-07-11T04:12:00.335Z</updated>
   <id>https://gemini-lin.github.io/</id>
   
   <author>
@@ -15,6 +15,35 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Java枚举(enum)</title>
+    <link href="https://gemini-lin.github.io/enumerate/"/>
+    <id>https://gemini-lin.github.io/enumerate/</id>
+    <published>2020-07-11T03:21:02.000Z</published>
+    <updated>2020-07-11T04:12:00.335Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;Free-Talk&quot;&gt;
+          &lt;a href=&quot;#Free-Talk&quot; class=&quot;heading-link&quot;&gt;&lt;i class=&quot;fas fa-link&quot;&gt;&lt;/i&gt;&lt;/a&gt;Free Talk&lt;/h1&gt;
+      &lt;p&gt;上学期上Java课时都没有听说过枚举的概念，这次偶然在JavaGuide博客中看到了，就想写一些枚举相关知识。本篇文章会较为深入地讲解一下枚举的强大功能。&lt;br&gt;&lt;span class=&quot;exturl&quot;&gt;&lt;a class=&quot;exturl__link&quot; href=&quot;https://snailclimb.gitee.io/javaguide/#/docs/java/basic/%E7%94%A8%E5%A5%BDJava%E4%B8%AD%E7%9A%84%E6%9E%9A%E4%B8%BE%E7%9C%9F%E7%9A%84%E6%B2%A1%E6%9C%89%E9%82%A3%E4%B9%88%E7%AE%80%E5%8D%95&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;博客链接&lt;/a&gt;&lt;span class=&quot;exturl__icon&quot;&gt;&lt;i class=&quot;fas fa-external-link-alt&quot;&gt;&lt;/i&gt;&lt;/span&gt;&lt;/span&gt;&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="java后端开发" scheme="https://Gemini-Lin.github.io/categories/java%E5%90%8E%E7%AB%AF%E5%BC%80%E5%8F%91/"/>
+    
+      <category term="Java语言基础" scheme="https://Gemini-Lin.github.io/categories/java%E5%90%8E%E7%AB%AF%E5%BC%80%E5%8F%91/Java%E8%AF%AD%E8%A8%80%E5%9F%BA%E7%A1%80/"/>
+    
+    
+      <category term="Java" scheme="https://Gemini-Lin.github.io/tags/Java/"/>
+    
+      <category term="面向对象" scheme="https://Gemini-Lin.github.io/tags/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/"/>
+    
+      <category term="枚举" scheme="https://Gemini-Lin.github.io/tags/%E6%9E%9A%E4%B8%BE/"/>
+    
+  </entry>
   
   <entry>
     <title>Java面向对象</title>
@@ -594,39 +623,6 @@
       <category term="JVM" scheme="https://Gemini-Lin.github.io/tags/JVM/"/>
     
       <category term="内存管理" scheme="https://Gemini-Lin.github.io/tags/%E5%86%85%E5%AD%98%E7%AE%A1%E7%90%86/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>JVM系列（一）--Java类的加载机制</title>
-    <link href="https://gemini-lin.github.io/JVM-1/"/>
-    <id>https://gemini-lin.github.io/JVM-1/</id>
-    <published>2020-05-27T08:52:42.000Z</published>
-    <updated>2020-07-03T03:21:30.643Z</updated>
-    
-    <summary type="html">
-    
-      &lt;h1 id=&quot;类的加载定义&quot;&gt;
-          &lt;a href=&quot;#类的加载定义&quot; class=&quot;heading-link&quot;&gt;&lt;i class=&quot;fas fa-link&quot;&gt;&lt;/i&gt;&lt;/a&gt;类的加载定义&lt;/h1&gt;
-      &lt;p&gt;类的加载指的是将类的.class文件中的二进制数据读入到内存中，将其放在运行时数据区的方法区内，然后在堆区创建一个&lt;code&gt;java.lang.Class&lt;/code&gt;对象，用来封装类在方法区内的数据结构。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;http://favorites.ren/assets/images/2017/jvm/jvm-1.png&quot; alt=&quot;image&quot;&gt;&lt;/p&gt;
-&lt;p&gt;类的最终加载产品是位于堆区中的Class对象，Class对象封装了类在方法区内的数据结构，并向Java程序提供访问接口。&lt;/p&gt;
-&lt;p&gt;与C语言的类比：C语言 –&amp;gt; 二进制文件 –&amp;gt; 计算机硬件；Java –&amp;gt; 字节码文件 –&amp;gt; JVM&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;&lt;strong&gt;注意事项：&lt;/strong&gt;类加载器并不需要等到某个类被“首次主动使用”时再加载，JVM规范允许类加载器在预料某个类将要被使用时就预先加载它，但是如果这个类在加载中遇到错误，只有在主动使用此类时才会报错(LinkageError)。&lt;/p&gt;
-&lt;/blockquote&gt;
-    
-    </summary>
-    
-    
-      <category term="java后端开发" scheme="https://Gemini-Lin.github.io/categories/java%E5%90%8E%E7%AB%AF%E5%BC%80%E5%8F%91/"/>
-    
-      <category term="JVM" scheme="https://Gemini-Lin.github.io/categories/java%E5%90%8E%E7%AB%AF%E5%BC%80%E5%8F%91/JVM/"/>
-    
-    
-      <category term="JVM" scheme="https://Gemini-Lin.github.io/tags/JVM/"/>
-    
-      <category term="java类" scheme="https://Gemini-Lin.github.io/tags/java%E7%B1%BB/"/>
     
   </entry>
   
