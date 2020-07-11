@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://gemini-lin.github.io/"/>
-  <updated>2020-07-11T04:12:00.335Z</updated>
+  <updated>2020-07-11T07:54:12.593Z</updated>
   <id>https://gemini-lin.github.io/</id>
   
   <author>
@@ -21,13 +21,13 @@
     <link href="https://gemini-lin.github.io/enumerate/"/>
     <id>https://gemini-lin.github.io/enumerate/</id>
     <published>2020-07-11T03:21:02.000Z</published>
-    <updated>2020-07-11T04:12:00.335Z</updated>
+    <updated>2020-07-11T07:54:12.593Z</updated>
     
     <summary type="html">
     
       &lt;h1 id=&quot;Free-Talk&quot;&gt;
           &lt;a href=&quot;#Free-Talk&quot; class=&quot;heading-link&quot;&gt;&lt;i class=&quot;fas fa-link&quot;&gt;&lt;/i&gt;&lt;/a&gt;Free Talk&lt;/h1&gt;
-      &lt;p&gt;上学期上Java课时都没有听说过枚举的概念，这次偶然在JavaGuide博客中看到了，就想写一些枚举相关知识。本篇文章会较为深入地讲解一下枚举的强大功能。&lt;br&gt;&lt;span class=&quot;exturl&quot;&gt;&lt;a class=&quot;exturl__link&quot; href=&quot;https://snailclimb.gitee.io/javaguide/#/docs/java/basic/%E7%94%A8%E5%A5%BDJava%E4%B8%AD%E7%9A%84%E6%9E%9A%E4%B8%BE%E7%9C%9F%E7%9A%84%E6%B2%A1%E6%9C%89%E9%82%A3%E4%B9%88%E7%AE%80%E5%8D%95&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;博客链接&lt;/a&gt;&lt;span class=&quot;exturl__icon&quot;&gt;&lt;i class=&quot;fas fa-external-link-alt&quot;&gt;&lt;/i&gt;&lt;/span&gt;&lt;/span&gt;&lt;/p&gt;
+      &lt;p&gt;上学期上Java课时都没有听说过枚举的概念，这次偶然在JavaGuide博客中看到了，就想写一些枚举相关知识。本篇文章会较为深入地讲解一下枚举的强大功能。&lt;br&gt;写这边博客的时候，又发现了廖雪峰的Java教程也写的很好，可以配套食用。&lt;br&gt;&lt;span class=&quot;exturl&quot;&gt;&lt;a class=&quot;exturl__link&quot; href=&quot;https://snailclimb.gitee.io/javaguide/#/docs/java/basic/%E7%94%A8%E5%A5%BDJava%E4%B8%AD%E7%9A%84%E6%9E%9A%E4%B8%BE%E7%9C%9F%E7%9A%84%E6%B2%A1%E6%9C%89%E9%82%A3%E4%B9%88%E7%AE%80%E5%8D%95&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;JavaGuide&lt;/a&gt;&lt;span class=&quot;exturl__icon&quot;&gt;&lt;i class=&quot;fas fa-external-link-alt&quot;&gt;&lt;/i&gt;&lt;/span&gt;&lt;/span&gt;和&lt;span class=&quot;exturl&quot;&gt;&lt;a class=&quot;exturl__link&quot; href=&quot;https://www.liaoxuefeng.com/wiki/1252599548343744/1260473188087424&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;廖雪峰&lt;/a&gt;&lt;span class=&quot;exturl__icon&quot;&gt;&lt;i class=&quot;fas fa-external-link-alt&quot;&gt;&lt;/i&gt;&lt;/span&gt;&lt;/span&gt;&lt;/p&gt;
     
     </summary>
     
