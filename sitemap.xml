@@ -2,6 +2,34 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://gemini-lin.github.io/Annotation/</loc>
+    
+    <lastmod>2020-07-12T08:17:39.438Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://gemini-lin.github.io/regex/</loc>
+    
+    <lastmod>2020-07-12T07:41:58.616Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://gemini-lin.github.io/%E8%B0%B7%E6%AD%8C%E6%9C%8D%E5%8A%A1%E5%8A%A9%E6%89%8B/</loc>
+    
+    <lastmod>2020-07-12T07:41:42.718Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://gemini-lin.github.io/java%E5%90%8E%E7%AB%AF%E5%BC%80%E5%8F%91%E5%AD%A6%E4%B9%A0%E8%B7%AF%E7%BA%BF/</loc>
+    
+    <lastmod>2020-07-12T07:41:25.610Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://gemini-lin.github.io/Reflection/</loc>
     
     <lastmod>2020-07-12T07:30:20.195Z</lastmod>
@@ -19,13 +47,6 @@
     <loc>https://gemini-lin.github.io/JVM-1/</loc>
     
     <lastmod>2020-07-11T08:30:26.306Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://gemini-lin.github.io/java%E5%90%8E%E7%AB%AF%E5%BC%80%E5%8F%91%E5%AD%A6%E4%B9%A0%E8%B7%AF%E7%BA%BF/</loc>
-    
-    <lastmod>2020-07-11T08:30:20.985Z</lastmod>
     
   </url>
   
@@ -170,13 +191,6 @@
   </url>
   
   <url>
-    <loc>https://gemini-lin.github.io/regex/</loc>
-    
-    <lastmod>2020-07-03T03:20:35.147Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>https://gemini-lin.github.io/SM2/</loc>
     
     <lastmod>2020-07-03T03:20:06.975Z</lastmod>
@@ -222,13 +236,6 @@
     <loc>https://gemini-lin.github.io/about/index.html</loc>
     
     <lastmod>2020-06-28T09:19:49.775Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://gemini-lin.github.io/%E8%B0%B7%E6%AD%8C%E6%9C%8D%E5%8A%A1%E5%8A%A9%E6%89%8B/</loc>
-    
-    <lastmod>2020-06-17T02:02:09.041Z</lastmod>
     
   </url>
   
