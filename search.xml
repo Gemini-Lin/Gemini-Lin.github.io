@@ -105,7 +105,86 @@
       
       <p>因为<code>Class</code>实例在<code>JVM</code>中是唯一的，所以，上述方法获取的<code>Class</code>实例是同一个实例。可以用<code>==</code>比较两个<code>Class</code>实例：</p><figure class="highlight java"><div class="table-container"><table><tbody><tr><td class="code"><pre><span class="line">Class cls1 = String<span class="class">.<span class="keyword">class</span></span>;</span><br><span class="line"></span><br><span class="line">String s = <span class="string">"Hello"</span>;</span><br><span class="line">Class cls2 = s.getClass();</span><br><span class="line"></span><br><span class="line"><span class="keyword">boolean</span> sameClass = cls1 == cls2; <span class="comment">// true</span></span><br></pre></td></tr></tbody></table></div></figure>
     </div>
-  <script>
+  
+
+        <h1 id="访问字段">
+          <a href="#访问字段" class="heading-link"><i class="fas fa-link"></i></a>访问字段</h1>
+      <p>对任意的一个<code>Object</code>实例，只要我们获取了它的<code>Class</code>，就可以获取它的一切信息。<br>我们先看看如何通过<code>Class</code>实例获取字段信息。<code>Class</code>类提供了以下几个方法来获取字段：</p>
+<ul>
+<li><strong><code>Field getField(name)：</code></strong>根据字段名获取某个public的field（包括父类）
+    <div class="note-plugin success no-icon">
+      
+      <p>即获取name所对应的Public的字段</p>
+    </div>
+  </li>
+<li><strong><code>Field getDeclaredField(name)：</code></strong>根据字段名获取当前类的某个field（不包括父类）
+    <div class="note-plugin success no-icon">
+      
+      <p>即获取name所对应的字段，可以是Public，也可以是Private</p>
+    </div>
+  </li>
+<li><strong><code>Field[] getFields()：</code></strong>获取所有public的field（包括父类）</li>
+<li><strong><code>Field[] getDeclaredFields()：</code></strong>获取当前类的所有field（不包括父类）</li>
+</ul>
+<p>实例代码：</p>
+<figure class="highlight java"><div class="table-container"><table><tbody><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Main</span> </span>{</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> <span class="keyword">throws</span> Exception </span>{</span><br><span class="line">        <span class="comment">// 上面提到第一种的class方法获取Class实例</span></span><br><span class="line">        Class stdClass = Student<span class="class">.<span class="keyword">class</span></span>;</span><br><span class="line">        <span class="comment">// 获取public字段"score":</span></span><br><span class="line">        System.out.println(stdClass.getField(<span class="string">"score"</span>));</span><br><span class="line">        <span class="comment">// 获取继承的public字段"name":</span></span><br><span class="line">        System.out.println(stdClass.getField(<span class="string">"name"</span>));</span><br><span class="line">        <span class="comment">// 获取private字段"grade":</span></span><br><span class="line">        System.out.println(stdClass.getDeclaredField(<span class="string">"grade"</span>));</span><br><span class="line">    }</span><br><span class="line">}</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Student</span> <span class="keyword">extends</span> <span class="title">Person</span> </span>{</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">int</span> score;</span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">int</span> grade;</span><br><span class="line">}</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Person</span> </span>{</span><br><span class="line">    <span class="keyword">public</span> String name;</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></div></figure>
+
+    <div class="note-plugin success no-icon">
+      
+      <p>上述代码首先获取<code>Student</code>的<code>Class</code>实例，然后，分别获取<code>public</code>字段、继承的<code>public</code>字段以及<code>private</code>字段，打印出的<code>Field</code>类似：</p><figure class="highlight java"><div class="table-container"><table><tbody><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">int</span> Student.score</span><br><span class="line"><span class="keyword">public</span> java.lang.String Person.name</span><br><span class="line"><span class="keyword">private</span> <span class="keyword">int</span> Student.grade</span><br></pre></td></tr></tbody></table></div></figure>
+    </div>
+  
+<p>一个<code>Field</code>对象包含了一个字段的所有信息：</p>
+<ul>
+<li><code>getName()：</code>返回字段名称，例如，<code>"name"</code>；</li>
+<li><code>getType()：</code>返回字段类型，也是一个<code>Class</code>实例，例如，<code>String.class</code>；</li>
+<li><code>getModifiers()：</code>返回字段的修饰符，它是一个<code>int</code>，不同的<code>bit</code>表示不同的含义。</li>
+</ul>
+<p>以<code>String</code>类的<code>value</code>字段为例，它的定义是：</p>
+<figure class="highlight java"><div class="table-container"><table><tbody><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">final</span> <span class="class"><span class="keyword">class</span> <span class="title">String</span> </span>{</span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">final</span> <span class="keyword">byte</span>[] value;</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></div></figure>
+<p>我们用反射获取该字段的信息，代码如下：</p>
+<figure class="highlight java"><div class="table-container"><table><tbody><tr><td class="code"><pre><span class="line">Field f = String.class.getDeclaredField("value");</span><br><span class="line">f.getName(); <span class="comment">// "value"</span></span><br><span class="line">f.getType(); <span class="comment">// class [B 表示byte[]类型</span></span><br><span class="line"><span class="keyword">int</span> m = f.getModifiers();</span><br><span class="line">Modifier.isFinal(m); <span class="comment">// true</span></span><br><span class="line">Modifier.isPublic(m); <span class="comment">// false</span></span><br><span class="line">Modifier.isProtected(m); <span class="comment">// false</span></span><br><span class="line">Modifier.isPrivate(m); <span class="comment">// true</span></span><br><span class="line">Modifier.isStatic(m); <span class="comment">// false</span></span><br></pre></td></tr></tbody></table></div></figure>
+
+        <h2 id="获取字段值">
+          <a href="#获取字段值" class="heading-link"><i class="fas fa-link"></i></a>获取字段值</h2>
+      <p>利用反射拿到字段的一个<code>Field</code>实例只是第一步，我们还可以拿到一个实例对应的该字段的值。</p>
+<p>例如，对于一个<code>Person</code>实例，我们可以先拿到<code>name</code>字段对应的<code>Field</code>，再获取这个实例的<code>name</code>字段的值：</p>
+<figure class="highlight java"><div class="table-container"><table><tbody><tr><td class="code"><pre><span class="line"><span class="comment">// reflection</span></span><br><span class="line"><span class="keyword">import</span> java.lang.reflect.Field;</span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Main</span> </span>{</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> <span class="keyword">throws</span> Exception </span>{</span><br><span class="line">        <span class="comment">// 上面提到的第二种方法getClass()获取Class实例</span></span><br><span class="line">        Object p = <span class="keyword">new</span> Person(<span class="string">"Xiao Ming"</span>);</span><br><span class="line">        Class c = p.getClass();</span><br><span class="line">        Field f = c.getDeclaredField(<span class="string">"name"</span>);</span><br><span class="line">        Object value = f.get(p);</span><br><span class="line">        System.out.println(value); <span class="comment">// "Xiao Ming"</span></span><br><span class="line">    }</span><br><span class="line">}</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Person</span> </span>{</span><br><span class="line">    <span class="keyword">private</span> String name;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">Person</span><span class="params">(String name)</span> </span>{</span><br><span class="line">        <span class="keyword">this</span>.name = name;</span><br><span class="line">    }</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></div></figure>
+<p>上述代码先获取<code>Class</code>实例，再获取<code>Field</code>实例，然后，用<code>Field.get(Object)</code>获取指定实例的指定字段的值。</p>
+<p>运行代码，如果不出意外，会得到一个<code>IllegalAccessException</code>，这是因为<code>name</code>被定义为一个<code>private</code>字段，正常情况下，<code>Main</code>类无法访问<code>Person</code>类的<code>private</code>字段。要修复错误，可以将<code>private</code>改为<code>public</code>，或者，在调用<code>Object value = f.get(p);</code>前，先写一句：</p>
+<figure class="highlight java"><div class="table-container"><table><tbody><tr><td class="code"><pre><span class="line">f.setAccessible(<span class="keyword">true</span>);</span><br></pre></td></tr></tbody></table></div></figure>
+<p>调用<code>Field.setAccessible(true)</code>的意思是，别管这个字段是不是<code>public</code>，一律允许访问。</p>
+<p>可以试着加上上述语句，再运行代码，就可以打印出<code>private</code>字段的值。</p>
+
+    <div class="note-plugin success no-icon">
+      
+      <p><strong>有童鞋会问：如果使用反射可以获取<code>private</code>字段的值，那么类的封装还有什么意义？</strong></p><p>答案是正常情况下，我们总是通过<code>p.name</code>来访问<code>Person</code>的<code>name</code>字段，编译器会根据<code>public</code>、<code>protected</code>和<code>private</code>决定是否允许访问字段，这样就达到了数据封装的目的。</p><p>而反射是一种非常规的用法，使用反射，首先代码非常繁琐，其次，它更多地是给工具或者底层框架来使用，目的是在不知道目标实例任何信息的情况下，获取特定字段的值。</p><p>此外，<code>setAccessible(true)</code>可能会失败。如果<code>JVM</code>运行期存在<code>SecurityManager</code>，那么它会根据规则进行检查，有可能阻止<code>setAccessible(true)</code>。例如，某个<code>SecurityManager</code>可能不允许对<code>java</code>和<code>javax</code>开头的<code>package</code>的类调用<code>setAccessible(true)</code>，这样可以保证<code>JVM</code>核心库的安全。</p>
+    </div>
+  
+
+        <h2 id="设置字段值">
+          <a href="#设置字段值" class="heading-link"><i class="fas fa-link"></i></a>设置字段值</h2>
+      <p>通过<code>Field</code>实例既然可以获取到指定实例的字段值，自然也可以设置字段的值。</p>
+<p>设置字段值是通过<code>Field.set(Object, Object)</code>实现的，<strong>其中第一个<code>Object</code>参数是指定的实例，第二个<code>Object</code>参数是待修改的值。</strong>示例代码如下：</p>
+<figure class="highlight java"><div class="table-container"><table><tbody><tr><td class="code"><pre><span class="line"><span class="comment">// reflection</span></span><br><span class="line"><span class="keyword">import</span> java.lang.reflect.Field;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Main</span> </span>{</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> <span class="keyword">throws</span> Exception </span>{</span><br><span class="line">        <span class="comment">// 创建Person对象实例</span></span><br><span class="line">        Person p = <span class="keyword">new</span> Person(<span class="string">"Xiao Ming"</span>);</span><br><span class="line">        <span class="comment">// 获取实例name</span></span><br><span class="line">        System.out.println(p.getName()); <span class="comment">// "Xiao Ming"</span></span><br><span class="line">        <span class="comment">// 通过getClass()获取Class实例</span></span><br><span class="line">        Class c = p.getClass();</span><br><span class="line">        <span class="comment">// 通过getDeclaredField(name)获取Field实例</span></span><br><span class="line">        Field f = c.getDeclaredField(<span class="string">"name"</span>);</span><br><span class="line">        <span class="comment">// 对于private字段，调用setAccessible()来允许访问</span></span><br><span class="line">        f.setAccessible(<span class="keyword">true</span>);</span><br><span class="line">        <span class="comment">// 使用Field.set(obj,obj)来修改实例的字段值</span></span><br><span class="line">        f.set(p, <span class="string">"Xiao Hong"</span>);</span><br><span class="line">        System.out.println(p.getName()); <span class="comment">// "Xiao Hong"</span></span><br><span class="line">    }</span><br><span class="line">}</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Person</span> </span>{</span><br><span class="line">    <span class="keyword">private</span> String name;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">Person</span><span class="params">(String name)</span> </span>{</span><br><span class="line">        <span class="keyword">this</span>.name = name;</span><br><span class="line">    }</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> String <span class="title">getName</span><span class="params">()</span> </span>{</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">this</span>.name;</span><br><span class="line">    }</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></div></figure>
+
+    <div class="note-plugin info no-icon">
+      
+      <p>运行上述代码，打印的<code>name</code>字段从<code>Xiao Ming</code>变成了<code>Xiao Hong</code>，说明通过反射可以直接修改字段的值。</p><p>同样的，修改非<code>public</code>字段，需要首先调用<code>setAccessible(true)</code>。</p>
+    </div>
+  
+
+
+        <h2 id="小结">
+          <a href="#小结" class="heading-link"><i class="fas fa-link"></i></a>小结</h2>
+      <ol>
+<li><code>Java</code>的反射API提供的<code>Field</code>类封装了字段的所有信息：</li>
+<li>通过<code>Class</code>实例的方法可以获取<code>Field</code>实例：<code>getField()</code>，<code>getFields()</code>，<code>getDeclaredField()</code>，<code>getDeclaredFields()</code>；</li>
+<li>通过<code>Field</code>实例可以获取字段信息：<code>getName()</code>，<code>getType()</code>，<code>getModifiers()</code>；</li>
+<li>通过<code>Field</code>实例可以读取或设置某个对象的字段，如果存在访问限制，要首先调用<code>setAccessible(true)</code>来访问非<code>public</code>字段。</li>
+<li>通过反射读写字段是一种非常规方法，它会破坏对象的封装。</li>
+</ol>
+<script>
         document.querySelectorAll('.github-emoji')
           .forEach(el => {
             if (!el.dataset.src) { return; }
