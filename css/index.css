@@ -2491,6 +2491,9 @@ kbd {
 .back2top__icon:hover {
   color: #fc6423;
 }
+a.fancybox {
+  cursor: zoom-in;
+}
 .zoomimg-mask {
   position: fixed;
   top: 0;
@@ -2640,6 +2643,9 @@ kbd {
   border: 0;
   width: 0;
   height: 0;
+}
+.post-share {
+  margin: 0 0 1rem;
 }
 .gallery img {
   margin-bottom: 10px;
