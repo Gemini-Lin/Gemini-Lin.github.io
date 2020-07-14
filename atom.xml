@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://gemini-lin.github.io/"/>
-  <updated>2020-07-12T09:34:27.794Z</updated>
+  <updated>2020-07-14T02:03:38.962Z</updated>
   <id>https://gemini-lin.github.io/</id>
   
   <author>
@@ -15,6 +15,33 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Java泛型</title>
+    <link href="https://gemini-lin.github.io/Generic/"/>
+    <id>https://gemini-lin.github.io/Generic/</id>
+    <published>2020-07-14T00:55:48.000Z</published>
+    <updated>2020-07-14T02:03:38.962Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;Free-Talk&quot;&gt;
+          &lt;a href=&quot;#Free-Talk&quot; class=&quot;heading-link&quot;&gt;&lt;i class=&quot;fas fa-link&quot;&gt;&lt;/i&gt;&lt;/a&gt;Free Talk&lt;/h1&gt;
+      &lt;p&gt;Java 泛型（generics）是 JDK 5 中引入的一个新特性, 泛型提供了编译时类型安全检测机制，该机制允许程序员在编译时检测到非法的类型。&lt;br&gt;&lt;strong&gt;泛型的本质是参数化类型，也就是说所操作的数据类型被指定为一个参数。&lt;/strong&gt;&lt;br&gt;&lt;span class=&quot;exturl&quot;&gt;&lt;a class=&quot;exturl__link&quot; href=&quot;https://www.liaoxuefeng.com/wiki/1252599548343744/1265102638843296&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;廖雪峰&lt;/a&gt;&lt;span class=&quot;exturl__icon&quot;&gt;&lt;i class=&quot;fas fa-external-link-alt&quot;&gt;&lt;/i&gt;&lt;/span&gt;&lt;/span&gt;、&lt;span class=&quot;exturl&quot;&gt;&lt;a class=&quot;exturl__link&quot; href=&quot;https://www.runoob.com/java/java-generics.html&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;菜鸟&lt;/a&gt;&lt;span class=&quot;exturl__icon&quot;&gt;&lt;i class=&quot;fas fa-external-link-alt&quot;&gt;&lt;/i&gt;&lt;/span&gt;&lt;/span&gt;&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="Java后端开发" scheme="https://Gemini-Lin.github.io/categories/Java%E5%90%8E%E7%AB%AF%E5%BC%80%E5%8F%91/"/>
+    
+      <category term="Java语言基础" scheme="https://Gemini-Lin.github.io/categories/Java%E5%90%8E%E7%AB%AF%E5%BC%80%E5%8F%91/Java%E8%AF%AD%E8%A8%80%E5%9F%BA%E7%A1%80/"/>
+    
+    
+      <category term="Java" scheme="https://Gemini-Lin.github.io/tags/Java/"/>
+    
+      <category term="泛型" scheme="https://Gemini-Lin.github.io/tags/%E6%B3%9B%E5%9E%8B/"/>
+    
+  </entry>
   
   <entry>
     <title>Java注解(Annotation)</title>
@@ -578,40 +605,6 @@
     
     
       <category term="计算机网络" scheme="https://Gemini-Lin.github.io/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>JVM系列（三）-- 垃圾收集基础(GC)</title>
-    <link href="https://gemini-lin.github.io/Garbage-Collection/"/>
-    <id>https://gemini-lin.github.io/Garbage-Collection/</id>
-    <published>2020-05-30T14:01:31.000Z</published>
-    <updated>2020-07-11T08:30:09.039Z</updated>
-    
-    <summary type="html">
-    
-      &lt;h1 id=&quot;概述&quot;&gt;
-          &lt;a href=&quot;#概述&quot; class=&quot;heading-link&quot;&gt;&lt;i class=&quot;fas fa-link&quot;&gt;&lt;/i&gt;&lt;/a&gt;概述&lt;/h1&gt;
-      
-        &lt;h2 id=&quot;起源&quot;&gt;
-          &lt;a href=&quot;#起源&quot; class=&quot;heading-link&quot;&gt;&lt;i class=&quot;fas fa-link&quot;&gt;&lt;/i&gt;&lt;/a&gt;起源&lt;/h2&gt;
-      &lt;p&gt;&lt;strong&gt;误解:&lt;/strong&gt; 垃圾收集(Garbage Collection,简称GC)是Java语言的伴生产物。&lt;br&gt;事实上，垃圾收集的历史远远比Java久远，在1960年诞生于麻省理工学院的Lisp是第一门开始使用内存动态分配和垃圾收集技术的语言。当Lisp还在胚胎时期时，其作者John McCarthy就思考过垃圾收集需要完成的三件事情：&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;哪些内存需要回收？&lt;/li&gt;
-&lt;li&gt;什么时候回收？&lt;/li&gt;
-&lt;li&gt;如何回收？&lt;/li&gt;&lt;/ul&gt;
-    
-    </summary>
-    
-    
-      <category term="Java后端开发" scheme="https://Gemini-Lin.github.io/categories/Java%E5%90%8E%E7%AB%AF%E5%BC%80%E5%8F%91/"/>
-    
-      <category term="JVM" scheme="https://Gemini-Lin.github.io/categories/Java%E5%90%8E%E7%AB%AF%E5%BC%80%E5%8F%91/JVM/"/>
-    
-    
-      <category term="JVM" scheme="https://Gemini-Lin.github.io/tags/JVM/"/>
-    
-      <category term="垃圾收集" scheme="https://Gemini-Lin.github.io/tags/%E5%9E%83%E5%9C%BE%E6%94%B6%E9%9B%86/"/>
     
   </entry>
   
