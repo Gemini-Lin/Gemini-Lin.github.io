@@ -2,16 +2,23 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>https://gemini-lin.github.io/Collection/</loc>
+    <loc>https://gemini-lin.github.io/ArrayList/</loc>
     
-    <lastmod>2020-07-14T06:36:06.834Z</lastmod>
+    <lastmod>2020-07-14T08:31:45.852Z</lastmod>
     
   </url>
   
   <url>
     <loc>https://gemini-lin.github.io/Generic/</loc>
     
-    <lastmod>2020-07-14T02:03:38.962Z</lastmod>
+    <lastmod>2020-07-14T08:02:31.762Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://gemini-lin.github.io/Collection/</loc>
+    
+    <lastmod>2020-07-14T06:36:06.834Z</lastmod>
     
   </url>
   

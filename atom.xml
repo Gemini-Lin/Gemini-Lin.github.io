@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://gemini-lin.github.io/"/>
-  <updated>2020-07-14T06:36:06.834Z</updated>
+  <updated>2020-07-14T08:31:45.852Z</updated>
   <id>https://gemini-lin.github.io/</id>
   
   <author>
@@ -15,6 +15,36 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>ArrayList源码分析</title>
+    <link href="https://gemini-lin.github.io/ArrayList/"/>
+    <id>https://gemini-lin.github.io/ArrayList/</id>
+    <published>2020-07-14T06:53:10.000Z</published>
+    <updated>2020-07-14T08:31:45.852Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;Free-Talk&quot;&gt;
+          &lt;a href=&quot;#Free-Talk&quot; class=&quot;heading-link&quot;&gt;&lt;i class=&quot;fas fa-link&quot;&gt;&lt;/i&gt;&lt;/a&gt;Free Talk&lt;/h1&gt;
+      &lt;p&gt;&lt;strong&gt;&lt;code&gt;ArrayList&lt;/code&gt; 的底层是数组队列，相当于动态数组。&lt;/strong&gt;与 Java 中的数组相比，它的容量能动态增长。在添加大量元素前，应用程序可以使用&lt;code&gt;ensureCapacity&lt;/code&gt;操作来增加 &lt;code&gt;ArrayList&lt;/code&gt; 实例的容量。这可以减少递增式再分配的数量。&lt;/p&gt;
+&lt;p&gt;它继承于 &lt;code&gt;AbstractList&lt;/code&gt;，实现了 &lt;code&gt;List, RandomAccess, Cloneable, java.io.Serializable&lt;/code&gt; 这些接口。&lt;span class=&quot;exturl&quot;&gt;&lt;a class=&quot;exturl__link&quot; href=&quot;https://snailclimb.gitee.io/javaguide/#/docs/java/collection/ArrayList&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;JavaGuide&lt;/a&gt;&lt;span class=&quot;exturl__icon&quot;&gt;&lt;i class=&quot;fas fa-external-link-alt&quot;&gt;&lt;/i&gt;&lt;/span&gt;&lt;/span&gt;&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="Java后端开发" scheme="https://Gemini-Lin.github.io/categories/Java%E5%90%8E%E7%AB%AF%E5%BC%80%E5%8F%91/"/>
+    
+      <category term="Java语言基础" scheme="https://Gemini-Lin.github.io/categories/Java%E5%90%8E%E7%AB%AF%E5%BC%80%E5%8F%91/Java%E8%AF%AD%E8%A8%80%E5%9F%BA%E7%A1%80/"/>
+    
+    
+      <category term="Java" scheme="https://Gemini-Lin.github.io/tags/Java/"/>
+    
+      <category term="集合" scheme="https://Gemini-Lin.github.io/tags/%E9%9B%86%E5%90%88/"/>
+    
+      <category term="ArrayList" scheme="https://Gemini-Lin.github.io/tags/ArrayList/"/>
+    
+  </entry>
   
   <entry>
     <title>Java集合(Collection)</title>
@@ -48,7 +78,7 @@
     <link href="https://gemini-lin.github.io/Generic/"/>
     <id>https://gemini-lin.github.io/Generic/</id>
     <published>2020-07-14T00:55:48.000Z</published>
-    <updated>2020-07-14T02:03:38.962Z</updated>
+    <updated>2020-07-14T08:02:31.762Z</updated>
     
     <summary type="html">
     
@@ -563,35 +593,6 @@
     
     
       <category term="OS" scheme="https://Gemini-Lin.github.io/tags/OS/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>How to write a summary</title>
-    <link href="https://gemini-lin.github.io/How-to-write-a-summary/"/>
-    <id>https://gemini-lin.github.io/How-to-write-a-summary/</id>
-    <published>2020-06-02T02:47:10.000Z</published>
-    <updated>2020-07-03T03:21:54.470Z</updated>
-    
-    <summary type="html">
-    
-      &lt;h1 id=&quot;Introduction&quot;&gt;
-          &lt;a href=&quot;#Introduction&quot; class=&quot;heading-link&quot;&gt;&lt;i class=&quot;fas fa-link&quot;&gt;&lt;/i&gt;&lt;/a&gt;Introduction&lt;/h1&gt;
-      &lt;p&gt;撰写读后摘要是2018级专用英语期末笔试写作部分的第一题，满分10分，占总分10%。 题目要求考生先阅读一篇长度为 300-350 词的短文，然后概括、浓缩其主旨大意及主要内容， 并撰写一篇长度 100-120 词的摘要。阅读短文主要涉及议论性、说明性和学术性内容&lt;/p&gt;
-
-        &lt;h1 id=&quot;Find-out-theme-of-article&quot;&gt;
-          &lt;a href=&quot;#Find-out-theme-of-article&quot; class=&quot;heading-link&quot;&gt;&lt;i class=&quot;fas fa-link&quot;&gt;&lt;/i&gt;&lt;/a&gt;Find out theme of article&lt;/h1&gt;
-      &lt;p&gt;用一段话来高度概括文章的主要内容(两分)&lt;br&gt;This article addresses the issue of …&lt;/p&gt;
-    
-    </summary>
-    
-    
-      <category term="课程总结" scheme="https://Gemini-Lin.github.io/categories/%E8%AF%BE%E7%A8%8B%E6%80%BB%E7%BB%93/"/>
-    
-      <category term="商务英语" scheme="https://Gemini-Lin.github.io/categories/%E8%AF%BE%E7%A8%8B%E6%80%BB%E7%BB%93/%E5%95%86%E5%8A%A1%E8%8B%B1%E8%AF%AD/"/>
-    
-    
-      <category term="商务英语" scheme="https://Gemini-Lin.github.io/tags/%E5%95%86%E5%8A%A1%E8%8B%B1%E8%AF%AD/"/>
     
   </entry>
   
