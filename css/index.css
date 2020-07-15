@@ -3033,12 +3033,12 @@ html.nightmode {
   content: '|';
   margin: 0 10px;
 }
-@media (min-width: 1138px) {
+@media (min-width: 1208px) {
   .header-nav-inner {
-    width: 1138px;
+    width: 1208px;
   }
   .main-inner {
-    width: 1138px;
+    width: 1208px;
   }
 }
 @media (min-width: 991.98px) {
