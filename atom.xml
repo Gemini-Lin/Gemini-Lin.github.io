@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://gemini-lin.github.io/"/>
-  <updated>2020-07-15T09:46:30.988Z</updated>
+  <updated>2020-07-15T11:13:13.488Z</updated>
   <id>https://gemini-lin.github.io/</id>
   
   <author>
@@ -17,11 +17,11 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>JVM系列（四）-- 字节码执行机制</title>
+    <title>JVM系列（四）-- 字节码执行机制(Part 1)</title>
     <link href="https://gemini-lin.github.io/Class-Execution/"/>
     <id>https://gemini-lin.github.io/Class-Execution/</id>
     <published>2020-07-15T07:53:33.000Z</published>
-    <updated>2020-07-15T09:46:30.988Z</updated>
+    <updated>2020-07-15T11:13:13.488Z</updated>
     
     <summary type="html">
     
@@ -41,6 +41,8 @@
       <category term="JVM" scheme="https://Gemini-Lin.github.io/tags/JVM/"/>
     
       <category term="字节码" scheme="https://Gemini-Lin.github.io/tags/%E5%AD%97%E8%8A%82%E7%A0%81/"/>
+    
+      <category term="运行时栈帧结构" scheme="https://Gemini-Lin.github.io/tags/%E8%BF%90%E8%A1%8C%E6%97%B6%E6%A0%88%E5%B8%A7%E7%BB%93%E6%9E%84/"/>
     
   </entry>
   
