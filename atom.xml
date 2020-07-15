@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://gemini-lin.github.io/"/>
-  <updated>2020-07-15T05:18:20.457Z</updated>
+  <updated>2020-07-15T09:46:30.988Z</updated>
   <id>https://gemini-lin.github.io/</id>
   
   <author>
@@ -15,6 +15,34 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>JVM系列（四）-- 字节码执行机制</title>
+    <link href="https://gemini-lin.github.io/Class-Execution/"/>
+    <id>https://gemini-lin.github.io/Class-Execution/</id>
+    <published>2020-07-15T07:53:33.000Z</published>
+    <updated>2020-07-15T09:46:30.988Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;运行时栈帧结构&quot;&gt;
+          &lt;a href=&quot;#运行时栈帧结构&quot; class=&quot;heading-link&quot;&gt;&lt;i class=&quot;fas fa-link&quot;&gt;&lt;/i&gt;&lt;/a&gt;运行时栈帧结构&lt;/h1&gt;
+      &lt;p&gt;Java虚拟机以方法作为最基本的执行单元，&lt;code&gt;“栈帧”（Stack Frame）&lt;/code&gt;则是用于支持虚拟机进行方法调用和方法执行背后的数据结构，它也是虚拟机运行时数据区中的&lt;code&gt;虚拟机栈（Virtual Machine Stack）&lt;/code&gt;的栈元素。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;每一个方法从调用开始至执行结束的过程，都对应着一个栈帧在虚拟机栈里面从入栈到出栈的过程。&lt;/strong&gt;&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="Java后端" scheme="https://Gemini-Lin.github.io/categories/Java%E5%90%8E%E7%AB%AF/"/>
+    
+      <category term="JVM" scheme="https://Gemini-Lin.github.io/categories/Java%E5%90%8E%E7%AB%AF/JVM/"/>
+    
+    
+      <category term="JVM" scheme="https://Gemini-Lin.github.io/tags/JVM/"/>
+    
+      <category term="字节码" scheme="https://Gemini-Lin.github.io/tags/%E5%AD%97%E8%8A%82%E7%A0%81/"/>
+    
+  </entry>
   
   <entry>
     <title>ArrayList源码分析</title>
@@ -555,44 +583,6 @@
     
     
       <category term="SQL" scheme="https://Gemini-Lin.github.io/tags/SQL/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Operating System(1)</title>
-    <link href="https://gemini-lin.github.io/Operating-System-1/"/>
-    <id>https://gemini-lin.github.io/Operating-System-1/</id>
-    <published>2020-06-07T10:53:11.000Z</published>
-    <updated>2020-07-03T03:20:59.487Z</updated>
-    
-    <summary type="html">
-    
-      &lt;h1 id=&quot;概述&quot;&gt;
-          &lt;a href=&quot;#概述&quot; class=&quot;heading-link&quot;&gt;&lt;i class=&quot;fas fa-link&quot;&gt;&lt;/i&gt;&lt;/a&gt;概述&lt;/h1&gt;
-      
-        &lt;h2 id=&quot;操作系统的目标和作用&quot;&gt;
-          &lt;a href=&quot;#操作系统的目标和作用&quot; class=&quot;heading-link&quot;&gt;&lt;i class=&quot;fas fa-link&quot;&gt;&lt;/i&gt;&lt;/a&gt;操作系统的目标和作用&lt;/h2&gt;
-      
-        &lt;h3 id=&quot;目标&quot;&gt;
-          &lt;a href=&quot;#目标&quot; class=&quot;heading-link&quot;&gt;&lt;i class=&quot;fas fa-link&quot;&gt;&lt;/i&gt;&lt;/a&gt;目标&lt;/h3&gt;
-      &lt;p&gt;方便性、有效性、可扩充性、开放性。&lt;/p&gt;
-
-        &lt;h3 id=&quot;作用&quot;&gt;
-          &lt;a href=&quot;#作用&quot; class=&quot;heading-link&quot;&gt;&lt;i class=&quot;fas fa-link&quot;&gt;&lt;/i&gt;&lt;/a&gt;作用&lt;/h3&gt;
-      &lt;ol&gt;
-&lt;li&gt;作为用户与计算机硬件之间的接口&lt;/li&gt;
-&lt;li&gt;作为计算机系统资源的管理者&lt;/li&gt;
-&lt;li&gt;实现了对计算机资源的抽象&lt;/li&gt;&lt;/ol&gt;
-    
-    </summary>
-    
-    
-      <category term="课程总结" scheme="https://Gemini-Lin.github.io/categories/%E8%AF%BE%E7%A8%8B%E6%80%BB%E7%BB%93/"/>
-    
-      <category term="操作系统" scheme="https://Gemini-Lin.github.io/categories/%E8%AF%BE%E7%A8%8B%E6%80%BB%E7%BB%93/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/"/>
-    
-    
-      <category term="OS" scheme="https://Gemini-Lin.github.io/tags/OS/"/>
     
   </entry>
   

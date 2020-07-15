@@ -2,6 +2,20 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://gemini-lin.github.io/Class-Execution/</loc>
+    
+    <lastmod>2020-07-15T09:46:30.988Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://gemini-lin.github.io/java%E5%90%8E%E7%AB%AF%E5%BC%80%E5%8F%91%E5%AD%A6%E4%B9%A0%E8%B7%AF%E7%BA%BF/</loc>
+    
+    <lastmod>2020-07-15T07:54:12.915Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://gemini-lin.github.io/regex/</loc>
     
     <lastmod>2020-07-15T05:19:36.923Z</lastmod>
@@ -26,13 +40,6 @@
     <loc>https://gemini-lin.github.io/JVM-1/</loc>
     
     <lastmod>2020-07-15T05:19:26.456Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://gemini-lin.github.io/java%E5%90%8E%E7%AB%AF%E5%BC%80%E5%8F%91%E5%AD%A6%E4%B9%A0%E8%B7%AF%E7%BA%BF/</loc>
-    
-    <lastmod>2020-07-15T05:19:23.535Z</lastmod>
     
   </url>
   
