@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://gemini-lin.github.io/"/>
-  <updated>2020-07-15T03:36:27.443Z</updated>
+  <updated>2020-07-15T04:47:17.738Z</updated>
   <id>https://gemini-lin.github.io/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="https://gemini-lin.github.io/ArrayList/"/>
     <id>https://gemini-lin.github.io/ArrayList/</id>
     <published>2020-07-14T06:53:10.000Z</published>
-    <updated>2020-07-15T03:36:27.443Z</updated>
+    <updated>2020-07-15T04:47:17.738Z</updated>
     
     <summary type="html">
     
@@ -33,9 +33,9 @@
     </summary>
     
     
-      <category term="Java后端开发" scheme="https://Gemini-Lin.github.io/categories/Java%E5%90%8E%E7%AB%AF%E5%BC%80%E5%8F%91/"/>
+      <category term="Java" scheme="https://Gemini-Lin.github.io/categories/Java/"/>
     
-      <category term="Java语言基础" scheme="https://Gemini-Lin.github.io/categories/Java%E5%90%8E%E7%AB%AF%E5%BC%80%E5%8F%91/Java%E8%AF%AD%E8%A8%80%E5%9F%BA%E7%A1%80/"/>
+      <category term="Java语言基础" scheme="https://Gemini-Lin.github.io/categories/Java/Java%E8%AF%AD%E8%A8%80%E5%9F%BA%E7%A1%80/"/>
     
     
       <category term="Java" scheme="https://Gemini-Lin.github.io/tags/Java/"/>
