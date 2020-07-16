@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://gemini-lin.github.io/"/>
-  <updated>2020-07-15T11:13:13.488Z</updated>
+  <updated>2020-07-16T04:44:03.227Z</updated>
   <id>https://gemini-lin.github.io/</id>
   
   <author>
@@ -17,11 +17,45 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>JVM系列（五）-- 字节码执行机制(Part 2)</title>
+    <link href="https://gemini-lin.github.io/Class-Execution-2/"/>
+    <id>https://gemini-lin.github.io/Class-Execution-2/</id>
+    <published>2020-07-16T04:16:22.000Z</published>
+    <updated>2020-07-16T04:44:03.227Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;方法调用&quot;&gt;
+          &lt;a href=&quot;#方法调用&quot; class=&quot;heading-link&quot;&gt;&lt;i class=&quot;fas fa-link&quot;&gt;&lt;/i&gt;&lt;/a&gt;方法调用&lt;/h1&gt;
+      &lt;p&gt;Java 的方法的执行分为两个部分：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;方法调用：确定被调用的方法是哪一个；&lt;/li&gt;
+&lt;li&gt;基于栈的解释执行：真正地执行方法的字节码。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;方法调用并不等同于方法中的代码被执行，方法调用阶段唯一的任务就是&lt;strong&gt;确定被调用方法的版本（即调用哪一个方法）&lt;/strong&gt;，暂时还未涉及方法内部的具体运行过程。&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="Java后端" scheme="https://Gemini-Lin.github.io/categories/Java%E5%90%8E%E7%AB%AF/"/>
+    
+      <category term="JVM" scheme="https://Gemini-Lin.github.io/categories/Java%E5%90%8E%E7%AB%AF/JVM/"/>
+    
+    
+      <category term="JVM" scheme="https://Gemini-Lin.github.io/tags/JVM/"/>
+    
+      <category term="字节码" scheme="https://Gemini-Lin.github.io/tags/%E5%AD%97%E8%8A%82%E7%A0%81/"/>
+    
+      <category term="方法调用" scheme="https://Gemini-Lin.github.io/tags/%E6%96%B9%E6%B3%95%E8%B0%83%E7%94%A8/"/>
+    
+  </entry>
+  
+  <entry>
     <title>JVM系列（四）-- 字节码执行机制(Part 1)</title>
-    <link href="https://gemini-lin.github.io/Class-Execution/"/>
-    <id>https://gemini-lin.github.io/Class-Execution/</id>
+    <link href="https://gemini-lin.github.io/Class-Execution-1/"/>
+    <id>https://gemini-lin.github.io/Class-Execution-1/</id>
     <published>2020-07-15T07:53:33.000Z</published>
-    <updated>2020-07-15T11:13:13.488Z</updated>
+    <updated>2020-07-16T04:16:38.930Z</updated>
     
     <summary type="html">
     
@@ -536,55 +570,6 @@
     
     
       <category term="计算机网络" scheme="https://Gemini-Lin.github.io/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Database Programming</title>
-    <link href="https://gemini-lin.github.io/Database-Programming/"/>
-    <id>https://gemini-lin.github.io/Database-Programming/</id>
-    <published>2020-06-07T10:53:11.000Z</published>
-    <updated>2020-07-03T03:26:50.859Z</updated>
-    
-    <summary type="html">
-    
-      &lt;h1 id=&quot;数据定义SQL语句&quot;&gt;
-          &lt;a href=&quot;#数据定义SQL语句&quot; class=&quot;heading-link&quot;&gt;&lt;i class=&quot;fas fa-link&quot;&gt;&lt;/i&gt;&lt;/a&gt;数据定义SQL语句&lt;/h1&gt;
-      
-        &lt;h2 id=&quot;基本数据类型&quot;&gt;
-          &lt;a href=&quot;#基本数据类型&quot; class=&quot;heading-link&quot;&gt;&lt;i class=&quot;fas fa-link&quot;&gt;&lt;/i&gt;&lt;/a&gt;基本数据类型&lt;/h2&gt;
-      &lt;ol&gt;
-&lt;li&gt;字符串型varchar(n)、char(n)&lt;blockquote&gt;
-&lt;p&gt;varchar长度可变、char固定长度&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;/li&gt;
-&lt;li&gt;整数型int、smallint&lt;/li&gt;
-&lt;li&gt;定点数型numerica(p,d)&lt;blockquote&gt;
-&lt;p&gt;numeric(p,d)为定点数，p 为定点数的总位数，d 为定点数的小数位数。该数据类型可以表示带小数的数值。&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;/li&gt;
-&lt;li&gt;浮点数型real、double(n,d)&lt;/li&gt;
-&lt;li&gt;货币型money&lt;/li&gt;
-&lt;li&gt;逻辑性bit&lt;/li&gt;
-&lt;li&gt;日期型date&lt;/li&gt;
-&lt;/ol&gt;
-
-        &lt;h2 id=&quot;数据库定义&quot;&gt;
-          &lt;a href=&quot;#数据库定义&quot; class=&quot;heading-link&quot;&gt;&lt;i class=&quot;fas fa-link&quot;&gt;&lt;/i&gt;&lt;/a&gt;数据库定义&lt;/h2&gt;
-      
-        &lt;h3 id=&quot;创建数据库&quot;&gt;
-          &lt;a href=&quot;#创建数据库&quot; class=&quot;heading-link&quot;&gt;&lt;i class=&quot;fas fa-link&quot;&gt;&lt;/i&gt;&lt;/a&gt;创建数据库&lt;/h3&gt;
-      &lt;figure class=&quot;highlight&quot;&gt;&lt;div class=&quot;table-container&quot;&gt;&lt;table&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;CREATE&lt;/span&gt; &lt;span class=&quot;keyword&quot;&gt;DATABASE&lt;/span&gt; &amp;lt;&lt;span class=&quot;keyword&quot;&gt;NAME&lt;/span&gt;&amp;gt;;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;gt; CERATE DATABASE HR;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/div&gt;&lt;/figure&gt;
-    
-    </summary>
-    
-    
-      <category term="课程总结" scheme="https://Gemini-Lin.github.io/categories/%E8%AF%BE%E7%A8%8B%E6%80%BB%E7%BB%93/"/>
-    
-      <category term="数据库" scheme="https://Gemini-Lin.github.io/categories/%E8%AF%BE%E7%A8%8B%E6%80%BB%E7%BB%93/%E6%95%B0%E6%8D%AE%E5%BA%93/"/>
-    
-    
-      <category term="SQL" scheme="https://Gemini-Lin.github.io/tags/SQL/"/>
     
   </entry>
   
