@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://gemini-lin.github.io/"/>
-  <updated>2020-07-16T04:44:03.227Z</updated>
+  <updated>2020-07-16T09:32:07.719Z</updated>
   <id>https://gemini-lin.github.io/</id>
   
   <author>
@@ -17,21 +17,53 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>JVM系列（五）-- 字节码执行机制(Part 3)</title>
+    <link href="https://gemini-lin.github.io/Class-Execution-3/"/>
+    <id>https://gemini-lin.github.io/Class-Execution-3/</id>
+    <published>2020-07-16T09:27:51.000Z</published>
+    <updated>2020-07-16T09:32:07.719Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;动态类型语言支持&quot;&gt;
+          &lt;a href=&quot;#动态类型语言支持&quot; class=&quot;heading-link&quot;&gt;&lt;i class=&quot;fas fa-link&quot;&gt;&lt;/i&gt;&lt;/a&gt;动态类型语言支持&lt;/h1&gt;
+      &lt;p&gt;&lt;strong&gt;动态类型语言，就是类型检查的主体过程在运行期，而非编译期的编程语言。&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;动/静态类型语言各自的优点？&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;动态类型语言：灵活性高，开发效率高。&lt;/li&gt;
+&lt;li&gt;静态类型语言：编译器提供了严谨的类型检查，类型相关的问题能在编码的时候就发现。&lt;/li&gt;
+&lt;/ul&gt;
+    
+    </summary>
+    
+    
+      <category term="Java后端" scheme="https://Gemini-Lin.github.io/categories/Java%E5%90%8E%E7%AB%AF/"/>
+    
+      <category term="JVM" scheme="https://Gemini-Lin.github.io/categories/Java%E5%90%8E%E7%AB%AF/JVM/"/>
+    
+    
+      <category term="JVM" scheme="https://Gemini-Lin.github.io/tags/JVM/"/>
+    
+      <category term="字节码" scheme="https://Gemini-Lin.github.io/tags/%E5%AD%97%E8%8A%82%E7%A0%81/"/>
+    
+      <category term="动态类型语言支持" scheme="https://Gemini-Lin.github.io/tags/%E5%8A%A8%E6%80%81%E7%B1%BB%E5%9E%8B%E8%AF%AD%E8%A8%80%E6%94%AF%E6%8C%81/"/>
+    
+      <category term="基于栈的字节码解释执行引擎" scheme="https://Gemini-Lin.github.io/tags/%E5%9F%BA%E4%BA%8E%E6%A0%88%E7%9A%84%E5%AD%97%E8%8A%82%E7%A0%81%E8%A7%A3%E9%87%8A%E6%89%A7%E8%A1%8C%E5%BC%95%E6%93%8E/"/>
+    
+  </entry>
+  
+  <entry>
     <title>JVM系列（五）-- 字节码执行机制(Part 2)</title>
     <link href="https://gemini-lin.github.io/Class-Execution-2/"/>
     <id>https://gemini-lin.github.io/Class-Execution-2/</id>
     <published>2020-07-16T04:16:22.000Z</published>
-    <updated>2020-07-16T04:44:03.227Z</updated>
+    <updated>2020-07-16T09:26:02.082Z</updated>
     
     <summary type="html">
     
       &lt;h1 id=&quot;方法调用&quot;&gt;
           &lt;a href=&quot;#方法调用&quot; class=&quot;heading-link&quot;&gt;&lt;i class=&quot;fas fa-link&quot;&gt;&lt;/i&gt;&lt;/a&gt;方法调用&lt;/h1&gt;
-      &lt;p&gt;Java 的方法的执行分为两个部分：&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;方法调用：确定被调用的方法是哪一个；&lt;/li&gt;
-&lt;li&gt;基于栈的解释执行：真正地执行方法的字节码。&lt;/li&gt;
-&lt;/ol&gt;
+      &lt;p&gt;Java 的方法的执行分为两个部分：&lt;br&gt;&lt;strong&gt;1. 方法调用：确定被调用的方法是哪一个；&lt;br&gt;2. 基于栈的解释执行：真正地执行方法的字节码。&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;方法调用并不等同于方法中的代码被执行，方法调用阶段唯一的任务就是&lt;strong&gt;确定被调用方法的版本（即调用哪一个方法）&lt;/strong&gt;，暂时还未涉及方法内部的具体运行过程。&lt;/p&gt;
     
     </summary>
@@ -542,34 +574,6 @@
     
     
       <category term="OS" scheme="https://Gemini-Lin.github.io/tags/OS/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Computer Network</title>
-    <link href="https://gemini-lin.github.io/Computer-Network/"/>
-    <id>https://gemini-lin.github.io/Computer-Network/</id>
-    <published>2020-06-08T00:41:18.000Z</published>
-    <updated>2020-07-03T03:26:20.389Z</updated>
-    
-    <summary type="html">
-    
-      &lt;h1 id=&quot;概述&quot;&gt;
-          &lt;a href=&quot;#概述&quot; class=&quot;heading-link&quot;&gt;&lt;i class=&quot;fas fa-link&quot;&gt;&lt;/i&gt;&lt;/a&gt;概述&lt;/h1&gt;
-      &lt;p&gt;&lt;img src=&quot;https://s1.ax1x.com/2020/06/08/tRorRg.png&quot; alt=&quot;tRorRg.png&quot;&gt;&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;第8点会考一些基本安全知识&lt;/p&gt;
-&lt;/blockquote&gt;
-    
-    </summary>
-    
-    
-      <category term="课程总结" scheme="https://Gemini-Lin.github.io/categories/%E8%AF%BE%E7%A8%8B%E6%80%BB%E7%BB%93/"/>
-    
-      <category term="计算机网络" scheme="https://Gemini-Lin.github.io/categories/%E8%AF%BE%E7%A8%8B%E6%80%BB%E7%BB%93/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/"/>
-    
-    
-      <category term="计算机网络" scheme="https://Gemini-Lin.github.io/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/"/>
     
   </entry>
   
