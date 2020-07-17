@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://gemini-lin.github.io/"/>
-  <updated>2020-07-16T09:32:56.051Z</updated>
+  <updated>2020-07-17T03:35:12.005Z</updated>
   <id>https://gemini-lin.github.io/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="https://gemini-lin.github.io/Class-Execution-3/"/>
     <id>https://gemini-lin.github.io/Class-Execution-3/</id>
     <published>2020-07-16T09:27:51.000Z</published>
-    <updated>2020-07-16T09:32:56.051Z</updated>
+    <updated>2020-07-17T03:35:12.005Z</updated>
     
     <summary type="html">
     
@@ -31,8 +31,7 @@
 &lt;p&gt;动/静态类型语言各自的优点？&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;动态类型语言：灵活性高，开发效率高。&lt;/li&gt;
-&lt;li&gt;静态类型语言：编译器提供了严谨的类型检查，类型相关的问题能在编码的时候就发现。&lt;/li&gt;
-&lt;/ul&gt;
+&lt;li&gt;静态类型语言：编译器提供了严谨的类型检查，类型相关的问题能在编码的时候就发现。&lt;/li&gt;&lt;/ul&gt;
     
     </summary>
     
