@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://gemini-lin.github.io/"/>
-  <updated>2020-07-17T03:35:12.005Z</updated>
+  <updated>2020-07-17T08:46:34.851Z</updated>
   <id>https://gemini-lin.github.io/</id>
   
   <author>
@@ -17,11 +17,38 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>JVM系列（七）-- 类文件结构</title>
+    <link href="https://gemini-lin.github.io/Class/"/>
+    <id>https://gemini-lin.github.io/Class/</id>
+    <published>2020-07-17T06:56:11.000Z</published>
+    <updated>2020-07-17T08:46:34.851Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;概述&quot;&gt;
+          &lt;a href=&quot;#概述&quot; class=&quot;heading-link&quot;&gt;&lt;i class=&quot;fas fa-link&quot;&gt;&lt;/i&gt;&lt;/a&gt;概述&lt;/h1&gt;
+      &lt;p&gt;在 Java 中，JVM 可以理解的代码就叫做&lt;code&gt;字节码&lt;/code&gt;（即扩展名为 &lt;code&gt;.class&lt;/code&gt; 的文件），&lt;strong&gt;它不面向任何特定的处理器，只面向虚拟机&lt;/strong&gt;。&lt;br&gt;Java 语言通过字节码的方式，在一定程度上解决了传统解释型语言执行效率低的问题，同时又保留了&lt;strong&gt;解释型语言可移植&lt;/strong&gt;的特点。&lt;br&gt;所以 Java 程序运行时比较高效，而且，&lt;strong&gt;由于字节码并不针对一种特定的机器&lt;/strong&gt;，因此，Java 程序&lt;strong&gt;无须重新编译&lt;/strong&gt;便可在多种不同操作系统的计算机上运行。&lt;br&gt;&lt;img src=&quot;https://my-blog-to-use.oss-cn-beijing.aliyuncs.com/bg/desktop%E7%B1%BB%E6%96%87%E4%BB%B6%E7%BB%93%E6%9E%84%E6%A6%82%E8%A7%88.png&quot; alt=&quot;class&quot;&gt;&lt;br&gt;&lt;strong&gt;可以说&lt;code&gt;.class&lt;/code&gt;文件是不同的语言在 Java 虚拟机之间的重要桥梁，同时也是支持 Java 跨平台很重要的一个原因。&lt;/strong&gt;&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="Java后端" scheme="https://Gemini-Lin.github.io/categories/Java%E5%90%8E%E7%AB%AF/"/>
+    
+      <category term="JVM" scheme="https://Gemini-Lin.github.io/categories/Java%E5%90%8E%E7%AB%AF/JVM/"/>
+    
+    
+      <category term="JVM" scheme="https://Gemini-Lin.github.io/tags/JVM/"/>
+    
+      <category term="字节码" scheme="https://Gemini-Lin.github.io/tags/%E5%AD%97%E8%8A%82%E7%A0%81/"/>
+    
+  </entry>
+  
+  <entry>
     <title>JVM系列（六）-- 字节码执行机制(Part 3)</title>
     <link href="https://gemini-lin.github.io/Class-Execution-3/"/>
     <id>https://gemini-lin.github.io/Class-Execution-3/</id>
     <published>2020-07-16T09:27:51.000Z</published>
-    <updated>2020-07-17T03:35:12.005Z</updated>
+    <updated>2020-07-17T06:58:14.237Z</updated>
     
     <summary type="html">
     
@@ -532,47 +559,6 @@
     
     
       <category term="体验" scheme="https://Gemini-Lin.github.io/tags/%E4%BD%93%E9%AA%8C/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Operating System(2)</title>
-    <link href="https://gemini-lin.github.io/Operating-System-2/"/>
-    <id>https://gemini-lin.github.io/Operating-System-2/</id>
-    <published>2020-06-12T02:53:07.000Z</published>
-    <updated>2020-07-03T03:20:49.390Z</updated>
-    
-    <summary type="html">
-    
-      &lt;h1 id=&quot;进程&quot;&gt;
-          &lt;a href=&quot;#进程&quot; class=&quot;heading-link&quot;&gt;&lt;i class=&quot;fas fa-link&quot;&gt;&lt;/i&gt;&lt;/a&gt;进程&lt;/h1&gt;
-      
-        &lt;h2 id=&quot;进程与线程&quot;&gt;
-          &lt;a href=&quot;#进程与线程&quot; class=&quot;heading-link&quot;&gt;&lt;i class=&quot;fas fa-link&quot;&gt;&lt;/i&gt;&lt;/a&gt;进程与线程&lt;/h2&gt;
-      
-        &lt;h3 id=&quot;进程-1&quot;&gt;
-          &lt;a href=&quot;#进程-1&quot; class=&quot;heading-link&quot;&gt;&lt;i class=&quot;fas fa-link&quot;&gt;&lt;/i&gt;&lt;/a&gt;进程&lt;/h3&gt;
-      &lt;p&gt;进程是系统进行资源分配和调度的一个独立单位。&lt;br&gt;进程控制块(Process Control Block,PCB)描述进程的基本信息和活动过程，进而控制进程和管理进程。&lt;br&gt;特征：动态性、并发性、独立性、异步性。&lt;/p&gt;
-
-        &lt;h3 id=&quot;线程&quot;&gt;
-          &lt;a href=&quot;#线程&quot; class=&quot;heading-link&quot;&gt;&lt;i class=&quot;fas fa-link&quot;&gt;&lt;/i&gt;&lt;/a&gt;线程&lt;/h3&gt;
-      &lt;p&gt;线程作为调度和分派的基本单位。&lt;br&gt;线程是进程的进一步划分，一个进程可以有多个线程，他们共享进程资源。&lt;/p&gt;
-
-        &lt;h3 id=&quot;比较&quot;&gt;
-          &lt;a href=&quot;#比较&quot; class=&quot;heading-link&quot;&gt;&lt;i class=&quot;fas fa-link&quot;&gt;&lt;/i&gt;&lt;/a&gt;比较&lt;/h3&gt;
-      &lt;ol&gt;
-&lt;li&gt;进程是资源分配的基本单位，但是线程不拥有系统资源，仅有少量能保证独立运行的资源。(一些必备的寄存器，如程序计数器等)同时线程共享进程的资源。&lt;/li&gt;
-&lt;li&gt;进程的切换开销大，线程是独立调动的基本单位，切换线程的开销更小。&lt;/li&gt;&lt;/ol&gt;
-    
-    </summary>
-    
-    
-      <category term="课程总结" scheme="https://Gemini-Lin.github.io/categories/%E8%AF%BE%E7%A8%8B%E6%80%BB%E7%BB%93/"/>
-    
-      <category term="操作系统" scheme="https://Gemini-Lin.github.io/categories/%E8%AF%BE%E7%A8%8B%E6%80%BB%E7%BB%93/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/"/>
-    
-    
-      <category term="OS" scheme="https://Gemini-Lin.github.io/tags/OS/"/>
     
   </entry>
   
