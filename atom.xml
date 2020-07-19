@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://gemini-lin.github.io/"/>
-  <updated>2020-07-18T08:27:29.105Z</updated>
+  <updated>2020-07-19T02:49:44.635Z</updated>
   <id>https://gemini-lin.github.io/</id>
   
   <author>
@@ -15,6 +15,31 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>LeetCode刷题之旅</title>
+    <link href="https://gemini-lin.github.io/LeetCode-Day0/"/>
+    <id>https://gemini-lin.github.io/LeetCode-Day0/</id>
+    <published>2020-07-19T02:02:55.000Z</published>
+    <updated>2020-07-19T02:49:44.635Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;Free-Talk&quot;&gt;
+          &lt;a href=&quot;#Free-Talk&quot; class=&quot;heading-link&quot;&gt;&lt;i class=&quot;fas fa-link&quot;&gt;&lt;/i&gt;&lt;/a&gt;Free Talk&lt;/h1&gt;
+      &lt;p&gt;看着身边很多朋友都陆陆续续入坑LeetCode，博主也打算开启自己的LeetCode之旅。&lt;br&gt;现在是先定一个小目标，一天先刷一道题，后面再慢慢地增加。&lt;br&gt;&lt;strong&gt;So Study with me📖!&lt;/strong&gt;&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="LeetCode" scheme="https://Gemini-Lin.github.io/categories/LeetCode/"/>
+    
+    
+      <category term="LeetCode" scheme="https://Gemini-Lin.github.io/tags/LeetCode/"/>
+    
+      <category term="刷题路线" scheme="https://Gemini-Lin.github.io/tags/%E5%88%B7%E9%A2%98%E8%B7%AF%E7%BA%BF/"/>
+    
+  </entry>
   
   <entry>
     <title>Maven入门介绍</title>
@@ -46,13 +71,13 @@
     <link href="https://gemini-lin.github.io/Class/"/>
     <id>https://gemini-lin.github.io/Class/</id>
     <published>2020-07-17T06:56:11.000Z</published>
-    <updated>2020-07-17T08:46:34.851Z</updated>
+    <updated>2020-07-19T01:55:08.589Z</updated>
     
     <summary type="html">
     
       &lt;h1 id=&quot;概述&quot;&gt;
           &lt;a href=&quot;#概述&quot; class=&quot;heading-link&quot;&gt;&lt;i class=&quot;fas fa-link&quot;&gt;&lt;/i&gt;&lt;/a&gt;概述&lt;/h1&gt;
-      &lt;p&gt;在 Java 中，JVM 可以理解的代码就叫做&lt;code&gt;字节码&lt;/code&gt;（即扩展名为 &lt;code&gt;.class&lt;/code&gt; 的文件），&lt;strong&gt;它不面向任何特定的处理器，只面向虚拟机&lt;/strong&gt;。&lt;br&gt;Java 语言通过字节码的方式，在一定程度上解决了传统解释型语言执行效率低的问题，同时又保留了&lt;strong&gt;解释型语言可移植&lt;/strong&gt;的特点。&lt;br&gt;所以 Java 程序运行时比较高效，而且，&lt;strong&gt;由于字节码并不针对一种特定的机器&lt;/strong&gt;，因此，Java 程序&lt;strong&gt;无须重新编译&lt;/strong&gt;便可在多种不同操作系统的计算机上运行。&lt;br&gt;&lt;img src=&quot;https://my-blog-to-use.oss-cn-beijing.aliyuncs.com/bg/desktop%E7%B1%BB%E6%96%87%E4%BB%B6%E7%BB%93%E6%9E%84%E6%A6%82%E8%A7%88.png&quot; alt=&quot;class&quot;&gt;&lt;br&gt;&lt;strong&gt;可以说&lt;code&gt;.class&lt;/code&gt;文件是不同的语言在 Java 虚拟机之间的重要桥梁，同时也是支持 Java 跨平台很重要的一个原因。&lt;/strong&gt;&lt;/p&gt;
+      &lt;p&gt;在 Java 中，JVM 可以理解的代码就叫做&lt;code&gt;字节码&lt;/code&gt;（即扩展名为 &lt;code&gt;.class&lt;/code&gt; 的文件），&lt;strong&gt;它不面向任何特定的处理器，只面向虚拟机&lt;/strong&gt;。&lt;br&gt;Java 语言通过字节码的方式，在一定程度上解决了传统解释型语言执行效率低的问题，同时又保留了&lt;strong&gt;解释型语言可移植&lt;/strong&gt;的特点。&lt;br&gt;所以 Java 程序运行时比较高效，而且，&lt;strong&gt;由于字节码并不针对一种特定的机器&lt;/strong&gt;，因此，Java 程序&lt;strong&gt;无须重新编译&lt;/strong&gt;便可在多种不同操作系统的计算机上运行。&lt;br&gt;&lt;img src=&quot;https://s1.ax1x.com/2020/07/19/URi1MQ.png&quot; alt=&quot;class&quot;&gt;&lt;br&gt;&lt;strong&gt;可以说&lt;code&gt;.class&lt;/code&gt;文件是不同的语言在 Java 虚拟机之间的重要桥梁，同时也是支持 Java 跨平台很重要的一个原因。&lt;/strong&gt;&lt;/p&gt;
     
     </summary>
     
@@ -534,31 +559,6 @@
     
     
       <category term="正则表达式" scheme="https://Gemini-Lin.github.io/tags/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>SQL Test</title>
-    <link href="https://gemini-lin.github.io/SQL-Test/"/>
-    <id>https://gemini-lin.github.io/SQL-Test/</id>
-    <published>2020-06-16T08:58:27.000Z</published>
-    <updated>2020-07-03T03:19:56.766Z</updated>
-    
-    <summary type="html">
-    
-      &lt;h1 id=&quot;TABLE-Student&quot;&gt;
-          &lt;a href=&quot;#TABLE-Student&quot; class=&quot;heading-link&quot;&gt;&lt;i class=&quot;fas fa-link&quot;&gt;&lt;/i&gt;&lt;/a&gt;TABLE Student&lt;/h1&gt;
-      &lt;figure class=&quot;highlight sql&quot;&gt;&lt;div class=&quot;table-container&quot;&gt;&lt;table&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;CREATE&lt;/span&gt; &lt;span class=&quot;keyword&quot;&gt;TABLE&lt;/span&gt; Student_2018091601004(&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	StudentID &lt;span class=&quot;built_in&quot;&gt;char&lt;/span&gt;(&lt;span class=&quot;number&quot;&gt;13&lt;/span&gt;) PRIMARY &lt;span class=&quot;keyword&quot;&gt;KEY&lt;/span&gt;,&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	StudentName &lt;span class=&quot;built_in&quot;&gt;varchar&lt;/span&gt;(&lt;span class=&quot;number&quot;&gt;10&lt;/span&gt;) &lt;span class=&quot;keyword&quot;&gt;NOT&lt;/span&gt; &lt;span class=&quot;literal&quot;&gt;NULL&lt;/span&gt;,&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	Sex &lt;span class=&quot;built_in&quot;&gt;char&lt;/span&gt;(&lt;span class=&quot;number&quot;&gt;2&lt;/span&gt;) &lt;span class=&quot;keyword&quot;&gt;NOT&lt;/span&gt; &lt;span class=&quot;literal&quot;&gt;NULL&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;);&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/div&gt;&lt;/figure&gt;
-    
-    </summary>
-    
-    
-      <category term="课程总结" scheme="https://Gemini-Lin.github.io/categories/%E8%AF%BE%E7%A8%8B%E6%80%BB%E7%BB%93/"/>
-    
-      <category term="数据库" scheme="https://Gemini-Lin.github.io/categories/%E8%AF%BE%E7%A8%8B%E6%80%BB%E7%BB%93/%E6%95%B0%E6%8D%AE%E5%BA%93/"/>
-    
-    
-      <category term="SQL" scheme="https://Gemini-Lin.github.io/tags/SQL/"/>
     
   </entry>
   
