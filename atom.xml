@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://gemini-lin.github.io/"/>
-  <updated>2020-07-24T05:00:19.189Z</updated>
+  <updated>2020-07-27T09:27:37.794Z</updated>
   <id>https://gemini-lin.github.io/</id>
   
   <author>
@@ -15,6 +15,33 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>YAML语言教程</title>
+    <link href="https://gemini-lin.github.io/YAML/"/>
+    <id>https://gemini-lin.github.io/YAML/</id>
+    <published>2020-07-27T08:45:29.000Z</published>
+    <updated>2020-07-27T09:27:37.794Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;Free-Talk&quot;&gt;
+          &lt;a href=&quot;#Free-Talk&quot; class=&quot;heading-link&quot;&gt;&lt;i class=&quot;fas fa-link&quot;&gt;&lt;/i&gt;&lt;/a&gt;Free Talk&lt;/h1&gt;
+      &lt;p&gt;在 SpringBoot 我们通常使用( application.yml )来配置全局文件。&lt;br&gt;&lt;strong&gt;YAML（发音/ˈjæməl/）是一个可读性高，用来表达数据序列化的格式，远比 JSON 格式方便。&lt;/strong&gt;&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="Java后端" scheme="https://Gemini-Lin.github.io/categories/Java%E5%90%8E%E7%AB%AF/"/>
+    
+      <category term="SpringBoot" scheme="https://Gemini-Lin.github.io/categories/Java%E5%90%8E%E7%AB%AF/SpringBoot/"/>
+    
+    
+      <category term="SpringBoot" scheme="https://Gemini-Lin.github.io/tags/SpringBoot/"/>
+    
+      <category term="YAML" scheme="https://Gemini-Lin.github.io/tags/YAML/"/>
+    
+  </entry>
   
   <entry>
     <title>Docker运行Mysql镜像</title>
@@ -538,31 +565,6 @@
     
     
       <category term="体验" scheme="https://Gemini-Lin.github.io/tags/%E4%BD%93%E9%AA%8C/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>SM2算法分析</title>
-    <link href="https://gemini-lin.github.io/SM2/"/>
-    <id>https://gemini-lin.github.io/SM2/</id>
-    <published>2020-06-29T07:35:49.000Z</published>
-    <updated>2020-07-03T03:20:06.975Z</updated>
-    
-    <summary type="html">
-    
-      &lt;h1 id=&quot;基本参数确定&quot;&gt;
-          &lt;a href=&quot;#基本参数确定&quot; class=&quot;heading-link&quot;&gt;&lt;i class=&quot;fas fa-link&quot;&gt;&lt;/i&gt;&lt;/a&gt;基本参数确定&lt;/h1&gt;
-      &lt;figure class=&quot;highlight python&quot;&gt;&lt;div class=&quot;table-container&quot;&gt;&lt;table&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;11&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;# 选择素域，设置椭圆曲线参数&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;# m 为256bit长&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;default_ecc_table = {&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;string&quot;&gt;&#39;n&#39;&lt;/span&gt;: &lt;span class=&quot;string&quot;&gt;&#39;FFFFFFFEFFFFFFFFFFFFFFFFFFFFFFFF7203DF6B21C6052B53BBF40939D54123&#39;&lt;/span&gt;,&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;string&quot;&gt;&#39;p&#39;&lt;/span&gt;: &lt;span class=&quot;string&quot;&gt;&#39;FFFFFFFEFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF00000000FFFFFFFFFFFFFFFF&#39;&lt;/span&gt;,&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;# 基点G&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;string&quot;&gt;&#39;g&#39;&lt;/span&gt;: &lt;span class=&quot;string&quot;&gt;&#39;32c4ae2c1f1981195f9904466a39c9948fe30bbff2660be1715a4589334c74c7&#39;&lt;/span&gt;\&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;string&quot;&gt;&#39;bc3736a2f4f6779c59bdcee36b692153d0a9877cc62a474002df32e52139f0a0&#39;&lt;/span&gt;,&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;string&quot;&gt;&#39;a&#39;&lt;/span&gt;: &lt;span class=&quot;string&quot;&gt;&#39;FFFFFFFEFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF00000000FFFFFFFFFFFFFFFC&#39;&lt;/span&gt;,&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;string&quot;&gt;&#39;b&#39;&lt;/span&gt;: &lt;span class=&quot;string&quot;&gt;&#39;28E9FA9E9D9F5E344D5A9E4BCF6509A7F39789F515AB8F92DDBCBD414D940E93&#39;&lt;/span&gt;,&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;}&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/div&gt;&lt;/figure&gt;
-    
-    </summary>
-    
-    
-      <category term="课程总结" scheme="https://Gemini-Lin.github.io/categories/%E8%AF%BE%E7%A8%8B%E6%80%BB%E7%BB%93/"/>
-    
-      <category term="密码学" scheme="https://Gemini-Lin.github.io/categories/%E8%AF%BE%E7%A8%8B%E6%80%BB%E7%BB%93/%E5%AF%86%E7%A0%81%E5%AD%A6/"/>
-    
-    
-      <category term="SM2" scheme="https://Gemini-Lin.github.io/tags/SM2/"/>
     
   </entry>
   
