@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://gemini-lin.github.io/"/>
-  <updated>2020-07-27T09:27:37.794Z</updated>
+  <updated>2020-07-28T03:18:09.087Z</updated>
   <id>https://gemini-lin.github.io/</id>
   
   <author>
@@ -17,11 +17,44 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>Spring Guide</title>
+    <link href="https://gemini-lin.github.io/Spring-Guide/"/>
+    <id>https://gemini-lin.github.io/Spring-Guide/</id>
+    <published>2020-07-28T01:38:41.000Z</published>
+    <updated>2020-07-28T03:18:09.087Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;Free-Talk&quot;&gt;
+          &lt;a href=&quot;#Free-Talk&quot; class=&quot;heading-link&quot;&gt;&lt;i class=&quot;fas fa-link&quot;&gt;&lt;/i&gt;&lt;/a&gt;Free Talk&lt;/h1&gt;
+      &lt;p&gt;&lt;strong&gt;Spring 是一种轻量级开发框架，旨在提高开发人员的开发效率以及系统的可维护性。&lt;/strong&gt;&lt;br&gt;它包含以下核心模块：&lt;br&gt;&lt;img src=&quot;https://s1.ax1x.com/2020/07/28/ak6x8H.png&quot; alt=&quot;SpringFramework&quot;&gt;&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="Java后端" scheme="https://Gemini-Lin.github.io/categories/Java%E5%90%8E%E7%AB%AF/"/>
+    
+      <category term="Spring Framework" scheme="https://Gemini-Lin.github.io/categories/Java%E5%90%8E%E7%AB%AF/Spring-Framework/"/>
+    
+      <category term="Spring" scheme="https://Gemini-Lin.github.io/categories/Java%E5%90%8E%E7%AB%AF/Spring-Framework/Spring/"/>
+    
+    
+      <category term="Spring" scheme="https://Gemini-Lin.github.io/tags/Spring/"/>
+    
+      <category term="AOP" scheme="https://Gemini-Lin.github.io/tags/AOP/"/>
+    
+      <category term="IOC" scheme="https://Gemini-Lin.github.io/tags/IOC/"/>
+    
+      <category term="Bean" scheme="https://Gemini-Lin.github.io/tags/Bean/"/>
+    
+  </entry>
+  
+  <entry>
     <title>YAML语言教程</title>
     <link href="https://gemini-lin.github.io/YAML/"/>
     <id>https://gemini-lin.github.io/YAML/</id>
     <published>2020-07-27T08:45:29.000Z</published>
-    <updated>2020-07-27T09:27:37.794Z</updated>
+    <updated>2020-07-28T01:43:46.125Z</updated>
     
     <summary type="html">
     
@@ -34,7 +67,7 @@
     
       <category term="Java后端" scheme="https://Gemini-Lin.github.io/categories/Java%E5%90%8E%E7%AB%AF/"/>
     
-      <category term="SpringBoot" scheme="https://Gemini-Lin.github.io/categories/Java%E5%90%8E%E7%AB%AF/SpringBoot/"/>
+      <category term="开发工具" scheme="https://Gemini-Lin.github.io/categories/Java%E5%90%8E%E7%AB%AF/%E5%BC%80%E5%8F%91%E5%B7%A5%E5%85%B7/"/>
     
     
       <category term="SpringBoot" scheme="https://Gemini-Lin.github.io/tags/SpringBoot/"/>
@@ -540,31 +573,6 @@
     
     
       <category term="安全分析" scheme="https://Gemini-Lin.github.io/tags/%E5%AE%89%E5%85%A8%E5%88%86%E6%9E%90/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Summer</title>
-    <link href="https://gemini-lin.github.io/summer/"/>
-    <id>https://gemini-lin.github.io/summer/</id>
-    <published>2020-07-02T08:31:04.000Z</published>
-    <updated>2020-07-03T03:19:44.738Z</updated>
-    
-    <summary type="html">
-    
-      &lt;h1 id=&quot;菊次郎的夏天&quot;&gt;
-          &lt;a href=&quot;#菊次郎的夏天&quot; class=&quot;heading-link&quot;&gt;&lt;i class=&quot;fas fa-link&quot;&gt;&lt;/i&gt;&lt;/a&gt;菊次郎的夏天&lt;/h1&gt;
-      &lt;p&gt;夏天伴随着海边吹来的暖风，和西瓜一起来了。&lt;br&gt;&lt;img src=&quot;https://s1.ax1x.com/2020/07/02/NqENRI.png?size=400x400&quot; style=&quot;width: 400px;height: 400px;&quot; alt=&quot;NqENRI.png&quot;&gt;&lt;br&gt;每年到了夏天，都想看一边菊次郎的夏天;&lt;br&gt;每次伤心时候，都会单曲循环播放着Summer;&lt;br&gt;&lt;span class=&quot;exturl&quot;&gt;&lt;a class=&quot;exturl__link&quot; href=&quot;http://music.163.com/song?id=443242&amp;amp;userid=369654532&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Summer&lt;/a&gt;&lt;span class=&quot;exturl__icon&quot;&gt;&lt;i class=&quot;fas fa-external-link-alt&quot;&gt;&lt;/i&gt;&lt;/span&gt;&lt;/span&gt;–点击播放音乐&lt;/p&gt;
-    
-    </summary>
-    
-    
-      <category term="大学生活" scheme="https://Gemini-Lin.github.io/categories/%E5%A4%A7%E5%AD%A6%E7%94%9F%E6%B4%BB/"/>
-    
-      <category term="小小说" scheme="https://Gemini-Lin.github.io/categories/%E5%A4%A7%E5%AD%A6%E7%94%9F%E6%B4%BB/%E5%B0%8F%E5%B0%8F%E8%AF%B4/"/>
-    
-    
-      <category term="体验" scheme="https://Gemini-Lin.github.io/tags/%E4%BD%93%E9%AA%8C/"/>
     
   </entry>
   
