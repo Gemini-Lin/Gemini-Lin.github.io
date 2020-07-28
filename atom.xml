@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://gemini-lin.github.io/"/>
-  <updated>2020-07-28T07:58:32.328Z</updated>
+  <updated>2020-07-28T10:24:25.987Z</updated>
   <id>https://gemini-lin.github.io/</id>
   
   <author>
@@ -17,11 +17,41 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>SpringBoot系列 (一) -- 启动原理解析</title>
+    <link href="https://gemini-lin.github.io/SpringBoot1/"/>
+    <id>https://gemini-lin.github.io/SpringBoot1/</id>
+    <published>2020-07-28T09:01:46.000Z</published>
+    <updated>2020-07-28T10:24:25.987Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;Free-Talk&quot;&gt;
+          &lt;a href=&quot;#Free-Talk&quot; class=&quot;heading-link&quot;&gt;&lt;i class=&quot;fas fa-link&quot;&gt;&lt;/i&gt;&lt;/a&gt;Free Talk&lt;/h1&gt;
+      &lt;p&gt;SpringBoot 通过 &lt;code&gt;@SpringBootApplication&lt;/code&gt; 注解及&lt;code&gt;SpringApplication.run()&lt;/code&gt;方法，进行启动类的配置加载：&lt;/p&gt;
+&lt;figure class=&quot;highlight java&quot;&gt;&lt;div class=&quot;table-container&quot;&gt;&lt;table&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;meta&quot;&gt;@SpringBootApplication&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;class&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;title&quot;&gt;Application&lt;/span&gt; &lt;/span&gt;{&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;keyword&quot;&gt;static&lt;/span&gt; &lt;span class=&quot;keyword&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;title&quot;&gt;main&lt;/span&gt;&lt;span class=&quot;params&quot;&gt;(String[] args)&lt;/span&gt; &lt;/span&gt;{&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        SpringApplication.run(Application&lt;span class=&quot;class&quot;&gt;.&lt;span class=&quot;keyword&quot;&gt;class&lt;/span&gt;, &lt;span class=&quot;title&quot;&gt;args&lt;/span&gt;)&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    }&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;}&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/div&gt;&lt;/figure&gt;
+    
+    </summary>
+    
+    
+      <category term="Java后端" scheme="https://Gemini-Lin.github.io/categories/Java%E5%90%8E%E7%AB%AF/"/>
+    
+      <category term="Spring Framework" scheme="https://Gemini-Lin.github.io/categories/Java%E5%90%8E%E7%AB%AF/Spring-Framework/"/>
+    
+      <category term="SpringBoot" scheme="https://Gemini-Lin.github.io/categories/Java%E5%90%8E%E7%AB%AF/Spring-Framework/SpringBoot/"/>
+    
+    
+      <category term="SpringBoot" scheme="https://Gemini-Lin.github.io/tags/SpringBoot/"/>
+    
+      <category term="SpringBootApplication" scheme="https://Gemini-Lin.github.io/tags/SpringBootApplication/"/>
+    
+  </entry>
+  
+  <entry>
     <title>微服务小记(MicroServices)</title>
     <link href="https://gemini-lin.github.io/MicroServices/"/>
     <id>https://gemini-lin.github.io/MicroServices/</id>
     <published>2020-07-28T07:24:55.000Z</published>
-    <updated>2020-07-28T07:58:32.328Z</updated>
+    <updated>2020-07-28T09:03:47.679Z</updated>
     
     <summary type="html">
     
@@ -550,33 +580,6 @@
       <category term="Java" scheme="https://Gemini-Lin.github.io/tags/Java/"/>
     
       <category term="基础语法" scheme="https://Gemini-Lin.github.io/tags/%E5%9F%BA%E7%A1%80%E8%AF%AD%E6%B3%95/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Tightly-Secure</title>
-    <link href="https://gemini-lin.github.io/Tightly-Secure/"/>
-    <id>https://gemini-lin.github.io/Tightly-Secure/</id>
-    <published>2020-07-03T03:09:51.000Z</published>
-    <updated>2020-07-03T03:45:43.758Z</updated>
-    
-    <summary type="html">
-    
-      &lt;h1 id=&quot;Free-Talk&quot;&gt;
-          &lt;a href=&quot;#Free-Talk&quot; class=&quot;heading-link&quot;&gt;&lt;i class=&quot;fas fa-link&quot;&gt;&lt;/i&gt;&lt;/a&gt;Free Talk&lt;/h1&gt;
-      &lt;p&gt;&lt;img src=&quot;https://s1.ax1x.com/2020/07/03/NOdOj1.png&quot; alt=&quot;NOdOj1.png&quot;&gt;&lt;br&gt;本文是一篇关于紧安全的数字签名及身份验证的密钥交换的论文分析。&lt;br&gt;&lt;span class=&quot;exturl&quot;&gt;&lt;a class=&quot;exturl__link&quot; href=&quot;http://www.nds.ruhr-uni-bochum.de/media/nds/veroeffentlichungen/2014/12/27/main.pdf&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Practical and Tightly-Secure Digital Signatures and Authenticated Key Exchange&lt;/a&gt;&lt;span class=&quot;exturl__icon&quot;&gt;&lt;i class=&quot;fas fa-external-link-alt&quot;&gt;&lt;/i&gt;&lt;/span&gt;&lt;/span&gt;&lt;/p&gt;
-    
-    </summary>
-    
-    
-      <category term="课程总结" scheme="https://Gemini-Lin.github.io/categories/%E8%AF%BE%E7%A8%8B%E6%80%BB%E7%BB%93/"/>
-    
-      <category term="密码学" scheme="https://Gemini-Lin.github.io/categories/%E8%AF%BE%E7%A8%8B%E6%80%BB%E7%BB%93/%E5%AF%86%E7%A0%81%E5%AD%A6/"/>
-    
-    
-      <category term="密码学" scheme="https://Gemini-Lin.github.io/tags/%E5%AF%86%E7%A0%81%E5%AD%A6/"/>
-    
-      <category term="Tightly-Secure" scheme="https://Gemini-Lin.github.io/tags/Tightly-Secure/"/>
     
   </entry>
   
