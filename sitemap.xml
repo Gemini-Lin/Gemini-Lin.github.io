@@ -2,9 +2,30 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://gemini-lin.github.io/SpringBoot/</loc>
+    
+    <lastmod>2020-07-29T10:46:28.129Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://gemini-lin.github.io/SpringBoot1/</loc>
     
-    <lastmod>2020-07-29T02:17:35.416Z</lastmod>
+    <lastmod>2020-07-29T09:41:59.336Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://gemini-lin.github.io/Servlet/</loc>
+    
+    <lastmod>2020-07-29T09:37:58.907Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://gemini-lin.github.io/SpringMVC/</loc>
+    
+    <lastmod>2020-07-29T09:37:38.108Z</lastmod>
     
   </url>
   
