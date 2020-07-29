@@ -38,8 +38,8 @@ var CONFIG = {
   reward: true,
   fancybox: true,
   zoomImage: {"gapAside":"20px"},
-  galleryWaterfall: undefined,
-  lazyload: false,
+  galleryWaterfall: {"colWidth":"220px","gapX":"10px"},
+  lazyload: true,
   pjax: {"avoidBanner":false},
   externalLink: {"icon":{"enable":true,"name":"fas fa-external-link-alt"}},
   shortcuts: undefined,
@@ -60,7 +60,11 @@ window.CONFIG = CONFIG;</script><meta name="generator" content="Hexo 4.2.1"></he
 </ol>
 <p>简单的讲：<em>越小的放在越左边</em>。</p>
 <a id="more"></a>
-<p><strong>你以为的二叉查找树</strong><br><img src="https://s1.ax1x.com/2020/05/30/tQrsc6.png" alt="image"><br><strong>变态的二叉查找树</strong><br><img src="https://s1.ax1x.com/2020/05/30/tQrfNd.png" alt="image"><br>这种畸形的二叉查找树就会退化成<strong>链表</strong>，查找节点的时间复杂度就会从<strong>O($ log_2^n $)退化成O(n)</strong>。而根据我们在小学二年级就学过的[去除顶端优势]，我们引入了红黑树，达到树的平衡。</p>
+<p><strong>你以为的二叉查找树</strong><br>
+        <img class="lazyload lazyload-gif" src="/images/loading.svg" data-src="https://s1.ax1x.com/2020/05/30/tQrsc6.png" alt="image">
+      <br><strong>变态的二叉查找树</strong><br>
+        <img class="lazyload lazyload-gif" src="/images/loading.svg" data-src="https://s1.ax1x.com/2020/05/30/tQrfNd.png" alt="image">
+      <br>这种畸形的二叉查找树就会退化成<strong>链表</strong>，查找节点的时间复杂度就会从<strong>O($ log_2^n $)退化成O(n)</strong>。而根据我们在小学二年级就学过的[去除顶端优势]，我们引入了红黑树，达到树的平衡。</p>
 
         <h2 id="红黑树简介">
           <a href="#红黑树简介" class="heading-link"><i class="fas fa-link"></i></a>红黑树简介</h2>
@@ -78,7 +82,9 @@ window.CONFIG = CONFIG;</script><meta name="generator" content="Hexo 4.2.1"></he
 </blockquote>
 </li>
 </ol>
-<p>示意图如下：<br><img src="https://s1.ax1x.com/2020/05/30/tQs3UH.png" alt="image"></p>
+<p>示意图如下：<br>
+        <img class="lazyload lazyload-gif" src="/images/loading.svg" data-src="https://s1.ax1x.com/2020/05/30/tQs3UH.png" alt="image">
+      </p>
 
         <h3 id="应用">
           <a href="#应用" class="heading-link"><i class="fas fa-link"></i></a>应用</h3>
@@ -114,7 +120,9 @@ window.CONFIG = CONFIG;</script><meta name="generator" content="Hexo 4.2.1"></he
 <blockquote>
 <p>第一个左指的是parent节点是在grand parent的左边还是右边<br>第二个左指的是此节点X是在parent的左边还是右边        </p>
 </blockquote>
-<p><img src="https://s1.ax1x.com/2020/05/30/tQsY8I.png" alt="image"></p>
+<p>
+        <img class="lazyload lazyload-gif" src="/images/loading.svg" data-src="https://s1.ax1x.com/2020/05/30/tQsY8I.png" alt="image">
+      </p>
 <p>跟着上面的公式走:</p>
 <ol>
 <li>将新插入的 X 节点标记为红色</li>
@@ -131,28 +139,36 @@ window.CONFIG = CONFIG;</script><meta name="generator" content="Hexo 4.2.1"></he
       <p><strong>p在g的左边，x在p的左边</strong></p>
 <ol>
 <li>右旋g</li>
-<li>交换g和p的颜色<br><img src="https://s1.ax1x.com/2020/05/30/tQsdr8.png" alt="image"></li>
+<li>交换g和p的颜色<br>
+        <img class="lazyload lazyload-gif" src="/images/loading.svg" data-src="https://s1.ax1x.com/2020/05/30/tQsdr8.png" alt="image">
+      </li>
 </ol>
 
         <h3 id="左右">
           <a href="#左右" class="heading-link"><i class="fas fa-link"></i></a>左右</h3>
       <ol>
 <li>左旋p</li>
-<li>变成左左了<br><img src="https://s1.ax1x.com/2020/05/30/tQsDaQ.png" alt="image"></li>
+<li>变成左左了<br>
+        <img class="lazyload lazyload-gif" src="/images/loading.svg" data-src="https://s1.ax1x.com/2020/05/30/tQsDaQ.png" alt="image">
+      </li>
 </ol>
 
         <h3 id="右右">
           <a href="#右右" class="heading-link"><i class="fas fa-link"></i></a>右右</h3>
       <ol>
 <li>左旋g</li>
-<li>交换g和p的颜色<br><img src="https://s1.ax1x.com/2020/05/30/tQsc2q.png" alt="image"></li>
+<li>交换g和p的颜色<br>
+        <img class="lazyload lazyload-gif" src="/images/loading.svg" data-src="https://s1.ax1x.com/2020/05/30/tQsc2q.png" alt="image">
+      </li>
 </ol>
 
         <h3 id="右左">
           <a href="#右左" class="heading-link"><i class="fas fa-link"></i></a>右左</h3>
       <ol>
 <li>右旋p</li>
-<li>变成右右了<br><img src="https://s1.ax1x.com/2020/05/30/tQsWrT.png" alt="image"></li>
+<li>变成右右了<br>
+        <img class="lazyload lazyload-gif" src="/images/loading.svg" data-src="https://s1.ax1x.com/2020/05/30/tQsWrT.png" alt="image">
+      </li>
 </ol>
 
         <h2 id="案例演示">
@@ -160,21 +176,29 @@ window.CONFIG = CONFIG;</script><meta name="generator" content="Hexo 4.2.1"></he
       <p>插入 10，20，30，15 到一个空树中</p>
 <ol>
 <li>向空树中第一次插入数字 10，肯定是 root 节点</li>
-<li>root 节点标记成黑色<br><img src="https://image-static.segmentfault.com/313/178/313178228-5d37b7346452f_articlex" alt="image"></li>
+<li>root 节点标记成黑色<br>
+        <img class="lazyload lazyload-gif" src="/images/loading.svg" data-src="https://image-static.segmentfault.com/313/178/313178228-5d37b7346452f_articlex" alt="image">
+      </li>
 <li>向树中插入新节点 20，标记为红色</li>
-<li>20 &gt; 10，并发现 10 没有叶子节点，将新节点 20 作为 10 的右孩子<br><img src="https://image-static.segmentfault.com/310/491/310491414-5d37b7319f447_articlex" alt="image"></li>
+<li>20 &gt; 10，并发现 10 没有叶子节点，将新节点 20 作为 10 的右孩子<br>
+        <img class="lazyload lazyload-gif" src="/images/loading.svg" data-src="https://image-static.segmentfault.com/310/491/310491414-5d37b7319f447_articlex" alt="image">
+      </li>
 <li>向树中插入新节点 30，标记为红色</li>
 <li>30 &gt; 10，查找 10 的右子树，找到 20</li>
 <li>30 &gt; 20，继续查找 20 的右子树，发现 20 没有叶子节点，将值插在此处</li>
 <li>30 和 20 节点都为红色，30 为右孩子，20 也为右孩子，触发了<strong>右右情况</strong></li>
 <li>通过一次旋转，提起 20 节点</li>
-<li>20 节点是根结点，标记为黑色<br><img src="https://image-static.segmentfault.com/386/112/3861123538-5d37b733ce90e_articlex" alt="image"></li>
+<li>20 节点是根结点，标记为黑色<br>
+        <img class="lazyload lazyload-gif" src="/images/loading.svg" data-src="https://image-static.segmentfault.com/386/112/3861123538-5d37b733ce90e_articlex" alt="image">
+      </li>
 <li>向树中插入新节点 15，标记为红色</li>
 <li>通过比对大小和判断是否有叶子节点，最终插值为 10 节点的右孩子</li>
 <li>15 和 10 节点都为红色，15 的 uncle 节点 30 也为红色</li>
 <li>按照公式，将 15 的 parent 10 和 uncle 30 更改为黑色</li>
 <li>让 15 节点 grand parent 20 的颜色与 15 节点的颜色一样，变为红色</li>
-<li>20 为根结点，将其改为黑色<br><img src="https://image-static.segmentfault.com/842/419/842419664-5d37b734b8439_articlex" alt="image"></li>
+<li>20 为根结点，将其改为黑色<br>
+        <img class="lazyload lazyload-gif" src="/images/loading.svg" data-src="https://image-static.segmentfault.com/842/419/842419664-5d37b734b8439_articlex" alt="image">
+      </li>
 </ol>
 
         <h1 id="C语言实现">
@@ -186,13 +210,17 @@ window.CONFIG = CONFIG;</script><meta name="generator" content="Hexo 4.2.1"></he
 
         <h2 id="左旋">
           <a href="#左旋" class="heading-link"><i class="fas fa-link"></i></a>左旋</h2>
-      <p><img src="https://s1.ax1x.com/2020/05/30/tQWj1J.png" alt="image"></p>
+      <p>
+        <img class="lazyload lazyload-gif" src="/images/loading.svg" data-src="https://s1.ax1x.com/2020/05/30/tQWj1J.png" alt="image">
+      </p>
 <figure class="highlight c"><div class="table-container"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">define</span> RED        0    <span class="comment">// 红色节点</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> BLACK    1    <span class="comment">// 黑色节点</span></span></span><br><span class="line"></span><br><span class="line"><span class="keyword">typedef</span> <span class="keyword">int</span> Type;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 红黑树的节点</span></span><br><span class="line"><span class="keyword">typedef</span> <span class="class"><span class="keyword">struct</span> <span class="title">RBTreeNode</span>{</span></span><br><span class="line">    <span class="keyword">unsigned</span> <span class="keyword">char</span> color;        <span class="comment">// 颜色(RED 或 BLACK)</span></span><br><span class="line">    Type   key;                    <span class="comment">// 关键字(键值)</span></span><br><span class="line">    <span class="class"><span class="keyword">struct</span> <span class="title">RBTreeNode</span> *<span class="title">left</span>;</span>    <span class="comment">// 左孩子</span></span><br><span class="line">    <span class="class"><span class="keyword">struct</span> <span class="title">RBTreeNode</span> *<span class="title">right</span>;</span>    <span class="comment">// 右孩子</span></span><br><span class="line">    <span class="class"><span class="keyword">struct</span> <span class="title">RBTreeNode</span> *<span class="title">parent</span>;</span>    <span class="comment">// 父结点</span></span><br><span class="line">}Node, *RBTree;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 红黑树的根</span></span><br><span class="line"><span class="keyword">typedef</span> <span class="class"><span class="keyword">struct</span> <span class="title">rb_root</span>{</span></span><br><span class="line">    Node *node;</span><br><span class="line">}RBRoot;</span><br></pre></td></tr></tbody></table></div></figure>
 
 
         <h2 id="右旋">
           <a href="#右旋" class="heading-link"><i class="fas fa-link"></i></a>右旋</h2>
-      <p><img src="https://s1.ax1x.com/2020/05/30/tQWvc9.png" alt="image"></p>
+      <p>
+        <img class="lazyload lazyload-gif" src="/images/loading.svg" data-src="https://s1.ax1x.com/2020/05/30/tQWvc9.png" alt="image">
+      </p>
 <figure class="highlight c"><div class="table-container"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/* </span></span><br><span class="line"><span class="comment"> * 对红黑树的节点(y)进行右旋转</span></span><br><span class="line"><span class="comment"> *</span></span><br><span class="line"><span class="comment"> * 右旋示意图(对节点y进行左旋)：</span></span><br><span class="line"><span class="comment"> *            py                               py</span></span><br><span class="line"><span class="comment"> *           /                                /</span></span><br><span class="line"><span class="comment"> *          y                                x                  </span></span><br><span class="line"><span class="comment"> *         /  \      --(右旋)--&gt;            /  \                     #</span></span><br><span class="line"><span class="comment"> *        x   ry                           lx   y  </span></span><br><span class="line"><span class="comment"> *       / \                                   / \                   #</span></span><br><span class="line"><span class="comment"> *      lx  rx                                rx  ry</span></span><br><span class="line"><span class="comment"> * </span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="function"><span class="keyword">static</span> <span class="keyword">void</span> <span class="title">rbtree_right_rotate</span><span class="params">(RBRoot *root, Node *y)</span></span></span><br><span class="line"><span class="function"></span>{</span><br><span class="line">    <span class="comment">// 设置x是当前节点的左孩子。</span></span><br><span class="line">    Node *x = y-&gt;left;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 将 “x的右孩子” 设为 “y的左孩子”；</span></span><br><span class="line">    <span class="comment">// 如果"x的右孩子"不为空的话，将 “y” 设为 “x的右孩子的父亲”</span></span><br><span class="line">    y-&gt;left = x-&gt;right;</span><br><span class="line">    <span class="keyword">if</span> (x-&gt;right != <span class="literal">NULL</span>)</span><br><span class="line">        x-&gt;right-&gt;parent = y;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 将 “y的父亲” 设为 “x的父亲”</span></span><br><span class="line">    x-&gt;parent = y-&gt;parent;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">if</span> (y-&gt;parent == <span class="literal">NULL</span>) </span><br><span class="line">    {</span><br><span class="line">        <span class="comment">//tree = x;            // 如果 “y的父亲” 是空节点，则将x设为根节点</span></span><br><span class="line">        root-&gt;node = x;            <span class="comment">// 如果 “y的父亲” 是空节点，则将x设为根节点</span></span><br><span class="line">    }</span><br><span class="line">    <span class="keyword">else</span></span><br><span class="line">    {</span><br><span class="line">        <span class="keyword">if</span> (y == y-&gt;parent-&gt;right)</span><br><span class="line">            y-&gt;parent-&gt;right = x;    <span class="comment">// 如果 y是它父节点的右孩子，则将x设为“y的父节点的右孩子”</span></span><br><span class="line">        <span class="keyword">else</span></span><br><span class="line">            y-&gt;parent-&gt;left = x;    <span class="comment">// (y是它父节点的左孩子) 将x设为“x的父节点的左孩子”</span></span><br><span class="line">    }</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 将 “y” 设为 “x的右孩子”</span></span><br><span class="line">    x-&gt;right = y;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 将 “y的父节点” 设为 “x”</span></span><br><span class="line">    y-&gt;parent = x;</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></div></figure>
 
         <h2 id="添加">
@@ -262,7 +290,7 @@ window.CONFIG = CONFIG;</script><meta name="generator" content="Hexo 4.2.1"></he
           删除</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#直接删除"><span class="toc-number">3.5.1.</span> <span class="toc-text">
           直接删除</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#修正-1"><span class="toc-number">3.5.2.</span> <span class="toc-text">
           修正</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Free-Talk"><span class="toc-number">4.</span> <span class="toc-text">
-          Free Talk</span></a></li></ol></section><!-- ov = overview--><section class="sidebar-ov hide"><div class="sidebar-ov-author"><div class="sidebar-ov-author__avatar"><img class="sidebar-ov-author__avatar_img" src="https://s1.ax1x.com/2020/05/14/YD6wTI.png" alt="avatar"></div><p class="sidebar-ov-author__text">In me the tiger sniffs the rose</p></div><div class="sidebar-ov-social"><a class="sidebar-ov-social-item" href="https://github.com/Gemini-Lin" target="_blank" rel="noopener" data-popover="Github" data-popover-pos="up"><span class="sidebar-ov-social-item__icon"><i class="fab fa-github"></i></span></a><a class="sidebar-ov-social-item" href="https://www.zhihu.com/people/iye-kong-zhong-zui-liang-de-xing-i" target="_blank" rel="noopener" data-popover="知乎" data-popover-pos="up"><span class="sidebar-ov-social-item__icon">知</span></a><a class="sidebar-ov-social-item" href="https://space.bilibili.com/313103161" target="_blank" rel="noopener" data-popover="social.bilibili" data-popover-pos="up"><span class="sidebar-ov-social-item__icon">B</span></a><a class="sidebar-ov-social-item" href="/images/qq.png" target="_blank" rel="noopener" data-popover="QQ" data-popover-pos="up"><span class="sidebar-ov-social-item__icon"><i class="fab fa-qq"></i></span></a><a class="sidebar-ov-social-item" href="/images/wechat.jpg" target="_blank" rel="noopener" data-popover="微信" data-popover-pos="up"><span class="sidebar-ov-social-item__icon"><i class="fab fa-weixin"></i></span></a><a class="sidebar-ov-social-item" href="mailto:geminilin@gmail.com" target="_blank" rel="noopener" data-popover="social.E-Mail" data-popover-pos="up"><span class="sidebar-ov-social-item__icon"><i class="fab fa-envelope"></i></span></a></div><div class="sidebar-ov-feed"><span class="sidebar-ov-feed-rss"><a class="sidebar-ov-feed-rss__link" href="/atom.xml" target="_blank" rel="noopener"><span class="sidebar-ov-feed-rss__icon"><i class="fas fa-rss"></i></span><span>RSS 订阅</span></a></span></div><div class="sidebar-ov-state"><a class="sidebar-ov-state-item sidebar-ov-state-item--posts" href="/archives/"><div class="sidebar-ov-state-item__count">48</div><div class="sidebar-ov-state-item__name">归档</div></a><a class="sidebar-ov-state-item sidebar-ov-state-item--categories" href="/categories/"><div class="sidebar-ov-state-item__count">27</div><div class="sidebar-ov-state-item__name">分类</div></a><a class="sidebar-ov-state-item sidebar-ov-state-item--tags" href="/tags/"><div class="sidebar-ov-state-item__count">54</div><div class="sidebar-ov-state-item__name">标签</div></a></div><div class="sidebar-ov-cc"><a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en" target="_blank" rel="noopener" data-popover="知识共享许可协议" data-popover-pos="up"><img src="/images/cc-by-nc-sa.svg"></a></div></section><div class="sidebar-reading"><div class="sidebar-reading-info"><span class="sidebar-reading-info__text">你已阅读了 </span><span class="sidebar-reading-info__num">0</span></div><div class="sidebar-reading-line"></div></div></aside></div><div class="clearfix"></div></div></main><footer class="footer" id="footer"><div class="footer-inner"><div><span>Copyright © 2020</span><span class="footer__icon"><i class="fas fa-heart"></i></span><span>Gemini-Lin</span><span class="footer__devider">|</span><span>闽ICP备20012376号</span></div><div class="busuanzi"><span class="busuanzi-siteuv"><span class="busuanzi-siteuv__icon"><i class="fas fa-user"></i></span><span class="busuanzi-siteuv__info">访问人数</span><span class="busuanzi-siteuv__value" id="busuanzi_value_site_uv"></span></span><span class="busuanzi-sitepv"><span class="busuanzi-siteuv__icon"><i class="fas fa-eye"></i></span><span class="busuanzi-siteuv__info">浏览总量</span><span class="busuanzi-siteuv__value" id="busuanzi_value_site_pv"></span></span></div></div></footer><div class="loading-bar" id="loading-bar"><div class="loading-bar__progress"></div></div><div class="back2top" id="back2top"><span class="back2top__icon"><i class="fas fa-rocket"></i></span></div></div><div class="search-mask"></div><div class="search-popup"><span class="search-close"></span><div class="search-input"><input placeholder="搜索文章（支持多关键词，请用空格分隔）"></div><div class="search-results"></div></div><script src="https://cdn.jsdelivr.net/npm/jquery@v3.4.1/dist/jquery.min.js"></script><script src="https://cdn.jsdelivr.net/npm/velocity-animate@1.5.2/velocity.min.js"></script><script src="https://cdn.jsdelivr.net/npm/velocity-animate@1.5.2/velocity.ui.min.js"></script><script src="https://cdn.jsdelivr.net/npm/ribbon.js@latest/dist/ribbon.min.js" size="150" alpha="0.6" zIndex="-1"></script><script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script><script src="https://cdn.jsdelivr.net/npm/social-share.js@1.0.16/dist/js/social-share.min.js"></script><script>function initSearch() {
+          Free Talk</span></a></li></ol></section><!-- ov = overview--><section class="sidebar-ov hide"><div class="sidebar-ov-author"><div class="sidebar-ov-author__avatar"><img class="sidebar-ov-author__avatar_img" src="https://s1.ax1x.com/2020/05/14/YD6wTI.png" alt="avatar"></div><p class="sidebar-ov-author__text">In me the tiger sniffs the rose</p></div><div class="sidebar-ov-social"><a class="sidebar-ov-social-item" href="https://github.com/Gemini-Lin" target="_blank" rel="noopener" data-popover="Github" data-popover-pos="up"><span class="sidebar-ov-social-item__icon"><i class="fab fa-github"></i></span></a><a class="sidebar-ov-social-item" href="https://www.zhihu.com/people/iye-kong-zhong-zui-liang-de-xing-i" target="_blank" rel="noopener" data-popover="知乎" data-popover-pos="up"><span class="sidebar-ov-social-item__icon">知</span></a><a class="sidebar-ov-social-item" href="https://space.bilibili.com/313103161" target="_blank" rel="noopener" data-popover="social.bilibili" data-popover-pos="up"><span class="sidebar-ov-social-item__icon">B</span></a><a class="sidebar-ov-social-item" href="/images/qq.png" target="_blank" rel="noopener" data-popover="QQ" data-popover-pos="up"><span class="sidebar-ov-social-item__icon"><i class="fab fa-qq"></i></span></a><a class="sidebar-ov-social-item" href="/images/wechat.jpg" target="_blank" rel="noopener" data-popover="微信" data-popover-pos="up"><span class="sidebar-ov-social-item__icon"><i class="fab fa-weixin"></i></span></a><a class="sidebar-ov-social-item" href="mailto:geminilin@gmail.com" target="_blank" rel="noopener" data-popover="social.E-Mail" data-popover-pos="up"><span class="sidebar-ov-social-item__icon"><i class="fab fa-envelope"></i></span></a></div><div class="sidebar-ov-feed"><span class="sidebar-ov-feed-rss"><a class="sidebar-ov-feed-rss__link" href="/atom.xml" target="_blank" rel="noopener"><span class="sidebar-ov-feed-rss__icon"><i class="fas fa-rss"></i></span><span>RSS 订阅</span></a></span></div><div class="sidebar-ov-state"><a class="sidebar-ov-state-item sidebar-ov-state-item--posts" href="/archives/"><div class="sidebar-ov-state-item__count">48</div><div class="sidebar-ov-state-item__name">归档</div></a><a class="sidebar-ov-state-item sidebar-ov-state-item--categories" href="/categories/"><div class="sidebar-ov-state-item__count">27</div><div class="sidebar-ov-state-item__name">分类</div></a><a class="sidebar-ov-state-item sidebar-ov-state-item--tags" href="/tags/"><div class="sidebar-ov-state-item__count">54</div><div class="sidebar-ov-state-item__name">标签</div></a></div><div class="sidebar-ov-cc"><a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en" target="_blank" rel="noopener" data-popover="知识共享许可协议" data-popover-pos="up"><img src="/images/cc-by-nc-sa.svg"></a></div></section><div class="sidebar-reading"><div class="sidebar-reading-info"><span class="sidebar-reading-info__text">你已阅读了 </span><span class="sidebar-reading-info__num">0</span></div><div class="sidebar-reading-line"></div></div></aside></div><div class="clearfix"></div></div></main><footer class="footer" id="footer"><div class="footer-inner"><div><span>Copyright © 2020</span><span class="footer__icon"><i class="fas fa-heart"></i></span><span>Gemini-Lin</span><span class="footer__devider">|</span><span>闽ICP备20012376号</span></div><div class="busuanzi"><span class="busuanzi-siteuv"><span class="busuanzi-siteuv__icon"><i class="fas fa-user"></i></span><span class="busuanzi-siteuv__info">访问人数</span><span class="busuanzi-siteuv__value" id="busuanzi_value_site_uv"></span></span><span class="busuanzi-sitepv"><span class="busuanzi-siteuv__icon"><i class="fas fa-eye"></i></span><span class="busuanzi-siteuv__info">浏览总量</span><span class="busuanzi-siteuv__value" id="busuanzi_value_site_pv"></span></span></div></div></footer><div class="loading-bar" id="loading-bar"><div class="loading-bar__progress"></div></div><div class="back2top" id="back2top"><span class="back2top__icon"><i class="fas fa-rocket"></i></span></div></div><div class="search-mask"></div><div class="search-popup"><span class="search-close"></span><div class="search-input"><input placeholder="搜索文章（支持多关键词，请用空格分隔）"></div><div class="search-results"></div></div><script src="https://cdn.jsdelivr.net/npm/jquery@v3.4.1/dist/jquery.min.js"></script><script src="https://cdn.jsdelivr.net/npm/velocity-animate@1.5.2/velocity.min.js"></script><script src="https://cdn.jsdelivr.net/npm/velocity-animate@1.5.2/velocity.ui.min.js"></script><script src="https://cdn.jsdelivr.net/npm/ribbon.js@latest/dist/ribbon.min.js" size="150" alpha="0.6" zIndex="-1"></script><script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script><script src="https://cdn.jsdelivr.net/npm/masonry-layout@4.2.2/dist/masonry.pkgd.min.js"></script><script src="https://cdn.jsdelivr.net/npm/lazyload@2.0.0-rc.2/lazyload.min.js"></script><script src="https://cdn.jsdelivr.net/npm/social-share.js@1.0.16/dist/js/social-share.min.js"></script><script>function initSearch() {
   var isXML = true;
   var search_path = 'search.xml';
 

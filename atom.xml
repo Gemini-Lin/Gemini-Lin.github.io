@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://gemini-lin.github.io/"/>
-  <updated>2020-07-28T10:24:25.987Z</updated>
+  <updated>2020-07-29T02:17:35.416Z</updated>
   <id>https://gemini-lin.github.io/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="https://gemini-lin.github.io/SpringBoot1/"/>
     <id>https://gemini-lin.github.io/SpringBoot1/</id>
     <published>2020-07-28T09:01:46.000Z</published>
-    <updated>2020-07-28T10:24:25.987Z</updated>
+    <updated>2020-07-29T02:17:35.416Z</updated>
     
     <summary type="html">
     
@@ -57,7 +57,9 @@
     
       &lt;h1 id=&quot;Free-Talk&quot;&gt;
           &lt;a href=&quot;#Free-Talk&quot; class=&quot;heading-link&quot;&gt;&lt;i class=&quot;fas fa-link&quot;&gt;&lt;/i&gt;&lt;/a&gt;Free Talk&lt;/h1&gt;
-      &lt;p&gt;&lt;strong&gt;微服务是一种热门的架构风格&lt;/strong&gt;，由Martin Flowler在2014年一篇文章带火。&lt;span class=&quot;exturl&quot;&gt;&lt;a class=&quot;exturl__link&quot; href=&quot;https://martinfowler.com/articles/microservices.html&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;MicroServices&lt;/a&gt;&lt;span class=&quot;exturl__icon&quot;&gt;&lt;i class=&quot;fas fa-external-link-alt&quot;&gt;&lt;/i&gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;img src=&quot;https://s1.ax1x.com/2020/07/28/aA5jht.png&quot; alt=&quot;MicroServices&quot;&gt;&lt;/p&gt;
+      &lt;p&gt;&lt;strong&gt;微服务是一种热门的架构风格&lt;/strong&gt;，由Martin Flowler在2014年一篇文章带火。&lt;span class=&quot;exturl&quot;&gt;&lt;a class=&quot;exturl__link&quot; href=&quot;https://martinfowler.com/articles/microservices.html&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;MicroServices&lt;/a&gt;&lt;span class=&quot;exturl__icon&quot;&gt;&lt;i class=&quot;fas fa-external-link-alt&quot;&gt;&lt;/i&gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;
+        &lt;img class=&quot;lazyload lazyload-gif&quot; src=&quot;/images/loading.svg&quot; data-src=&quot;https://s1.ax1x.com/2020/07/28/aA5jht.png&quot; alt=&quot;MicroServices&quot;&gt;
+      &lt;/p&gt;
     
     </summary>
     
@@ -86,7 +88,9 @@
     
       &lt;h1 id=&quot;Free-Talk&quot;&gt;
           &lt;a href=&quot;#Free-Talk&quot; class=&quot;heading-link&quot;&gt;&lt;i class=&quot;fas fa-link&quot;&gt;&lt;/i&gt;&lt;/a&gt;Free Talk&lt;/h1&gt;
-      &lt;p&gt;&lt;strong&gt;Spring 是一种轻量级开发框架，旨在提高开发人员的开发效率以及系统的可维护性。&lt;/strong&gt;&lt;br&gt;它包含以下核心模块：&lt;br&gt;&lt;img src=&quot;https://s1.ax1x.com/2020/07/28/ak6x8H.png&quot; alt=&quot;SpringFramework&quot;&gt;&lt;/p&gt;
+      &lt;p&gt;&lt;strong&gt;Spring 是一种轻量级开发框架，旨在提高开发人员的开发效率以及系统的可维护性。&lt;/strong&gt;&lt;br&gt;它包含以下核心模块：&lt;br&gt;
+        &lt;img class=&quot;lazyload lazyload-gif&quot; src=&quot;/images/loading.svg&quot; data-src=&quot;https://s1.ax1x.com/2020/07/28/ak6x8H.png&quot; alt=&quot;SpringFramework&quot;&gt;
+      &lt;/p&gt;
     
     </summary>
     
@@ -146,7 +150,9 @@
     
       &lt;h1 id=&quot;Free-Talk&quot;&gt;
           &lt;a href=&quot;#Free-Talk&quot; class=&quot;heading-link&quot;&gt;&lt;i class=&quot;fas fa-link&quot;&gt;&lt;/i&gt;&lt;/a&gt;Free Talk&lt;/h1&gt;
-      &lt;p&gt;最近在进行Spring Boot学习，在配置数据库时想要使用Docker下载Mysql镜像，但是过程中遇到了挺多问题，故记录下解决过程。&lt;br&gt;&lt;strong&gt;本篇文章内容包含利用Docker运行Mysql镜像，完成数据库配置。&lt;/strong&gt;&lt;br&gt;&lt;img src=&quot;https://s1.ax1x.com/2020/07/24/UjmpMq.png&quot; alt=&quot;Docker-Mysql&quot;&gt;&lt;/p&gt;
+      &lt;p&gt;最近在进行Spring Boot学习，在配置数据库时想要使用Docker下载Mysql镜像，但是过程中遇到了挺多问题，故记录下解决过程。&lt;br&gt;&lt;strong&gt;本篇文章内容包含利用Docker运行Mysql镜像，完成数据库配置。&lt;/strong&gt;&lt;br&gt;
+        &lt;img class=&quot;lazyload lazyload-gif&quot; src=&quot;/images/loading.svg&quot; data-src=&quot;https://s1.ax1x.com/2020/07/24/UjmpMq.png&quot; alt=&quot;Docker-Mysql&quot;&gt;
+      &lt;/p&gt;
     
     </summary>
     
@@ -175,7 +181,9 @@
     
       &lt;h1 id=&quot;Free-Talk&quot;&gt;
           &lt;a href=&quot;#Free-Talk&quot; class=&quot;heading-link&quot;&gt;&lt;i class=&quot;fas fa-link&quot;&gt;&lt;/i&gt;&lt;/a&gt;Free Talk&lt;/h1&gt;
-      &lt;p&gt;作为LeetCode新手，我选择了HOT100里的一下简单和中等及困难的题目来刷。&lt;br&gt;本篇文章是自己一周刷题的心得，主要内容为刷题的&lt;strong&gt;心路历程、收获以及解题方法&lt;/strong&gt;。&lt;br&gt;&lt;img src=&quot;https://s1.ax1x.com/2020/07/24/UjVUyV.png&quot; alt=&quot;LeetCode&quot;&gt;&lt;/p&gt;
+      &lt;p&gt;作为LeetCode新手，我选择了HOT100里的一下简单和中等及困难的题目来刷。&lt;br&gt;本篇文章是自己一周刷题的心得，主要内容为刷题的&lt;strong&gt;心路历程、收获以及解题方法&lt;/strong&gt;。&lt;br&gt;
+        &lt;img class=&quot;lazyload lazyload-gif&quot; src=&quot;/images/loading.svg&quot; data-src=&quot;https://s1.ax1x.com/2020/07/24/UjVUyV.png&quot; alt=&quot;LeetCode&quot;&gt;
+      &lt;/p&gt;
     
     </summary>
     
@@ -225,7 +233,9 @@
     
       &lt;h1 id=&quot;What-is-Maven？&quot;&gt;
           &lt;a href=&quot;#What-is-Maven？&quot; class=&quot;heading-link&quot;&gt;&lt;i class=&quot;fas fa-link&quot;&gt;&lt;/i&gt;&lt;/a&gt;What is Maven？&lt;/h1&gt;
-      &lt;p&gt;Maven是一个&lt;strong&gt;Java项目管理和构建工具&lt;/strong&gt;，它可以定义项目结构、项目依赖，并使用统一的方式进行自动化构建，是Java项目不可缺少的工具。&lt;br&gt;&lt;img src=&quot;https://s1.ax1x.com/2020/07/18/UgJM0x.png&quot; alt=&quot;Maven&quot;&gt;&lt;/p&gt;
+      &lt;p&gt;Maven是一个&lt;strong&gt;Java项目管理和构建工具&lt;/strong&gt;，它可以定义项目结构、项目依赖，并使用统一的方式进行自动化构建，是Java项目不可缺少的工具。&lt;br&gt;
+        &lt;img class=&quot;lazyload lazyload-gif&quot; src=&quot;/images/loading.svg&quot; data-src=&quot;https://s1.ax1x.com/2020/07/18/UgJM0x.png&quot; alt=&quot;Maven&quot;&gt;
+      &lt;/p&gt;
     
     </summary>
     
@@ -250,7 +260,9 @@
     
       &lt;h1 id=&quot;概述&quot;&gt;
           &lt;a href=&quot;#概述&quot; class=&quot;heading-link&quot;&gt;&lt;i class=&quot;fas fa-link&quot;&gt;&lt;/i&gt;&lt;/a&gt;概述&lt;/h1&gt;
-      &lt;p&gt;在 Java 中，JVM 可以理解的代码就叫做&lt;code&gt;字节码&lt;/code&gt;（即扩展名为 &lt;code&gt;.class&lt;/code&gt; 的文件），&lt;strong&gt;它不面向任何特定的处理器，只面向虚拟机&lt;/strong&gt;。&lt;br&gt;Java 语言通过字节码的方式，在一定程度上解决了传统解释型语言执行效率低的问题，同时又保留了&lt;strong&gt;解释型语言可移植&lt;/strong&gt;的特点。&lt;br&gt;所以 Java 程序运行时比较高效，而且，&lt;strong&gt;由于字节码并不针对一种特定的机器&lt;/strong&gt;，因此，Java 程序&lt;strong&gt;无须重新编译&lt;/strong&gt;便可在多种不同操作系统的计算机上运行。&lt;br&gt;&lt;img src=&quot;https://s1.ax1x.com/2020/07/19/URi1MQ.png&quot; alt=&quot;class&quot;&gt;&lt;br&gt;&lt;strong&gt;可以说&lt;code&gt;.class&lt;/code&gt;文件是不同的语言在 Java 虚拟机之间的重要桥梁，同时也是支持 Java 跨平台很重要的一个原因。&lt;/strong&gt;&lt;/p&gt;
+      &lt;p&gt;在 Java 中，JVM 可以理解的代码就叫做&lt;code&gt;字节码&lt;/code&gt;（即扩展名为 &lt;code&gt;.class&lt;/code&gt; 的文件），&lt;strong&gt;它不面向任何特定的处理器，只面向虚拟机&lt;/strong&gt;。&lt;br&gt;Java 语言通过字节码的方式，在一定程度上解决了传统解释型语言执行效率低的问题，同时又保留了&lt;strong&gt;解释型语言可移植&lt;/strong&gt;的特点。&lt;br&gt;所以 Java 程序运行时比较高效，而且，&lt;strong&gt;由于字节码并不针对一种特定的机器&lt;/strong&gt;，因此，Java 程序&lt;strong&gt;无须重新编译&lt;/strong&gt;便可在多种不同操作系统的计算机上运行。&lt;br&gt;
+        &lt;img class=&quot;lazyload lazyload-gif&quot; src=&quot;/images/loading.svg&quot; data-src=&quot;https://s1.ax1x.com/2020/07/19/URi1MQ.png&quot; alt=&quot;class&quot;&gt;
+      &lt;br&gt;&lt;strong&gt;可以说&lt;code&gt;.class&lt;/code&gt;文件是不同的语言在 Java 虚拟机之间的重要桥梁，同时也是支持 Java 跨平台很重要的一个原因。&lt;/strong&gt;&lt;/p&gt;
     
     </summary>
     

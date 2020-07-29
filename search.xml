@@ -76,7 +76,9 @@
 
         <h2 id="ComponentScan">
           <a href="#ComponentScan" class="heading-link"><i class="fas fa-link"></i></a>@ComponentScan</h2>
-      
+      <p><code>@ComponentScan</code>这个注解在 Spring 中很重要，它对应 XML 配置中的元素，<code>@ComponentScan</code>的功能其实就是自动扫描并加载符合条件的组件（比如<code>@Component</code>和<code>@Repository</code>等）或者 bean 定义，最终将这些 bean 定义加载到 IoC 容器中。</p>
+<p>我们可以通过 basePackages 等属性来细粒度的定制<code>@ComponentScan</code>自动扫描的范围，如果不指定，则默认 Spring 框架实现会从声明<code>@ComponentScan</code>所在类的 package 进行扫描。</p>
+
         <h2 id="EnableAutoConfiguration">
           <a href="#EnableAutoConfiguration" class="heading-link"><i class="fas fa-link"></i></a>@EnableAutoConfiguration</h2>
       <p><strong>开启自动配置功能</strong></p>
@@ -88,7 +90,9 @@
 <figure class="highlight java"><div class="table-container"><table><tbody><tr><td class="code"><pre><span class="line"><span class="meta">@Target</span>(ElementType.TYPE)</span><br><span class="line"><span class="meta">@Retention</span>(RetentionPolicy.RUNTIME)</span><br><span class="line"><span class="meta">@Documented</span></span><br><span class="line"><span class="meta">@Inherited</span></span><br><span class="line"><span class="meta">@Import</span>(AutoConfigurationPackages.Registrar<span class="class">.<span class="keyword">class</span>) </span></span><br><span class="line"><span class="class">// 仍然采用的是@<span class="title">Import</span>注解将这个类导入 <span class="title">IoC</span> 容器中</span></span><br></pre></td></tr></tbody></table></div></figure>
 <p>我好奇地打开了这个类的实现方法</p>
 <figure class="highlight java"><div class="table-container"><table><tbody><tr><td class="code"><pre><span class="line"><span class="meta">@Override</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">registerBeanDefinitions</span><span class="params">(AnnotationMetadata metadata, BeanDefinitionRegistry registry)</span> </span>{</span><br><span class="line">    register(registry, <span class="keyword">new</span> PackageImports(metadata).getPackageNames().toArray(<span class="keyword">new</span> String[<span class="number">0</span>]));</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></div></figure>
-<p>在此处进行断点Debug发现：<br><img src="https://s1.ax1x.com/2020/07/28/aElEIf.png" alt="metadata"><br>在 metadata 元信息中获得了我们导入的类：<code>cn.geminiplanet.springboot.helloworld</code><br>Amazing !!!</p>
+<p>在此处进行断点Debug发现：<br>
+        <img class="lazyload lazyload-gif" src="/images/loading.svg" data-src="https://s1.ax1x.com/2020/07/28/aElEIf.png" alt="metadata">
+      <br>在 metadata 元信息中获得了我们导入的类：<code>cn.geminiplanet.springboot.helloworld</code><br>Amazing !!!</p>
 
         <h3 id="Import-AutoConfigurationImportSelector-class">
           <a href="#Import-AutoConfigurationImportSelector-class" class="heading-link"><i class="fas fa-link"></i></a>Import({AutoConfigurationImportSelector.class})</h3>
@@ -96,19 +100,52 @@
 <figure class="highlight java"><div class="table-container"><table><tbody><tr><td class="code"><pre><span class="line"><span class="meta">@Override</span></span><br><span class="line"><span class="keyword">public</span> String[] selectImports(AnnotationMetadata annotationMetadata) {</span><br><span class="line">    <span class="keyword">if</span> (!isEnabled(annotationMetadata)) {</span><br><span class="line">        <span class="keyword">return</span> NO_IMPORTS;</span><br><span class="line">    }</span><br><span class="line">    AutoConfigurationEntry autoConfigurationEntry = getAutoConfigurationEntry(annotationMetadata);</span><br><span class="line">    <span class="keyword">return</span> StringUtils.toStringArray(autoConfigurationEntry.getConfigurations());</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></div></figure>
 <p>这里内部使用 SpringFactoriesLoader,从指定的配置文件META-INF/spring.factories加载配置, 自动配置类就生效了。</p>
 
-        <h2 id="ComponentScan-1">
-          <a href="#ComponentScan-1" class="heading-link"><i class="fas fa-link"></i></a>@ComponentScan</h2>
-      <p><code>@ComponentScan</code>这个注解在 Spring 中很重要，它对应 XML 配置中的元素，<code>@ComponentScan</code>的功能其实就是自动扫描并加载符合条件的组件（比如<code>@Component</code>和<code>@Repository</code>等）或者 bean 定义，最终将这些 bean 定义加载到 IoC 容器中。</p>
-<p>我们可以通过 basePackages 等属性来细粒度的定制<code>@ComponentScan</code>自动扫描的范围，如果不指定，则默认 Spring 框架实现会从声明<code>@ComponentScan</code>所在类的 package 进行扫描。</p>
+        <h1 id="SpringApplication">
+          <a href="#SpringApplication" class="heading-link"><i class="fas fa-link"></i></a>SpringApplication</h1>
+      <blockquote>
+<p>以下这一部分内容，我没怎么弄懂，来源：<span class="exturl"><a class="exturl__link" href="http://www.51gjie.com/javaweb/1042.html" target="_blank" rel="noopener">http://www.51gjie.com/javaweb/1042.html</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></p>
+</blockquote>
+<p><strong>SpringApplication 是 SpringBoot 驱动 Spring 应用上下文的引导类，他的run() 方法启动 Spring 应用，实质上是为 Spring 应用创建并初始化 Spring 上下文。</strong></p>
 
-        <h1 id="SpringApplication-run">
-          <a href="#SpringApplication-run" class="heading-link"><i class="fas fa-link"></i></a>SpringApplication.run()</h1>
-      
+        <h2 id="执行流程">
+          <a href="#执行流程" class="heading-link"><i class="fas fa-link"></i></a>执行流程</h2>
+      <ol>
+<li>初始化监听器，以及添加到SpringApplication的自定义监听器。</li>
+<li>发布ApplicationStartedEvent事件，如果想监听ApplicationStartedEvent事件，你可以这样定义：public class ApplicationStartedListener implements ApplicationListener，然后通过SpringApplication.addListener(..)添加进去即可。</li>
+<li>装配参数和环境，确定是web环境还是非web环境。</li>
+<li>装配完环境后，就触发ApplicationEnvironmentPreparedEvent事件。</li>
+<li>如果SpringApplication的showBanner属性被设置为true，则打印启动的Banner。</li>
+<li>创建ApplicationContext，会根据是否是web环境，来决定创建什么类型的ApplicationContext。</li>
+<li>装配Context的环境变量，注册Initializers、beanNameGenerator等。</li>
+<li>发布ApplicationPreparedEvent事件。</li>
+<li>注册springApplicationArguments、springBootBanner，加载资源等</li>
+<li>遍历调用所有SpringApplicationRunListener的contextLoaded()方法。</li>
+<li>调用ApplicationContext的refresh()方法,装配context beanfactory等非常重要的核心组件。</li>
+<li>查找当前ApplicationContext中是否注册有CommandLineRunner，如果有，则遍历执行它们。</li>
+<li>发布ApplicationReadyEvent事件，启动完毕，表示服务已经可以开始正常提供服务了。通常我们这里会监听这个事件来打印一些监控性质的日志，表示应用正常启动了。</li>
+</ol>
+<p>SpringBoot会触发其他的一些事件，这些事件按下列顺序触发：<br>（1）ApplicationStartingEvent：项目刚启动时触发，此时除了注册监听器和初始器之外，其他所有处理都没有开始；<br>（2）ApplicationEnvironmentPreparedEvent：上下文得到环境信息之后触发，此时上下文创建还没有创建；<br>（3）ApplicationPreparedEvent：bean的定义信息加载完成之后触发，此时bean还没有初始化；<br>（4）ApplicationReadyEvent：在所有bean初始化完毕，所有回调处理完成，系统准备处理服务请求时触发；<br>（5）ApplicationFailedEvent：启动过程出现异常时候触发。</p>
+
+        <h2 id="SpringApplication-run">
+          <a href="#SpringApplication-run" class="heading-link"><i class="fas fa-link"></i></a>SpringApplication.run()</h2>
+      <p>如果我们使用的是SpringApplication的静态run方法，那么，这个方法里面首先要创建一个SpringApplication对象实例，然后调用这个创建好的SpringApplication的实例方法。在SpringApplication实例初始化的时候，它会提前做几件事情：</p>
+<ol>
+<li>根据classpath里面是否存在某个特征类（org.springframework.web.context.ConfigurableWebApplicationContext）来决定是否应该创建一个为Web应用使用的ApplicationContext类型。</li>
+<li>使用SpringFactoriesLoader在应用的classpath中查找并加载所有可用的ApplicationContextInitializer。</li>
+<li>使用SpringFactoriesLoader在应用的classpath中查找并加载所有可用的ApplicationListener。</li>
+<li>推断并设置main方法的定义类。<br>它会执行以下步骤：</li>
+<li>创建一个合适的ApplicationContext实例 （取决于classpath）。</li>
+<li>注册一个CommandLinePropertySource，以便将命令行参数作为Spring properties。</li>
+<li>刷新application context，加载所有单例beans。</li>
+<li>激活所有CommandLineRunner beans。</li>
+</ol>
+
         <h1 id="参考资料">
           <a href="#参考资料" class="heading-link"><i class="fas fa-link"></i></a>参考资料</h1>
       <ol>
 <li><span class="exturl"><a class="exturl__link" href="http://tengj.top/2017/03/09/springboot3/" target="_blank" rel="noopener">http://tengj.top/2017/03/09/springboot3/</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></li>
 <li><span class="exturl"><a class="exturl__link" href="https://blog.csdn.net/yixiaogang109/article/details/7328466" target="_blank" rel="noopener">https://blog.csdn.net/yixiaogang109/article/details/7328466</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></li>
+<li><span class="exturl"><a class="exturl__link" href="http://www.51gjie.com/javaweb/1042.html" target="_blank" rel="noopener">http://www.51gjie.com/javaweb/1042.html</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></li>
 </ol>
 <script>
         document.querySelectorAll('.github-emoji')
@@ -144,7 +181,9 @@
     <url>/MicroServices/</url>
     <content><![CDATA[<h1 id="Free-Talk">
           <a href="#Free-Talk" class="heading-link"><i class="fas fa-link"></i></a>Free Talk</h1>
-      <p><strong>微服务是一种热门的架构风格</strong>，由Martin Flowler在2014年一篇文章带火。<span class="exturl"><a class="exturl__link" href="https://martinfowler.com/articles/microservices.html" target="_blank" rel="noopener">MicroServices</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span><br><img src="https://s1.ax1x.com/2020/07/28/aA5jht.png" alt="MicroServices"></p>
+      <p><strong>微服务是一种热门的架构风格</strong>，由Martin Flowler在2014年一篇文章带火。<span class="exturl"><a class="exturl__link" href="https://martinfowler.com/articles/microservices.html" target="_blank" rel="noopener">MicroServices</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span><br>
+        <img class="lazyload lazyload-gif" src="/images/loading.svg" data-src="https://s1.ax1x.com/2020/07/28/aA5jht.png" alt="MicroServices">
+      </p>
 <a id="more"></a>
 <p>在图片的左边是常见的<strong>单体应用</strong>，它将所有功能都打包成一个独立单元的应用程序，每一个业务功能不可分割。</p>
 <p>在图片右边对应着<strong>微服务，一个应用由一组小型服务组成</strong>，可以通过HTTP的方式进行互通。每一个功能元素最终都是一个可独立替换和独立升级的软件单元。</p>
@@ -189,7 +228,9 @@
     <url>/Spring-Guide/</url>
     <content><![CDATA[<h1 id="Free-Talk">
           <a href="#Free-Talk" class="heading-link"><i class="fas fa-link"></i></a>Free Talk</h1>
-      <p><strong>Spring 是一种轻量级开发框架，旨在提高开发人员的开发效率以及系统的可维护性。</strong><br>它包含以下核心模块：<br><img src="https://s1.ax1x.com/2020/07/28/ak6x8H.png" alt="SpringFramework"></p>
+      <p><strong>Spring 是一种轻量级开发框架，旨在提高开发人员的开发效率以及系统的可维护性。</strong><br>它包含以下核心模块：<br>
+        <img class="lazyload lazyload-gif" src="/images/loading.svg" data-src="https://s1.ax1x.com/2020/07/28/ak6x8H.png" alt="SpringFramework">
+      </p>
 <a id="more"></a>
 
         <h1 id="RestController-vs-Controller">
@@ -197,11 +238,15 @@
       
         <h2 id="Controller">
           <a href="#Controller" class="heading-link"><i class="fas fa-link"></i></a>@Controller</h2>
-      <p><code>Controller</code>返回一个页面视图，对应传统的Spring MVC应用，应用于前后端不分离的开发。<br><img src="https://s1.ax1x.com/2020/07/28/akgMSH.png" alt="Controller"></p>
+      <p><code>Controller</code>返回一个页面视图，对应传统的Spring MVC应用，应用于前后端不分离的开发。<br>
+        <img class="lazyload lazyload-gif" src="/images/loading.svg" data-src="https://s1.ax1x.com/2020/07/28/akgMSH.png" alt="Controller">
+      </p>
 
         <h2 id="RestController">
           <a href="#RestController" class="heading-link"><i class="fas fa-link"></i></a>@RestController</h2>
-      <p><code>RestController</code>返回JSON或XML格式的对象数据，属于RESTFUL Web服务，是目前主流的前后端分离开发。<br><img src="https://s1.ax1x.com/2020/07/28/akgy7V.png" alt="RestController"></p>
+      <p><code>RestController</code>返回JSON或XML格式的对象数据，属于RESTFUL Web服务，是目前主流的前后端分离开发。<br>
+        <img class="lazyload lazyload-gif" src="/images/loading.svg" data-src="https://s1.ax1x.com/2020/07/28/akgy7V.png" alt="RestController">
+      </p>
 
         <h2 id="Controller-ResponseBody">
           <a href="#Controller-ResponseBody" class="heading-link"><i class="fas fa-link"></i></a>@Controller + @ResponseBody</h2>
@@ -209,14 +254,18 @@
 <blockquote>
 <p><code>@ResponseBody</code>注解的作用是将 <code>Controller</code>的方法返回对象转换为指定的格式后，写入到 HTTP 响应(Response)对象的 body,通常来返回 JSON 数据。<br>PS：注解不是 Spring 所特有的，而且 Java 语言的特性，可以看我之前写过的 Java 注解篇</p>
 </blockquote>
-<p><img src="https://s1.ax1x.com/2020/07/28/ak2cDI.png" alt="@Controller + @ResponseBody"></p>
+<p>
+        <img class="lazyload lazyload-gif" src="/images/loading.svg" data-src="https://s1.ax1x.com/2020/07/28/ak2cDI.png" alt="@Controller + @ResponseBody">
+      </p>
 
         <h1 id="MVC-vs-RESTful">
           <a href="#MVC-vs-RESTful" class="heading-link"><i class="fas fa-link"></i></a>MVC vs RESTful</h1>
       
         <h2 id="MVC">
           <a href="#MVC" class="heading-link"><i class="fas fa-link"></i></a>MVC</h2>
-      <p><strong>Spring MVC 是一个模型 - 视图 - 控制器（MVC）的Web框架</strong>，建立在中央前端控制器servlet（DispatcherServlet），它负责发送每个请求到合适的处理程序，使用视图来最终返回响应结果的概念。<br><img src="https://s1.ax1x.com/2020/07/28/akRvwt.png" alt="MVC"></p>
+      <p><strong>Spring MVC 是一个模型 - 视图 - 控制器（MVC）的Web框架</strong>，建立在中央前端控制器servlet（DispatcherServlet），它负责发送每个请求到合适的处理程序，使用视图来最终返回响应结果的概念。<br>
+        <img class="lazyload lazyload-gif" src="/images/loading.svg" data-src="https://s1.ax1x.com/2020/07/28/akRvwt.png" alt="MVC">
+      </p>
 
         <h2 id="RESTful">
           <a href="#RESTful" class="heading-link"><i class="fas fa-link"></i></a>RESTful</h2>
@@ -423,12 +472,16 @@
     <url>/Docker-Mysql/</url>
     <content><![CDATA[<h1 id="Free-Talk">
           <a href="#Free-Talk" class="heading-link"><i class="fas fa-link"></i></a>Free Talk</h1>
-      <p>最近在进行Spring Boot学习，在配置数据库时想要使用Docker下载Mysql镜像，但是过程中遇到了挺多问题，故记录下解决过程。<br><strong>本篇文章内容包含利用Docker运行Mysql镜像，完成数据库配置。</strong><br><img src="https://s1.ax1x.com/2020/07/24/UjmpMq.png" alt="Docker-Mysql"></p>
+      <p>最近在进行Spring Boot学习，在配置数据库时想要使用Docker下载Mysql镜像，但是过程中遇到了挺多问题，故记录下解决过程。<br><strong>本篇文章内容包含利用Docker运行Mysql镜像，完成数据库配置。</strong><br>
+        <img class="lazyload lazyload-gif" src="/images/loading.svg" data-src="https://s1.ax1x.com/2020/07/24/UjmpMq.png" alt="Docker-Mysql">
+      </p>
 <a id="more"></a>
 
         <h1 id="启用Hyper-V">
           <a href="#启用Hyper-V" class="heading-link"><i class="fas fa-link"></i></a>启用Hyper-V</h1>
-      <p>打开控制面板–&gt;程序–&gt;启用或关闭windows功能，勾选Hyper-V,然后点击确定即可。<br><img src="https://s1.ax1x.com/2020/07/24/Ujm2yq.png" alt="Hyper-V"></p>
+      <p>打开控制面板–&gt;程序–&gt;启用或关闭windows功能，勾选Hyper-V,然后点击确定即可。<br>
+        <img class="lazyload lazyload-gif" src="/images/loading.svg" data-src="https://s1.ax1x.com/2020/07/24/Ujm2yq.png" alt="Hyper-V">
+      </p>
 
         <h1 id="安装Docker">
           <a href="#安装Docker" class="heading-link"><i class="fas fa-link"></i></a>安装Docker</h1>
@@ -436,27 +489,39 @@
 
         <h1 id="启动Docker">
           <a href="#启动Docker" class="heading-link"><i class="fas fa-link"></i></a>启动Docker</h1>
-      <p>打开windows命令行模式，输入docker version或docker -v查看，若出现如下信息则安装成功。<br><img src="https://s1.ax1x.com/2020/07/24/UjnQcn.png" alt="docker version"></p>
+      <p>打开windows命令行模式，输入docker version或docker -v查看，若出现如下信息则安装成功。<br>
+        <img class="lazyload lazyload-gif" src="/images/loading.svg" data-src="https://s1.ax1x.com/2020/07/24/UjnQcn.png" alt="docker version">
+      </p>
 
         <h1 id="国内镜像加速">
           <a href="#国内镜像加速" class="heading-link"><i class="fas fa-link"></i></a>国内镜像加速</h1>
-      <p>阿里云镜像加速地址：<span class="exturl"><a class="exturl__link" href="https://cr.console.aliyun.com/cn-hangzhou/instances/mirrors" target="_blank" rel="noopener">https://cr.console.aliyun.com/cn-hangzhou/instances/mirrors</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span><br>获取专属加速器地址，如下图：<br><img src="https://s1.ax1x.com/2020/07/24/UjuCUU.png" alt="阿里云镜像"><br>打开docker，右键Settings–&gt;Daemon–&gt;Registry mirrors复制刚才的专属加速器地址到此即可，这样就完成了国内镜像加速。<br><img src="https://s1.ax1x.com/2020/07/24/UjuFC4.png" alt="mirrors"></p>
+      <p>阿里云镜像加速地址：<span class="exturl"><a class="exturl__link" href="https://cr.console.aliyun.com/cn-hangzhou/instances/mirrors" target="_blank" rel="noopener">https://cr.console.aliyun.com/cn-hangzhou/instances/mirrors</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span><br>获取专属加速器地址，如下图：<br>
+        <img class="lazyload lazyload-gif" src="/images/loading.svg" data-src="https://s1.ax1x.com/2020/07/24/UjuCUU.png" alt="阿里云镜像">
+      <br>打开docker，右键Settings–&gt;Daemon–&gt;Registry mirrors复制刚才的专属加速器地址到此即可，这样就完成了国内镜像加速。<br>
+        <img class="lazyload lazyload-gif" src="/images/loading.svg" data-src="https://s1.ax1x.com/2020/07/24/UjuFC4.png" alt="mirrors">
+      </p>
 
         <h1 id="拉取Mysql镜像">
           <a href="#拉取Mysql镜像" class="heading-link"><i class="fas fa-link"></i></a>拉取Mysql镜像</h1>
       <p>官网：<span class="exturl"><a class="exturl__link" href="https://hub.docker.com/_/mysql" target="_blank" rel="noopener">https://hub.docker.com/_/mysql</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></p>
 <figure class="highlight properties"><div class="table-container"><table><tbody><tr><td class="code"><pre><span class="line"><span class="comment"># 默认安装最新版本</span></span><br><span class="line"><span class="attr">docker</span> <span class="string">pull mysql</span></span><br><span class="line"><span class="comment"># 查看镜像</span></span><br><span class="line"><span class="attr">docker</span> <span class="string">images</span></span><br></pre></td></tr></tbody></table></div></figure>
-<p><img src="https://s1.ax1x.com/2020/07/24/UjulPe.png" alt="Mysql镜像"></p>
+<p>
+        <img class="lazyload lazyload-gif" src="/images/loading.svg" data-src="https://s1.ax1x.com/2020/07/24/UjulPe.png" alt="Mysql镜像">
+      </p>
 
         <h1 id="启动Mysql实例">
           <a href="#启动Mysql实例" class="heading-link"><i class="fas fa-link"></i></a>启动Mysql实例</h1>
       <figure class="highlight routeros"><div class="table-container"><table><tbody><tr><td class="code"><pre><span class="line">docker <span class="builtin-name">run</span> --name some-mysql -e <span class="attribute">MYSQL_ROOT_PASSWORD</span>=my-secret-pw -d mysql:tag</span><br><span class="line"><span class="comment"># 其中some-mysql是您要分配给容器的名称，</span></span><br><span class="line"><span class="comment"># my-secret-pw是要为MySQL根用户设置的密码，</span></span><br><span class="line"><span class="comment"># tag是指定所需MySQL版本的标签。</span></span><br><span class="line">eg:</span><br><span class="line">docker <span class="builtin-name">run</span> --name mysql -e <span class="attribute">MYSQL_ROOT_PASSWORD</span>=123456 -d mysql</span><br></pre></td></tr></tbody></table></div></figure>
-<p><img src="https://s1.ax1x.com/2020/07/24/UjKGYF.png" alt="Mysql实例"></p>
+<p>
+        <img class="lazyload lazyload-gif" src="/images/loading.svg" data-src="https://s1.ax1x.com/2020/07/24/UjKGYF.png" alt="Mysql实例">
+      </p>
 
         <h1 id="进入Mysql命令行">
           <a href="#进入Mysql命令行" class="heading-link"><i class="fas fa-link"></i></a>进入Mysql命令行</h1>
       <figure class="highlight properties"><div class="table-container"><table><tbody><tr><td class="code"><pre><span class="line"><span class="comment"># 根据容器名称mysql使用命令进入容器</span></span><br><span class="line"><span class="attr">docker</span> <span class="string">exec -it mysql bash</span></span><br><span class="line"><span class="comment"># 进入Mysql</span></span><br><span class="line"><span class="attr">mysql</span> <span class="string">-u root -p</span></span><br></pre></td></tr></tbody></table></div></figure>
-<p><img src="https://s1.ax1x.com/2020/07/24/UjK0w6.png" alt="Mysql命令行"></p>
+<p>
+        <img class="lazyload lazyload-gif" src="/images/loading.svg" data-src="https://s1.ax1x.com/2020/07/24/UjK0w6.png" alt="Mysql命令行">
+      </p>
 
         <h1 id="问题解决">
           <a href="#问题解决" class="heading-link"><i class="fas fa-link"></i></a>问题解决</h1>
@@ -523,7 +588,9 @@
     <url>/LeetCode-Day1/</url>
     <content><![CDATA[<h1 id="Free-Talk">
           <a href="#Free-Talk" class="heading-link"><i class="fas fa-link"></i></a>Free Talk</h1>
-      <p>作为LeetCode新手，我选择了HOT100里的一下简单和中等及困难的题目来刷。<br>本篇文章是自己一周刷题的心得，主要内容为刷题的<strong>心路历程、收获以及解题方法</strong>。<br><img src="https://s1.ax1x.com/2020/07/24/UjVUyV.png" alt="LeetCode"></p>
+      <p>作为LeetCode新手，我选择了HOT100里的一下简单和中等及困难的题目来刷。<br>本篇文章是自己一周刷题的心得，主要内容为刷题的<strong>心路历程、收获以及解题方法</strong>。<br>
+        <img class="lazyload lazyload-gif" src="/images/loading.svg" data-src="https://s1.ax1x.com/2020/07/24/UjVUyV.png" alt="LeetCode">
+      </p>
 <a id="more"></a>
 
         <h2 id="心路历程">
@@ -630,7 +697,9 @@
 
         <h2 id="Easy-Medium-Hard">
           <a href="#Easy-Medium-Hard" class="heading-link"><i class="fas fa-link"></i></a>Easy-Medium-Hard</h2>
-      <p>先按照复习的Tags来刷，在Tags里按照难度来刷<br><strong>数据结构与算法</strong><br><img src="https://s1.ax1x.com/2020/07/19/URmIaQ.png" alt="数据结构与算法"></p>
+      <p>先按照复习的Tags来刷，在Tags里按照难度来刷<br><strong>数据结构与算法</strong><br>
+        <img class="lazyload lazyload-gif" src="/images/loading.svg" data-src="https://s1.ax1x.com/2020/07/19/URmIaQ.png" alt="数据结构与算法">
+      </p>
 
         <h2 id="Type">
           <a href="#Type" class="heading-link"><i class="fas fa-link"></i></a>Type</h2>
@@ -682,7 +751,9 @@
     <url>/Maven/</url>
     <content><![CDATA[<h1 id="What-is-Maven？">
           <a href="#What-is-Maven？" class="heading-link"><i class="fas fa-link"></i></a>What is Maven？</h1>
-      <p>Maven是一个<strong>Java项目管理和构建工具</strong>，它可以定义项目结构、项目依赖，并使用统一的方式进行自动化构建，是Java项目不可缺少的工具。<br><img src="https://s1.ax1x.com/2020/07/18/UgJM0x.png" alt="Maven"></p>
+      <p>Maven是一个<strong>Java项目管理和构建工具</strong>，它可以定义项目结构、项目依赖，并使用统一的方式进行自动化构建，是Java项目不可缺少的工具。<br>
+        <img class="lazyload lazyload-gif" src="/images/loading.svg" data-src="https://s1.ax1x.com/2020/07/18/UgJM0x.png" alt="Maven">
+      </p>
 <a id="more"></a>
 
         <h1 id="Maven介绍">
@@ -694,7 +765,9 @@
 
         <h1 id="Maven项目结构">
           <a href="#Maven项目结构" class="heading-link"><i class="fas fa-link"></i></a>Maven项目结构</h1>
-      <p><img src="https://s1.ax1x.com/2020/07/18/UgNBAx.png" alt="Maven项目结构"><br>项目的根目录<code>a-maven-project</code>是<strong>项目名</strong>，<br>它有一个<strong>项目描述文件</strong><code>pom.xml</code>，<br>存放<strong>Java源码</strong>的目录是<code>src/main/java</code>，<br>存放<strong>资源文件</strong>的目录是<code>src/main/resources</code>，<br>存放<strong>测试源码</strong>的目录是<code>src/test/java</code>，<br>存放<strong>测试资源</strong>的目录是<code>src/test/resources</code>。<br>最后，所有编译、打包生成的文件都放在<code>target</code>目录里。这些就是一个Maven项目的标准目录结构。</p>
+      <p>
+        <img class="lazyload lazyload-gif" src="/images/loading.svg" data-src="https://s1.ax1x.com/2020/07/18/UgNBAx.png" alt="Maven项目结构">
+      <br>项目的根目录<code>a-maven-project</code>是<strong>项目名</strong>，<br>它有一个<strong>项目描述文件</strong><code>pom.xml</code>，<br>存放<strong>Java源码</strong>的目录是<code>src/main/java</code>，<br>存放<strong>资源文件</strong>的目录是<code>src/main/resources</code>，<br>存放<strong>测试源码</strong>的目录是<code>src/test/java</code>，<br>存放<strong>测试资源</strong>的目录是<code>src/test/resources</code>。<br>最后，所有编译、打包生成的文件都放在<code>target</code>目录里。这些就是一个Maven项目的标准目录结构。</p>
 
         <h2 id="Pom">
           <a href="#Pom" class="heading-link"><i class="fas fa-link"></i></a>Pom</h2>
@@ -704,7 +777,9 @@
 
         <h1 id="依赖管理">
           <a href="#依赖管理" class="heading-link"><i class="fas fa-link"></i></a>依赖管理</h1>
-      <p>Maven定义了几种依赖关系，分别是<code>compile</code>、<code>test</code>、<code>runtime</code>和<code>provided</code>：<br><img src="https://s1.ax1x.com/2020/07/18/UgwBse.png" alt="依赖关系"><br>其中，默认的<code>compile</code>是最常用的，Maven会把这种类型的依赖直接放入classpath。</p>
+      <p>Maven定义了几种依赖关系，分别是<code>compile</code>、<code>test</code>、<code>runtime</code>和<code>provided</code>：<br>
+        <img class="lazyload lazyload-gif" src="/images/loading.svg" data-src="https://s1.ax1x.com/2020/07/18/UgwBse.png" alt="依赖关系">
+      <br>其中，默认的<code>compile</code>是最常用的，Maven会把这种类型的依赖直接放入classpath。</p>
 
         <h2 id="命令行编译">
           <a href="#命令行编译" class="heading-link"><i class="fas fa-link"></i></a>命令行编译</h2>
@@ -778,14 +853,18 @@
     <url>/Class/</url>
     <content><![CDATA[<h1 id="概述">
           <a href="#概述" class="heading-link"><i class="fas fa-link"></i></a>概述</h1>
-      <p>在 Java 中，JVM 可以理解的代码就叫做<code>字节码</code>（即扩展名为 <code>.class</code> 的文件），<strong>它不面向任何特定的处理器，只面向虚拟机</strong>。<br>Java 语言通过字节码的方式，在一定程度上解决了传统解释型语言执行效率低的问题，同时又保留了<strong>解释型语言可移植</strong>的特点。<br>所以 Java 程序运行时比较高效，而且，<strong>由于字节码并不针对一种特定的机器</strong>，因此，Java 程序<strong>无须重新编译</strong>便可在多种不同操作系统的计算机上运行。<br><img src="https://s1.ax1x.com/2020/07/19/URi1MQ.png" alt="class"><br><strong>可以说<code>.class</code>文件是不同的语言在 Java 虚拟机之间的重要桥梁，同时也是支持 Java 跨平台很重要的一个原因。</strong></p>
+      <p>在 Java 中，JVM 可以理解的代码就叫做<code>字节码</code>（即扩展名为 <code>.class</code> 的文件），<strong>它不面向任何特定的处理器，只面向虚拟机</strong>。<br>Java 语言通过字节码的方式，在一定程度上解决了传统解释型语言执行效率低的问题，同时又保留了<strong>解释型语言可移植</strong>的特点。<br>所以 Java 程序运行时比较高效，而且，<strong>由于字节码并不针对一种特定的机器</strong>，因此，Java 程序<strong>无须重新编译</strong>便可在多种不同操作系统的计算机上运行。<br>
+        <img class="lazyload lazyload-gif" src="/images/loading.svg" data-src="https://s1.ax1x.com/2020/07/19/URi1MQ.png" alt="class">
+      <br><strong>可以说<code>.class</code>文件是不同的语言在 Java 虚拟机之间的重要桥梁，同时也是支持 Java 跨平台很重要的一个原因。</strong></p>
 <a id="more"></a>
 
         <h1 id="Class文件结构总结">
           <a href="#Class文件结构总结" class="heading-link"><i class="fas fa-link"></i></a>Class文件结构总结</h1>
       <p>根据 Java 虚拟机规范，<strong>类文件由单个 ClassFile 结构组成</strong>：</p>
 <figure class="highlight angelscript"><div class="table-container"><table><tbody><tr><td class="code"><pre><span class="line">ClassFile {</span><br><span class="line">    <span class="comment">// ClassFile中的文件结构只有两种数据类型：“无符号”和“表”</span></span><br><span class="line">    <span class="comment">// 无符号数：以U开头，后面的数字表示字节数</span></span><br><span class="line">    <span class="comment">// 表：以_info结尾</span></span><br><span class="line">    类型           名称     数量(除特别声明外，默认为<span class="number">1</span>)</span><br><span class="line">    u4             magic; <span class="comment">//Class 文件的标志</span></span><br><span class="line">    u2             minor_version;<span class="comment">//Class 的小版本号</span></span><br><span class="line">    u2             major_version;<span class="comment">//Class 的大版本号</span></span><br><span class="line">    u2             constant_pool_count;<span class="comment">//常量池的数量</span></span><br><span class="line">    cp_info        constant_pool[constant_pool_count<span class="number">-1</span>];<span class="comment">//常量池</span></span><br><span class="line">    u2             access_flags;<span class="comment">//Class 的访问标记</span></span><br><span class="line">    u2             this_class;<span class="comment">//当前类</span></span><br><span class="line">    u2             super_class;<span class="comment">//父类</span></span><br><span class="line">    u2             <span class="built_in">int</span>erfaces_count;<span class="comment">//接口</span></span><br><span class="line">    u2             <span class="built_in">int</span>erfaces[<span class="built_in">int</span>erfaces_count];<span class="comment">//一个类可以实现多个接口</span></span><br><span class="line">    u2             fields_count;<span class="comment">//Class 文件的字段属性</span></span><br><span class="line">    field_info     fields[fields_count];<span class="comment">//一个类会可以有个字段</span></span><br><span class="line">    u2             methods_count;<span class="comment">//Class 文件的方法数量</span></span><br><span class="line">    method_info    methods[methods_count];<span class="comment">//一个类可以有个多个方法</span></span><br><span class="line">    u2             attributes_count;<span class="comment">//此类的属性表中的属性数</span></span><br><span class="line">    attribute_info attributes[attributes_count];<span class="comment">//属性表集合</span></span><br><span class="line">}</span><br></pre></td></tr></tbody></table></div></figure>
-<p><strong>Class文件字节码结构组织示意图</strong><br><img src="https://s1.ax1x.com/2020/07/19/URitI0.png" alt="class"></p>
+<p><strong>Class文件字节码结构组织示意图</strong><br>
+        <img class="lazyload lazyload-gif" src="/images/loading.svg" data-src="https://s1.ax1x.com/2020/07/19/URitI0.png" alt="class">
+      </p>
 
         <h2 id="魔数">
           <a href="#魔数" class="heading-link"><i class="fas fa-link"></i></a>魔数</h2>
@@ -814,14 +893,20 @@
 <li>方法句柄和方法类型（Method Handle、Method Type、Invoke Dynamic）</li>
 <li>动态调用点和动态常量（Dynamically-Computed Call Site、Dynamically-Computed Constant）</li>
 </ul>
-<p>常量池中每一项常量都是一个表，这17种表有一个共同的特点：<strong>开始的第一位是一个 u1 类型的标志位 -tag 来标识常量的类型，代表当前这个常量属于哪种常量类型．</strong><br><img src="https://s1.ax1x.com/2020/07/17/UyJ7i4.png" alt="常量池"><br><code>.class</code> 文件可以通过<code>javap -v class类名</code>指令来看一下其常量池中的信息(<code>javap -v  class类名-&gt; temp.txt</code> ：将结果输出到 temp.txt 文件)。</p>
+<p>常量池中每一项常量都是一个表，这17种表有一个共同的特点：<strong>开始的第一位是一个 u1 类型的标志位 -tag 来标识常量的类型，代表当前这个常量属于哪种常量类型．</strong><br>
+        <img class="lazyload lazyload-gif" src="/images/loading.svg" data-src="https://s1.ax1x.com/2020/07/17/UyJ7i4.png" alt="常量池">
+      <br><code>.class</code> 文件可以通过<code>javap -v class类名</code>指令来看一下其常量池中的信息(<code>javap -v  class类名-&gt; temp.txt</code> ：将结果输出到 temp.txt 文件)。</p>
 
         <h2 id="访问标志">
           <a href="#访问标志" class="heading-link"><i class="fas fa-link"></i></a>访问标志</h2>
       <p>在常量池结束之后，紧接着的两个字节代表访问标志，这个标志用于识别一些类或者接口层次的访问信息，包括：这个<code>Class</code>是类还是接口，是否为 <code>public</code> 或者 <code>abstract</code> 类型，如果是类的话是否声明为 <code>final</code> 等等。</p>
-<p><strong>类访问和属性修饰符:</strong><br><img src="https://s1.ax1x.com/2020/07/17/UyNUz9.png" alt="类访问和属性修饰符"><br>我们定义了一个 Employee 类</p>
+<p><strong>类访问和属性修饰符:</strong><br>
+        <img class="lazyload lazyload-gif" src="/images/loading.svg" data-src="https://s1.ax1x.com/2020/07/17/UyNUz9.png" alt="类访问和属性修饰符">
+      <br>我们定义了一个 Employee 类</p>
 <figure class="highlight java"><div class="table-container"><table><tbody><tr><td class="code"><pre><span class="line"><span class="keyword">package</span> top.snailclimb.bean;</span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Employee</span> </span>{</span><br><span class="line">   ...</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></div></figure>
-<p>通过<code>javap -v class类名</code>指令来看一下类的访问标志。<br><img src="https://s1.ax1x.com/2020/07/19/URiaGT.png" alt="类的访问标志"></p>
+<p>通过<code>javap -v class类名</code>指令来看一下类的访问标志。<br>
+        <img class="lazyload lazyload-gif" src="/images/loading.svg" data-src="https://s1.ax1x.com/2020/07/19/URiaGT.png" alt="类的访问标志">
+      </p>
 
         <h2 id="当前类索引-父类索引与接口索引集合">
           <a href="#当前类索引-父类索引与接口索引集合" class="heading-link"><i class="fas fa-link"></i></a>当前类索引,父类索引与接口索引集合</h2>
@@ -832,7 +917,9 @@
         <h2 id="字段表集合">
           <a href="#字段表集合" class="heading-link"><i class="fas fa-link"></i></a>字段表集合</h2>
       <figure class="highlight less"><div class="table-container"><table><tbody><tr><td class="code"><pre><span class="line"><span class="selector-tag">u2</span>             <span class="selector-tag">fields_count</span>;<span class="comment">//Class 文件的字段的个数</span></span><br><span class="line"><span class="selector-tag">field_info</span>     <span class="selector-tag">fields</span><span class="selector-attr">[fields_count]</span>;<span class="comment">//一个类会可以有个字段</span></span><br></pre></td></tr></tbody></table></div></figure>
-<p><strong>字段表（field info）用于描述接口或类中声明的变量。</strong>字段包括类级变量以及实例变量，但不包括在方法内部声明的局部变量。<br><img src="https://s1.ax1x.com/2020/07/19/URidRU.png" alt="字段表"></p>
+<p><strong>字段表（field info）用于描述接口或类中声明的变量。</strong>字段包括类级变量以及实例变量，但不包括在方法内部声明的局部变量。<br>
+        <img class="lazyload lazyload-gif" src="/images/loading.svg" data-src="https://s1.ax1x.com/2020/07/19/URidRU.png" alt="字段表">
+      </p>
 <ul>
 <li><code>access_flags:</code>字段的作用域（<code>public</code> ,<code>private</code>,<code>protected</code>修饰符），是实例变量还是类变量（<code>static</code>修饰符）,可否被序列化（<code>transient</code> 修饰符）,可变性（<code>final</code>）,可见性（<code>volatile</code> 修饰符，是否强制从主内存读写）。</li>
 <li><code>name_index:</code> 对常量池的引用，表示的字段的名称；</li>
@@ -840,13 +927,19 @@
 <li><code>attributes_count:</code> 一个字段还会拥有一些额外的属性，attributes_count 存放属性的个数；</li>
 <li><code>attributes[attributes_count]:</code> 存放具体属性具体内容。</li>
 </ul>
-<p>上述这些信息中，各个修饰符都是布尔值，要么有某个修饰符，要么没有，很适合使用标志位来表示。而字段叫什么名字、字段被定义为什么数据类型这些都是无法固定的，只能引用常量池中常量来描述。<br><img src="https://s1.ax1x.com/2020/07/17/UyrYvD.png" alt="字段访问标志"></p>
+<p>上述这些信息中，各个修饰符都是布尔值，要么有某个修饰符，要么没有，很适合使用标志位来表示。而字段叫什么名字、字段被定义为什么数据类型这些都是无法固定的，只能引用常量池中常量来描述。<br>
+        <img class="lazyload lazyload-gif" src="/images/loading.svg" data-src="https://s1.ax1x.com/2020/07/17/UyrYvD.png" alt="字段访问标志">
+      </p>
 
         <h2 id="方法表集合">
           <a href="#方法表集合" class="heading-link"><i class="fas fa-link"></i></a>方法表集合</h2>
       <figure class="highlight less"><div class="table-container"><table><tbody><tr><td class="code"><pre><span class="line"><span class="selector-tag">u2</span>             <span class="selector-tag">methods_count</span>;<span class="comment">//Class 文件的方法的数量</span></span><br><span class="line"><span class="selector-tag">method_info</span>    <span class="selector-tag">methods</span><span class="selector-attr">[methods_count]</span>;<span class="comment">//一个类可以有个多个方法</span></span><br></pre></td></tr></tbody></table></div></figure>
 <p><code>methods_count</code> 表示方法的数量，而 <code>method_info</code> 表示的方法表。</p>
-<p><strong>Class 文件存储格式中对方法的描述与对字段的描述几乎采用了完全一致的方式。</strong>方法表的结构如同字段表一样，依次包括了访问标志、名称索引、描述符索引、属性表集合几项。<br><img src="https://s1.ax1x.com/2020/07/19/URiDsJ.png" alt="方法表结构"><br><strong>方法表的 access_flag 取值：</strong><br><img src="https://s1.ax1x.com/2020/07/17/Uysise.png" alt="access_flag"></p>
+<p><strong>Class 文件存储格式中对方法的描述与对字段的描述几乎采用了完全一致的方式。</strong>方法表的结构如同字段表一样，依次包括了访问标志、名称索引、描述符索引、属性表集合几项。<br>
+        <img class="lazyload lazyload-gif" src="/images/loading.svg" data-src="https://s1.ax1x.com/2020/07/19/URiDsJ.png" alt="方法表结构">
+      <br><strong>方法表的 access_flag 取值：</strong><br>
+        <img class="lazyload lazyload-gif" src="/images/loading.svg" data-src="https://s1.ax1x.com/2020/07/17/Uysise.png" alt="access_flag">
+      </p>
 
     <div class="note-plugin success no-icon">
       
@@ -1166,7 +1259,9 @@
         <h2 id="虚拟机动态分派的实现">
           <a href="#虚拟机动态分派的实现" class="heading-link"><i class="fas fa-link"></i></a>虚拟机动态分派的实现</h2>
       <p>动态分派在虚拟机中执行的非常频繁，而且方法查找的过程要在类的方法元数据中搜索合适的目标，从性能上考虑，不太可能进行如此频繁的搜索，需要进行性能上的优化。</p>
-<p><strong>一种基础而且常见的优化手段是为类型在方法区中建立一个虚方法表(VirtualMethod Table)。</strong><br><img src="https://s1.ax1x.com/2020/07/16/UDyNqA.png" alt="虚方法表"></p>
+<p><strong>一种基础而且常见的优化手段是为类型在方法区中建立一个虚方法表(VirtualMethod Table)。</strong><br>
+        <img class="lazyload lazyload-gif" src="/images/loading.svg" data-src="https://s1.ax1x.com/2020/07/16/UDyNqA.png" alt="虚方法表">
+      </p>
 
     <div class="note-plugin success no-icon">
       
@@ -1218,7 +1313,9 @@
       <p>Java虚拟机以方法作为最基本的执行单元，<code>“栈帧”（Stack Frame）</code>则是用于支持虚拟机进行方法调用和方法执行背后的数据结构，它也是虚拟机运行时数据区中的<code>虚拟机栈（Virtual Machine Stack）</code>的栈元素。</p>
 <p><strong>每一个方法从调用开始至执行结束的过程，都对应着一个栈帧在虚拟机栈里面从入栈到出栈的过程。</strong></p>
 <a id="more"></a>
-<p><img src="https://s1.ax1x.com/2020/07/15/Uw3Trd.png" alt="Stack Frame"></p>
+<p>
+        <img class="lazyload lazyload-gif" src="/images/loading.svg" data-src="https://s1.ax1x.com/2020/07/15/Uw3Trd.png" alt="Stack Frame">
+      </p>
 
         <h1 id="局部变量表">
           <a href="#局部变量表" class="heading-link"><i class="fas fa-link"></i></a>局部变量表</h1>
@@ -1281,7 +1378,9 @@
       <p>让下面栈帧的部分操作数栈与上面栈帧的部分局部变量表重叠在一起，这样做不仅节约了一些空间，更重要的是在进行方法调用时就可以直接共用一部分数据，无须进行额外的参数复制传递了，重叠的过程如下图所示。</p>
     </div>
    
-<p><img src="https://s1.ax1x.com/2020/07/15/UwLbgs.png" alt="Operand Stack"></p>
+<p>
+        <img class="lazyload lazyload-gif" src="/images/loading.svg" data-src="https://s1.ax1x.com/2020/07/15/UwLbgs.png" alt="Operand Stack">
+      </p>
 
         <h1 id="动态链接">
           <a href="#动态链接" class="heading-link"><i class="fas fa-link"></i></a>动态链接</h1>
@@ -1410,7 +1509,9 @@
 
         <h1 id="集合概览">
           <a href="#集合概览" class="heading-link"><i class="fas fa-link"></i></a>集合概览</h1>
-      <p>从下图可以看出，在 <code>Java</code> 中除了以<code>Map</code>结尾的类之外， 其他类都实现了 <code>Collection</code> 接口。<br>并且，以 <code>Map</code> 结尾的类都实现了 <code>Map</code> 接口。<br><img src="https://s1.ax1x.com/2020/07/14/UN9vl9.png" alt="Collection"></p>
+      <p>从下图可以看出，在 <code>Java</code> 中除了以<code>Map</code>结尾的类之外， 其他类都实现了 <code>Collection</code> 接口。<br>并且，以 <code>Map</code> 结尾的类都实现了 <code>Map</code> 接口。<br>
+        <img class="lazyload lazyload-gif" src="/images/loading.svg" data-src="https://s1.ax1x.com/2020/07/14/UN9vl9.png" alt="Collection">
+      </p>
 
         <h1 id="Why-need-it">
           <a href="#Why-need-it" class="heading-link"><i class="fas fa-link"></i></a>Why need it?</h1>
@@ -1449,15 +1550,27 @@
           <a href="#List-1" class="heading-link"><i class="fas fa-link"></i></a>List</h1>
       <p>在集合类中，<code>List</code>是最基础的一种集合：它是一种有序列表。</p>
 <p><code>List</code>的行为和数组几乎完全相同：<code>List</code>内部按照放入元素的先后顺序存放，每个元素都可以通过索引确定自己的位置，<code>List</code>的索引和数组一样，从0开始。</p>
-<p>数组和<code>List</code>类似，也是有序结构，如果我们使用数组，在添加和删除元素的时候，会非常不方便。例如，从一个已有的数组<code>{'A', 'B', 'C', 'D', 'E'}</code>中删除索引为<code>2</code>的元素：<br><img src="https://s1.ax1x.com/2020/07/14/UNPt8e.png" alt="List"></p>
+<p>数组和<code>List</code>类似，也是有序结构，如果我们使用数组，在添加和删除元素的时候，会非常不方便。例如，从一个已有的数组<code>{'A', 'B', 'C', 'D', 'E'}</code>中删除索引为<code>2</code>的元素：<br>
+        <img class="lazyload lazyload-gif" src="/images/loading.svg" data-src="https://s1.ax1x.com/2020/07/14/UNPt8e.png" alt="List">
+      </p>
 <p><strong>这个“删除”操作实际上是把<code>'C'</code>后面的元素依次往前挪一个位置，而“添加”操作实际上是把指定位置以后的元素都依次向后挪一个位置，腾出来的位置给新加的元素。这两种操作，用数组实现非常麻烦。</strong></p>
 <p><strong>因此，在实际应用中，需要增删元素的有序列表，我们使用最多的是<code>ArrayList</code>。</strong>实际上，<code>ArrayList</code>在内部使用了数组来存储所有元素。例如:</p>
 <ol>
-<li>一个<code>ArrayList</code>拥有5个元素，实际数组大小为6（即有一个空位）：<br><img src="https://s1.ax1x.com/2020/07/14/UNPza6.png" alt="ArrayList1"></li>
-<li>当添加一个元素并指定索引到<code>ArrayList</code>时，<code>ArrayList</code>自动移动需要移动的元素：<br><img src="https://s1.ax1x.com/2020/07/14/UNi1Mj.png" alt="ArrayList2"></li>
-<li>然后，往内部指定索引的数组位置添加一个元素，然后把<code>size</code>加1：<br><img src="https://s1.ax1x.com/2020/07/14/UNiJZq.png" alt="ArrayList3"></li>
-<li>继续添加元素，但是数组已满，没有空闲位置的时候，<code>ArrayList</code>先创建一个更大的新数组，然后把旧数组的所有元素复制到新数组，紧接着用新数组取代旧数组：<br><img src="https://s1.ax1x.com/2020/07/14/UNiWWD.png" alt="ArrayList4"></li>
-<li>现在，新数组就有了空位，可以继续添加一个元素到数组末尾，同时<code>size</code>加1：<br><img src="https://s1.ax1x.com/2020/07/14/UNFEpF.png" alt="ArrayList5"></li>
+<li>一个<code>ArrayList</code>拥有5个元素，实际数组大小为6（即有一个空位）：<br>
+        <img class="lazyload lazyload-gif" src="/images/loading.svg" data-src="https://s1.ax1x.com/2020/07/14/UNPza6.png" alt="ArrayList1">
+      </li>
+<li>当添加一个元素并指定索引到<code>ArrayList</code>时，<code>ArrayList</code>自动移动需要移动的元素：<br>
+        <img class="lazyload lazyload-gif" src="/images/loading.svg" data-src="https://s1.ax1x.com/2020/07/14/UNi1Mj.png" alt="ArrayList2">
+      </li>
+<li>然后，往内部指定索引的数组位置添加一个元素，然后把<code>size</code>加1：<br>
+        <img class="lazyload lazyload-gif" src="/images/loading.svg" data-src="https://s1.ax1x.com/2020/07/14/UNiJZq.png" alt="ArrayList3">
+      </li>
+<li>继续添加元素，但是数组已满，没有空闲位置的时候，<code>ArrayList</code>先创建一个更大的新数组，然后把旧数组的所有元素复制到新数组，紧接着用新数组取代旧数组：<br>
+        <img class="lazyload lazyload-gif" src="/images/loading.svg" data-src="https://s1.ax1x.com/2020/07/14/UNiWWD.png" alt="ArrayList4">
+      </li>
+<li>现在，新数组就有了空位，可以继续添加一个元素到数组末尾，同时<code>size</code>加1：<br>
+        <img class="lazyload lazyload-gif" src="/images/loading.svg" data-src="https://s1.ax1x.com/2020/07/14/UNFEpF.png" alt="ArrayList5">
+      </li>
 </ol>
 <p>可见，<code>ArrayList</code>把添加和删除的操作封装起来，让我们操作<code>List</code>类似于操作数组，却不用关心内部元素如何移动。</p>
 
@@ -2039,7 +2152,9 @@
 
         <h1 id="比较">
           <a href="#比较" class="heading-link"><i class="fas fa-link"></i></a>==比较</h1>
-      <p>使用<code>enum</code>定义的枚举类是一种引用类型。<br>而引用类型比较，要使用<code>equals()</code>方法，如果使用<code>==</code>比较，它比较的是两个引用类型的变量是否是同一个对象。因此，引用类型比较，要始终使用<code>equals()</code>方法，但<code>enum</code>类型可以除外。<br>引用类型与基本数据类型分类见下表，<span class="exturl"><a class="exturl__link" href="https://blog.csdn.net/truelove12358/article/details/60143499" target="_blank" rel="noopener">图片来源</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span><br><img src="https://s1.ax1x.com/2020/07/11/UlA35j.png" alt="UlA35j.png"><br>这是因为<code>enum</code>类型的每个变量在JVM中只有一个唯一实例，所以可以直接用<code>==</code>比较。</p>
+      <p>使用<code>enum</code>定义的枚举类是一种引用类型。<br>而引用类型比较，要使用<code>equals()</code>方法，如果使用<code>==</code>比较，它比较的是两个引用类型的变量是否是同一个对象。因此，引用类型比较，要始终使用<code>equals()</code>方法，但<code>enum</code>类型可以除外。<br>引用类型与基本数据类型分类见下表，<span class="exturl"><a class="exturl__link" href="https://blog.csdn.net/truelove12358/article/details/60143499" target="_blank" rel="noopener">图片来源</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span><br>
+        <img class="lazyload lazyload-gif" src="/images/loading.svg" data-src="https://s1.ax1x.com/2020/07/11/UlA35j.png" alt="UlA35j.png">
+      <br>这是因为<code>enum</code>类型的每个变量在JVM中只有一个唯一实例，所以可以直接用<code>==</code>比较。</p>
 <figure class="highlight java"><div class="table-container"><table><tbody><tr><td class="code"><pre><span class="line"><span class="keyword">if</span> (day == Weekday.FRI) { <span class="comment">// ok!</span></span><br><span class="line">}</span><br><span class="line"><span class="keyword">if</span> (day.equals(Weekday.SUN)) { <span class="comment">// ok, but more code!</span></span><br><span class="line">}</span><br></pre></td></tr></tbody></table></div></figure>
 
 
@@ -2151,7 +2266,9 @@
       
         <h2 id="异常的层次分类">
           <a href="#异常的层次分类" class="heading-link"><i class="fas fa-link"></i></a>异常的层次分类</h2>
-      <p>Java中异常的层次分类见下图，<span class="exturl"><a class="exturl__link" href="https://simplesnippets.tech/exception-handling-in-java-part-1/" target="_blank" rel="noopener">图片来源</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span><br><img src="https://imgkr.cn-bj.ufileos.com/199703ce-a1b6-4968-9eb0-161a8217507e.png" alt="异常层次分类"></p>
+      <p>Java中异常的层次分类见下图，<span class="exturl"><a class="exturl__link" href="https://simplesnippets.tech/exception-handling-in-java-part-1/" target="_blank" rel="noopener">图片来源</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span><br>
+        <img class="lazyload lazyload-gif" src="/images/loading.svg" data-src="https://imgkr.cn-bj.ufileos.com/199703ce-a1b6-4968-9eb0-161a8217507e.png" alt="异常层次分类">
+      </p>
 
         <h2 id="Throwable类常用方法">
           <a href="#Throwable类常用方法" class="heading-link"><i class="fas fa-link"></i></a>Throwable类常用方法</h2>
@@ -2260,7 +2377,9 @@
         <h2 id="Java修饰符">
           <a href="#Java修饰符" class="heading-link"><i class="fas fa-link"></i></a>Java修饰符</h2>
       Java可以使用修饰符来修饰类中方法和属性。</li>
-<li><strong>访问控制修饰符 :</strong>default, public , protected, private<br><img src="https://s1.ax1x.com/2020/07/10/UKgGhF.png" alt="UKgGhF.png"></li>
+<li><strong>访问控制修饰符 :</strong>default, public , protected, private<br>
+        <img class="lazyload lazyload-gif" src="/images/loading.svg" data-src="https://s1.ax1x.com/2020/07/10/UKgGhF.png" alt="UKgGhF.png">
+      </li>
 <li><strong>非访问控制修饰符 :</strong> final, abstract, static, synchronized</li>
 </ul>
 
@@ -2353,7 +2472,9 @@
     <url>/Tightly-Secure/</url>
     <content><![CDATA[<h1 id="Free-Talk">
           <a href="#Free-Talk" class="heading-link"><i class="fas fa-link"></i></a>Free Talk</h1>
-      <p><img src="https://s1.ax1x.com/2020/07/03/NOdOj1.png" alt="NOdOj1.png"><br>本文是一篇关于紧安全的数字签名及身份验证的密钥交换的论文分析。<br><span class="exturl"><a class="exturl__link" href="http://www.nds.ruhr-uni-bochum.de/media/nds/veroeffentlichungen/2014/12/27/main.pdf" target="_blank" rel="noopener">Practical and Tightly-Secure Digital Signatures and Authenticated Key Exchange</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></p>
+      <p>
+        <img class="lazyload lazyload-gif" src="/images/loading.svg" data-src="https://s1.ax1x.com/2020/07/03/NOdOj1.png" alt="NOdOj1.png">
+      <br>本文是一篇关于紧安全的数字签名及身份验证的密钥交换的论文分析。<br><span class="exturl"><a class="exturl__link" href="http://www.nds.ruhr-uni-bochum.de/media/nds/veroeffentlichungen/2014/12/27/main.pdf" target="_blank" rel="noopener">Practical and Tightly-Secure Digital Signatures and Authenticated Key Exchange</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></p>
 <a id="more"></a><script>
         document.querySelectorAll('.github-emoji')
           .forEach(el => {
@@ -2387,7 +2508,9 @@
     <url>/safety/</url>
     <content><![CDATA[<h1 id="Free-Talk">
           <a href="#Free-Talk" class="heading-link"><i class="fas fa-link"></i></a>Free Talk</h1>
-      <p>这次做综合课设的时候，队员发了一篇关于安全性的文章，我看完觉得有一种豁然开朗的感觉。这篇文章用非常通俗的语言，总结了密码系统的安全性，把我在密码学课上零散的知识给整合了起来。我在这边的文章的基础上，做了一些简单的调整修改。<span class="exturl"><a class="exturl__link" href="https://www.cnblogs.com/xdyixia/p/11610091.html" target="_blank" rel="noopener">原文链接</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span><br><img src="https://s1.ax1x.com/2020/07/02/NqodIJ.png" alt="NqodIJ.png"></p>
+      <p>这次做综合课设的时候，队员发了一篇关于安全性的文章，我看完觉得有一种豁然开朗的感觉。这篇文章用非常通俗的语言，总结了密码系统的安全性，把我在密码学课上零散的知识给整合了起来。我在这边的文章的基础上，做了一些简单的调整修改。<span class="exturl"><a class="exturl__link" href="https://www.cnblogs.com/xdyixia/p/11610091.html" target="_blank" rel="noopener">原文链接</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span><br>
+        <img class="lazyload lazyload-gif" src="/images/loading.svg" data-src="https://s1.ax1x.com/2020/07/02/NqodIJ.png" alt="NqodIJ.png">
+      </p>
 <a id="more"></a>
 
 
@@ -2448,7 +2571,13 @@
 <li><p>敌手 A <strong>猜测</strong>挑战者 C 上一步进行加密的明文是 m0还是 m1，并且将猜测结果输出，输出结果记为 b‘。若 b‘=b，那么敌手攻击成功。</p>
 </li>
 </ol>
-<p>敌手攻击的优势可以定义为如下函数：<br><img src="https://s1.ax1x.com/2020/07/02/NqbGY4.png" alt="NqbGY4.png"><br>其中 w 是加密方案密钥的长度。因为随机猜测就有<strong>1/2</strong>的概率赢得 IND-CPA 游戏。所以<br><img src="https://s1.ax1x.com/2020/07/02/Nqbtp9.png" alt="Nqbtp9.png"><br>才是敌手经过努力得到的优势。如果对任何多项式时间的敌手 A，存在一个可忽略的优势σ，使得<br><img src="https://s1.ax1x.com/2020/07/02/NqbrkD.png" alt="NqbrkD.png"><br>那么就称<strong>这个加密算法在选择明文攻击下具有不可区分性，或者称为 IND-CPA 安全。</strong></p>
+<p>敌手攻击的优势可以定义为如下函数：<br>
+        <img class="lazyload lazyload-gif" src="/images/loading.svg" data-src="https://s1.ax1x.com/2020/07/02/NqbGY4.png" alt="NqbGY4.png">
+      <br>其中 w 是加密方案密钥的长度。因为随机猜测就有<strong>1/2</strong>的概率赢得 IND-CPA 游戏。所以<br>
+        <img class="lazyload lazyload-gif" src="/images/loading.svg" data-src="https://s1.ax1x.com/2020/07/02/Nqbtp9.png" alt="Nqbtp9.png">
+      <br>才是敌手经过努力得到的优势。如果对任何多项式时间的敌手 A，存在一个可忽略的优势σ，使得<br>
+        <img class="lazyload lazyload-gif" src="/images/loading.svg" data-src="https://s1.ax1x.com/2020/07/02/NqbrkD.png" alt="NqbrkD.png">
+      <br>那么就称<strong>这个加密算法在选择明文攻击下具有不可区分性，或者称为 IND-CPA 安全。</strong></p>
 
         <h2 id="困难问题">
           <a href="#困难问题" class="heading-link"><i class="fas fa-link"></i></a>困难问题</h2>
@@ -2460,7 +2589,9 @@
 <p><strong>规约是复杂性理论中的概念， 一个问题P1规约到问题P2是指，已知解决问题 P1的算法 M1，我们能构造另一算法 M2，M2可以以 M1作为子程序，用来解决问题 P2。</strong></p>
 <p><strong>将规约的方法应用在密码算法或安全协议的安全性证明上，例如，可以将敌手对密码算法或安全协议（P1）的攻击规约到一些已经得到深入研究的困难问题（P2）。即若敌手能够对算法或协议发起有效的攻击，就可以利用敌手构建一个算法来攻破困难问题，然而困难问题是已经被证明无法攻破的，这样就出现矛盾。根据反证法，敌手可以攻破算法或协议假设不成立，证明完毕。</strong></p>
 <p>一般来说，为了证明方案 1 的安全性，我们可以将方案 1 规约到方案 2，即如果敌手 A 可以攻破方案 1，那么敌手 B 同样也可以攻击方案 2，而方案 2 已经被证明是安全的，或者是一个难题。</p>
-<p>证明过程通过一个思维游戏来描述。首先，挑战者创建方案2，B 表示方案 2 中的敌手，A 表示方案 1 中的敌手。B 为了攻破方案 2，利用 A 作为子程序来攻击方案 1。B 想要利用 A，就需要对 A 进行训练，所以 B 模拟了 A 的挑战者。<br><img src="https://s1.ax1x.com/2020/07/02/Nqbotg.png" alt="Nqbotg.png"><br>例如，如果要对加密算法进行安全性证明，那么方案 1 就是具体的加密算法 。 假设安全目标是信息的不可区分性（Indistinguishablity），敌手 A 的能力是可以选择明文攻击，即 CPA。敌手 B 模拟敌手 A 的挑战者，与 A 进行 IND-CPA 游戏。在游戏过程中，B 为了实现自己的目的利用 A。如果 A 无法判断自己是与 B 还是与挑战者做游戏，那么称 B 的模拟是完备的。</p>
+<p>证明过程通过一个思维游戏来描述。首先，挑战者创建方案2，B 表示方案 2 中的敌手，A 表示方案 1 中的敌手。B 为了攻破方案 2，利用 A 作为子程序来攻击方案 1。B 想要利用 A，就需要对 A 进行训练，所以 B 模拟了 A 的挑战者。<br>
+        <img class="lazyload lazyload-gif" src="/images/loading.svg" data-src="https://s1.ax1x.com/2020/07/02/Nqbotg.png" alt="Nqbotg.png">
+      <br>例如，如果要对加密算法进行安全性证明，那么方案 1 就是具体的加密算法 。 假设安全目标是信息的不可区分性（Indistinguishablity），敌手 A 的能力是可以选择明文攻击，即 CPA。敌手 B 模拟敌手 A 的挑战者，与 A 进行 IND-CPA 游戏。在游戏过程中，B 为了实现自己的目的利用 A。如果 A 无法判断自己是与 B 还是与挑战者做游戏，那么称 B 的模拟是完备的。</p>
 <p><strong>对于其他加密算法或加密协议，我们必须首先确定它想要实现的安全目标，例如签名方案的不可伪造性，然后根据安全性定义确定敌手的能力构建一个安全性模型，再把对加密算法或加密协议的攻击规约到已被证明的困难问题上。 这就是可证明安全性。</strong></p>
 
         <h1 id="结语">
@@ -2498,7 +2629,9 @@
     <url>/summer/</url>
     <content><![CDATA[<h1 id="菊次郎的夏天">
           <a href="#菊次郎的夏天" class="heading-link"><i class="fas fa-link"></i></a>菊次郎的夏天</h1>
-      <p>夏天伴随着海边吹来的暖风，和西瓜一起来了。<br><img src="https://s1.ax1x.com/2020/07/02/NqENRI.png?size=400x400" style="width: 400px;height: 400px;" alt="NqENRI.png"><br>每年到了夏天，都想看一边菊次郎的夏天;<br>每次伤心时候，都会单曲循环播放着Summer;<br><span class="exturl"><a class="exturl__link" href="http://music.163.com/song?id=443242&amp;userid=369654532" target="_blank" rel="noopener">Summer</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span>–点击播放音乐</p>
+      <p>夏天伴随着海边吹来的暖风，和西瓜一起来了。<br>
+        <img class="lazyload lazyload-gif" src="/images/loading.svg" data-src="https://s1.ax1x.com/2020/07/02/NqENRI.png?size=400x400" style="width: 400px;height: 400px;" alt="NqENRI.png">
+      <br>每年到了夏天，都想看一边菊次郎的夏天;<br>每次伤心时候，都会单曲循环播放着Summer;<br><span class="exturl"><a class="exturl__link" href="http://music.163.com/song?id=443242&amp;userid=369654532" target="_blank" rel="noopener">Summer</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span>–点击播放音乐</p>
 <a id="more"></a>
 <p>下面一篇文章是去年看完菊次郎的夏天后，写来参加一个征文比赛的小小说。</p>
 
@@ -2598,7 +2731,9 @@
     <url>/docker/</url>
     <content><![CDATA[<h1 id="Free-Talk">
           <a href="#Free-Talk" class="heading-link"><i class="fas fa-link"></i></a>Free Talk</h1>
-      <p><img src="https://s1.ax1x.com/2020/06/29/Nh1Saj.png" alt="Docker"><br>我之前一直都听过鼎鼎大名的Docker,但都没有仔细地了解一下，有一次给后端接Mysql数据库时，本来想下一个Mysql的，但是安装配置太麻烦，就直接从Docker上下了一个镜像就解决了，这就是我的Docker初体验。<br>接下来，就请乘坐我的宇宙航线，开启Docker之旅<span class="github-emoji" style="color: transparent;background:no-repeat url(https://github.githubassets.com/images/icons/emoji/unicode/2728.png?v8) center/contain" data-src="https://github.githubassets.com/images/icons/emoji/unicode/2728.png?v8">✨</span>。</p>
+      <p>
+        <img class="lazyload lazyload-gif" src="/images/loading.svg" data-src="https://s1.ax1x.com/2020/06/29/Nh1Saj.png" alt="Docker">
+      <br>我之前一直都听过鼎鼎大名的Docker,但都没有仔细地了解一下，有一次给后端接Mysql数据库时，本来想下一个Mysql的，但是安装配置太麻烦，就直接从Docker上下了一个镜像就解决了，这就是我的Docker初体验。<br>接下来，就请乘坐我的宇宙航线，开启Docker之旅<span class="github-emoji" style="color: transparent;background:no-repeat url(https://github.githubassets.com/images/icons/emoji/unicode/2728.png?v8) center/contain" data-src="https://github.githubassets.com/images/icons/emoji/unicode/2728.png?v8">✨</span>。</p>
 <a id="more"></a>
 
         <h1 id="What-is-Dcoker">
@@ -2629,7 +2764,9 @@
 
         <h2 id="Linux容器">
           <a href="#Linux容器" class="heading-link"><i class="fas fa-link"></i></a>Linux容器</h2>
-      <p>针对前面提到的虚拟机存在的问题，Linux发展出另一种虚拟化技术(Linux Containers),也就是<strong>Linux容器</strong>。<br><img src="https://s1.ax1x.com/2020/07/12/U3vH8f.png" alt="container"></p>
+      <p>针对前面提到的虚拟机存在的问题，Linux发展出另一种虚拟化技术(Linux Containers),也就是<strong>Linux容器</strong>。<br>
+        <img class="lazyload lazyload-gif" src="/images/loading.svg" data-src="https://s1.ax1x.com/2020/07/12/U3vH8f.png" alt="container">
+      </p>
 <blockquote>
 <p>关于容器的概念我们可以把它通俗地理解为一个个集装箱，每一个集装箱之间是相互隔离运行的，但是在运输的时候又共享同一艘货轮(操作系统)，也就是说每一个容器都是一个进程，共享操作系统的资源。</p>
 </blockquote>
@@ -2646,7 +2783,9 @@
 
         <h1 id="Docker的基本概念">
           <a href="#Docker的基本概念" class="heading-link"><i class="fas fa-link"></i></a>Docker的基本概念</h1>
-      <p><img src="https://s1.ax1x.com/2020/07/12/U3xAr4.png" alt="docker"></p>
+      <p>
+        <img class="lazyload lazyload-gif" src="/images/loading.svg" data-src="https://s1.ax1x.com/2020/07/12/U3xAr4.png" alt="docker">
+      </p>
 
         <h2 id="Image镜像">
           <a href="#Image镜像" class="heading-link"><i class="fas fa-link"></i></a>Image镜像</h2>
@@ -2710,7 +2849,9 @@
 
         <h1 id="2-元字符">
           <a href="#2-元字符" class="heading-link"><i class="fas fa-link"></i></a>2.元字符</h1>
-      <p>正则表达式的核心就是元字符的匹配，元字符的描述如下图所示。<br><img src="https://s1.ax1x.com/2020/06/18/NeplQJ.png" alt="NeplQJ.png"></p>
+      <p>正则表达式的核心就是元字符的匹配，元字符的描述如下图所示。<br>
+        <img class="lazyload lazyload-gif" src="/images/loading.svg" data-src="https://s1.ax1x.com/2020/06/18/NeplQJ.png" alt="NeplQJ.png">
+      </p>
 
         <h2 id="2-1点运算符">
           <a href="#2-1点运算符" class="heading-link"><i class="fas fa-link"></i></a>2.1点运算符.</h2>
@@ -2780,7 +2921,9 @@
 
         <h1 id="3-简写字符集">
           <a href="#3-简写字符集" class="heading-link"><i class="fas fa-link"></i></a>3.简写字符集</h1>
-      <p><img src="https://s1.ax1x.com/2020/06/18/NevH1J.png" alt="NevH1J.png"></p>
+      <p>
+        <img class="lazyload lazyload-gif" src="/images/loading.svg" data-src="https://s1.ax1x.com/2020/06/18/NevH1J.png" alt="NevH1J.png">
+      </p>
 <script>
         document.querySelectorAll('.github-emoji')
           .forEach(el => {
@@ -2928,7 +3071,9 @@
 
         <h2 id="进程状态">
           <a href="#进程状态" class="heading-link"><i class="fas fa-link"></i></a>进程状态</h2>
-      <img src="https://s1.ax1x.com/2020/06/12/tLBcTI.png" alt="五种状态转换"></li>
+      
+        <img class="lazyload lazyload-gif" src="/images/loading.svg" data-src="https://s1.ax1x.com/2020/06/12/tLBcTI.png" alt="五种状态转换">
+      </li>
 </ol>
 <ul>
 <li>就绪状态：资源已经准备好了，就差CPU调度</li>
@@ -2937,7 +3082,9 @@
 
         <h3 id="挂起与激活">
           <a href="#挂起与激活" class="heading-link"><i class="fas fa-link"></i></a>挂起与激活</h3>
-      <p><img src="https://s1.ax1x.com/2020/06/12/tLDjUI.png" alt="挂起与激活"></p>
+      <p>
+        <img class="lazyload lazyload-gif" src="/images/loading.svg" data-src="https://s1.ax1x.com/2020/06/12/tLDjUI.png" alt="挂起与激活">
+      </p>
 <ul>
 <li>若进程处于就绪状态，挂起操作执行后，则由活动就绪转为禁止就绪</li>
 <li>若进程处于阻塞状态，挂起操作执行后，则由活动阻塞转为禁止阻塞</li>
@@ -2987,7 +3134,9 @@
     <url>/Computer-Network/</url>
     <content><![CDATA[<h1 id="概述">
           <a href="#概述" class="heading-link"><i class="fas fa-link"></i></a>概述</h1>
-      <p><img src="https://s1.ax1x.com/2020/06/08/tRorRg.png" alt="tRorRg.png"></p>
+      <p>
+        <img class="lazyload lazyload-gif" src="/images/loading.svg" data-src="https://s1.ax1x.com/2020/06/08/tRorRg.png" alt="tRorRg.png">
+      </p>
 <blockquote>
 <p>第8点会考一些基本安全知识</p>
 </blockquote>
@@ -3050,11 +3199,15 @@
       
         <h3 id="TCP-IP协议的五层模型">
           <a href="#TCP-IP协议的五层模型" class="heading-link"><i class="fas fa-link"></i></a>TCP/IP协议的五层模型</h3>
-      <p><img src="https://s1.ax1x.com/2020/06/08/tRTNpF.png" alt="tRTNpF.png"></p>
+      <p>
+        <img class="lazyload lazyload-gif" src="/images/loading.svg" data-src="https://s1.ax1x.com/2020/06/08/tRTNpF.png" alt="tRTNpF.png">
+      </p>
 
         <h1 id="应用层">
           <a href="#应用层" class="heading-link"><i class="fas fa-link"></i></a>应用层</h1>
-      <p><img src="https://s1.ax1x.com/2020/06/08/tRTdX9.png" alt="tRTdX9.png"></p>
+      <p>
+        <img class="lazyload lazyload-gif" src="/images/loading.svg" data-src="https://s1.ax1x.com/2020/06/08/tRTdX9.png" alt="tRTdX9.png">
+      </p>
 
         <h2 id="应用层协议原理">
           <a href="#应用层协议原理" class="heading-link"><i class="fas fa-link"></i></a>应用层协议原理</h2>
@@ -3362,8 +3515,12 @@
         <h3 id="内置函数">
           <a href="#内置函数" class="heading-link"><i class="fas fa-link"></i></a>内置函数</h3>
       <ol>
-<li>聚合函数<br><img src="https://s1.ax1x.com/2020/06/10/t71ljg.png" alt="t71ljg.png"><figure class="highlight sql"><div class="table-container"><table><tbody><tr><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> <span class="keyword">COUNT</span>(*) <span class="keyword">FROM</span> Student;</span><br><span class="line"><span class="keyword">SELECT</span> <span class="keyword">COUNT</span>(*) <span class="keyword">AS</span> 学生人数 <span class="keyword">FROM</span> Student;</span><br><span class="line"></span><br><span class="line"><span class="keyword">SELECT</span> <span class="keyword">COUNT</span>(Major) <span class="keyword">AS</span> 学生专业数 <span class="keyword">FROM</span> Student;</span><br><span class="line"><span class="keyword">SELECT</span> <span class="keyword">COUNT</span>(<span class="keyword">DISTINCT</span> Major) <span class="keyword">AS</span> 学生专业数 <span class="keyword">FROM</span> Student;</span><br><span class="line"></span><br><span class="line"><span class="keyword">SELECT</span> <span class="keyword">MIN</span>(BirthDay) <span class="keyword">AS</span> 最大年龄出生日期， <span class="keyword">Max</span>(BirthDay) <span class="keyword">AS</span> 最小年龄出生日期 <span class="keyword">FROM</span> Student;</span><br></pre></td></tr></tbody></table></div></figure></li>
-<li>算数函数<br><img src="https://s1.ax1x.com/2020/06/10/t78nl8.png" alt="t78nl8.png"></li>
+<li>聚合函数<br>
+        <img class="lazyload lazyload-gif" src="/images/loading.svg" data-src="https://s1.ax1x.com/2020/06/10/t71ljg.png" alt="t71ljg.png">
+      <figure class="highlight sql"><div class="table-container"><table><tbody><tr><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> <span class="keyword">COUNT</span>(*) <span class="keyword">FROM</span> Student;</span><br><span class="line"><span class="keyword">SELECT</span> <span class="keyword">COUNT</span>(*) <span class="keyword">AS</span> 学生人数 <span class="keyword">FROM</span> Student;</span><br><span class="line"></span><br><span class="line"><span class="keyword">SELECT</span> <span class="keyword">COUNT</span>(Major) <span class="keyword">AS</span> 学生专业数 <span class="keyword">FROM</span> Student;</span><br><span class="line"><span class="keyword">SELECT</span> <span class="keyword">COUNT</span>(<span class="keyword">DISTINCT</span> Major) <span class="keyword">AS</span> 学生专业数 <span class="keyword">FROM</span> Student;</span><br><span class="line"></span><br><span class="line"><span class="keyword">SELECT</span> <span class="keyword">MIN</span>(BirthDay) <span class="keyword">AS</span> 最大年龄出生日期， <span class="keyword">Max</span>(BirthDay) <span class="keyword">AS</span> 最小年龄出生日期 <span class="keyword">FROM</span> Student;</span><br></pre></td></tr></tbody></table></div></figure></li>
+<li>算数函数<br>
+        <img class="lazyload lazyload-gif" src="/images/loading.svg" data-src="https://s1.ax1x.com/2020/06/10/t78nl8.png" alt="t78nl8.png">
+      </li>
 <li>字符串函数</li>
 <li>时间日期函数</li>
 <li>数据类型转换函数</li>
@@ -3488,8 +3645,12 @@
           <a href="#批处理系统" class="heading-link"><i class="fas fa-link"></i></a>批处理系统</h3>
       <p>主要动力是提高资源利用率和系统吞吐量。<br>批处理是指用户将一批作业提交给操作系统后就不再干预，由操作系统控制它们自动运行。<br>批处理系统分为单道批处理系统和多道批处理系统。</p>
 <ol>
-<li>单道批处理系统<br><img src="https://s1.ax1x.com/2020/06/11/tqmjI0.png" alt="tqmjI0.png"><br>在内存中始终仅存一道作业运行。</li>
-<li>多道批处理系统<br><img src="https://s1.ax1x.com/2020/06/11/tqnwLj.png" alt="tqnwLj.png"></li>
+<li>单道批处理系统<br>
+        <img class="lazyload lazyload-gif" src="/images/loading.svg" data-src="https://s1.ax1x.com/2020/06/11/tqmjI0.png" alt="tqmjI0.png">
+      <br>在内存中始终仅存一道作业运行。</li>
+<li>多道批处理系统<br>
+        <img class="lazyload lazyload-gif" src="/images/loading.svg" data-src="https://s1.ax1x.com/2020/06/11/tqnwLj.png" alt="tqnwLj.png">
+      </li>
 </ol>
 
         <h3 id="分时系统">
@@ -3674,7 +3835,9 @@
 <li>因特网草案（Internet Draft）－不是RFC文档</li>
 <li>建议标准（Proposed Standard） －开始成为RFC文档</li>
 <li>草案标准（Draft Standard）</li>
-<li>因特网标准（Internet Standard）<br><img src="https://s1.ax1x.com/2020/05/31/t3CKat.png" alt="t3CKat.png"><br><span class="exturl"><a class="exturl__link" href="http://www.rfceditor.org/RFCoverview.html" target="_blank" rel="noopener">详细介绍</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></li>
+<li>因特网标准（Internet Standard）<br>
+        <img class="lazyload lazyload-gif" src="/images/loading.svg" data-src="https://s1.ax1x.com/2020/05/31/t3CKat.png" alt="t3CKat.png">
+      <br><span class="exturl"><a class="exturl__link" href="http://www.rfceditor.org/RFCoverview.html" target="_blank" rel="noopener">详细介绍</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></li>
 </ol>
 </li>
 </ul>
@@ -3774,7 +3937,9 @@
 <blockquote>
 <p>如下图所示，对象object 5、object 6、object 7虽然互有关联，但是它们到GC Roots是不可达的，因此它们将会被判定为可回收的对象。</p>
 </blockquote>
-<p><img src="https://s1.ax1x.com/2020/05/31/tl4Qv4.png" alt="tl4Qv4.png"></p>
+<p>
+        <img class="lazyload lazyload-gif" src="/images/loading.svg" data-src="https://s1.ax1x.com/2020/05/31/tl4Qv4.png" alt="tl4Qv4.png">
+      </p>
 
         <h3 id="Java中可作为GC-Roots的对象">
           <a href="#Java中可作为GC-Roots的对象" class="heading-link"><i class="fas fa-link"></i></a>Java中可作为GC Roots的对象</h3>
@@ -3848,7 +4013,9 @@
         <h1 id="Free-Talk">
           <a href="#Free-Talk" class="heading-link"><i class="fas fa-link"></i></a>Free Talk</h1>
       <p>今天的垃圾收集基础部分算是写完，本来打算把算法部分也讲了，但是发现算法部分另起一篇的效果更好一点，同时打算补一篇Java基础，发现自己上学期学的Java遗忘的比较厉害了，而且上学期学的时候也没有学全，再拿来复习学习一下比较好。然后我发现自己对内存管理里面的数据区域了解的太少了，遇到了总是弄不清楚。  </p>
-<p><strong>热爱未知，比如宇宙和清晨</strong><br><img src="https://s1.ax1x.com/2020/05/31/t1Spex.png" alt="image"></p>
+<p><strong>热爱未知，比如宇宙和清晨</strong><br>
+        <img class="lazyload lazyload-gif" src="/images/loading.svg" data-src="https://s1.ax1x.com/2020/05/31/t1Spex.png" alt="image">
+      </p>
 <p>参考资料：<br><span class="exturl"><a class="exturl__link" href="https://github.com/TangBean/understanding-the-jvm/blob/master/Ch1-Java%E5%86%85%E5%AD%98%E7%AE%A1%E7%90%86%E6%9C%BA%E5%88%B6/02-%E5%9E%83%E5%9C%BE%E6%94%B6%E9%9B%86(GC).md" target="_blank" rel="noopener">Github</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span><br>《深入理解java虚拟机》</p>
 <script>
         document.querySelectorAll('.github-emoji')
@@ -3894,7 +4061,11 @@
 </ol>
 <p>简单的讲：<em>越小的放在越左边</em>。</p>
 <a id="more"></a>
-<p><strong>你以为的二叉查找树</strong><br><img src="https://s1.ax1x.com/2020/05/30/tQrsc6.png" alt="image"><br><strong>变态的二叉查找树</strong><br><img src="https://s1.ax1x.com/2020/05/30/tQrfNd.png" alt="image"><br>这种畸形的二叉查找树就会退化成<strong>链表</strong>，查找节点的时间复杂度就会从<strong>O($ log_2^n $)退化成O(n)</strong>。而根据我们在小学二年级就学过的[去除顶端优势]，我们引入了红黑树，达到树的平衡。</p>
+<p><strong>你以为的二叉查找树</strong><br>
+        <img class="lazyload lazyload-gif" src="/images/loading.svg" data-src="https://s1.ax1x.com/2020/05/30/tQrsc6.png" alt="image">
+      <br><strong>变态的二叉查找树</strong><br>
+        <img class="lazyload lazyload-gif" src="/images/loading.svg" data-src="https://s1.ax1x.com/2020/05/30/tQrfNd.png" alt="image">
+      <br>这种畸形的二叉查找树就会退化成<strong>链表</strong>，查找节点的时间复杂度就会从<strong>O($ log_2^n $)退化成O(n)</strong>。而根据我们在小学二年级就学过的[去除顶端优势]，我们引入了红黑树，达到树的平衡。</p>
 
         <h2 id="红黑树简介">
           <a href="#红黑树简介" class="heading-link"><i class="fas fa-link"></i></a>红黑树简介</h2>
@@ -3912,7 +4083,9 @@
 </blockquote>
 </li>
 </ol>
-<p>示意图如下：<br><img src="https://s1.ax1x.com/2020/05/30/tQs3UH.png" alt="image"></p>
+<p>示意图如下：<br>
+        <img class="lazyload lazyload-gif" src="/images/loading.svg" data-src="https://s1.ax1x.com/2020/05/30/tQs3UH.png" alt="image">
+      </p>
 
         <h3 id="应用">
           <a href="#应用" class="heading-link"><i class="fas fa-link"></i></a>应用</h3>
@@ -3948,7 +4121,9 @@
 <blockquote>
 <p>第一个左指的是parent节点是在grand parent的左边还是右边<br>第二个左指的是此节点X是在parent的左边还是右边        </p>
 </blockquote>
-<p><img src="https://s1.ax1x.com/2020/05/30/tQsY8I.png" alt="image"></p>
+<p>
+        <img class="lazyload lazyload-gif" src="/images/loading.svg" data-src="https://s1.ax1x.com/2020/05/30/tQsY8I.png" alt="image">
+      </p>
 <p>跟着上面的公式走:</p>
 <ol>
 <li>将新插入的 X 节点标记为红色</li>
@@ -3965,28 +4140,36 @@
       <p><strong>p在g的左边，x在p的左边</strong></p>
 <ol>
 <li>右旋g</li>
-<li>交换g和p的颜色<br><img src="https://s1.ax1x.com/2020/05/30/tQsdr8.png" alt="image"></li>
+<li>交换g和p的颜色<br>
+        <img class="lazyload lazyload-gif" src="/images/loading.svg" data-src="https://s1.ax1x.com/2020/05/30/tQsdr8.png" alt="image">
+      </li>
 </ol>
 
         <h3 id="左右">
           <a href="#左右" class="heading-link"><i class="fas fa-link"></i></a>左右</h3>
       <ol>
 <li>左旋p</li>
-<li>变成左左了<br><img src="https://s1.ax1x.com/2020/05/30/tQsDaQ.png" alt="image"></li>
+<li>变成左左了<br>
+        <img class="lazyload lazyload-gif" src="/images/loading.svg" data-src="https://s1.ax1x.com/2020/05/30/tQsDaQ.png" alt="image">
+      </li>
 </ol>
 
         <h3 id="右右">
           <a href="#右右" class="heading-link"><i class="fas fa-link"></i></a>右右</h3>
       <ol>
 <li>左旋g</li>
-<li>交换g和p的颜色<br><img src="https://s1.ax1x.com/2020/05/30/tQsc2q.png" alt="image"></li>
+<li>交换g和p的颜色<br>
+        <img class="lazyload lazyload-gif" src="/images/loading.svg" data-src="https://s1.ax1x.com/2020/05/30/tQsc2q.png" alt="image">
+      </li>
 </ol>
 
         <h3 id="右左">
           <a href="#右左" class="heading-link"><i class="fas fa-link"></i></a>右左</h3>
       <ol>
 <li>右旋p</li>
-<li>变成右右了<br><img src="https://s1.ax1x.com/2020/05/30/tQsWrT.png" alt="image"></li>
+<li>变成右右了<br>
+        <img class="lazyload lazyload-gif" src="/images/loading.svg" data-src="https://s1.ax1x.com/2020/05/30/tQsWrT.png" alt="image">
+      </li>
 </ol>
 
         <h2 id="案例演示">
@@ -3994,21 +4177,29 @@
       <p>插入 10，20，30，15 到一个空树中</p>
 <ol>
 <li>向空树中第一次插入数字 10，肯定是 root 节点</li>
-<li>root 节点标记成黑色<br><img src="https://image-static.segmentfault.com/313/178/313178228-5d37b7346452f_articlex" alt="image"></li>
+<li>root 节点标记成黑色<br>
+        <img class="lazyload lazyload-gif" src="/images/loading.svg" data-src="https://image-static.segmentfault.com/313/178/313178228-5d37b7346452f_articlex" alt="image">
+      </li>
 <li>向树中插入新节点 20，标记为红色</li>
-<li>20 &gt; 10，并发现 10 没有叶子节点，将新节点 20 作为 10 的右孩子<br><img src="https://image-static.segmentfault.com/310/491/310491414-5d37b7319f447_articlex" alt="image"></li>
+<li>20 &gt; 10，并发现 10 没有叶子节点，将新节点 20 作为 10 的右孩子<br>
+        <img class="lazyload lazyload-gif" src="/images/loading.svg" data-src="https://image-static.segmentfault.com/310/491/310491414-5d37b7319f447_articlex" alt="image">
+      </li>
 <li>向树中插入新节点 30，标记为红色</li>
 <li>30 &gt; 10，查找 10 的右子树，找到 20</li>
 <li>30 &gt; 20，继续查找 20 的右子树，发现 20 没有叶子节点，将值插在此处</li>
 <li>30 和 20 节点都为红色，30 为右孩子，20 也为右孩子，触发了<strong>右右情况</strong></li>
 <li>通过一次旋转，提起 20 节点</li>
-<li>20 节点是根结点，标记为黑色<br><img src="https://image-static.segmentfault.com/386/112/3861123538-5d37b733ce90e_articlex" alt="image"></li>
+<li>20 节点是根结点，标记为黑色<br>
+        <img class="lazyload lazyload-gif" src="/images/loading.svg" data-src="https://image-static.segmentfault.com/386/112/3861123538-5d37b733ce90e_articlex" alt="image">
+      </li>
 <li>向树中插入新节点 15，标记为红色</li>
 <li>通过比对大小和判断是否有叶子节点，最终插值为 10 节点的右孩子</li>
 <li>15 和 10 节点都为红色，15 的 uncle 节点 30 也为红色</li>
 <li>按照公式，将 15 的 parent 10 和 uncle 30 更改为黑色</li>
 <li>让 15 节点 grand parent 20 的颜色与 15 节点的颜色一样，变为红色</li>
-<li>20 为根结点，将其改为黑色<br><img src="https://image-static.segmentfault.com/842/419/842419664-5d37b734b8439_articlex" alt="image"></li>
+<li>20 为根结点，将其改为黑色<br>
+        <img class="lazyload lazyload-gif" src="/images/loading.svg" data-src="https://image-static.segmentfault.com/842/419/842419664-5d37b734b8439_articlex" alt="image">
+      </li>
 </ol>
 
         <h1 id="C语言实现">
@@ -4020,13 +4211,17 @@
 
         <h2 id="左旋">
           <a href="#左旋" class="heading-link"><i class="fas fa-link"></i></a>左旋</h2>
-      <p><img src="https://s1.ax1x.com/2020/05/30/tQWj1J.png" alt="image"></p>
+      <p>
+        <img class="lazyload lazyload-gif" src="/images/loading.svg" data-src="https://s1.ax1x.com/2020/05/30/tQWj1J.png" alt="image">
+      </p>
 <figure class="highlight c"><div class="table-container"><table><tbody><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">define</span> RED        0    <span class="comment">// 红色节点</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> BLACK    1    <span class="comment">// 黑色节点</span></span></span><br><span class="line"></span><br><span class="line"><span class="keyword">typedef</span> <span class="keyword">int</span> Type;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 红黑树的节点</span></span><br><span class="line"><span class="keyword">typedef</span> <span class="class"><span class="keyword">struct</span> <span class="title">RBTreeNode</span>{</span></span><br><span class="line">    <span class="keyword">unsigned</span> <span class="keyword">char</span> color;        <span class="comment">// 颜色(RED 或 BLACK)</span></span><br><span class="line">    Type   key;                    <span class="comment">// 关键字(键值)</span></span><br><span class="line">    <span class="class"><span class="keyword">struct</span> <span class="title">RBTreeNode</span> *<span class="title">left</span>;</span>    <span class="comment">// 左孩子</span></span><br><span class="line">    <span class="class"><span class="keyword">struct</span> <span class="title">RBTreeNode</span> *<span class="title">right</span>;</span>    <span class="comment">// 右孩子</span></span><br><span class="line">    <span class="class"><span class="keyword">struct</span> <span class="title">RBTreeNode</span> *<span class="title">parent</span>;</span>    <span class="comment">// 父结点</span></span><br><span class="line">}Node, *RBTree;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 红黑树的根</span></span><br><span class="line"><span class="keyword">typedef</span> <span class="class"><span class="keyword">struct</span> <span class="title">rb_root</span>{</span></span><br><span class="line">    Node *node;</span><br><span class="line">}RBRoot;</span><br></pre></td></tr></tbody></table></div></figure>
 
 
         <h2 id="右旋">
           <a href="#右旋" class="heading-link"><i class="fas fa-link"></i></a>右旋</h2>
-      <p><img src="https://s1.ax1x.com/2020/05/30/tQWvc9.png" alt="image"></p>
+      <p>
+        <img class="lazyload lazyload-gif" src="/images/loading.svg" data-src="https://s1.ax1x.com/2020/05/30/tQWvc9.png" alt="image">
+      </p>
 <figure class="highlight c"><div class="table-container"><table><tbody><tr><td class="code"><pre><span class="line"><span class="comment">/* </span></span><br><span class="line"><span class="comment"> * 对红黑树的节点(y)进行右旋转</span></span><br><span class="line"><span class="comment"> *</span></span><br><span class="line"><span class="comment"> * 右旋示意图(对节点y进行左旋)：</span></span><br><span class="line"><span class="comment"> *            py                               py</span></span><br><span class="line"><span class="comment"> *           /                                /</span></span><br><span class="line"><span class="comment"> *          y                                x                  </span></span><br><span class="line"><span class="comment"> *         /  \      --(右旋)--&gt;            /  \                     #</span></span><br><span class="line"><span class="comment"> *        x   ry                           lx   y  </span></span><br><span class="line"><span class="comment"> *       / \                                   / \                   #</span></span><br><span class="line"><span class="comment"> *      lx  rx                                rx  ry</span></span><br><span class="line"><span class="comment"> * </span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="function"><span class="keyword">static</span> <span class="keyword">void</span> <span class="title">rbtree_right_rotate</span><span class="params">(RBRoot *root, Node *y)</span></span></span><br><span class="line"><span class="function"></span>{</span><br><span class="line">    <span class="comment">// 设置x是当前节点的左孩子。</span></span><br><span class="line">    Node *x = y-&gt;left;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 将 “x的右孩子” 设为 “y的左孩子”；</span></span><br><span class="line">    <span class="comment">// 如果"x的右孩子"不为空的话，将 “y” 设为 “x的右孩子的父亲”</span></span><br><span class="line">    y-&gt;left = x-&gt;right;</span><br><span class="line">    <span class="keyword">if</span> (x-&gt;right != <span class="literal">NULL</span>)</span><br><span class="line">        x-&gt;right-&gt;parent = y;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 将 “y的父亲” 设为 “x的父亲”</span></span><br><span class="line">    x-&gt;parent = y-&gt;parent;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">if</span> (y-&gt;parent == <span class="literal">NULL</span>) </span><br><span class="line">    {</span><br><span class="line">        <span class="comment">//tree = x;            // 如果 “y的父亲” 是空节点，则将x设为根节点</span></span><br><span class="line">        root-&gt;node = x;            <span class="comment">// 如果 “y的父亲” 是空节点，则将x设为根节点</span></span><br><span class="line">    }</span><br><span class="line">    <span class="keyword">else</span></span><br><span class="line">    {</span><br><span class="line">        <span class="keyword">if</span> (y == y-&gt;parent-&gt;right)</span><br><span class="line">            y-&gt;parent-&gt;right = x;    <span class="comment">// 如果 y是它父节点的右孩子，则将x设为“y的父节点的右孩子”</span></span><br><span class="line">        <span class="keyword">else</span></span><br><span class="line">            y-&gt;parent-&gt;left = x;    <span class="comment">// (y是它父节点的左孩子) 将x设为“x的父节点的左孩子”</span></span><br><span class="line">    }</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 将 “y” 设为 “x的右孩子”</span></span><br><span class="line">    x-&gt;right = y;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 将 “y的父节点” 设为 “x”</span></span><br><span class="line">    y-&gt;parent = x;</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></div></figure>
 
         <h2 id="添加">
@@ -4087,7 +4282,9 @@
     <url>/JVM%E7%B3%BB%E5%88%97%EF%BC%88%E4%BA%8C%EF%BC%89-Java%E5%86%85%E5%AD%98%E7%AE%A1%E7%90%86/</url>
     <content><![CDATA[<h1 id="运行时数据区域">
           <a href="#运行时数据区域" class="heading-link"><i class="fas fa-link"></i></a>运行时数据区域</h1>
-      <p><a href="https://imgchr.com/i/tmAiTO" target="_blank" rel="noopener"><img src="https://s1.ax1x.com/2020/05/28/tmAiTO.md.png" alt="tmAiTO.md.png"></a></p>
+      <p><a href="https://imgchr.com/i/tmAiTO" target="_blank" rel="noopener">
+        <img class="lazyload lazyload-gif" src="/images/loading.svg" data-src="https://s1.ax1x.com/2020/05/28/tmAiTO.md.png" alt="tmAiTO.md.png">
+      </a></p>
 
         <h2 id="程序计数器">
           <a href="#程序计数器" class="heading-link"><i class="fas fa-link"></i></a>程序计数器</h2>
@@ -4197,7 +4394,9 @@
           <a href="#对象头" class="heading-link"><i class="fas fa-link"></i></a>对象头</h3>
       <p><strong>对象头部分</strong>包括两类信息：</p>
 <ol>
-<li><strong>运行数据：</strong>用于存储对象自身的运行时数据，如哈希码(HashCode)、GC分代年龄、锁状态标志等。(见官方 Mark Word)<br><img src="https://s1.ax1x.com/2020/05/28/te5Rcq.png" alt="te5Rcq.png"></li>
+<li><strong>运行数据：</strong>用于存储对象自身的运行时数据，如哈希码(HashCode)、GC分代年龄、锁状态标志等。(见官方 Mark Word)<br>
+        <img class="lazyload lazyload-gif" src="/images/loading.svg" data-src="https://s1.ax1x.com/2020/05/28/te5Rcq.png" alt="te5Rcq.png">
+      </li>
 <li><strong>类型指针：</strong>即对象指向它的类型元数据的指针，Java虚拟机通过这个指针确定该对象是哪个类的实例。</li>
 </ol>
 
@@ -4220,12 +4419,16 @@
         <h3 id="句柄访问">
           <a href="#句柄访问" class="heading-link"><i class="fas fa-link"></i></a>句柄访问</h3>
       <p>句柄访问会在Java堆中划分一块内存作为句柄池，每一个句柄存放着对象类型数据的指针。</p>
-<p><strong>优势：</strong>对象移动的时候(这在垃圾回收时十分常见)只需改变句柄池中<strong>对象实例数据的指针</strong>，不需要修改Reference本身。<br><img src="https://s1.ax1x.com/2020/05/28/te7VDx.png" alt="te7VDx.png"></p>
+<p><strong>优势：</strong>对象移动的时候(这在垃圾回收时十分常见)只需改变句柄池中<strong>对象实例数据的指针</strong>，不需要修改Reference本身。<br>
+        <img class="lazyload lazyload-gif" src="/images/loading.svg" data-src="https://s1.ax1x.com/2020/05/28/te7VDx.png" alt="te7VDx.png">
+      </p>
 
         <h3 id="直接指针访问">
           <a href="#直接指针访问" class="heading-link"><i class="fas fa-link"></i></a>直接指针访问</h3>
       <p>直接指针访问方式在Java堆对象的实例数据中存放了一个指向对象实例数据和对象类型数据的指针，在HotSpot中，这个指针会被存放在对象头中。</p>
-<p><strong>优势：</strong>减少了一次指针定位对象实例数据的开销，速度更快。<br><img src="https://s1.ax1x.com/2020/05/28/teHwTK.png" alt="teHwTK.png"></p>
+<p><strong>优势：</strong>减少了一次指针定位对象实例数据的开销，速度更快。<br>
+        <img class="lazyload lazyload-gif" src="/images/loading.svg" data-src="https://s1.ax1x.com/2020/05/28/teHwTK.png" alt="teHwTK.png">
+      </p>
 <p>参考目录：<br><span class="exturl"><a class="exturl__link" href="http://www.ityouknow.com/jvm/2017/08/25/jvm-memory-structure.html" target="_blank" rel="noopener">纯洁的微笑</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span><br><span class="exturl"><a class="exturl__link" href="https://github.com/TangBean/understanding-the-jvm/blob/master/Ch1-Java%E5%86%85%E5%AD%98%E7%AE%A1%E7%90%86%E6%9C%BA%E5%88%B6/00-Java%E5%86%85%E5%AD%98%E5%8C%BA%E5%9F%9F%E8%AF%A6%E8%A7%A3.md" target="_blank" rel="noopener">Github笔记总结</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span><br>《深入理解java虚拟机》</p>
 <script>
         document.querySelectorAll('.github-emoji')
@@ -4261,7 +4464,9 @@
     <content><![CDATA[<h1 id="类的加载定义">
           <a href="#类的加载定义" class="heading-link"><i class="fas fa-link"></i></a>类的加载定义</h1>
       <p>类的加载指的是将类的.class文件中的二进制数据读入到内存中，将其放在运行时数据区的方法区内，然后在堆区创建一个<code>java.lang.Class</code>对象，用来封装类在方法区内的数据结构。</p>
-<p><img src="http://favorites.ren/assets/images/2017/jvm/jvm-1.png" alt="image"></p>
+<p>
+        <img class="lazyload lazyload-gif" src="/images/loading.svg" data-src="http://favorites.ren/assets/images/2017/jvm/jvm-1.png" alt="image">
+      </p>
 <p>类的最终加载产品是位于堆区中的Class对象，Class对象封装了类在方法区内的数据结构，并向Java程序提供访问接口。</p>
 <p>与C语言的类比：C语言 –&gt; 二进制文件 –&gt; 计算机硬件；Java –&gt; 字节码文件 –&gt; JVM</p>
 <blockquote>
@@ -4273,7 +4478,9 @@
         <h1 id="类的生命周期">
           <a href="#类的生命周期" class="heading-link"><i class="fas fa-link"></i></a>类的生命周期</h1>
       <p>加载(Loading) –&gt;  <strong>验证(Verification) –&gt; 准备(Preparation) –&gt; 解析(Resolution)</strong> –&gt; 初始化(Intialization) –&gt; 使用(Using) –&gt; 卸载(Unloading) 共七个阶段；其中验证、准备和解析又统称为<strong>连接(Linking)阶段</strong>。</p>
-<p><img src="https://imgconvert.csdnimg.cn/aHR0cHM6Ly9tbWJpei5xcGljLmNuL21tYml6X3BuZy80QUc2dGljNjhBR2JSNnc4bWQ5cW1vcmdldjV5cHN0aWF3ekRKNk5kNmFONUZJRzVzaWFyYmlhTUFSSmljeFQ0UmR2ZzZtaDRhUWdnSVlmQ0xZNTAwMHVIRGliUS82NDA_d3hfZm10PXBuZw?x-oss-process=image/format,png" style="" alt="image"></p>
+<p>
+        <img class="lazyload lazyload-gif" src="/images/loading.svg" data-src="https://imgconvert.csdnimg.cn/aHR0cHM6Ly9tbWJpei5xcGljLmNuL21tYml6X3BuZy80QUc2dGljNjhBR2JSNnc4bWQ5cW1vcmdldjV5cHN0aWF3ekRKNk5kNmFONUZJRzVzaWFyYmlhTUFSSmljeFQ0UmR2ZzZtaDRhUWdnSVlmQ0xZNTAwMHVIRGliUS82NDA_d3hfZm10PXBuZw?x-oss-process=image/format,png" style="" alt="image">
+      </p>
 <blockquote>
 <p>在前五个阶段中，加载、验证、准备、初始化的顺序是确定的，但是解析阶段不一定，它在某些情况下可以在初始化阶段之前开始，这是为了支持Java的动态绑定。</p>
 </blockquote>
@@ -4382,7 +4589,9 @@
 
         <h1 id="类加载器">
           <a href="#类加载器" class="heading-link"><i class="fas fa-link"></i></a>类加载器</h1>
-      <p><img src="http://favorites.ren/assets/images/2017/jvm/calssloader.png" alt="image"></p>
+      <p>
+        <img class="lazyload lazyload-gif" src="/images/loading.svg" data-src="http://favorites.ren/assets/images/2017/jvm/calssloader.png" alt="image">
+      </p>
 <p>站在Java虚拟机的角度来讲，只存在两种不同的类加载器：<br><strong>启动类加载器：</strong><br>它使用C++实现（这里仅限于Hotspot，也就是JDK1.5之后默认的虚拟机，有很多其他的虚拟机是用Java语言实现的），是虚拟机自身的一部分；<br><strong>所有其它的类加载器：</strong><br>这些类加载器都由Java语言实现，独立于虚拟机之外，并且全部继承自抽象类 <code>java.lang.ClassLoader</code>，这些类加载器需要由启动类加载器加载到内存中之后才能去加载其他的类。</p>
 <p>站在Java开发人员的角度来看，类加载器可以大致划分为以下三类：</p>
 <p><strong>启动类加载器：</strong><code>BootstrapClassLoader</code>，负责加载存放在 <code>JDK\jre\lib</code>(JDK代表JDK的安装目录，下同)下，或被 <code>-Xbootclasspath</code>参数指定的路径中的，并且能被虚拟机识别的类库（如rt.jar，所有的java.开头的类均被 <code>BootstrapClassLoader</code>加载）。启动类加载器是无法被Java程序直接引用的。<br><strong>扩展类加载器：</strong><code>ExtensionClassLoader</code>，该加载器由 <code>sun.misc.Launcher$ExtClassLoader</code>实现，它负责加载 <code>JDK\jre\lib\ext</code>目录中，或者由 <code>java.ext.dirs</code>系统变量指定的路径中的所有类库（如javax.开头的类），开发者可以直接使用扩展类加载器。<br><strong>应用程序类加载器：</strong><code>ApplicationClassLoader</code>，该类加载器由 <code>sun.misc.Launcher$AppClassLoader</code>来实现，它负责加载用户类路径（ClassPath）所指定的类，开发者可以直接使用该类加载器，如果应用程序中没有自定义过自己的类加载器，一般情况下这个就是程序中默认的类加载器。</p>
@@ -4558,7 +4767,9 @@
 
         <h1 id="标志寄存器">
           <a href="#标志寄存器" class="heading-link"><i class="fas fa-link"></i></a>标志寄存器</h1>
-      <p><img src="https://s1.ax1x.com/2020/06/01/t837KH.png" alt="t837KH.png"><br>flag和其他寄存器不一样，其他寄存器是用来存放数据的，都是整个寄存器具有一个含义；<br>而flag寄存器是按位起作用的，也就是说，它的每一位都有专门的含义，记录特定的信息。</p>
+      <p>
+        <img class="lazyload lazyload-gif" src="/images/loading.svg" data-src="https://s1.ax1x.com/2020/06/01/t837KH.png" alt="t837KH.png">
+      <br>flag和其他寄存器不一样，其他寄存器是用来存放数据的，都是整个寄存器具有一个含义；<br>而flag寄存器是按位起作用的，也就是说，它的每一位都有专门的含义，记录特定的信息。</p>
 
         <h2 id="ZF标志-第6位-–零标志位">
           <a href="#ZF标志-第6位-–零标志位" class="heading-link"><i class="fas fa-link"></i></a>ZF标志(第6位)–零标志位</h2>
@@ -4589,7 +4800,9 @@
 
         <h2 id="CF标志-第0位-–进位-借位标志位">
           <a href="#CF标志-第0位-–进位-借位标志位" class="heading-link"><i class="fas fa-link"></i></a>CF标志(第0位)–进位/借位标志位</h2>
-      <p>记录最高有效位向更高有效位的进位/借位<br><img src="https://s1.ax1x.com/2020/06/01/t8Nvin.png" alt="t8Nvin.png"></p>
+      <p>记录最高有效位向更高有效位的进位/借位<br>
+        <img class="lazyload lazyload-gif" src="/images/loading.svg" data-src="https://s1.ax1x.com/2020/06/01/t8Nvin.png" alt="t8Nvin.png">
+      </p>
 <ol>
 <li>有进位/借位：CF=1，</li>
 <li>无进位/借位：CF=0。</li>
@@ -4668,7 +4881,9 @@
     <url>/java%E5%90%8E%E7%AB%AF%E5%BC%80%E5%8F%91%E5%AD%A6%E4%B9%A0%E8%B7%AF%E7%BA%BF/</url>
     <content><![CDATA[<h1 id="JAVA学习路线">
           <a href="#JAVA学习路线" class="heading-link"><i class="fas fa-link"></i></a>JAVA学习路线</h1>
-      <p><img src="http://assets.processon.com/chart_image/5ec28f620791290fe06e73f8.png" alt="思维导图"></p>
+      <p>
+        <img class="lazyload lazyload-gif" src="/images/loading.svg" data-src="http://assets.processon.com/chart_image/5ec28f620791290fe06e73f8.png" alt="思维导图">
+      </p>
 <a id="more"></a>
 <p><span class="exturl"><a class="exturl__link" href="https://www.processon.com/embed/5ec28f620791290fe06e73f5" target="_blank" rel="noopener">思维导图在线链接</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span><br>感谢来自CodeSheep大神的总结，<span class="exturl"><a class="exturl__link" href="https://www.bilibili.com/video/BV1GQ4y1N7HD" target="_blank" rel="noopener">视频链接</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></p>
 
@@ -4736,7 +4951,9 @@
 <p><span class="exturl"><a class="exturl__link" href="https://www.liaoxuefeng.com/wiki/896043488029600" target="_blank" rel="noopener">廖雪峰Git教学</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></p>
 <p>简单示例</p>
 <figure class="highlight avrasm"><div class="table-container"><table><tbody><tr><td class="code"><pre><span class="line">mkdir learngit <span class="meta">#创建一个空白目录</span></span><br><span class="line">cd learngit </span><br><span class="line"></span><br><span class="line">git init <span class="meta">#把这个目录变成Git可以管理的仓库</span></span><br><span class="line"></span><br><span class="line">git <span class="keyword">add</span> readme.txt <span class="meta">#把文件添加到仓库</span></span><br><span class="line"></span><br><span class="line">git commit -m <span class="string">"wrote a readme file"</span> <span class="meta">#把文件提交给仓库</span></span><br><span class="line"></span><br><span class="line">git <span class="keyword">push</span> -u origin master <span class="meta">#把本地仓库中的所有内容上传到远程库</span></span><br></pre></td></tr></tbody></table></div></figure>
-<p><img src="https://s1.ax1x.com/2020/06/01/t8gefS.png" alt="t8gefS.png"></p>
+<p>
+        <img class="lazyload lazyload-gif" src="/images/loading.svg" data-src="https://s1.ax1x.com/2020/06/01/t8gefS.png" alt="t8gefS.png">
+      </p>
 <a id="more"></a>
 
         <h2 id="GitHub介绍-敲黑板">
@@ -4784,7 +5001,9 @@
   <entry>
     <title>数学建模算法汇总</title>
     <url>/%E6%95%B0%E5%AD%A6%E5%BB%BA%E6%A8%A1%E7%AE%97%E6%B3%95%E6%B1%87%E6%80%BB/</url>
-    <content><![CDATA[<p><img src="https://i.loli.net/2020/02/03/AiDVdhUEBgYKtQz.png" alt="image.png"></p>
+    <content><![CDATA[<p>
+        <img class="lazyload lazyload-gif" src="/images/loading.svg" data-src="https://i.loli.net/2020/02/03/AiDVdhUEBgYKtQz.png" alt="image.png">
+      </p>
 
         <h1 id="优化模型">
           <a href="#优化模型" class="heading-link"><i class="fas fa-link"></i></a>优化模型</h1>
@@ -4792,7 +5011,9 @@
 
         <h2 id="优化模型-1">
           <a href="#优化模型-1" class="heading-link"><i class="fas fa-link"></i></a>优化模型(1)</h2>
-      <p><em>三要素:</em> <strong>决策变量、目标函数、约束</strong><br><strong><span class="exturl"><a class="exturl__link" href="https://blog.csdn.net/luolang_103/article/details/80567443" target="_blank" rel="noopener">https://blog.csdn.net/luolang_103/article/details/80567443</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></strong><br><img src="https://i.loli.net/2020/02/03/zVPmxnUyRLS1Q57.png" alt="image.png"></p>
+      <p><em>三要素:</em> <strong>决策变量、目标函数、约束</strong><br><strong><span class="exturl"><a class="exturl__link" href="https://blog.csdn.net/luolang_103/article/details/80567443" target="_blank" rel="noopener">https://blog.csdn.net/luolang_103/article/details/80567443</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></strong><br>
+        <img class="lazyload lazyload-gif" src="/images/loading.svg" data-src="https://i.loli.net/2020/02/03/zVPmxnUyRLS1Q57.png" alt="image.png">
+      </p>
 
         <h3 id="单目标（Single-Objective-Optimization-Problem）">
           <a href="#单目标（Single-Objective-Optimization-Problem）" class="heading-link"><i class="fas fa-link"></i></a>单目标（Single-Objective Optimization Problem）</h3>
@@ -4826,7 +5047,9 @@
 
         <h3 id="单目标化">
           <a href="#单目标化" class="heading-link"><i class="fas fa-link"></i></a>单目标化</h3>
-      <p><img src="https://i.loli.net/2020/02/03/fwNLboBKaz4qVDI.png" alt="image.png"></p>
+      <p>
+        <img class="lazyload lazyload-gif" src="/images/loading.svg" data-src="https://i.loli.net/2020/02/03/fwNLboBKaz4qVDI.png" alt="image.png">
+      </p>
 <blockquote>
 <p>一般采用两个目标函数加权相加的形式。加权可以解决两个目标函数量纲不一致，或者变化剧烈程度不一致的问题，不过权重本身需要人为选取。<br>一般不使用乘法来组合目标函数，因为这样会使得导数的形式变得复杂。<br><strong><span class="exturl"><a class="exturl__link" href="https://zhuanlan.zhihu.com/p/30383993" target="_blank" rel="noopener">https://zhuanlan.zhihu.com/p/30383993</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></strong></p>
 </blockquote>
@@ -4836,11 +5059,15 @@
       
         <h3 id="动态规划-Dynamic-Programming">
           <a href="#动态规划-Dynamic-Programming" class="heading-link"><i class="fas fa-link"></i></a>动态规划 Dynamic Programming</h3>
-      <p><img src="https://i.loli.net/2020/02/03/T9FYRqJgzxSw4am.png" alt="image.png"></p>
+      <p>
+        <img class="lazyload lazyload-gif" src="/images/loading.svg" data-src="https://i.loli.net/2020/02/03/T9FYRqJgzxSw4am.png" alt="image.png">
+      </p>
 <figure class="highlight groovy"><div class="table-container"><table><tbody><tr><td class="code"><pre><span class="line">A * <span class="string">"1+1+1+1+1+1+1+1 =？"</span> *</span><br><span class="line"></span><br><span class="line"><span class="string">A :</span> <span class="string">"上面等式的值是多少"</span></span><br><span class="line"><span class="string">B :</span> *计算* <span class="string">"8!"</span></span><br><span class="line"></span><br><span class="line">A *在上面等式的左边写上 <span class="string">"1+"</span> *</span><br><span class="line"><span class="string">A :</span> <span class="string">"此时等式的值为多少"</span></span><br><span class="line"><span class="string">B :</span> *quickly* <span class="string">"9!"</span></span><br><span class="line"><span class="string">A :</span> <span class="string">"你怎么这么快就知道答案了"</span></span><br><span class="line"><span class="string">A :</span> <span class="string">"只要在8的基础上加1就行了"</span></span><br><span class="line"><span class="string">A :</span> <span class="string">"所以你不用重新计算因为你记住了第一个等式的值为8!动态规划算法也可以说是 '记住求过的解来节省时间'"</span></span><br></pre></td></tr></tbody></table></div></figure>
 <p><strong><span class="exturl"><a class="exturl__link" href="https://blog.csdn.net/u013309870/article/details/75193592" target="_blank" rel="noopener">https://blog.csdn.net/u013309870/article/details/75193592</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></strong></p>
 <blockquote>
-<p><strong>1. 将原问题分解为子问题</strong><br>    把原问题分解为若干个子问题，子问题和原问题形式相同或类似，只不过规模变小了。子问题都解决，原问题即解决(数字三角形例）。<br>    子问题的解一旦求出就会被保存，所以每个子问题只需求 解一次。<br> <strong>2. 确定状态</strong><br>    在用动态规划解题时，我们往往将和子问题相关的各个变量的一组取值，称之为一个“状 态”。一个“状态”对应于一个或多个子问题， 所谓某个“状态”下的“值”，就是这个“状 态”所对应的子问题的解。<br>    所有“状态”的集合，构成问题的“状态空间”。“状态空间”的大小，与用动态规划解决问题的时间复杂度直接相关。 在数字三角形的例子里，一共有N×(N+1)/2个数字，所以这个问题的状态空间里一共就有N×(N+1)/2个状态。<br>    整个问题的时间复杂度是状态数目乘以计算每个状态所需时间。在数字三角形里每个“状态”只需要经过一次，且在每个状态上作计算所花的时间都是和N无关的常数。<br>   <strong>3.确定一些初始状态（边界状态）的值</strong><br>    以“数字三角形”为例，初始状态就是底边数字，值就是底边数字值。<br>    <strong>4. 确定状态转移方程</strong><br>     定义出什么是“状态”，以及在该“状态”下的“值”后，就要找出不同的状态之间如何迁移――即如何从一个或多个“值”已知的 “状态”，求出另一个“状态”的“值”(递推型)。状态的迁移可以用递推公式表示，此递推公式也可被称作“状态转移方程”。<br>    数字三角形的状态转移方程:<br><img src="https://i.loli.net/2020/02/03/peAd9XNOTvlDib6.png" alt="image.png"><br><strong><span class="exturl"><a class="exturl__link" href="https://blog.csdn.net/baidu_28312631/article/details/47418773" target="_blank" rel="noopener">https://blog.csdn.net/baidu_28312631/article/details/47418773</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></strong></p>
+<p><strong>1. 将原问题分解为子问题</strong><br>    把原问题分解为若干个子问题，子问题和原问题形式相同或类似，只不过规模变小了。子问题都解决，原问题即解决(数字三角形例）。<br>    子问题的解一旦求出就会被保存，所以每个子问题只需求 解一次。<br> <strong>2. 确定状态</strong><br>    在用动态规划解题时，我们往往将和子问题相关的各个变量的一组取值，称之为一个“状 态”。一个“状态”对应于一个或多个子问题， 所谓某个“状态”下的“值”，就是这个“状 态”所对应的子问题的解。<br>    所有“状态”的集合，构成问题的“状态空间”。“状态空间”的大小，与用动态规划解决问题的时间复杂度直接相关。 在数字三角形的例子里，一共有N×(N+1)/2个数字，所以这个问题的状态空间里一共就有N×(N+1)/2个状态。<br>    整个问题的时间复杂度是状态数目乘以计算每个状态所需时间。在数字三角形里每个“状态”只需要经过一次，且在每个状态上作计算所花的时间都是和N无关的常数。<br>   <strong>3.确定一些初始状态（边界状态）的值</strong><br>    以“数字三角形”为例，初始状态就是底边数字，值就是底边数字值。<br>    <strong>4. 确定状态转移方程</strong><br>     定义出什么是“状态”，以及在该“状态”下的“值”后，就要找出不同的状态之间如何迁移――即如何从一个或多个“值”已知的 “状态”，求出另一个“状态”的“值”(递推型)。状态的迁移可以用递推公式表示，此递推公式也可被称作“状态转移方程”。<br>    数字三角形的状态转移方程:<br>
+        <img class="lazyload lazyload-gif" src="/images/loading.svg" data-src="https://i.loli.net/2020/02/03/peAd9XNOTvlDib6.png" alt="image.png">
+      <br><strong><span class="exturl"><a class="exturl__link" href="https://blog.csdn.net/baidu_28312631/article/details/47418773" target="_blank" rel="noopener">https://blog.csdn.net/baidu_28312631/article/details/47418773</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></strong></p>
 </blockquote>
 
         <h3 id="目标规划">
@@ -4855,19 +5082,27 @@
         <h3 id="网络流模型">
           <a href="#网络流模型" class="heading-link"><i class="fas fa-link"></i></a>网络流模型</h3>
       <blockquote>
-<p>对于一个网络流我们可以用一个有向图G = （V，E，C）表示；V表示顶点的集合，E表示有向边的集合，C表示有向边的最大流量。对于每一个网络，有一个源输入点，称之为source，一个输出点，称之为sink。在不是出发点source也不是输出点sink的其他点，流量不能超过有向边的最大流量，这是一个约束条件。<br>下图就是一个简单的网络流模型：<br><img src="https://i.loli.net/2020/02/03/SHIw21EnNCq4mZO.png" alt="image.png"><br><strong><span class="exturl"><a class="exturl__link" href="https://blog.csdn.net/changyuanchn/article/details/17097807" target="_blank" rel="noopener">https://blog.csdn.net/changyuanchn/article/details/17097807</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></strong></p>
+<p>对于一个网络流我们可以用一个有向图G = （V，E，C）表示；V表示顶点的集合，E表示有向边的集合，C表示有向边的最大流量。对于每一个网络，有一个源输入点，称之为source，一个输出点，称之为sink。在不是出发点source也不是输出点sink的其他点，流量不能超过有向边的最大流量，这是一个约束条件。<br>下图就是一个简单的网络流模型：<br>
+        <img class="lazyload lazyload-gif" src="/images/loading.svg" data-src="https://i.loli.net/2020/02/03/SHIw21EnNCq4mZO.png" alt="image.png">
+      <br><strong><span class="exturl"><a class="exturl__link" href="https://blog.csdn.net/changyuanchn/article/details/17097807" target="_blank" rel="noopener">https://blog.csdn.net/changyuanchn/article/details/17097807</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></strong></p>
 </blockquote>
 
         <h3 id="最短路">
           <a href="#最短路" class="heading-link"><i class="fas fa-link"></i></a>最短路</h3>
       <blockquote>
-<p><strong>最短路径问题</strong><br>画图在线平台：<br><strong><span class="exturl"><a class="exturl__link" href="https://csacademy.com/app/graph_editor/" target="_blank" rel="noopener">https://csacademy.com/app/graph_editor/</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></strong><br>注意邻接矩阵和关联矩阵的概念！<br><img src="https://i.loli.net/2020/02/03/RvLaVzcdrN3umXO.png" alt="9_GJHOYM9__MAR_K0_F6CNT.png"><br>邻接矩阵：元素为权值，不连接时为无穷(无权时为0/1表示是否相连)<br><img src="https://i.loli.net/2020/02/03/PJ9D8QyEMj1sFml.png" alt="84"><br>解决方法：Dijkstra算法 Floyd算法<br><strong><span class="exturl"><a class="exturl__link" href="https://www.cnblogs.com/biyeymyhjob/archive/2012/07/31/2615833.html" target="_blank" rel="noopener">https://www.cnblogs.com/biyeymyhjob/archive/2012/07/31/2615833.html</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></strong><br><strong><span class="exturl"><a class="exturl__link" href="https://blog.csdn.net/weixin_43791406/article/details/89314614" target="_blank" rel="noopener">https://blog.csdn.net/weixin_43791406/article/details/89314614</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></strong></p>
+<p><strong>最短路径问题</strong><br>画图在线平台：<br><strong><span class="exturl"><a class="exturl__link" href="https://csacademy.com/app/graph_editor/" target="_blank" rel="noopener">https://csacademy.com/app/graph_editor/</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></strong><br>注意邻接矩阵和关联矩阵的概念！<br>
+        <img class="lazyload lazyload-gif" src="/images/loading.svg" data-src="https://i.loli.net/2020/02/03/RvLaVzcdrN3umXO.png" alt="9_GJHOYM9__MAR_K0_F6CNT.png">
+      <br>邻接矩阵：元素为权值，不连接时为无穷(无权时为0/1表示是否相连)<br>
+        <img class="lazyload lazyload-gif" src="/images/loading.svg" data-src="https://i.loli.net/2020/02/03/PJ9D8QyEMj1sFml.png" alt="84">
+      <br>解决方法：Dijkstra算法 Floyd算法<br><strong><span class="exturl"><a class="exturl__link" href="https://www.cnblogs.com/biyeymyhjob/archive/2012/07/31/2615833.html" target="_blank" rel="noopener">https://www.cnblogs.com/biyeymyhjob/archive/2012/07/31/2615833.html</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></strong><br><strong><span class="exturl"><a class="exturl__link" href="https://blog.csdn.net/weixin_43791406/article/details/89314614" target="_blank" rel="noopener">https://blog.csdn.net/weixin_43791406/article/details/89314614</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></strong></p>
 </blockquote>
 
         <h3 id="最大流">
           <a href="#最大流" class="heading-link"><i class="fas fa-link"></i></a>最大流</h3>
       <blockquote>
-<p>网络流图是一张只有一个源点和汇点的有向图，而最大流就是求源点到汇点间的最大水流量，下图的问题就是一个最基本，经典的最大流问题<br><img src="https://i.loli.net/2020/02/03/gJQO9F2SepzR6xy.png" alt="image.png"><br><strong>流量,容量,可行流,增广路</strong><br><strong><span class="exturl"><a class="exturl__link" href="https://blog.csdn.net/stevensonson/article/details/79177530" target="_blank" rel="noopener">https://blog.csdn.net/stevensonson/article/details/79177530</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></strong></p>
+<p>网络流图是一张只有一个源点和汇点的有向图，而最大流就是求源点到汇点间的最大水流量，下图的问题就是一个最基本，经典的最大流问题<br>
+        <img class="lazyload lazyload-gif" src="/images/loading.svg" data-src="https://i.loli.net/2020/02/03/gJQO9F2SepzR6xy.png" alt="image.png">
+      <br><strong>流量,容量,可行流,增广路</strong><br><strong><span class="exturl"><a class="exturl__link" href="https://blog.csdn.net/stevensonson/article/details/79177530" target="_blank" rel="noopener">https://blog.csdn.net/stevensonson/article/details/79177530</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></strong></p>
 </blockquote>
 <blockquote>
 <p>图就是一种管道，管道有最大通过流量的限制，图中边的权值就是所谓的“容量”。同时，注意有唯一的源点和汇点。<br>算法的关键在于<br><strong>1）何为增广路径，如何找出增广路径。</strong><br><strong>2）如何更新流量</strong><br>所谓增广路径，就是找到这样一条路径，其流量不满，未达到容量上限。<br>所有的可能的增广路径在一起便构成了残留网络<br>第一步，计算可增加流量<br>设某一增广路径上的节点为（a1,a2,a3,a4,….,an）<br>如果（u,v）是正向边，则增加流量d = min{ c(ai,aj) - f(ai,aj) | j = i +1, i =1,2,3…,n-1}<br>如果是逆向边，则增加流量d = min{ f(ai, aj) | j = i +1, i =1,2,3…,n-1}<br>第二步，更新流量<br>如果（u,v）是正向边，则 f(u,v) = f(u,v) + d<br>是逆向边，则f(u,v) = f(u,v) - d<br>注意，如果是逆向边，就是减法，当前管道从中减去部分流量，而且，伴随着这部分减去的流量，必有另一部分管道的流量会增加。。而且，最后的总流量增加了d<br><strong>来自 <span class="exturl"><a class="exturl__link" href="https://www.cnblogs.com/ShaneZhang/p/3755479.html" target="_blank" rel="noopener">https://www.cnblogs.com/ShaneZhang/p/3755479.html</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></strong></p>
@@ -4876,7 +5111,9 @@
         <h3 id="最小生成树">
           <a href="#最小生成树" class="heading-link"><i class="fas fa-link"></i></a>最小生成树</h3>
       <blockquote>
-<p>图G=（V(G),E(G)）树T=（V(T),E’(T)）<br>在一个连通无向图G=(V, E)中，对于其中的每条边(u,v)∈E，赋予其权重w(u, v)，则最小生成树问题就是要在G中找到一个连通图G中所有顶点的无环子集T⊆E，使得这个子集中所有边的权重之和最小。<br>即生成树为一条连接所有点的路径，最小生成树为权重和最小那个生成树（非环）<br>解决最小生成树问题有两个算法：Prim算法和Kruskal算法<br><strong>Prim算法</strong>基本思想是从选点开始，再选择和不连通点之间的边，进而循环，每一次循环中，一个关键在于判断点之间是否不连通（对连通点集团进行编号，即只需判断集团编号是否相等即可），另一个在于选择最小的边。<br><strong>Kruskal算法</strong>基本思想是从选最小边开始，连通成一个集团，进行编号，再选择不连通的集团的最小赋权边进行连接，依次循环。<br><img src="https://i.loli.net/2020/02/03/ZGHkLWOPjENM6Vg.png" alt="3"><br><strong><span class="exturl"><a class="exturl__link" href="https://blog.csdn.net/luoshixian099/article/details/51908175" target="_blank" rel="noopener">https://blog.csdn.net/luoshixian099/article/details/51908175</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></strong></p>
+<p>图G=（V(G),E(G)）树T=（V(T),E’(T)）<br>在一个连通无向图G=(V, E)中，对于其中的每条边(u,v)∈E，赋予其权重w(u, v)，则最小生成树问题就是要在G中找到一个连通图G中所有顶点的无环子集T⊆E，使得这个子集中所有边的权重之和最小。<br>即生成树为一条连接所有点的路径，最小生成树为权重和最小那个生成树（非环）<br>解决最小生成树问题有两个算法：Prim算法和Kruskal算法<br><strong>Prim算法</strong>基本思想是从选点开始，再选择和不连通点之间的边，进而循环，每一次循环中，一个关键在于判断点之间是否不连通（对连通点集团进行编号，即只需判断集团编号是否相等即可），另一个在于选择最小的边。<br><strong>Kruskal算法</strong>基本思想是从选最小边开始，连通成一个集团，进行编号，再选择不连通的集团的最小赋权边进行连接，依次循环。<br>
+        <img class="lazyload lazyload-gif" src="/images/loading.svg" data-src="https://i.loli.net/2020/02/03/ZGHkLWOPjENM6Vg.png" alt="3">
+      <br><strong><span class="exturl"><a class="exturl__link" href="https://blog.csdn.net/luoshixian099/article/details/51908175" target="_blank" rel="noopener">https://blog.csdn.net/luoshixian099/article/details/51908175</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></strong></p>
 </blockquote>
 
         <h2 id="优化模型-3">
@@ -4885,19 +5122,25 @@
         <h3 id="背包">
           <a href="#背包" class="heading-link"><i class="fas fa-link"></i></a>背包</h3>
       <blockquote>
-<p><strong><em>《背包问题九讲》</em></strong><br>背包问题不单单是一个简单的算法问题，它本质上代表了一大类问题，这类问题实际上是01线性规划问题，其约束条件和目标函数如下：<img src="https://i.loli.net/2020/02/03/3iC2xhWNXGuq8v6.png" alt="image.png"><br><strong>eg:01背包问题，完全背包问题，多重背包问题，二维费用背包问题</strong><br><strong><span class="exturl"><a class="exturl__link" href="http://dongxicheng.org/structure/knapsack-problems/" target="_blank" rel="noopener">http://dongxicheng.org/structure/knapsack-problems/</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></strong></p>
+<p><strong><em>《背包问题九讲》</em></strong><br>背包问题不单单是一个简单的算法问题，它本质上代表了一大类问题，这类问题实际上是01线性规划问题，其约束条件和目标函数如下：
+        <img class="lazyload lazyload-gif" src="/images/loading.svg" data-src="https://i.loli.net/2020/02/03/3iC2xhWNXGuq8v6.png" alt="image.png">
+      <br><strong>eg:01背包问题，完全背包问题，多重背包问题，二维费用背包问题</strong><br><strong><span class="exturl"><a class="exturl__link" href="http://dongxicheng.org/structure/knapsack-problems/" target="_blank" rel="noopener">http://dongxicheng.org/structure/knapsack-problems/</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></strong></p>
 </blockquote>
 
         <h3 id="指派-分配问题">
           <a href="#指派-分配问题" class="heading-link"><i class="fas fa-link"></i></a>指派(分配问题)</h3>
       <blockquote>
-<p>实际中，会遇到这样的问题，有n项不同的任务，需要n个人分别完成其中的1项，每个人完成任务的时间不一样。于是就有一个问题，如何分配任务使得花费时间最少。<br>通俗来讲，就是n*n矩阵中，选取n个元素，每行每列各有1个元素，使得和最小。<br>如下图：<br><img src="https://i.loli.net/2020/02/03/d58hrDcQ14k7JwV.png" alt="image.png"></p>
+<p>实际中，会遇到这样的问题，有n项不同的任务，需要n个人分别完成其中的1项，每个人完成任务的时间不一样。于是就有一个问题，如何分配任务使得花费时间最少。<br>通俗来讲，就是n*n矩阵中，选取n个元素，每行每列各有1个元素，使得和最小。<br>如下图：<br>
+        <img class="lazyload lazyload-gif" src="/images/loading.svg" data-src="https://i.loli.net/2020/02/03/d58hrDcQ14k7JwV.png" alt="image.png">
+      </p>
 </blockquote>
 <blockquote>
 <p><strong>指派问题的最优解有这样一个性质，若从矩阵的一行(列)各元素中分别减去该行(列)的最小元素，得到归约矩阵，其最优解和原矩阵的最优解相同</strong></p>
 </blockquote>
 <blockquote>
-<p><strong>匈牙利法：</strong><br><img src="https://i.loli.net/2020/02/03/hWeQFEwxgnAORzX.png" alt="image.png"></p>
+<p><strong>匈牙利法：</strong><br>
+        <img class="lazyload lazyload-gif" src="/images/loading.svg" data-src="https://i.loli.net/2020/02/03/hWeQFEwxgnAORzX.png" alt="image.png">
+      </p>
 </blockquote>
 
         <h3 id="抽屉">
@@ -4924,16 +5167,26 @@
         <h3 id="运输">
           <a href="#运输" class="heading-link"><i class="fas fa-link"></i></a>运输</h3>
       <blockquote>
-<p><img src="https://i.loli.net/2020/02/03/MlcEqYBx6ny3kUK.png" alt="image.png"><br><em>四要素：</em> <strong>生产地，销售地，运输物资，运输价格</strong><br><strong><span class="exturl"><a class="exturl__link" href="https://zhuanlan.zhihu.com/p/33299659" target="_blank" rel="noopener">https://zhuanlan.zhihu.com/p/33299659</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></strong></p>
+<p>
+        <img class="lazyload lazyload-gif" src="/images/loading.svg" data-src="https://i.loli.net/2020/02/03/MlcEqYBx6ny3kUK.png" alt="image.png">
+      <br><em>四要素：</em> <strong>生产地，销售地，运输物资，运输价格</strong><br><strong><span class="exturl"><a class="exturl__link" href="https://zhuanlan.zhihu.com/p/33299659" target="_blank" rel="noopener">https://zhuanlan.zhihu.com/p/33299659</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></strong></p>
 </blockquote>
 
         <h3 id="排队论">
           <a href="#排队论" class="heading-link"><i class="fas fa-link"></i></a>排队论</h3>
       <blockquote>
-<p>排队系统由三部分组成：<br><strong>(1)顾客输入过程</strong><br><strong>(2)排队结构与排队规则</strong><br><strong>(3)服务机构与服务规则</strong><br><img src="https://i.loli.net/2020/02/03/r6WleBKoTV4cSta.png" alt="7"><br>一般研究的问题为总体为无限的，到达方式逐个，到达间隔随机，顾客之间相互独立，输入过程平稳。<br><img src="https://i.loli.net/2020/02/03/4zCUAPQHEgwFdaV.png" alt="image.png"><br><img src="https://i.loli.net/2020/02/03/UF7ujBXEA4ZR9yH.png" alt="image.png"></p>
+<p>排队系统由三部分组成：<br><strong>(1)顾客输入过程</strong><br><strong>(2)排队结构与排队规则</strong><br><strong>(3)服务机构与服务规则</strong><br>
+        <img class="lazyload lazyload-gif" src="/images/loading.svg" data-src="https://i.loli.net/2020/02/03/r6WleBKoTV4cSta.png" alt="7">
+      <br>一般研究的问题为总体为无限的，到达方式逐个，到达间隔随机，顾客之间相互独立，输入过程平稳。<br>
+        <img class="lazyload lazyload-gif" src="/images/loading.svg" data-src="https://i.loli.net/2020/02/03/4zCUAPQHEgwFdaV.png" alt="image.png">
+      <br>
+        <img class="lazyload lazyload-gif" src="/images/loading.svg" data-src="https://i.loli.net/2020/02/03/UF7ujBXEA4ZR9yH.png" alt="image.png">
+      </p>
 </blockquote>
 <blockquote>
-<p><img src="https://i.loli.net/2020/02/03/K2E7bxswA8mhCDc.png" alt="image.png"><br><strong><span class="exturl"><a class="exturl__link" href="https://www.cnblogs.com/BlueMountain-HaggenDazs/p/4270875.html" target="_blank" rel="noopener">https://www.cnblogs.com/BlueMountain-HaggenDazs/p/4270875.html</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></strong></p>
+<p>
+        <img class="lazyload lazyload-gif" src="/images/loading.svg" data-src="https://i.loli.net/2020/02/03/K2E7bxswA8mhCDc.png" alt="image.png">
+      <br><strong><span class="exturl"><a class="exturl__link" href="https://www.cnblogs.com/BlueMountain-HaggenDazs/p/4270875.html" target="_blank" rel="noopener">https://www.cnblogs.com/BlueMountain-HaggenDazs/p/4270875.html</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></strong></p>
 </blockquote>
 
         <h1 id="预测模型">
@@ -4948,22 +5201,38 @@
         <h3 id="单种群">
           <a href="#单种群" class="heading-link"><i class="fas fa-link"></i></a>单种群</h3>
       <blockquote>
-<p><img src="https://i.loli.net/2020/02/03/KAxoXkQFC6sv7g5.png" alt="image.png"></p>
+<p>
+        <img class="lazyload lazyload-gif" src="/images/loading.svg" data-src="https://i.loli.net/2020/02/03/KAxoXkQFC6sv7g5.png" alt="image.png">
+      </p>
 </blockquote>
 
         <h3 id="多种群增长">
           <a href="#多种群增长" class="heading-link"><i class="fas fa-link"></i></a>多种群增长</h3>
       <blockquote>
-<p><img src="https://i.loli.net/2020/02/03/VzoeUjYAB5s6G41.png" alt="image.png"><br><img src="https://i.loli.net/2020/02/03/4XY9DRtmj3Blgre.png" alt="image.png"></p>
+<p>
+        <img class="lazyload lazyload-gif" src="/images/loading.svg" data-src="https://i.loli.net/2020/02/03/VzoeUjYAB5s6G41.png" alt="image.png">
+      <br>
+        <img class="lazyload lazyload-gif" src="/images/loading.svg" data-src="https://i.loli.net/2020/02/03/4XY9DRtmj3Blgre.png" alt="image.png">
+      </p>
 </blockquote>
 
         <h3 id="Logistic阻滞增长">
           <a href="#Logistic阻滞增长" class="heading-link"><i class="fas fa-link"></i></a>Logistic阻滞增长</h3>
       <blockquote>
-<p><img src="https://i.loli.net/2020/02/03/GWXCzd8Ue9nKurm.png" alt="image.png"><br><strong><span class="exturl"><a class="exturl__link" href="https://blog.csdn.net/mrguanlingyu/article/details/7976607" target="_blank" rel="noopener">https://blog.csdn.net/mrguanlingyu/article/details/7976607</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></strong></p>
+<p>
+        <img class="lazyload lazyload-gif" src="/images/loading.svg" data-src="https://i.loli.net/2020/02/03/GWXCzd8Ue9nKurm.png" alt="image.png">
+      <br><strong><span class="exturl"><a class="exturl__link" href="https://blog.csdn.net/mrguanlingyu/article/details/7976607" target="_blank" rel="noopener">https://blog.csdn.net/mrguanlingyu/article/details/7976607</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></strong></p>
 </blockquote>
 <blockquote>
-<p><img src="https://i.loli.net/2020/02/03/fqDx69TcVwPe35U.png" alt="image.png"><br><img src="https://i.loli.net/2020/02/03/B1OwxPuFb7HNYXc.png" alt="image.png"><br>指数模型人口预测程序：<br><img src="https://i.loli.net/2020/02/03/WzCBA6ThL7qoPMX.png" alt="image.png"><br>logistic阻滞型人口模型代码：<br><img src="https://i.loli.net/2020/02/03/EuC8jnDwX24JrPp.png" alt="image.png"><br><strong>主要为nlinfit函数的使用</strong></p>
+<p>
+        <img class="lazyload lazyload-gif" src="/images/loading.svg" data-src="https://i.loli.net/2020/02/03/fqDx69TcVwPe35U.png" alt="image.png">
+      <br>
+        <img class="lazyload lazyload-gif" src="/images/loading.svg" data-src="https://i.loli.net/2020/02/03/B1OwxPuFb7HNYXc.png" alt="image.png">
+      <br>指数模型人口预测程序：<br>
+        <img class="lazyload lazyload-gif" src="/images/loading.svg" data-src="https://i.loli.net/2020/02/03/WzCBA6ThL7qoPMX.png" alt="image.png">
+      <br>logistic阻滞型人口模型代码：<br>
+        <img class="lazyload lazyload-gif" src="/images/loading.svg" data-src="https://i.loli.net/2020/02/03/EuC8jnDwX24JrPp.png" alt="image.png">
+      <br><strong>主要为nlinfit函数的使用</strong></p>
 </blockquote>
 
         <h3 id="时滞模型">
@@ -4984,7 +5253,9 @@
         <h3 id="差分方差模型">
           <a href="#差分方差模型" class="heading-link"><i class="fas fa-link"></i></a>差分方差模型</h3>
       <blockquote>
-<p><img src="https://i.loli.net/2020/02/03/tb9lHuMQKn7xAhy.png" alt="image.png"><br><strong><span class="exturl"><a class="exturl__link" href="https://www.cnblogs.com/TaigaCon/p/6878674.html" target="_blank" rel="noopener">https://www.cnblogs.com/TaigaCon/p/6878674.html</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></strong></p>
+<p>
+        <img class="lazyload lazyload-gif" src="/images/loading.svg" data-src="https://i.loli.net/2020/02/03/tb9lHuMQKn7xAhy.png" alt="image.png">
+      <br><strong><span class="exturl"><a class="exturl__link" href="https://www.cnblogs.com/TaigaCon/p/6878674.html" target="_blank" rel="noopener">https://www.cnblogs.com/TaigaCon/p/6878674.html</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></strong></p>
 </blockquote>
 
         <h3 id="解析解">
@@ -5008,20 +5279,30 @@
         <h3 id="线性-1">
           <a href="#线性-1" class="heading-link"><i class="fas fa-link"></i></a>线性</h3>
       <blockquote>
-<p><img src="https://i.loli.net/2020/02/03/BtPiv147VgqfpZK.png" alt="image.png"><br><strong><span class="exturl"><a class="exturl__link" href="https://otexts.com/fppcn/regression-intro.html" target="_blank" rel="noopener">https://otexts.com/fppcn/regression-intro.html</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></strong></p>
+<p>
+        <img class="lazyload lazyload-gif" src="/images/loading.svg" data-src="https://i.loli.net/2020/02/03/BtPiv147VgqfpZK.png" alt="image.png">
+      <br><strong><span class="exturl"><a class="exturl__link" href="https://otexts.com/fppcn/regression-intro.html" target="_blank" rel="noopener">https://otexts.com/fppcn/regression-intro.html</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></strong></p>
 </blockquote>
 
         <h3 id="非线性回归与拟合">
           <a href="#非线性回归与拟合" class="heading-link"><i class="fas fa-link"></i></a>非线性回归与拟合</h3>
       <blockquote>
-<p><img src="https://i.loli.net/2020/02/03/5sDUoVdkzvMcNnw.png" alt="image.png"><br><strong><span class="exturl"><a class="exturl__link" href="https://zhuanlan.zhihu.com/p/32325298" target="_blank" rel="noopener">https://zhuanlan.zhihu.com/p/32325298</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></strong></p>
+<p>
+        <img class="lazyload lazyload-gif" src="/images/loading.svg" data-src="https://i.loli.net/2020/02/03/5sDUoVdkzvMcNnw.png" alt="image.png">
+      <br><strong><span class="exturl"><a class="exturl__link" href="https://zhuanlan.zhihu.com/p/32325298" target="_blank" rel="noopener">https://zhuanlan.zhihu.com/p/32325298</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></strong></p>
 </blockquote>
-<p><strong>逻辑回归</strong><br><img src="https://i.loli.net/2020/02/03/94McTKJ7N5gDpaF.png" alt="image.png"><br><img src="https://i.loli.net/2020/02/03/kKFmwp79qXNgCtW.png" alt="image.png"></p>
+<p><strong>逻辑回归</strong><br>
+        <img class="lazyload lazyload-gif" src="/images/loading.svg" data-src="https://i.loli.net/2020/02/03/94McTKJ7N5gDpaF.png" alt="image.png">
+      <br>
+        <img class="lazyload lazyload-gif" src="/images/loading.svg" data-src="https://i.loli.net/2020/02/03/kKFmwp79qXNgCtW.png" alt="image.png">
+      </p>
 
         <h3 id="统计回归预测">
           <a href="#统计回归预测" class="heading-link"><i class="fas fa-link"></i></a>统计回归预测</h3>
       <blockquote>
-<p><img src="https://i.loli.net/2020/02/03/QHGD2U6Wpjtb5mI.png" alt="image.png"><br><strong><span class="exturl"><a class="exturl__link" href="https://otexts.com/fppcn/forecasting-regression.html" target="_blank" rel="noopener">https://otexts.com/fppcn/forecasting-regression.html</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span><br><span class="exturl"><a class="exturl__link" href="https://blog.csdn.net/Android_xue/article/details/97614045" target="_blank" rel="noopener">https://blog.csdn.net/Android_xue/article/details/97614045</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></strong></p>
+<p>
+        <img class="lazyload lazyload-gif" src="/images/loading.svg" data-src="https://i.loli.net/2020/02/03/QHGD2U6Wpjtb5mI.png" alt="image.png">
+      <br><strong><span class="exturl"><a class="exturl__link" href="https://otexts.com/fppcn/forecasting-regression.html" target="_blank" rel="noopener">https://otexts.com/fppcn/forecasting-regression.html</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span><br><span class="exturl"><a class="exturl__link" href="https://blog.csdn.net/Android_xue/article/details/97614045" target="_blank" rel="noopener">https://blog.csdn.net/Android_xue/article/details/97614045</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></strong></p>
 </blockquote>
 
         <h3 id="参数确定-1">
@@ -5033,13 +5314,25 @@
         <h3 id="Markov链预测">
           <a href="#Markov链预测" class="heading-link"><i class="fas fa-link"></i></a>Markov链预测</h3>
       <blockquote>
-<p><strong>1.状态</strong>  在马尔可夫预测中，“状态”是一个重要的术语。所谓状态，就是指某一事件在某个时刻（或时期)出现的某种结果。一般而言，随着所研究的事件及其预测的目标不同，状态可以有不同的划分方式。譬如，在商品销售预测中，有“畅销”、“一般”、“滞销”等状态；在农业收成预测中，有“丰收”、“平收”、“欠收”等状态；在人口构成预测中，有“婴儿”、“儿童”、“少年”、“青年”、“中年”、“老年”等状态；等等。<br><strong>2.状态转移过程</strong>  在事件的发展过程中，从一种状态转变为另一种状态，就称为状态转移。事件的发展，随着时间的变化而变化所作的状态转移，或者说状态转移与时间的关系，就称为状态转移过程，简称过程。<br><img src="https://i.loli.net/2020/02/03/cpMKNXrnLdsvh1I.png" alt="image.png"><br><img src="https://i.loli.net/2020/02/03/p6rTQwKsfRkEPtO.png" alt="image.png"><br><strong><span class="exturl"><a class="exturl__link" href="https://blog.csdn.net/qq_41686130/article/details/81906527" target="_blank" rel="noopener">https://blog.csdn.net/qq_41686130/article/details/81906527</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span><br><span class="exturl"><a class="exturl__link" href="https://blog.csdn.net/bitcarmanlee/article/details/82819860" target="_blank" rel="noopener">https://blog.csdn.net/bitcarmanlee/article/details/82819860</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></strong></p>
+<p><strong>1.状态</strong>  在马尔可夫预测中，“状态”是一个重要的术语。所谓状态，就是指某一事件在某个时刻（或时期)出现的某种结果。一般而言，随着所研究的事件及其预测的目标不同，状态可以有不同的划分方式。譬如，在商品销售预测中，有“畅销”、“一般”、“滞销”等状态；在农业收成预测中，有“丰收”、“平收”、“欠收”等状态；在人口构成预测中，有“婴儿”、“儿童”、“少年”、“青年”、“中年”、“老年”等状态；等等。<br><strong>2.状态转移过程</strong>  在事件的发展过程中，从一种状态转变为另一种状态，就称为状态转移。事件的发展，随着时间的变化而变化所作的状态转移，或者说状态转移与时间的关系，就称为状态转移过程，简称过程。<br>
+        <img class="lazyload lazyload-gif" src="/images/loading.svg" data-src="https://i.loli.net/2020/02/03/cpMKNXrnLdsvh1I.png" alt="image.png">
+      <br>
+        <img class="lazyload lazyload-gif" src="/images/loading.svg" data-src="https://i.loli.net/2020/02/03/p6rTQwKsfRkEPtO.png" alt="image.png">
+      <br><strong><span class="exturl"><a class="exturl__link" href="https://blog.csdn.net/qq_41686130/article/details/81906527" target="_blank" rel="noopener">https://blog.csdn.net/qq_41686130/article/details/81906527</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span><br><span class="exturl"><a class="exturl__link" href="https://blog.csdn.net/bitcarmanlee/article/details/82819860" target="_blank" rel="noopener">https://blog.csdn.net/bitcarmanlee/article/details/82819860</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></strong></p>
 </blockquote>
 
         <h3 id="神经网络预测">
           <a href="#神经网络预测" class="heading-link"><i class="fas fa-link"></i></a>神经网络预测</h3>
       <blockquote>
-<p><img src="https://i.loli.net/2020/02/03/HzjDa4dU3FyQESt.png" alt="image.png"><br><img src="https://i.loli.net/2020/02/03/O5hTurW7HfLawyz.png" alt="image.png"><br><img src="https://i.loli.net/2020/02/03/HnYr2uSxUCVblRN.png" alt="image.png"><br><img src="https://i.loli.net/2020/02/03/jug7q39TyOEl5Uv.png" alt="image.png"><br><strong><span class="exturl"><a class="exturl__link" href="https://otexts.com/fppcn/nnetar.html" target="_blank" rel="noopener">https://otexts.com/fppcn/nnetar.html</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span><br><span class="exturl"><a class="exturl__link" href="https://blog.csdn.net/asd20172016/article/details/81454009" target="_blank" rel="noopener">https://blog.csdn.net/asd20172016/article/details/81454009</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span><br><span class="exturl"><a class="exturl__link" href="https://www.cnblogs.com/BlueMountain-HaggenDazs/p/4270391.html" target="_blank" rel="noopener">https://www.cnblogs.com/BlueMountain-HaggenDazs/p/4270391.html</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></strong></p>
+<p>
+        <img class="lazyload lazyload-gif" src="/images/loading.svg" data-src="https://i.loli.net/2020/02/03/HzjDa4dU3FyQESt.png" alt="image.png">
+      <br>
+        <img class="lazyload lazyload-gif" src="/images/loading.svg" data-src="https://i.loli.net/2020/02/03/O5hTurW7HfLawyz.png" alt="image.png">
+      <br>
+        <img class="lazyload lazyload-gif" src="/images/loading.svg" data-src="https://i.loli.net/2020/02/03/HnYr2uSxUCVblRN.png" alt="image.png">
+      <br>
+        <img class="lazyload lazyload-gif" src="/images/loading.svg" data-src="https://i.loli.net/2020/02/03/jug7q39TyOEl5Uv.png" alt="image.png">
+      <br><strong><span class="exturl"><a class="exturl__link" href="https://otexts.com/fppcn/nnetar.html" target="_blank" rel="noopener">https://otexts.com/fppcn/nnetar.html</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span><br><span class="exturl"><a class="exturl__link" href="https://blog.csdn.net/asd20172016/article/details/81454009" target="_blank" rel="noopener">https://blog.csdn.net/asd20172016/article/details/81454009</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span><br><span class="exturl"><a class="exturl__link" href="https://www.cnblogs.com/BlueMountain-HaggenDazs/p/4270391.html" target="_blank" rel="noopener">https://www.cnblogs.com/BlueMountain-HaggenDazs/p/4270391.html</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></strong></p>
 </blockquote>
 
         <h2 id="预测模型-5">
@@ -5071,17 +5364,23 @@
 </blockquote>
 <p><strong>K-mean聚类</strong></p>
 <blockquote>
-<p><img src="https://i.loli.net/2020/02/03/KYwmGE1IiACNlty.png" alt="image.png"></p>
+<p>
+        <img class="lazyload lazyload-gif" src="/images/loading.svg" data-src="https://i.loli.net/2020/02/03/KYwmGE1IiACNlty.png" alt="image.png">
+      </p>
 </blockquote>
 <p><strong>层次（系统）聚类</strong></p>
 <blockquote>
-<p>层次聚类也称系统聚类法，是根据个体间距离将个体向上两两聚合，再将聚合的小群体两两聚合一直到聚为一个整体。计算所有个体之间的距离，最相近距离的个体合体，不断合体。<br><img src="https://i.loli.net/2020/02/03/V9K8yAF5ovqpfYu.png" alt="image.png"></p>
+<p>层次聚类也称系统聚类法，是根据个体间距离将个体向上两两聚合，再将聚合的小群体两两聚合一直到聚为一个整体。计算所有个体之间的距离，最相近距离的个体合体，不断合体。<br>
+        <img class="lazyload lazyload-gif" src="/images/loading.svg" data-src="https://i.loli.net/2020/02/03/V9K8yAF5ovqpfYu.png" alt="image.png">
+      </p>
 </blockquote>
 <p><strong>最大期望EM算法</strong></p>
 <blockquote>
 <p>最大期望（EM）算法是在概率模型中寻找参数最大似然估计或者最大后验估计的算法，其中概率模型依赖于无法观测的隐藏变量（Latent Variable）。</p>
 </blockquote>
-<p><img src="https://i.loli.net/2020/02/03/NSJts5pRYHabmuI.png" alt="image.png"></p>
+<p>
+        <img class="lazyload lazyload-gif" src="/images/loading.svg" data-src="https://i.loli.net/2020/02/03/NSJts5pRYHabmuI.png" alt="image.png">
+      </p>
 
         <h3 id="模糊聚类-FCM">
           <a href="#模糊聚类-FCM" class="heading-link"><i class="fas fa-link"></i></a>模糊聚类(FCM)</h3>
@@ -5091,27 +5390,43 @@
 </blockquote>
 <p><strong>模糊集合</strong></p>
 <blockquote>
-<p>个定义在空间X={x}上的隶属度函数就定义了一个模糊集合A，或者叫定义在论域X={x}上的模糊子集A’。对于有限个对象x1，x2，……，xn 模糊集合A’可以表示为：<br><img src="https://i.loli.net/2020/02/03/FIMcE7QACyBJi8V.png" alt="image.png"></p>
+<p>个定义在空间X={x}上的隶属度函数就定义了一个模糊集合A，或者叫定义在论域X={x}上的模糊子集A’。对于有限个对象x1，x2，……，xn 模糊集合A’可以表示为：<br>
+        <img class="lazyload lazyload-gif" src="/images/loading.svg" data-src="https://i.loli.net/2020/02/03/FIMcE7QACyBJi8V.png" alt="image.png">
+      </p>
 </blockquote>
 <p><strong>FCM聚类算法</strong></p>
 <blockquote>
-<p><img src="https://i.loli.net/2020/02/03/ULvH9CngXNY2SfQ.png" alt="image.png"><br><img src="https://i.loli.net/2020/02/03/r2xmuBJeasM6NVH.png" alt="image.png"></p>
+<p>
+        <img class="lazyload lazyload-gif" src="/images/loading.svg" data-src="https://i.loli.net/2020/02/03/ULvH9CngXNY2SfQ.png" alt="image.png">
+      <br>
+        <img class="lazyload lazyload-gif" src="/images/loading.svg" data-src="https://i.loli.net/2020/02/03/r2xmuBJeasM6NVH.png" alt="image.png">
+      </p>
 </blockquote>
 
         <h3 id="距离函数选取">
           <a href="#距离函数选取" class="heading-link"><i class="fas fa-link"></i></a>距离函数选取</h3>
-      <p><img src="https://i.loli.net/2020/02/03/t5v4yEAY6UeLSPj.png" alt="image.png"><br><img src="https://i.loli.net/2020/02/03/h4aLlNPW1IiD6nT.png" alt="image.png"></p>
+      <p>
+        <img class="lazyload lazyload-gif" src="/images/loading.svg" data-src="https://i.loli.net/2020/02/03/t5v4yEAY6UeLSPj.png" alt="image.png">
+      <br>
+        <img class="lazyload lazyload-gif" src="/images/loading.svg" data-src="https://i.loli.net/2020/02/03/h4aLlNPW1IiD6nT.png" alt="image.png">
+      </p>
 
         <h3 id="线性非线性分类器选取">
           <a href="#线性非线性分类器选取" class="heading-link"><i class="fas fa-link"></i></a>线性非线性分类器选取</h3>
-      <p><img src="https://i.loli.net/2020/02/03/94XMJRnPa8bYE3e.png" alt="image.png"><br>左边：非线性分类器<br>右边：线性分类器（又名：一刀切）<br><strong>分类器</strong><br>可以把输入数据分类的“东西”<br><strong><span class="exturl"><a class="exturl__link" href="https://www.zhihu.com/question/30633734/answer/463900106" target="_blank" rel="noopener">https://www.zhihu.com/question/30633734/answer/463900106</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></strong></p>
+      <p>
+        <img class="lazyload lazyload-gif" src="/images/loading.svg" data-src="https://i.loli.net/2020/02/03/94XMJRnPa8bYE3e.png" alt="image.png">
+      <br>左边：非线性分类器<br>右边：线性分类器（又名：一刀切）<br><strong>分类器</strong><br>可以把输入数据分类的“东西”<br><strong><span class="exturl"><a class="exturl__link" href="https://www.zhihu.com/question/30633734/answer/463900106" target="_blank" rel="noopener">https://www.zhihu.com/question/30633734/answer/463900106</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></strong></p>
 
         <h2 id="分类模型-2">
           <a href="#分类模型-2" class="heading-link"><i class="fas fa-link"></i></a>分类模型(2)</h2>
       
         <h3 id="神经网络分类">
           <a href="#神经网络分类" class="heading-link"><i class="fas fa-link"></i></a>神经网络分类</h3>
-      <p><img src="https://i.loli.net/2020/02/03/i9XoDwdpzhObqcH.png" alt="image.png"><br><img src="https://i.loli.net/2020/02/03/xiKTcGe6zON7d8L.png" alt="image.png"><br><strong><span class="exturl"><a class="exturl__link" href="https://blog.csdn.net/HerosOfEarth/article/details/52165133" target="_blank" rel="noopener">https://blog.csdn.net/HerosOfEarth/article/details/52165133</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></strong></p>
+      <p>
+        <img class="lazyload lazyload-gif" src="/images/loading.svg" data-src="https://i.loli.net/2020/02/03/i9XoDwdpzhObqcH.png" alt="image.png">
+      <br>
+        <img class="lazyload lazyload-gif" src="/images/loading.svg" data-src="https://i.loli.net/2020/02/03/xiKTcGe6zON7d8L.png" alt="image.png">
+      <br><strong><span class="exturl"><a class="exturl__link" href="https://blog.csdn.net/HerosOfEarth/article/details/52165133" target="_blank" rel="noopener">https://blog.csdn.net/HerosOfEarth/article/details/52165133</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></strong></p>
 
         <h3 id="网络构造">
           <a href="#网络构造" class="heading-link"><i class="fas fa-link"></i></a>网络构造</h3>
@@ -5134,13 +5449,33 @@
         <h3 id="模糊分析">
           <a href="#模糊分析" class="heading-link"><i class="fas fa-link"></i></a>模糊分析</h3>
       <blockquote>
-<p><strong>1.建立综合评价的因素集</strong><br><img src="https://i.loli.net/2020/02/04/iWFAPeQa3kc96Kt.png" alt="image.png"><br><strong>2.建立综合评价的评价集</strong><br><img src="https://i.loli.net/2020/02/04/Ar3expYbJXVCj7L.png" alt="image.png"><br><strong>3.进行单元素模糊评价，获得评价矩阵</strong><br><img src="https://i.loli.net/2020/02/04/pH26unJlESLYKZ9.png" alt="image.png"><br><strong>4.确定因素权向量</strong><br><img src="https://i.loli.net/2020/02/04/WN4a9Knukd5oh1H.png" alt="image.png"><br><strong>5.建立综合评价模型</strong><br><img src="https://i.loli.net/2020/02/04/OIoYlxQjsV1greF.png" alt="image.png"><br><img src="https://i.loli.net/2020/02/04/njQg5yq93vuCXYN.png" alt="image.png"><br><strong>6.确定系统总得分</strong><br><img src="https://i.loli.net/2020/02/04/dLfOj9tx2JHqBP5.png" alt="image.png"><br><strong><span class="exturl"><a class="exturl__link" href="https://zhuanlan.zhihu.com/p/32666445" target="_blank" rel="noopener">https://zhuanlan.zhihu.com/p/32666445</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></strong></p>
+<p><strong>1.建立综合评价的因素集</strong><br>
+        <img class="lazyload lazyload-gif" src="/images/loading.svg" data-src="https://i.loli.net/2020/02/04/iWFAPeQa3kc96Kt.png" alt="image.png">
+      <br><strong>2.建立综合评价的评价集</strong><br>
+        <img class="lazyload lazyload-gif" src="/images/loading.svg" data-src="https://i.loli.net/2020/02/04/Ar3expYbJXVCj7L.png" alt="image.png">
+      <br><strong>3.进行单元素模糊评价，获得评价矩阵</strong><br>
+        <img class="lazyload lazyload-gif" src="/images/loading.svg" data-src="https://i.loli.net/2020/02/04/pH26unJlESLYKZ9.png" alt="image.png">
+      <br><strong>4.确定因素权向量</strong><br>
+        <img class="lazyload lazyload-gif" src="/images/loading.svg" data-src="https://i.loli.net/2020/02/04/WN4a9Knukd5oh1H.png" alt="image.png">
+      <br><strong>5.建立综合评价模型</strong><br>
+        <img class="lazyload lazyload-gif" src="/images/loading.svg" data-src="https://i.loli.net/2020/02/04/OIoYlxQjsV1greF.png" alt="image.png">
+      <br>
+        <img class="lazyload lazyload-gif" src="/images/loading.svg" data-src="https://i.loli.net/2020/02/04/njQg5yq93vuCXYN.png" alt="image.png">
+      <br><strong>6.确定系统总得分</strong><br>
+        <img class="lazyload lazyload-gif" src="/images/loading.svg" data-src="https://i.loli.net/2020/02/04/dLfOj9tx2JHqBP5.png" alt="image.png">
+      <br><strong><span class="exturl"><a class="exturl__link" href="https://zhuanlan.zhihu.com/p/32666445" target="_blank" rel="noopener">https://zhuanlan.zhihu.com/p/32666445</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></strong></p>
 </blockquote>
 
         <h3 id="隶属度函数选取与构造">
           <a href="#隶属度函数选取与构造" class="heading-link"><i class="fas fa-link"></i></a>隶属度函数选取与构造</h3>
       <blockquote>
-<p>常用的方法：<strong>直觉方法，二元对比排序法，模糊统计试验法，最小模糊度法</strong>（根据先验知识和采集的数据，确定出描述模糊概念的候选隶属函数，利用最小化模糊度的原则计算相关的参数，进而获得合适的隶属函数）。<br>下面介绍三种最常用的隶属度函数：<strong>三角形隶属度函数、梯形隶属度函数、高斯型隶属度函数：</strong><br><strong>三角形隶属度函数</strong><br><img src="https://i.loli.net/2020/02/04/GUTEVZDzRcYHXv3.png" alt="image.png"><br><strong>梯形隶属度函数</strong><br><img src="https://i.loli.net/2020/02/04/TmEJY6WvuNxO23t.png" alt="image.png"><br><strong>高斯型隶属度函数</strong><br><img src="https://i.loli.net/2020/02/04/uqkzCd7jrvbMpmw.png" alt="image.png"><br><strong><span class="exturl"><a class="exturl__link" href="https://zhuanlan.zhihu.com/p/37616833" target="_blank" rel="noopener">https://zhuanlan.zhihu.com/p/37616833</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></strong></p>
+<p>常用的方法：<strong>直觉方法，二元对比排序法，模糊统计试验法，最小模糊度法</strong>（根据先验知识和采集的数据，确定出描述模糊概念的候选隶属函数，利用最小化模糊度的原则计算相关的参数，进而获得合适的隶属函数）。<br>下面介绍三种最常用的隶属度函数：<strong>三角形隶属度函数、梯形隶属度函数、高斯型隶属度函数：</strong><br><strong>三角形隶属度函数</strong><br>
+        <img class="lazyload lazyload-gif" src="/images/loading.svg" data-src="https://i.loli.net/2020/02/04/GUTEVZDzRcYHXv3.png" alt="image.png">
+      <br><strong>梯形隶属度函数</strong><br>
+        <img class="lazyload lazyload-gif" src="/images/loading.svg" data-src="https://i.loli.net/2020/02/04/TmEJY6WvuNxO23t.png" alt="image.png">
+      <br><strong>高斯型隶属度函数</strong><br>
+        <img class="lazyload lazyload-gif" src="/images/loading.svg" data-src="https://i.loli.net/2020/02/04/uqkzCd7jrvbMpmw.png" alt="image.png">
+      <br><strong><span class="exturl"><a class="exturl__link" href="https://zhuanlan.zhihu.com/p/37616833" target="_blank" rel="noopener">https://zhuanlan.zhihu.com/p/37616833</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></strong></p>
 </blockquote>
 
         <h2 id="评价模型-2">
@@ -5149,7 +5484,13 @@
         <h3 id="层次分析法评价-AHP">
           <a href="#层次分析法评价-AHP" class="heading-link"><i class="fas fa-link"></i></a>层次分析法评价(AHP)</h3>
       <blockquote>
-<p><strong>对难以完全定量得复杂系统做出决策，主要用来求权重</strong><br><img src="https://i.loli.net/2020/02/04/wJ1NAbS9aigzop8.png" alt="image.png"><br><strong>第一步，建立从目标层到准则层(指标层)再到决策层(方案层)</strong><br>1）最高层（目标层）——只有一个元素：决策目标；<br>2）中间层（准则层）——考虑的因素，决策的准则、子准则；<br>3）最底层（方案层）——决策时的备选方案、措施。<br><img src="https://i.loli.net/2020/02/04/pJHBimPk5DGd1rF.png" alt="image.png"><br><strong>第二步，(最重要的一步)构造成对比较矩阵</strong><br><img src="https://i.loli.net/2020/02/04/syupZ7jMd6L2e91.png" alt="image.png"><br>A矩阵代表准则层各个指标之间的相互关系，B矩阵代表各个待选方案分别在5个指标中的相互比较关系。<br>(即若n个指标，m个决策方案，则B为(n,n)矩阵，有m个)<br><strong><span class="exturl"><a class="exturl__link" href="https://zhuanlan.zhihu.com/p/35051786" target="_blank" rel="noopener">https://zhuanlan.zhihu.com/p/35051786</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></strong></p>
+<p><strong>对难以完全定量得复杂系统做出决策，主要用来求权重</strong><br>
+        <img class="lazyload lazyload-gif" src="/images/loading.svg" data-src="https://i.loli.net/2020/02/04/wJ1NAbS9aigzop8.png" alt="image.png">
+      <br><strong>第一步，建立从目标层到准则层(指标层)再到决策层(方案层)</strong><br>1）最高层（目标层）——只有一个元素：决策目标；<br>2）中间层（准则层）——考虑的因素，决策的准则、子准则；<br>3）最底层（方案层）——决策时的备选方案、措施。<br>
+        <img class="lazyload lazyload-gif" src="/images/loading.svg" data-src="https://i.loli.net/2020/02/04/pJHBimPk5DGd1rF.png" alt="image.png">
+      <br><strong>第二步，(最重要的一步)构造成对比较矩阵</strong><br>
+        <img class="lazyload lazyload-gif" src="/images/loading.svg" data-src="https://i.loli.net/2020/02/04/syupZ7jMd6L2e91.png" alt="image.png">
+      <br>A矩阵代表准则层各个指标之间的相互关系，B矩阵代表各个待选方案分别在5个指标中的相互比较关系。<br>(即若n个指标，m个决策方案，则B为(n,n)矩阵，有m个)<br><strong><span class="exturl"><a class="exturl__link" href="https://zhuanlan.zhihu.com/p/35051786" target="_blank" rel="noopener">https://zhuanlan.zhihu.com/p/35051786</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></strong></p>
 </blockquote>
 
         <h3 id="打分与权重确定">
@@ -5163,7 +5504,9 @@
       <p>找出数据里最主要的方面，用数据里最主要的方面来代替原始数据。</p>
 <ol>
 <li>最近重构性：样本点到这个超平面的距离足够近</li>
-<li>最大可分性：样本点在这个超平面上的投影能尽可能的分开<br><img src="https://i.loli.net/2020/02/04/tR4zIEkOQeBnDKC.png" alt="image.png"><br>PCA算法的主要优点有：<br>仅仅需要以方差衡量信息量，不受数据集以外的因素影响。　<br>各主成分之间正交，可消除原始数据成分间的相互影响的因素。<br>计算方法简单，主要运算是特征值分解，易于实现。<br>PCA算法的主要缺点有：<br>主成分各个特征维度的含义具有一定的模糊性，不如原始样本特征的解释性强。<br>方差小的非主成分也可能含有对样本差异的重要信息，因降维丢弃可能对后续数据处理有影响。</li>
+<li>最大可分性：样本点在这个超平面上的投影能尽可能的分开<br>
+        <img class="lazyload lazyload-gif" src="/images/loading.svg" data-src="https://i.loli.net/2020/02/04/tR4zIEkOQeBnDKC.png" alt="image.png">
+      <br>PCA算法的主要优点有：<br>仅仅需要以方差衡量信息量，不受数据集以外的因素影响。　<br>各主成分之间正交，可消除原始数据成分间的相互影响的因素。<br>计算方法简单，主要运算是特征值分解，易于实现。<br>PCA算法的主要缺点有：<br>主成分各个特征维度的含义具有一定的模糊性，不如原始样本特征的解释性强。<br>方差小的非主成分也可能含有对样本差异的重要信息，因降维丢弃可能对后续数据处理有影响。</li>
 </ol>
 <p><strong><span class="exturl"><a class="exturl__link" href="https://zhuanlan.zhihu.com/p/32412043" target="_blank" rel="noopener">https://zhuanlan.zhihu.com/p/32412043</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></strong></p>
 
@@ -5184,7 +5527,19 @@
       <blockquote>
 <p>它是根据多项投入指标和多项产出指标，利用线性规划的方法，对具有可比性的同类型单位进行相对有效性评价的一种数量分析方法。</p>
 </blockquote>
-<p>1) 定义变量<br>设Ek（k=1，2，……， K）为第k个单位的效率比率，这里K代表评估单位的总数。<br>设uj（j=1，2，……， M）为第j种产出的系数，这里M代表所考虑的产出种类的总数。变量uj用来衡量产出价值降低一个单位所带来的相对的效率下降。<br>设vI（I=1，2，……，N）为第I种投入的系数，这里N代表所考虑的投入种类的综合素。变量vI用来衡量投入价值降低一个单位带来的相对的效率下降。<br>设Ojk为一定时期内由第k个服务单位所创造的第j种产出的观察到的单位的数量。<br>设Iik为一定时期内由第k个服务单位所使用的第i种投入的实际的单位的数量。<br>2) 目标函数<br>　　目标是找出一组伴随每种产出的系数u和一组伴随每种投入的系数ν，从而给被评估的服务单位最高的可能效率。<br><img src="https://i.loli.net/2020/02/04/tlK5C3Sfb1BPpHF.png" alt="image.png"><br>式中，e是被评估单位的代码。 这个函数满足这样一个约束条件，当同一组投入和产出的系数（uj和vi）用于所有其他对比服务单位时，没有一个服务单位将超过100%的效率或超过1.0的比率。<br>3) 约束条件<br><img src="https://i.loli.net/2020/02/04/GncTOyBzp1a9IXS.png" alt="image.png"><br>k=1,2,……,K<br>式中所有系数值都是正的且非零。<br>为了用标准线性规划软件求解这个有分数的线性规划，需要进行变形。要注意，目标函数和所有约束条件都是比率而不是线性函数。通过把所评估单位的投入人为地调整为总和1.0，这样等式的目标函数可以重新表述为：<br><img src="https://i.loli.net/2020/02/04/Qu71vcEz8mYPlgB.png" alt="image.png"><br>　　满足以下约束条件：<br><img src="https://i.loli.net/2020/02/04/28EWzgrPiL7TuIj.png" alt="image.png"><br>　　对于个服务单位，等式（**）的约束条件可类似转化为：<br><img src="https://i.loli.net/2020/02/04/JVjoiPvfyt5XaO3.png" alt="image.png"><br>　　k=1,2,…,K<br>　　式中 uj≥0 j=1，2，…，M vi≥0 i=1，2，…，N<br>　　关于服务单位的样本数量问题是由在分析种比较所挑选的投入和产出变量的数量所决定的。下列关系式把分析中所使用的服务单位数量K和所考虑的投入种类数N与产出种类数M联系出来，它是基于实证发现和DEA实践的经验：<br><img src="https://i.loli.net/2020/02/04/87J914AgkoSaNQT.png" alt="image.png"><br><span class="exturl"><a class="exturl__link" href="https://wiki.mbalib.com/wiki/%E6%95%B0%E6%8D%AE%E5%8C%85%E7%BB%9C%E5%88%86%E6%9E%90" target="_blank" rel="noopener">https://wiki.mbalib.com/wiki/%E6%95%B0%E6%8D%AE%E5%8C%85%E7%BB%9C%E5%88%86%E6%9E%90</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></p>
+<p>1) 定义变量<br>设Ek（k=1，2，……， K）为第k个单位的效率比率，这里K代表评估单位的总数。<br>设uj（j=1，2，……， M）为第j种产出的系数，这里M代表所考虑的产出种类的总数。变量uj用来衡量产出价值降低一个单位所带来的相对的效率下降。<br>设vI（I=1，2，……，N）为第I种投入的系数，这里N代表所考虑的投入种类的综合素。变量vI用来衡量投入价值降低一个单位带来的相对的效率下降。<br>设Ojk为一定时期内由第k个服务单位所创造的第j种产出的观察到的单位的数量。<br>设Iik为一定时期内由第k个服务单位所使用的第i种投入的实际的单位的数量。<br>2) 目标函数<br>　　目标是找出一组伴随每种产出的系数u和一组伴随每种投入的系数ν，从而给被评估的服务单位最高的可能效率。<br>
+        <img class="lazyload lazyload-gif" src="/images/loading.svg" data-src="https://i.loli.net/2020/02/04/tlK5C3Sfb1BPpHF.png" alt="image.png">
+      <br>式中，e是被评估单位的代码。 这个函数满足这样一个约束条件，当同一组投入和产出的系数（uj和vi）用于所有其他对比服务单位时，没有一个服务单位将超过100%的效率或超过1.0的比率。<br>3) 约束条件<br>
+        <img class="lazyload lazyload-gif" src="/images/loading.svg" data-src="https://i.loli.net/2020/02/04/GncTOyBzp1a9IXS.png" alt="image.png">
+      <br>k=1,2,……,K<br>式中所有系数值都是正的且非零。<br>为了用标准线性规划软件求解这个有分数的线性规划，需要进行变形。要注意，目标函数和所有约束条件都是比率而不是线性函数。通过把所评估单位的投入人为地调整为总和1.0，这样等式的目标函数可以重新表述为：<br>
+        <img class="lazyload lazyload-gif" src="/images/loading.svg" data-src="https://i.loli.net/2020/02/04/Qu71vcEz8mYPlgB.png" alt="image.png">
+      <br>　　满足以下约束条件：<br>
+        <img class="lazyload lazyload-gif" src="/images/loading.svg" data-src="https://i.loli.net/2020/02/04/28EWzgrPiL7TuIj.png" alt="image.png">
+      <br>　　对于个服务单位，等式（**）的约束条件可类似转化为：<br>
+        <img class="lazyload lazyload-gif" src="/images/loading.svg" data-src="https://i.loli.net/2020/02/04/JVjoiPvfyt5XaO3.png" alt="image.png">
+      <br>　　k=1,2,…,K<br>　　式中 uj≥0 j=1，2，…，M vi≥0 i=1，2，…，N<br>　　关于服务单位的样本数量问题是由在分析种比较所挑选的投入和产出变量的数量所决定的。下列关系式把分析中所使用的服务单位数量K和所考虑的投入种类数N与产出种类数M联系出来，它是基于实证发现和DEA实践的经验：<br>
+        <img class="lazyload lazyload-gif" src="/images/loading.svg" data-src="https://i.loli.net/2020/02/04/87J914AgkoSaNQT.png" alt="image.png">
+      <br><span class="exturl"><a class="exturl__link" href="https://wiki.mbalib.com/wiki/%E6%95%B0%E6%8D%AE%E5%8C%85%E7%BB%9C%E5%88%86%E6%9E%90" target="_blank" rel="noopener">https://wiki.mbalib.com/wiki/%E6%95%B0%E6%8D%AE%E5%8C%85%E7%BB%9C%E5%88%86%E6%9E%90</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></p>
 <script>
         document.querySelectorAll('.github-emoji')
           .forEach(el => {
@@ -5554,7 +5909,9 @@
       <p>1.<span class="exturl"><a class="exturl__link" href="https://www.google.com/intl/zh-CN/chrome/" target="_blank" rel="noopener">点击文字安装谷歌浏览器</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></p>
 <p>2.<span class="exturl"><a class="exturl__link" href="https://github.com/Gemini-Lin/Tookits" target="_blank" rel="noopener">点击文字下载谷歌访问助手</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></p>
 <a id="more"></a>
-<p>3.安装谷歌访问助手插件<br> <img src="https://s1.ax1x.com/2020/03/29/GVceEt.png" alt="GVceEt.png"></p>
+<p>3.安装谷歌访问助手插件<br> 
+        <img class="lazyload lazyload-gif" src="/images/loading.svg" data-src="https://s1.ax1x.com/2020/03/29/GVceEt.png" alt="GVceEt.png">
+      </p>
 <blockquote>
 <p>Step1: 进入谷歌浏览器的扩展程序</p>
 </blockquote>
@@ -5568,7 +5925,11 @@
 <p>Step4: 选择下载后解压的文件</p>
 </blockquote>
 <blockquote>
-<p>Step5: 安装成功<br><img src="https://s1.ax1x.com/2020/03/29/GVcM8S.png" alt="GVcM8S.png"><br> <img src="https://s1.ax1x.com/2020/03/29/GVcQgg.png" alt="GVcQgg.png"></p>
+<p>Step5: 安装成功<br>
+        <img class="lazyload lazyload-gif" src="/images/loading.svg" data-src="https://s1.ax1x.com/2020/03/29/GVcM8S.png" alt="GVcM8S.png">
+      <br> 
+        <img class="lazyload lazyload-gif" src="/images/loading.svg" data-src="https://s1.ax1x.com/2020/03/29/GVcQgg.png" alt="GVcQgg.png">
+      </p>
 </blockquote>
 
         <h2 id="VPN推荐">
@@ -5606,7 +5967,9 @@
     <url>/%E6%94%AF%E6%95%99/</url>
     <content><![CDATA[<p> <strong><em>让我再看看你们</em></strong>  </p>
 <blockquote>
-<p><strong>“让我再看看你们”</strong>这是我在黑板上留下的最后一句话。<br><img src="https://i.loli.net/2020/03/29/eGFf2H6Y1Lvw5VT.png" alt="image.png"></p>
+<p><strong>“让我再看看你们”</strong>这是我在黑板上留下的最后一句话。<br>
+        <img class="lazyload lazyload-gif" src="/images/loading.svg" data-src="https://i.loli.net/2020/03/29/eGFf2H6Y1Lvw5VT.png" alt="image.png">
+      </p>
 </blockquote>
 <blockquote>
 <p>这支教半个月来，我们从陌生到相识相知再到现在转身离别。<strong>这既是与学生，亦是与队员</strong>。</p>
@@ -5614,28 +5977,40 @@
 <a id="more"></a>
 
 <blockquote>
-<p>我很抱歉，在这半个月里并没有认识班上所有的小孩，有些只局限于名字。<strong>每个人心中都有一团火，路过的人都只看到烟。</strong>这是我给班上的38个孩子写完明信片后的感慨。我若看到他们心中的火，就会说一些出于真心的废话，絮絮叨叨；我若只看到他们心中的烟，便只有一些泛泛而谈的寄语，满腹诗论。<br><img src="https://i.loli.net/2020/03/29/MBjHLwJ7NhioCOy.png" alt="image.png"></p>
+<p>我很抱歉，在这半个月里并没有认识班上所有的小孩，有些只局限于名字。<strong>每个人心中都有一团火，路过的人都只看到烟。</strong>这是我给班上的38个孩子写完明信片后的感慨。我若看到他们心中的火，就会说一些出于真心的废话，絮絮叨叨；我若只看到他们心中的烟，便只有一些泛泛而谈的寄语，满腹诗论。<br>
+        <img class="lazyload lazyload-gif" src="/images/loading.svg" data-src="https://i.loli.net/2020/03/29/MBjHLwJ7NhioCOy.png" alt="image.png">
+      </p>
 </blockquote>
 <blockquote>
 <p>支教的这半个月，自己最大的体会是孩子并不是天使，他们也有着人类阴暗与丑陋的一面。比如班上的一个女孩陈柯欣，她的脑袋有点问题，全班的小朋友都远离她，没人愿意和她一起玩。而我呢？会站在上帝视角上看待这一切，忘记自己小时候也是这副模样，甚至现在也未必改变。</p>
 </blockquote>
 <blockquote>
-<p>对于孩子而言，最可怕的是他们腐朽的思想。尽管我也是生活在农村，但是这里的学习氛围与家里天壤之别。这里还保留着读完初中就外出打工的腐朽思想。父母对于孩子的学习，关注实在太少太少。我意识到自己仅仅给孩子们传授知识是远远不够的，我必须给他们强调学习的重要性。因此在支教的后半段，我每天都给孩子们普及大学的知识。先给他们看看北大的宣传片《星空日记》和《北大体验》，看到《星空日记》时，我也想起我自己高二的时候，看到北大的宣传片满腔热血，奔向未来，现在的我却离梦想渐行渐远了。看到《北大体验》，我的脑海里不停回荡这那句“在北大生活是一种什么样的体验，北大等着你来体验”，在我的内心深处还残存着对北大的愿景。<strong>你自由，而在一片向上生长的林中，你不会歪斜，但我失去了你，只敢在梦里拥抱着你。</strong>然后我给他们看了一下成电的招生宣传片，和一系列成电的照片，用自己在大学生活的感受去感染他们。我希望自己用着些举动，能够在他们的心中种下名为“大学”的种子。<br><img src="https://i.loli.net/2020/04/18/mIkGb1exLlwTyMJ.png" alt="image.png"></p>
+<p>对于孩子而言，最可怕的是他们腐朽的思想。尽管我也是生活在农村，但是这里的学习氛围与家里天壤之别。这里还保留着读完初中就外出打工的腐朽思想。父母对于孩子的学习，关注实在太少太少。我意识到自己仅仅给孩子们传授知识是远远不够的，我必须给他们强调学习的重要性。因此在支教的后半段，我每天都给孩子们普及大学的知识。先给他们看看北大的宣传片《星空日记》和《北大体验》，看到《星空日记》时，我也想起我自己高二的时候，看到北大的宣传片满腔热血，奔向未来，现在的我却离梦想渐行渐远了。看到《北大体验》，我的脑海里不停回荡这那句“在北大生活是一种什么样的体验，北大等着你来体验”，在我的内心深处还残存着对北大的愿景。<strong>你自由，而在一片向上生长的林中，你不会歪斜，但我失去了你，只敢在梦里拥抱着你。</strong>然后我给他们看了一下成电的招生宣传片，和一系列成电的照片，用自己在大学生活的感受去感染他们。我希望自己用着些举动，能够在他们的心中种下名为“大学”的种子。<br>
+        <img class="lazyload lazyload-gif" src="/images/loading.svg" data-src="https://i.loli.net/2020/04/18/mIkGb1exLlwTyMJ.png" alt="image.png">
+      </p>
 </blockquote>
 <blockquote>
 <p><strong>“即使有一天我失去了所有，但在祖国的大西部，我还有一群可爱的孩子”</strong>写于在教室前目送孩子们离去，我对他们大喊：“今天我就不送你们了，今后的路你们要自己走了。”</p>
 </blockquote>
 <blockquote>
-<p><strong>“支教真的有意义吗？”</strong>这是我在支教路上在知乎关注的一个问题，今天在支教生涯结束时，我要用自己的方式给出回答。<br><img src="https://i.loli.net/2020/03/29/zFaUuGHbLNn7RSe.png" alt="image.png"></p>
+<p><strong>“支教真的有意义吗？”</strong>这是我在支教路上在知乎关注的一个问题，今天在支教生涯结束时，我要用自己的方式给出回答。<br>
+        <img class="lazyload lazyload-gif" src="/images/loading.svg" data-src="https://i.loli.net/2020/03/29/zFaUuGHbLNn7RSe.png" alt="image.png">
+      </p>
 </blockquote>
 <blockquote>
-<p>谈支教是否有意义，最为关键的问题是你是如何看待支教的，你到底为支教付出了多少。回顾我们至微这四个月为支教的筹备，一进队最为强调的一点是<strong>“支教对于你的收获是远远大于你给孩子的收获”</strong>，这一路来，我们经历了两周的义捐义卖，两天的高考文具募捐，两周的课程试讲，再到两周的正式支教。再谈我是如何看待支教的，在我的心里这是小时候的愿景，是社会的公益给我的驱使。我想要通过支教让山里的孩子们明白，他们所看到的仅仅是世界的很小一部分，他们应该去更高更远的地方，去好好看看这世界。因此，我可以确切地回答，支教是绝对有意义的。<br><img src="https://s1.ax1x.com/2020/03/29/GV61Tx.png" alt="image.png"></p>
+<p>谈支教是否有意义，最为关键的问题是你是如何看待支教的，你到底为支教付出了多少。回顾我们至微这四个月为支教的筹备，一进队最为强调的一点是<strong>“支教对于你的收获是远远大于你给孩子的收获”</strong>，这一路来，我们经历了两周的义捐义卖，两天的高考文具募捐，两周的课程试讲，再到两周的正式支教。再谈我是如何看待支教的，在我的心里这是小时候的愿景，是社会的公益给我的驱使。我想要通过支教让山里的孩子们明白，他们所看到的仅仅是世界的很小一部分，他们应该去更高更远的地方，去好好看看这世界。因此，我可以确切地回答，支教是绝对有意义的。<br>
+        <img class="lazyload lazyload-gif" src="/images/loading.svg" data-src="https://s1.ax1x.com/2020/03/29/GV61Tx.png" alt="image.png">
+      </p>
 </blockquote>
 <blockquote>
-<p>其实支教对我影响最大的不是<strong>支教本身，而是我身旁一起陪伴的十五名队员。</strong>当你身处在一个大环境中时，你会自然而然地被环境所影响。先谈谈舒队，作为队长，他需要把握团队的大局走向，最为关键的是控制一个“度”，比如伙食的质量，放松的时间，上课的课程，活动的安排。我印象最深的是，当我在过渡放纵的时候，会有一个改变以往逗比的形象的人，严肃地和你强调支教是为了什么。从支教的过程中，同时也是从队友的身上，发现自己的不足，便是我此行最大的收获。比如对于支教日志的撰写上，有的队友每天坚持记录至少1500字的日志，尽管里面的很多内容是记流水账，但是对于这件事上她是付出了大量的时间，与我每次几百字的支教日志形成了极大的反差。再比如活动组的成员，在每次活动前都会周密的安排，加班到凌晨一两点，相反的是我十一点多就回到了寝室。从他们的身上，我发现了优秀的原因，同时也解决我一直以来的困惑。简而言之，就是对于事情的专注，对于一件事情，做的时候必须竭尽全力、心无旁骛，这样结束时才可以尽情放松。对于学习亦是如此，我总是把学习挂在嘴边，但是每天真正学习的时长却总是很短，看似每天都在学习，其实两天的学习效率抵不过别人的一天，自然放松的时候也不能尽兴。<br><img src="https://s1.ax1x.com/2020/03/29/GV6rAP.jpg" alt="GV6rAP.jpg"></p>
+<p>其实支教对我影响最大的不是<strong>支教本身，而是我身旁一起陪伴的十五名队员。</strong>当你身处在一个大环境中时，你会自然而然地被环境所影响。先谈谈舒队，作为队长，他需要把握团队的大局走向，最为关键的是控制一个“度”，比如伙食的质量，放松的时间，上课的课程，活动的安排。我印象最深的是，当我在过渡放纵的时候，会有一个改变以往逗比的形象的人，严肃地和你强调支教是为了什么。从支教的过程中，同时也是从队友的身上，发现自己的不足，便是我此行最大的收获。比如对于支教日志的撰写上，有的队友每天坚持记录至少1500字的日志，尽管里面的很多内容是记流水账，但是对于这件事上她是付出了大量的时间，与我每次几百字的支教日志形成了极大的反差。再比如活动组的成员，在每次活动前都会周密的安排，加班到凌晨一两点，相反的是我十一点多就回到了寝室。从他们的身上，我发现了优秀的原因，同时也解决我一直以来的困惑。简而言之，就是对于事情的专注，对于一件事情，做的时候必须竭尽全力、心无旁骛，这样结束时才可以尽情放松。对于学习亦是如此，我总是把学习挂在嘴边，但是每天真正学习的时长却总是很短，看似每天都在学习，其实两天的学习效率抵不过别人的一天，自然放松的时候也不能尽兴。<br>
+        <img class="lazyload lazyload-gif" src="/images/loading.svg" data-src="https://s1.ax1x.com/2020/03/29/GV6rAP.jpg" alt="GV6rAP.jpg">
+      </p>
 </blockquote>
 <blockquote>
-<p>最后再回到支教本身来，谈谈这群我可能再也不会相见的38个孩子们。其实离别的时候，没有孩子流泪，我还是比较难过的，即使我确实不希望哭丧着离别，但可能是因为我对班上的孩子们付出还是太少了。作为四年级的班主任，我明显感受到自己与班上孩子的感情与任课老师差别很大的，每天一大半的时间，我都会陪在这群孩子身边。今天的最后一堂课，我和副班主任们，都和孩子们讲了一些煽情的话，关于回顾，关于离别，关于未来。我让孩子们把自己的名字都写在黑板上，让我记住他们，同时我也在黑板上写下<strong>“你这一生，我只送一程；不忍离别，但车已到站”。</strong>借用龙应台的一句话，<strong>我慢慢地、慢慢地了解到，所谓师生一场，只不过意味着，你和他们的缘分就是今生今世目送着他们的背影渐行渐远。你站在小路的这一段，看着他逐渐消失在小路转弯的地方，而且，他们用背影默默告诉你：不必追。</strong><br><img src="https://s1.ax1x.com/2020/03/29/GV6g1g.jpg" alt="GV6g1g.jpg"></p>
+<p>最后再回到支教本身来，谈谈这群我可能再也不会相见的38个孩子们。其实离别的时候，没有孩子流泪，我还是比较难过的，即使我确实不希望哭丧着离别，但可能是因为我对班上的孩子们付出还是太少了。作为四年级的班主任，我明显感受到自己与班上孩子的感情与任课老师差别很大的，每天一大半的时间，我都会陪在这群孩子身边。今天的最后一堂课，我和副班主任们，都和孩子们讲了一些煽情的话，关于回顾，关于离别，关于未来。我让孩子们把自己的名字都写在黑板上，让我记住他们，同时我也在黑板上写下<strong>“你这一生，我只送一程；不忍离别，但车已到站”。</strong>借用龙应台的一句话，<strong>我慢慢地、慢慢地了解到，所谓师生一场，只不过意味着，你和他们的缘分就是今生今世目送着他们的背影渐行渐远。你站在小路的这一段，看着他逐渐消失在小路转弯的地方，而且，他们用背影默默告诉你：不必追。</strong><br>
+        <img class="lazyload lazyload-gif" src="/images/loading.svg" data-src="https://s1.ax1x.com/2020/03/29/GV6g1g.jpg" alt="GV6g1g.jpg">
+      </p>
 </blockquote>
 <p><strong>未来</strong></p>
 <p><strong>我让你成为你</strong></p>
