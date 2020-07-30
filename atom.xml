@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://gemini-lin.github.io/"/>
-  <updated>2020-07-29T09:37:58.907Z</updated>
+  <updated>2020-07-30T02:17:46.561Z</updated>
   <id>https://gemini-lin.github.io/</id>
   
   <author>
@@ -17,73 +17,11 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>Servlet</title>
-    <link href="https://gemini-lin.github.io/Servlet/"/>
-    <id>https://gemini-lin.github.io/Servlet/</id>
-    <published>2020-07-29T09:37:20.000Z</published>
-    <updated>2020-07-29T09:37:58.907Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;script&gt;
-        document.querySelectorAll(&#39;.github-emoji&#39;)
-          .forEach(el =&gt; {
-            if (!el.dataset.src) { return; }
-       
-        
-      
-    
-    </summary>
-    
-    
-    
-  </entry>
-  
-  <entry>
-    <title>SpringMVC</title>
-    <link href="https://gemini-lin.github.io/SpringMVC/"/>
-    <id>https://gemini-lin.github.io/SpringMVC/</id>
-    <published>2020-07-29T09:31:25.000Z</published>
-    <updated>2020-07-29T09:37:38.108Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;h1 id=&quot;Free-Talk&quot;&gt;
-          &lt;a href=&quot;#Free-Talk&quot; class=&quot;heading-link&quot;&gt;&lt;i class=&quot;fas fa-link&quot;&gt;&lt;/i&gt;&lt;/a&gt;Free Talk&lt;/h1&gt;
-     
-        
-      
-    
-    </summary>
-    
-    
-      <category term="Java后端" scheme="https://Gemini-Lin.github.io/categories/Java%E5%90%8E%E7%AB%AF/"/>
-    
-      <category term="Spring Framework" scheme="https://Gemini-Lin.github.io/categories/Java%E5%90%8E%E7%AB%AF/Spring-Framework/"/>
-    
-      <category term="SpringMVC" scheme="https://Gemini-Lin.github.io/categories/Java%E5%90%8E%E7%AB%AF/Spring-Framework/SpringMVC/"/>
-    
-    
-      <category term="Spring" scheme="https://Gemini-Lin.github.io/tags/Spring/"/>
-    
-      <category term="SpringMVC" scheme="https://Gemini-Lin.github.io/tags/SpringMVC/"/>
-    
-  </entry>
-  
-  <entry>
     <title>SpringBoot教程笔记</title>
     <link href="https://gemini-lin.github.io/SpringBoot/"/>
     <id>https://gemini-lin.github.io/SpringBoot/</id>
     <published>2020-07-29T09:20:28.000Z</published>
-    <updated>2020-07-29T10:46:28.129Z</updated>
+    <updated>2020-07-30T02:17:46.561Z</updated>
     
     <summary type="html">
     
@@ -121,7 +59,7 @@
     <link href="https://gemini-lin.github.io/SpringBoot1/"/>
     <id>https://gemini-lin.github.io/SpringBoot1/</id>
     <published>2020-07-28T09:01:46.000Z</published>
-    <updated>2020-07-29T09:41:59.336Z</updated>
+    <updated>2020-07-30T02:09:10.776Z</updated>
     
     <summary type="html">
     
@@ -608,6 +546,62 @@
       <category term="Java" scheme="https://Gemini-Lin.github.io/tags/Java/"/>
     
       <category term="反射" scheme="https://Gemini-Lin.github.io/tags/%E5%8F%8D%E5%B0%84/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Java枚举(enum)</title>
+    <link href="https://gemini-lin.github.io/enumerate/"/>
+    <id>https://gemini-lin.github.io/enumerate/</id>
+    <published>2020-07-11T03:21:02.000Z</published>
+    <updated>2020-07-15T05:19:04.275Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;Free-Talk&quot;&gt;
+          &lt;a href=&quot;#Free-Talk&quot; class=&quot;heading-link&quot;&gt;&lt;i class=&quot;fas fa-link&quot;&gt;&lt;/i&gt;&lt;/a&gt;Free Talk&lt;/h1&gt;
+      &lt;p&gt;上学期上Java课时都没有听说过枚举的概念，这次偶然在JavaGuide博客中看到了，就想写一些枚举相关知识。本篇文章会较为深入地讲解一下枚举的强大功能。&lt;br&gt;写这边博客的时候，又发现了廖雪峰的Java教程也写的很好，可以配套食用。&lt;br&gt;&lt;span class=&quot;exturl&quot;&gt;&lt;a class=&quot;exturl__link&quot; href=&quot;https://snailclimb.gitee.io/javaguide/#/docs/java/basic/%E7%94%A8%E5%A5%BDJava%E4%B8%AD%E7%9A%84%E6%9E%9A%E4%B8%BE%E7%9C%9F%E7%9A%84%E6%B2%A1%E6%9C%89%E9%82%A3%E4%B9%88%E7%AE%80%E5%8D%95&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;JavaGuide&lt;/a&gt;&lt;span class=&quot;exturl__icon&quot;&gt;&lt;i class=&quot;fas fa-external-link-alt&quot;&gt;&lt;/i&gt;&lt;/span&gt;&lt;/span&gt;和&lt;span class=&quot;exturl&quot;&gt;&lt;a class=&quot;exturl__link&quot; href=&quot;https://www.liaoxuefeng.com/wiki/1252599548343744/1260473188087424&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;廖雪峰&lt;/a&gt;&lt;span class=&quot;exturl__icon&quot;&gt;&lt;i class=&quot;fas fa-external-link-alt&quot;&gt;&lt;/i&gt;&lt;/span&gt;&lt;/span&gt;&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="Java后端" scheme="https://Gemini-Lin.github.io/categories/Java%E5%90%8E%E7%AB%AF/"/>
+    
+      <category term="Java语言基础" scheme="https://Gemini-Lin.github.io/categories/Java%E5%90%8E%E7%AB%AF/Java%E8%AF%AD%E8%A8%80%E5%9F%BA%E7%A1%80/"/>
+    
+    
+      <category term="Java" scheme="https://Gemini-Lin.github.io/tags/Java/"/>
+    
+      <category term="面向对象" scheme="https://Gemini-Lin.github.io/tags/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/"/>
+    
+      <category term="枚举" scheme="https://Gemini-Lin.github.io/tags/%E6%9E%9A%E4%B8%BE/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Java面向对象</title>
+    <link href="https://gemini-lin.github.io/Java-Object-oriented/"/>
+    <id>https://gemini-lin.github.io/Java-Object-oriented/</id>
+    <published>2020-07-10T09:28:43.000Z</published>
+    <updated>2020-07-15T05:19:20.916Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;Free-Talk&quot;&gt;
+          &lt;a href=&quot;#Free-Talk&quot; class=&quot;heading-link&quot;&gt;&lt;i class=&quot;fas fa-link&quot;&gt;&lt;/i&gt;&lt;/a&gt;Free Talk&lt;/h1&gt;
+      &lt;p&gt;面向对象是Java语言的核心，涉及的知识点非常多，这篇文章主要讲解三大特征(封装、继承、多态)、接口、异常等特性。其余部分会在之后单独地另写几篇文章。&lt;br&gt;参考资料：&lt;span class=&quot;exturl&quot;&gt;&lt;a class=&quot;exturl__link&quot; href=&quot;https://snailclimb.gitee.io/javaguide/#/docs/java/Java%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86?id=_2-java-%e9%9d%a2%e5%90%91%e5%af%b9%e8%b1%a1&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;JavaGuide&lt;/a&gt;&lt;span class=&quot;exturl__icon&quot;&gt;&lt;i class=&quot;fas fa-external-link-alt&quot;&gt;&lt;/i&gt;&lt;/span&gt;&lt;/span&gt;&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="Java后端" scheme="https://Gemini-Lin.github.io/categories/Java%E5%90%8E%E7%AB%AF/"/>
+    
+      <category term="Java语言基础" scheme="https://Gemini-Lin.github.io/categories/Java%E5%90%8E%E7%AB%AF/Java%E8%AF%AD%E8%A8%80%E5%9F%BA%E7%A1%80/"/>
+    
+    
+      <category term="Java" scheme="https://Gemini-Lin.github.io/tags/Java/"/>
+    
+      <category term="面向对象" scheme="https://Gemini-Lin.github.io/tags/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/"/>
     
   </entry>
   
