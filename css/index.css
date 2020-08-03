@@ -3041,12 +3041,12 @@ html.nightmode {
   content: '|';
   margin: 0 10px;
 }
-@media (min-width: 1208px) {
+@media (min-width: 1258px) {
   .header-nav-inner {
-    width: 1208px;
+    width: 1258px;
   }
   .main-inner {
-    width: 1208px;
+    width: 1258px;
   }
 }
 @media (min-width: 991.98px) {
