@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://gemini-lin.github.io/"/>
-  <updated>2020-08-08T12:36:39.672Z</updated>
+  <updated>2020-08-09T04:37:20.199Z</updated>
   <id>https://gemini-lin.github.io/</id>
   
   <author>
@@ -15,6 +15,44 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>数据库第三章--SQL语言</title>
+    <link href="https://gemini-lin.github.io/Database-System-3/"/>
+    <id>https://gemini-lin.github.io/Database-System-3/</id>
+    <published>2020-08-09T04:33:26.000Z</published>
+    <updated>2020-08-09T04:37:20.199Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;
+        &lt;img class=&quot;lazyload lazyload-gif&quot; src=&quot;/images/loading.svg&quot; data-src=&quot;https://s1.ax1x.com/2020/08/09/aox9Sg.png&quot; alt=&quot;数据库第三章--SQL语言&quot;&gt;
+      &lt;br&gt;&lt;/p&gt;
+
+
+&lt;title&gt;数据库第三章--SQL语言&lt;/title&gt;
+&lt;meta charset=&quot;utf-8&quot;&gt;
+&lt;meta http-equiv=&quot;Content-Type&quot; content=&quot;text/html; charset=utf-8&quot;&gt;
+&lt;meta name=&quot;renderer&quot; content=&quot;webkit&quot;&gt;
+&lt;meta name=&quot;author&quot; content=&quot;mubu.com&quot;&gt;
+&lt;meta name=&quot;generator&quot; content=&quot;Hexo 4.2.1&quot;&gt;&lt;link rel=&quot;alternate&quot; href=&quot;/atom.xml&quot; title=&quot;GeminiPlanet&quot; type=&quot;application/atom+xml&quot;&gt;
+
+
+&lt;div class=&quot;export-wrapper&quot;&gt;&lt;div style=&quot;font-size: 22px; padding: 0 15px 0;&quot;&gt;&lt;div style=&quot;padding-bottom: 24px&quot;&gt;数据库第三章--SQL语言&lt;/div&gt;&lt;div style=&quot;background: #e5e6e8; height: 1px; margin-bottom: 20px;&quot;&gt;&lt;/div&gt;&lt;/div&gt;&lt;ul style=&quot;list-style: disc outside;&quot;&gt;&lt;li style=&quot;line-height: 24px;&quot;&gt;&lt;span class=&quot;content mubu-node&quot; style=&quot;line-height: 24px; min-height: 24px; font-size: 16px; padding: 2px 0px; display: inline-block; vertical-align: top;&quot;&gt;&lt;span class=&quot;bold&quot; style=&quot;font-weight: bold;&quot;&gt;SQL语言概述&lt;/span&gt;&lt;/span&gt;&lt;ul class=&quot;children&quot; style=&quot;list-style: disc outside; padding-bottom: 4px;&quot;&gt;&lt;li style=&quot;line-height: 24px;&quot;&gt;&lt;span class=&quot;content mubu-node&quot; style=&quot;line-height: 24px; min-height: 24px; font-size: 16px; padding: 2px 0px; display: inline-block; vertical-align: top;&quot;&gt;&lt;span class=&quot;bold&quot; style=&quot;font-weight: bold;&quot;&gt;SQL&lt;/span&gt;（Structured Query Language，&lt;span class=&quot;bold&quot; style=&quot;font-weight: bold;&quot;&gt;结构化查询语言&lt;/span&gt;）是一种对&lt;span class=&quot;bold&quot; style=&quot;font-weight: bold;&quot;&gt;关系数据库&lt;/span&gt;进行访问的&lt;span class=&quot;bold&quot; style=&quot;font-weight: bold;&quot;&gt;数据操纵语言&lt;/span&gt;&lt;/span&gt;&lt;/li&gt;&lt;li style=&quot;line-height: 24px;&quot;&gt;&lt;span class=&quot;content mubu-node&quot; style=&quot;line-height: 24px; min-height: 24px; font-size: 16px; padding: 2px 0px; display: inline-block; vertical-align: top;&quot;&gt;&lt;span class=&quot;bold&quot; style=&quot;font-weight: bold;&quot;&gt;SQL对关系数据库的操作原理&lt;/span&gt;&lt;/span&gt;&lt;ul class=&quot;children&quot; style=&quot;list-style: disc outside; padding-bottom: 4px;&quot;&gt;&lt;li style=&quot;line-height: 24px;&quot;&gt;&lt;span class=&quot;content mubu-node&quot; style=&quot;line-height: 24px; min-height: 24px; font-size: 16px; padding: 2px 0px; display: inline-block; vertical-align: top;&quot;&gt;&lt;span class=&quot;bold&quot; style=&quot;font-weight: bold;&quot;&gt;数据库对象&lt;/span&gt;创建、修改、删除&lt;/span&gt;&lt;/li&gt;&lt;li style=&quot;line-height: 24px;&quot;&gt;&lt;span class=&quot;content mubu-node&quot; style=&quot;line-height: 24px; min-height: 24px; font-size: 16px; padding: 2px 0px; display: inline-block; vertical-align: top;&quot;&gt;&lt;span class=&quot;bold&quot; style=&quot;font-weight: bold;&quot;&gt;数据库表&lt;/span&gt;的数据插入、修改、删除、查询、统计&lt;/span&gt;&lt;/li&gt;&lt;li style=&quot;line-height: 24px;&quot;&gt;&lt;span class=&quot;content mubu-node&quot; style=&quot;line-height: 24px; min-height: 24px; font-size: 16px; padding: 2px 0px; display: inline-block; vertical-align: top;&quot;&gt;&lt;span class=&quot;bold&quot; style=&quot;font-weight: bold;&quot;&gt;存储过程、触发器、函数&lt;/span&gt;等程序执行&lt;/span&gt;&lt;/li&gt;&lt;li style=&quot;line-height: 24px;&quot;&gt;&lt;span class=&quot;content mubu-node&quot; style=&quot;line-height: 24px; min-height: 24px; font-size: 16px; padding: 2px 0px; display: inline-block; vertical-align: top;&quot;&gt;数据库&lt;span class=&quot;bold&quot; style=&quot;font-weight: bold;&quot;&gt;权限、角色、用户&lt;/span&gt;等管理&lt;/span&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/div&gt;
+    
+    </summary>
+    
+    
+      <category term="课程总结" scheme="https://Gemini-Lin.github.io/categories/%E8%AF%BE%E7%A8%8B%E6%80%BB%E7%BB%93/"/>
+    
+      <category term="数据库" scheme="https://Gemini-Lin.github.io/categories/%E8%AF%BE%E7%A8%8B%E6%80%BB%E7%BB%93/%E6%95%B0%E6%8D%AE%E5%BA%93/"/>
+    
+    
+      <category term="数据库" scheme="https://Gemini-Lin.github.io/tags/%E6%95%B0%E6%8D%AE%E5%BA%93/"/>
+    
+      <category term="关系模型" scheme="https://Gemini-Lin.github.io/tags/%E5%85%B3%E7%B3%BB%E6%A8%A1%E5%9E%8B/"/>
+    
+  </entry>
   
   <entry>
     <title>操作系统第三章--处理机调度与死锁</title>
@@ -648,36 +686,6 @@
       <category term="动态类型语言支持" scheme="https://Gemini-Lin.github.io/tags/%E5%8A%A8%E6%80%81%E7%B1%BB%E5%9E%8B%E8%AF%AD%E8%A8%80%E6%94%AF%E6%8C%81/"/>
     
       <category term="基于栈的字节码解释执行引擎" scheme="https://Gemini-Lin.github.io/tags/%E5%9F%BA%E4%BA%8E%E6%A0%88%E7%9A%84%E5%AD%97%E8%8A%82%E7%A0%81%E8%A7%A3%E9%87%8A%E6%89%A7%E8%A1%8C%E5%BC%95%E6%93%8E/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>JVM系列（五）-- 字节码执行机制(Part 2)</title>
-    <link href="https://gemini-lin.github.io/Class-Execution-2/"/>
-    <id>https://gemini-lin.github.io/Class-Execution-2/</id>
-    <published>2020-07-16T04:16:22.000Z</published>
-    <updated>2020-07-16T09:26:02.082Z</updated>
-    
-    <summary type="html">
-    
-      &lt;h1 id=&quot;方法调用&quot;&gt;
-          &lt;a href=&quot;#方法调用&quot; class=&quot;heading-link&quot;&gt;&lt;i class=&quot;fas fa-link&quot;&gt;&lt;/i&gt;&lt;/a&gt;方法调用&lt;/h1&gt;
-      &lt;p&gt;Java 的方法的执行分为两个部分：&lt;br&gt;&lt;strong&gt;1. 方法调用：确定被调用的方法是哪一个；&lt;br&gt;2. 基于栈的解释执行：真正地执行方法的字节码。&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;方法调用并不等同于方法中的代码被执行，方法调用阶段唯一的任务就是&lt;strong&gt;确定被调用方法的版本（即调用哪一个方法）&lt;/strong&gt;，暂时还未涉及方法内部的具体运行过程。&lt;/p&gt;
-    
-    </summary>
-    
-    
-      <category term="Java后端" scheme="https://Gemini-Lin.github.io/categories/Java%E5%90%8E%E7%AB%AF/"/>
-    
-      <category term="JVM" scheme="https://Gemini-Lin.github.io/categories/Java%E5%90%8E%E7%AB%AF/JVM/"/>
-    
-    
-      <category term="JVM" scheme="https://Gemini-Lin.github.io/tags/JVM/"/>
-    
-      <category term="字节码" scheme="https://Gemini-Lin.github.io/tags/%E5%AD%97%E8%8A%82%E7%A0%81/"/>
-    
-      <category term="方法调用" scheme="https://Gemini-Lin.github.io/tags/%E6%96%B9%E6%B3%95%E8%B0%83%E7%94%A8/"/>
     
   </entry>
   
