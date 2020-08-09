@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://gemini-lin.github.io/"/>
-  <updated>2020-08-09T04:37:20.199Z</updated>
+  <updated>2020-08-09T12:32:04.785Z</updated>
   <id>https://gemini-lin.github.io/</id>
   
   <author>
@@ -15,6 +15,42 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>数据库第四章--数据库设计</title>
+    <link href="https://gemini-lin.github.io/Database-System-4/"/>
+    <id>https://gemini-lin.github.io/Database-System-4/</id>
+    <published>2020-08-09T12:29:08.000Z</published>
+    <updated>2020-08-09T12:32:04.785Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;
+        &lt;img class=&quot;lazyload lazyload-gif&quot; src=&quot;/images/loading.svg&quot; data-src=&quot;https://s1.ax1x.com/2020/08/09/a7mnRH.png&quot; alt=&quot;数据库第四章--数据库设计&quot;&gt;
+      &lt;br&gt;&lt;/p&gt;
+
+
+&lt;title&gt;数据库第四章--数据库设计&lt;/title&gt;
+&lt;meta charset=&quot;utf-8&quot;&gt;
+&lt;meta http-equiv=&quot;Content-Type&quot; content=&quot;text/html; charset=utf-8&quot;&gt;
+&lt;meta name=&quot;renderer&quot; content=&quot;webkit&quot;&gt;
+&lt;meta name=&quot;author&quot; content=&quot;mubu.com&quot;&gt;
+&lt;meta name=&quot;generator&quot; content=&quot;Hexo 4.2.1&quot;&gt;&lt;link rel=&quot;alternate&quot; href=&quot;/atom.xml&quot; title=&quot;GeminiPlanet&quot; type=&quot;application/atom+xml&quot;&gt;
+
+
+&lt;div class=&quot;export-wrapper&quot;&gt;&lt;div style=&quot;font-size: 22px; padding: 0 15px 0;&quot;&gt;&lt;div style=&quot;padding-bottom: 24px&quot;&gt;数据库第四章--数据库设计&lt;/div&gt;&lt;div style=&quot;background: #e5e6e8; height: 1px; margin-bottom: 20px;&quot;&gt;&lt;/div&gt;&lt;/div&gt;&lt;ul style=&quot;list-style: disc outside;&quot;&gt;&lt;li style=&quot;line-height: 24px;&quot;&gt;&lt;span class=&quot;content mubu-node&quot; style=&quot;line-height: 24px; min-height: 24px; font-size: 16px; padding: 2px 0px; display: inline-block; vertical-align: top;&quot;&gt;数据库设计概述&lt;/span&gt;&lt;ul class=&quot;children&quot; style=&quot;list-style: disc outside; padding-bottom: 4px;&quot;&gt;&lt;li style=&quot;line-height: 24px;&quot;&gt;&lt;span class=&quot;content mubu-node&quot; style=&quot;line-height: 24px; min-height: 24px; font-size: 16px; padding: 2px 0px; display: inline-block; vertical-align: top;&quot;&gt;数据库设计方案&lt;/span&gt;&lt;ul class=&quot;children&quot; style=&quot;list-style: disc outside; padding-bottom: 4px;&quot;&gt;&lt;li style=&quot;line-height: 24px;&quot;&gt;&lt;span class=&quot;content mubu-node&quot; style=&quot;line-height: 24px; min-height: 24px; font-size: 16px; padding: 2px 0px; display: inline-block; vertical-align: top;&quot;&gt;数据库应用访问方式&lt;/span&gt;&lt;/li&gt;&lt;li style=&quot;line-height: 24px;&quot;&gt;&lt;span class=&quot;content mubu-node&quot; style=&quot;line-height: 24px; min-height: 24px; font-size: 16px; padding: 2px 0px; display: inline-block; vertical-align: top;&quot;&gt;&lt;span class=&quot;bold&quot; style=&quot;font-weight: bold;&quot;&gt;数据库结构模型&lt;/span&gt;&lt;/span&gt;&lt;/li&gt;&lt;li style=&quot;line-height: 24px;&quot;&gt;&lt;span class=&quot;content mubu-node&quot; style=&quot;line-height: 24px; min-height: 24px; font-size: 16px; padding: 2px 0px; display: inline-block; vertical-align: top;&quot;&gt;数据库应用架构&lt;/span&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/li&gt;&lt;li style=&quot;line-height: 24px;&quot;&gt;&lt;span class=&quot;content mubu-node&quot; style=&quot;line-height: 24px; min-height: 24px; font-size: 16px; padding: 2px 0px; display: inline-block; vertical-align: top;&quot;&gt;&lt;span class=&quot;bold&quot; style=&quot;font-weight: bold;&quot;&gt;数据库结构模型&lt;/span&gt;&lt;/span&gt;&lt;ul class=&quot;children&quot; style=&quot;list-style: disc outside; padding-bottom: 4px;&quot;&gt;&lt;li style=&quot;line-height: 24px;&quot;&gt;&lt;span class=&quot;content mubu-node&quot; style=&quot;line-height: 24px; min-height: 24px; font-size: 16px; padding: 2px 0px; display: inline-block; vertical-align: top;&quot;&gt;概念数据模型CDM&lt;/span&gt;&lt;/li&gt;&lt;li style=&quot;line-height: 24px;&quot;&gt;&lt;span class=&quot;content mubu-node&quot; style=&quot;line-height: 24px; min-height: 24px; font-size: 16px; padding: 2px 0px; display: inline-block; vertical-align: top;&quot;&gt;逻辑数据模型LDM&lt;/span&gt;&lt;/li&gt;&lt;li style=&quot;line-height: 24px;&quot;&gt;&lt;span class=&quot;content mubu-node&quot; style=&quot;line-height: 24px; min-height: 24px; font-size: 16px; padding: 2px 0px; display: inline-block; vertical-align: top;&quot;&gt;物理数据模型PDM&lt;/span&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/div&gt;
+    
+    </summary>
+    
+    
+      <category term="课程总结" scheme="https://Gemini-Lin.github.io/categories/%E8%AF%BE%E7%A8%8B%E6%80%BB%E7%BB%93/"/>
+    
+      <category term="数据库" scheme="https://Gemini-Lin.github.io/categories/%E8%AF%BE%E7%A8%8B%E6%80%BB%E7%BB%93/%E6%95%B0%E6%8D%AE%E5%BA%93/"/>
+    
+    
+      <category term="数据库设计" scheme="https://Gemini-Lin.github.io/tags/%E6%95%B0%E6%8D%AE%E5%BA%93%E8%AE%BE%E8%AE%A1/"/>
+    
+  </entry>
   
   <entry>
     <title>数据库第三章--SQL语言</title>
@@ -651,41 +687,6 @@
       <category term="JVM" scheme="https://Gemini-Lin.github.io/tags/JVM/"/>
     
       <category term="字节码" scheme="https://Gemini-Lin.github.io/tags/%E5%AD%97%E8%8A%82%E7%A0%81/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>JVM系列（六）-- 字节码执行机制(Part 3)</title>
-    <link href="https://gemini-lin.github.io/Class-Execution-3/"/>
-    <id>https://gemini-lin.github.io/Class-Execution-3/</id>
-    <published>2020-07-16T09:27:51.000Z</published>
-    <updated>2020-07-17T06:58:14.237Z</updated>
-    
-    <summary type="html">
-    
-      &lt;h1 id=&quot;动态类型语言支持&quot;&gt;
-          &lt;a href=&quot;#动态类型语言支持&quot; class=&quot;heading-link&quot;&gt;&lt;i class=&quot;fas fa-link&quot;&gt;&lt;/i&gt;&lt;/a&gt;动态类型语言支持&lt;/h1&gt;
-      &lt;p&gt;&lt;strong&gt;动态类型语言，就是类型检查的主体过程在运行期，而非编译期的编程语言。&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;动/静态类型语言各自的优点？&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;动态类型语言：灵活性高，开发效率高。&lt;/li&gt;
-&lt;li&gt;静态类型语言：编译器提供了严谨的类型检查，类型相关的问题能在编码的时候就发现。&lt;/li&gt;&lt;/ul&gt;
-    
-    </summary>
-    
-    
-      <category term="Java后端" scheme="https://Gemini-Lin.github.io/categories/Java%E5%90%8E%E7%AB%AF/"/>
-    
-      <category term="JVM" scheme="https://Gemini-Lin.github.io/categories/Java%E5%90%8E%E7%AB%AF/JVM/"/>
-    
-    
-      <category term="JVM" scheme="https://Gemini-Lin.github.io/tags/JVM/"/>
-    
-      <category term="字节码" scheme="https://Gemini-Lin.github.io/tags/%E5%AD%97%E8%8A%82%E7%A0%81/"/>
-    
-      <category term="动态类型语言支持" scheme="https://Gemini-Lin.github.io/tags/%E5%8A%A8%E6%80%81%E7%B1%BB%E5%9E%8B%E8%AF%AD%E8%A8%80%E6%94%AF%E6%8C%81/"/>
-    
-      <category term="基于栈的字节码解释执行引擎" scheme="https://Gemini-Lin.github.io/tags/%E5%9F%BA%E4%BA%8E%E6%A0%88%E7%9A%84%E5%AD%97%E8%8A%82%E7%A0%81%E8%A7%A3%E9%87%8A%E6%89%A7%E8%A1%8C%E5%BC%95%E6%93%8E/"/>
     
   </entry>
   
