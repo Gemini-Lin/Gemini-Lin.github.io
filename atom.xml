@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://gemini-lin.github.io/"/>
-  <updated>2020-08-09T12:32:04.785Z</updated>
+  <updated>2020-08-10T02:21:25.878Z</updated>
   <id>https://gemini-lin.github.io/</id>
   
   <author>
@@ -15,6 +15,44 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>数据库第五章--数据库管理</title>
+    <link href="https://gemini-lin.github.io/Database-System-5/"/>
+    <id>https://gemini-lin.github.io/Database-System-5/</id>
+    <published>2020-08-10T02:19:04.000Z</published>
+    <updated>2020-08-10T02:21:25.878Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;
+        &lt;img class=&quot;lazyload lazyload-gif&quot; src=&quot;/images/loading.svg&quot; data-src=&quot;https://s1.ax1x.com/2020/08/10/aHKVN6.png&quot; alt=&quot;数据库第五章--数据库管理&quot;&gt;
+      &lt;br&gt;&lt;/p&gt;
+
+
+&lt;title&gt;数据库第五章--数据库管理&lt;/title&gt;
+&lt;meta charset=&quot;utf-8&quot;&gt;
+&lt;meta http-equiv=&quot;Content-Type&quot; content=&quot;text/html; charset=utf-8&quot;&gt;
+&lt;meta name=&quot;renderer&quot; content=&quot;webkit&quot;&gt;
+&lt;meta name=&quot;author&quot; content=&quot;mubu.com&quot;&gt;
+&lt;meta name=&quot;generator&quot; content=&quot;Hexo 4.2.1&quot;&gt;&lt;link rel=&quot;alternate&quot; href=&quot;/atom.xml&quot; title=&quot;GeminiPlanet&quot; type=&quot;application/atom+xml&quot;&gt;
+
+
+&lt;div class=&quot;export-wrapper&quot;&gt;&lt;div style=&quot;font-size: 22px; padding: 0 15px 0;&quot;&gt;&lt;div style=&quot;padding-bottom: 24px&quot;&gt;数据库第五章--数据库管理&lt;/div&gt;&lt;div style=&quot;background: #e5e6e8; height: 1px; margin-bottom: 20px;&quot;&gt;&lt;/div&gt;&lt;/div&gt;&lt;ul style=&quot;list-style: disc outside;&quot;&gt;&lt;li style=&quot;line-height: 24px;&quot;&gt;&lt;span class=&quot;content mubu-node&quot; style=&quot;line-height: 24px; min-height: 24px; font-size: 16px; padding: 2px 0px; display: inline-block; vertical-align: top;&quot;&gt;数据库管理概述&lt;/span&gt;&lt;ul class=&quot;children&quot; style=&quot;list-style: disc outside; padding-bottom: 4px;&quot;&gt;&lt;li style=&quot;line-height: 24px;&quot;&gt;&lt;span class=&quot;content mubu-node&quot; style=&quot;line-height: 24px; min-height: 24px; font-size: 16px; padding: 2px 0px; display: inline-block; vertical-align: top;&quot;&gt;&lt;span class=&quot;bold&quot; style=&quot;font-weight: bold;&quot;&gt;数据库管理&lt;/span&gt;&lt;/span&gt;&lt;ul class=&quot;children&quot; style=&quot;list-style: disc outside; padding-bottom: 4px;&quot;&gt;&lt;li style=&quot;line-height: 24px;&quot;&gt;&lt;span class=&quot;content mubu-node&quot; style=&quot;line-height: 24px; min-height: 24px; font-size: 16px; padding: 2px 0px; display: inline-block; vertical-align: top;&quot;&gt;定义：指为保证数据库系统的正常运行和服务质量必须进行的系统管理工作&lt;/span&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/li&gt;&lt;li style=&quot;line-height: 24px;&quot;&gt;&lt;span class=&quot;content mubu-node&quot; style=&quot;line-height: 24px; min-height: 24px; font-size: 16px; padding: 2px 0px; display: inline-block; vertical-align: top;&quot;&gt;DBMS管理功能结构&lt;/span&gt;&lt;ul class=&quot;children&quot; style=&quot;list-style: disc outside; padding-bottom: 4px;&quot;&gt;&lt;li style=&quot;line-height: 24px;&quot;&gt;&lt;span class=&quot;content mubu-node&quot; style=&quot;line-height: 24px; min-height: 24px; font-size: 16px; padding: 2px 0px; display: inline-block; vertical-align: top;&quot;&gt;数据库定义&lt;/span&gt;&lt;/li&gt;&lt;li style=&quot;line-height: 24px;&quot;&gt;&lt;span class=&quot;content mubu-node&quot; style=&quot;line-height: 24px; min-height: 24px; font-size: 16px; padding: 2px 0px; display: inline-block; vertical-align: top;&quot;&gt;数据库运行管理&lt;/span&gt;&lt;/li&gt;&lt;li style=&quot;line-height: 24px;&quot;&gt;&lt;span class=&quot;content mubu-node&quot; style=&quot;line-height: 24px; min-height: 24px; font-size: 16px; padding: 2px 0px; display: inline-block; vertical-align: top;&quot;&gt;数据库组织与存储&lt;/span&gt;&lt;/li&gt;&lt;li style=&quot;line-height: 24px;&quot;&gt;&lt;span class=&quot;content mubu-node&quot; style=&quot;line-height: 24px; min-height: 24px; font-size: 16px; padding: 2px 0px; display: inline-block; vertical-align: top;&quot;&gt;数据库维护&lt;/span&gt;&lt;/li&gt;&lt;li style=&quot;line-height: 24px;&quot;&gt;&lt;span class=&quot;content mubu-node&quot; style=&quot;line-height: 24px; min-height: 24px; font-size: 16px; padding: 2px 0px; display: inline-block; vertical-align: top;&quot;&gt;数据库通信&lt;/span&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/div&gt;
+    
+    </summary>
+    
+    
+      <category term="课程总结" scheme="https://Gemini-Lin.github.io/categories/%E8%AF%BE%E7%A8%8B%E6%80%BB%E7%BB%93/"/>
+    
+      <category term="数据库" scheme="https://Gemini-Lin.github.io/categories/%E8%AF%BE%E7%A8%8B%E6%80%BB%E7%BB%93/%E6%95%B0%E6%8D%AE%E5%BA%93/"/>
+    
+    
+      <category term="数据库管理" scheme="https://Gemini-Lin.github.io/tags/%E6%95%B0%E6%8D%AE%E5%BA%93%E7%AE%A1%E7%90%86/"/>
+    
+      <category term="数据库备份" scheme="https://Gemini-Lin.github.io/tags/%E6%95%B0%E6%8D%AE%E5%BA%93%E5%A4%87%E4%BB%BD/"/>
+    
+  </entry>
   
   <entry>
     <title>数据库第四章--数据库设计</title>
@@ -658,35 +696,6 @@
     
     
       <category term="Maven" scheme="https://Gemini-Lin.github.io/tags/Maven/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>JVM系列（七）-- 类文件结构</title>
-    <link href="https://gemini-lin.github.io/Class/"/>
-    <id>https://gemini-lin.github.io/Class/</id>
-    <published>2020-07-17T06:56:11.000Z</published>
-    <updated>2020-07-19T01:55:08.589Z</updated>
-    
-    <summary type="html">
-    
-      &lt;h1 id=&quot;概述&quot;&gt;
-          &lt;a href=&quot;#概述&quot; class=&quot;heading-link&quot;&gt;&lt;i class=&quot;fas fa-link&quot;&gt;&lt;/i&gt;&lt;/a&gt;概述&lt;/h1&gt;
-      &lt;p&gt;在 Java 中，JVM 可以理解的代码就叫做&lt;code&gt;字节码&lt;/code&gt;（即扩展名为 &lt;code&gt;.class&lt;/code&gt; 的文件），&lt;strong&gt;它不面向任何特定的处理器，只面向虚拟机&lt;/strong&gt;。&lt;br&gt;Java 语言通过字节码的方式，在一定程度上解决了传统解释型语言执行效率低的问题，同时又保留了&lt;strong&gt;解释型语言可移植&lt;/strong&gt;的特点。&lt;br&gt;所以 Java 程序运行时比较高效，而且，&lt;strong&gt;由于字节码并不针对一种特定的机器&lt;/strong&gt;，因此，Java 程序&lt;strong&gt;无须重新编译&lt;/strong&gt;便可在多种不同操作系统的计算机上运行。&lt;br&gt;
-        &lt;img class=&quot;lazyload lazyload-gif&quot; src=&quot;/images/loading.svg&quot; data-src=&quot;https://s1.ax1x.com/2020/07/19/URi1MQ.png&quot; alt=&quot;class&quot;&gt;
-      &lt;br&gt;&lt;strong&gt;可以说&lt;code&gt;.class&lt;/code&gt;文件是不同的语言在 Java 虚拟机之间的重要桥梁，同时也是支持 Java 跨平台很重要的一个原因。&lt;/strong&gt;&lt;/p&gt;
-    
-    </summary>
-    
-    
-      <category term="Java后端" scheme="https://Gemini-Lin.github.io/categories/Java%E5%90%8E%E7%AB%AF/"/>
-    
-      <category term="JVM" scheme="https://Gemini-Lin.github.io/categories/Java%E5%90%8E%E7%AB%AF/JVM/"/>
-    
-    
-      <category term="JVM" scheme="https://Gemini-Lin.github.io/tags/JVM/"/>
-    
-      <category term="字节码" scheme="https://Gemini-Lin.github.io/tags/%E5%AD%97%E8%8A%82%E7%A0%81/"/>
     
   </entry>
   
