@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://gemini-lin.github.io/"/>
-  <updated>2020-08-10T03:29:38.025Z</updated>
+  <updated>2020-08-10T07:22:12.251Z</updated>
   <id>https://gemini-lin.github.io/</id>
   
   <author>
@@ -15,6 +15,44 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>数据库第七章--NoSQL数据库</title>
+    <link href="https://gemini-lin.github.io/Database-System-7/"/>
+    <id>https://gemini-lin.github.io/Database-System-7/</id>
+    <published>2020-08-10T07:19:01.000Z</published>
+    <updated>2020-08-10T07:22:12.251Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;
+        &lt;img class=&quot;lazyload lazyload-gif&quot; src=&quot;/images/loading.svg&quot; data-src=&quot;https://s1.ax1x.com/2020/08/10/aHO33F.png&quot; alt=&quot;数据库第七章--NoSQL数据库&quot;&gt;
+      &lt;br&gt;&lt;/p&gt;
+
+
+&lt;title&gt;数据库第七章--NoSQL数据库&lt;/title&gt;
+&lt;meta charset=&quot;utf-8&quot;&gt;
+&lt;meta http-equiv=&quot;Content-Type&quot; content=&quot;text/html; charset=utf-8&quot;&gt;
+&lt;meta name=&quot;renderer&quot; content=&quot;webkit&quot;&gt;
+&lt;meta name=&quot;author&quot; content=&quot;mubu.com&quot;&gt;
+&lt;meta name=&quot;generator&quot; content=&quot;Hexo 4.2.1&quot;&gt;&lt;link rel=&quot;alternate&quot; href=&quot;/atom.xml&quot; title=&quot;GeminiPlanet&quot; type=&quot;application/atom+xml&quot;&gt;
+
+
+&lt;div class=&quot;export-wrapper&quot;&gt;&lt;div style=&quot;font-size: 22px; padding: 0 15px 0;&quot;&gt;&lt;div style=&quot;padding-bottom: 24px&quot;&gt;数据库第七章--NoSQL数据库&lt;/div&gt;&lt;div style=&quot;background: #e5e6e8; height: 1px; margin-bottom: 20px;&quot;&gt;&lt;/div&gt;&lt;/div&gt;&lt;ul style=&quot;list-style: disc outside;&quot;&gt;&lt;li style=&quot;line-height: 24px;&quot;&gt;&lt;span class=&quot;content mubu-node&quot; style=&quot;line-height: 24px; min-height: 24px; font-size: 16px; padding: 2px 0px; display: inline-block; vertical-align: top;&quot;&gt;NoSQL数据库概述&lt;/span&gt;&lt;ul class=&quot;children&quot; style=&quot;list-style: disc outside; padding-bottom: 4px;&quot;&gt;&lt;li style=&quot;line-height: 24px;&quot;&gt;&lt;span class=&quot;content mubu-node&quot; style=&quot;line-height: 24px; min-height: 24px; font-size: 16px; padding: 2px 0px; display: inline-block; vertical-align: top;&quot;&gt;关系数据库的局限&lt;/span&gt;&lt;ul class=&quot;children&quot; style=&quot;list-style: disc outside; padding-bottom: 4px;&quot;&gt;&lt;li style=&quot;line-height: 24px;&quot;&gt;&lt;span class=&quot;content mubu-node&quot; style=&quot;line-height: 24px; min-height: 24px; font-size: 16px; padding: 2px 0px; display: inline-block; vertical-align: top;&quot;&gt;关系数据库特点是&lt;span class=&quot;bold&quot; style=&quot;font-weight: bold;&quot;&gt;数据结构化&lt;/span&gt;、数据的&lt;span class=&quot;bold&quot; style=&quot;font-weight: bold;&quot;&gt;共享性高、冗余度低、易扩充、数据独立性高&lt;/span&gt;，数据由&lt;span class=&quot;bold&quot; style=&quot;font-weight: bold;&quot;&gt;数据库管理系统&lt;/span&gt;统一管理和控制等。&lt;/span&gt;&lt;/li&gt;&lt;li style=&quot;line-height: 24px;&quot;&gt;&lt;span class=&quot;content mubu-node&quot; style=&quot;line-height: 24px; min-height: 24px; font-size: 16px; padding: 2px 0px; display: inline-block; vertical-align: top;&quot;&gt;&lt;span class=&quot;bold&quot; style=&quot;font-weight: bold;&quot;&gt;&amp;nbsp; 优点是：&lt;/span&gt;容易理解，使用方便，易于维护，支持复杂查询。&lt;/span&gt;&lt;/li&gt;&lt;li style=&quot;line-height: 24px;&quot;&gt;&lt;span class=&quot;content mubu-node&quot; style=&quot;line-height: 24px; min-height: 24px; font-size: 16px; padding: 2px 0px; display: inline-block; vertical-align: top;&quot;&gt;&amp;nbsp; &lt;span class=&quot;bold&quot; style=&quot;font-weight: bold;&quot;&gt;缺点是：&lt;/span&gt;不擅长&lt;span class=&quot;bold&quot; style=&quot;font-weight: bold;&quot;&gt;大量数据的写入处理&lt;/span&gt;、&lt;span class=&quot;bold&quot; style=&quot;font-weight: bold;&quot;&gt;表结构变更&lt;/span&gt;、字段不固定时的应用和对简单查询需要&lt;span class=&quot;bold&quot; style=&quot;font-weight: bold;&quot;&gt;快速返回&lt;/span&gt;结果的处理的应用。&lt;/span&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/div&gt;
+    
+    </summary>
+    
+    
+      <category term="课程总结" scheme="https://Gemini-Lin.github.io/categories/%E8%AF%BE%E7%A8%8B%E6%80%BB%E7%BB%93/"/>
+    
+      <category term="数据库" scheme="https://Gemini-Lin.github.io/categories/%E8%AF%BE%E7%A8%8B%E6%80%BB%E7%BB%93/%E6%95%B0%E6%8D%AE%E5%BA%93/"/>
+    
+    
+      <category term="NoSQL" scheme="https://Gemini-Lin.github.io/tags/NoSQL/"/>
+    
+      <category term="Redis" scheme="https://Gemini-Lin.github.io/tags/Redis/"/>
+    
+  </entry>
   
   <entry>
     <title>数据库第六章--数据库编程</title>
@@ -680,31 +718,6 @@
       <category term="LeetCode" scheme="https://Gemini-Lin.github.io/tags/LeetCode/"/>
     
       <category term="HOT100" scheme="https://Gemini-Lin.github.io/tags/HOT100/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>LeetCode刷题之旅</title>
-    <link href="https://gemini-lin.github.io/LeetCode-Day0/"/>
-    <id>https://gemini-lin.github.io/LeetCode-Day0/</id>
-    <published>2020-07-19T02:02:55.000Z</published>
-    <updated>2020-07-19T02:53:12.723Z</updated>
-    
-    <summary type="html">
-    
-      &lt;h1 id=&quot;Free-Talk&quot;&gt;
-          &lt;a href=&quot;#Free-Talk&quot; class=&quot;heading-link&quot;&gt;&lt;i class=&quot;fas fa-link&quot;&gt;&lt;/i&gt;&lt;/a&gt;Free Talk&lt;/h1&gt;
-      &lt;p&gt;看着身边很多朋友都陆陆续续入坑LeetCode，博主也打算开启自己的LeetCode之旅。&lt;br&gt;现在是先定一个小目标，一天先刷一道题，后面再慢慢地增加。&lt;br&gt;&lt;strong&gt;So Study with me📖!&lt;/strong&gt;&lt;/p&gt;
-    
-    </summary>
-    
-    
-      <category term="LeetCode" scheme="https://Gemini-Lin.github.io/categories/LeetCode/"/>
-    
-    
-      <category term="LeetCode" scheme="https://Gemini-Lin.github.io/tags/LeetCode/"/>
-    
-      <category term="刷题路线" scheme="https://Gemini-Lin.github.io/tags/%E5%88%B7%E9%A2%98%E8%B7%AF%E7%BA%BF/"/>
     
   </entry>
   
