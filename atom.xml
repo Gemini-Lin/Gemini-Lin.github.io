@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://gemini-lin.github.io/"/>
-  <updated>2020-08-11T05:26:32.503Z</updated>
+  <updated>2020-08-11T12:15:55.748Z</updated>
   <id>https://gemini-lin.github.io/</id>
   
   <author>
@@ -15,6 +15,44 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>计网第六章--数据链路层</title>
+    <link href="https://gemini-lin.github.io/Computer-Network-6/"/>
+    <id>https://gemini-lin.github.io/Computer-Network-6/</id>
+    <published>2020-08-11T12:14:13.000Z</published>
+    <updated>2020-08-11T12:15:55.748Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;
+        &lt;img class=&quot;lazyload lazyload-gif&quot; src=&quot;/images/loading.svg&quot; data-src=&quot;https://s1.ax1x.com/2020/08/11/aOLCOe.png&quot; alt=&quot;计网第六章--数据链路层&quot;&gt;
+      &lt;br&gt;&lt;/p&gt;
+
+
+&lt;title&gt;计网第六章--数据链路层&lt;/title&gt;
+&lt;meta charset=&quot;utf-8&quot;&gt;
+&lt;meta http-equiv=&quot;Content-Type&quot; content=&quot;text/html; charset=utf-8&quot;&gt;
+&lt;meta name=&quot;renderer&quot; content=&quot;webkit&quot;&gt;
+&lt;meta name=&quot;author&quot; content=&quot;mubu.com&quot;&gt;
+&lt;meta name=&quot;generator&quot; content=&quot;Hexo 4.2.1&quot;&gt;&lt;link rel=&quot;alternate&quot; href=&quot;/atom.xml&quot; title=&quot;GeminiPlanet&quot; type=&quot;application/atom+xml&quot;&gt;
+
+
+&lt;div class=&quot;export-wrapper&quot;&gt;&lt;div style=&quot;font-size: 22px; padding: 0 15px 0;&quot;&gt;&lt;div style=&quot;padding-bottom: 24px&quot;&gt;计网第六章--数据链路层&lt;/div&gt;&lt;div style=&quot;background: #e5e6e8; height: 1px; margin-bottom: 20px;&quot;&gt;&lt;/div&gt;&lt;/div&gt;&lt;ul style=&quot;list-style: disc outside;&quot;&gt;&lt;li style=&quot;line-height: 24px;&quot;&gt;&lt;span class=&quot;content mubu-node&quot; style=&quot;line-height: 24px; min-height: 24px; font-size: 16px; padding: 2px 0px; display: inline-block; vertical-align: top;&quot;&gt;&lt;span class=&quot;bold&quot; style=&quot;font-weight: bold;&quot;&gt;链路层概述&lt;/span&gt;&lt;/span&gt;&lt;ul class=&quot;children&quot; style=&quot;list-style: disc outside; padding-bottom: 4px;&quot;&gt;&lt;li style=&quot;line-height: 24px;&quot;&gt;&lt;span class=&quot;content mubu-node&quot; style=&quot;line-height: 24px; min-height: 24px; font-size: 16px; padding: 2px 0px; display: inline-block; vertical-align: top;&quot;&gt;&lt;span class=&quot;bold&quot; style=&quot;font-weight: bold;&quot;&gt;链路层的术语&lt;/span&gt;&lt;/span&gt;&lt;ul class=&quot;children&quot; style=&quot;list-style: disc outside; padding-bottom: 4px;&quot;&gt;&lt;li style=&quot;line-height: 24px;&quot;&gt;&lt;span class=&quot;content mubu-node&quot; style=&quot;line-height: 24px; min-height: 24px; font-size: 16px; padding: 2px 0px; display: inline-block; vertical-align: top;&quot;&gt;&lt;span class=&quot;bold&quot; style=&quot;font-weight: bold;&quot;&gt;节点：&lt;/span&gt;主机和路由器&lt;/span&gt;&lt;/li&gt;&lt;li style=&quot;line-height: 24px;&quot;&gt;&lt;span class=&quot;content mubu-node&quot; style=&quot;line-height: 24px; min-height: 24px; font-size: 16px; padding: 2px 0px; display: inline-block; vertical-align: top;&quot;&gt;&lt;span class=&quot;bold&quot; style=&quot;font-weight: bold;&quot;&gt;链路：&lt;/span&gt;沿着通信路径连接相邻节点的通信信道&lt;/span&gt;&lt;/li&gt;&lt;li style=&quot;line-height: 24px;&quot;&gt;&lt;span class=&quot;content mubu-node&quot; style=&quot;line-height: 24px; min-height: 24px; font-size: 16px; padding: 2px 0px; display: inline-block; vertical-align: top;&quot;&gt;&lt;span class=&quot;bold&quot; style=&quot;font-weight: bold;&quot;&gt;数据帧frame：第二层的&lt;/span&gt;分组，封装了的&lt;span class=&quot;bold&quot; style=&quot;font-weight: bold;&quot;&gt;数据报&lt;/span&gt;&lt;/span&gt;&lt;/li&gt;&lt;li style=&quot;line-height: 24px;&quot;&gt;&lt;span class=&quot;content mubu-node&quot; style=&quot;line-height: 24px; min-height: 24px; font-size: 16px; padding: 2px 0px; display: inline-block; vertical-align: top;&quot;&gt;数据链路层的&lt;span class=&quot;bold&quot; style=&quot;font-weight: bold;&quot;&gt;职责：&lt;/span&gt;将数据报从一个节点传送到与该节点直接有&lt;span class=&quot;bold&quot; style=&quot;font-weight: bold;&quot;&gt;物理链路相连&lt;/span&gt;的另一个节点&lt;/span&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/div&gt;
+    
+    </summary>
+    
+    
+      <category term="课程总结" scheme="https://Gemini-Lin.github.io/categories/%E8%AF%BE%E7%A8%8B%E6%80%BB%E7%BB%93/"/>
+    
+      <category term="计算机网络" scheme="https://Gemini-Lin.github.io/categories/%E8%AF%BE%E7%A8%8B%E6%80%BB%E7%BB%93/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/"/>
+    
+    
+      <category term="计算机网络" scheme="https://Gemini-Lin.github.io/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/"/>
+    
+      <category term="数据链路层" scheme="https://Gemini-Lin.github.io/tags/%E6%95%B0%E6%8D%AE%E9%93%BE%E8%B7%AF%E5%B1%82/"/>
+    
+  </entry>
   
   <entry>
     <title>计算机网络第五章--网络层</title>
@@ -698,37 +736,6 @@
       <category term="SpringBoot" scheme="https://Gemini-Lin.github.io/tags/SpringBoot/"/>
     
       <category term="YAML" scheme="https://Gemini-Lin.github.io/tags/YAML/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Docker运行Mysql镜像</title>
-    <link href="https://gemini-lin.github.io/Docker-Mysql/"/>
-    <id>https://gemini-lin.github.io/Docker-Mysql/</id>
-    <published>2020-07-24T03:46:58.000Z</published>
-    <updated>2020-07-24T05:00:19.189Z</updated>
-    
-    <summary type="html">
-    
-      &lt;h1 id=&quot;Free-Talk&quot;&gt;
-          &lt;a href=&quot;#Free-Talk&quot; class=&quot;heading-link&quot;&gt;&lt;i class=&quot;fas fa-link&quot;&gt;&lt;/i&gt;&lt;/a&gt;Free Talk&lt;/h1&gt;
-      &lt;p&gt;最近在进行Spring Boot学习，在配置数据库时想要使用Docker下载Mysql镜像，但是过程中遇到了挺多问题，故记录下解决过程。&lt;br&gt;&lt;strong&gt;本篇文章内容包含利用Docker运行Mysql镜像，完成数据库配置。&lt;/strong&gt;&lt;br&gt;
-        &lt;img class=&quot;lazyload lazyload-gif&quot; src=&quot;/images/loading.svg&quot; data-src=&quot;https://s1.ax1x.com/2020/07/24/UjmpMq.png&quot; alt=&quot;Docker-Mysql&quot;&gt;
-      &lt;/p&gt;
-    
-    </summary>
-    
-    
-      <category term="Java后端" scheme="https://Gemini-Lin.github.io/categories/Java%E5%90%8E%E7%AB%AF/"/>
-    
-      <category term="开发工具" scheme="https://Gemini-Lin.github.io/categories/Java%E5%90%8E%E7%AB%AF/%E5%BC%80%E5%8F%91%E5%B7%A5%E5%85%B7/"/>
-    
-    
-      <category term="Docker" scheme="https://Gemini-Lin.github.io/tags/Docker/"/>
-    
-      <category term="Mysql" scheme="https://Gemini-Lin.github.io/tags/Mysql/"/>
-    
-      <category term="Windows" scheme="https://Gemini-Lin.github.io/tags/Windows/"/>
     
   </entry>
   
