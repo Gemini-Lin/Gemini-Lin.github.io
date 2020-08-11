@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://gemini-lin.github.io/"/>
-  <updated>2020-08-10T07:22:12.251Z</updated>
+  <updated>2020-08-11T05:26:32.503Z</updated>
   <id>https://gemini-lin.github.io/</id>
   
   <author>
@@ -15,6 +15,44 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>计算机网络第五章--网络层</title>
+    <link href="https://gemini-lin.github.io/Computer-Network-5/"/>
+    <id>https://gemini-lin.github.io/Computer-Network-5/</id>
+    <published>2020-08-11T05:24:36.000Z</published>
+    <updated>2020-08-11T05:26:32.503Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;
+        &lt;img class=&quot;lazyload lazyload-gif&quot; src=&quot;/images/loading.svg&quot; data-src=&quot;https://s1.ax1x.com/2020/08/11/aLBhY6.png&quot; alt=&quot;计算机网络第五章--网络层&quot;&gt;
+      &lt;br&gt;&lt;/p&gt;
+
+
+&lt;title&gt;计算机网络第五章--网络层&lt;/title&gt;
+&lt;meta charset=&quot;utf-8&quot;&gt;
+&lt;meta http-equiv=&quot;Content-Type&quot; content=&quot;text/html; charset=utf-8&quot;&gt;
+&lt;meta name=&quot;renderer&quot; content=&quot;webkit&quot;&gt;
+&lt;meta name=&quot;author&quot; content=&quot;mubu.com&quot;&gt;
+&lt;meta name=&quot;generator&quot; content=&quot;Hexo 4.2.1&quot;&gt;&lt;link rel=&quot;alternate&quot; href=&quot;/atom.xml&quot; title=&quot;GeminiPlanet&quot; type=&quot;application/atom+xml&quot;&gt;
+
+
+&lt;div class=&quot;export-wrapper&quot;&gt;&lt;div style=&quot;font-size: 22px; padding: 0 15px 0;&quot;&gt;&lt;div style=&quot;padding-bottom: 24px&quot;&gt;计算机网络第五章--网络层&lt;/div&gt;&lt;div style=&quot;background: #e5e6e8; height: 1px; margin-bottom: 20px;&quot;&gt;&lt;/div&gt;&lt;/div&gt;&lt;ul style=&quot;list-style: disc outside;&quot;&gt;&lt;li style=&quot;line-height: 24px;&quot;&gt;&lt;span class=&quot;content mubu-node&quot; style=&quot;line-height: 24px; min-height: 24px; font-size: 16px; padding: 2px 0px; display: inline-block; vertical-align: top;&quot;&gt;&lt;span class=&quot;bold&quot; style=&quot;font-weight: bold;&quot;&gt;引言&lt;/span&gt;&lt;/span&gt;&lt;ul class=&quot;children&quot; style=&quot;list-style: disc outside; padding-bottom: 4px;&quot;&gt;&lt;li style=&quot;line-height: 24px;&quot;&gt;&lt;span class=&quot;content mubu-node&quot; style=&quot;line-height: 24px; min-height: 24px; font-size: 16px; padding: 2px 0px; display: inline-block; vertical-align: top;&quot;&gt;&lt;span class=&quot;bold&quot; style=&quot;font-weight: bold;&quot;&gt;网络层功能&lt;/span&gt;&lt;/span&gt;&lt;ul class=&quot;children&quot; style=&quot;list-style: disc outside; padding-bottom: 4px;&quot;&gt;&lt;li style=&quot;line-height: 24px;&quot;&gt;&lt;span class=&quot;content mubu-node&quot; style=&quot;line-height: 24px; min-height: 24px; font-size: 16px; padding: 2px 0px; display: inline-block; vertical-align: top;&quot;&gt;&lt;span class=&quot;bold&quot; style=&quot;font-weight: bold;&quot;&gt;转发forwarding：&lt;/span&gt;将分组从路由器的&lt;span class=&quot;bold&quot; style=&quot;font-weight: bold;&quot;&gt;输入端口&lt;/span&gt;转移到正确的路由器&lt;span class=&quot;bold&quot; style=&quot;font-weight: bold;&quot;&gt;输出端口&lt;/span&gt;&lt;/span&gt;&lt;/li&gt;&lt;li style=&quot;line-height: 24px;&quot;&gt;&lt;span class=&quot;content mubu-node&quot; style=&quot;line-height: 24px; min-height: 24px; font-size: 16px; padding: 2px 0px; display: inline-block; vertical-align: top;&quot;&gt;&lt;span class=&quot;bold&quot; style=&quot;font-weight: bold;&quot;&gt;路由routing：&lt;/span&gt;确定分组从&lt;span class=&quot;bold&quot; style=&quot;font-weight: bold;&quot;&gt;发送方传输到接收方&lt;/span&gt;（目的主机）所经过的&lt;span class=&quot;bold&quot; style=&quot;font-weight: bold;&quot;&gt;路径&lt;/span&gt;（或路由）&lt;/span&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/li&gt;&lt;li style=&quot;line-height: 24px;&quot;&gt;&lt;span class=&quot;content mubu-node&quot; style=&quot;line-height: 24px; min-height: 24px; font-size: 16px; padding: 2px 0px; display: inline-block; vertical-align: top;&quot;&gt;&lt;span class=&quot;bold&quot; style=&quot;font-weight: bold;&quot;&gt;网络层：数据平面和控制平面&lt;/span&gt;&lt;/span&gt;&lt;ul class=&quot;children&quot; style=&quot;list-style: disc outside; padding-bottom: 4px;&quot;&gt;&lt;li style=&quot;line-height: 24px;&quot;&gt;&lt;span class=&quot;content mubu-node&quot; style=&quot;line-height: 24px; min-height: 24px; font-size: 16px; padding: 2px 0px; display: inline-block; vertical-align: top;&quot;&gt;&lt;span class=&quot;bold&quot; style=&quot;font-weight: bold;&quot;&gt;数据平面：&lt;/span&gt;本地的，每个路由器内部的功能，&lt;span class=&quot;bold&quot; style=&quot;font-weight: bold;&quot;&gt;实现转发&lt;/span&gt;&lt;/span&gt;&lt;/li&gt;&lt;li style=&quot;line-height: 24px;&quot;&gt;&lt;span class=&quot;content mubu-node&quot; style=&quot;line-height: 24px; min-height: 24px; font-size: 16px; padding: 2px 0px; display: inline-block; vertical-align: top;&quot;&gt;&lt;span class=&quot;bold&quot; style=&quot;font-weight: bold;&quot;&gt;控制平面：&lt;/span&gt;整个网络范围，&lt;span class=&quot;bold&quot; style=&quot;font-weight: bold;&quot;&gt;实现路由&lt;/span&gt;&lt;/span&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/div&gt;
+    
+    </summary>
+    
+    
+      <category term="课程总结" scheme="https://Gemini-Lin.github.io/categories/%E8%AF%BE%E7%A8%8B%E6%80%BB%E7%BB%93/"/>
+    
+      <category term="计算机网络" scheme="https://Gemini-Lin.github.io/categories/%E8%AF%BE%E7%A8%8B%E6%80%BB%E7%BB%93/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/"/>
+    
+    
+      <category term="计算机网络" scheme="https://Gemini-Lin.github.io/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/"/>
+    
+      <category term="传输层" scheme="https://Gemini-Lin.github.io/tags/%E4%BC%A0%E8%BE%93%E5%B1%82/"/>
+    
+  </entry>
   
   <entry>
     <title>数据库第七章--NoSQL数据库</title>
@@ -691,33 +729,6 @@
       <category term="Mysql" scheme="https://Gemini-Lin.github.io/tags/Mysql/"/>
     
       <category term="Windows" scheme="https://Gemini-Lin.github.io/tags/Windows/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>LeetCode体验篇</title>
-    <link href="https://gemini-lin.github.io/LeetCode-Day1/"/>
-    <id>https://gemini-lin.github.io/LeetCode-Day1/</id>
-    <published>2020-07-21T05:27:11.000Z</published>
-    <updated>2020-07-26T11:53:42.480Z</updated>
-    
-    <summary type="html">
-    
-      &lt;h1 id=&quot;Free-Talk&quot;&gt;
-          &lt;a href=&quot;#Free-Talk&quot; class=&quot;heading-link&quot;&gt;&lt;i class=&quot;fas fa-link&quot;&gt;&lt;/i&gt;&lt;/a&gt;Free Talk&lt;/h1&gt;
-      &lt;p&gt;作为LeetCode新手，我选择了HOT100里的一下简单和中等及困难的题目来刷。&lt;br&gt;本篇文章是自己一周刷题的心得，主要内容为刷题的&lt;strong&gt;心路历程、收获以及解题方法&lt;/strong&gt;。&lt;br&gt;
-        &lt;img class=&quot;lazyload lazyload-gif&quot; src=&quot;/images/loading.svg&quot; data-src=&quot;https://s1.ax1x.com/2020/07/24/UjVUyV.png&quot; alt=&quot;LeetCode&quot;&gt;
-      &lt;/p&gt;
-    
-    </summary>
-    
-    
-      <category term="LeetCode" scheme="https://Gemini-Lin.github.io/categories/LeetCode/"/>
-    
-    
-      <category term="LeetCode" scheme="https://Gemini-Lin.github.io/tags/LeetCode/"/>
-    
-      <category term="HOT100" scheme="https://Gemini-Lin.github.io/tags/HOT100/"/>
     
   </entry>
   
