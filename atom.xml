@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://gemini-lin.github.io/"/>
-  <updated>2020-08-12T14:02:19.085Z</updated>
+  <updated>2020-08-13T04:33:05.363Z</updated>
   <id>https://gemini-lin.github.io/</id>
   
   <author>
@@ -15,6 +15,46 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>操作系统第五章-虚拟存储系统</title>
+    <link href="https://gemini-lin.github.io/Operating-System-7/"/>
+    <id>https://gemini-lin.github.io/Operating-System-7/</id>
+    <published>2020-08-13T04:30:27.000Z</published>
+    <updated>2020-08-13T04:33:05.363Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;
+        &lt;img class=&quot;lazyload lazyload-gif&quot; src=&quot;/images/loading.svg&quot; data-src=&quot;https://s1.ax1x.com/2020/08/13/azIO8P.png&quot; alt=&quot;操作系统第五章-虚拟存储系统&quot;&gt;
+      &lt;br&gt;&lt;/p&gt;
+
+
+&lt;title&gt;操作系统第五章-虚拟存储系统&lt;/title&gt;
+&lt;meta charset=&quot;utf-8&quot;&gt;
+&lt;meta http-equiv=&quot;Content-Type&quot; content=&quot;text/html; charset=utf-8&quot;&gt;
+&lt;meta name=&quot;renderer&quot; content=&quot;webkit&quot;&gt;
+&lt;meta name=&quot;author&quot; content=&quot;mubu.com&quot;&gt;
+&lt;meta name=&quot;generator&quot; content=&quot;Hexo 4.2.1&quot;&gt;&lt;link rel=&quot;alternate&quot; href=&quot;/atom.xml&quot; title=&quot;GeminiPlanet&quot; type=&quot;application/atom+xml&quot;&gt;
+
+
+&lt;div class=&quot;export-wrapper&quot;&gt;&lt;div style=&quot;font-size: 22px; padding: 0 15px 0;&quot;&gt;&lt;div style=&quot;padding-bottom: 24px&quot;&gt;操作系统第五章-虚拟存储系统&lt;/div&gt;&lt;div style=&quot;background: #e5e6e8; height: 1px; margin-bottom: 20px;&quot;&gt;&lt;/div&gt;&lt;/div&gt;&lt;ul style=&quot;list-style: disc outside;&quot;&gt;&lt;li style=&quot;line-height: 24px;&quot;&gt;&lt;span class=&quot;content mubu-node&quot; style=&quot;line-height: 24px; min-height: 24px; font-size: 16px; padding: 2px 0px; display: inline-block; vertical-align: top;&quot;&gt;&lt;span class=&quot;bold&quot; style=&quot;font-weight: bold;&quot;&gt;虚拟存储器的基本概念&lt;/span&gt;&lt;/span&gt;&lt;ul class=&quot;children&quot; style=&quot;list-style: disc outside; padding-bottom: 4px;&quot;&gt;&lt;li style=&quot;line-height: 24px;&quot;&gt;&lt;span class=&quot;content mubu-node&quot; style=&quot;line-height: 24px; min-height: 24px; font-size: 16px; padding: 2px 0px; display: inline-block; vertical-align: top;&quot;&gt;&lt;span class=&quot;bold&quot; style=&quot;font-weight: bold;&quot;&gt;虚拟存储器的引入&lt;/span&gt;&lt;/span&gt;&lt;ul class=&quot;children&quot; style=&quot;list-style: disc outside; padding-bottom: 4px;&quot;&gt;&lt;li style=&quot;line-height: 24px;&quot;&gt;&lt;span class=&quot;content mubu-node&quot; style=&quot;line-height: 24px; min-height: 24px; font-size: 16px; padding: 2px 0px; display: inline-block; vertical-align: top;&quot;&gt;常规存储器管理方式的特征&lt;/span&gt;&lt;ul class=&quot;children&quot; style=&quot;list-style: disc outside; padding-bottom: 4px;&quot;&gt;&lt;li style=&quot;line-height: 24px;&quot;&gt;&lt;span class=&quot;content mubu-node&quot; style=&quot;line-height: 24px; min-height: 24px; font-size: 16px; padding: 2px 0px; display: inline-block; vertical-align: top;&quot;&gt;&lt;span class=&quot;bold&quot; style=&quot;font-weight: bold;&quot;&gt;一次性：&lt;/span&gt;作业在运行前需&lt;span class=&quot;bold&quot; style=&quot;font-weight: bold;&quot;&gt;一次性地全部装入&lt;/span&gt;内存&lt;/span&gt;&lt;/li&gt;&lt;li style=&quot;line-height: 24px;&quot;&gt;&lt;span class=&quot;content mubu-node&quot; style=&quot;line-height: 24px; min-height: 24px; font-size: 16px; padding: 2px 0px; display: inline-block; vertical-align: top;&quot;&gt;&lt;span class=&quot;bold&quot; style=&quot;font-weight: bold;&quot;&gt;驻留性：&lt;/span&gt;作业装入内存后，便&lt;span class=&quot;bold&quot; style=&quot;font-weight: bold;&quot;&gt;一直驻留在内存中&lt;/span&gt;，直至作业运行结束。&lt;/span&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/li&gt;&lt;li style=&quot;line-height: 24px;&quot;&gt;&lt;span class=&quot;content mubu-node&quot; style=&quot;line-height: 24px; min-height: 24px; font-size: 16px; padding: 2px 0px; display: inline-block; vertical-align: top;&quot;&gt;&lt;span class=&quot;bold&quot; style=&quot;font-weight: bold;&quot;&gt;局部性原理&lt;/span&gt;&lt;/span&gt;&lt;ul class=&quot;children&quot; style=&quot;list-style: disc outside; padding-bottom: 4px;&quot;&gt;&lt;li style=&quot;line-height: 24px;&quot;&gt;&lt;span class=&quot;content mubu-node&quot; style=&quot;line-height: 24px; min-height: 24px; font-size: 16px; padding: 2px 0px; display: inline-block; vertical-align: top;&quot;&gt;程序的执行总是&lt;span class=&quot;bold&quot; style=&quot;font-weight: bold;&quot;&gt;呈现局部性&lt;/span&gt;。即，在一个较短的时间段内，程序的执行仅限于某个部分；相应的，它所访问的&lt;span class=&quot;bold&quot; style=&quot;font-weight: bold;&quot;&gt;存储空间也局限于某个区域&lt;/span&gt;。&lt;/span&gt;&lt;/li&gt;&lt;li style=&quot;line-height: 24px;&quot;&gt;&lt;span class=&quot;content mubu-node&quot; style=&quot;line-height: 24px; min-height: 24px; font-size: 16px; padding: 2px 0px; display: inline-block; vertical-align: top;&quot;&gt;&lt;span class=&quot;bold&quot; style=&quot;font-weight: bold;&quot;&gt;时间局限性：&lt;/span&gt;如果程序中的某条指令一旦执行， 则不久以后该指令可能再次执行；如果&lt;span class=&quot;bold&quot; style=&quot;font-weight: bold;&quot;&gt;某数据被访问过&lt;/span&gt;， 则不久以后该&lt;span class=&quot;bold&quot; style=&quot;font-weight: bold;&quot;&gt;数据可能再次被访问&lt;/span&gt;。&lt;/span&gt;&lt;/li&gt;&lt;li style=&quot;line-height: 24px;&quot;&gt;&lt;span class=&quot;content mubu-node&quot; style=&quot;line-height: 24px; min-height: 24px; font-size: 16px; padding: 2px 0px; display: inline-block; vertical-align: top;&quot;&gt;&lt;span class=&quot;bold&quot; style=&quot;font-weight: bold;&quot;&gt;空间局限性：&lt;/span&gt;一旦程序访问了某个存储单元，在不久之后，其&lt;span class=&quot;bold&quot; style=&quot;font-weight: bold;&quot;&gt;附近的存储单元&lt;/span&gt;也将被访问;&lt;/span&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/div&gt;
+    
+    </summary>
+    
+    
+      <category term="课程总结" scheme="https://Gemini-Lin.github.io/categories/%E8%AF%BE%E7%A8%8B%E6%80%BB%E7%BB%93/"/>
+    
+      <category term="操作系统" scheme="https://Gemini-Lin.github.io/categories/%E8%AF%BE%E7%A8%8B%E6%80%BB%E7%BB%93/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/"/>
+    
+    
+      <category term="OS" scheme="https://Gemini-Lin.github.io/tags/OS/"/>
+    
+      <category term="虚拟内存" scheme="https://Gemini-Lin.github.io/tags/%E8%99%9A%E6%8B%9F%E5%86%85%E5%AD%98/"/>
+    
+      <category term="页面置换" scheme="https://Gemini-Lin.github.io/tags/%E9%A1%B5%E9%9D%A2%E7%BD%AE%E6%8D%A2/"/>
+    
+  </entry>
   
   <entry>
     <title>操作系统第四章--存储器管理（内存）</title>
@@ -716,41 +756,6 @@
       <category term="微服务" scheme="https://Gemini-Lin.github.io/tags/%E5%BE%AE%E6%9C%8D%E5%8A%A1/"/>
     
       <category term="SpringBoot" scheme="https://Gemini-Lin.github.io/tags/SpringBoot/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Spring Guide</title>
-    <link href="https://gemini-lin.github.io/Spring-Guide/"/>
-    <id>https://gemini-lin.github.io/Spring-Guide/</id>
-    <published>2020-07-28T01:38:41.000Z</published>
-    <updated>2020-07-28T03:18:09.087Z</updated>
-    
-    <summary type="html">
-    
-      &lt;h1 id=&quot;Free-Talk&quot;&gt;
-          &lt;a href=&quot;#Free-Talk&quot; class=&quot;heading-link&quot;&gt;&lt;i class=&quot;fas fa-link&quot;&gt;&lt;/i&gt;&lt;/a&gt;Free Talk&lt;/h1&gt;
-      &lt;p&gt;&lt;strong&gt;Spring 是一种轻量级开发框架，旨在提高开发人员的开发效率以及系统的可维护性。&lt;/strong&gt;&lt;br&gt;它包含以下核心模块：&lt;br&gt;
-        &lt;img class=&quot;lazyload lazyload-gif&quot; src=&quot;/images/loading.svg&quot; data-src=&quot;https://s1.ax1x.com/2020/07/28/ak6x8H.png&quot; alt=&quot;SpringFramework&quot;&gt;
-      &lt;/p&gt;
-    
-    </summary>
-    
-    
-      <category term="Java后端" scheme="https://Gemini-Lin.github.io/categories/Java%E5%90%8E%E7%AB%AF/"/>
-    
-      <category term="Spring Framework" scheme="https://Gemini-Lin.github.io/categories/Java%E5%90%8E%E7%AB%AF/Spring-Framework/"/>
-    
-      <category term="Spring" scheme="https://Gemini-Lin.github.io/categories/Java%E5%90%8E%E7%AB%AF/Spring-Framework/Spring/"/>
-    
-    
-      <category term="Spring" scheme="https://Gemini-Lin.github.io/tags/Spring/"/>
-    
-      <category term="AOP" scheme="https://Gemini-Lin.github.io/tags/AOP/"/>
-    
-      <category term="IOC" scheme="https://Gemini-Lin.github.io/tags/IOC/"/>
-    
-      <category term="Bean" scheme="https://Gemini-Lin.github.io/tags/Bean/"/>
     
   </entry>
   
