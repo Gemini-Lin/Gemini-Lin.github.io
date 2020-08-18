@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://gemini-lin.github.io/"/>
-  <updated>2020-08-14T04:15:39.510Z</updated>
+  <updated>2020-08-18T09:02:21.005Z</updated>
   <id>https://gemini-lin.github.io/</id>
   
   <author>
@@ -15,6 +15,41 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>汇编语言期末总结</title>
+    <link href="https://gemini-lin.github.io/Assembly-Language/"/>
+    <id>https://gemini-lin.github.io/Assembly-Language/</id>
+    <published>2020-08-18T08:13:55.000Z</published>
+    <updated>2020-08-18T09:02:21.005Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;
+        &lt;img class=&quot;lazyload lazyload-gif&quot; src=&quot;/images/loading.svg&quot; data-src=&quot;https://i.loli.net/2020/08/18/xPuCYETheyF3sQ4.png&quot; alt=&quot;汇编语言&quot;&gt;
+      &lt;/p&gt;
+
+        &lt;h1 id=&quot;基础知识&quot;&gt;
+          &lt;a href=&quot;#基础知识&quot; class=&quot;heading-link&quot;&gt;&lt;i class=&quot;fas fa-link&quot;&gt;&lt;/i&gt;&lt;/a&gt;基础知识&lt;/h1&gt;
+      
+
+        &lt;h2 id=&quot;机器语言&quot;&gt;
+          &lt;a href=&quot;#机器语言&quot; class=&quot;heading-link&quot;&gt;&lt;i class=&quot;fas fa-link&quot;&gt;&lt;/i&gt;&lt;/a&gt;机器语言&lt;/h2&gt;
+      
+&lt;p&gt;汇编语言的&lt;strong&gt;本质可以看作计算机硬件的功能接口。&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;机器语言是&lt;strong&gt;机器指令&lt;/strong&gt;的集合。&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="课程总结" scheme="https://Gemini-Lin.github.io/categories/%E8%AF%BE%E7%A8%8B%E6%80%BB%E7%BB%93/"/>
+    
+      <category term="汇编语言" scheme="https://Gemini-Lin.github.io/categories/%E8%AF%BE%E7%A8%8B%E6%80%BB%E7%BB%93/%E6%B1%87%E7%BC%96%E8%AF%AD%E8%A8%80/"/>
+    
+    
+      <category term="汇编语言" scheme="https://Gemini-Lin.github.io/tags/%E6%B1%87%E7%BC%96%E8%AF%AD%E8%A8%80/"/>
+    
+  </entry>
   
   <entry>
     <title>操作系统第六章--设备管理</title>
@@ -27,7 +62,8 @@
     
       &lt;p&gt;
         &lt;img class=&quot;lazyload lazyload-gif&quot; src=&quot;/images/loading.svg&quot; data-src=&quot;https://s1.ax1x.com/2020/08/14/dCK6N6.png&quot; alt=&quot;操作系统第六章--设备管理&quot;&gt;
-      &lt;br&gt;&lt;/p&gt;
+      &lt;/p&gt;
+
 
 
 &lt;title&gt;操作系统第六章--设备管理&lt;/title&gt;
@@ -63,9 +99,10 @@
     
     <summary type="html">
     
-      &lt;h1 id=&quot;Free-Talk&quot;&gt;
-          &lt;a href=&quot;#Free-Talk&quot; class=&quot;heading-link&quot;&gt;&lt;i class=&quot;fas fa-link&quot;&gt;&lt;/i&gt;&lt;/a&gt;Free Talk&lt;/h1&gt;
-      &lt;p&gt;大一的时候第一次学习C语言，使用的编译器是C-Free 5.0。后面陆陆续续地使用了Clion、VS，到在Linux下直接用记事本写代码。这次电脑重装系统之后，一直都没有配置一下C语言编译器。&lt;strong&gt;作为导生，正好趁这个机会写一篇配置教程给未来班上的学弟学妹们。&lt;/strong&gt;VScode在微软的大力扶持和开源社区下，逐渐称为相当主流的编译器，它有很多的优势，有兴趣可以自己了解。&lt;/p&gt;
+      &lt;h1 id=&quot;free-talk&quot;&gt;
+          &lt;a href=&quot;#free-talk&quot; class=&quot;heading-link&quot;&gt;&lt;i class=&quot;fas fa-link&quot;&gt;&lt;/i&gt;&lt;/a&gt;Free Talk&lt;/h1&gt;
+      
+&lt;p&gt;大一的时候第一次学习C语言，使用的编译器是C-Free 5.0。后面陆陆续续地使用了Clion、VS，到在Linux下直接用记事本写代码。这次电脑重装系统之后，一直都没有配置一下C语言编译器。**作为导生，正好趁这个机会写一篇配置教程给未来班上的学弟学妹们。**VScode在微软的大力扶持和开源社区下，逐渐称为相当主流的编译器，它有很多的优势，有兴趣可以自己了解。&lt;/p&gt;
     
     </summary>
     
@@ -92,7 +129,8 @@
     
       &lt;p&gt;
         &lt;img class=&quot;lazyload lazyload-gif&quot; src=&quot;/images/loading.svg&quot; data-src=&quot;https://s1.ax1x.com/2020/08/13/azIO8P.png&quot; alt=&quot;操作系统第五章-虚拟存储系统&quot;&gt;
-      &lt;br&gt;&lt;/p&gt;
+      &lt;/p&gt;
+
 
 
 &lt;title&gt;操作系统第五章-虚拟存储系统&lt;/title&gt;
@@ -132,7 +170,8 @@
     
       &lt;p&gt;
         &lt;img class=&quot;lazyload lazyload-gif&quot; src=&quot;/images/loading.svg&quot; data-src=&quot;https://s1.ax1x.com/2020/08/12/axaINn.png&quot; alt=&quot;操作系统第四章--存储器管理（内存）&quot;&gt;
-      &lt;br&gt;&lt;/p&gt;
+      &lt;/p&gt;
+
 
 
 &lt;title&gt;操作系统第四章--存储器管理（内存）&lt;/title&gt;
@@ -174,7 +213,8 @@
     
       &lt;p&gt;
         &lt;img class=&quot;lazyload lazyload-gif&quot; src=&quot;/images/loading.svg&quot; data-src=&quot;https://s1.ax1x.com/2020/08/11/aOLCOe.png&quot; alt=&quot;计网第六章--数据链路层&quot;&gt;
-      &lt;br&gt;&lt;/p&gt;
+      &lt;/p&gt;
+
 
 
 &lt;title&gt;计网第六章--数据链路层&lt;/title&gt;
@@ -212,7 +252,8 @@
     
       &lt;p&gt;
         &lt;img class=&quot;lazyload lazyload-gif&quot; src=&quot;/images/loading.svg&quot; data-src=&quot;https://s1.ax1x.com/2020/08/11/aLBhY6.png&quot; alt=&quot;计算机网络第五章--网络层&quot;&gt;
-      &lt;br&gt;&lt;/p&gt;
+      &lt;/p&gt;
+
 
 
 &lt;title&gt;计算机网络第五章--网络层&lt;/title&gt;
@@ -250,7 +291,8 @@
     
       &lt;p&gt;
         &lt;img class=&quot;lazyload lazyload-gif&quot; src=&quot;/images/loading.svg&quot; data-src=&quot;https://s1.ax1x.com/2020/08/10/aHO33F.png&quot; alt=&quot;数据库第七章--NoSQL数据库&quot;&gt;
-      &lt;br&gt;&lt;/p&gt;
+      &lt;/p&gt;
+
 
 
 &lt;title&gt;数据库第七章--NoSQL数据库&lt;/title&gt;
@@ -288,7 +330,8 @@
     
       &lt;p&gt;
         &lt;img class=&quot;lazyload lazyload-gif&quot; src=&quot;/images/loading.svg&quot; data-src=&quot;https://s1.ax1x.com/2020/08/10/aHNDhj.png&quot; alt=&quot;数据库第六章--数据库编程&quot;&gt;
-      &lt;br&gt;&lt;/p&gt;
+      &lt;/p&gt;
+
 
 
 &lt;title&gt;数据库第六章--数据库编程&lt;/title&gt;
@@ -324,7 +367,8 @@
     
       &lt;p&gt;
         &lt;img class=&quot;lazyload lazyload-gif&quot; src=&quot;/images/loading.svg&quot; data-src=&quot;https://s1.ax1x.com/2020/08/10/aHKVN6.png&quot; alt=&quot;数据库第五章--数据库管理&quot;&gt;
-      &lt;br&gt;&lt;/p&gt;
+      &lt;/p&gt;
+
 
 
 &lt;title&gt;数据库第五章--数据库管理&lt;/title&gt;
@@ -362,7 +406,8 @@
     
       &lt;p&gt;
         &lt;img class=&quot;lazyload lazyload-gif&quot; src=&quot;/images/loading.svg&quot; data-src=&quot;https://s1.ax1x.com/2020/08/09/a7mnRH.png&quot; alt=&quot;数据库第四章--数据库设计&quot;&gt;
-      &lt;br&gt;&lt;/p&gt;
+      &lt;/p&gt;
+
 
 
 &lt;title&gt;数据库第四章--数据库设计&lt;/title&gt;
@@ -398,7 +443,8 @@
     
       &lt;p&gt;
         &lt;img class=&quot;lazyload lazyload-gif&quot; src=&quot;/images/loading.svg&quot; data-src=&quot;https://s1.ax1x.com/2020/08/09/aox9Sg.png&quot; alt=&quot;数据库第三章--SQL语言&quot;&gt;
-      &lt;br&gt;&lt;/p&gt;
+      &lt;/p&gt;
+
 
 
 &lt;title&gt;数据库第三章--SQL语言&lt;/title&gt;
@@ -436,7 +482,8 @@
     
       &lt;p&gt;
         &lt;img class=&quot;lazyload lazyload-gif&quot; src=&quot;/images/loading.svg&quot; data-src=&quot;https://s1.ax1x.com/2020/08/08/aI271e.png&quot; alt=&quot;操作系统第三章--处理机调度与死锁&quot;&gt;
-      &lt;br&gt;&lt;/p&gt;
+      &lt;/p&gt;
+
 
 
 &lt;title&gt;操作系统第三章--处理机调度与死锁&lt;/title&gt;
@@ -476,7 +523,8 @@
     
       &lt;p&gt;
         &lt;img class=&quot;lazyload lazyload-gif&quot; src=&quot;/images/loading.svg&quot; data-src=&quot;https://s1.ax1x.com/2020/08/07/aWEuh8.png&quot; alt=&quot;数据库第二章--关系模型&quot;&gt;
-      &lt;br&gt;&lt;/p&gt;
+      &lt;/p&gt;
+
 
 
 &lt;title&gt;数据库第二章--关系模型&lt;/title&gt;
@@ -514,7 +562,8 @@
     
       &lt;p&gt;
         &lt;img class=&quot;lazyload lazyload-gif&quot; src=&quot;/images/loading.svg&quot; data-src=&quot;https://s1.ax1x.com/2020/08/06/a2jk79.png&quot; alt=&quot;数据库第一章--数据库系统基础&quot;&gt;
-      &lt;br&gt;&lt;/p&gt;
+      &lt;/p&gt;
+
 
 
 &lt;title&gt;数据库第一章--数据库系统基础&lt;/title&gt;
@@ -550,7 +599,8 @@
     
       &lt;p&gt;
         &lt;img class=&quot;lazyload lazyload-gif&quot; src=&quot;/images/loading.svg&quot; data-src=&quot;https://s1.ax1x.com/2020/08/06/acKXL9.png&quot; alt=&quot;计算机网络第三章--运输层&quot;&gt;
-      &lt;br&gt;&lt;/p&gt;
+      &lt;/p&gt;
+
 
 
 &lt;title&gt;计算机网络第三章--运输层&lt;/title&gt;
@@ -588,7 +638,8 @@
     
       &lt;p&gt;
         &lt;img class=&quot;lazyload lazyload-gif&quot; src=&quot;/images/loading.svg&quot; data-src=&quot;https://s1.ax1x.com/2020/08/05/aroSo9.png&quot; alt=&quot;操作系统第二章--进程的描述与控制&quot;&gt;
-      &lt;br&gt;&lt;/p&gt;
+      &lt;/p&gt;
+
 
 
 &lt;title&gt;操作系统第二章--进程的描述与控制&lt;/title&gt;
@@ -626,7 +677,8 @@
     
       &lt;p&gt;
         &lt;img class=&quot;lazyload lazyload-gif&quot; src=&quot;/images/loading.svg&quot; data-src=&quot;https://s1.ax1x.com/2020/08/05/arkrHH.png&quot; alt=&quot;第二章--应用层&quot;&gt;
-      &lt;br&gt;&lt;/p&gt;
+      &lt;/p&gt;
+
 
 
 &lt;title&gt;第二章--应用层&lt;/title&gt;
@@ -664,7 +716,8 @@
     
       &lt;p&gt;
         &lt;img class=&quot;lazyload lazyload-gif&quot; src=&quot;/images/loading.svg&quot; data-src=&quot;https://s1.ax1x.com/2020/08/05/arkR8P.png&quot; alt=&quot;第一章--计算机操作系统概论&quot;&gt;
-      &lt;br&gt;&lt;/p&gt;
+      &lt;/p&gt;
+
 
 
 &lt;title&gt;第一章--计算机操作系统概论 &lt;/title&gt;
@@ -700,7 +753,8 @@
     
       &lt;p&gt;
         &lt;img class=&quot;lazyload lazyload-gif&quot; src=&quot;/images/loading.svg&quot; data-src=&quot;https://s1.ax1x.com/2020/08/05/ark2Ct.png&quot; alt=&quot;第一章--计算机网络和因特网&quot;&gt;
-      &lt;br&gt;&lt;/p&gt;
+      &lt;/p&gt;
+
 
 
 &lt;title&gt;第一章--计算机网络和因特网&lt;/title&gt;
@@ -722,44 +776,6 @@
     
     
       <category term="计算机网络" scheme="https://Gemini-Lin.github.io/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>SpringBoot教程笔记</title>
-    <link href="https://gemini-lin.github.io/SpringBoot/"/>
-    <id>https://gemini-lin.github.io/SpringBoot/</id>
-    <published>2020-07-29T09:20:28.000Z</published>
-    <updated>2020-07-30T02:17:46.561Z</updated>
-    
-    <summary type="html">
-    
-      &lt;blockquote&gt;
-&lt;p&gt;特别声明：此笔记转载自尚硅谷官网SpringBoot教程&lt;/p&gt;
-&lt;/blockquote&gt;
-
-        &lt;h1 id=&quot;一、Spring-Boot-入门&quot;&gt;
-          &lt;a href=&quot;#一、Spring-Boot-入门&quot; class=&quot;heading-link&quot;&gt;&lt;i class=&quot;fas fa-link&quot;&gt;&lt;/i&gt;&lt;/a&gt;一、Spring Boot 入门&lt;/h1&gt;
-      
-        &lt;h2 id=&quot;1、Spring-Boot-简介&quot;&gt;
-          &lt;a href=&quot;#1、Spring-Boot-简介&quot; class=&quot;heading-link&quot;&gt;&lt;i class=&quot;fas fa-link&quot;&gt;&lt;/i&gt;&lt;/a&gt;1、Spring Boot 简介&lt;/h2&gt;
-      &lt;blockquote&gt;
-&lt;p&gt;简化Spring应用开发的一个框架；&lt;/p&gt;
-&lt;p&gt;整个Spring技术栈的一个大整合；&lt;/p&gt;
-&lt;p&gt;J2EE开发的一站式解决方案；&lt;/p&gt;
-&lt;/blockquote&gt;
-    
-    </summary>
-    
-    
-      <category term="Java后端" scheme="https://Gemini-Lin.github.io/categories/Java%E5%90%8E%E7%AB%AF/"/>
-    
-      <category term="Spring Framework" scheme="https://Gemini-Lin.github.io/categories/Java%E5%90%8E%E7%AB%AF/Spring-Framework/"/>
-    
-      <category term="SpringBoot" scheme="https://Gemini-Lin.github.io/categories/Java%E5%90%8E%E7%AB%AF/Spring-Framework/SpringBoot/"/>
-    
-    
-      <category term="SpringBoot" scheme="https://Gemini-Lin.github.io/tags/SpringBoot/"/>
     
   </entry>
   
