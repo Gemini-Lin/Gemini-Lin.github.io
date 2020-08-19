@@ -1,13 +1,13 @@
-<!DOCTYPE html><html lang="zh-CN"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="format-detection" content="telephone=no"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="black"><link rel="icon" href="/images/icons/favicon.ico?v=2.0.1" type="image/png" sizes="16x16"><link rel="icon" href="/images/icons/favicon.ico?v=2.0.1" type="image/png" sizes="32x32"><meta name="google-site-verification" content="_T_d70fQRwnF8GQJNmmDRbHpjKelZbY-RFDWgS--hAw"><meta name="baidu-site-verification" content="AM9It5Uqy8"><meta name="description" content="基础知识                            机器语言        汇编语言的本质可以看作计算机硬件的功能接口。 机器语言是机器指令的集合。">
+<!DOCTYPE html><html lang="zh-CN"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="format-detection" content="telephone=no"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="black"><link rel="icon" href="/images/icons/favicon.ico?v=2.0.1" type="image/png" sizes="16x16"><link rel="icon" href="/images/icons/favicon.ico?v=2.0.1" type="image/png" sizes="32x32"><meta name="google-site-verification" content="_T_d70fQRwnF8GQJNmmDRbHpjKelZbY-RFDWgS--hAw"><meta name="baidu-site-verification" content="AM9It5Uqy8"><meta name="description" content="基础知识                           机器语言       汇编语言的本质可以看作计算机硬件的功能接口。 机器语言是机器指令的集合。">
 <meta property="og:type" content="article">
 <meta property="og:title" content="汇编语言期末总结">
 <meta property="og:url" content="https://gemini-lin.github.io/Assembly-Language/index.html">
 <meta property="og:site_name" content="GeminiPlanet">
-<meta property="og:description" content="基础知识                            机器语言        汇编语言的本质可以看作计算机硬件的功能接口。 机器语言是机器指令的集合。">
+<meta property="og:description" content="基础知识                           机器语言       汇编语言的本质可以看作计算机硬件的功能接口。 机器语言是机器指令的集合。">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://i.loli.net/2020/08/18/xPuCYETheyF3sQ4.png">
 <meta property="article:published_time" content="2020-08-18T08:13:55.000Z">
-<meta property="article:modified_time" content="2020-08-18T09:02:21.005Z">
+<meta property="article:modified_time" content="2020-08-18T09:03:15.811Z">
 <meta property="article:author" content="Gemini-Lin">
 <meta property="article:tag" content="汇编语言">
 <meta name="twitter:card" content="summary">
@@ -34,34 +34,32 @@ var CONFIG = {
   sourcePath: {"js":"js","css":"css","images":"images"},
 };
 
-window.CONFIG = CONFIG;</script><meta name="generator" content="Hexo 4.2.1"></head><body><div class="container" id="container"><header class="header" id="header"><div class="header-inner header-inner--height header-inner--bgcolor"><nav class="header-nav header-nav--sticky"><div class="header-nav-inner"><div class="header-nav-menubtn"><i class="fas fa-bars"></i></div><div class="header-nav-menu"><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/"><span class="header-nav-menu-item__icon"><i class="fas fa-home"></i></span><span class="header-nav-menu-item__text">首页</span></a></div><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/about/"><span class="header-nav-menu-item__icon"><i class="fas fa-user"></i></span><span class="header-nav-menu-item__text">关于</span></a></div><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/archives/"><span class="header-nav-menu-item__icon"><i class="fas fa-folder-open"></i></span><span class="header-nav-menu-item__text">归档</span></a></div><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/categories/"><span class="header-nav-menu-item__icon"><i class="fas fa-layer-group"></i></span><span class="header-nav-menu-item__text">分类</span></a></div><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/tags/"><span class="header-nav-menu-item__icon"><i class="fas fa-tags"></i></span><span class="header-nav-menu-item__text">标签</span></a></div><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/friends/"><span class="header-nav-menu-item__icon"><i class="fas fa-link"></i></span><span class="header-nav-menu-item__text">友链</span></a></div></div><div class="header-nav-search"><span class="header-nav-search__icon"><i class="fas fa-search"></i></span><span class="header-nav-search__text">搜索</span></div><div class="header-nav-mode"><div class="mode"><div class="mode-track"><span class="mode-track-moon"></span><span class="mode-track-sun"></span></div><div class="mode-thumb"></div></div></div></div></nav></div></header><main class="main" id="main"><div class="main-inner"><div class="content-wrap" id="content-wrap"><div class="content" id="content"><!-- Just used to judge whether it is an article page--><div id="is-post"></div><div class="post"><header class="post-header"><h1 class="post-title">汇编语言期末总结</h1><div class="post-meta"><span class="post-meta-item post-meta-item--createtime"><span class="post-meta-item__icon"><i class="far fa-calendar-plus"></i></span><span class="post-meta-item__info">发表于</span><span class="post-meta-item__value">2020-08-18</span></span><span class="post-meta-item post-meta-item--updatetime"><span class="post-meta-item__icon"><i class="far fa-calendar-check"></i></span><span class="post-meta-item__info">更新于</span><span class="post-meta-item__value">2020-08-18</span></span><span class="post-meta-item post-meta-item--wordcount"><span class="post-meta-item__icon"><i class="far fa-file-word"></i></span><span class="post-meta-item__info">字数统计</span><span class="post-meta-item__value">533</span></span><span class="post-meta-item post-meta-item--readtime"><span class="post-meta-item__icon"><i class="far fa-clock"></i></span><span class="post-meta-item__info">阅读时长</span><span class="post-meta-item__value">3分</span></span><span class="post-meta-item post-meta-item--visitors"><span class="post-meta-item__icon"><i class="fas fa-eye"></i></span><span class="post-meta-item__info">阅读次数</span><span class="post-meta-item__value" id="busuanzi_value_page_pv"></span></span></div></header><div class="post-body"><p>
+window.CONFIG = CONFIG;</script><meta name="generator" content="Hexo 4.2.1"></head><body><div class="container" id="container"><header class="header" id="header"><div class="header-inner header-inner--height header-inner--bgcolor"><nav class="header-nav header-nav--sticky"><div class="header-nav-inner"><div class="header-nav-menubtn"><i class="fas fa-bars"></i></div><div class="header-nav-menu"><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/"><span class="header-nav-menu-item__icon"><i class="fas fa-home"></i></span><span class="header-nav-menu-item__text">首页</span></a></div><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/about/"><span class="header-nav-menu-item__icon"><i class="fas fa-user"></i></span><span class="header-nav-menu-item__text">关于</span></a></div><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/archives/"><span class="header-nav-menu-item__icon"><i class="fas fa-folder-open"></i></span><span class="header-nav-menu-item__text">归档</span></a></div><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/categories/"><span class="header-nav-menu-item__icon"><i class="fas fa-layer-group"></i></span><span class="header-nav-menu-item__text">分类</span></a></div><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/tags/"><span class="header-nav-menu-item__icon"><i class="fas fa-tags"></i></span><span class="header-nav-menu-item__text">标签</span></a></div><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/friends/"><span class="header-nav-menu-item__icon"><i class="fas fa-link"></i></span><span class="header-nav-menu-item__text">友链</span></a></div></div><div class="header-nav-search"><span class="header-nav-search__icon"><i class="fas fa-search"></i></span><span class="header-nav-search__text">搜索</span></div><div class="header-nav-mode"><div class="mode"><div class="mode-track"><span class="mode-track-moon"></span><span class="mode-track-sun"></span></div><div class="mode-thumb"></div></div></div></div></nav></div></header><main class="main" id="main"><div class="main-inner"><div class="content-wrap" id="content-wrap"><div class="content" id="content"><!-- Just used to judge whether it is an article page--><div id="is-post"></div><div class="post"><header class="post-header"><h1 class="post-title">汇编语言期末总结</h1><div class="post-meta"><span class="post-meta-item post-meta-item--createtime"><span class="post-meta-item__icon"><i class="far fa-calendar-plus"></i></span><span class="post-meta-item__info">发表于</span><span class="post-meta-item__value">2020-08-18</span></span><span class="post-meta-item post-meta-item--updatetime"><span class="post-meta-item__icon"><i class="far fa-calendar-check"></i></span><span class="post-meta-item__info">更新于</span><span class="post-meta-item__value">2020-08-18</span></span><span class="post-meta-item post-meta-item--wordcount"><span class="post-meta-item__icon"><i class="far fa-file-word"></i></span><span class="post-meta-item__info">字数统计</span><span class="post-meta-item__value">534</span></span><span class="post-meta-item post-meta-item--readtime"><span class="post-meta-item__icon"><i class="far fa-clock"></i></span><span class="post-meta-item__info">阅读时长</span><span class="post-meta-item__value">3分</span></span><span class="post-meta-item post-meta-item--visitors"><span class="post-meta-item__icon"><i class="fas fa-eye"></i></span><span class="post-meta-item__info">阅读次数</span><span class="post-meta-item__value" id="busuanzi_value_page_pv"></span></span></div></header><div class="post-body"><p>
         <img class="lazyload lazyload-gif" src="/images/loading.svg" data-src="https://i.loli.net/2020/08/18/xPuCYETheyF3sQ4.png" alt="汇编语言">
       </p>
 
         <h1 id="基础知识">
           <a href="#基础知识" class="heading-link"><i class="fas fa-link"></i></a>基础知识</h1>
       
-
         <h2 id="机器语言">
           <a href="#机器语言" class="heading-link"><i class="fas fa-link"></i></a>机器语言</h2>
-      
-<p>汇编语言的<strong>本质可以看作计算机硬件的功能接口。</strong></p>
+      <p>汇编语言的<strong>本质可以看作计算机硬件的功能接口。</strong></p>
 <p>机器语言是<strong>机器指令</strong>的集合。</p>
 <a id="more"></a>
 
+
         <h2 id="汇编语言的产生">
           <a href="#汇编语言的产生" class="heading-link"><i class="fas fa-link"></i></a>汇编语言的产生</h2>
-      
-<p>汇编语言的主体是<strong>汇编指令</strong>。</p>
+      <p>汇编语言的主体是<strong>汇编指令</strong>。</p>
 <p>汇编指令和机器指令的<strong>差别在于指令的表示方法</strong>上。汇编指令是机器指令便于记忆的书写格式。</p>
 <p>汇编指令的本质是机器指令的<strong>助记符</strong>。</p>
 <figure class="highlight plain"><div class="table-container"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">机器指令：1000100111011000</span><br><span class="line">汇编指令：MOV AX，BX</span><br><span class="line">操作：将寄存器BX中的内容送到AX中</span><br></pre></td></tr></tbody></table></div></figure>
+
 <p><strong>指令执行:</strong> 汇编指令-&gt;编译器-&gt;机器码-&gt;计算机</p>
 
         <h2 id="汇编语言的组成">
           <a href="#汇编语言的组成" class="heading-link"><i class="fas fa-link"></i></a>汇编语言的组成</h2>
-      
-<ul>
+      <ul>
 <li><strong>汇编指令</strong>（机器码的助记符，<strong>有对应的机器码</strong>）</li>
 <li><strong>伪指令</strong>（<strong>没有对应机器码</strong>，由编译器执行，计算机不执行）</li>
 <li><strong>其他符号</strong>（如+、-、*、/等，由编译器识别）</li>
@@ -69,18 +67,15 @@ window.CONFIG = CONFIG;</script><meta name="generator" content="Hexo 4.2.1"></he
 
         <h2 id="指令和数据">
           <a href="#指令和数据" class="heading-link"><i class="fas fa-link"></i></a>指令和数据</h2>
-      
-<p>在内存或磁盘上，指令和数据<strong>没有任何区别</strong>，都是<strong>二进制信息</strong>。</p>
+      <p>在内存或磁盘上，指令和数据<strong>没有任何区别</strong>，都是<strong>二进制信息</strong>。</p>
 
         <h2 id="存储单元">
           <a href="#存储单元" class="heading-link"><i class="fas fa-link"></i></a>存储单元</h2>
-      
-<p>存储器被划分为若干个存储单元，每个存储单元<strong>从0开始</strong>顺序编号；</p>
+      <p>存储器被划分为若干个存储单元，每个存储单元<strong>从0开始</strong>顺序编号；</p>
 
-        <h2 id="cpu对存储器的读写">
-          <a href="#cpu对存储器的读写" class="heading-link"><i class="fas fa-link"></i></a>CPU对存储器的读写</h2>
-      
-<p>CPU进行数据读写的信息交互：</p>
+        <h2 id="CPU对存储器的读写">
+          <a href="#CPU对存储器的读写" class="heading-link"><i class="fas fa-link"></i></a>CPU对存储器的读写</h2>
+      <p>CPU进行数据读写的信息交互：</p>
 <ul>
 <li>存储单元的地址（<strong>地址信息</strong>）</li>
 <li>器件的选择，读或写命令（<strong>控制信息</strong>）</li>
@@ -89,24 +84,20 @@ window.CONFIG = CONFIG;</script><meta name="generator" content="Hexo 4.2.1"></he
 
         <h2 id="地址总线">
           <a href="#地址总线" class="heading-link"><i class="fas fa-link"></i></a>地址总线</h2>
-      
-<p>CPU是通过<strong>地址总线</strong>来指定存储单元的。</p>
-<p>地址空间的宽度N决定了寻址空间的大小<span class="katex"><span class="katex-mathml"><math><semantics><mrow><msup><mn>2</mn><mi>N</mi></msup></mrow><annotation encoding="application/x-tex">2^N</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8413309999999999em;vertical-align:0em;"></span><span class="mord"><span class="mord">2</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8413309999999999em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathdefault mtight" style="margin-right:0.10903em;">N</span></span></span></span></span></span></span></span></span></span></span>。</p>
+      <p>CPU是通过<strong>地址总线</strong>来指定存储单元的。</p>
+<p>地址空间的宽度N决定了寻址空间的大小$2^N$。</p>
 
         <h2 id="数据总线">
           <a href="#数据总线" class="heading-link"><i class="fas fa-link"></i></a>数据总线</h2>
-      
-<p><strong>数据总线的宽度</strong>决定了CPU和外界的<strong>数据传送速度</strong>。</p>
+      <p><strong>数据总线的宽度</strong>决定了CPU和外界的<strong>数据传送速度</strong>。</p>
 
         <h2 id="控制总线">
           <a href="#控制总线" class="heading-link"><i class="fas fa-link"></i></a>控制总线</h2>
-      
-<p><strong>控制总线的宽度</strong>决定了CPU对外部器件的<strong>控制能力</strong>。</p>
+      <p><strong>控制总线的宽度</strong>决定了CPU对外部器件的<strong>控制能力</strong>。</p>
 
         <h2 id="内存地址空间">
           <a href="#内存地址空间" class="heading-link"><i class="fas fa-link"></i></a>内存地址空间</h2>
-      
-<ul>
+      <ul>
 <li>RAM（随机存储器）</li>
 <li>ROM（只读存储器）</li>
 </ul>
@@ -135,7 +126,7 @@ window.CONFIG = CONFIG;</script><meta name="generator" content="Hexo 4.2.1"></he
           汇编语言的产生</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#汇编语言的组成"><span class="toc-number">1.3.</span> <span class="toc-text">
           汇编语言的组成</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#指令和数据"><span class="toc-number">1.4.</span> <span class="toc-text">
           指令和数据</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#存储单元"><span class="toc-number">1.5.</span> <span class="toc-text">
-          存储单元</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#cpu对存储器的读写"><span class="toc-number">1.6.</span> <span class="toc-text">
+          存储单元</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#CPU对存储器的读写"><span class="toc-number">1.6.</span> <span class="toc-text">
           CPU对存储器的读写</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#地址总线"><span class="toc-number">1.7.</span> <span class="toc-text">
           地址总线</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#数据总线"><span class="toc-number">1.8.</span> <span class="toc-text">
           数据总线</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#控制总线"><span class="toc-number">1.9.</span> <span class="toc-text">

@@ -102,229 +102,136 @@ var CONFIG = {
   sourcePath: {"js":"js","css":"css","images":"images"},
 };
 
-window.CONFIG = CONFIG;</script><meta name="generator" content="Hexo 4.2.1"></head><body><div class="container" id="container"><header class="header" id="header"><div class="header-inner header-inner--height header-inner--bgcolor"><nav class="header-nav header-nav--sticky"><div class="header-nav-inner"><div class="header-nav-menubtn"><i class="fas fa-bars"></i></div><div class="header-nav-menu"><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/"><span class="header-nav-menu-item__icon"><i class="fas fa-home"></i></span><span class="header-nav-menu-item__text">首页</span></a></div><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/about/"><span class="header-nav-menu-item__icon"><i class="fas fa-user"></i></span><span class="header-nav-menu-item__text">关于</span></a></div><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/archives/"><span class="header-nav-menu-item__icon"><i class="fas fa-folder-open"></i></span><span class="header-nav-menu-item__text">归档</span></a></div><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/categories/"><span class="header-nav-menu-item__icon"><i class="fas fa-layer-group"></i></span><span class="header-nav-menu-item__text">分类</span></a></div><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/tags/"><span class="header-nav-menu-item__icon"><i class="fas fa-tags"></i></span><span class="header-nav-menu-item__text">标签</span></a></div><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/friends/"><span class="header-nav-menu-item__icon"><i class="fas fa-link"></i></span><span class="header-nav-menu-item__text">友链</span></a></div></div><div class="header-nav-search"><span class="header-nav-search__icon"><i class="fas fa-search"></i></span><span class="header-nav-search__text">搜索</span></div><div class="header-nav-mode"><div class="mode"><div class="mode-track"><span class="mode-track-moon"></span><span class="mode-track-sun"></span></div><div class="mode-thumb"></div></div></div></div></nav></div></header><main class="main" id="main"><div class="main-inner"><div class="content-wrap" id="content-wrap"><div class="content" id="content"><!-- Just used to judge whether it is an article page--><div id="is-post"></div><div class="post"><header class="post-header"><h1 class="post-title">数学建模算法汇总</h1><div class="post-meta"><span class="post-meta-item post-meta-item--createtime"><span class="post-meta-item__icon"><i class="far fa-calendar-plus"></i></span><span class="post-meta-item__info">发表于</span><span class="post-meta-item__value">2020-02-02</span></span><span class="post-meta-item post-meta-item--updatetime"><span class="post-meta-item__icon"><i class="far fa-calendar-check"></i></span><span class="post-meta-item__info">更新于</span><span class="post-meta-item__value">2020-07-03</span></span><span class="post-meta-item post-meta-item--wordcount"><span class="post-meta-item__icon"><i class="far fa-file-word"></i></span><span class="post-meta-item__info">字数统计</span><span class="post-meta-item__value">6.5k</span></span><span class="post-meta-item post-meta-item--readtime"><span class="post-meta-item__icon"><i class="far fa-clock"></i></span><span class="post-meta-item__info">阅读时长</span><span class="post-meta-item__value">47分</span></span><span class="post-meta-item post-meta-item--visitors"><span class="post-meta-item__icon"><i class="fas fa-eye"></i></span><span class="post-meta-item__info">阅读次数</span><span class="post-meta-item__value" id="busuanzi_value_page_pv"></span></span></div></header><div class="post-body"><p>
+window.CONFIG = CONFIG;</script><meta name="generator" content="Hexo 4.2.1"></head><body><div class="container" id="container"><header class="header" id="header"><div class="header-inner header-inner--height header-inner--bgcolor"><nav class="header-nav header-nav--sticky"><div class="header-nav-inner"><div class="header-nav-menubtn"><i class="fas fa-bars"></i></div><div class="header-nav-menu"><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/"><span class="header-nav-menu-item__icon"><i class="fas fa-home"></i></span><span class="header-nav-menu-item__text">首页</span></a></div><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/about/"><span class="header-nav-menu-item__icon"><i class="fas fa-user"></i></span><span class="header-nav-menu-item__text">关于</span></a></div><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/archives/"><span class="header-nav-menu-item__icon"><i class="fas fa-folder-open"></i></span><span class="header-nav-menu-item__text">归档</span></a></div><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/categories/"><span class="header-nav-menu-item__icon"><i class="fas fa-layer-group"></i></span><span class="header-nav-menu-item__text">分类</span></a></div><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/tags/"><span class="header-nav-menu-item__icon"><i class="fas fa-tags"></i></span><span class="header-nav-menu-item__text">标签</span></a></div><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/friends/"><span class="header-nav-menu-item__icon"><i class="fas fa-link"></i></span><span class="header-nav-menu-item__text">友链</span></a></div></div><div class="header-nav-search"><span class="header-nav-search__icon"><i class="fas fa-search"></i></span><span class="header-nav-search__text">搜索</span></div><div class="header-nav-mode"><div class="mode"><div class="mode-track"><span class="mode-track-moon"></span><span class="mode-track-sun"></span></div><div class="mode-thumb"></div></div></div></div></nav></div></header><main class="main" id="main"><div class="main-inner"><div class="content-wrap" id="content-wrap"><div class="content" id="content"><!-- Just used to judge whether it is an article page--><div id="is-post"></div><div class="post"><header class="post-header"><h1 class="post-title">数学建模算法汇总</h1><div class="post-meta"><span class="post-meta-item post-meta-item--createtime"><span class="post-meta-item__icon"><i class="far fa-calendar-plus"></i></span><span class="post-meta-item__info">发表于</span><span class="post-meta-item__value">2020-02-02</span></span><span class="post-meta-item post-meta-item--updatetime"><span class="post-meta-item__icon"><i class="far fa-calendar-check"></i></span><span class="post-meta-item__info">更新于</span><span class="post-meta-item__value">2020-07-03</span></span><span class="post-meta-item post-meta-item--wordcount"><span class="post-meta-item__icon"><i class="far fa-file-word"></i></span><span class="post-meta-item__info">字数统计</span><span class="post-meta-item__value">6.4k</span></span><span class="post-meta-item post-meta-item--readtime"><span class="post-meta-item__icon"><i class="far fa-clock"></i></span><span class="post-meta-item__info">阅读时长</span><span class="post-meta-item__value">47分</span></span><span class="post-meta-item post-meta-item--visitors"><span class="post-meta-item__icon"><i class="fas fa-eye"></i></span><span class="post-meta-item__info">阅读次数</span><span class="post-meta-item__value" id="busuanzi_value_page_pv"></span></span></div></header><div class="post-body"><p>
         <img class="lazyload lazyload-gif" src="/images/loading.svg" data-src="https://i.loli.net/2020/02/03/AiDVdhUEBgYKtQz.png" alt="image.png">
       </p>
 
         <h1 id="优化模型">
           <a href="#优化模型" class="heading-link"><i class="fas fa-link"></i></a>优化模型</h1>
-      
-<a id="more"></a>
+      <a id="more"></a>
 
-        <h2 id="优化模型1">
-          <a href="#优化模型1" class="heading-link"><i class="fas fa-link"></i></a>优化模型(1)</h2>
-      
-<p><em>三要素:</em> <strong>决策变量、目标函数、约束</strong><br>
-<strong><span class="exturl"><a class="exturl__link" href="https://blog.csdn.net/luolang_103/article/details/80567443" target="_blank" rel="noopener">https://blog.csdn.net/luolang_103/article/details/80567443</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></strong><br>
-
+        <h2 id="优化模型-1">
+          <a href="#优化模型-1" class="heading-link"><i class="fas fa-link"></i></a>优化模型(1)</h2>
+      <p><em>三要素:</em> <strong>决策变量、目标函数、约束</strong><br><strong><span class="exturl"><a class="exturl__link" href="https://blog.csdn.net/luolang_103/article/details/80567443" target="_blank" rel="noopener">https://blog.csdn.net/luolang_103/article/details/80567443</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></strong><br>
         <img class="lazyload lazyload-gif" src="/images/loading.svg" data-src="https://i.loli.net/2020/02/03/zVPmxnUyRLS1Q57.png" alt="image.png">
       </p>
 
-        <h3 id="单目标single-objective-optimization-problem">
-          <a href="#单目标single-objective-optimization-problem" class="heading-link"><i class="fas fa-link"></i></a>单目标（Single-Objective Optimization Problem）</h3>
-      
-<blockquote>
+        <h3 id="单目标（Single-Objective-Optimization-Problem）">
+          <a href="#单目标（Single-Objective-Optimization-Problem）" class="heading-link"><i class="fas fa-link"></i></a>单目标（Single-Objective Optimization Problem）</h3>
+      <blockquote>
 <p>所评测目标只有一个，只需要根据具体的满足函数条件，求得最值</p>
 </blockquote>
 
-        <h3 id="多目标multi-objective-optimization-problem">
-          <a href="#多目标multi-objective-optimization-problem" class="heading-link"><i class="fas fa-link"></i></a>多目标（Multi-objective Optimization Problem）</h3>
-      
-<blockquote>
+        <h3 id="多目标（Multi-objective-Optimization-Problem）">
+          <a href="#多目标（Multi-objective-Optimization-Problem）" class="heading-link"><i class="fas fa-link"></i></a>多目标（Multi-objective Optimization Problem）</h3>
+      <blockquote>
 <p>多目标优化问题中，同时存在多个最大化或是最小化的目标函数，并且，这些目标函数并不是相互独立的，也不是相互和谐融洽的，他们之间会存在或多或少的冲突，使得不能同时满足所有的目标函数。</p>
 </blockquote>
 
         <h3 id="线性">
           <a href="#线性" class="heading-link"><i class="fas fa-link"></i></a>线性</h3>
-      
-<blockquote>
-<p>线性规划问题是要最小化或最大化一个受限于一组有限的线性约束的线性函数<br>
-<strong><span class="exturl"><a class="exturl__link" href="https://blog.csdn.net/fjssharpsword/article/details/53195556" target="_blank" rel="noopener">https://blog.csdn.net/fjssharpsword/article/details/53195556</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></strong></p>
+      <blockquote>
+<p>线性规划问题是要最小化或最大化一个受限于一组有限的线性约束的线性函数<br><strong><span class="exturl"><a class="exturl__link" href="https://blog.csdn.net/fjssharpsword/article/details/53195556" target="_blank" rel="noopener">https://blog.csdn.net/fjssharpsword/article/details/53195556</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></strong></p>
 </blockquote>
 
         <h3 id="非线性">
           <a href="#非线性" class="heading-link"><i class="fas fa-link"></i></a>非线性</h3>
-      
-<blockquote>
-<p>如果目标函数或者约束条件中至少有一个是非线性函数时，最优化问题叫做非线性规划问题<br>
-<strong><span class="exturl"><a class="exturl__link" href="https://blog.csdn.net/qjzcy/article/details/51727741" target="_blank" rel="noopener">https://blog.csdn.net/qjzcy/article/details/51727741</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></strong></p>
+      <blockquote>
+<p>如果目标函数或者约束条件中至少有一个是非线性函数时，最优化问题叫做非线性规划问题<br><strong><span class="exturl"><a class="exturl__link" href="https://blog.csdn.net/qjzcy/article/details/51727741" target="_blank" rel="noopener">https://blog.csdn.net/qjzcy/article/details/51727741</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></strong></p>
 </blockquote>
 
         <h3 id="整数规划优化">
           <a href="#整数规划优化" class="heading-link"><i class="fas fa-link"></i></a>整数规划优化</h3>
-      
-<blockquote>
-<p>全部变量限制为整数的规划问题，称为纯整数规划；部分变量限制为整数的规划问题，称为混合整数规划；变量只取0或1的规划问题，称为0-1整数规划。<br>
-整数规划问题，建议使用Lingo软件求解。常用的整数规划问题解法有：<br>
-（1）分枝定界法：可求纯或混合整数线性规划。<br>
-（2）割平面法：可求纯或混合整数线性规划。<br>
-（3）隐枚举法：用于求解0-1整数规划，有过滤法和分枝法。<br>
-（4）匈牙利法：解决指派问题（0-1规划特殊情形）。<br>
-（5）蒙特卡罗法：求解各种类型规划。<br>
-<strong><span class="exturl"><a class="exturl__link" href="https://zhuanlan.zhihu.com/p/27976866" target="_blank" rel="noopener">https://zhuanlan.zhihu.com/p/27976866</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></strong></p>
+      <blockquote>
+<p>全部变量限制为整数的规划问题，称为纯整数规划；部分变量限制为整数的规划问题，称为混合整数规划；变量只取0或1的规划问题，称为0-1整数规划。<br>整数规划问题，建议使用Lingo软件求解。常用的整数规划问题解法有：<br>（1）分枝定界法：可求纯或混合整数线性规划。<br>（2）割平面法：可求纯或混合整数线性规划。<br>（3）隐枚举法：用于求解0-1整数规划，有过滤法和分枝法。<br>（4）匈牙利法：解决指派问题（0-1规划特殊情形）。<br>（5）蒙特卡罗法：求解各种类型规划。<br><strong><span class="exturl"><a class="exturl__link" href="https://zhuanlan.zhihu.com/p/27976866" target="_blank" rel="noopener">https://zhuanlan.zhihu.com/p/27976866</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></strong></p>
 </blockquote>
 
         <h3 id="单目标化">
           <a href="#单目标化" class="heading-link"><i class="fas fa-link"></i></a>单目标化</h3>
-      
-<p>
+      <p>
         <img class="lazyload lazyload-gif" src="/images/loading.svg" data-src="https://i.loli.net/2020/02/03/fwNLboBKaz4qVDI.png" alt="image.png">
       </p>
 <blockquote>
-<p>一般采用两个目标函数加权相加的形式。加权可以解决两个目标函数量纲不一致，或者变化剧烈程度不一致的问题，不过权重本身需要人为选取。<br>
-一般不使用乘法来组合目标函数，因为这样会使得导数的形式变得复杂。<br>
-<strong><span class="exturl"><a class="exturl__link" href="https://zhuanlan.zhihu.com/p/30383993" target="_blank" rel="noopener">https://zhuanlan.zhihu.com/p/30383993</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></strong></p>
+<p>一般采用两个目标函数加权相加的形式。加权可以解决两个目标函数量纲不一致，或者变化剧烈程度不一致的问题，不过权重本身需要人为选取。<br>一般不使用乘法来组合目标函数，因为这样会使得导数的形式变得复杂。<br><strong><span class="exturl"><a class="exturl__link" href="https://zhuanlan.zhihu.com/p/30383993" target="_blank" rel="noopener">https://zhuanlan.zhihu.com/p/30383993</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></strong></p>
 </blockquote>
 
-        <h2 id="优化模型2">
-          <a href="#优化模型2" class="heading-link"><i class="fas fa-link"></i></a>优化模型(2)</h2>
+        <h2 id="优化模型-2">
+          <a href="#优化模型-2" class="heading-link"><i class="fas fa-link"></i></a>优化模型(2)</h2>
       
-
-        <h3 id="动态规划-dynamic-programming">
-          <a href="#动态规划-dynamic-programming" class="heading-link"><i class="fas fa-link"></i></a>动态规划 Dynamic Programming</h3>
-      
-<p>
+        <h3 id="动态规划-Dynamic-Programming">
+          <a href="#动态规划-Dynamic-Programming" class="heading-link"><i class="fas fa-link"></i></a>动态规划 Dynamic Programming</h3>
+      <p>
         <img class="lazyload lazyload-gif" src="/images/loading.svg" data-src="https://i.loli.net/2020/02/03/T9FYRqJgzxSw4am.png" alt="image.png">
       </p>
 <figure class="highlight groovy"><div class="table-container"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">A * <span class="string">"1+1+1+1+1+1+1+1 =？"</span> *</span><br><span class="line"></span><br><span class="line"><span class="string">A :</span> <span class="string">"上面等式的值是多少"</span></span><br><span class="line"><span class="string">B :</span> *计算* <span class="string">"8!"</span></span><br><span class="line"></span><br><span class="line">A *在上面等式的左边写上 <span class="string">"1+"</span> *</span><br><span class="line"><span class="string">A :</span> <span class="string">"此时等式的值为多少"</span></span><br><span class="line"><span class="string">B :</span> *quickly* <span class="string">"9!"</span></span><br><span class="line"><span class="string">A :</span> <span class="string">"你怎么这么快就知道答案了"</span></span><br><span class="line"><span class="string">A :</span> <span class="string">"只要在8的基础上加1就行了"</span></span><br><span class="line"><span class="string">A :</span> <span class="string">"所以你不用重新计算因为你记住了第一个等式的值为8!动态规划算法也可以说是 '记住求过的解来节省时间'"</span></span><br></pre></td></tr></tbody></table></div></figure>
 <p><strong><span class="exturl"><a class="exturl__link" href="https://blog.csdn.net/u013309870/article/details/75193592" target="_blank" rel="noopener">https://blog.csdn.net/u013309870/article/details/75193592</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></strong></p>
 <blockquote>
-<p><strong>1. 将原问题分解为子问题</strong><br>
-&nbsp;&nbsp;&nbsp; 把原问题分解为若干个子问题，子问题和原问题形式相同或类似，只不过规模变小了。子问题都解决，原问题即解决(数字三角形例）。<br>
-&nbsp;&nbsp;&nbsp; 子问题的解一旦求出就会被保存，所以每个子问题只需求 解一次。<br>
-&nbsp;<strong>2. 确定状态</strong><br>
-&nbsp;&nbsp;&nbsp; 在用动态规划解题时，我们往往将和子问题相关的各个变量的一组取值，称之为一个“状 态”。一个“状态”对应于一个或多个子问题， 所谓某个“状态”下的“值”，就是这个“状 态”所对应的子问题的解。<br>
-&nbsp;&nbsp;&nbsp; 所有“状态”的集合，构成问题的“状态空间”。“状态空间”的大小，与用动态规划解决问题的时间复杂度直接相关。 在数字三角形的例子里，一共有N×(N+1)/2个数字，所以这个问题的状态空间里一共就有N×(N+1)/2个状态。<br>
-&nbsp;&nbsp;&nbsp; 整个问题的时间复杂度是状态数目乘以计算每个状态所需时间。在数字三角形里每个“状态”只需要经过一次，且在每个状态上作计算所花的时间都是和N无关的常数。<br>
-&nbsp;&nbsp;&nbsp;<strong>3.确定一些初始状态（边界状态）的值</strong><br>
-&nbsp;&nbsp;&nbsp;&nbsp;以“数字三角形”为例，初始状态就是底边数字，值就是底边数字值。<br>
-&nbsp;&nbsp;&nbsp;&nbsp;<strong>4. 确定状态转移方程</strong><br>
-&nbsp;&nbsp;&nbsp;&nbsp; 定义出什么是“状态”，以及在该“状态”下的“值”后，就要找出不同的状态之间如何迁移――即如何从一个或多个“值”已知的 “状态”，求出另一个“状态”的“值”(递推型)。状态的迁移可以用递推公式表示，此递推公式也可被称作“状态转移方程”。<br>
-&nbsp;&nbsp;&nbsp; 数字三角形的状态转移方程:<br>
-
+<p><strong>1. 将原问题分解为子问题</strong><br>    把原问题分解为若干个子问题，子问题和原问题形式相同或类似，只不过规模变小了。子问题都解决，原问题即解决(数字三角形例）。<br>    子问题的解一旦求出就会被保存，所以每个子问题只需求 解一次。<br> <strong>2. 确定状态</strong><br>    在用动态规划解题时，我们往往将和子问题相关的各个变量的一组取值，称之为一个“状 态”。一个“状态”对应于一个或多个子问题， 所谓某个“状态”下的“值”，就是这个“状 态”所对应的子问题的解。<br>    所有“状态”的集合，构成问题的“状态空间”。“状态空间”的大小，与用动态规划解决问题的时间复杂度直接相关。 在数字三角形的例子里，一共有N×(N+1)/2个数字，所以这个问题的状态空间里一共就有N×(N+1)/2个状态。<br>    整个问题的时间复杂度是状态数目乘以计算每个状态所需时间。在数字三角形里每个“状态”只需要经过一次，且在每个状态上作计算所花的时间都是和N无关的常数。<br>   <strong>3.确定一些初始状态（边界状态）的值</strong><br>    以“数字三角形”为例，初始状态就是底边数字，值就是底边数字值。<br>    <strong>4. 确定状态转移方程</strong><br>     定义出什么是“状态”，以及在该“状态”下的“值”后，就要找出不同的状态之间如何迁移――即如何从一个或多个“值”已知的 “状态”，求出另一个“状态”的“值”(递推型)。状态的迁移可以用递推公式表示，此递推公式也可被称作“状态转移方程”。<br>    数字三角形的状态转移方程:<br>
         <img class="lazyload lazyload-gif" src="/images/loading.svg" data-src="https://i.loli.net/2020/02/03/peAd9XNOTvlDib6.png" alt="image.png">
-      <br>
-<strong><span class="exturl"><a class="exturl__link" href="https://blog.csdn.net/baidu_28312631/article/details/47418773" target="_blank" rel="noopener">https://blog.csdn.net/baidu_28312631/article/details/47418773</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></strong></p>
+      <br><strong><span class="exturl"><a class="exturl__link" href="https://blog.csdn.net/baidu_28312631/article/details/47418773" target="_blank" rel="noopener">https://blog.csdn.net/baidu_28312631/article/details/47418773</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></strong></p>
 </blockquote>
 
         <h3 id="目标规划">
           <a href="#目标规划" class="heading-link"><i class="fas fa-link"></i></a>目标规划</h3>
-      
-<blockquote>
-<p><strong>1、加权系数法</strong><br>
-为每一个目标加一个权系数，把多目标模型转化成单一目标模型。但是困难时确定合理的权系数，以反映不同目标之间的重要程度。<br>
-<strong>2、优先等级法</strong><br>
-将各目标按其重要程度分为不同的优先等级，转化为单目标模型。<br>
-<strong>3、有效解法</strong><br>
-寻求能够照顾到各个目标，并使决策者感到满意的解。由决策者来确定选取哪一个解，即得到满意的解。但是有效解太多，无法挑选<br>
-<strong><span class="exturl"><a class="exturl__link" href="https://www.cnblogs.com/BlueMountain-HaggenDazs/p/4273802.html" target="_blank" rel="noopener">https://www.cnblogs.com/BlueMountain-HaggenDazs/p/4273802.html</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></strong></p>
+      <blockquote>
+<p><strong>1、加权系数法</strong><br>       为每一个目标加一个权系数，把多目标模型转化成单一目标模型。但是困难时确定合理的权系数，以反映不同目标之间的重要程度。<br><strong>2、优先等级法</strong><br>       将各目标按其重要程度分为不同的优先等级，转化为单目标模型。<br><strong>3、有效解法</strong><br>       寻求能够照顾到各个目标，并使决策者感到满意的解。由决策者来确定选取哪一个解，即得到满意的解。但是有效解太多，无法挑选<br><strong><span class="exturl"><a class="exturl__link" href="https://www.cnblogs.com/BlueMountain-HaggenDazs/p/4273802.html" target="_blank" rel="noopener">https://www.cnblogs.com/BlueMountain-HaggenDazs/p/4273802.html</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></strong></p>
 </blockquote>
 
         <h3 id="图论">
           <a href="#图论" class="heading-link"><i class="fas fa-link"></i></a>图论</h3>
       
-
         <h3 id="网络流模型">
           <a href="#网络流模型" class="heading-link"><i class="fas fa-link"></i></a>网络流模型</h3>
-      
-<blockquote>
-<p>对于一个网络流我们可以用一个有向图G = （V，E，C）表示；V表示顶点的集合，E表示有向边的集合，C表示有向边的最大流量。对于每一个网络，有一个源输入点，称之为source，一个输出点，称之为sink。在不是出发点source也不是输出点sink的其他点，流量不能超过有向边的最大流量，这是一个约束条件。<br>
-下图就是一个简单的网络流模型：<br>
-
+      <blockquote>
+<p>对于一个网络流我们可以用一个有向图G = （V，E，C）表示；V表示顶点的集合，E表示有向边的集合，C表示有向边的最大流量。对于每一个网络，有一个源输入点，称之为source，一个输出点，称之为sink。在不是出发点source也不是输出点sink的其他点，流量不能超过有向边的最大流量，这是一个约束条件。<br>下图就是一个简单的网络流模型：<br>
         <img class="lazyload lazyload-gif" src="/images/loading.svg" data-src="https://i.loli.net/2020/02/03/SHIw21EnNCq4mZO.png" alt="image.png">
-      <br>
-<strong><span class="exturl"><a class="exturl__link" href="https://blog.csdn.net/changyuanchn/article/details/17097807" target="_blank" rel="noopener">https://blog.csdn.net/changyuanchn/article/details/17097807</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></strong></p>
+      <br><strong><span class="exturl"><a class="exturl__link" href="https://blog.csdn.net/changyuanchn/article/details/17097807" target="_blank" rel="noopener">https://blog.csdn.net/changyuanchn/article/details/17097807</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></strong></p>
 </blockquote>
 
         <h3 id="最短路">
           <a href="#最短路" class="heading-link"><i class="fas fa-link"></i></a>最短路</h3>
-      
-<blockquote>
-<p><strong>最短路径问题</strong><br>
-画图在线平台：<br>
-<strong><span class="exturl"><a class="exturl__link" href="https://csacademy.com/app/graph_editor/" target="_blank" rel="noopener">https://csacademy.com/app/graph_editor/</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></strong><br>
-注意邻接矩阵和关联矩阵的概念！<br>
-
+      <blockquote>
+<p><strong>最短路径问题</strong><br>画图在线平台：<br><strong><span class="exturl"><a class="exturl__link" href="https://csacademy.com/app/graph_editor/" target="_blank" rel="noopener">https://csacademy.com/app/graph_editor/</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></strong><br>注意邻接矩阵和关联矩阵的概念！<br>
         <img class="lazyload lazyload-gif" src="/images/loading.svg" data-src="https://i.loli.net/2020/02/03/RvLaVzcdrN3umXO.png" alt="9_GJHOYM9__MAR_K0_F6CNT.png">
-      <br>
-邻接矩阵：元素为权值，不连接时为无穷(无权时为0/1表示是否相连)<br>
-
+      <br>邻接矩阵：元素为权值，不连接时为无穷(无权时为0/1表示是否相连)<br>
         <img class="lazyload lazyload-gif" src="/images/loading.svg" data-src="https://i.loli.net/2020/02/03/PJ9D8QyEMj1sFml.png" alt="84">
-      <br>
-解决方法：Dijkstra算法 Floyd算法<br>
-<strong><span class="exturl"><a class="exturl__link" href="https://www.cnblogs.com/biyeymyhjob/archive/2012/07/31/2615833.html" target="_blank" rel="noopener">https://www.cnblogs.com/biyeymyhjob/archive/2012/07/31/2615833.html</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></strong><br>
-<strong><span class="exturl"><a class="exturl__link" href="https://blog.csdn.net/weixin_43791406/article/details/89314614" target="_blank" rel="noopener">https://blog.csdn.net/weixin_43791406/article/details/89314614</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></strong></p>
+      <br>解决方法：Dijkstra算法 Floyd算法<br><strong><span class="exturl"><a class="exturl__link" href="https://www.cnblogs.com/biyeymyhjob/archive/2012/07/31/2615833.html" target="_blank" rel="noopener">https://www.cnblogs.com/biyeymyhjob/archive/2012/07/31/2615833.html</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></strong><br><strong><span class="exturl"><a class="exturl__link" href="https://blog.csdn.net/weixin_43791406/article/details/89314614" target="_blank" rel="noopener">https://blog.csdn.net/weixin_43791406/article/details/89314614</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></strong></p>
 </blockquote>
 
         <h3 id="最大流">
           <a href="#最大流" class="heading-link"><i class="fas fa-link"></i></a>最大流</h3>
-      
-<blockquote>
+      <blockquote>
 <p>网络流图是一张只有一个源点和汇点的有向图，而最大流就是求源点到汇点间的最大水流量，下图的问题就是一个最基本，经典的最大流问题<br>
-
         <img class="lazyload lazyload-gif" src="/images/loading.svg" data-src="https://i.loli.net/2020/02/03/gJQO9F2SepzR6xy.png" alt="image.png">
-      <br>
-<strong>流量,容量,可行流,增广路</strong><br>
-<strong><span class="exturl"><a class="exturl__link" href="https://blog.csdn.net/stevensonson/article/details/79177530" target="_blank" rel="noopener">https://blog.csdn.net/stevensonson/article/details/79177530</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></strong></p>
+      <br><strong>流量,容量,可行流,增广路</strong><br><strong><span class="exturl"><a class="exturl__link" href="https://blog.csdn.net/stevensonson/article/details/79177530" target="_blank" rel="noopener">https://blog.csdn.net/stevensonson/article/details/79177530</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></strong></p>
 </blockquote>
 <blockquote>
-<p>图就是一种管道，管道有最大通过流量的限制，图中边的权值就是所谓的“容量”。同时，注意有唯一的源点和汇点。<br>
-算法的关键在于<br>
-<strong>1）何为增广路径，如何找出增广路径。</strong><br>
-<strong>2）如何更新流量</strong><br>
-所谓增广路径，就是找到这样一条路径，其流量不满，未达到容量上限。<br>
-所有的可能的增广路径在一起便构成了残留网络<br>
-第一步，计算可增加流量<br>
-设某一增广路径上的节点为（a1,a2,a3,a4,…,an）<br>
-如果（u,v）是正向边，则增加流量d = min{ c(ai,aj) - f(ai,aj) | j = i +1, i =1,2,3…,n-1}<br>
-如果是逆向边，则增加流量d = min{ f(ai, aj) | j = i +1, i =1,2,3…,n-1}<br>
-第二步，更新流量<br>
-如果（u,v）是正向边，则 f(u,v) = f(u,v) + d<br>
-是逆向边，则f(u,v) = f(u,v) - d<br>
-注意，如果是逆向边，就是减法，当前管道从中减去部分流量，而且，伴随着这部分减去的流量，必有另一部分管道的流量会增加。。而且，最后的总流量增加了d<br>
-<strong>来自 <span class="exturl"><a class="exturl__link" href="https://www.cnblogs.com/ShaneZhang/p/3755479.html" target="_blank" rel="noopener">https://www.cnblogs.com/ShaneZhang/p/3755479.html</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></strong></p>
+<p>图就是一种管道，管道有最大通过流量的限制，图中边的权值就是所谓的“容量”。同时，注意有唯一的源点和汇点。<br>算法的关键在于<br><strong>1）何为增广路径，如何找出增广路径。</strong><br><strong>2）如何更新流量</strong><br>所谓增广路径，就是找到这样一条路径，其流量不满，未达到容量上限。<br>所有的可能的增广路径在一起便构成了残留网络<br>第一步，计算可增加流量<br>设某一增广路径上的节点为（a1,a2,a3,a4,….,an）<br>如果（u,v）是正向边，则增加流量d = min{ c(ai,aj) - f(ai,aj) | j = i +1, i =1,2,3…,n-1}<br>如果是逆向边，则增加流量d = min{ f(ai, aj) | j = i +1, i =1,2,3…,n-1}<br>第二步，更新流量<br>如果（u,v）是正向边，则 f(u,v) = f(u,v) + d<br>是逆向边，则f(u,v) = f(u,v) - d<br>注意，如果是逆向边，就是减法，当前管道从中减去部分流量，而且，伴随着这部分减去的流量，必有另一部分管道的流量会增加。。而且，最后的总流量增加了d<br><strong>来自 <span class="exturl"><a class="exturl__link" href="https://www.cnblogs.com/ShaneZhang/p/3755479.html" target="_blank" rel="noopener">https://www.cnblogs.com/ShaneZhang/p/3755479.html</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></strong></p>
 </blockquote>
 
         <h3 id="最小生成树">
           <a href="#最小生成树" class="heading-link"><i class="fas fa-link"></i></a>最小生成树</h3>
-      
-<blockquote>
-<p>图G=（V(G),E(G)）树T=（V(T),E’(T)）<br>
-在一个连通无向图G=(V, E)中，对于其中的每条边(u,v)∈E，赋予其权重w(u, v)，则最小生成树问题就是要在G中找到一个连通图G中所有顶点的无环子集T⊆E，使得这个子集中所有边的权重之和最小。<br>
-即生成树为一条连接所有点的路径，最小生成树为权重和最小那个生成树（非环）<br>
-解决最小生成树问题有两个算法：Prim算法和Kruskal算法<br>
-<strong>Prim算法</strong>基本思想是从选点开始，再选择和不连通点之间的边，进而循环，每一次循环中，一个关键在于判断点之间是否不连通（对连通点集团进行编号，即只需判断集团编号是否相等即可），另一个在于选择最小的边。<br>
-<strong>Kruskal算法</strong>基本思想是从选最小边开始，连通成一个集团，进行编号，再选择不连通的集团的最小赋权边进行连接，依次循环。<br>
-
+      <blockquote>
+<p>图G=（V(G),E(G)）树T=（V(T),E’(T)）<br>在一个连通无向图G=(V, E)中，对于其中的每条边(u,v)∈E，赋予其权重w(u, v)，则最小生成树问题就是要在G中找到一个连通图G中所有顶点的无环子集T⊆E，使得这个子集中所有边的权重之和最小。<br>即生成树为一条连接所有点的路径，最小生成树为权重和最小那个生成树（非环）<br>解决最小生成树问题有两个算法：Prim算法和Kruskal算法<br><strong>Prim算法</strong>基本思想是从选点开始，再选择和不连通点之间的边，进而循环，每一次循环中，一个关键在于判断点之间是否不连通（对连通点集团进行编号，即只需判断集团编号是否相等即可），另一个在于选择最小的边。<br><strong>Kruskal算法</strong>基本思想是从选最小边开始，连通成一个集团，进行编号，再选择不连通的集团的最小赋权边进行连接，依次循环。<br>
         <img class="lazyload lazyload-gif" src="/images/loading.svg" data-src="https://i.loli.net/2020/02/03/ZGHkLWOPjENM6Vg.png" alt="3">
-      <br>
-<strong><span class="exturl"><a class="exturl__link" href="https://blog.csdn.net/luoshixian099/article/details/51908175" target="_blank" rel="noopener">https://blog.csdn.net/luoshixian099/article/details/51908175</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></strong></p>
+      <br><strong><span class="exturl"><a class="exturl__link" href="https://blog.csdn.net/luoshixian099/article/details/51908175" target="_blank" rel="noopener">https://blog.csdn.net/luoshixian099/article/details/51908175</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></strong></p>
 </blockquote>
 
-        <h2 id="优化模型3">
-          <a href="#优化模型3" class="heading-link"><i class="fas fa-link"></i></a>优化模型(3)</h2>
+        <h2 id="优化模型-3">
+          <a href="#优化模型-3" class="heading-link"><i class="fas fa-link"></i></a>优化模型(3)</h2>
       
-
         <h3 id="背包">
           <a href="#背包" class="heading-link"><i class="fas fa-link"></i></a>背包</h3>
-      
-<blockquote>
-<p><em><strong>《背包问题九讲》</strong></em><br>
-背包问题不单单是一个简单的算法问题，它本质上代表了一大类问题，这类问题实际上是01线性规划问题，其约束条件和目标函数如下：
+      <blockquote>
+<p><strong><em>《背包问题九讲》</em></strong><br>背包问题不单单是一个简单的算法问题，它本质上代表了一大类问题，这类问题实际上是01线性规划问题，其约束条件和目标函数如下：
         <img class="lazyload lazyload-gif" src="/images/loading.svg" data-src="https://i.loli.net/2020/02/03/3iC2xhWNXGuq8v6.png" alt="image.png">
-      <br>
-<strong>eg:01背包问题，完全背包问题，多重背包问题，二维费用背包问题</strong><br>
-<strong><span class="exturl"><a class="exturl__link" href="http://dongxicheng.org/structure/knapsack-problems/" target="_blank" rel="noopener">http://dongxicheng.org/structure/knapsack-problems/</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></strong></p>
+      <br><strong>eg:01背包问题，完全背包问题，多重背包问题，二维费用背包问题</strong><br><strong><span class="exturl"><a class="exturl__link" href="http://dongxicheng.org/structure/knapsack-problems/" target="_blank" rel="noopener">http://dongxicheng.org/structure/knapsack-problems/</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></strong></p>
 </blockquote>
 
-        <h3 id="指派分配问题">
-          <a href="#指派分配问题" class="heading-link"><i class="fas fa-link"></i></a>指派(分配问题)</h3>
-      
-<blockquote>
-<p>实际中，会遇到这样的问题，有n项不同的任务，需要n个人分别完成其中的1项，每个人完成任务的时间不一样。于是就有一个问题，如何分配任务使得花费时间最少。<br>
-通俗来讲，就是n*n矩阵中，选取n个元素，每行每列各有1个元素，使得和最小。<br>
-如下图：<br>
-
+        <h3 id="指派-分配问题">
+          <a href="#指派-分配问题" class="heading-link"><i class="fas fa-link"></i></a>指派(分配问题)</h3>
+      <blockquote>
+<p>实际中，会遇到这样的问题，有n项不同的任务，需要n个人分别完成其中的1项，每个人完成任务的时间不一样。于是就有一个问题，如何分配任务使得花费时间最少。<br>通俗来讲，就是n*n矩阵中，选取n个元素，每行每列各有1个元素，使得和最小。<br>如下图：<br>
         <img class="lazyload lazyload-gif" src="/images/loading.svg" data-src="https://i.loli.net/2020/02/03/d58hrDcQ14k7JwV.png" alt="image.png">
       </p>
 </blockquote>
@@ -333,7 +240,6 @@ window.CONFIG = CONFIG;</script><meta name="generator" content="Hexo 4.2.1"></he
 </blockquote>
 <blockquote>
 <p><strong>匈牙利法：</strong><br>
-
         <img class="lazyload lazyload-gif" src="/images/loading.svg" data-src="https://i.loli.net/2020/02/03/hWeQFEwxgnAORzX.png" alt="image.png">
       </p>
 </blockquote>
@@ -341,86 +247,61 @@ window.CONFIG = CONFIG;</script><meta name="generator" content="Hexo 4.2.1"></he
         <h3 id="抽屉">
           <a href="#抽屉" class="heading-link"><i class="fas fa-link"></i></a>抽屉</h3>
       
-
-        <h3 id="旅行社tsp">
-          <a href="#旅行社tsp" class="heading-link"><i class="fas fa-link"></i></a>旅行社TSP</h3>
-      
-<blockquote>
-<p>Travelling Salesman Problem (TSP) 是最基本的路线问题。它寻求的是旅行者由起点出发，通过所有给定的需求点后，再次返回起点所花费的最小路径成本<br>
-整理模拟退火算法的程序！<br>
-<strong><span class="exturl"><a class="exturl__link" href="http://blog.csdn.net/zhangzhengyi03539/article/details/46673545" target="_blank" rel="noopener">http://blog.csdn.net/zhangzhengyi03539/article/details/46673545</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span><br>
-<span class="exturl"><a class="exturl__link" href="https://www.cnblogs.com/ranjiewen/p/6815333.html" target="_blank" rel="noopener">https://www.cnblogs.com/ranjiewen/p/6815333.html</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></strong></p>
+        <h3 id="旅行社TSP">
+          <a href="#旅行社TSP" class="heading-link"><i class="fas fa-link"></i></a>旅行社TSP</h3>
+      <blockquote>
+<p>Travelling Salesman Problem (TSP) 是最基本的路线问题。它寻求的是旅行者由起点出发，通过所有给定的需求点后，再次返回起点所花费的最小路径成本<br>整理模拟退火算法的程序！<br><strong><span class="exturl"><a class="exturl__link" href="http://blog.csdn.net/zhangzhengyi03539/article/details/46673545" target="_blank" rel="noopener">http://blog.csdn.net/zhangzhengyi03539/article/details/46673545</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span><br><span class="exturl"><a class="exturl__link" href="https://www.cnblogs.com/ranjiewen/p/6815333.html" target="_blank" rel="noopener">https://www.cnblogs.com/ranjiewen/p/6815333.html</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></strong></p>
 </blockquote>
 
-        <h3 id="cpp">
-          <a href="#cpp" class="heading-link"><i class="fas fa-link"></i></a>CPP</h3>
-      
-<blockquote>
-<p>中国邮路问题，就是派邮递员送信，最后返回邮局，要求必须经过负责投递的街道至少一次，并且途径距离最短，属于图论里的euler回路<br>
-<strong>介绍：<span class="exturl"><a class="exturl__link" href="https://blog.csdn.net/gxuan/article/details/7869119" target="_blank" rel="noopener">https://blog.csdn.net/gxuan/article/details/7869119</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span><br>
-编程实现：<span class="exturl"><a class="exturl__link" href="https://www.cnblogs.com/guocai/archive/2012/07/08/2581979.html" target="_blank" rel="noopener">https://www.cnblogs.com/guocai/archive/2012/07/08/2581979.html</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></strong></p>
+        <h3 id="CPP">
+          <a href="#CPP" class="heading-link"><i class="fas fa-link"></i></a>CPP</h3>
+      <blockquote>
+<p>中国邮路问题，就是派邮递员送信，最后返回邮局，要求必须经过负责投递的街道至少一次，并且途径距离最短，属于图论里的euler回路<br><strong>介绍：<span class="exturl"><a class="exturl__link" href="https://blog.csdn.net/gxuan/article/details/7869119" target="_blank" rel="noopener">https://blog.csdn.net/gxuan/article/details/7869119</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span><br>编程实现：<span class="exturl"><a class="exturl__link" href="https://www.cnblogs.com/guocai/archive/2012/07/08/2581979.html" target="_blank" rel="noopener">https://www.cnblogs.com/guocai/archive/2012/07/08/2581979.html</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></strong></p>
 </blockquote>
 
         <h3 id="产销">
           <a href="#产销" class="heading-link"><i class="fas fa-link"></i></a>产销</h3>
-      
-<blockquote>
-<p>解决如何实现成本最小，利润最大的问题，问题的核心为如何求成本函数最小值的问题。<br>
-<strong><span class="exturl"><a class="exturl__link" href="https://www.cnblogs.com/guocai/archive/2012/07/08/2581979.html" target="_blank" rel="noopener">https://www.cnblogs.com/guocai/archive/2012/07/08/2581979.html</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></strong></p>
+      <blockquote>
+<p>解决如何实现成本最小，利润最大的问题，问题的核心为如何求成本函数最小值的问题。<br><strong><span class="exturl"><a class="exturl__link" href="https://www.cnblogs.com/guocai/archive/2012/07/08/2581979.html" target="_blank" rel="noopener">https://www.cnblogs.com/guocai/archive/2012/07/08/2581979.html</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></strong></p>
 </blockquote>
 
         <h3 id="运输">
           <a href="#运输" class="heading-link"><i class="fas fa-link"></i></a>运输</h3>
-      
-<blockquote>
+      <blockquote>
 <p>
         <img class="lazyload lazyload-gif" src="/images/loading.svg" data-src="https://i.loli.net/2020/02/03/MlcEqYBx6ny3kUK.png" alt="image.png">
-      <br>
-<em>四要素：</em> <strong>生产地，销售地，运输物资，运输价格</strong><br>
-<strong><span class="exturl"><a class="exturl__link" href="https://zhuanlan.zhihu.com/p/33299659" target="_blank" rel="noopener">https://zhuanlan.zhihu.com/p/33299659</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></strong></p>
+      <br><em>四要素：</em> <strong>生产地，销售地，运输物资，运输价格</strong><br><strong><span class="exturl"><a class="exturl__link" href="https://zhuanlan.zhihu.com/p/33299659" target="_blank" rel="noopener">https://zhuanlan.zhihu.com/p/33299659</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></strong></p>
 </blockquote>
 
         <h3 id="排队论">
           <a href="#排队论" class="heading-link"><i class="fas fa-link"></i></a>排队论</h3>
-      
-<blockquote>
-<p>排队系统由三部分组成：<br>
-<strong>(1)顾客输入过程</strong><br>
-<strong>(2)排队结构与排队规则</strong><br>
-<strong>(3)服务机构与服务规则</strong><br>
-
+      <blockquote>
+<p>排队系统由三部分组成：<br><strong>(1)顾客输入过程</strong><br><strong>(2)排队结构与排队规则</strong><br><strong>(3)服务机构与服务规则</strong><br>
         <img class="lazyload lazyload-gif" src="/images/loading.svg" data-src="https://i.loli.net/2020/02/03/r6WleBKoTV4cSta.png" alt="7">
-      <br>
-一般研究的问题为总体为无限的，到达方式逐个，到达间隔随机，顾客之间相互独立，输入过程平稳。<br>
-
+      <br>一般研究的问题为总体为无限的，到达方式逐个，到达间隔随机，顾客之间相互独立，输入过程平稳。<br>
         <img class="lazyload lazyload-gif" src="/images/loading.svg" data-src="https://i.loli.net/2020/02/03/4zCUAPQHEgwFdaV.png" alt="image.png">
       <br>
-
         <img class="lazyload lazyload-gif" src="/images/loading.svg" data-src="https://i.loli.net/2020/02/03/UF7ujBXEA4ZR9yH.png" alt="image.png">
       </p>
 </blockquote>
 <blockquote>
 <p>
         <img class="lazyload lazyload-gif" src="/images/loading.svg" data-src="https://i.loli.net/2020/02/03/K2E7bxswA8mhCDc.png" alt="image.png">
-      <br>
-<strong><span class="exturl"><a class="exturl__link" href="https://www.cnblogs.com/BlueMountain-HaggenDazs/p/4270875.html" target="_blank" rel="noopener">https://www.cnblogs.com/BlueMountain-HaggenDazs/p/4270875.html</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></strong></p>
+      <br><strong><span class="exturl"><a class="exturl__link" href="https://www.cnblogs.com/BlueMountain-HaggenDazs/p/4270875.html" target="_blank" rel="noopener">https://www.cnblogs.com/BlueMountain-HaggenDazs/p/4270875.html</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></strong></p>
 </blockquote>
 
         <h1 id="预测模型">
           <a href="#预测模型" class="heading-link"><i class="fas fa-link"></i></a>预测模型</h1>
       
-
-        <h2 id="预测模型1微分方程预测">
-          <a href="#预测模型1微分方程预测" class="heading-link"><i class="fas fa-link"></i></a>预测模型(1)微分方程预测</h2>
-      
-<blockquote>
+        <h2 id="预测模型-1-微分方程预测">
+          <a href="#预测模型-1-微分方程预测" class="heading-link"><i class="fas fa-link"></i></a>预测模型(1)微分方程预测</h2>
+      <blockquote>
 <p><span class="exturl"><a class="exturl__link" href="https://wenku.baidu.com/view/2e0a184a16fc700abb68fc7c.html" target="_blank" rel="noopener">https://wenku.baidu.com/view/2e0a184a16fc700abb68fc7c.html</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></p>
 </blockquote>
 
         <h3 id="单种群">
           <a href="#单种群" class="heading-link"><i class="fas fa-link"></i></a>单种群</h3>
-      
-<blockquote>
+      <blockquote>
 <p>
         <img class="lazyload lazyload-gif" src="/images/loading.svg" data-src="https://i.loli.net/2020/02/03/KAxoXkQFC6sv7g5.png" alt="image.png">
       </p>
@@ -428,214 +309,159 @@ window.CONFIG = CONFIG;</script><meta name="generator" content="Hexo 4.2.1"></he
 
         <h3 id="多种群增长">
           <a href="#多种群增长" class="heading-link"><i class="fas fa-link"></i></a>多种群增长</h3>
-      
-<blockquote>
+      <blockquote>
 <p>
         <img class="lazyload lazyload-gif" src="/images/loading.svg" data-src="https://i.loli.net/2020/02/03/VzoeUjYAB5s6G41.png" alt="image.png">
       <br>
-
         <img class="lazyload lazyload-gif" src="/images/loading.svg" data-src="https://i.loli.net/2020/02/03/4XY9DRtmj3Blgre.png" alt="image.png">
       </p>
 </blockquote>
 
-        <h3 id="logistic阻滞增长">
-          <a href="#logistic阻滞增长" class="heading-link"><i class="fas fa-link"></i></a>Logistic阻滞增长</h3>
-      
-<blockquote>
+        <h3 id="Logistic阻滞增长">
+          <a href="#Logistic阻滞增长" class="heading-link"><i class="fas fa-link"></i></a>Logistic阻滞增长</h3>
+      <blockquote>
 <p>
         <img class="lazyload lazyload-gif" src="/images/loading.svg" data-src="https://i.loli.net/2020/02/03/GWXCzd8Ue9nKurm.png" alt="image.png">
-      <br>
-<strong><span class="exturl"><a class="exturl__link" href="https://blog.csdn.net/mrguanlingyu/article/details/7976607" target="_blank" rel="noopener">https://blog.csdn.net/mrguanlingyu/article/details/7976607</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></strong></p>
+      <br><strong><span class="exturl"><a class="exturl__link" href="https://blog.csdn.net/mrguanlingyu/article/details/7976607" target="_blank" rel="noopener">https://blog.csdn.net/mrguanlingyu/article/details/7976607</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></strong></p>
 </blockquote>
 <blockquote>
 <p>
         <img class="lazyload lazyload-gif" src="/images/loading.svg" data-src="https://i.loli.net/2020/02/03/fqDx69TcVwPe35U.png" alt="image.png">
       <br>
-
         <img class="lazyload lazyload-gif" src="/images/loading.svg" data-src="https://i.loli.net/2020/02/03/B1OwxPuFb7HNYXc.png" alt="image.png">
-      <br>
-指数模型人口预测程序：<br>
-
+      <br>指数模型人口预测程序：<br>
         <img class="lazyload lazyload-gif" src="/images/loading.svg" data-src="https://i.loli.net/2020/02/03/WzCBA6ThL7qoPMX.png" alt="image.png">
-      <br>
-logistic阻滞型人口模型代码：<br>
-
+      <br>logistic阻滞型人口模型代码：<br>
         <img class="lazyload lazyload-gif" src="/images/loading.svg" data-src="https://i.loli.net/2020/02/03/EuC8jnDwX24JrPp.png" alt="image.png">
-      <br>
-<strong>主要为nlinfit函数的使用</strong></p>
+      <br><strong>主要为nlinfit函数的使用</strong></p>
 </blockquote>
 
         <h3 id="时滞模型">
           <a href="#时滞模型" class="heading-link"><i class="fas fa-link"></i></a>时滞模型</h3>
-      
-<blockquote>
+      <blockquote>
 <p>考虑到种群密度对种群增长的时滞作用而改进的一个种群连续增长模型。</p>
 </blockquote>
 
-        <h2 id="预测模型2微分方程预测">
-          <a href="#预测模型2微分方程预测" class="heading-link"><i class="fas fa-link"></i></a>预测模型(2)微分方程预测</h2>
+        <h2 id="预测模型-2-微分方程预测">
+          <a href="#预测模型-2-微分方程预测" class="heading-link"><i class="fas fa-link"></i></a>预测模型(2)微分方程预测</h2>
       
-
         <h3 id="房室模型">
           <a href="#房室模型" class="heading-link"><i class="fas fa-link"></i></a>房室模型</h3>
-      
-<blockquote>
+      <blockquote>
 <p><span class="exturl"><a class="exturl__link" href="https://wenku.baidu.com/view/231eab44b307e87101f69645.html" target="_blank" rel="noopener">https://wenku.baidu.com/view/231eab44b307e87101f69645.html</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></p>
 </blockquote>
 
         <h3 id="差分方差模型">
           <a href="#差分方差模型" class="heading-link"><i class="fas fa-link"></i></a>差分方差模型</h3>
-      
-<blockquote>
+      <blockquote>
 <p>
         <img class="lazyload lazyload-gif" src="/images/loading.svg" data-src="https://i.loli.net/2020/02/03/tb9lHuMQKn7xAhy.png" alt="image.png">
-      <br>
-<strong><span class="exturl"><a class="exturl__link" href="https://www.cnblogs.com/TaigaCon/p/6878674.html" target="_blank" rel="noopener">https://www.cnblogs.com/TaigaCon/p/6878674.html</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></strong></p>
+      <br><strong><span class="exturl"><a class="exturl__link" href="https://www.cnblogs.com/TaigaCon/p/6878674.html" target="_blank" rel="noopener">https://www.cnblogs.com/TaigaCon/p/6878674.html</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></strong></p>
 </blockquote>
 
         <h3 id="解析解">
           <a href="#解析解" class="heading-link"><i class="fas fa-link"></i></a>解析解</h3>
-      
-<blockquote>
-<p>解析解(analytical solution)就是一些严格的公式,给出任意的自变量就可以求出其因变量,也就是问题的解, 他人可以利用这些公式计算各自的问题.</p>
+      <blockquote>
+<p>解析解(analytical solution)就是一些严格的公式,给出任意的自变量就可以求出其因变量,也就是问题的解, 他人可以利用这些公式计算各自的问题.  </p>
 </blockquote>
 
         <h3 id="数值解">
           <a href="#数值解" class="heading-link"><i class="fas fa-link"></i></a>数值解</h3>
-      
-<blockquote>
-<p>解析解(analytical solution)就是一些严格的公式,给出任意的自变量就可以求出其因变量,也就是问题的解, 他人可以利用这些公式计算各自的问题.</p>
+      <blockquote>
+<p>解析解(analytical solution)就是一些严格的公式,给出任意的自变量就可以求出其因变量,也就是问题的解, 他人可以利用这些公式计算各自的问题.  </p>
 </blockquote>
 
         <h3 id="参数确定">
           <a href="#参数确定" class="heading-link"><i class="fas fa-link"></i></a>参数确定</h3>
       
-
-        <h2 id="预测模型3">
-          <a href="#预测模型3" class="heading-link"><i class="fas fa-link"></i></a>预测模型(3)</h2>
+        <h2 id="预测模型-3">
+          <a href="#预测模型-3" class="heading-link"><i class="fas fa-link"></i></a>预测模型(3)</h2>
       
-
-        <h3 id="线性-2">
-          <a href="#线性-2" class="heading-link"><i class="fas fa-link"></i></a>线性</h3>
-      
-<blockquote>
+        <h3 id="线性-1">
+          <a href="#线性-1" class="heading-link"><i class="fas fa-link"></i></a>线性</h3>
+      <blockquote>
 <p>
         <img class="lazyload lazyload-gif" src="/images/loading.svg" data-src="https://i.loli.net/2020/02/03/BtPiv147VgqfpZK.png" alt="image.png">
-      <br>
-<strong><span class="exturl"><a class="exturl__link" href="https://otexts.com/fppcn/regression-intro.html" target="_blank" rel="noopener">https://otexts.com/fppcn/regression-intro.html</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></strong></p>
+      <br><strong><span class="exturl"><a class="exturl__link" href="https://otexts.com/fppcn/regression-intro.html" target="_blank" rel="noopener">https://otexts.com/fppcn/regression-intro.html</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></strong></p>
 </blockquote>
 
         <h3 id="非线性回归与拟合">
           <a href="#非线性回归与拟合" class="heading-link"><i class="fas fa-link"></i></a>非线性回归与拟合</h3>
-      
-<blockquote>
+      <blockquote>
 <p>
         <img class="lazyload lazyload-gif" src="/images/loading.svg" data-src="https://i.loli.net/2020/02/03/5sDUoVdkzvMcNnw.png" alt="image.png">
-      <br>
-<strong><span class="exturl"><a class="exturl__link" href="https://zhuanlan.zhihu.com/p/32325298" target="_blank" rel="noopener">https://zhuanlan.zhihu.com/p/32325298</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></strong></p>
+      <br><strong><span class="exturl"><a class="exturl__link" href="https://zhuanlan.zhihu.com/p/32325298" target="_blank" rel="noopener">https://zhuanlan.zhihu.com/p/32325298</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></strong></p>
 </blockquote>
 <p><strong>逻辑回归</strong><br>
-
         <img class="lazyload lazyload-gif" src="/images/loading.svg" data-src="https://i.loli.net/2020/02/03/94McTKJ7N5gDpaF.png" alt="image.png">
       <br>
-
         <img class="lazyload lazyload-gif" src="/images/loading.svg" data-src="https://i.loli.net/2020/02/03/kKFmwp79qXNgCtW.png" alt="image.png">
       </p>
 
         <h3 id="统计回归预测">
           <a href="#统计回归预测" class="heading-link"><i class="fas fa-link"></i></a>统计回归预测</h3>
-      
-<blockquote>
+      <blockquote>
 <p>
         <img class="lazyload lazyload-gif" src="/images/loading.svg" data-src="https://i.loli.net/2020/02/03/QHGD2U6Wpjtb5mI.png" alt="image.png">
+      <br><strong><span class="exturl"><a class="exturl__link" href="https://otexts.com/fppcn/forecasting-regression.html" target="_blank" rel="noopener">https://otexts.com/fppcn/forecasting-regression.html</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span><br><span class="exturl"><a class="exturl__link" href="https://blog.csdn.net/Android_xue/article/details/97614045" target="_blank" rel="noopener">https://blog.csdn.net/Android_xue/article/details/97614045</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></strong></p>
+</blockquote>
+
+        <h3 id="参数确定-1">
+          <a href="#参数确定-1" class="heading-link"><i class="fas fa-link"></i></a>参数确定</h3>
+      
+        <h2 id="预测模型-4">
+          <a href="#预测模型-4" class="heading-link"><i class="fas fa-link"></i></a>预测模型(4)</h2>
+      
+        <h3 id="Markov链预测">
+          <a href="#Markov链预测" class="heading-link"><i class="fas fa-link"></i></a>Markov链预测</h3>
+      <blockquote>
+<p><strong>1.状态</strong>  在马尔可夫预测中，“状态”是一个重要的术语。所谓状态，就是指某一事件在某个时刻（或时期)出现的某种结果。一般而言，随着所研究的事件及其预测的目标不同，状态可以有不同的划分方式。譬如，在商品销售预测中，有“畅销”、“一般”、“滞销”等状态；在农业收成预测中，有“丰收”、“平收”、“欠收”等状态；在人口构成预测中，有“婴儿”、“儿童”、“少年”、“青年”、“中年”、“老年”等状态；等等。<br><strong>2.状态转移过程</strong>  在事件的发展过程中，从一种状态转变为另一种状态，就称为状态转移。事件的发展，随着时间的变化而变化所作的状态转移，或者说状态转移与时间的关系，就称为状态转移过程，简称过程。<br>
+        <img class="lazyload lazyload-gif" src="/images/loading.svg" data-src="https://i.loli.net/2020/02/03/cpMKNXrnLdsvh1I.png" alt="image.png">
       <br>
-<strong><span class="exturl"><a class="exturl__link" href="https://otexts.com/fppcn/forecasting-regression.html" target="_blank" rel="noopener">https://otexts.com/fppcn/forecasting-regression.html</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span><br>
-<span class="exturl"><a class="exturl__link" href="https://blog.csdn.net/Android_xue/article/details/97614045" target="_blank" rel="noopener">https://blog.csdn.net/Android_xue/article/details/97614045</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></strong></p>
+        <img class="lazyload lazyload-gif" src="/images/loading.svg" data-src="https://i.loli.net/2020/02/03/p6rTQwKsfRkEPtO.png" alt="image.png">
+      <br><strong><span class="exturl"><a class="exturl__link" href="https://blog.csdn.net/qq_41686130/article/details/81906527" target="_blank" rel="noopener">https://blog.csdn.net/qq_41686130/article/details/81906527</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span><br><span class="exturl"><a class="exturl__link" href="https://blog.csdn.net/bitcarmanlee/article/details/82819860" target="_blank" rel="noopener">https://blog.csdn.net/bitcarmanlee/article/details/82819860</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></strong></p>
+</blockquote>
+
+        <h3 id="神经网络预测">
+          <a href="#神经网络预测" class="heading-link"><i class="fas fa-link"></i></a>神经网络预测</h3>
+      <blockquote>
+<p>
+        <img class="lazyload lazyload-gif" src="/images/loading.svg" data-src="https://i.loli.net/2020/02/03/HzjDa4dU3FyQESt.png" alt="image.png">
+      <br>
+        <img class="lazyload lazyload-gif" src="/images/loading.svg" data-src="https://i.loli.net/2020/02/03/O5hTurW7HfLawyz.png" alt="image.png">
+      <br>
+        <img class="lazyload lazyload-gif" src="/images/loading.svg" data-src="https://i.loli.net/2020/02/03/HnYr2uSxUCVblRN.png" alt="image.png">
+      <br>
+        <img class="lazyload lazyload-gif" src="/images/loading.svg" data-src="https://i.loli.net/2020/02/03/jug7q39TyOEl5Uv.png" alt="image.png">
+      <br><strong><span class="exturl"><a class="exturl__link" href="https://otexts.com/fppcn/nnetar.html" target="_blank" rel="noopener">https://otexts.com/fppcn/nnetar.html</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span><br><span class="exturl"><a class="exturl__link" href="https://blog.csdn.net/asd20172016/article/details/81454009" target="_blank" rel="noopener">https://blog.csdn.net/asd20172016/article/details/81454009</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span><br><span class="exturl"><a class="exturl__link" href="https://www.cnblogs.com/BlueMountain-HaggenDazs/p/4270391.html" target="_blank" rel="noopener">https://www.cnblogs.com/BlueMountain-HaggenDazs/p/4270391.html</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></strong></p>
+</blockquote>
+
+        <h2 id="预测模型-5">
+          <a href="#预测模型-5" class="heading-link"><i class="fas fa-link"></i></a>预测模型(5)</h2>
+      
+        <h3 id="模糊预测">
+          <a href="#模糊预测" class="heading-link"><i class="fas fa-link"></i></a>模糊预测</h3>
+      
+        <h3 id="灰色预测">
+          <a href="#灰色预测" class="heading-link"><i class="fas fa-link"></i></a>灰色预测</h3>
+      <blockquote>
+<p>灰色系统介于白色和黑色之间，灰色系统内的一部分信息是已知的，另一部分信息是未知的，系统内各因素间有不确定的关系。<br>灰色预测通过鉴别系统因素之间发展趋势的相异程度，即进行关联分析，并对原始数据进行生成处理来寻找系统变动的规律，生成有较强规律性的数据序列，然后建立相应的微分方程模型，从而预测事物未来发展趋势的状况。<br><strong>数据生成：累加生成、累减生成、加权累加生成<br>灰色模型GM(1,1)</strong><br><strong><span class="exturl"><a class="exturl__link" href="https://blog.csdn.net/qq547276542/article/details/77865341" target="_blank" rel="noopener">https://blog.csdn.net/qq547276542/article/details/77865341</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></strong></p>
 </blockquote>
 
         <h3 id="参数确定-2">
           <a href="#参数确定-2" class="heading-link"><i class="fas fa-link"></i></a>参数确定</h3>
       
-
-        <h2 id="预测模型4">
-          <a href="#预测模型4" class="heading-link"><i class="fas fa-link"></i></a>预测模型(4)</h2>
-      
-
-        <h3 id="markov链预测">
-          <a href="#markov链预测" class="heading-link"><i class="fas fa-link"></i></a>Markov链预测</h3>
-      
-<blockquote>
-<p><strong>1.状态</strong>&nbsp; 在马尔可夫预测中，“状态”是一个重要的术语。所谓状态，就是指某一事件在某个时刻（或时期)出现的某种结果。一般而言，随着所研究的事件及其预测的目标不同，状态可以有不同的划分方式。譬如，在商品销售预测中，有“畅销”、“一般”、“滞销”等状态；在农业收成预测中，有“丰收”、“平收”、“欠收”等状态；在人口构成预测中，有“婴儿”、“儿童”、“少年”、“青年”、“中年”、“老年”等状态；等等。<br>
-<strong>2.状态转移过程</strong>&nbsp; 在事件的发展过程中，从一种状态转变为另一种状态，就称为状态转移。事件的发展，随着时间的变化而变化所作的状态转移，或者说状态转移与时间的关系，就称为状态转移过程，简称过程。<br>
-
-        <img class="lazyload lazyload-gif" src="/images/loading.svg" data-src="https://i.loli.net/2020/02/03/cpMKNXrnLdsvh1I.png" alt="image.png">
-      <br>
-
-        <img class="lazyload lazyload-gif" src="/images/loading.svg" data-src="https://i.loli.net/2020/02/03/p6rTQwKsfRkEPtO.png" alt="image.png">
-      <br>
-<strong><span class="exturl"><a class="exturl__link" href="https://blog.csdn.net/qq_41686130/article/details/81906527" target="_blank" rel="noopener">https://blog.csdn.net/qq_41686130/article/details/81906527</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span><br>
-<span class="exturl"><a class="exturl__link" href="https://blog.csdn.net/bitcarmanlee/article/details/82819860" target="_blank" rel="noopener">https://blog.csdn.net/bitcarmanlee/article/details/82819860</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></strong></p>
-</blockquote>
-
-        <h3 id="神经网络预测">
-          <a href="#神经网络预测" class="heading-link"><i class="fas fa-link"></i></a>神经网络预测</h3>
-      
-<blockquote>
-<p>
-        <img class="lazyload lazyload-gif" src="/images/loading.svg" data-src="https://i.loli.net/2020/02/03/HzjDa4dU3FyQESt.png" alt="image.png">
-      <br>
-
-        <img class="lazyload lazyload-gif" src="/images/loading.svg" data-src="https://i.loli.net/2020/02/03/O5hTurW7HfLawyz.png" alt="image.png">
-      <br>
-
-        <img class="lazyload lazyload-gif" src="/images/loading.svg" data-src="https://i.loli.net/2020/02/03/HnYr2uSxUCVblRN.png" alt="image.png">
-      <br>
-
-        <img class="lazyload lazyload-gif" src="/images/loading.svg" data-src="https://i.loli.net/2020/02/03/jug7q39TyOEl5Uv.png" alt="image.png">
-      <br>
-<strong><span class="exturl"><a class="exturl__link" href="https://otexts.com/fppcn/nnetar.html" target="_blank" rel="noopener">https://otexts.com/fppcn/nnetar.html</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span><br>
-<span class="exturl"><a class="exturl__link" href="https://blog.csdn.net/asd20172016/article/details/81454009" target="_blank" rel="noopener">https://blog.csdn.net/asd20172016/article/details/81454009</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span><br>
-<span class="exturl"><a class="exturl__link" href="https://www.cnblogs.com/BlueMountain-HaggenDazs/p/4270391.html" target="_blank" rel="noopener">https://www.cnblogs.com/BlueMountain-HaggenDazs/p/4270391.html</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></strong></p>
-</blockquote>
-
-        <h2 id="预测模型5">
-          <a href="#预测模型5" class="heading-link"><i class="fas fa-link"></i></a>预测模型(5)</h2>
-      
-
-        <h3 id="模糊预测">
-          <a href="#模糊预测" class="heading-link"><i class="fas fa-link"></i></a>模糊预测</h3>
-      
-
-        <h3 id="灰色预测">
-          <a href="#灰色预测" class="heading-link"><i class="fas fa-link"></i></a>灰色预测</h3>
-      
-<blockquote>
-<p>灰色系统介于白色和黑色之间，灰色系统内的一部分信息是已知的，另一部分信息是未知的，系统内各因素间有不确定的关系。<br>
-灰色预测通过鉴别系统因素之间发展趋势的相异程度，即进行关联分析，并对原始数据进行生成处理来寻找系统变动的规律，生成有较强规律性的数据序列，然后建立相应的微分方程模型，从而预测事物未来发展趋势的状况。<br>
-<strong>数据生成：累加生成、累减生成、加权累加生成<br>
-灰色模型GM(1,1)</strong><br>
-<strong><span class="exturl"><a class="exturl__link" href="https://blog.csdn.net/qq547276542/article/details/77865341" target="_blank" rel="noopener">https://blog.csdn.net/qq547276542/article/details/77865341</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></strong></p>
-</blockquote>
-
-        <h3 id="参数确定-3">
-          <a href="#参数确定-3" class="heading-link"><i class="fas fa-link"></i></a>参数确定</h3>
-      
-
         <h1 id="分类模型">
           <a href="#分类模型" class="heading-link"><i class="fas fa-link"></i></a>分类模型</h1>
       
-
-        <h2 id="分类模型1">
-          <a href="#分类模型1" class="heading-link"><i class="fas fa-link"></i></a>分类模型(1)</h2>
-      
-<p><strong><span class="exturl"><a class="exturl__link" href="https://blog.csdn.net/sinat_26917383/article/details/51611519" target="_blank" rel="noopener">https://blog.csdn.net/sinat_26917383/article/details/51611519</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></strong></p>
+        <h2 id="分类模型-1">
+          <a href="#分类模型-1" class="heading-link"><i class="fas fa-link"></i></a>分类模型(1)</h2>
+      <p><strong><span class="exturl"><a class="exturl__link" href="https://blog.csdn.net/sinat_26917383/article/details/51611519" target="_blank" rel="noopener">https://blog.csdn.net/sinat_26917383/article/details/51611519</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></strong></p>
 
         <h3 id="聚类">
           <a href="#聚类" class="heading-link"><i class="fas fa-link"></i></a>聚类</h3>
-      
-<blockquote>
-<p><strong>三类比较常见的聚类模型，K-mean聚类、层次（系统）聚类、最大期望EM算法</strong><br>
-<em>聚类分析的目的就是让类群内观测的距离最近，同时不同群体之间的距离最大。</em></p>
+      <blockquote>
+<p><strong>三类比较常见的聚类模型，K-mean聚类、层次（系统）聚类、最大期望EM算法</strong><br><em>聚类分析的目的就是让类群内观测的距离最近，同时不同群体之间的距离最大。</em></p>
 </blockquote>
 <p><strong>K-mean聚类</strong></p>
 <blockquote>
@@ -646,7 +472,6 @@ logistic阻滞型人口模型代码：<br>
 <p><strong>层次（系统）聚类</strong></p>
 <blockquote>
 <p>层次聚类也称系统聚类法，是根据个体间距离将个体向上两两聚合，再将聚合的小群体两两聚合一直到聚为一个整体。计算所有个体之间的距离，最相近距离的个体合体，不断合体。<br>
-
         <img class="lazyload lazyload-gif" src="/images/loading.svg" data-src="https://i.loli.net/2020/02/03/V9K8yAF5ovqpfYu.png" alt="image.png">
       </p>
 </blockquote>
@@ -658,18 +483,15 @@ logistic阻滞型人口模型代码：<br>
         <img class="lazyload lazyload-gif" src="/images/loading.svg" data-src="https://i.loli.net/2020/02/03/NSJts5pRYHabmuI.png" alt="image.png">
       </p>
 
-        <h3 id="模糊聚类fcm">
-          <a href="#模糊聚类fcm" class="heading-link"><i class="fas fa-link"></i></a>模糊聚类(FCM)</h3>
-      
-<p><strong><span class="exturl"><a class="exturl__link" href="https://blog.csdn.net/WWWQ2386466490/article/details/80349239" target="_blank" rel="noopener">https://blog.csdn.net/WWWQ2386466490/article/details/80349239</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></strong><br>
-<strong>隶属度</strong></p>
+        <h3 id="模糊聚类-FCM">
+          <a href="#模糊聚类-FCM" class="heading-link"><i class="fas fa-link"></i></a>模糊聚类(FCM)</h3>
+      <p><strong><span class="exturl"><a class="exturl__link" href="https://blog.csdn.net/WWWQ2386466490/article/details/80349239" target="_blank" rel="noopener">https://blog.csdn.net/WWWQ2386466490/article/details/80349239</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></strong><br><strong>隶属度</strong></p>
 <blockquote>
 <p>隶属度函数是表示一个对象x 隶属于集合A 的程度的函数，通常记做μA(x)，其自变量范围是所有可能属于集合A 的对象（即集合A 所在空间中的所有点），取值范围是[0,1]，即0&lt;=μA(x)，μA(x)&lt;=1。μA(x)=1 表示x 完全隶属于集合A，相当于传统集合概念上的x∈A。</p>
 </blockquote>
 <p><strong>模糊集合</strong></p>
 <blockquote>
 <p>个定义在空间X={x}上的隶属度函数就定义了一个模糊集合A，或者叫定义在论域X={x}上的模糊子集A’。对于有限个对象x1，x2，……，xn 模糊集合A’可以表示为：<br>
-
         <img class="lazyload lazyload-gif" src="/images/loading.svg" data-src="https://i.loli.net/2020/02/03/FIMcE7QACyBJi8V.png" alt="image.png">
       </p>
 </blockquote>
@@ -678,254 +500,147 @@ logistic阻滞型人口模型代码：<br>
 <p>
         <img class="lazyload lazyload-gif" src="/images/loading.svg" data-src="https://i.loli.net/2020/02/03/ULvH9CngXNY2SfQ.png" alt="image.png">
       <br>
-
         <img class="lazyload lazyload-gif" src="/images/loading.svg" data-src="https://i.loli.net/2020/02/03/r2xmuBJeasM6NVH.png" alt="image.png">
       </p>
 </blockquote>
 
         <h3 id="距离函数选取">
           <a href="#距离函数选取" class="heading-link"><i class="fas fa-link"></i></a>距离函数选取</h3>
-      
-<p>
+      <p>
         <img class="lazyload lazyload-gif" src="/images/loading.svg" data-src="https://i.loli.net/2020/02/03/t5v4yEAY6UeLSPj.png" alt="image.png">
       <br>
-
         <img class="lazyload lazyload-gif" src="/images/loading.svg" data-src="https://i.loli.net/2020/02/03/h4aLlNPW1IiD6nT.png" alt="image.png">
       </p>
 
         <h3 id="线性非线性分类器选取">
           <a href="#线性非线性分类器选取" class="heading-link"><i class="fas fa-link"></i></a>线性非线性分类器选取</h3>
-      
-<p>
+      <p>
         <img class="lazyload lazyload-gif" src="/images/loading.svg" data-src="https://i.loli.net/2020/02/03/94XMJRnPa8bYE3e.png" alt="image.png">
-      <br>
-左边：非线性分类器<br>
-右边：线性分类器（又名：一刀切）<br>
-<strong>分类器</strong><br>
-可以把输入数据分类的“东西”<br>
-<strong><span class="exturl"><a class="exturl__link" href="https://www.zhihu.com/question/30633734/answer/463900106" target="_blank" rel="noopener">https://www.zhihu.com/question/30633734/answer/463900106</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></strong></p>
+      <br>左边：非线性分类器<br>右边：线性分类器（又名：一刀切）<br><strong>分类器</strong><br>可以把输入数据分类的“东西”<br><strong><span class="exturl"><a class="exturl__link" href="https://www.zhihu.com/question/30633734/answer/463900106" target="_blank" rel="noopener">https://www.zhihu.com/question/30633734/answer/463900106</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></strong></p>
 
-        <h2 id="分类模型2">
-          <a href="#分类模型2" class="heading-link"><i class="fas fa-link"></i></a>分类模型(2)</h2>
+        <h2 id="分类模型-2">
+          <a href="#分类模型-2" class="heading-link"><i class="fas fa-link"></i></a>分类模型(2)</h2>
       
-
         <h3 id="神经网络分类">
           <a href="#神经网络分类" class="heading-link"><i class="fas fa-link"></i></a>神经网络分类</h3>
-      
-<p>
+      <p>
         <img class="lazyload lazyload-gif" src="/images/loading.svg" data-src="https://i.loli.net/2020/02/03/i9XoDwdpzhObqcH.png" alt="image.png">
       <br>
-
         <img class="lazyload lazyload-gif" src="/images/loading.svg" data-src="https://i.loli.net/2020/02/03/xiKTcGe6zON7d8L.png" alt="image.png">
-      <br>
-<strong><span class="exturl"><a class="exturl__link" href="https://blog.csdn.net/HerosOfEarth/article/details/52165133" target="_blank" rel="noopener">https://blog.csdn.net/HerosOfEarth/article/details/52165133</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></strong></p>
+      <br><strong><span class="exturl"><a class="exturl__link" href="https://blog.csdn.net/HerosOfEarth/article/details/52165133" target="_blank" rel="noopener">https://blog.csdn.net/HerosOfEarth/article/details/52165133</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></strong></p>
 
         <h3 id="网络构造">
           <a href="#网络构造" class="heading-link"><i class="fas fa-link"></i></a>网络构造</h3>
-      
-<blockquote>
-<p>A、输入量的选择：<br>
-a、输入量必须选择那些对输出影响大且能够检测或提取的变量；<br>
-b、各输入量之间互不相关或相关性很小。从输入、输出量性质分类来看，可以分为两类：数值变量和语言变量。数值变量又分为连续变量或离散变量。如常见的温度，压力，电压，电流等就是连续变量；语言变量是用自然语言表示的概念。如红，绿，蓝；男，女；大，中，小，开，关，亮，暗等。一般来说，语言变量在网络处理时，需要转化为离散变量。<br>
-c、输入量的表示与提取：多数情况下，直接送给神经网络的输入量无法直接得到，常常需要用信号处理与特征提取技术从原始数据中提取能反映其特征的若干参数作为网络输入。<br>
-B、输出量选择与表示：<br>
-a、输出量一般代表系统要实现的功能目标，如分类问题的类别归属等；<br>
-b、输出量表示可以是数值也可是语言变量；<br>
-<strong><span class="exturl"><a class="exturl__link" href="https://blog.csdn.net/m0_37102093/article/details/78030711" target="_blank" rel="noopener">https://blog.csdn.net/m0_37102093/article/details/78030711</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></strong></p>
+      <blockquote>
+<p>A、输入量的选择：<br>a、输入量必须选择那些对输出影响大且能够检测或提取的变量；<br>b、各输入量之间互不相关或相关性很小。从输入、输出量性质分类来看，可以分为两类：数值变量和语言变量。数值变量又分为连续变量或离散变量。如常见的温度，压力，电压，电流等就是连续变量；语言变量是用自然语言表示的概念。如红，绿，蓝；男，女；大，中，小，开，关，亮，暗等。一般来说，语言变量在网络处理时，需要转化为离散变量。<br>c、输入量的表示与提取：多数情况下，直接送给神经网络的输入量无法直接得到，常常需要用信号处理与特征提取技术从原始数据中提取能反映其特征的若干参数作为网络输入。<br>B、输出量选择与表示：<br>a、输出量一般代表系统要实现的功能目标，如分类问题的类别归属等；<br>b、输出量表示可以是数值也可是语言变量；<br><strong><span class="exturl"><a class="exturl__link" href="https://blog.csdn.net/m0_37102093/article/details/78030711" target="_blank" rel="noopener">https://blog.csdn.net/m0_37102093/article/details/78030711</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></strong></p>
 </blockquote>
 
         <h3 id="初始权值选取">
           <a href="#初始权值选取" class="heading-link"><i class="fas fa-link"></i></a>初始权值选取</h3>
-      
-<blockquote>
-<p>网络权值的初始化决定了网络的训练从误差曲面的哪一点开始，因此初始化方法对缩短网络的训练时间至关重要。<br>
-神经元的作用函数是关于坐标点对称的，若每个节点的净输入均在零点附近，则输出均出在作用函数的中点，这个位置不仅远离作用函数的饱和区，而且是其变化最灵敏的区域，必使网络学习加快。从神经网络净输入表达式来看，为了使各节点的初始净输入在零点附近，如下两种方法被常常使用：<br>
-A、取足够小的初始权值；<br>
-B、使初始值为+1和-1的权值数相等。</p>
+      <blockquote>
+<p>网络权值的初始化决定了网络的训练从误差曲面的哪一点开始，因此初始化方法对缩短网络的训练时间至关重要。<br>神经元的作用函数是关于坐标点对称的，若每个节点的净输入均在零点附近，则输出均出在作用函数的中点，这个位置不仅远离作用函数的饱和区，而且是其变化最灵敏的区域，必使网络学习加快。从神经网络净输入表达式来看，为了使各节点的初始净输入在零点附近，如下两种方法被常常使用：<br>A、取足够小的初始权值；<br>B、使初始值为+1和-1的权值数相等。</p>
 </blockquote>
 
         <h1 id="评价模型">
           <a href="#评价模型" class="heading-link"><i class="fas fa-link"></i></a>评价模型</h1>
       
-
-        <h2 id="评价模型1">
-          <a href="#评价模型1" class="heading-link"><i class="fas fa-link"></i></a>评价模型(1)</h2>
+        <h2 id="评价模型-1">
+          <a href="#评价模型-1" class="heading-link"><i class="fas fa-link"></i></a>评价模型(1)</h2>
       
-
         <h3 id="模糊分析">
           <a href="#模糊分析" class="heading-link"><i class="fas fa-link"></i></a>模糊分析</h3>
-      
-<blockquote>
+      <blockquote>
 <p><strong>1.建立综合评价的因素集</strong><br>
-
         <img class="lazyload lazyload-gif" src="/images/loading.svg" data-src="https://i.loli.net/2020/02/04/iWFAPeQa3kc96Kt.png" alt="image.png">
-      <br>
-<strong>2.建立综合评价的评价集</strong><br>
-
+      <br><strong>2.建立综合评价的评价集</strong><br>
         <img class="lazyload lazyload-gif" src="/images/loading.svg" data-src="https://i.loli.net/2020/02/04/Ar3expYbJXVCj7L.png" alt="image.png">
-      <br>
-<strong>3.进行单元素模糊评价，获得评价矩阵</strong><br>
-
+      <br><strong>3.进行单元素模糊评价，获得评价矩阵</strong><br>
         <img class="lazyload lazyload-gif" src="/images/loading.svg" data-src="https://i.loli.net/2020/02/04/pH26unJlESLYKZ9.png" alt="image.png">
-      <br>
-<strong>4.确定因素权向量</strong><br>
-
+      <br><strong>4.确定因素权向量</strong><br>
         <img class="lazyload lazyload-gif" src="/images/loading.svg" data-src="https://i.loli.net/2020/02/04/WN4a9Knukd5oh1H.png" alt="image.png">
-      <br>
-<strong>5.建立综合评价模型</strong><br>
-
+      <br><strong>5.建立综合评价模型</strong><br>
         <img class="lazyload lazyload-gif" src="/images/loading.svg" data-src="https://i.loli.net/2020/02/04/OIoYlxQjsV1greF.png" alt="image.png">
       <br>
-
         <img class="lazyload lazyload-gif" src="/images/loading.svg" data-src="https://i.loli.net/2020/02/04/njQg5yq93vuCXYN.png" alt="image.png">
-      <br>
-<strong>6.确定系统总得分</strong><br>
-
+      <br><strong>6.确定系统总得分</strong><br>
         <img class="lazyload lazyload-gif" src="/images/loading.svg" data-src="https://i.loli.net/2020/02/04/dLfOj9tx2JHqBP5.png" alt="image.png">
-      <br>
-<strong><span class="exturl"><a class="exturl__link" href="https://zhuanlan.zhihu.com/p/32666445" target="_blank" rel="noopener">https://zhuanlan.zhihu.com/p/32666445</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></strong></p>
+      <br><strong><span class="exturl"><a class="exturl__link" href="https://zhuanlan.zhihu.com/p/32666445" target="_blank" rel="noopener">https://zhuanlan.zhihu.com/p/32666445</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></strong></p>
 </blockquote>
 
         <h3 id="隶属度函数选取与构造">
           <a href="#隶属度函数选取与构造" class="heading-link"><i class="fas fa-link"></i></a>隶属度函数选取与构造</h3>
-      
-<blockquote>
-<p>常用的方法：<strong>直觉方法，二元对比排序法，模糊统计试验法，最小模糊度法</strong>（根据先验知识和采集的数据，确定出描述模糊概念的候选隶属函数，利用最小化模糊度的原则计算相关的参数，进而获得合适的隶属函数）。<br>
-下面介绍三种最常用的隶属度函数：<strong>三角形隶属度函数、梯形隶属度函数、高斯型隶属度函数：</strong><br>
-<strong>三角形隶属度函数</strong><br>
-
+      <blockquote>
+<p>常用的方法：<strong>直觉方法，二元对比排序法，模糊统计试验法，最小模糊度法</strong>（根据先验知识和采集的数据，确定出描述模糊概念的候选隶属函数，利用最小化模糊度的原则计算相关的参数，进而获得合适的隶属函数）。<br>下面介绍三种最常用的隶属度函数：<strong>三角形隶属度函数、梯形隶属度函数、高斯型隶属度函数：</strong><br><strong>三角形隶属度函数</strong><br>
         <img class="lazyload lazyload-gif" src="/images/loading.svg" data-src="https://i.loli.net/2020/02/04/GUTEVZDzRcYHXv3.png" alt="image.png">
-      <br>
-<strong>梯形隶属度函数</strong><br>
-
+      <br><strong>梯形隶属度函数</strong><br>
         <img class="lazyload lazyload-gif" src="/images/loading.svg" data-src="https://i.loli.net/2020/02/04/TmEJY6WvuNxO23t.png" alt="image.png">
-      <br>
-<strong>高斯型隶属度函数</strong><br>
-
+      <br><strong>高斯型隶属度函数</strong><br>
         <img class="lazyload lazyload-gif" src="/images/loading.svg" data-src="https://i.loli.net/2020/02/04/uqkzCd7jrvbMpmw.png" alt="image.png">
-      <br>
-<strong><span class="exturl"><a class="exturl__link" href="https://zhuanlan.zhihu.com/p/37616833" target="_blank" rel="noopener">https://zhuanlan.zhihu.com/p/37616833</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></strong></p>
+      <br><strong><span class="exturl"><a class="exturl__link" href="https://zhuanlan.zhihu.com/p/37616833" target="_blank" rel="noopener">https://zhuanlan.zhihu.com/p/37616833</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></strong></p>
 </blockquote>
 
-        <h2 id="评价模型2">
-          <a href="#评价模型2" class="heading-link"><i class="fas fa-link"></i></a>评价模型(2)</h2>
+        <h2 id="评价模型-2">
+          <a href="#评价模型-2" class="heading-link"><i class="fas fa-link"></i></a>评价模型(2)</h2>
       
-
-        <h3 id="层次分析法评价ahp">
-          <a href="#层次分析法评价ahp" class="heading-link"><i class="fas fa-link"></i></a>层次分析法评价(AHP)</h3>
-      
-<blockquote>
+        <h3 id="层次分析法评价-AHP">
+          <a href="#层次分析法评价-AHP" class="heading-link"><i class="fas fa-link"></i></a>层次分析法评价(AHP)</h3>
+      <blockquote>
 <p><strong>对难以完全定量得复杂系统做出决策，主要用来求权重</strong><br>
-
         <img class="lazyload lazyload-gif" src="/images/loading.svg" data-src="https://i.loli.net/2020/02/04/wJ1NAbS9aigzop8.png" alt="image.png">
-      <br>
-<strong>第一步，建立从目标层到准则层(指标层)再到决策层(方案层)</strong><br>
-1）最高层（目标层）——只有一个元素：决策目标；<br>
-2）中间层（准则层）——考虑的因素，决策的准则、子准则；<br>
-3）最底层（方案层）——决策时的备选方案、措施。<br>
-
+      <br><strong>第一步，建立从目标层到准则层(指标层)再到决策层(方案层)</strong><br>1）最高层（目标层）——只有一个元素：决策目标；<br>2）中间层（准则层）——考虑的因素，决策的准则、子准则；<br>3）最底层（方案层）——决策时的备选方案、措施。<br>
         <img class="lazyload lazyload-gif" src="/images/loading.svg" data-src="https://i.loli.net/2020/02/04/pJHBimPk5DGd1rF.png" alt="image.png">
-      <br>
-<strong>第二步，(最重要的一步)构造成对比较矩阵</strong><br>
-
+      <br><strong>第二步，(最重要的一步)构造成对比较矩阵</strong><br>
         <img class="lazyload lazyload-gif" src="/images/loading.svg" data-src="https://i.loli.net/2020/02/04/syupZ7jMd6L2e91.png" alt="image.png">
-      <br>
-A矩阵代表准则层各个指标之间的相互关系，B矩阵代表各个待选方案分别在5个指标中的相互比较关系。<br>
-(即若n个指标，m个决策方案，则B为(n,n)矩阵，有m个)<br>
-<strong><span class="exturl"><a class="exturl__link" href="https://zhuanlan.zhihu.com/p/35051786" target="_blank" rel="noopener">https://zhuanlan.zhihu.com/p/35051786</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></strong></p>
+      <br>A矩阵代表准则层各个指标之间的相互关系，B矩阵代表各个待选方案分别在5个指标中的相互比较关系。<br>(即若n个指标，m个决策方案，则B为(n,n)矩阵，有m个)<br><strong><span class="exturl"><a class="exturl__link" href="https://zhuanlan.zhihu.com/p/35051786" target="_blank" rel="noopener">https://zhuanlan.zhihu.com/p/35051786</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></strong></p>
 </blockquote>
 
         <h3 id="打分与权重确定">
           <a href="#打分与权重确定" class="heading-link"><i class="fas fa-link"></i></a>打分与权重确定</h3>
       
-
-        <h2 id="评价模型3">
-          <a href="#评价模型3" class="heading-link"><i class="fas fa-link"></i></a>评价模型(3)</h2>
+        <h2 id="评价模型-3">
+          <a href="#评价模型-3" class="heading-link"><i class="fas fa-link"></i></a>评价模型(3)</h2>
       
-
-        <h3 id="主成分分析principal-components-analysispca">
-          <a href="#主成分分析principal-components-analysispca" class="heading-link"><i class="fas fa-link"></i></a>主成分分析(Principal components analysis,PCA)</h3>
-      
-<p>找出数据里最主要的方面，用数据里最主要的方面来代替原始数据。</p>
+        <h3 id="主成分分析-Principal-components-analysis-PCA">
+          <a href="#主成分分析-Principal-components-analysis-PCA" class="heading-link"><i class="fas fa-link"></i></a>主成分分析(Principal components analysis,PCA)</h3>
+      <p>找出数据里最主要的方面，用数据里最主要的方面来代替原始数据。</p>
 <ol>
 <li>最近重构性：样本点到这个超平面的距离足够近</li>
 <li>最大可分性：样本点在这个超平面上的投影能尽可能的分开<br>
-
         <img class="lazyload lazyload-gif" src="/images/loading.svg" data-src="https://i.loli.net/2020/02/04/tR4zIEkOQeBnDKC.png" alt="image.png">
-      <br>
-PCA算法的主要优点有：<br>
-仅仅需要以方差衡量信息量，不受数据集以外的因素影响。　<br>
-各主成分之间正交，可消除原始数据成分间的相互影响的因素。<br>
-计算方法简单，主要运算是特征值分解，易于实现。<br>
-PCA算法的主要缺点有：<br>
-主成分各个特征维度的含义具有一定的模糊性，不如原始样本特征的解释性强。<br>
-方差小的非主成分也可能含有对样本差异的重要信息，因降维丢弃可能对后续数据处理有影响。<br>
-<strong><span class="exturl"><a class="exturl__link" href="https://zhuanlan.zhihu.com/p/32412043" target="_blank" rel="noopener">https://zhuanlan.zhihu.com/p/32412043</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></strong></li>
+      <br>PCA算法的主要优点有：<br>仅仅需要以方差衡量信息量，不受数据集以外的因素影响。　<br>各主成分之间正交，可消除原始数据成分间的相互影响的因素。<br>计算方法简单，主要运算是特征值分解，易于实现。<br>PCA算法的主要缺点有：<br>主成分各个特征维度的含义具有一定的模糊性，不如原始样本特征的解释性强。<br>方差小的非主成分也可能含有对样本差异的重要信息，因降维丢弃可能对后续数据处理有影响。</li>
 </ol>
+<p><strong><span class="exturl"><a class="exturl__link" href="https://zhuanlan.zhihu.com/p/32412043" target="_blank" rel="noopener">https://zhuanlan.zhihu.com/p/32412043</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></strong></p>
 
-        <h3 id="主成分回归评价principle-component-regressionpcr">
-          <a href="#主成分回归评价principle-component-regressionpcr" class="heading-link"><i class="fas fa-link"></i></a>主成分回归评价(principle component regression；PCR)</h3>
-      
-<blockquote>
-<p>主成份回归可以解决变量间共线性的问题。它使用从数据抽提出的主成份进行回归，一般来说是选择前面的几个主成份。下面给出一个例子，训练集中的自变量数据X和因变量y，以及测试集中的数据Xnew和因变量Ynew，结果给出训练集中的回归模型得到的预测值和实际值的相关系数，以及测试集中相应的相关系数。<br>
-<strong><span class="exturl"><a class="exturl__link" href="http://blog.sciencenet.cn/home.php?mod=space&amp;uid=54276&amp;do=blog&amp;id=375339" target="_blank" rel="noopener">http://blog.sciencenet.cn/home.php?mod=space&amp;uid=54276&amp;do=blog&amp;id=375339</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></strong></p>
+        <h3 id="主成分回归评价-principle-component-regression；PCR">
+          <a href="#主成分回归评价-principle-component-regression；PCR" class="heading-link"><i class="fas fa-link"></i></a>主成分回归评价(principle component regression；PCR)</h3>
+      <blockquote>
+<p>主成份回归可以解决变量间共线性的问题。它使用从数据抽提出的主成份进行回归，一般来说是选择前面的几个主成份。下面给出一个例子，训练集中的自变量数据X和因变量y，以及测试集中的数据Xnew和因变量Ynew，结果给出训练集中的回归模型得到的预测值和实际值的相关系数，以及测试集中相应的相关系数。<br><strong><span class="exturl"><a class="exturl__link" href="http://blog.sciencenet.cn/home.php?mod=space&amp;uid=54276&amp;do=blog&amp;id=375339" target="_blank" rel="noopener">http://blog.sciencenet.cn/home.php?mod=space&amp;uid=54276&amp;do=blog&amp;id=375339</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></strong></p>
 </blockquote>
 
         <h3 id="主成分解释">
           <a href="#主成分解释" class="heading-link"><i class="fas fa-link"></i></a>主成分解释</h3>
-      
-<blockquote>
-<p>主成分分析（PCA）是一种降维方法，通常用于通过将数量很多的变量转换为仍包含集合中大部分信息的较少变量来降低数据集的维数。<br>
-减少数据集的变量数量自然是以牺牲精度为代价的，但降维是为了简单而略微准确。因为较小的数据集更易于探索和可视化，并且使机器学习算法更容易和更快地分析数据，而无需处理无关的变量。<br>
-总而言之，PCA的概念很简单：减少数据集的维数，同时保留尽可能多的信息。<br>
-<strong><span class="exturl"><a class="exturl__link" href="https://zhuanlan.zhihu.com/p/58663947" target="_blank" rel="noopener">https://zhuanlan.zhihu.com/p/58663947</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></strong></p>
+      <blockquote>
+<p>主成分分析（PCA）是一种降维方法，通常用于通过将数量很多的变量转换为仍包含集合中大部分信息的较少变量来降低数据集的维数。<br>减少数据集的变量数量自然是以牺牲精度为代价的，但降维是为了简单而略微准确。因为较小的数据集更易于探索和可视化，并且使机器学习算法更容易和更快地分析数据，而无需处理无关的变量。<br>总而言之，PCA的概念很简单：减少数据集的维数，同时保留尽可能多的信息。<br><strong><span class="exturl"><a class="exturl__link" href="https://zhuanlan.zhihu.com/p/58663947" target="_blank" rel="noopener">https://zhuanlan.zhihu.com/p/58663947</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></strong></p>
 </blockquote>
 
-        <h3 id="数据包络分析data-envelopment-analysisdea">
-          <a href="#数据包络分析data-envelopment-analysisdea" class="heading-link"><i class="fas fa-link"></i></a>数据包络分析(Data Envelopment Analysis,DEA)</h3>
-      
-<blockquote>
+        <h3 id="数据包络分析-Data-Envelopment-Analysis-DEA">
+          <a href="#数据包络分析-Data-Envelopment-Analysis-DEA" class="heading-link"><i class="fas fa-link"></i></a>数据包络分析(Data Envelopment Analysis,DEA)</h3>
+      <blockquote>
 <p>它是根据多项投入指标和多项产出指标，利用线性规划的方法，对具有可比性的同类型单位进行相对有效性评价的一种数量分析方法。</p>
 </blockquote>
-<ol>
-<li>定义变量<br>
-设Ek（k=1，2，……， K）为第k个单位的效率比率，这里K代表评估单位的总数。<br>
-设uj（j=1，2，……， M）为第j种产出的系数，这里M代表所考虑的产出种类的总数。变量uj用来衡量产出价值降低一个单位所带来的相对的效率下降。<br>
-设vI（I=1，2，……，N）为第I种投入的系数，这里N代表所考虑的投入种类的综合素。变量vI用来衡量投入价值降低一个单位带来的相对的效率下降。<br>
-设Ojk为一定时期内由第k个服务单位所创造的第j种产出的观察到的单位的数量。<br>
-设Iik为一定时期内由第k个服务单位所使用的第i种投入的实际的单位的数量。</li>
-<li>目标函数<br>
-　　目标是找出一组伴随每种产出的系数u和一组伴随每种投入的系数ν，从而给被评估的服务单位最高的可能效率。<br>
-
+<p>1) 定义变量<br>设Ek（k=1，2，……， K）为第k个单位的效率比率，这里K代表评估单位的总数。<br>设uj（j=1，2，……， M）为第j种产出的系数，这里M代表所考虑的产出种类的总数。变量uj用来衡量产出价值降低一个单位所带来的相对的效率下降。<br>设vI（I=1，2，……，N）为第I种投入的系数，这里N代表所考虑的投入种类的综合素。变量vI用来衡量投入价值降低一个单位带来的相对的效率下降。<br>设Ojk为一定时期内由第k个服务单位所创造的第j种产出的观察到的单位的数量。<br>设Iik为一定时期内由第k个服务单位所使用的第i种投入的实际的单位的数量。<br>2) 目标函数<br>　　目标是找出一组伴随每种产出的系数u和一组伴随每种投入的系数ν，从而给被评估的服务单位最高的可能效率。<br>
         <img class="lazyload lazyload-gif" src="/images/loading.svg" data-src="https://i.loli.net/2020/02/04/tlK5C3Sfb1BPpHF.png" alt="image.png">
-      <br>
-式中，e是被评估单位的代码。 这个函数满足这样一个约束条件，当同一组投入和产出的系数（uj和vi）用于所有其他对比服务单位时，没有一个服务单位将超过100%的效率或超过1.0的比率。</li>
-<li>约束条件<br>
-
+      <br>式中，e是被评估单位的代码。 这个函数满足这样一个约束条件，当同一组投入和产出的系数（uj和vi）用于所有其他对比服务单位时，没有一个服务单位将超过100%的效率或超过1.0的比率。<br>3) 约束条件<br>
         <img class="lazyload lazyload-gif" src="/images/loading.svg" data-src="https://i.loli.net/2020/02/04/GncTOyBzp1a9IXS.png" alt="image.png">
-      <br>
-k=1,2,……,K<br>
-式中所有系数值都是正的且非零。<br>
-为了用标准线性规划软件求解这个有分数的线性规划，需要进行变形。要注意，目标函数和所有约束条件都是比率而不是线性函数。通过把所评估单位的投入人为地调整为总和1.0，这样等式的目标函数可以重新表述为：<br>
-
+      <br>k=1,2,……,K<br>式中所有系数值都是正的且非零。<br>为了用标准线性规划软件求解这个有分数的线性规划，需要进行变形。要注意，目标函数和所有约束条件都是比率而不是线性函数。通过把所评估单位的投入人为地调整为总和1.0，这样等式的目标函数可以重新表述为：<br>
         <img class="lazyload lazyload-gif" src="/images/loading.svg" data-src="https://i.loli.net/2020/02/04/Qu71vcEz8mYPlgB.png" alt="image.png">
-      <br>
-　　满足以下约束条件：<br>
-
+      <br>　　满足以下约束条件：<br>
         <img class="lazyload lazyload-gif" src="/images/loading.svg" data-src="https://i.loli.net/2020/02/04/28EWzgrPiL7TuIj.png" alt="image.png">
-      <br>
-　　对于个服务单位，等式（**）的约束条件可类似转化为：<br>
-
+      <br>　　对于个服务单位，等式（**）的约束条件可类似转化为：<br>
         <img class="lazyload lazyload-gif" src="/images/loading.svg" data-src="https://i.loli.net/2020/02/04/JVjoiPvfyt5XaO3.png" alt="image.png">
-      <br>
-　　k=1,2,…,K<br>
-　　式中 uj≥0 j=1，2，…，M vi≥0 i=1，2，…，N<br>
-　　关于服务单位的样本数量问题是由在分析种比较所挑选的投入和产出变量的数量所决定的。下列关系式把分析中所使用的服务单位数量K和所考虑的投入种类数N与产出种类数M联系出来，它是基于实证发现和DEA实践的经验：<br>
-
+      <br>　　k=1,2,…,K<br>　　式中 uj≥0 j=1，2，…，M vi≥0 i=1，2，…，N<br>　　关于服务单位的样本数量问题是由在分析种比较所挑选的投入和产出变量的数量所决定的。下列关系式把分析中所使用的服务单位数量K和所考虑的投入种类数N与产出种类数M联系出来，它是基于实证发现和DEA实践的经验：<br>
         <img class="lazyload lazyload-gif" src="/images/loading.svg" data-src="https://i.loli.net/2020/02/04/87J914AgkoSaNQT.png" alt="image.png">
-      <br>
-<span class="exturl"><a class="exturl__link" href="https://wiki.mbalib.com/wiki/%E6%95%B0%E6%8D%AE%E5%8C%85%E7%BB%9C%E5%88%86%E6%9E%90" target="_blank" rel="noopener">https://wiki.mbalib.com/wiki/数据包络分析</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></li>
-</ol>
+      <br><span class="exturl"><a class="exturl__link" href="https://wiki.mbalib.com/wiki/%E6%95%B0%E6%8D%AE%E5%8C%85%E7%BB%9C%E5%88%86%E6%9E%90" target="_blank" rel="noopener">https://wiki.mbalib.com/wiki/%E6%95%B0%E6%8D%AE%E5%8C%85%E7%BB%9C%E5%88%86%E6%9E%90</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></p>
 <script>
         document.querySelectorAll('.github-emoji')
           .forEach(el => {
@@ -945,76 +660,76 @@ k=1,2,……,K<br>
             document.body.appendChild(img);
           });
       </script></div><footer class="post-footer"><div class="post-ending ending"><div class="ending__text">------ 本文结束，感谢您的阅读 ------</div></div><div class="post-copyright copyright"><div class="copyright-author"><span class="copyright-author__name">本文作者: </span><span class="copyright-author__value"><a href="https://Gemini-Lin.github.io">Gemini-Lin</a></span></div><div class="copyright-link"><span class="copyright-link__name">本文链接: </span><span class="copyright-link__value"><a href="https://gemini-lin.github.io/%E6%95%B0%E5%AD%A6%E5%BB%BA%E6%A8%A1%E7%AE%97%E6%B3%95%E6%B1%87%E6%80%BB/">https://gemini-lin.github.io/%E6%95%B0%E5%AD%A6%E5%BB%BA%E6%A8%A1%E7%AE%97%E6%B3%95%E6%B1%87%E6%80%BB/</a></span></div><div class="copyright-notice"><span class="copyright-notice__name">版权声明: </span><span class="copyright-notice__value">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en" rel="external nofollow" target="_blank">BY-NC-SA</a> 许可协议。转载请注明出处！</span></div></div><div class="post-tags"><span class="post-tags-item"><span class="post-tags-item__icon"><i class="fas fa-tag"></i></span><a class="post-tags-item__link" href="https://gemini-lin.github.io/tags/%E5%BB%BA%E6%A8%A1%E7%AE%97%E6%B3%95/">建模算法</a></span></div><div class="post-share"><div class="social-share" data-sites="qzone, qq, weibo, wechat, douban, linkedin, facebook, twitter, google">Share to: </div></div><div class="post-reward reward"><div class="reward-button">请我喝杯咖啡~</div><div class="reward-qrcode"><span class="reward-qrcode-alipay"><img class="reward-qrcode-alipay__img" src="/images/alipay.jpg"><div class="reward-qrcode-alipay__text">支付宝打赏</div></span><span class="reward-qrcode-wechat"><img class="reward-qrcode-wechat__img" src="/images/wechatpay.jpg"><div class="reward-qrcode-wechat__text">微信打赏</div></span></div></div><nav class="post-paginator paginator"><div class="paginator-prev"><a class="paginator-prev__link" href="/Github%E5%85%A5%E9%97%A8%E6%95%99%E5%AD%A6/"><span class="paginator-prev__icon"><i class="fas fa-angle-left"></i></span><span class="paginator-prev__text">Github入门教学</span></a></div><div class="paginator-next"><a class="paginator-next__link" href="/%E7%BE%8E%E8%B5%9B%E5%86%99%E4%BD%9C%E5%A5%97%E8%B7%AF/"><span class="paginator-prev__text">美赛写作套路</span><span class="paginator-next__icon"><i class="fas fa-angle-right"></i></span></a></div></nav></footer></div></div><div class="comments" id="comments"><div id="valine-container"></div></div></div><div class="sidebar-wrap" id="sidebar-wrap"><aside class="sidebar" id="sidebar"><div class="sidebar-nav"><span class="sidebar-nav-toc current">文章目录</span><span class="sidebar-nav-ov">站点概览</span></div><section class="sidebar-toc"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#优化模型"><span class="toc-number">1.</span> <span class="toc-text">
-          优化模型</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#优化模型1"><span class="toc-number">1.1.</span> <span class="toc-text">
-          优化模型(1)</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#单目标single-objective-optimization-problem"><span class="toc-number">1.1.1.</span> <span class="toc-text">
-          单目标（Single-Objective Optimization Problem）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#多目标multi-objective-optimization-problem"><span class="toc-number">1.1.2.</span> <span class="toc-text">
+          优化模型</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#优化模型-1"><span class="toc-number">1.1.</span> <span class="toc-text">
+          优化模型(1)</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#单目标（Single-Objective-Optimization-Problem）"><span class="toc-number">1.1.1.</span> <span class="toc-text">
+          单目标（Single-Objective Optimization Problem）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#多目标（Multi-objective-Optimization-Problem）"><span class="toc-number">1.1.2.</span> <span class="toc-text">
           多目标（Multi-objective Optimization Problem）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#线性"><span class="toc-number">1.1.3.</span> <span class="toc-text">
           线性</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#非线性"><span class="toc-number">1.1.4.</span> <span class="toc-text">
           非线性</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#整数规划优化"><span class="toc-number">1.1.5.</span> <span class="toc-text">
           整数规划优化</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#单目标化"><span class="toc-number">1.1.6.</span> <span class="toc-text">
-          单目标化</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#优化模型2"><span class="toc-number">1.2.</span> <span class="toc-text">
-          优化模型(2)</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#动态规划-dynamic-programming"><span class="toc-number">1.2.1.</span> <span class="toc-text">
+          单目标化</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#优化模型-2"><span class="toc-number">1.2.</span> <span class="toc-text">
+          优化模型(2)</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#动态规划-Dynamic-Programming"><span class="toc-number">1.2.1.</span> <span class="toc-text">
           动态规划 Dynamic Programming</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#目标规划"><span class="toc-number">1.2.2.</span> <span class="toc-text">
           目标规划</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#图论"><span class="toc-number">1.2.3.</span> <span class="toc-text">
           图论</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#网络流模型"><span class="toc-number">1.2.4.</span> <span class="toc-text">
           网络流模型</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#最短路"><span class="toc-number">1.2.5.</span> <span class="toc-text">
           最短路</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#最大流"><span class="toc-number">1.2.6.</span> <span class="toc-text">
           最大流</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#最小生成树"><span class="toc-number">1.2.7.</span> <span class="toc-text">
-          最小生成树</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#优化模型3"><span class="toc-number">1.3.</span> <span class="toc-text">
+          最小生成树</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#优化模型-3"><span class="toc-number">1.3.</span> <span class="toc-text">
           优化模型(3)</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#背包"><span class="toc-number">1.3.1.</span> <span class="toc-text">
-          背包</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#指派分配问题"><span class="toc-number">1.3.2.</span> <span class="toc-text">
+          背包</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#指派-分配问题"><span class="toc-number">1.3.2.</span> <span class="toc-text">
           指派(分配问题)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#抽屉"><span class="toc-number">1.3.3.</span> <span class="toc-text">
-          抽屉</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#旅行社tsp"><span class="toc-number">1.3.4.</span> <span class="toc-text">
-          旅行社TSP</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#cpp"><span class="toc-number">1.3.5.</span> <span class="toc-text">
+          抽屉</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#旅行社TSP"><span class="toc-number">1.3.4.</span> <span class="toc-text">
+          旅行社TSP</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#CPP"><span class="toc-number">1.3.5.</span> <span class="toc-text">
           CPP</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#产销"><span class="toc-number">1.3.6.</span> <span class="toc-text">
           产销</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#运输"><span class="toc-number">1.3.7.</span> <span class="toc-text">
           运输</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#排队论"><span class="toc-number">1.3.8.</span> <span class="toc-text">
           排队论</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#预测模型"><span class="toc-number">2.</span> <span class="toc-text">
-          预测模型</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#预测模型1微分方程预测"><span class="toc-number">2.1.</span> <span class="toc-text">
+          预测模型</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#预测模型-1-微分方程预测"><span class="toc-number">2.1.</span> <span class="toc-text">
           预测模型(1)微分方程预测</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#单种群"><span class="toc-number">2.1.1.</span> <span class="toc-text">
           单种群</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#多种群增长"><span class="toc-number">2.1.2.</span> <span class="toc-text">
-          多种群增长</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#logistic阻滞增长"><span class="toc-number">2.1.3.</span> <span class="toc-text">
+          多种群增长</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Logistic阻滞增长"><span class="toc-number">2.1.3.</span> <span class="toc-text">
           Logistic阻滞增长</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#时滞模型"><span class="toc-number">2.1.4.</span> <span class="toc-text">
-          时滞模型</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#预测模型2微分方程预测"><span class="toc-number">2.2.</span> <span class="toc-text">
+          时滞模型</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#预测模型-2-微分方程预测"><span class="toc-number">2.2.</span> <span class="toc-text">
           预测模型(2)微分方程预测</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#房室模型"><span class="toc-number">2.2.1.</span> <span class="toc-text">
           房室模型</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#差分方差模型"><span class="toc-number">2.2.2.</span> <span class="toc-text">
           差分方差模型</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#解析解"><span class="toc-number">2.2.3.</span> <span class="toc-text">
           解析解</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#数值解"><span class="toc-number">2.2.4.</span> <span class="toc-text">
           数值解</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#参数确定"><span class="toc-number">2.2.5.</span> <span class="toc-text">
-          参数确定</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#预测模型3"><span class="toc-number">2.3.</span> <span class="toc-text">
-          预测模型(3)</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#线性-2"><span class="toc-number">2.3.1.</span> <span class="toc-text">
+          参数确定</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#预测模型-3"><span class="toc-number">2.3.</span> <span class="toc-text">
+          预测模型(3)</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#线性-1"><span class="toc-number">2.3.1.</span> <span class="toc-text">
           线性</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#非线性回归与拟合"><span class="toc-number">2.3.2.</span> <span class="toc-text">
           非线性回归与拟合</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#统计回归预测"><span class="toc-number">2.3.3.</span> <span class="toc-text">
-          统计回归预测</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#参数确定-2"><span class="toc-number">2.3.4.</span> <span class="toc-text">
-          参数确定</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#预测模型4"><span class="toc-number">2.4.</span> <span class="toc-text">
-          预测模型(4)</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#markov链预测"><span class="toc-number">2.4.1.</span> <span class="toc-text">
+          统计回归预测</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#参数确定-1"><span class="toc-number">2.3.4.</span> <span class="toc-text">
+          参数确定</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#预测模型-4"><span class="toc-number">2.4.</span> <span class="toc-text">
+          预测模型(4)</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Markov链预测"><span class="toc-number">2.4.1.</span> <span class="toc-text">
           Markov链预测</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#神经网络预测"><span class="toc-number">2.4.2.</span> <span class="toc-text">
-          神经网络预测</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#预测模型5"><span class="toc-number">2.5.</span> <span class="toc-text">
+          神经网络预测</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#预测模型-5"><span class="toc-number">2.5.</span> <span class="toc-text">
           预测模型(5)</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#模糊预测"><span class="toc-number">2.5.1.</span> <span class="toc-text">
           模糊预测</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#灰色预测"><span class="toc-number">2.5.2.</span> <span class="toc-text">
-          灰色预测</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#参数确定-3"><span class="toc-number">2.5.3.</span> <span class="toc-text">
+          灰色预测</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#参数确定-2"><span class="toc-number">2.5.3.</span> <span class="toc-text">
           参数确定</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#分类模型"><span class="toc-number">3.</span> <span class="toc-text">
-          分类模型</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#分类模型1"><span class="toc-number">3.1.</span> <span class="toc-text">
+          分类模型</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#分类模型-1"><span class="toc-number">3.1.</span> <span class="toc-text">
           分类模型(1)</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#聚类"><span class="toc-number">3.1.1.</span> <span class="toc-text">
-          聚类</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#模糊聚类fcm"><span class="toc-number">3.1.2.</span> <span class="toc-text">
+          聚类</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#模糊聚类-FCM"><span class="toc-number">3.1.2.</span> <span class="toc-text">
           模糊聚类(FCM)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#距离函数选取"><span class="toc-number">3.1.3.</span> <span class="toc-text">
           距离函数选取</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#线性非线性分类器选取"><span class="toc-number">3.1.4.</span> <span class="toc-text">
-          线性非线性分类器选取</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#分类模型2"><span class="toc-number">3.2.</span> <span class="toc-text">
+          线性非线性分类器选取</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#分类模型-2"><span class="toc-number">3.2.</span> <span class="toc-text">
           分类模型(2)</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#神经网络分类"><span class="toc-number">3.2.1.</span> <span class="toc-text">
           神经网络分类</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#网络构造"><span class="toc-number">3.2.2.</span> <span class="toc-text">
           网络构造</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#初始权值选取"><span class="toc-number">3.2.3.</span> <span class="toc-text">
           初始权值选取</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#评价模型"><span class="toc-number">4.</span> <span class="toc-text">
-          评价模型</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#评价模型1"><span class="toc-number">4.1.</span> <span class="toc-text">
+          评价模型</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#评价模型-1"><span class="toc-number">4.1.</span> <span class="toc-text">
           评价模型(1)</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#模糊分析"><span class="toc-number">4.1.1.</span> <span class="toc-text">
           模糊分析</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#隶属度函数选取与构造"><span class="toc-number">4.1.2.</span> <span class="toc-text">
-          隶属度函数选取与构造</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#评价模型2"><span class="toc-number">4.2.</span> <span class="toc-text">
-          评价模型(2)</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#层次分析法评价ahp"><span class="toc-number">4.2.1.</span> <span class="toc-text">
+          隶属度函数选取与构造</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#评价模型-2"><span class="toc-number">4.2.</span> <span class="toc-text">
+          评价模型(2)</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#层次分析法评价-AHP"><span class="toc-number">4.2.1.</span> <span class="toc-text">
           层次分析法评价(AHP)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#打分与权重确定"><span class="toc-number">4.2.2.</span> <span class="toc-text">
-          打分与权重确定</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#评价模型3"><span class="toc-number">4.3.</span> <span class="toc-text">
-          评价模型(3)</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#主成分分析principal-components-analysispca"><span class="toc-number">4.3.1.</span> <span class="toc-text">
-          主成分分析(Principal components analysis,PCA)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#主成分回归评价principle-component-regressionpcr"><span class="toc-number">4.3.2.</span> <span class="toc-text">
+          打分与权重确定</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#评价模型-3"><span class="toc-number">4.3.</span> <span class="toc-text">
+          评价模型(3)</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#主成分分析-Principal-components-analysis-PCA"><span class="toc-number">4.3.1.</span> <span class="toc-text">
+          主成分分析(Principal components analysis,PCA)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#主成分回归评价-principle-component-regression；PCR"><span class="toc-number">4.3.2.</span> <span class="toc-text">
           主成分回归评价(principle component regression；PCR)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#主成分解释"><span class="toc-number">4.3.3.</span> <span class="toc-text">
-          主成分解释</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#数据包络分析data-envelopment-analysisdea"><span class="toc-number">4.3.4.</span> <span class="toc-text">
+          主成分解释</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#数据包络分析-Data-Envelopment-Analysis-DEA"><span class="toc-number">4.3.4.</span> <span class="toc-text">
           数据包络分析(Data Envelopment Analysis,DEA)</span></a></li></ol></li></ol></li></ol></section><!-- ov = overview--><section class="sidebar-ov hide"><div class="sidebar-ov-author"><div class="sidebar-ov-author__avatar"><img class="sidebar-ov-author__avatar_img" src="https://s1.ax1x.com/2020/05/14/YD6wTI.png" alt="avatar"></div><p class="sidebar-ov-author__text">In me the tiger sniffs the rose</p></div><div class="sidebar-ov-social"><a class="sidebar-ov-social-item" href="https://github.com/Gemini-Lin" target="_blank" rel="noopener" data-popover="Github" data-popover-pos="up"><span class="sidebar-ov-social-item__icon"><i class="fab fa-github"></i></span></a><a class="sidebar-ov-social-item" href="https://www.zhihu.com/people/iye-kong-zhong-zui-liang-de-xing-i" target="_blank" rel="noopener" data-popover="知乎" data-popover-pos="up"><span class="sidebar-ov-social-item__icon">知</span></a><a class="sidebar-ov-social-item" href="https://space.bilibili.com/313103161" target="_blank" rel="noopener" data-popover="social.bilibili" data-popover-pos="up"><span class="sidebar-ov-social-item__icon">B</span></a><a class="sidebar-ov-social-item" href="/images/qq.png" target="_blank" rel="noopener" data-popover="QQ" data-popover-pos="up"><span class="sidebar-ov-social-item__icon"><i class="fab fa-qq"></i></span></a><a class="sidebar-ov-social-item" href="/images/wechat.jpg" target="_blank" rel="noopener" data-popover="微信" data-popover-pos="up"><span class="sidebar-ov-social-item__icon"><i class="fab fa-weixin"></i></span></a><a class="sidebar-ov-social-item" href="mailto:geminilin@gmail.com" target="_blank" rel="noopener" data-popover="social.E-Mail" data-popover-pos="up"><span class="sidebar-ov-social-item__icon"><i class="fab fa-envelope"></i></span></a></div><div class="sidebar-ov-feed"><span class="sidebar-ov-feed-rss"><a class="sidebar-ov-feed-rss__link" href="/atom.xml" target="_blank" rel="noopener"><span class="sidebar-ov-feed-rss__icon"><i class="fas fa-rss"></i></span><span>RSS 订阅</span></a></span></div><div class="sidebar-ov-state"><a class="sidebar-ov-state-item sidebar-ov-state-item--posts" href="/archives/"><div class="sidebar-ov-state-item__count">69</div><div class="sidebar-ov-state-item__name">归档</div></a><a class="sidebar-ov-state-item sidebar-ov-state-item--categories" href="/categories/"><div class="sidebar-ov-state-item__count">27</div><div class="sidebar-ov-state-item__name">分类</div></a><a class="sidebar-ov-state-item sidebar-ov-state-item--tags" href="/tags/"><div class="sidebar-ov-state-item__count">76</div><div class="sidebar-ov-state-item__name">标签</div></a></div><div class="sidebar-ov-cc"><a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en" target="_blank" rel="noopener" data-popover="知识共享许可协议" data-popover-pos="up"><img src="/images/cc-by-nc-sa.svg"></a></div></section><div class="sidebar-reading"><div class="sidebar-reading-info"><span class="sidebar-reading-info__text">你已阅读了 </span><span class="sidebar-reading-info__num">0</span></div><div class="sidebar-reading-line"></div></div></aside></div><div class="clearfix"></div></div></main><footer class="footer" id="footer"><div class="footer-inner"><div><span>Copyright © 2020</span><span class="footer__icon"><i class="fas fa-heart"></i></span><span>Gemini-Lin</span><span class="footer__devider">|</span><span>闽ICP备20012376号</span></div><div class="busuanzi"><span class="busuanzi-siteuv"><span class="busuanzi-siteuv__icon"><i class="fas fa-user"></i></span><span class="busuanzi-siteuv__info">访问人数</span><span class="busuanzi-siteuv__value" id="busuanzi_value_site_uv"></span></span><span class="busuanzi-sitepv"><span class="busuanzi-siteuv__icon"><i class="fas fa-eye"></i></span><span class="busuanzi-siteuv__info">浏览总量</span><span class="busuanzi-siteuv__value" id="busuanzi_value_site_pv"></span></span></div></div></footer><div class="loading-bar" id="loading-bar"><div class="loading-bar__progress"></div></div><div class="back2top" id="back2top"><span class="back2top__icon"><i class="fas fa-rocket"></i></span></div></div><div class="search-mask"></div><div class="search-popup"><span class="search-close"></span><div class="search-input"><input placeholder="搜索文章（支持多关键词，请用空格分隔）"></div><div class="search-results"></div></div><script src="https://cdn.jsdelivr.net/npm/jquery@v3.4.1/dist/jquery.min.js"></script><script src="https://cdn.jsdelivr.net/npm/velocity-animate@1.5.2/velocity.min.js"></script><script src="https://cdn.jsdelivr.net/npm/velocity-animate@1.5.2/velocity.ui.min.js"></script><script src="https://cdn.jsdelivr.net/npm/ribbon.js@latest/dist/ribbon.min.js" size="150" alpha="0.6" zIndex="-1"></script><script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script><script src="https://cdn.jsdelivr.net/npm/masonry-layout@4.2.2/dist/masonry.pkgd.min.js"></script><script src="https://cdn.jsdelivr.net/npm/lazyload@2.0.0-rc.2/lazyload.min.js"></script><script src="https://cdn.jsdelivr.net/npm/social-share.js@1.0.16/dist/js/social-share.min.js"></script><script>function initSearch() {
   var isXML = true;
   var search_path = 'search.xml';
