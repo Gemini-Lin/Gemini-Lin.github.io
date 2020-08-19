@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://gemini-lin.github.io/Assembly-Language/</loc>
+    
+    <lastmod>2020-08-19T03:16:09.988Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://gemini-lin.github.io/about/index.html</loc>
     
     <lastmod>2020-08-19T01:35:17.856Z</lastmod>
@@ -124,13 +131,6 @@
     <loc>https://gemini-lin.github.io/Operating-System-8/</loc>
     
     <lastmod>2020-08-18T09:03:21.035Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://gemini-lin.github.io/Assembly-Language/</loc>
-    
-    <lastmod>2020-08-18T09:03:15.811Z</lastmod>
     
   </url>
   
