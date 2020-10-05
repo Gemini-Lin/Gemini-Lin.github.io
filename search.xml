@@ -57,6 +57,139 @@
       </tags>
   </entry>
   <entry>
+    <title>LeetCode数组篇</title>
+    <url>/LeetCode-Array/</url>
+    <content><![CDATA[<h1 id="Free-Talk">
+          <a href="#Free-Talk" class="heading-link"><i class="fas fa-link"></i></a>Free Talk</h1>
+      <p>昨天和朋友聊聊下大三下的实习，实习面试的时间大家都打算安排在十月底到十一月。之后谈谈面试的Java技术点和算法，发现自己现在还有很多不懂，LeetCode刷的也远远不够。因此打算这个月突击准备面试，然后按照 Tags 刷LeetCode Hot 100。在写本篇文章之前大致刷了十几道 Array Tag 的题，本来是打算刷完一次性做一个总结的，但是发现遗忘程度太快。因此计划写一篇LeetCode Array 专题，每刷一题，就总结一次。</p>
+<a id="more"></a>
+
+
+        <h1 id="Finished-Problem">
+          <a href="#Finished-Problem" class="heading-link"><i class="fas fa-link"></i></a>Finished Problem</h1>
+      <div class="table-container"><table>
+<thead>
+<tr>
+<th>题号</th>
+<th><strong>题名</strong></th>
+<th><strong>题解</strong></th>
+<th><strong>通过率</strong></th>
+<th><strong>难度</strong></th>
+</tr>
+</thead>
+<tbody><tr>
+<td>1</td>
+<td><span class="exturl"><a class="exturl__link" href="https://leetcode-cn.com/problems/two-sum" target="_blank" rel="noopener">两数之和</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></td>
+<td><span class="exturl"><a class="exturl__link" href="https://leetcode-cn.com/problems/two-sum/solution" target="_blank" rel="noopener">6844</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></td>
+<td>49.5%</td>
+<td>简单</td>
+</tr>
+<tr>
+<td>4</td>
+<td><span class="exturl"><a class="exturl__link" href="https://leetcode-cn.com/problems/median-of-two-sorted-arrays" target="_blank" rel="noopener">寻找两个正序数组的中位数</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></td>
+<td><span class="exturl"><a class="exturl__link" href="https://leetcode-cn.com/problems/median-of-two-sorted-arrays/solution" target="_blank" rel="noopener">1776</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></td>
+<td>38.8%</td>
+<td>困难</td>
+</tr>
+<tr>
+<td>11</td>
+<td><span class="exturl"><a class="exturl__link" href="https://leetcode-cn.com/problems/container-with-most-water" target="_blank" rel="noopener">盛最多水的容器</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></td>
+<td><span class="exturl"><a class="exturl__link" href="https://leetcode-cn.com/problems/container-with-most-water/solution" target="_blank" rel="noopener">1613</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></td>
+<td>64.2%</td>
+<td>中等</td>
+</tr>
+<tr>
+<td>15</td>
+<td><span class="exturl"><a class="exturl__link" href="https://leetcode-cn.com/problems/3sum" target="_blank" rel="noopener">三数之和</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></td>
+<td><span class="exturl"><a class="exturl__link" href="https://leetcode-cn.com/problems/3sum/solution" target="_blank" rel="noopener">1500</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></td>
+<td>29.6%</td>
+<td>中等</td>
+</tr>
+<tr>
+<td>31</td>
+<td><span class="exturl"><a class="exturl__link" href="https://leetcode-cn.com/problems/next-permutation" target="_blank" rel="noopener">下一个排列</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></td>
+<td><span class="exturl"><a class="exturl__link" href="https://leetcode-cn.com/problems/next-permutation/solution" target="_blank" rel="noopener">753</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></td>
+<td>34.6%</td>
+<td>中等</td>
+</tr>
+<tr>
+<td>33</td>
+<td><span class="exturl"><a class="exturl__link" href="https://leetcode-cn.com/problems/search-in-rotated-sorted-array" target="_blank" rel="noopener">搜索旋转排序数组</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></td>
+<td><span class="exturl"><a class="exturl__link" href="https://leetcode-cn.com/problems/search-in-rotated-sorted-array/solution" target="_blank" rel="noopener">1203</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></td>
+<td>39.1%</td>
+<td>中等</td>
+</tr>
+<tr>
+<td>34</td>
+<td><span class="exturl"><a class="exturl__link" href="https://leetcode-cn.com/problems/find-first-and-last-position-of-element-in-sorted-array" target="_blank" rel="noopener">在排序数组中查找元素的第一个和最后一个位置</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></td>
+<td><span class="exturl"><a class="exturl__link" href="https://leetcode-cn.com/problems/find-first-and-last-position-of-element-in-sorted-array/solution" target="_blank" rel="noopener">1197</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></td>
+<td>40.4%</td>
+<td>中等</td>
+</tr>
+<tr>
+<td>39</td>
+<td><span class="exturl"><a class="exturl__link" href="https://leetcode-cn.com/problems/combination-sum" target="_blank" rel="noopener">组合总和</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></td>
+<td><span class="exturl"><a class="exturl__link" href="https://leetcode-cn.com/problems/combination-sum/solution" target="_blank" rel="noopener">986</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></td>
+<td>71.4%</td>
+<td>中等</td>
+</tr>
+<tr>
+<td>42</td>
+<td><span class="exturl"><a class="exturl__link" href="https://leetcode-cn.com/problems/trapping-rain-water" target="_blank" rel="noopener">接雨水</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></td>
+<td><span class="exturl"><a class="exturl__link" href="https://leetcode-cn.com/problems/trapping-rain-water/solution" target="_blank" rel="noopener">1374</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></td>
+<td>52.7%</td>
+<td>困难</td>
+</tr>
+<tr>
+<td>48</td>
+<td><span class="exturl"><a class="exturl__link" href="https://leetcode-cn.com/problems/rotate-image" target="_blank" rel="noopener">旋转图像</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></td>
+<td><span class="exturl"><a class="exturl__link" href="https://leetcode-cn.com/problems/rotate-image/solution" target="_blank" rel="noopener">822</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></td>
+<td>69.8%</td>
+<td>中等</td>
+</tr>
+<tr>
+<td>53</td>
+<td><span class="exturl"><a class="exturl__link" href="https://leetcode-cn.com/problems/maximum-subarray" target="_blank" rel="noopener">最大子序和</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></td>
+<td><span class="exturl"><a class="exturl__link" href="https://leetcode-cn.com/problems/maximum-subarray/solution" target="_blank" rel="noopener">1749</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></td>
+<td>52.5%</td>
+<td>简单</td>
+</tr>
+<tr>
+<td>55</td>
+<td><span class="exturl"><a class="exturl__link" href="https://leetcode-cn.com/problems/jump-game" target="_blank" rel="noopener">跳跃游戏</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></td>
+<td><span class="exturl"><a class="exturl__link" href="https://leetcode-cn.com/problems/jump-game/solution" target="_blank" rel="noopener">1270</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></td>
+<td>41.1%</td>
+<td>中等</td>
+</tr>
+</tbody></table></div>
+<script>
+        document.querySelectorAll('.github-emoji')
+          .forEach(el => {
+            if (!el.dataset.src) { return; }
+            const img = document.createElement('img');
+            img.style = 'display:none !important;';
+            img.src = el.dataset.src;
+            img.addEventListener('error', () => {
+              img.remove();
+              el.style.color = 'inherit';
+              el.style.backgroundImage = 'none';
+              el.style.background = 'none';
+            });
+            img.addEventListener('load', () => {
+              img.remove();
+            });
+            document.body.appendChild(img);
+          });
+      </script>]]></content>
+      <categories>
+        <category>LeetCode</category>
+      </categories>
+      <tags>
+        <tag>LeetCode</tag>
+        <tag>Array</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>汇编语言期末总结</title>
     <url>/Assembly-Language/</url>
     <content><![CDATA[<p>
