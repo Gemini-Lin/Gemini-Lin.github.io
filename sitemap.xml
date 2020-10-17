@@ -2,9 +2,16 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://gemini-lin.github.io/LeetCode-HashTable/</loc>
+    
+    <lastmod>2020-10-17T01:40:17.110Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://gemini-lin.github.io/LeetCode-String/</loc>
     
-    <lastmod>2020-10-15T14:03:10.305Z</lastmod>
+    <lastmod>2020-10-17T00:46:02.184Z</lastmod>
     
   </url>
   
