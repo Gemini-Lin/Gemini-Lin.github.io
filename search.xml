@@ -57,6 +57,62 @@
       </tags>
   </entry>
   <entry>
+    <title>LeetCode-TwoPointers</title>
+    <url>/LeetCode-TwoPointers/</url>
+    <content><![CDATA[<h1 id="Free-Talk">
+          <a href="#Free-Talk" class="heading-link"><i class="fas fa-link"></i></a>Free Talk</h1>
+      <p>之前刷题的时候，经常遇到双指针问题，打算写一篇专题，系统刷一下，总结一下常用的解题方法。</p>
+<a id="more"></a>
+
+
+        <h1 id="Finished-Problem">
+          <a href="#Finished-Problem" class="heading-link"><i class="fas fa-link"></i></a>Finished Problem</h1>
+      <p>
+        <img class="lazyload lazyload-gif" src="/images/loading.svg" data-src="https://i.loli.net/2020/10/19/Qkpdb7eHJIFD89U.png" alt="image-20201019155221355">
+      </p>
+
+        <h1 id="颜色分类">
+          <a href="#颜色分类" class="heading-link"><i class="fas fa-link"></i></a>颜色分类</h1>
+      <p> <span class="exturl"><a class="exturl__link" href="https://leetcode-cn.com/problems/sort-colors/" target="_blank" rel="noopener">75. 颜色分类</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></p>
+
+        <h2 id="双指针">
+          <a href="#双指针" class="heading-link"><i class="fas fa-link"></i></a>双指针</h2>
+      <figure class="highlight java"><div class="table-container"><table><tbody><tr><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>{</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">sortColors</span><span class="params">(<span class="keyword">int</span>[] nums)</span> </span>{</span><br><span class="line">        <span class="comment">// 能不能用一次扫描实现呢</span></span><br><span class="line">        <span class="comment">// 用两个指针来存放</span></span><br><span class="line">        <span class="comment">// left 表示 白色的元素的索引位置</span></span><br><span class="line">        <span class="comment">// right 表示 蓝色的元素的索引位置</span></span><br><span class="line">        <span class="keyword">int</span> left = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">int</span> right = nums.length - <span class="number">1</span>;</span><br><span class="line"></span><br><span class="line">        <span class="comment">// 更新 left 、 right</span></span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; nums.length ; i ++ ){</span><br><span class="line">            <span class="keyword">if</span>(nums[i] &lt; <span class="number">1</span>){</span><br><span class="line">                left ++;</span><br><span class="line">            }</span><br><span class="line">            <span class="keyword">if</span>(nums[i] &gt; <span class="number">1</span>){</span><br><span class="line">                right --;</span><br><span class="line">            }</span><br><span class="line">        }</span><br><span class="line"></span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; nums.length ; i ++ ){</span><br><span class="line">            <span class="keyword">if</span>(i &lt; left){</span><br><span class="line">                nums[i] = <span class="number">0</span>;</span><br><span class="line">            }<span class="keyword">else</span> <span class="keyword">if</span>(i &gt; right){</span><br><span class="line">                nums[i] = <span class="number">2</span>;</span><br><span class="line">            }<span class="keyword">else</span>{</span><br><span class="line">                nums[i] = <span class="number">1</span>;</span><br><span class="line">            }   </span><br><span class="line">        }</span><br><span class="line"></span><br><span class="line">    }</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></div></figure>
+
+
+        <h3 id="执行结果">
+          <a href="#执行结果" class="heading-link"><i class="fas fa-link"></i></a>执行结果</h3>
+      <p>
+        <img class="lazyload lazyload-gif" src="/images/loading.svg" data-src="https://i.loli.net/2020/10/19/7NgDrK36xvUR81L.png" alt="image-20201019160529591">
+      </p>
+<script>
+        document.querySelectorAll('.github-emoji')
+          .forEach(el => {
+            if (!el.dataset.src) { return; }
+            const img = document.createElement('img');
+            img.style = 'display:none !important;';
+            img.src = el.dataset.src;
+            img.addEventListener('error', () => {
+              img.remove();
+              el.style.color = 'inherit';
+              el.style.backgroundImage = 'none';
+              el.style.background = 'none';
+            });
+            img.addEventListener('load', () => {
+              img.remove();
+            });
+            document.body.appendChild(img);
+          });
+      </script>]]></content>
+      <categories>
+        <category>LeetCode</category>
+      </categories>
+      <tags>
+        <tag>LeetCode</tag>
+        <tag>Two Pointers</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>LeetCode-HashTable</title>
     <url>/LeetCode-HashTable/</url>
     <content><![CDATA[<h1 id="Free-Talk">
@@ -245,7 +301,7 @@
         <h1 id="完结撒花">
           <a href="#完结撒花" class="heading-link"><i class="fas fa-link"></i></a>完结撒花</h1>
       <p>
-        <img class="lazyload lazyload-gif" src="/images/loading.svg" data-src="C:%5CUsers%5CAdministrator%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20201019154805966.png" alt="image-20201019154805966">
+        <img class="lazyload lazyload-gif" src="/images/loading.svg" data-src="https://i.loli.net/2020/10/19/9X4i3zUIRaBoQZD.png" alt="image-20201019154805966">
       </p>
 <script>
         document.querySelectorAll('.github-emoji')

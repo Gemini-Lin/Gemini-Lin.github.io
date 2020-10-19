@@ -2,9 +2,16 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://gemini-lin.github.io/LeetCode-TwoPointers/</loc>
+    
+    <lastmod>2020-10-19T08:05:39.971Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://gemini-lin.github.io/LeetCode-HashTable/</loc>
     
-    <lastmod>2020-10-19T07:48:09.641Z</lastmod>
+    <lastmod>2020-10-19T07:49:41.776Z</lastmod>
     
   </url>
   

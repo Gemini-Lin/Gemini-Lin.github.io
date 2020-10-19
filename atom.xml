@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://gemini-lin.github.io/"/>
-  <updated>2020-10-19T07:48:09.641Z</updated>
+  <updated>2020-10-19T08:05:39.971Z</updated>
   <id>https://gemini-lin.github.io/</id>
   
   <author>
@@ -17,11 +17,36 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>LeetCode-TwoPointers</title>
+    <link href="https://gemini-lin.github.io/LeetCode-TwoPointers/"/>
+    <id>https://gemini-lin.github.io/LeetCode-TwoPointers/</id>
+    <published>2020-10-19T07:50:21.000Z</published>
+    <updated>2020-10-19T08:05:39.971Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;Free-Talk&quot;&gt;
+          &lt;a href=&quot;#Free-Talk&quot; class=&quot;heading-link&quot;&gt;&lt;i class=&quot;fas fa-link&quot;&gt;&lt;/i&gt;&lt;/a&gt;Free Talk&lt;/h1&gt;
+      &lt;p&gt;之前刷题的时候，经常遇到双指针问题，打算写一篇专题，系统刷一下，总结一下常用的解题方法。&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="LeetCode" scheme="https://Gemini-Lin.github.io/categories/LeetCode/"/>
+    
+    
+      <category term="LeetCode" scheme="https://Gemini-Lin.github.io/tags/LeetCode/"/>
+    
+      <category term="Two Pointers" scheme="https://Gemini-Lin.github.io/tags/Two-Pointers/"/>
+    
+  </entry>
+  
+  <entry>
     <title>LeetCode-HashTable</title>
     <link href="https://gemini-lin.github.io/LeetCode-HashTable/"/>
     <id>https://gemini-lin.github.io/LeetCode-HashTable/</id>
     <published>2020-10-17T00:47:09.000Z</published>
-    <updated>2020-10-19T07:48:09.641Z</updated>
+    <updated>2020-10-19T07:49:41.776Z</updated>
     
     <summary type="html">
     
@@ -674,44 +699,6 @@
     
     
       <category term="数据库" scheme="https://Gemini-Lin.github.io/tags/%E6%95%B0%E6%8D%AE%E5%BA%93/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>计算机网络第三章--运输层</title>
-    <link href="https://gemini-lin.github.io/Computer-Network-3/"/>
-    <id>https://gemini-lin.github.io/Computer-Network-3/</id>
-    <published>2020-08-06T02:25:58.000Z</published>
-    <updated>2020-08-06T02:29:55.844Z</updated>
-    
-    <summary type="html">
-    
-      &lt;p&gt;
-        &lt;img class=&quot;lazyload lazyload-gif&quot; src=&quot;/images/loading.svg&quot; data-src=&quot;https://s1.ax1x.com/2020/08/06/acKXL9.png&quot; alt=&quot;计算机网络第三章--运输层&quot;&gt;
-      &lt;br&gt;&lt;/p&gt;
-
-
-&lt;title&gt;计算机网络第三章--运输层&lt;/title&gt;
-&lt;meta charset=&quot;utf-8&quot;&gt;
-&lt;meta http-equiv=&quot;Content-Type&quot; content=&quot;text/html; charset=utf-8&quot;&gt;
-&lt;meta name=&quot;renderer&quot; content=&quot;webkit&quot;&gt;
-&lt;meta name=&quot;author&quot; content=&quot;mubu.com&quot;&gt;
-&lt;meta name=&quot;generator&quot; content=&quot;Hexo 4.2.1&quot;&gt;&lt;link rel=&quot;alternate&quot; href=&quot;/atom.xml&quot; title=&quot;GeminiPlanet&quot; type=&quot;application/atom+xml&quot;&gt;
-
-
-&lt;div class=&quot;export-wrapper&quot;&gt;&lt;div style=&quot;font-size: 22px; padding: 0 15px 0;&quot;&gt;&lt;div style=&quot;padding-bottom: 24px&quot;&gt;计算机网络第三章--运输层&lt;/div&gt;&lt;div style=&quot;background: #e5e6e8; height: 1px; margin-bottom: 20px;&quot;&gt;&lt;/div&gt;&lt;/div&gt;&lt;ul style=&quot;list-style: disc outside;&quot;&gt;&lt;li style=&quot;line-height: 24px;&quot;&gt;&lt;span class=&quot;content mubu-node&quot; style=&quot;line-height: 24px; min-height: 24px; font-size: 16px; padding: 2px 0px; display: inline-block; vertical-align: top;&quot;&gt;传输层服务&lt;/span&gt;&lt;ul class=&quot;children&quot; style=&quot;list-style: disc outside; padding-bottom: 4px;&quot;&gt;&lt;li style=&quot;line-height: 24px;&quot;&gt;&lt;span class=&quot;content mubu-node&quot; style=&quot;line-height: 24px; min-height: 24px; font-size: 16px; padding: 2px 0px; display: inline-block; vertical-align: top;&quot;&gt;传输层协议运行在&lt;span class=&quot;bold&quot; style=&quot;font-weight: bold;&quot;&gt;端系统&lt;/span&gt;&lt;/span&gt;&lt;ul class=&quot;children&quot; style=&quot;list-style: disc outside; padding-bottom: 4px;&quot;&gt;&lt;li style=&quot;line-height: 24px;&quot;&gt;&lt;span class=&quot;content mubu-node&quot; style=&quot;line-height: 24px; min-height: 24px; font-size: 16px; padding: 2px 0px; display: inline-block; vertical-align: top;&quot;&gt;为两个不同的主机上运行的&lt;span class=&quot;bold&quot; style=&quot;font-weight: bold;&quot;&gt;应用程序&lt;/span&gt;之间提供逻辑通信&lt;/span&gt;&lt;/li&gt;&lt;li style=&quot;line-height: 24px;&quot;&gt;&lt;span class=&quot;content mubu-node&quot; style=&quot;line-height: 24px; min-height: 24px; font-size: 16px; padding: 2px 0px; display: inline-block; vertical-align: top;&quot;&gt;发送方：将应用程序报文&lt;span class=&quot;bold&quot; style=&quot;font-weight: bold;&quot;&gt;分成数据段传递给网络层&lt;/span&gt;&lt;/span&gt;&lt;/li&gt;&lt;li style=&quot;line-height: 24px;&quot;&gt;&lt;span class=&quot;content mubu-node&quot; style=&quot;line-height: 24px; min-height: 24px; font-size: 16px; padding: 2px 0px; display: inline-block; vertical-align: top;&quot;&gt;接收方：将数据段重新&lt;span class=&quot;bold&quot; style=&quot;font-weight: bold;&quot;&gt;组装成报文传递到应用层&lt;/span&gt;&lt;/span&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/div&gt;
-    
-    </summary>
-    
-    
-      <category term="课程总结" scheme="https://Gemini-Lin.github.io/categories/%E8%AF%BE%E7%A8%8B%E6%80%BB%E7%BB%93/"/>
-    
-      <category term="计算机网络" scheme="https://Gemini-Lin.github.io/categories/%E8%AF%BE%E7%A8%8B%E6%80%BB%E7%BB%93/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/"/>
-    
-    
-      <category term="计算机网络" scheme="https://Gemini-Lin.github.io/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/"/>
-    
-      <category term="传输层" scheme="https://Gemini-Lin.github.io/tags/%E4%BC%A0%E8%BE%93%E5%B1%82/"/>
     
   </entry>
   
