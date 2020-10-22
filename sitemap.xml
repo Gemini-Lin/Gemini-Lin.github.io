@@ -2,9 +2,16 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://gemini-lin.github.io/LeetCode-BinarySearch/</loc>
+    
+    <lastmod>2020-10-22T01:28:16.527Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://gemini-lin.github.io/LeetCode-TwoPointers/</loc>
     
-    <lastmod>2020-10-22T01:22:13.859Z</lastmod>
+    <lastmod>2020-10-22T01:22:50.030Z</lastmod>
     
   </url>
   
