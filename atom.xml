@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://gemini-lin.github.io/"/>
-  <updated>2020-10-22T12:07:05.383Z</updated>
+  <updated>2020-10-22T13:09:05.756Z</updated>
   <id>https://gemini-lin.github.io/</id>
   
   <author>
@@ -17,11 +17,37 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>LeetCode-DynamicProgramming</title>
+    <link href="https://gemini-lin.github.io/LeetCode-DynamicProgramming/"/>
+    <id>https://gemini-lin.github.io/LeetCode-DynamicProgramming/</id>
+    <published>2020-10-22T12:32:13.000Z</published>
+    <updated>2020-10-22T13:09:05.756Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;Free-Talk&quot;&gt;
+          &lt;a href=&quot;#Free-Talk&quot; class=&quot;heading-link&quot;&gt;&lt;i class=&quot;fas fa-link&quot;&gt;&lt;/i&gt;&lt;/a&gt;Free Talk&lt;/h1&gt;
+      &lt;p&gt;终于轮到 LeetCode 的大头了， 动态规划应该是占据了算法题的半壁江山，我们废话不多说，直接上代码。&lt;/p&gt;
+&lt;p&gt;Talk is cheap, Show me your Code!&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="LeetCode" scheme="https://Gemini-Lin.github.io/categories/LeetCode/"/>
+    
+    
+      <category term="LeetCode" scheme="https://Gemini-Lin.github.io/tags/LeetCode/"/>
+    
+      <category term="Dynamic Programming" scheme="https://Gemini-Lin.github.io/tags/Dynamic-Programming/"/>
+    
+  </entry>
+  
+  <entry>
     <title>LeetCode-BinarySearch</title>
     <link href="https://gemini-lin.github.io/LeetCode-BinarySearch/"/>
     <id>https://gemini-lin.github.io/LeetCode-BinarySearch/</id>
     <published>2020-10-22T01:24:51.000Z</published>
-    <updated>2020-10-22T12:07:05.383Z</updated>
+    <updated>2020-10-22T12:07:49.982Z</updated>
     
     <summary type="html">
     
@@ -650,44 +676,6 @@
       <category term="调度算法" scheme="https://Gemini-Lin.github.io/tags/%E8%B0%83%E5%BA%A6%E7%AE%97%E6%B3%95/"/>
     
       <category term="死锁" scheme="https://Gemini-Lin.github.io/tags/%E6%AD%BB%E9%94%81/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>数据库第二章--关系模型</title>
-    <link href="https://gemini-lin.github.io/Database-System-2/"/>
-    <id>https://gemini-lin.github.io/Database-System-2/</id>
-    <published>2020-08-07T02:13:46.000Z</published>
-    <updated>2020-08-07T02:16:33.653Z</updated>
-    
-    <summary type="html">
-    
-      &lt;p&gt;
-        &lt;img class=&quot;lazyload lazyload-gif&quot; src=&quot;/images/loading.svg&quot; data-src=&quot;https://s1.ax1x.com/2020/08/07/aWEuh8.png&quot; alt=&quot;数据库第二章--关系模型&quot;&gt;
-      &lt;br&gt;&lt;/p&gt;
-
-
-&lt;title&gt;数据库第二章--关系模型&lt;/title&gt;
-&lt;meta charset=&quot;utf-8&quot;&gt;
-&lt;meta http-equiv=&quot;Content-Type&quot; content=&quot;text/html; charset=utf-8&quot;&gt;
-&lt;meta name=&quot;renderer&quot; content=&quot;webkit&quot;&gt;
-&lt;meta name=&quot;author&quot; content=&quot;mubu.com&quot;&gt;
-&lt;meta name=&quot;generator&quot; content=&quot;Hexo 4.2.1&quot;&gt;&lt;link rel=&quot;alternate&quot; href=&quot;/atom.xml&quot; title=&quot;GeminiPlanet&quot; type=&quot;application/atom+xml&quot;&gt;
-
-
-&lt;div class=&quot;export-wrapper&quot;&gt;&lt;div style=&quot;font-size: 22px; padding: 0 15px 0;&quot;&gt;&lt;div style=&quot;padding-bottom: 24px&quot;&gt;数据库第二章--关系模型&lt;/div&gt;&lt;div style=&quot;background: #e5e6e8; height: 1px; margin-bottom: 20px;&quot;&gt;&lt;/div&gt;&lt;/div&gt;&lt;ul style=&quot;list-style: disc outside;&quot;&gt;&lt;li style=&quot;line-height: 24px;&quot;&gt;&lt;span class=&quot;content mubu-node&quot; style=&quot;line-height: 24px; min-height: 24px; font-size: 16px; padding: 2px 0px; display: inline-block; vertical-align: top;&quot;&gt;关系及其相关概念&lt;/span&gt;&lt;ul class=&quot;children&quot; style=&quot;list-style: disc outside; padding-bottom: 4px;&quot;&gt;&lt;li style=&quot;line-height: 24px;&quot;&gt;&lt;span class=&quot;content mubu-node&quot; style=&quot;line-height: 24px; min-height: 24px; font-size: 16px; padding: 2px 0px; display: inline-block; vertical-align: top;&quot;&gt;关系模型提出&lt;/span&gt;&lt;ul class=&quot;children&quot; style=&quot;list-style: disc outside; padding-bottom: 4px;&quot;&gt;&lt;li style=&quot;line-height: 24px;&quot;&gt;&lt;span class=&quot;content mubu-node&quot; style=&quot;line-height: 24px; min-height: 24px; font-size: 16px; padding: 2px 0px; display: inline-block; vertical-align: top;&quot;&gt;1970年Codd提出关系模型，以关系代数理论为数学基础&lt;/span&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/li&gt;&lt;li style=&quot;line-height: 24px;&quot;&gt;&lt;span class=&quot;content mubu-node&quot; style=&quot;line-height: 24px; min-height: 24px; font-size: 16px; padding: 2px 0px; display: inline-block; vertical-align: top;&quot;&gt;&lt;span class=&quot;bold&quot; style=&quot;font-weight: bold;&quot;&gt;实体、关系的概念&lt;/span&gt;&lt;/span&gt;&lt;ul class=&quot;children&quot; style=&quot;list-style: disc outside; padding-bottom: 4px;&quot;&gt;&lt;li style=&quot;line-height: 24px;&quot;&gt;&lt;span class=&quot;content mubu-node&quot; style=&quot;line-height: 24px; min-height: 24px; font-size: 16px; padding: 2px 0px; display: inline-block; vertical-align: top;&quot;&gt;&lt;span class=&quot;bold&quot; style=&quot;font-weight: bold;&quot;&gt;实体：&lt;/span&gt;包含有数据特征的&lt;span class=&quot;bold&quot; style=&quot;font-weight: bold;&quot;&gt;事物对象&lt;/span&gt;在概念模型世界中的&lt;span class=&quot;bold&quot; style=&quot;font-weight: bold;&quot;&gt;抽象名称&lt;/span&gt;&lt;/span&gt;&lt;/li&gt;&lt;li style=&quot;line-height: 24px;&quot;&gt;&lt;span class=&quot;content mubu-node&quot; style=&quot;line-height: 24px; min-height: 24px; font-size: 16px; padding: 2px 0px; display: inline-block; vertical-align: top;&quot;&gt;&lt;span class=&quot;bold&quot; style=&quot;font-weight: bold;&quot;&gt;关系（关系表）：&lt;/span&gt;具有关系特征、用于存放实体数据的&lt;span class=&quot;bold&quot; style=&quot;font-weight: bold;&quot;&gt;二维表&lt;/span&gt;&lt;/span&gt;&lt;/li&gt;&lt;li style=&quot;line-height: 24px;&quot;&gt;&lt;span class=&quot;content mubu-node&quot; style=&quot;line-height: 24px; min-height: 24px; font-size: 16px; padding: 2px 0px; display: inline-block; vertical-align: top;&quot;&gt;&lt;span class=&quot;bold&quot; style=&quot;font-weight: bold;&quot;&gt;关系表特征&lt;/span&gt;&lt;/span&gt;&lt;ul class=&quot;children&quot; style=&quot;list-style: disc outside; padding-bottom: 4px;&quot;&gt;&lt;li style=&quot;line-height: 24px;&quot;&gt;&lt;span class=&quot;content mubu-node&quot; style=&quot;line-height: 24px; min-height: 24px; font-size: 16px; padding: 2px 0px; display: inline-block; vertical-align: top;&quot;&gt;&lt;span class=&quot;bold&quot; style=&quot;font-weight: bold;&quot;&gt;表中每行存储实体的一个实例数据&lt;/span&gt;&lt;/span&gt;&lt;/li&gt;&lt;li style=&quot;line-height: 24px;&quot;&gt;&lt;span class=&quot;content mubu-node&quot; style=&quot;line-height: 24px; min-height: 24px; font-size: 16px; padding: 2px 0px; display: inline-block; vertical-align: top;&quot;&gt;&lt;span class=&quot;bold&quot; style=&quot;font-weight: bold;&quot;&gt;表中每列包含实体的一项属性数据&lt;/span&gt;&lt;/span&gt;&lt;/li&gt;&lt;li style=&quot;line-height: 24px;&quot;&gt;&lt;span class=&quot;content mubu-node&quot; style=&quot;line-height: 24px; min-height: 24px; font-size: 16px; padding: 2px 0px; display: inline-block; vertical-align: top;&quot;&gt;&lt;span class=&quot;bold&quot; style=&quot;font-weight: bold;&quot;&gt;表中单元格只能存储单个值&lt;/span&gt;&lt;/span&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/div&gt;
-    
-    </summary>
-    
-    
-      <category term="课程总结" scheme="https://Gemini-Lin.github.io/categories/%E8%AF%BE%E7%A8%8B%E6%80%BB%E7%BB%93/"/>
-    
-      <category term="数据库" scheme="https://Gemini-Lin.github.io/categories/%E8%AF%BE%E7%A8%8B%E6%80%BB%E7%BB%93/%E6%95%B0%E6%8D%AE%E5%BA%93/"/>
-    
-    
-      <category term="数据库" scheme="https://Gemini-Lin.github.io/tags/%E6%95%B0%E6%8D%AE%E5%BA%93/"/>
-    
-      <category term="关系模型" scheme="https://Gemini-Lin.github.io/tags/%E5%85%B3%E7%B3%BB%E6%A8%A1%E5%9E%8B/"/>
     
   </entry>
   

@@ -2,9 +2,16 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://gemini-lin.github.io/LeetCode-DynamicProgramming/</loc>
+    
+    <lastmod>2020-10-22T13:09:05.756Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://gemini-lin.github.io/LeetCode-BinarySearch/</loc>
     
-    <lastmod>2020-10-22T12:07:05.383Z</lastmod>
+    <lastmod>2020-10-22T12:07:49.982Z</lastmod>
     
   </url>
   
