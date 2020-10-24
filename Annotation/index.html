@@ -1,9 +1,9 @@
-<!DOCTYPE html><html lang="zh-CN"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="format-detection" content="telephone=no"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="black"><link rel="icon" href="/images/icons/favicon.ico?v=2.0.1" type="image/png" sizes="16x16"><link rel="icon" href="/images/icons/favicon.ico?v=2.0.1" type="image/png" sizes="32x32"><meta name="google-site-verification" content="_T_d70fQRwnF8GQJNmmDRbHpjKelZbY-RFDWgS--hAw"><meta name="baidu-site-verification" content="AM9It5Uqy8"><meta name="description" content="Free Talk       注解是放在Java源码的类、方法、字段、参数前的一种特殊“注释”。本文章将从使用注解、定义注解、处理注解三个角度讨论一下注解的特性。参考链接">
+<!DOCTYPE html><html lang="zh-CN"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="format-detection" content="telephone=no"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="black"><link rel="icon" href="/images/icons/favicon.ico?v=2.0.1" type="image/png" sizes="16x16"><link rel="icon" href="/images/icons/favicon.ico?v=2.0.1" type="image/png" sizes="32x32"><meta name="google-site-verification" content="_T_d70fQRwnF8GQJNmmDRbHpjKelZbY-RFDWgS--hAw"><meta name="baidu-site-verification" content="AM9It5Uqy8"><meta name="description" content="Free Talk        注解是放在Java源码的类、方法、字段、参数前的一种特殊“注释”。 本文章将从使用注解、定义注解、处理注解三个角度讨论一下注解的特性。 参考链接">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Java注解(Annotation)">
 <meta property="og:url" content="https://gemini-lin.github.io/Annotation/index.html">
 <meta property="og:site_name" content="GeminiPlanet">
-<meta property="og:description" content="Free Talk       注解是放在Java源码的类、方法、字段、参数前的一种特殊“注释”。本文章将从使用注解、定义注解、处理注解三个角度讨论一下注解的特性。参考链接">
+<meta property="og:description" content="Free Talk        注解是放在Java源码的类、方法、字段、参数前的一种特殊“注释”。 本文章将从使用注解、定义注解、处理注解三个角度讨论一下注解的特性。 参考链接">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2020-07-12T07:36:20.000Z">
 <meta property="article:modified_time" content="2020-07-15T05:18:42.007Z">
@@ -33,14 +33,18 @@ var CONFIG = {
   sourcePath: {"js":"js","css":"css","images":"images"},
 };
 
-window.CONFIG = CONFIG;</script><meta name="generator" content="Hexo 4.2.1"></head><body><div class="container" id="container"><header class="header" id="header"><div class="header-inner header-inner--height header-inner--bgcolor"><nav class="header-nav header-nav--sticky"><div class="header-nav-inner"><div class="header-nav-menubtn"><i class="fas fa-bars"></i></div><div class="header-nav-menu"><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/"><span class="header-nav-menu-item__icon"><i class="fas fa-home"></i></span><span class="header-nav-menu-item__text">首页</span></a></div><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/about/"><span class="header-nav-menu-item__icon"><i class="fas fa-user"></i></span><span class="header-nav-menu-item__text">关于</span></a></div><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/archives/"><span class="header-nav-menu-item__icon"><i class="fas fa-folder-open"></i></span><span class="header-nav-menu-item__text">归档</span></a></div><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/categories/"><span class="header-nav-menu-item__icon"><i class="fas fa-layer-group"></i></span><span class="header-nav-menu-item__text">分类</span></a></div><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/tags/"><span class="header-nav-menu-item__icon"><i class="fas fa-tags"></i></span><span class="header-nav-menu-item__text">标签</span></a></div><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/friends/"><span class="header-nav-menu-item__icon"><i class="fas fa-link"></i></span><span class="header-nav-menu-item__text">友链</span></a></div></div><div class="header-nav-search"><span class="header-nav-search__icon"><i class="fas fa-search"></i></span><span class="header-nav-search__text">搜索</span></div><div class="header-nav-mode"><div class="mode"><div class="mode-track"><span class="mode-track-moon"></span><span class="mode-track-sun"></span></div><div class="mode-thumb"></div></div></div></div></nav></div></header><main class="main" id="main"><div class="main-inner"><div class="content-wrap" id="content-wrap"><div class="content" id="content"><!-- Just used to judge whether it is an article page--><div id="is-post"></div><div class="post"><header class="post-header"><h1 class="post-title">Java注解(Annotation)</h1><div class="post-meta"><span class="post-meta-item post-meta-item--createtime"><span class="post-meta-item__icon"><i class="far fa-calendar-plus"></i></span><span class="post-meta-item__info">发表于</span><span class="post-meta-item__value">2020-07-12</span></span><span class="post-meta-item post-meta-item--updatetime"><span class="post-meta-item__icon"><i class="far fa-calendar-check"></i></span><span class="post-meta-item__info">更新于</span><span class="post-meta-item__value">2020-07-15</span></span><span class="post-meta-item post-meta-item--wordcount"><span class="post-meta-item__icon"><i class="far fa-file-word"></i></span><span class="post-meta-item__info">字数统计</span><span class="post-meta-item__value">2k</span></span><span class="post-meta-item post-meta-item--readtime"><span class="post-meta-item__icon"><i class="far fa-clock"></i></span><span class="post-meta-item__info">阅读时长</span><span class="post-meta-item__value">15分</span></span><span class="post-meta-item post-meta-item--visitors"><span class="post-meta-item__icon"><i class="fas fa-eye"></i></span><span class="post-meta-item__info">阅读次数</span><span class="post-meta-item__value" id="busuanzi_value_page_pv"></span></span></div></header><div class="post-body"><h1 id="Free-Talk">
-          <a href="#Free-Talk" class="heading-link"><i class="fas fa-link"></i></a>Free Talk</h1>
-      <p><strong>注解是放在Java源码的类、方法、字段、参数前的一种特殊“注释”。</strong><br>本文章将从使用注解、定义注解、处理注解三个角度讨论一下注解的特性。<br><span class="exturl"><a class="exturl__link" href="https://www.liaoxuefeng.com/wiki/1252599548343744/1265102413966176" target="_blank" rel="noopener">参考链接</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></p>
+window.CONFIG = CONFIG;</script><meta name="generator" content="Hexo 4.2.1"></head><body><div class="container" id="container"><header class="header" id="header"><div class="header-inner header-inner--height header-inner--bgcolor"><nav class="header-nav header-nav--sticky"><div class="header-nav-inner"><div class="header-nav-menubtn"><i class="fas fa-bars"></i></div><div class="header-nav-menu"><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/"><span class="header-nav-menu-item__icon"><i class="fas fa-home"></i></span><span class="header-nav-menu-item__text">首页</span></a></div><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/about/"><span class="header-nav-menu-item__icon"><i class="fas fa-user"></i></span><span class="header-nav-menu-item__text">关于</span></a></div><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/archives/"><span class="header-nav-menu-item__icon"><i class="fas fa-folder-open"></i></span><span class="header-nav-menu-item__text">归档</span></a></div><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/categories/"><span class="header-nav-menu-item__icon"><i class="fas fa-layer-group"></i></span><span class="header-nav-menu-item__text">分类</span></a></div><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/tags/"><span class="header-nav-menu-item__icon"><i class="fas fa-tags"></i></span><span class="header-nav-menu-item__text">标签</span></a></div><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/friends/"><span class="header-nav-menu-item__icon"><i class="fas fa-link"></i></span><span class="header-nav-menu-item__text">友链</span></a></div></div><div class="header-nav-search"><span class="header-nav-search__icon"><i class="fas fa-search"></i></span><span class="header-nav-search__text">搜索</span></div><div class="header-nav-mode"><div class="mode"><div class="mode-track"><span class="mode-track-moon"></span><span class="mode-track-sun"></span></div><div class="mode-thumb"></div></div></div></div></nav></div></header><main class="main" id="main"><div class="main-inner"><div class="content-wrap" id="content-wrap"><div class="content" id="content"><!-- Just used to judge whether it is an article page--><div id="is-post"></div><div class="post"><header class="post-header"><h1 class="post-title">Java注解(Annotation)</h1><div class="post-meta"><span class="post-meta-item post-meta-item--createtime"><span class="post-meta-item__icon"><i class="far fa-calendar-plus"></i></span><span class="post-meta-item__info">发表于</span><span class="post-meta-item__value">2020-07-12</span></span><span class="post-meta-item post-meta-item--updatetime"><span class="post-meta-item__icon"><i class="far fa-calendar-check"></i></span><span class="post-meta-item__info">更新于</span><span class="post-meta-item__value">2020-07-15</span></span><span class="post-meta-item post-meta-item--wordcount"><span class="post-meta-item__icon"><i class="far fa-file-word"></i></span><span class="post-meta-item__info">字数统计</span><span class="post-meta-item__value">2k</span></span><span class="post-meta-item post-meta-item--readtime"><span class="post-meta-item__icon"><i class="far fa-clock"></i></span><span class="post-meta-item__info">阅读时长</span><span class="post-meta-item__value">15分</span></span><span class="post-meta-item post-meta-item--visitors"><span class="post-meta-item__icon"><i class="fas fa-eye"></i></span><span class="post-meta-item__info">阅读次数</span><span class="post-meta-item__value" id="busuanzi_value_page_pv"></span></span></div></header><div class="post-body"><h1 id="free-talk">
+          <a href="#free-talk" class="heading-link"><i class="fas fa-link"></i></a>Free Talk</h1>
+      
+<p><strong>注解是放在Java源码的类、方法、字段、参数前的一种特殊“注释”。</strong><br>
+本文章将从使用注解、定义注解、处理注解三个角度讨论一下注解的特性。<br>
+<span class="exturl"><a class="exturl__link" href="https://www.liaoxuefeng.com/wiki/1252599548343744/1265102413966176" target="_blank" rel="noopener">参考链接</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></p>
 <a id="more"></a>
 
         <h1 id="使用注解">
           <a href="#使用注解" class="heading-link"><i class="fas fa-link"></i></a>使用注解</h1>
-      <p>什么是注解？</p>
+      
+<p>什么是注解？</p>
 <figure class="highlight java"><div class="table-container"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// this is a component:</span></span><br><span class="line"><span class="meta">@Resource</span>(<span class="string">"hello"</span>)</span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Hello</span> </span>{</span><br><span class="line">    <span class="meta">@Inject</span></span><br><span class="line">    <span class="keyword">int</span> n;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@PostConstruct</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">hello</span><span class="params">(@Param String name)</span> </span>{</span><br><span class="line">        System.out.println(name);</span><br><span class="line">    }</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> String <span class="title">toString</span><span class="params">()</span> </span>{</span><br><span class="line">        <span class="keyword">return</span> <span class="string">"Hello"</span>;</span><br><span class="line">    }</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></div></figure>
 
     <div class="note-plugin success no-icon">
@@ -51,34 +55,41 @@ window.CONFIG = CONFIG;</script><meta name="generator" content="Hexo 4.2.1"></he
 
         <h2 id="注解的作用">
           <a href="#注解的作用" class="heading-link"><i class="fas fa-link"></i></a>注解的作用</h2>
-      <p>从JVM的角度看，注解本身对代码逻辑没有任何影响，如何使用注解完全由工具决定。</p>
+      
+<p>从JVM的角度看，注解本身对代码逻辑没有任何影响，如何使用注解完全由工具决定。</p>
 <p>Java的注解可以分为三类：</p>
 <ol>
-<li>由编译器使用的注解
+<li>由编译器使用的注解</li>
+</ol>
+
     <div class="note-plugin info no-icon">
       
       <ul><li><code>@Override：</code>让编译器检查该方法是否正确地实现了覆写；</li><li><code>@SuppressWarnings：</code>告诉编译器忽略此处代码产生的警告。</li></ul><p>这类注解不会被编译进入<code>.class</code>文件，它们在编译后就被编译器扔掉了。</p>
     </div>
-  </li>
-<li>由工具处理<code>.class</code>文件使用的注解
+  
+<ol start="2">
+<li>由工具处理<code>.class</code>文件使用的注解</li>
+</ol>
+
     <div class="note-plugin info no-icon">
       
       <p>比如有些工具会在加载<code>class</code>的时候，对<code>class</code>做动态修改，实现一些特殊的功能。这类注解会被编译进入<code>.class</code>文件，但加载结束后并不会存在于内存中。这类注解只被一些底层库使用，一般我们不必自己处理。</p>
     </div>
-  </li>
-<li>在程序运行期能够读取的注解
+  
+<ol start="3">
+<li>在程序运行期能够读取的注解</li>
+</ol>
+
     <div class="note-plugin info no-icon">
       
       <p>它们在加载后一直存在于JVM中，这也是最常用的注解。例如，一个配置了<code>@PostConstruct</code>的方法会在调用构造方法后自动被调用（这是Java代码读取该注解实现的功能，JVM并不会识别该注解）。</p>
     </div>
   
 
-</li>
-</ol>
-
-        <h2 id="使用注解-1">
-          <a href="#使用注解-1" class="heading-link"><i class="fas fa-link"></i></a>使用注解</h2>
-      <p>定义一个注解时，还可以定义配置参数。配置参数可以包括：</p>
+        <h2 id="使用注解-2">
+          <a href="#使用注解-2" class="heading-link"><i class="fas fa-link"></i></a>使用注解</h2>
+      
+<p>定义一个注解时，还可以定义配置参数。配置参数可以包括：</p>
 <ul>
 <li>所有基本类型；</li>
 <li>String；</li>
@@ -96,28 +107,36 @@ window.CONFIG = CONFIG;</script><meta name="generator" content="Hexo 4.2.1"></he
 
         <h2 id="小结">
           <a href="#小结" class="heading-link"><i class="fas fa-link"></i></a>小结</h2>
-      <ul>
-<li><p>注解（Annotation）是Java语言用于工具处理的标注：</p>
+      
+<ul>
+<li>
+<p>注解（Annotation）是Java语言用于工具处理的标注：</p>
 </li>
-<li><p>注解可以配置参数，没有指定配置的参数使用默认值；</p>
+<li>
+<p>注解可以配置参数，没有指定配置的参数使用默认值；</p>
 </li>
-<li><p>如果参数名称是value，且只有一个参数，那么可以省略参数名称。</p>
+<li>
+<p>如果参数名称是value，且只有一个参数，那么可以省略参数名称。</p>
 </li>
 </ul>
 
         <h1 id="定义注解">
           <a href="#定义注解" class="heading-link"><i class="fas fa-link"></i></a>定义注解</h1>
-      <p><strong>Java语言使用<code>@interface</code>语法来定义注解（Annotation）</strong>，它的格式如下：</p>
+      
+<p><strong>Java语言使用<code>@interface</code>语法来定义注解（Annotation）</strong>，它的格式如下：</p>
 <figure class="highlight java"><div class="table-container"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="meta">@interface</span> Report {</span><br><span class="line">    <span class="function"><span class="keyword">int</span> <span class="title">type</span><span class="params">()</span> <span class="keyword">default</span> 0</span>;</span><br><span class="line">    <span class="function">String <span class="title">level</span><span class="params">()</span> <span class="keyword">default</span> "info"</span>;</span><br><span class="line">    <span class="function">String <span class="title">value</span><span class="params">()</span> <span class="keyword">default</span> ""</span>;</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></div></figure>
 <p>注解的参数类似无参数方法，可以用<code>default</code>设定一个默认值（强烈推荐）。最常用的参数应当命名为<code>value</code>。</p>
 
         <h2 id="元注解">
           <a href="#元注解" class="heading-link"><i class="fas fa-link"></i></a>元注解</h2>
-      <p><strong>有一些注解可以修饰其他注解，这些注解就称为元注解（meta annotation）。</strong><br>Java标准库已经定义了一些元注解，我们只需要使用元注解，通常不需要自己去编写元注解。</p>
+      
+<p><strong>有一些注解可以修饰其他注解，这些注解就称为元注解（meta annotation）。</strong><br>
+Java标准库已经定义了一些元注解，我们只需要使用元注解，通常不需要自己去编写元注解。</p>
 
-        <h3 id="Target">
-          <a href="#Target" class="heading-link"><i class="fas fa-link"></i></a>@Target</h3>
-      <p>最常用的元注解是<code>@Target</code>。<strong>使用<code>@Target</code>可以定义<code>Annotation</code>能够被应用于源码的哪些位置：</strong></p>
+        <h3 id="target">
+          <a href="#target" class="heading-link"><i class="fas fa-link"></i></a>@Target</h3>
+      
+<p>最常用的元注解是<code>@Target</code>。<strong>使用<code>@Target</code>可以定义<code>Annotation</code>能够被应用于源码的哪些位置：</strong></p>
 <ul>
 <li>类或接口：<code>ElementType.TYPE</code>；</li>
 <li>字段：<code>ElementType.FIELD</code>；</li>
@@ -134,9 +153,10 @@ window.CONFIG = CONFIG;</script><meta name="generator" content="Hexo 4.2.1"></he
     </div>
   
 
-        <h3 id="Retention">
-          <a href="#Retention" class="heading-link"><i class="fas fa-link"></i></a>@Retention</h3>
-      <p><strong>另一个重要的元注解<code>@Retention</code>定义了<code>Annotation</code>的生命周期：</strong></p>
+        <h3 id="retention">
+          <a href="#retention" class="heading-link"><i class="fas fa-link"></i></a>@Retention</h3>
+      
+<p><strong>另一个重要的元注解<code>@Retention</code>定义了<code>Annotation</code>的生命周期：</strong></p>
 <ul>
 <li>仅编译期：<code>RetentionPolicy.SOURCE</code>；</li>
 <li>仅class文件：<code>RetentionPolicy.CLASS</code>；</li>
@@ -149,32 +169,44 @@ window.CONFIG = CONFIG;</script><meta name="generator" content="Hexo 4.2.1"></he
     </div>
   
 
-        <h2 id="如何定义Annotation">
-          <a href="#如何定义Annotation" class="heading-link"><i class="fas fa-link"></i></a>如何定义Annotation</h2>
-      <ol>
-<li>用<code>@interface</code>定义注解：<figure class="highlight java"><div class="table-container"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="meta">@interface</span> Report {</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></div></figure></li>
-<li>添加参数、默认值：<figure class="highlight java"><div class="table-container"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="meta">@interface</span> Report {</span><br><span class="line">    <span class="function"><span class="keyword">int</span> <span class="title">type</span><span class="params">()</span> <span class="keyword">default</span> 0</span>;</span><br><span class="line">    <span class="function">String <span class="title">level</span><span class="params">()</span> <span class="keyword">default</span> "info"</span>;</span><br><span class="line">    <span class="function">String <span class="title">value</span><span class="params">()</span> <span class="keyword">default</span> ""</span>;</span><br><span class="line">    <span class="comment">// 把最常用的参数定义为value()，推荐所有参数都尽量设置默认值。</span></span><br><span class="line">}</span><br></pre></td></tr></tbody></table></div></figure></li>
-<li>用元注解配置注解：<figure class="highlight java"><div class="table-container"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@Target</span>(ElementType.TYPE)</span><br><span class="line"><span class="meta">@Retention</span>(RetentionPolicy.RUNTIME)</span><br><span class="line"><span class="keyword">public</span> <span class="meta">@interface</span> Report {</span><br><span class="line">    <span class="function"><span class="keyword">int</span> <span class="title">type</span><span class="params">()</span> <span class="keyword">default</span> 0</span>;</span><br><span class="line">    <span class="function">String <span class="title">level</span><span class="params">()</span> <span class="keyword">default</span> "info"</span>;</span><br><span class="line">    <span class="function">String <span class="title">value</span><span class="params">()</span> <span class="keyword">default</span> ""</span>;</span><br><span class="line">}</span><br><span class="line"><span class="comment">// 其中，必须设置@Target和@Retention，@Retention一般设置为RUNTIME，因为我们自定义的注解通常要求在运行期读取。一般情况下，不必写@Inherited和@Repeatable。</span></span><br></pre></td></tr></tbody></table></div></figure>
-
-</li>
+        <h2 id="如何定义annotation">
+          <a href="#如何定义annotation" class="heading-link"><i class="fas fa-link"></i></a>如何定义Annotation</h2>
+      
+<ol>
+<li>用<code>@interface</code>定义注解：</li>
 </ol>
+<figure class="highlight java"><div class="table-container"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="meta">@interface</span> Report {</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></div></figure>
+<ol start="2">
+<li>添加参数、默认值：</li>
+</ol>
+<figure class="highlight java"><div class="table-container"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="meta">@interface</span> Report {</span><br><span class="line">    <span class="function"><span class="keyword">int</span> <span class="title">type</span><span class="params">()</span> <span class="keyword">default</span> 0</span>;</span><br><span class="line">    <span class="function">String <span class="title">level</span><span class="params">()</span> <span class="keyword">default</span> "info"</span>;</span><br><span class="line">    <span class="function">String <span class="title">value</span><span class="params">()</span> <span class="keyword">default</span> ""</span>;</span><br><span class="line">    <span class="comment">// 把最常用的参数定义为value()，推荐所有参数都尽量设置默认值。</span></span><br><span class="line">}</span><br></pre></td></tr></tbody></table></div></figure>
+<ol start="3">
+<li>用元注解配置注解：</li>
+</ol>
+<figure class="highlight java"><div class="table-container"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@Target</span>(ElementType.TYPE)</span><br><span class="line"><span class="meta">@Retention</span>(RetentionPolicy.RUNTIME)</span><br><span class="line"><span class="keyword">public</span> <span class="meta">@interface</span> Report {</span><br><span class="line">    <span class="function"><span class="keyword">int</span> <span class="title">type</span><span class="params">()</span> <span class="keyword">default</span> 0</span>;</span><br><span class="line">    <span class="function">String <span class="title">level</span><span class="params">()</span> <span class="keyword">default</span> "info"</span>;</span><br><span class="line">    <span class="function">String <span class="title">value</span><span class="params">()</span> <span class="keyword">default</span> ""</span>;</span><br><span class="line">}</span><br><span class="line"><span class="comment">// 其中，必须设置@Target和@Retention，@Retention一般设置为RUNTIME，因为我们自定义的注解通常要求在运行期读取。一般情况下，不必写@Inherited和@Repeatable。</span></span><br></pre></td></tr></tbody></table></div></figure>
 
-        <h2 id="小结-1">
-          <a href="#小结-1" class="heading-link"><i class="fas fa-link"></i></a>小结</h2>
-      <ol>
-<li><p>Java使用<code>@interface</code>定义注解：</p>
+        <h2 id="小结-2">
+          <a href="#小结-2" class="heading-link"><i class="fas fa-link"></i></a>小结</h2>
+      
+<ol>
+<li>
+<p>Java使用<code>@interface</code>定义注解：</p>
 </li>
-<li><p>可定义多个参数和默认值，核心参数使用<code>value</code>名称；</p>
+<li>
+<p>可定义多个参数和默认值，核心参数使用<code>value</code>名称；</p>
 </li>
-<li><p>必须设置<code>@Target</code>来指定<code>Annotation</code>可以应用的范围；</p>
+<li>
+<p>必须设置<code>@Target</code>来指定<code>Annotation</code>可以应用的范围；</p>
 </li>
-<li><p>应当设置<code>@Retention(RetentionPolicy.RUNTIME)</code>便于运行期读取该<code>Annotation</code>。</p>
+<li>
+<p>应当设置<code>@Retention(RetentionPolicy.RUNTIME)</code>便于运行期读取该<code>Annotation</code>。</p>
 </li>
 </ol>
 
         <h1 id="处理注解">
           <a href="#处理注解" class="heading-link"><i class="fas fa-link"></i></a>处理注解</h1>
-      <p>Java的注解本身对代码逻辑没有任何影响。根据<code>@Retention</code>的配置：</p>
+      
+<p>Java的注解本身对代码逻辑没有任何影响。根据<code>@Retention</code>的配置：</p>
 <ul>
 <li><code>SOURCE</code>类型的注解在编译期就被丢掉了；</li>
 <li><code>CLASS</code>类型的注解仅保存在class文件中，它们不会被加载进JVM；</li>
@@ -193,14 +225,15 @@ window.CONFIG = CONFIG;</script><meta name="generator" content="Hexo 4.2.1"></he
 </ul>
 <figure class="highlight java"><div class="table-container"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 获取Person定义的@Report注解:</span></span><br><span class="line">Report report = Person<span class="class">.<span class="keyword">class</span>.<span class="title">getAnnotation</span>(<span class="title">Report</span>.<span class="title">class</span>)</span>;</span><br><span class="line"><span class="keyword">int</span> type = report.type();</span><br><span class="line">String level = report.level();</span><br></pre></td></tr></tbody></table></div></figure>
 
-        <h2 id="使用注解-2">
-          <a href="#使用注解-2" class="heading-link"><i class="fas fa-link"></i></a>使用注解</h2>
-      <p>注解如何使用，完全由程序自己决定。例如，JUnit是一个测试框架，它会自动运行所有标记为<code>@Test</code>的方法。</p>
+        <h2 id="使用注解-3">
+          <a href="#使用注解-3" class="heading-link"><i class="fas fa-link"></i></a>使用注解</h2>
+      
+<p>注解如何使用，完全由程序自己决定。例如，JUnit是一个测试框架，它会自动运行所有标记为<code>@Test</code>的方法。</p>
 <p>我们来看一个<code>@Range</code>注解，我们希望用它来定义一个<code>String</code>字段的规则：字段长度满足<code>@Range</code>的参数定义：</p>
 <figure class="highlight java"><div class="table-container"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@Retention</span>(RetentionPolicy.RUNTIME)</span><br><span class="line"><span class="meta">@Target</span>(ElementType.FIELD)</span><br><span class="line"><span class="keyword">public</span> <span class="meta">@interface</span> Range {</span><br><span class="line">    <span class="function"><span class="keyword">int</span> <span class="title">min</span><span class="params">()</span> <span class="keyword">default</span> 0</span>;</span><br><span class="line">    <span class="function"><span class="keyword">int</span> <span class="title">max</span><span class="params">()</span> <span class="keyword">default</span> 255</span>;</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></div></figure>
 <p>在某个JavaBean中，我们可以使用该注解：</p>
 <figure class="highlight java"><div class="table-container"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Person</span> </span>{</span><br><span class="line">    <span class="meta">@Range</span>(min=<span class="number">1</span>, max=<span class="number">20</span>)</span><br><span class="line">    <span class="keyword">public</span> String name;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Range</span>(max=<span class="number">10</span>)</span><br><span class="line">    <span class="keyword">public</span> String city;</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></div></figure>
-<p><strong>但是，定义了注解，本身对程序逻辑没有任何影响。我们必须自己编写代码来使用注解。</strong>这里，我们编写一个<code>Person</code>实例的检查方法，它可以检查<code>Person</code>实例的<code>String</code>字段长度是否满足<code>@Range</code>的定义：</p>
+<p>**但是，定义了注解，本身对程序逻辑没有任何影响。我们必须自己编写代码来使用注解。**这里，我们编写一个<code>Person</code>实例的检查方法，它可以检查<code>Person</code>实例的<code>String</code>字段长度是否满足<code>@Range</code>的定义：</p>
 <figure class="highlight java"><div class="table-container"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">check</span><span class="params">(Person person)</span> <span class="keyword">throws</span> IllegalArgumentException, ReflectiveOperationException </span>{</span><br><span class="line">    <span class="comment">// 遍历所有Field:</span></span><br><span class="line">    <span class="keyword">for</span> (Field field : person.getClass().getFields()) {</span><br><span class="line">        <span class="comment">// 获取Field定义的@Range:</span></span><br><span class="line">        Range range = field.getAnnotation(Range<span class="class">.<span class="keyword">class</span>)</span>;</span><br><span class="line">        <span class="comment">// 如果@Range存在:</span></span><br><span class="line">        <span class="keyword">if</span> (range != <span class="keyword">null</span>) {</span><br><span class="line">            <span class="comment">// 获取Field的值:</span></span><br><span class="line">            Object value = field.get(person);</span><br><span class="line">            <span class="comment">// 如果值是String:</span></span><br><span class="line">            <span class="keyword">if</span> (value <span class="keyword">instanceof</span> String) {</span><br><span class="line">                String s = (String) value;</span><br><span class="line">                <span class="comment">// 判断值是否满足@Range的min/max:</span></span><br><span class="line">                <span class="keyword">if</span> (s.length() &lt; range.min() || s.length() &gt; range.max()) {</span><br><span class="line">                    <span class="keyword">throw</span> <span class="keyword">new</span> IllegalArgumentException(<span class="string">"Invalid field: "</span> + field.getName());</span><br><span class="line">                }</span><br><span class="line">            }</span><br><span class="line">        }</span><br><span class="line">    }</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></div></figure>
 <p>这样一来，我们通过<code>@Range</code>注解，配合<code>check()</code>方法，就可以完成<code>Person</code>实例的检查。注意检查逻辑完全是我们自己编写的，JVM不会自动给注解添加任何额外的逻辑。</p>
 <script>
@@ -221,19 +254,19 @@ window.CONFIG = CONFIG;</script><meta name="generator" content="Hexo 4.2.1"></he
             });
             document.body.appendChild(img);
           });
-      </script></div><footer class="post-footer"><div class="post-ending ending"><div class="ending__text">------ 本文结束，感谢您的阅读 ------</div></div><div class="post-copyright copyright"><div class="copyright-author"><span class="copyright-author__name">本文作者: </span><span class="copyright-author__value"><a href="https://Gemini-Lin.github.io">Gemini-Lin</a></span></div><div class="copyright-link"><span class="copyright-link__name">本文链接: </span><span class="copyright-link__value"><a href="https://gemini-lin.github.io/Annotation/">https://gemini-lin.github.io/Annotation/</a></span></div><div class="copyright-notice"><span class="copyright-notice__name">版权声明: </span><span class="copyright-notice__value">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en" rel="external nofollow" target="_blank">BY-NC-SA</a> 许可协议。转载请注明出处！</span></div></div><div class="post-tags"><span class="post-tags-item"><span class="post-tags-item__icon"><i class="fas fa-tag"></i></span><a class="post-tags-item__link" href="https://gemini-lin.github.io/tags/Java/">Java</a></span><span class="post-tags-item"><span class="post-tags-item__icon"><i class="fas fa-tag"></i></span><a class="post-tags-item__link" href="https://gemini-lin.github.io/tags/%E6%B3%A8%E8%A7%A3/">注解</a></span></div><div class="post-share"><div class="social-share" data-sites="qzone, qq, weibo, wechat, douban, linkedin, facebook, twitter, google">Share to: </div></div><div class="post-reward reward"><div class="reward-button">请我喝杯咖啡~</div><div class="reward-qrcode"><span class="reward-qrcode-alipay"><img class="reward-qrcode-alipay__img" src="/images/alipay.jpg"><div class="reward-qrcode-alipay__text">支付宝打赏</div></span><span class="reward-qrcode-wechat"><img class="reward-qrcode-wechat__img" src="/images/wechatpay.jpg"><div class="reward-qrcode-wechat__text">微信打赏</div></span></div></div><nav class="post-paginator paginator"><div class="paginator-prev"><a class="paginator-prev__link" href="/Generic/"><span class="paginator-prev__icon"><i class="fas fa-angle-left"></i></span><span class="paginator-prev__text">Java泛型</span></a></div><div class="paginator-next"><a class="paginator-next__link" href="/Reflection/"><span class="paginator-prev__text">Java反射(Reflection)</span><span class="paginator-next__icon"><i class="fas fa-angle-right"></i></span></a></div></nav></footer></div></div><div class="comments" id="comments"><div id="valine-container"></div></div></div><div class="sidebar-wrap" id="sidebar-wrap"><aside class="sidebar" id="sidebar"><div class="sidebar-nav"><span class="sidebar-nav-toc current">文章目录</span><span class="sidebar-nav-ov">站点概览</span></div><section class="sidebar-toc"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Free-Talk"><span class="toc-number">1.</span> <span class="toc-text">
+      </script></div><footer class="post-footer"><div class="post-ending ending"><div class="ending__text">------ 本文结束，感谢您的阅读 ------</div></div><div class="post-copyright copyright"><div class="copyright-author"><span class="copyright-author__name">本文作者: </span><span class="copyright-author__value"><a href="https://Gemini-Lin.github.io">Gemini-Lin</a></span></div><div class="copyright-link"><span class="copyright-link__name">本文链接: </span><span class="copyright-link__value"><a href="https://gemini-lin.github.io/Annotation/">https://gemini-lin.github.io/Annotation/</a></span></div><div class="copyright-notice"><span class="copyright-notice__name">版权声明: </span><span class="copyright-notice__value">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en" rel="external nofollow" target="_blank">BY-NC-SA</a> 许可协议。转载请注明出处！</span></div></div><div class="post-tags"><span class="post-tags-item"><span class="post-tags-item__icon"><i class="fas fa-tag"></i></span><a class="post-tags-item__link" href="https://gemini-lin.github.io/tags/Java/">Java</a></span><span class="post-tags-item"><span class="post-tags-item__icon"><i class="fas fa-tag"></i></span><a class="post-tags-item__link" href="https://gemini-lin.github.io/tags/%E6%B3%A8%E8%A7%A3/">注解</a></span></div><div class="post-share"><div class="social-share" data-sites="qzone, qq, weibo, wechat, douban, linkedin, facebook, twitter, google">Share to: </div></div><div class="post-reward reward"><div class="reward-button">请我喝杯咖啡~</div><div class="reward-qrcode"><span class="reward-qrcode-alipay"><img class="reward-qrcode-alipay__img" src="/images/alipay.jpg"><div class="reward-qrcode-alipay__text">支付宝打赏</div></span><span class="reward-qrcode-wechat"><img class="reward-qrcode-wechat__img" src="/images/wechatpay.jpg"><div class="reward-qrcode-wechat__text">微信打赏</div></span></div></div><nav class="post-paginator paginator"><div class="paginator-prev"><a class="paginator-prev__link" href="/Generic/"><span class="paginator-prev__icon"><i class="fas fa-angle-left"></i></span><span class="paginator-prev__text">Java泛型</span></a></div><div class="paginator-next"><a class="paginator-next__link" href="/Reflection/"><span class="paginator-prev__text">Java反射(Reflection)</span><span class="paginator-next__icon"><i class="fas fa-angle-right"></i></span></a></div></nav></footer></div></div><div class="comments" id="comments"><div id="valine-container"></div></div></div><div class="sidebar-wrap" id="sidebar-wrap"><aside class="sidebar" id="sidebar"><div class="sidebar-nav"><span class="sidebar-nav-toc current">文章目录</span><span class="sidebar-nav-ov">站点概览</span></div><section class="sidebar-toc"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#free-talk"><span class="toc-number">1.</span> <span class="toc-text">
           Free Talk</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#使用注解"><span class="toc-number">2.</span> <span class="toc-text">
           使用注解</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#注解的作用"><span class="toc-number">2.1.</span> <span class="toc-text">
-          注解的作用</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#使用注解-1"><span class="toc-number">2.2.</span> <span class="toc-text">
+          注解的作用</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#使用注解-2"><span class="toc-number">2.2.</span> <span class="toc-text">
           使用注解</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#小结"><span class="toc-number">2.3.</span> <span class="toc-text">
           小结</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#定义注解"><span class="toc-number">3.</span> <span class="toc-text">
           定义注解</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#元注解"><span class="toc-number">3.1.</span> <span class="toc-text">
-          元注解</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Target"><span class="toc-number">3.1.1.</span> <span class="toc-text">
-          @Target</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Retention"><span class="toc-number">3.1.2.</span> <span class="toc-text">
-          @Retention</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#如何定义Annotation"><span class="toc-number">3.2.</span> <span class="toc-text">
-          如何定义Annotation</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#小结-1"><span class="toc-number">3.3.</span> <span class="toc-text">
+          元注解</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#target"><span class="toc-number">3.1.1.</span> <span class="toc-text">
+          @Target</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#retention"><span class="toc-number">3.1.2.</span> <span class="toc-text">
+          @Retention</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#如何定义annotation"><span class="toc-number">3.2.</span> <span class="toc-text">
+          如何定义Annotation</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#小结-2"><span class="toc-number">3.3.</span> <span class="toc-text">
           小结</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#处理注解"><span class="toc-number">4.</span> <span class="toc-text">
-          处理注解</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#使用注解-2"><span class="toc-number">4.1.</span> <span class="toc-text">
+          处理注解</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#使用注解-3"><span class="toc-number">4.1.</span> <span class="toc-text">
           使用注解</span></a></li></ol></li></ol></section><!-- ov = overview--><section class="sidebar-ov hide"><div class="sidebar-ov-author"><div class="sidebar-ov-author__avatar"><img class="sidebar-ov-author__avatar_img" src="https://s1.ax1x.com/2020/05/14/YD6wTI.png" alt="avatar"></div><p class="sidebar-ov-author__text">In me the tiger sniffs the rose</p></div><div class="sidebar-ov-social"><a class="sidebar-ov-social-item" href="https://github.com/Gemini-Lin" target="_blank" rel="noopener" data-popover="Github" data-popover-pos="up"><span class="sidebar-ov-social-item__icon"><i class="fab fa-github"></i></span></a><a class="sidebar-ov-social-item" href="https://www.zhihu.com/people/iye-kong-zhong-zui-liang-de-xing-i" target="_blank" rel="noopener" data-popover="知乎" data-popover-pos="up"><span class="sidebar-ov-social-item__icon">知</span></a><a class="sidebar-ov-social-item" href="https://space.bilibili.com/313103161" target="_blank" rel="noopener" data-popover="social.bilibili" data-popover-pos="up"><span class="sidebar-ov-social-item__icon">B</span></a><a class="sidebar-ov-social-item" href="/images/qq.png" target="_blank" rel="noopener" data-popover="QQ" data-popover-pos="up"><span class="sidebar-ov-social-item__icon"><i class="fab fa-qq"></i></span></a><a class="sidebar-ov-social-item" href="/images/wechat.jpg" target="_blank" rel="noopener" data-popover="微信" data-popover-pos="up"><span class="sidebar-ov-social-item__icon"><i class="fab fa-weixin"></i></span></a><a class="sidebar-ov-social-item" href="mailto:geminilin@gmail.com" target="_blank" rel="noopener" data-popover="social.E-Mail" data-popover-pos="up"><span class="sidebar-ov-social-item__icon"><i class="fab fa-envelope"></i></span></a></div><div class="sidebar-ov-feed"><span class="sidebar-ov-feed-rss"><a class="sidebar-ov-feed-rss__link" href="/atom.xml" target="_blank" rel="noopener"><span class="sidebar-ov-feed-rss__icon"><i class="fas fa-rss"></i></span><span>RSS 订阅</span></a></span></div><div class="sidebar-ov-state"><a class="sidebar-ov-state-item sidebar-ov-state-item--posts" href="/archives/"><div class="sidebar-ov-state-item__count">76</div><div class="sidebar-ov-state-item__name">归档</div></a><a class="sidebar-ov-state-item sidebar-ov-state-item--categories" href="/categories/"><div class="sidebar-ov-state-item__count">27</div><div class="sidebar-ov-state-item__name">分类</div></a><a class="sidebar-ov-state-item sidebar-ov-state-item--tags" href="/tags/"><div class="sidebar-ov-state-item__count">83</div><div class="sidebar-ov-state-item__name">标签</div></a></div><div class="sidebar-ov-cc"><a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en" target="_blank" rel="noopener" data-popover="知识共享许可协议" data-popover-pos="up"><img src="/images/cc-by-nc-sa.svg"></a></div></section><div class="sidebar-reading"><div class="sidebar-reading-info"><span class="sidebar-reading-info__text">你已阅读了 </span><span class="sidebar-reading-info__num">0</span></div><div class="sidebar-reading-line"></div></div></aside></div><div class="clearfix"></div></div></main><footer class="footer" id="footer"><div class="footer-inner"><div><span>Copyright © 2020</span><span class="footer__icon"><i class="fas fa-heart"></i></span><span>Gemini-Lin</span><span class="footer__devider">|</span><span>闽ICP备20012376号</span></div><div class="busuanzi"><span class="busuanzi-siteuv"><span class="busuanzi-siteuv__icon"><i class="fas fa-user"></i></span><span class="busuanzi-siteuv__info">访问人数</span><span class="busuanzi-siteuv__value" id="busuanzi_value_site_uv"></span></span><span class="busuanzi-sitepv"><span class="busuanzi-siteuv__icon"><i class="fas fa-eye"></i></span><span class="busuanzi-siteuv__info">浏览总量</span><span class="busuanzi-siteuv__value" id="busuanzi_value_site_pv"></span></span></div></div></footer><div class="loading-bar" id="loading-bar"><div class="loading-bar__progress"></div></div><div class="back2top" id="back2top"><span class="back2top__icon"><i class="fas fa-rocket"></i></span></div></div><div class="search-mask"></div><div class="search-popup"><span class="search-close"></span><div class="search-input"><input placeholder="搜索文章（支持多关键词，请用空格分隔）"></div><div class="search-results"></div></div><script src="https://cdn.jsdelivr.net/npm/jquery@v3.4.1/dist/jquery.min.js"></script><script src="https://cdn.jsdelivr.net/npm/velocity-animate@1.5.2/velocity.min.js"></script><script src="https://cdn.jsdelivr.net/npm/velocity-animate@1.5.2/velocity.ui.min.js"></script><script src="https://cdn.jsdelivr.net/npm/ribbon.js@latest/dist/ribbon.min.js" size="150" alpha="0.6" zIndex="-1"></script><script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script><script src="https://cdn.jsdelivr.net/npm/masonry-layout@4.2.2/dist/masonry.pkgd.min.js"></script><script src="https://cdn.jsdelivr.net/npm/lazyload@2.0.0-rc.2/lazyload.min.js"></script><script src="https://cdn.jsdelivr.net/npm/social-share.js@1.0.16/dist/js/social-share.min.js"></script><script>function initSearch() {
   var isXML = true;
   var search_path = 'search.xml';
