@@ -1,9 +1,9 @@
-<!DOCTYPE html><html lang="zh-CN"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="format-detection" content="telephone=no"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="black"><link rel="icon" href="/images/icons/favicon.ico?v=2.0.1" type="image/png" sizes="16x16"><link rel="icon" href="/images/icons/favicon.ico?v=2.0.1" type="image/png" sizes="32x32"><meta name="google-site-verification" content="_T_d70fQRwnF8GQJNmmDRbHpjKelZbY-RFDWgS--hAw"><meta name="baidu-site-verification" content="AM9It5Uqy8"><meta name="description" content="基础知识                            机器语言        汇编语言的本质可以看作计算机硬件的功能接口。 机器语言是机器指令的集合。">
+<!DOCTYPE html><html lang="zh-CN"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="format-detection" content="telephone=no"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="black"><link rel="icon" href="/images/icons/favicon.ico?v=2.0.1" type="image/png" sizes="16x16"><link rel="icon" href="/images/icons/favicon.ico?v=2.0.1" type="image/png" sizes="32x32"><meta name="google-site-verification" content="_T_d70fQRwnF8GQJNmmDRbHpjKelZbY-RFDWgS--hAw"><meta name="baidu-site-verification" content="AM9It5Uqy8"><meta name="description" content="基础知识                           机器语言       汇编语言的本质可以看作计算机硬件的功能接口。 机器语言是机器指令的集合。">
 <meta property="og:type" content="article">
 <meta property="og:title" content="汇编语言期末总结">
 <meta property="og:url" content="https://gemini-lin.github.io/Assembly-Language/index.html">
 <meta property="og:site_name" content="GeminiPlanet">
-<meta property="og:description" content="基础知识                            机器语言        汇编语言的本质可以看作计算机硬件的功能接口。 机器语言是机器指令的集合。">
+<meta property="og:description" content="基础知识                           机器语言       汇编语言的本质可以看作计算机硬件的功能接口。 机器语言是机器指令的集合。">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://i.loli.net/2020/08/18/xPuCYETheyF3sQ4.png">
 <meta property="article:published_time" content="2020-08-18T08:13:55.000Z">
@@ -41,27 +41,25 @@ window.CONFIG = CONFIG;</script><meta name="generator" content="Hexo 4.2.1"></he
         <h1 id="基础知识">
           <a href="#基础知识" class="heading-link"><i class="fas fa-link"></i></a>基础知识</h1>
       
-
         <h2 id="机器语言">
           <a href="#机器语言" class="heading-link"><i class="fas fa-link"></i></a>机器语言</h2>
-      
-<p>汇编语言的<strong>本质可以看作计算机硬件的功能接口。</strong></p>
+      <p>汇编语言的<strong>本质可以看作计算机硬件的功能接口。</strong></p>
 <p>机器语言是<strong>机器指令</strong>的集合。</p>
 <a id="more"></a>
 
+
         <h2 id="汇编语言的产生">
           <a href="#汇编语言的产生" class="heading-link"><i class="fas fa-link"></i></a>汇编语言的产生</h2>
-      
-<p>汇编语言的主体是<strong>汇编指令</strong>。</p>
+      <p>汇编语言的主体是<strong>汇编指令</strong>。</p>
 <p>汇编指令和机器指令的<strong>差别在于指令的表示方法</strong>上。汇编指令是机器指令便于记忆的书写格式。</p>
 <p>汇编指令的本质是机器指令的<strong>助记符</strong>。</p>
 <figure class="highlight plain"><div class="table-container"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">机器指令：1000100111011000</span><br><span class="line">汇编指令：MOV AX，BX</span><br><span class="line">操作：将寄存器BX中的内容送到AX中</span><br></pre></td></tr></tbody></table></div></figure>
+
 <p><strong>指令执行:</strong> 汇编指令-&gt;编译器-&gt;机器码-&gt;计算机</p>
 
         <h2 id="汇编语言的组成">
           <a href="#汇编语言的组成" class="heading-link"><i class="fas fa-link"></i></a>汇编语言的组成</h2>
-      
-<ul>
+      <ul>
 <li><strong>汇编指令</strong>（机器码的助记符，<strong>有对应的机器码</strong>）</li>
 <li><strong>伪指令</strong>（<strong>没有对应机器码</strong>，由编译器执行，计算机不执行）</li>
 <li><strong>其他符号</strong>（如+、-、*、/等，由编译器识别）</li>
@@ -69,18 +67,15 @@ window.CONFIG = CONFIG;</script><meta name="generator" content="Hexo 4.2.1"></he
 
         <h2 id="指令和数据">
           <a href="#指令和数据" class="heading-link"><i class="fas fa-link"></i></a>指令和数据</h2>
-      
-<p>在内存或磁盘上，指令和数据<strong>没有任何区别</strong>，都是<strong>二进制信息</strong>。</p>
+      <p>在内存或磁盘上，指令和数据<strong>没有任何区别</strong>，都是<strong>二进制信息</strong>。</p>
 
         <h2 id="存储单元">
           <a href="#存储单元" class="heading-link"><i class="fas fa-link"></i></a>存储单元</h2>
-      
-<p>存储器被划分为若干个存储单元，每个存储单元<strong>从0开始</strong>顺序编号；</p>
+      <p>存储器被划分为若干个存储单元，每个存储单元<strong>从0开始</strong>顺序编号；</p>
 
-        <h2 id="cpu对存储器的读写">
-          <a href="#cpu对存储器的读写" class="heading-link"><i class="fas fa-link"></i></a>CPU对存储器的读写</h2>
-      
-<p>CPU进行数据读写的信息交互：</p>
+        <h2 id="CPU对存储器的读写">
+          <a href="#CPU对存储器的读写" class="heading-link"><i class="fas fa-link"></i></a>CPU对存储器的读写</h2>
+      <p>CPU进行数据读写的信息交互：</p>
 <ul>
 <li>存储单元的地址（<strong>地址信息</strong>）</li>
 <li>器件的选择，读或写命令（<strong>控制信息</strong>）</li>
@@ -89,24 +84,20 @@ window.CONFIG = CONFIG;</script><meta name="generator" content="Hexo 4.2.1"></he
 
         <h2 id="地址总线">
           <a href="#地址总线" class="heading-link"><i class="fas fa-link"></i></a>地址总线</h2>
-      
-<p>CPU是通过<strong>地址总线</strong>来指定存储单元的。</p>
-<p>地址空间的宽度N决定了寻址空间的大小<span class="katex"><span class="katex-mathml"><math><semantics><mrow><msup><mn>2</mn><mi>N</mi></msup></mrow><annotation encoding="application/x-tex">2^N</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8413309999999999em;vertical-align:0em;"></span><span class="mord"><span class="mord">2</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8413309999999999em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathdefault mtight" style="margin-right:0.10903em;">N</span></span></span></span></span></span></span></span></span></span></span>。</p>
+      <p>CPU是通过<strong>地址总线</strong>来指定存储单元的。</p>
+<p>地址空间的宽度N决定了寻址空间的大小$2^N$。</p>
 
         <h2 id="数据总线">
           <a href="#数据总线" class="heading-link"><i class="fas fa-link"></i></a>数据总线</h2>
-      
-<p><strong>数据总线的宽度</strong>决定了CPU和外界的<strong>数据传送速度</strong>。</p>
+      <p><strong>数据总线的宽度</strong>决定了CPU和外界的<strong>数据传送速度</strong>。</p>
 
         <h2 id="控制总线">
           <a href="#控制总线" class="heading-link"><i class="fas fa-link"></i></a>控制总线</h2>
-      
-<p><strong>控制总线的宽度</strong>决定了CPU对外部器件的<strong>控制能力</strong>。</p>
+      <p><strong>控制总线的宽度</strong>决定了CPU对外部器件的<strong>控制能力</strong>。</p>
 
         <h2 id="内存地址空间">
           <a href="#内存地址空间" class="heading-link"><i class="fas fa-link"></i></a>内存地址空间</h2>
-      
-<ul>
+      <ul>
 <li>RAM（随机存储器）</li>
 <li>ROM（只读存储器）</li>
 </ul>
@@ -114,104 +105,97 @@ window.CONFIG = CONFIG;</script><meta name="generator" content="Hexo 4.2.1"></he
 
         <h1 id="寄存器">
           <a href="#寄存器" class="heading-link"><i class="fas fa-link"></i></a>寄存器</h1>
-      
-<p>程序员通过<strong>改变寄存器中的内容</strong>来实现对CPU的控制，寄存器的功能：进行信息存储，暂存指令、数据、地址。</p>
+      <p>程序员通过<strong>改变寄存器中的内容</strong>来实现对CPU的控制，寄存器的功能：进行信息存储，暂存指令、数据、地址。</p>
 <p>8086CPU中有14个寄存器，<strong>每个寄存器有16位，可以存放两个字节</strong>。</p>
 <ul>
-<li>**数据寄存器：**AX、BX、CX、DX</li>
-<li>**地址寄存器：**SI、DI、SP、BP</li>
-<li>**段寄存器：**CS、SS、DE、ES</li>
-<li>**控制寄存器：**IP、PSW</li>
+<li><strong>数据寄存器：</strong>AX、BX、CX、DX</li>
+<li><strong>地址寄存器：</strong>SI、DI、SP、BP</li>
+<li><strong>段寄存器：</strong>CS、SS、DE、ES</li>
+<li><strong>控制寄存器：</strong>IP、PSW</li>
 </ul>
 
-        <h2 id="通用寄存器数据寄存器">
-          <a href="#通用寄存器数据寄存器" class="heading-link"><i class="fas fa-link"></i></a>通用寄存器（数据寄存器）</h2>
-      
-<p>4个通用寄存器都可以<strong>分为两个独立的8位寄存器：</strong></p>
+        <h2 id="通用寄存器（数据寄存器）">
+          <a href="#通用寄存器（数据寄存器）" class="heading-link"><i class="fas fa-link"></i></a>通用寄存器（数据寄存器）</h2>
+      <p>4个通用寄存器都可以<strong>分为两个独立的8位寄存器：</strong></p>
 <ul>
 <li>AX：AH（高8位）、AL（低8位）</li>
 <li>BX：BH、BL</li>
 <li>CX：CH、CL</li>
 <li>DX：DH、DL</li>
 </ul>
-<p><strong>一个N位寄存器所能存储的数据的最大值是<span class="katex"><span class="katex-mathml"><math><semantics><mrow><msup><mn>2</mn><mi>N</mi></msup><mo>−</mo><mn>1</mn></mrow><annotation encoding="application/x-tex">2^N-1</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.924661em;vertical-align:-0.08333em;"></span><span class="mord"><span class="mord">2</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8413309999999999em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathdefault mtight" style="margin-right:0.10903em;">N</span></span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">1</span></span></span></span></strong></p>
+<p><strong>一个N位寄存器所能存储的数据的最大值是$2^N-1$</strong></p>
 
         <h2 id="字在存储器中的存储">
           <a href="#字在存储器中的存储" class="heading-link"><i class="fas fa-link"></i></a>字在存储器中的存储</h2>
-      
-<p><strong>一个字占2个字节，有16位。</strong></p>
+      <p><strong>一个字占2个字节，有16位。</strong></p>
 <p>0100111000100000 可表示为 4E20H （Hexadecimal，<strong>十六进制数据后面加H</strong>）</p>
 
         <h2 id="汇编指令举例">
           <a href="#汇编指令举例" class="heading-link"><i class="fas fa-link"></i></a>汇编指令举例</h2>
-      
-<div class="table-container"><table>
+      <div class="table-container"><table>
 <thead>
 <tr>
-<th style="text-align:center">mov ax, 62627</th>
-<th style="text-align:center">AX = F4A3H</th>
+<th align="center">mov ax, 62627</th>
+<th align="center">AX = F4A3H</th>
 </tr>
 </thead>
-<tbody>
-<tr>
-<td style="text-align:center">mov ah, 31H</td>
-<td style="text-align:center">AX = 31A3H</td>
+<tbody><tr>
+<td align="center">mov ah, 31H</td>
+<td align="center">AX = 31A3H</td>
 </tr>
 <tr>
-<td style="text-align:center">mov al, 23H</td>
-<td style="text-align:center">AX =  3123H</td>
+<td align="center">mov al, 23H</td>
+<td align="center">AX =  3123H</td>
 </tr>
 <tr>
-<td style="text-align:center">add ax, ax</td>
-<td style="text-align:center">AX = 6246H</td>
+<td align="center">add ax, ax</td>
+<td align="center">AX = 6246H</td>
 </tr>
 <tr>
-<td style="text-align:center">mov bx, 826CH</td>
-<td style="text-align:center">BX = 826CH</td>
+<td align="center">mov bx, 826CH</td>
+<td align="center">BX = 826CH</td>
 </tr>
 <tr>
-<td style="text-align:center">mov cx, ax</td>
-<td style="text-align:center">CX = 6246H</td>
+<td align="center">mov cx, ax</td>
+<td align="center">CX = 6246H</td>
 </tr>
 <tr>
-<td style="text-align:center">mov ax, bx</td>
-<td style="text-align:center">AX = 826CH</td>
+<td align="center">mov ax, bx</td>
+<td align="center">AX = 826CH</td>
 </tr>
 <tr>
-<td style="text-align:center">add ax, bx</td>
-<td style="text-align:center">AX = 04D8H</td>
+<td align="center">add ax, bx</td>
+<td align="center">AX = 04D8H</td>
 </tr>
 <tr>
-<td style="text-align:center">mov al, bh</td>
-<td style="text-align:center">AX = 0482H</td>
+<td align="center">mov al, bh</td>
+<td align="center">AX = 0482H</td>
 </tr>
 <tr>
-<td style="text-align:center">mov ah, bl</td>
-<td style="text-align:center">AX = 6C82H</td>
+<td align="center">mov ah, bl</td>
+<td align="center">AX = 6C82H</td>
 </tr>
 <tr>
-<td style="text-align:center">add ah, ah</td>
-<td style="text-align:center">AX = D882H</td>
+<td align="center">add ah, ah</td>
+<td align="center">AX = D882H</td>
 </tr>
 <tr>
-<td style="text-align:center">add al, 6</td>
-<td style="text-align:center">AX = D888H</td>
+<td align="center">add al, 6</td>
+<td align="center">AX = D888H</td>
 </tr>
 <tr>
-<td style="text-align:center">add al, al</td>
-<td style="text-align:center">AX = D810H</td>
+<td align="center">add al, al</td>
+<td align="center">AX = D810H</td>
 </tr>
 <tr>
-<td style="text-align:center">mov ax, cx</td>
-<td style="text-align:center">AX = 6246H</td>
+<td align="center">mov ax, cx</td>
+<td align="center">AX = 6246H</td>
 </tr>
-</tbody>
-</table></div>
+</tbody></table></div>
 
-        <h2 id="8086cpu给出物理地址的方法">
-          <a href="#8086cpu给出物理地址的方法" class="heading-link"><i class="fas fa-link"></i></a>8086CPU给出物理地址的方法</h2>
-      
-<p>8086CPU有20位地址总线，可传送20位地址，但是CPU内部却只有16位结构。</p>
+        <h2 id="8086CPU给出物理地址的方法">
+          <a href="#8086CPU给出物理地址的方法" class="heading-link"><i class="fas fa-link"></i></a>8086CPU给出物理地址的方法</h2>
+      <p>8086CPU有20位地址总线，可传送20位地址，但是CPU内部却只有16位结构。</p>
 <p><strong>因此采用一种在内部用两个16位地址合成的方法形成一个20位的物理地址。</strong></p>
 <p><strong>物理地址 = 段地址 X 16 + 偏移地址</strong></p>
 <p><strong>内存并没有分段，段的划分是来自CPU的。</strong></p>
@@ -219,26 +203,22 @@ window.CONFIG = CONFIG;</script><meta name="generator" content="Hexo 4.2.1"></he
 
         <h3 id="例题">
           <a href="#例题" class="heading-link"><i class="fas fa-link"></i></a>例题</h3>
-      
-<ol>
-<li>
-<p>给定段地址为0001H，仅通过变化偏移地址寻址，CPU的寻址范围为**（ 00010H ）到（ 10000FH ）**。</p>
+      <ol>
+<li><p>给定段地址为0001H，仅通过变化偏移地址寻址，CPU的寻址范围为<strong>（ 00010H ）到（ 10000FH ）</strong>。</p>
 <blockquote>
 <p>偏移地址的范围为0~FFFFH，CPU的寻址范围 00010H + 偏移地址</p>
 </blockquote>
 </li>
-<li>
-<p>有一数据存放在内存20000H单元中，先给定段地址为SA，若想用偏移地址寻到此单元。则SA满足的条件是：<strong>最小为（ 1001H ），最大为（ 2000H ）</strong>。</p>
+<li><p>有一数据存放在内存20000H单元中，先给定段地址为SA，若想用偏移地址寻到此单元。则SA满足的条件是：<strong>最小为（ 1001H ），最大为（ 2000H ）</strong>。   </p>
 <blockquote>
 <p>段的起始地址要为16的倍数,当偏移地址最小时,段地址最大,反之亦然</p>
 </blockquote>
 </li>
 </ol>
 
-        <h2 id="cs和ip">
-          <a href="#cs和ip" class="heading-link"><i class="fas fa-link"></i></a>CS和IP</h2>
-      
-<p>CS:代码段寄存器</p>
+        <h2 id="CS和IP">
+          <a href="#CS和IP" class="heading-link"><i class="fas fa-link"></i></a>CS和IP</h2>
+      <p>CS:代码段寄存器</p>
 <p>IP:指令段寄存器</p>
 <p><strong>CPU将CS:IP指向的内存单元中的内容看作指令</strong></p>
 <p><strong>工作流程:</strong></p>
@@ -250,6 +230,15 @@ window.CONFIG = CONFIG;</script><meta name="generator" content="Hexo 4.2.1"></he
 <p><strong>mov指令被称为传送指令,无法修改CS、IP的值</strong></p>
 <p>8086CPU提供转移指令：</p>
 <figure class="highlight plain"><div class="table-container"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">jmp 段地址：偏移地址</span><br><span class="line">jmp 2AE2:3</span><br><span class="line">功能：用指令中给出的段地址修改CS，偏移地址修改IP</span><br><span class="line">jmp 某一合法寄存器</span><br><span class="line">jmp ax(equals mov IP,ax)</span><br><span class="line">功能：用寄存器中的值修改IP</span><br></pre></td></tr></tbody></table></div></figure>
+
+
+
+
+
+
+
+
+
 <script>
         document.querySelectorAll('.github-emoji')
           .forEach(el => {
@@ -274,18 +263,18 @@ window.CONFIG = CONFIG;</script><meta name="generator" content="Hexo 4.2.1"></he
           汇编语言的产生</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#汇编语言的组成"><span class="toc-number">1.3.</span> <span class="toc-text">
           汇编语言的组成</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#指令和数据"><span class="toc-number">1.4.</span> <span class="toc-text">
           指令和数据</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#存储单元"><span class="toc-number">1.5.</span> <span class="toc-text">
-          存储单元</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#cpu对存储器的读写"><span class="toc-number">1.6.</span> <span class="toc-text">
+          存储单元</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#CPU对存储器的读写"><span class="toc-number">1.6.</span> <span class="toc-text">
           CPU对存储器的读写</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#地址总线"><span class="toc-number">1.7.</span> <span class="toc-text">
           地址总线</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#数据总线"><span class="toc-number">1.8.</span> <span class="toc-text">
           数据总线</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#控制总线"><span class="toc-number">1.9.</span> <span class="toc-text">
           控制总线</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#内存地址空间"><span class="toc-number">1.10.</span> <span class="toc-text">
           内存地址空间</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#寄存器"><span class="toc-number">2.</span> <span class="toc-text">
-          寄存器</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#通用寄存器数据寄存器"><span class="toc-number">2.1.</span> <span class="toc-text">
+          寄存器</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#通用寄存器（数据寄存器）"><span class="toc-number">2.1.</span> <span class="toc-text">
           通用寄存器（数据寄存器）</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#字在存储器中的存储"><span class="toc-number">2.2.</span> <span class="toc-text">
           字在存储器中的存储</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#汇编指令举例"><span class="toc-number">2.3.</span> <span class="toc-text">
-          汇编指令举例</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#8086cpu给出物理地址的方法"><span class="toc-number">2.4.</span> <span class="toc-text">
+          汇编指令举例</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#8086CPU给出物理地址的方法"><span class="toc-number">2.4.</span> <span class="toc-text">
           8086CPU给出物理地址的方法</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#例题"><span class="toc-number">2.4.1.</span> <span class="toc-text">
-          例题</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#cs和ip"><span class="toc-number">2.5.</span> <span class="toc-text">
+          例题</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#CS和IP"><span class="toc-number">2.5.</span> <span class="toc-text">
           CS和IP</span></a></li></ol></li></ol></section><!-- ov = overview--><section class="sidebar-ov hide"><div class="sidebar-ov-author"><div class="sidebar-ov-author__avatar"><img class="sidebar-ov-author__avatar_img" src="https://s1.ax1x.com/2020/05/14/YD6wTI.png" alt="avatar"></div><p class="sidebar-ov-author__text">In me the tiger sniffs the rose</p></div><div class="sidebar-ov-social"><a class="sidebar-ov-social-item" href="https://github.com/Gemini-Lin" target="_blank" rel="noopener" data-popover="Github" data-popover-pos="up"><span class="sidebar-ov-social-item__icon"><i class="fab fa-github"></i></span></a><a class="sidebar-ov-social-item" href="https://www.zhihu.com/people/iye-kong-zhong-zui-liang-de-xing-i" target="_blank" rel="noopener" data-popover="知乎" data-popover-pos="up"><span class="sidebar-ov-social-item__icon">知</span></a><a class="sidebar-ov-social-item" href="https://space.bilibili.com/313103161" target="_blank" rel="noopener" data-popover="social.bilibili" data-popover-pos="up"><span class="sidebar-ov-social-item__icon">B</span></a><a class="sidebar-ov-social-item" href="/images/qq.png" target="_blank" rel="noopener" data-popover="QQ" data-popover-pos="up"><span class="sidebar-ov-social-item__icon"><i class="fab fa-qq"></i></span></a><a class="sidebar-ov-social-item" href="/images/wechat.jpg" target="_blank" rel="noopener" data-popover="微信" data-popover-pos="up"><span class="sidebar-ov-social-item__icon"><i class="fab fa-weixin"></i></span></a><a class="sidebar-ov-social-item" href="mailto:geminilin@gmail.com" target="_blank" rel="noopener" data-popover="social.E-Mail" data-popover-pos="up"><span class="sidebar-ov-social-item__icon"><i class="fab fa-envelope"></i></span></a></div><div class="sidebar-ov-feed"><span class="sidebar-ov-feed-rss"><a class="sidebar-ov-feed-rss__link" href="/atom.xml" target="_blank" rel="noopener"><span class="sidebar-ov-feed-rss__icon"><i class="fas fa-rss"></i></span><span>RSS 订阅</span></a></span></div><div class="sidebar-ov-state"><a class="sidebar-ov-state-item sidebar-ov-state-item--posts" href="/archives/"><div class="sidebar-ov-state-item__count">76</div><div class="sidebar-ov-state-item__name">归档</div></a><a class="sidebar-ov-state-item sidebar-ov-state-item--categories" href="/categories/"><div class="sidebar-ov-state-item__count">27</div><div class="sidebar-ov-state-item__name">分类</div></a><a class="sidebar-ov-state-item sidebar-ov-state-item--tags" href="/tags/"><div class="sidebar-ov-state-item__count">83</div><div class="sidebar-ov-state-item__name">标签</div></a></div><div class="sidebar-ov-cc"><a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en" target="_blank" rel="noopener" data-popover="知识共享许可协议" data-popover-pos="up"><img src="/images/cc-by-nc-sa.svg"></a></div></section><div class="sidebar-reading"><div class="sidebar-reading-info"><span class="sidebar-reading-info__text">你已阅读了 </span><span class="sidebar-reading-info__num">0</span></div><div class="sidebar-reading-line"></div></div></aside></div><div class="clearfix"></div></div></main><footer class="footer" id="footer"><div class="footer-inner"><div><span>Copyright © 2020</span><span class="footer__icon"><i class="fas fa-heart"></i></span><span>Gemini-Lin</span><span class="footer__devider">|</span><span>闽ICP备20012376号</span></div><div class="busuanzi"><span class="busuanzi-siteuv"><span class="busuanzi-siteuv__icon"><i class="fas fa-user"></i></span><span class="busuanzi-siteuv__info">访问人数</span><span class="busuanzi-siteuv__value" id="busuanzi_value_site_uv"></span></span><span class="busuanzi-sitepv"><span class="busuanzi-siteuv__icon"><i class="fas fa-eye"></i></span><span class="busuanzi-siteuv__info">浏览总量</span><span class="busuanzi-siteuv__value" id="busuanzi_value_site_pv"></span></span></div></div></footer><div class="loading-bar" id="loading-bar"><div class="loading-bar__progress"></div></div><div class="back2top" id="back2top"><span class="back2top__icon"><i class="fas fa-rocket"></i></span></div></div><div class="search-mask"></div><div class="search-popup"><span class="search-close"></span><div class="search-input"><input placeholder="搜索文章（支持多关键词，请用空格分隔）"></div><div class="search-results"></div></div><script src="https://cdn.jsdelivr.net/npm/jquery@v3.4.1/dist/jquery.min.js"></script><script src="https://cdn.jsdelivr.net/npm/velocity-animate@1.5.2/velocity.min.js"></script><script src="https://cdn.jsdelivr.net/npm/velocity-animate@1.5.2/velocity.ui.min.js"></script><script src="https://cdn.jsdelivr.net/npm/ribbon.js@latest/dist/ribbon.min.js" size="150" alpha="0.6" zIndex="-1"></script><script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script><script src="https://cdn.jsdelivr.net/npm/masonry-layout@4.2.2/dist/masonry.pkgd.min.js"></script><script src="https://cdn.jsdelivr.net/npm/lazyload@2.0.0-rc.2/lazyload.min.js"></script><script src="https://cdn.jsdelivr.net/npm/social-share.js@1.0.16/dist/js/social-share.min.js"></script><script>function initSearch() {
   var isXML = true;
   var search_path = 'search.xml';
