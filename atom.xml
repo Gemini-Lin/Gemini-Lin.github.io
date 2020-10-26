@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://gemini-lin.github.io/"/>
-  <updated>2020-10-26T02:33:12.488Z</updated>
+  <updated>2020-10-26T02:39:19.920Z</updated>
   <id>https://gemini-lin.github.io/</id>
   
   <author>
@@ -17,6 +17,33 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>LeetCode-HeapAndStack</title>
+    <link href="https://gemini-lin.github.io/LeetCode-HeapAndStack/"/>
+    <id>https://gemini-lin.github.io/LeetCode-HeapAndStack/</id>
+    <published>2020-10-26T02:37:19.000Z</published>
+    <updated>2020-10-26T02:39:19.920Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;Free-Talk&quot;&gt;
+          &lt;a href=&quot;#Free-Talk&quot; class=&quot;heading-link&quot;&gt;&lt;i class=&quot;fas fa-link&quot;&gt;&lt;/i&gt;&lt;/a&gt;Free Talk&lt;/h1&gt;
+      &lt;p&gt;再来写写 堆 和 栈 相关的题， 最近有点&lt;strong&gt;渐入佳境&lt;/strong&gt;了。&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="LeetCode" scheme="https://Gemini-Lin.github.io/categories/LeetCode/"/>
+    
+    
+      <category term="LeetCode" scheme="https://Gemini-Lin.github.io/tags/LeetCode/"/>
+    
+      <category term="Heap" scheme="https://Gemini-Lin.github.io/tags/Heap/"/>
+    
+      <category term="Stack" scheme="https://Gemini-Lin.github.io/tags/Stack/"/>
+    
+  </entry>
+  
+  <entry>
     <title>LeetCode-LinkedList</title>
     <link href="https://gemini-lin.github.io/LeetCode-LinkedList/"/>
     <id>https://gemini-lin.github.io/LeetCode-LinkedList/</id>
@@ -25,10 +52,9 @@
     
     <summary type="html">
     
-      &lt;h1 id=&quot;free-talk&quot;&gt;
-          &lt;a href=&quot;#free-talk&quot; class=&quot;heading-link&quot;&gt;&lt;i class=&quot;fas fa-link&quot;&gt;&lt;/i&gt;&lt;/a&gt;Free Talk&lt;/h1&gt;
-      
-&lt;p&gt;链表是一种常用的数据结构，打算练练这个 Tags,  熟悉一下相关 API 调用。&lt;/p&gt;
+      &lt;h1 id=&quot;Free-Talk&quot;&gt;
+          &lt;a href=&quot;#Free-Talk&quot; class=&quot;heading-link&quot;&gt;&lt;i class=&quot;fas fa-link&quot;&gt;&lt;/i&gt;&lt;/a&gt;Free Talk&lt;/h1&gt;
+      &lt;p&gt;链表是一种常用的数据结构，打算练练这个 Tags,  熟悉一下相关 API 调用。&lt;/p&gt;
     
     </summary>
     
@@ -51,10 +77,9 @@
     
     <summary type="html">
     
-      &lt;h1 id=&quot;free-talk&quot;&gt;
-          &lt;a href=&quot;#free-talk&quot; class=&quot;heading-link&quot;&gt;&lt;i class=&quot;fas fa-link&quot;&gt;&lt;/i&gt;&lt;/a&gt;Free Talk&lt;/h1&gt;
-      
-&lt;p&gt;终于轮到 LeetCode 的大头了， 动态规划应该是占据了算法题的半壁江山，我们废话不多说，直接上代码。&lt;/p&gt;
+      &lt;h1 id=&quot;Free-Talk&quot;&gt;
+          &lt;a href=&quot;#Free-Talk&quot; class=&quot;heading-link&quot;&gt;&lt;i class=&quot;fas fa-link&quot;&gt;&lt;/i&gt;&lt;/a&gt;Free Talk&lt;/h1&gt;
+      &lt;p&gt;终于轮到 LeetCode 的大头了， 动态规划应该是占据了算法题的半壁江山，我们废话不多说，直接上代码。&lt;/p&gt;
 &lt;p&gt;Talk is cheap, Show me your Code!&lt;/p&gt;
     
     </summary>
@@ -78,10 +103,9 @@
     
     <summary type="html">
     
-      &lt;h1 id=&quot;free-talk&quot;&gt;
-          &lt;a href=&quot;#free-talk&quot; class=&quot;heading-link&quot;&gt;&lt;i class=&quot;fas fa-link&quot;&gt;&lt;/i&gt;&lt;/a&gt;Free Talk&lt;/h1&gt;
-      
-&lt;p&gt;刚刚做到了 寻找重复数 ， 发现自己对 二分查找 还不是很熟悉，打算再做几题训练一下。&lt;/p&gt;
+      &lt;h1 id=&quot;Free-Talk&quot;&gt;
+          &lt;a href=&quot;#Free-Talk&quot; class=&quot;heading-link&quot;&gt;&lt;i class=&quot;fas fa-link&quot;&gt;&lt;/i&gt;&lt;/a&gt;Free Talk&lt;/h1&gt;
+      &lt;p&gt;刚刚做到了 寻找重复数 ， 发现自己对 二分查找 还不是很熟悉，打算再做几题训练一下。&lt;/p&gt;
     
     </summary>
     
@@ -104,10 +128,9 @@
     
     <summary type="html">
     
-      &lt;h1 id=&quot;free-talk&quot;&gt;
-          &lt;a href=&quot;#free-talk&quot; class=&quot;heading-link&quot;&gt;&lt;i class=&quot;fas fa-link&quot;&gt;&lt;/i&gt;&lt;/a&gt;Free Talk&lt;/h1&gt;
-      
-&lt;p&gt;之前刷题的时候，经常遇到双指针问题，打算写一篇专题，系统刷一下，总结一下常用的解题方法。&lt;/p&gt;
+      &lt;h1 id=&quot;Free-Talk&quot;&gt;
+          &lt;a href=&quot;#Free-Talk&quot; class=&quot;heading-link&quot;&gt;&lt;i class=&quot;fas fa-link&quot;&gt;&lt;/i&gt;&lt;/a&gt;Free Talk&lt;/h1&gt;
+      &lt;p&gt;之前刷题的时候，经常遇到双指针问题，打算写一篇专题，系统刷一下，总结一下常用的解题方法。&lt;/p&gt;
     
     </summary>
     
@@ -130,10 +153,9 @@
     
     <summary type="html">
     
-      &lt;h1 id=&quot;free-talk&quot;&gt;
-          &lt;a href=&quot;#free-talk&quot; class=&quot;heading-link&quot;&gt;&lt;i class=&quot;fas fa-link&quot;&gt;&lt;/i&gt;&lt;/a&gt;Free Talk&lt;/h1&gt;
-      
-&lt;p&gt;HashTable 在 LeetCode 的题目中经常出现，打算刷完 Hot 100 里面的 HashTable Tags，熟悉一下 HashTable 相关的 API。&lt;/p&gt;
+      &lt;h1 id=&quot;Free-Talk&quot;&gt;
+          &lt;a href=&quot;#Free-Talk&quot; class=&quot;heading-link&quot;&gt;&lt;i class=&quot;fas fa-link&quot;&gt;&lt;/i&gt;&lt;/a&gt;Free Talk&lt;/h1&gt;
+      &lt;p&gt;HashTable 在 LeetCode 的题目中经常出现，打算刷完 Hot 100 里面的 HashTable Tags，熟悉一下 HashTable 相关的 API。&lt;/p&gt;
     
     </summary>
     
@@ -156,10 +178,9 @@
     
     <summary type="html">
     
-      &lt;h1 id=&quot;free-talk&quot;&gt;
-          &lt;a href=&quot;#free-talk&quot; class=&quot;heading-link&quot;&gt;&lt;i class=&quot;fas fa-link&quot;&gt;&lt;/i&gt;&lt;/a&gt;Free Talk&lt;/h1&gt;
-      
-&lt;p&gt;最近一直刷 Array Tags，有点无聊了，找了一份常见算法数组题图片，打算开启 String Tags 新篇章了。&lt;/p&gt;
+      &lt;h1 id=&quot;Free-Talk&quot;&gt;
+          &lt;a href=&quot;#Free-Talk&quot; class=&quot;heading-link&quot;&gt;&lt;i class=&quot;fas fa-link&quot;&gt;&lt;/i&gt;&lt;/a&gt;Free Talk&lt;/h1&gt;
+      &lt;p&gt;最近一直刷 Array Tags，有点无聊了，找了一份常见算法数组题图片，打算开启 String Tags 新篇章了。&lt;/p&gt;
 &lt;p&gt;
         &lt;img class=&quot;lazyload lazyload-gif&quot; src=&quot;/images/loading.svg&quot; data-src=&quot;https://i.loli.net/2020/10/14/Uoih5swTgfepQKZ.png&quot; alt=&quot;image-20201014110219435&quot;&gt;
       &lt;/p&gt;
@@ -185,10 +206,9 @@
     
     <summary type="html">
     
-      &lt;h1 id=&quot;windows-常用软件推荐&quot;&gt;
-          &lt;a href=&quot;#windows-常用软件推荐&quot; class=&quot;heading-link&quot;&gt;&lt;i class=&quot;fas fa-link&quot;&gt;&lt;/i&gt;&lt;/a&gt;Windows 常用软件推荐&lt;/h1&gt;
-      
-&lt;blockquote&gt;
+      &lt;h1 id=&quot;Windows-常用软件推荐&quot;&gt;
+          &lt;a href=&quot;#Windows-常用软件推荐&quot; class=&quot;heading-link&quot;&gt;&lt;i class=&quot;fas fa-link&quot;&gt;&lt;/i&gt;&lt;/a&gt;Windows 常用软件推荐&lt;/h1&gt;
+      &lt;blockquote&gt;
 &lt;p&gt;摘自清水河畔，根据个人使用情况，做了部分修改&lt;/p&gt;
 &lt;p&gt;@Author: Lin Jun (&lt;span class=&quot;exturl&quot;&gt;&lt;a class=&quot;exturl__link&quot; href=&quot;https://geminiplanet.cn/Sofeware-Recommendation/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;https://geminiplanet.cn/Sofeware-Recommendation/&lt;/a&gt;&lt;span class=&quot;exturl__icon&quot;&gt;&lt;i class=&quot;fas fa-external-link-alt&quot;&gt;&lt;/i&gt;&lt;/span&gt;&lt;/span&gt;)&lt;/p&gt;
 &lt;p&gt;原文地址：&lt;span class=&quot;exturl&quot;&gt;&lt;a class=&quot;exturl__link&quot; href=&quot;https://bbs.uestc.edu.cn/forum.php?mod=viewthread&amp;amp;tid=1820316&amp;amp;extra=&amp;amp;page=1&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;https://bbs.uestc.edu.cn/forum.php?mod=viewthread&amp;amp;tid=1820316&amp;amp;extra=&amp;amp;page=1&lt;/a&gt;&lt;span class=&quot;exturl__icon&quot;&gt;&lt;i class=&quot;fas fa-external-link-alt&quot;&gt;&lt;/i&gt;&lt;/span&gt;&lt;/span&gt;&lt;/p&gt;
@@ -213,10 +233,9 @@
     
     <summary type="html">
     
-      &lt;h1 id=&quot;free-talk&quot;&gt;
-          &lt;a href=&quot;#free-talk&quot; class=&quot;heading-link&quot;&gt;&lt;i class=&quot;fas fa-link&quot;&gt;&lt;/i&gt;&lt;/a&gt;Free Talk&lt;/h1&gt;
-      
-&lt;p&gt;昨天和朋友聊聊下大三下的实习，实习面试的时间大家都打算安排在十月底到十一月。之后谈谈面试的Java技术点和算法，发现自己现在还有很多不懂，LeetCode刷的也远远不够。因此打算这个月突击准备面试，然后按照 Tags 刷LeetCode Hot 100。在写本篇文章之前大致刷了十几道 Array Tag 的题，本来是打算刷完一次性做一个总结的，但是发现遗忘程度太快。因此计划写一篇LeetCode Array 专题，每刷一题，就总结一次。&lt;/p&gt;
+      &lt;h1 id=&quot;Free-Talk&quot;&gt;
+          &lt;a href=&quot;#Free-Talk&quot; class=&quot;heading-link&quot;&gt;&lt;i class=&quot;fas fa-link&quot;&gt;&lt;/i&gt;&lt;/a&gt;Free Talk&lt;/h1&gt;
+      &lt;p&gt;昨天和朋友聊聊下大三下的实习，实习面试的时间大家都打算安排在十月底到十一月。之后谈谈面试的Java技术点和算法，发现自己现在还有很多不懂，LeetCode刷的也远远不够。因此打算这个月突击准备面试，然后按照 Tags 刷LeetCode Hot 100。在写本篇文章之前大致刷了十几道 Array Tag 的题，本来是打算刷完一次性做一个总结的，但是发现遗忘程度太快。因此计划写一篇LeetCode Array 专题，每刷一题，就总结一次。&lt;/p&gt;
     
     </summary>
     
@@ -246,11 +265,9 @@
         &lt;h1 id=&quot;基础知识&quot;&gt;
           &lt;a href=&quot;#基础知识&quot; class=&quot;heading-link&quot;&gt;&lt;i class=&quot;fas fa-link&quot;&gt;&lt;/i&gt;&lt;/a&gt;基础知识&lt;/h1&gt;
       
-
         &lt;h2 id=&quot;机器语言&quot;&gt;
           &lt;a href=&quot;#机器语言&quot; class=&quot;heading-link&quot;&gt;&lt;i class=&quot;fas fa-link&quot;&gt;&lt;/i&gt;&lt;/a&gt;机器语言&lt;/h2&gt;
-      
-&lt;p&gt;汇编语言的&lt;strong&gt;本质可以看作计算机硬件的功能接口。&lt;/strong&gt;&lt;/p&gt;
+      &lt;p&gt;汇编语言的&lt;strong&gt;本质可以看作计算机硬件的功能接口。&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;机器语言是&lt;strong&gt;机器指令&lt;/strong&gt;的集合。&lt;/p&gt;
     
     </summary>
@@ -276,8 +293,7 @@
     
       &lt;p&gt;
         &lt;img class=&quot;lazyload lazyload-gif&quot; src=&quot;/images/loading.svg&quot; data-src=&quot;https://s1.ax1x.com/2020/08/14/dCK6N6.png&quot; alt=&quot;操作系统第六章--设备管理&quot;&gt;
-      &lt;/p&gt;
-
+      &lt;br&gt;&lt;/p&gt;
 
 
 &lt;title&gt;操作系统第六章--设备管理&lt;/title&gt;
@@ -313,10 +329,9 @@
     
     <summary type="html">
     
-      &lt;h1 id=&quot;free-talk&quot;&gt;
-          &lt;a href=&quot;#free-talk&quot; class=&quot;heading-link&quot;&gt;&lt;i class=&quot;fas fa-link&quot;&gt;&lt;/i&gt;&lt;/a&gt;Free Talk&lt;/h1&gt;
-      
-&lt;p&gt;大一的时候第一次学习C语言，使用的编译器是C-Free 5.0。后面陆陆续续地使用了Clion、VS，到在Linux下直接用记事本写代码。这次电脑重装系统之后，一直都没有配置一下C语言编译器。**作为导生，正好趁这个机会写一篇配置教程给未来班上的学弟学妹们。**VScode在微软的大力扶持和开源社区下，逐渐称为相当主流的编译器，它有很多的优势，有兴趣可以自己了解。&lt;/p&gt;
+      &lt;h1 id=&quot;Free-Talk&quot;&gt;
+          &lt;a href=&quot;#Free-Talk&quot; class=&quot;heading-link&quot;&gt;&lt;i class=&quot;fas fa-link&quot;&gt;&lt;/i&gt;&lt;/a&gt;Free Talk&lt;/h1&gt;
+      &lt;p&gt;大一的时候第一次学习C语言，使用的编译器是C-Free 5.0。后面陆陆续续地使用了Clion、VS，到在Linux下直接用记事本写代码。这次电脑重装系统之后，一直都没有配置一下C语言编译器。&lt;strong&gt;作为导生，正好趁这个机会写一篇配置教程给未来班上的学弟学妹们。&lt;/strong&gt;VScode在微软的大力扶持和开源社区下，逐渐称为相当主流的编译器，它有很多的优势，有兴趣可以自己了解。&lt;/p&gt;
     
     </summary>
     
@@ -343,8 +358,7 @@
     
       &lt;p&gt;
         &lt;img class=&quot;lazyload lazyload-gif&quot; src=&quot;/images/loading.svg&quot; data-src=&quot;https://s1.ax1x.com/2020/08/13/azIO8P.png&quot; alt=&quot;操作系统第五章-虚拟存储系统&quot;&gt;
-      &lt;/p&gt;
-
+      &lt;br&gt;&lt;/p&gt;
 
 
 &lt;title&gt;操作系统第五章-虚拟存储系统&lt;/title&gt;
@@ -384,8 +398,7 @@
     
       &lt;p&gt;
         &lt;img class=&quot;lazyload lazyload-gif&quot; src=&quot;/images/loading.svg&quot; data-src=&quot;https://s1.ax1x.com/2020/08/12/axaINn.png&quot; alt=&quot;操作系统第四章--存储器管理（内存）&quot;&gt;
-      &lt;/p&gt;
-
+      &lt;br&gt;&lt;/p&gt;
 
 
 &lt;title&gt;操作系统第四章--存储器管理（内存）&lt;/title&gt;
@@ -427,8 +440,7 @@
     
       &lt;p&gt;
         &lt;img class=&quot;lazyload lazyload-gif&quot; src=&quot;/images/loading.svg&quot; data-src=&quot;https://s1.ax1x.com/2020/08/11/aOLCOe.png&quot; alt=&quot;计网第六章--数据链路层&quot;&gt;
-      &lt;/p&gt;
-
+      &lt;br&gt;&lt;/p&gt;
 
 
 &lt;title&gt;计网第六章--数据链路层&lt;/title&gt;
@@ -466,8 +478,7 @@
     
       &lt;p&gt;
         &lt;img class=&quot;lazyload lazyload-gif&quot; src=&quot;/images/loading.svg&quot; data-src=&quot;https://s1.ax1x.com/2020/08/11/aLBhY6.png&quot; alt=&quot;计算机网络第五章--网络层&quot;&gt;
-      &lt;/p&gt;
-
+      &lt;br&gt;&lt;/p&gt;
 
 
 &lt;title&gt;计算机网络第五章--网络层&lt;/title&gt;
@@ -505,8 +516,7 @@
     
       &lt;p&gt;
         &lt;img class=&quot;lazyload lazyload-gif&quot; src=&quot;/images/loading.svg&quot; data-src=&quot;https://s1.ax1x.com/2020/08/10/aHO33F.png&quot; alt=&quot;数据库第七章--NoSQL数据库&quot;&gt;
-      &lt;/p&gt;
-
+      &lt;br&gt;&lt;/p&gt;
 
 
 &lt;title&gt;数据库第七章--NoSQL数据库&lt;/title&gt;
@@ -544,8 +554,7 @@
     
       &lt;p&gt;
         &lt;img class=&quot;lazyload lazyload-gif&quot; src=&quot;/images/loading.svg&quot; data-src=&quot;https://s1.ax1x.com/2020/08/10/aHNDhj.png&quot; alt=&quot;数据库第六章--数据库编程&quot;&gt;
-      &lt;/p&gt;
-
+      &lt;br&gt;&lt;/p&gt;
 
 
 &lt;title&gt;数据库第六章--数据库编程&lt;/title&gt;
@@ -581,8 +590,7 @@
     
       &lt;p&gt;
         &lt;img class=&quot;lazyload lazyload-gif&quot; src=&quot;/images/loading.svg&quot; data-src=&quot;https://s1.ax1x.com/2020/08/10/aHKVN6.png&quot; alt=&quot;数据库第五章--数据库管理&quot;&gt;
-      &lt;/p&gt;
-
+      &lt;br&gt;&lt;/p&gt;
 
 
 &lt;title&gt;数据库第五章--数据库管理&lt;/title&gt;
@@ -620,8 +628,7 @@
     
       &lt;p&gt;
         &lt;img class=&quot;lazyload lazyload-gif&quot; src=&quot;/images/loading.svg&quot; data-src=&quot;https://s1.ax1x.com/2020/08/09/a7mnRH.png&quot; alt=&quot;数据库第四章--数据库设计&quot;&gt;
-      &lt;/p&gt;
-
+      &lt;br&gt;&lt;/p&gt;
 
 
 &lt;title&gt;数据库第四章--数据库设计&lt;/title&gt;
@@ -643,45 +650,6 @@
     
     
       <category term="数据库设计" scheme="https://Gemini-Lin.github.io/tags/%E6%95%B0%E6%8D%AE%E5%BA%93%E8%AE%BE%E8%AE%A1/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>数据库第三章--SQL语言</title>
-    <link href="https://gemini-lin.github.io/Database-System-3/"/>
-    <id>https://gemini-lin.github.io/Database-System-3/</id>
-    <published>2020-08-09T04:33:26.000Z</published>
-    <updated>2020-08-09T04:37:20.199Z</updated>
-    
-    <summary type="html">
-    
-      &lt;p&gt;
-        &lt;img class=&quot;lazyload lazyload-gif&quot; src=&quot;/images/loading.svg&quot; data-src=&quot;https://s1.ax1x.com/2020/08/09/aox9Sg.png&quot; alt=&quot;数据库第三章--SQL语言&quot;&gt;
-      &lt;/p&gt;
-
-
-
-&lt;title&gt;数据库第三章--SQL语言&lt;/title&gt;
-&lt;meta charset=&quot;utf-8&quot;&gt;
-&lt;meta http-equiv=&quot;Content-Type&quot; content=&quot;text/html; charset=utf-8&quot;&gt;
-&lt;meta name=&quot;renderer&quot; content=&quot;webkit&quot;&gt;
-&lt;meta name=&quot;author&quot; content=&quot;mubu.com&quot;&gt;
-&lt;meta name=&quot;generator&quot; content=&quot;Hexo 4.2.1&quot;&gt;&lt;link rel=&quot;alternate&quot; href=&quot;/atom.xml&quot; title=&quot;GeminiPlanet&quot; type=&quot;application/atom+xml&quot;&gt;
-
-
-&lt;div class=&quot;export-wrapper&quot;&gt;&lt;div style=&quot;font-size: 22px; padding: 0 15px 0;&quot;&gt;&lt;div style=&quot;padding-bottom: 24px&quot;&gt;数据库第三章--SQL语言&lt;/div&gt;&lt;div style=&quot;background: #e5e6e8; height: 1px; margin-bottom: 20px;&quot;&gt;&lt;/div&gt;&lt;/div&gt;&lt;ul style=&quot;list-style: disc outside;&quot;&gt;&lt;li style=&quot;line-height: 24px;&quot;&gt;&lt;span class=&quot;content mubu-node&quot; style=&quot;line-height: 24px; min-height: 24px; font-size: 16px; padding: 2px 0px; display: inline-block; vertical-align: top;&quot;&gt;&lt;span class=&quot;bold&quot; style=&quot;font-weight: bold;&quot;&gt;SQL语言概述&lt;/span&gt;&lt;/span&gt;&lt;ul class=&quot;children&quot; style=&quot;list-style: disc outside; padding-bottom: 4px;&quot;&gt;&lt;li style=&quot;line-height: 24px;&quot;&gt;&lt;span class=&quot;content mubu-node&quot; style=&quot;line-height: 24px; min-height: 24px; font-size: 16px; padding: 2px 0px; display: inline-block; vertical-align: top;&quot;&gt;&lt;span class=&quot;bold&quot; style=&quot;font-weight: bold;&quot;&gt;SQL&lt;/span&gt;（Structured Query Language，&lt;span class=&quot;bold&quot; style=&quot;font-weight: bold;&quot;&gt;结构化查询语言&lt;/span&gt;）是一种对&lt;span class=&quot;bold&quot; style=&quot;font-weight: bold;&quot;&gt;关系数据库&lt;/span&gt;进行访问的&lt;span class=&quot;bold&quot; style=&quot;font-weight: bold;&quot;&gt;数据操纵语言&lt;/span&gt;&lt;/span&gt;&lt;/li&gt;&lt;li style=&quot;line-height: 24px;&quot;&gt;&lt;span class=&quot;content mubu-node&quot; style=&quot;line-height: 24px; min-height: 24px; font-size: 16px; padding: 2px 0px; display: inline-block; vertical-align: top;&quot;&gt;&lt;span class=&quot;bold&quot; style=&quot;font-weight: bold;&quot;&gt;SQL对关系数据库的操作原理&lt;/span&gt;&lt;/span&gt;&lt;ul class=&quot;children&quot; style=&quot;list-style: disc outside; padding-bottom: 4px;&quot;&gt;&lt;li style=&quot;line-height: 24px;&quot;&gt;&lt;span class=&quot;content mubu-node&quot; style=&quot;line-height: 24px; min-height: 24px; font-size: 16px; padding: 2px 0px; display: inline-block; vertical-align: top;&quot;&gt;&lt;span class=&quot;bold&quot; style=&quot;font-weight: bold;&quot;&gt;数据库对象&lt;/span&gt;创建、修改、删除&lt;/span&gt;&lt;/li&gt;&lt;li style=&quot;line-height: 24px;&quot;&gt;&lt;span class=&quot;content mubu-node&quot; style=&quot;line-height: 24px; min-height: 24px; font-size: 16px; padding: 2px 0px; display: inline-block; vertical-align: top;&quot;&gt;&lt;span class=&quot;bold&quot; style=&quot;font-weight: bold;&quot;&gt;数据库表&lt;/span&gt;的数据插入、修改、删除、查询、统计&lt;/span&gt;&lt;/li&gt;&lt;li style=&quot;line-height: 24px;&quot;&gt;&lt;span class=&quot;content mubu-node&quot; style=&quot;line-height: 24px; min-height: 24px; font-size: 16px; padding: 2px 0px; display: inline-block; vertical-align: top;&quot;&gt;&lt;span class=&quot;bold&quot; style=&quot;font-weight: bold;&quot;&gt;存储过程、触发器、函数&lt;/span&gt;等程序执行&lt;/span&gt;&lt;/li&gt;&lt;li style=&quot;line-height: 24px;&quot;&gt;&lt;span class=&quot;content mubu-node&quot; style=&quot;line-height: 24px; min-height: 24px; font-size: 16px; padding: 2px 0px; display: inline-block; vertical-align: top;&quot;&gt;数据库&lt;span class=&quot;bold&quot; style=&quot;font-weight: bold;&quot;&gt;权限、角色、用户&lt;/span&gt;等管理&lt;/span&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/div&gt;
-    
-    </summary>
-    
-    
-      <category term="课程总结" scheme="https://Gemini-Lin.github.io/categories/%E8%AF%BE%E7%A8%8B%E6%80%BB%E7%BB%93/"/>
-    
-      <category term="数据库" scheme="https://Gemini-Lin.github.io/categories/%E8%AF%BE%E7%A8%8B%E6%80%BB%E7%BB%93/%E6%95%B0%E6%8D%AE%E5%BA%93/"/>
-    
-    
-      <category term="数据库" scheme="https://Gemini-Lin.github.io/tags/%E6%95%B0%E6%8D%AE%E5%BA%93/"/>
-    
-      <category term="关系模型" scheme="https://Gemini-Lin.github.io/tags/%E5%85%B3%E7%B3%BB%E6%A8%A1%E5%9E%8B/"/>
     
   </entry>
   
