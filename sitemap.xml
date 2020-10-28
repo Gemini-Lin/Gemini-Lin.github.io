@@ -2,9 +2,16 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://gemini-lin.github.io/LeetCode-BFS/</loc>
+    
+    <lastmod>2020-10-28T11:10:42.528Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://gemini-lin.github.io/LeetCode-HeapAndStack/</loc>
     
-    <lastmod>2020-10-28T08:47:39.814Z</lastmod>
+    <lastmod>2020-10-28T08:48:45.118Z</lastmod>
     
   </url>
   
