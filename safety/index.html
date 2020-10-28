@@ -1,9 +1,9 @@
-<!DOCTYPE html><html lang="zh-CN"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="format-detection" content="telephone=no"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="black"><link rel="icon" href="/images/icons/favicon.ico?v=2.0.1" type="image/png" sizes="16x16"><link rel="icon" href="/images/icons/favicon.ico?v=2.0.1" type="image/png" sizes="32x32"><meta name="google-site-verification" content="_T_d70fQRwnF8GQJNmmDRbHpjKelZbY-RFDWgS--hAw"><meta name="baidu-site-verification" content="AM9It5Uqy8"><meta name="description" content="Free Talk        这次做综合课设的时候，队员发了一篇关于安全性的文章，我看完觉得有一种豁然开朗的感觉。这篇文章用非常通俗的语言，总结了密码系统的安全性，把我在密码学课上零散的知识给整合了起来。我在这边的文章的基础上，做了一些简单的调整修改。原文链接">
+<!DOCTYPE html><html lang="zh-CN"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="format-detection" content="telephone=no"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="black"><link rel="icon" href="/images/icons/favicon.ico?v=2.0.1" type="image/png" sizes="16x16"><link rel="icon" href="/images/icons/favicon.ico?v=2.0.1" type="image/png" sizes="32x32"><meta name="google-site-verification" content="_T_d70fQRwnF8GQJNmmDRbHpjKelZbY-RFDWgS--hAw"><meta name="baidu-site-verification" content="AM9It5Uqy8"><meta name="description" content="Free Talk       这次做综合课设的时候，队员发了一篇关于安全性的文章，我看完觉得有一种豁然开朗的感觉。这篇文章用非常通俗的语言，总结了密码系统的安全性，把我在密码学课上零散的知识给整合了起来。我在这边的文章的基础上，做了一些简单的调整修改。原文链接">
 <meta property="og:type" content="article">
 <meta property="og:title" content="密码学的安全性">
 <meta property="og:url" content="https://gemini-lin.github.io/safety/index.html">
 <meta property="og:site_name" content="GeminiPlanet">
-<meta property="og:description" content="Free Talk        这次做综合课设的时候，队员发了一篇关于安全性的文章，我看完觉得有一种豁然开朗的感觉。这篇文章用非常通俗的语言，总结了密码系统的安全性，把我在密码学课上零散的知识给整合了起来。我在这边的文章的基础上，做了一些简单的调整修改。原文链接">
+<meta property="og:description" content="Free Talk       这次做综合课设的时候，队员发了一篇关于安全性的文章，我看完觉得有一种豁然开朗的感觉。这篇文章用非常通俗的语言，总结了密码系统的安全性，把我在密码学课上零散的知识给整合了起来。我在这边的文章的基础上，做了一些简单的调整修改。原文链接">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://s1.ax1x.com/2020/07/02/NqodIJ.png">
 <meta property="og:image" content="https://s1.ax1x.com/2020/07/02/NqbGY4.png">
@@ -38,33 +38,28 @@ var CONFIG = {
   sourcePath: {"js":"js","css":"css","images":"images"},
 };
 
-window.CONFIG = CONFIG;</script><meta name="generator" content="Hexo 4.2.1"></head><body><div class="container" id="container"><header class="header" id="header"><div class="header-inner header-inner--height header-inner--bgcolor"><nav class="header-nav header-nav--sticky"><div class="header-nav-inner"><div class="header-nav-menubtn"><i class="fas fa-bars"></i></div><div class="header-nav-menu"><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/"><span class="header-nav-menu-item__icon"><i class="fas fa-home"></i></span><span class="header-nav-menu-item__text">首页</span></a></div><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/about/"><span class="header-nav-menu-item__icon"><i class="fas fa-user"></i></span><span class="header-nav-menu-item__text">关于</span></a></div><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/archives/"><span class="header-nav-menu-item__icon"><i class="fas fa-folder-open"></i></span><span class="header-nav-menu-item__text">归档</span></a></div><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/categories/"><span class="header-nav-menu-item__icon"><i class="fas fa-layer-group"></i></span><span class="header-nav-menu-item__text">分类</span></a></div><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/tags/"><span class="header-nav-menu-item__icon"><i class="fas fa-tags"></i></span><span class="header-nav-menu-item__text">标签</span></a></div><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/friends/"><span class="header-nav-menu-item__icon"><i class="fas fa-link"></i></span><span class="header-nav-menu-item__text">友链</span></a></div></div><div class="header-nav-search"><span class="header-nav-search__icon"><i class="fas fa-search"></i></span><span class="header-nav-search__text">搜索</span></div><div class="header-nav-mode"><div class="mode"><div class="mode-track"><span class="mode-track-moon"></span><span class="mode-track-sun"></span></div><div class="mode-thumb"></div></div></div></div></nav></div></header><main class="main" id="main"><div class="main-inner"><div class="content-wrap" id="content-wrap"><div class="content" id="content"><!-- Just used to judge whether it is an article page--><div id="is-post"></div><div class="post"><header class="post-header"><h1 class="post-title">密码学的安全性</h1><div class="post-meta"><span class="post-meta-item post-meta-item--createtime"><span class="post-meta-item__icon"><i class="far fa-calendar-plus"></i></span><span class="post-meta-item__info">发表于</span><span class="post-meta-item__value">2020-07-02</span></span><span class="post-meta-item post-meta-item--updatetime"><span class="post-meta-item__icon"><i class="far fa-calendar-check"></i></span><span class="post-meta-item__info">更新于</span><span class="post-meta-item__value">2020-07-03</span></span><span class="post-meta-item post-meta-item--wordcount"><span class="post-meta-item__icon"><i class="far fa-file-word"></i></span><span class="post-meta-item__info">字数统计</span><span class="post-meta-item__value">2.5k</span></span><span class="post-meta-item post-meta-item--readtime"><span class="post-meta-item__icon"><i class="far fa-clock"></i></span><span class="post-meta-item__info">阅读时长</span><span class="post-meta-item__value">17分</span></span><span class="post-meta-item post-meta-item--visitors"><span class="post-meta-item__icon"><i class="fas fa-eye"></i></span><span class="post-meta-item__info">阅读次数</span><span class="post-meta-item__value" id="busuanzi_value_page_pv"></span></span></div></header><div class="post-body"><h1 id="free-talk">
-          <a href="#free-talk" class="heading-link"><i class="fas fa-link"></i></a>Free Talk</h1>
-      
-<p>这次做综合课设的时候，队员发了一篇关于安全性的文章，我看完觉得有一种豁然开朗的感觉。这篇文章用非常通俗的语言，总结了密码系统的安全性，把我在密码学课上零散的知识给整合了起来。我在这边的文章的基础上，做了一些简单的调整修改。<span class="exturl"><a class="exturl__link" href="https://www.cnblogs.com/xdyixia/p/11610091.html" target="_blank" rel="noopener">原文链接</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span><br>
-
+window.CONFIG = CONFIG;</script><meta name="generator" content="Hexo 4.2.1"></head><body><div class="container" id="container"><header class="header" id="header"><div class="header-inner header-inner--height header-inner--bgcolor"><nav class="header-nav header-nav--sticky"><div class="header-nav-inner"><div class="header-nav-menubtn"><i class="fas fa-bars"></i></div><div class="header-nav-menu"><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/"><span class="header-nav-menu-item__icon"><i class="fas fa-home"></i></span><span class="header-nav-menu-item__text">首页</span></a></div><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/about/"><span class="header-nav-menu-item__icon"><i class="fas fa-user"></i></span><span class="header-nav-menu-item__text">关于</span></a></div><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/archives/"><span class="header-nav-menu-item__icon"><i class="fas fa-folder-open"></i></span><span class="header-nav-menu-item__text">归档</span></a></div><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/categories/"><span class="header-nav-menu-item__icon"><i class="fas fa-layer-group"></i></span><span class="header-nav-menu-item__text">分类</span></a></div><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/tags/"><span class="header-nav-menu-item__icon"><i class="fas fa-tags"></i></span><span class="header-nav-menu-item__text">标签</span></a></div><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/friends/"><span class="header-nav-menu-item__icon"><i class="fas fa-link"></i></span><span class="header-nav-menu-item__text">友链</span></a></div></div><div class="header-nav-search"><span class="header-nav-search__icon"><i class="fas fa-search"></i></span><span class="header-nav-search__text">搜索</span></div><div class="header-nav-mode"><div class="mode"><div class="mode-track"><span class="mode-track-moon"></span><span class="mode-track-sun"></span></div><div class="mode-thumb"></div></div></div></div></nav></div></header><main class="main" id="main"><div class="main-inner"><div class="content-wrap" id="content-wrap"><div class="content" id="content"><!-- Just used to judge whether it is an article page--><div id="is-post"></div><div class="post"><header class="post-header"><h1 class="post-title">密码学的安全性</h1><div class="post-meta"><span class="post-meta-item post-meta-item--createtime"><span class="post-meta-item__icon"><i class="far fa-calendar-plus"></i></span><span class="post-meta-item__info">发表于</span><span class="post-meta-item__value">2020-07-02</span></span><span class="post-meta-item post-meta-item--updatetime"><span class="post-meta-item__icon"><i class="far fa-calendar-check"></i></span><span class="post-meta-item__info">更新于</span><span class="post-meta-item__value">2020-07-03</span></span><span class="post-meta-item post-meta-item--wordcount"><span class="post-meta-item__icon"><i class="far fa-file-word"></i></span><span class="post-meta-item__info">字数统计</span><span class="post-meta-item__value">2.5k</span></span><span class="post-meta-item post-meta-item--readtime"><span class="post-meta-item__icon"><i class="far fa-clock"></i></span><span class="post-meta-item__info">阅读时长</span><span class="post-meta-item__value">17分</span></span><span class="post-meta-item post-meta-item--visitors"><span class="post-meta-item__icon"><i class="fas fa-eye"></i></span><span class="post-meta-item__info">阅读次数</span><span class="post-meta-item__value" id="busuanzi_value_page_pv"></span></span></div></header><div class="post-body"><h1 id="Free-Talk">
+          <a href="#Free-Talk" class="heading-link"><i class="fas fa-link"></i></a>Free Talk</h1>
+      <p>这次做综合课设的时候，队员发了一篇关于安全性的文章，我看完觉得有一种豁然开朗的感觉。这篇文章用非常通俗的语言，总结了密码系统的安全性，把我在密码学课上零散的知识给整合了起来。我在这边的文章的基础上，做了一些简单的调整修改。<span class="exturl"><a class="exturl__link" href="https://www.cnblogs.com/xdyixia/p/11610091.html" target="_blank" rel="noopener">原文链接</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span><br>
         <img class="lazyload lazyload-gif" src="/images/loading.svg" data-src="https://s1.ax1x.com/2020/07/02/NqodIJ.png" alt="NqodIJ.png">
       </p>
 <a id="more"></a>
 
+
         <h1 id="密码系统安全性的评估方法">
           <a href="#密码系统安全性的评估方法" class="heading-link"><i class="fas fa-link"></i></a>密码系统安全性的评估方法</h1>
       
-
         <h2 id="无条件安全性">
           <a href="#无条件安全性" class="heading-link"><i class="fas fa-link"></i></a>无条件安全性</h2>
-      
-<p>这种评价方法考虑的是假定攻击者拥有无限的计算资源，但仍然无法破译该密码系统。</p>
+      <p>这种评价方法考虑的是假定攻击者拥有无限的计算资源，但仍然无法破译该密码系统。</p>
 
         <h2 id="计算安全性">
           <a href="#计算安全性" class="heading-link"><i class="fas fa-link"></i></a>计算安全性</h2>
-      
-<p>这种方法是指使用目前最好的方法攻破它所需要的计算远远超出攻击者的计算资源水平，则可以定义这个密码体制是安全的。</p>
+      <p>这种方法是指使用目前最好的方法攻破它所需要的计算远远超出攻击者的计算资源水平，则可以定义这个密码体制是安全的。</p>
 
         <h2 id="可证明安全性">
           <a href="#可证明安全性" class="heading-link"><i class="fas fa-link"></i></a>可证明安全性</h2>
-      
-<p>这种方法是将密码系统的安全性归结为某个经过深入研究的数学难题（如大整数素因子分解、计算离散对数等），<strong>数学难题被证明求解困难</strong>。</p>
+      <p>这种方法是将密码系统的安全性归结为某个经过深入研究的数学难题（如大整数素因子分解、计算离散对数等），<strong>数学难题被证明求解困难</strong>。</p>
 
     <div class="note-plugin info no-icon">
       
@@ -74,92 +69,66 @@ window.CONFIG = CONFIG;</script><meta name="generator" content="Hexo 4.2.1"></he
 
         <h1 id="实际安全性">
           <a href="#实际安全性" class="heading-link"><i class="fas fa-link"></i></a>实际安全性</h1>
-      
-<p>对于实际应用中的密码系统而言，由于至少存在一种破译方法，即<strong>强力攻击法</strong>，因此<em>都不能满足无条件安全性，只提供计算安全性</em>。密码系统要达到实际安全性，就要满足以下准则：</p>
+      <p>对于实际应用中的密码系统而言，由于至少存在一种破译方法，即<strong>强力攻击法</strong>，因此<em>都不能满足无条件安全性，只提供计算安全性</em>。密码系统要达到实际安全性，就要满足以下准则：</p>
 <ol>
 <li>破译该密码系统的实际计算量（包括计算时间或费用）十分巨大，以致于在实际上是无法实现的。</li>
-<li>破译该密码系统所需要的计算时间超过被加密信息有用的生命周期。</li>
-</ol>
-
+<li>破译该密码系统所需要的计算时间超过被加密信息有用的生命周期。
     <div class="note-plugin success no-icon">
       
       <p>例如，战争中发起战斗攻击的作战命令只需要在战斗打响前需要保密；<br>重要新闻消息在公开报道前需要保密的时间往往也只有几个小时。</p>
     </div>
-  
-<ol start="3">
+  </li>
 <li>破译该密码系统的费用超过被加密信息本身的价值。</li>
 </ol>
 <p>如果一个密码系统能够满足以上准则之一，就可以认为是满足实际安全性的。</p>
 
-        <h1 id="可证明安全性-2">
-          <a href="#可证明安全性-2" class="heading-link"><i class="fas fa-link"></i></a>可证明安全性</h1>
+        <h1 id="可证明安全性-1">
+          <a href="#可证明安全性-1" class="heading-link"><i class="fas fa-link"></i></a>可证明安全性</h1>
       
-
         <h2 id="可证明安全性体系的三大要素">
           <a href="#可证明安全性体系的三大要素" class="heading-link"><i class="fas fa-link"></i></a>可证明安全性体系的三大要素</h2>
-      
-<p>在可证明安全体系中，有三大要素：<strong>安全模型，安全性定义和困难性问题</strong>。<br>
-安全模型分为<strong>安全目标和敌手能力</strong>。<br>
-安全目标描述了安全模型要达到什么程度的安全，例如，对于加密算法的不可区分性（Indistinguishablity 简称 <strong>IND</strong>）、对于签名算法的存在性不可伪造（Existable Unforgeble 简称 EU）等。</p>
-<p>其中不可区分性（IND）也称为<strong>语义安全</strong>（Semantic scurity），其定义如下。<br>
-<strong>敌手即使获得了密文，也不能得到其对应明文的任何信息，哪怕是 1bit 的信息。</strong><br>
-其形式化的表示方法为：已知 m0，m1以及 Cb=Enc(pk，mb)，其中 m0是 m0或 m1中的任意一个，即 Cb是 m0、m1其中之一的密文，敌手无法有效判断加密过程中 b 到底是 0 还是 1。</p>
+      <p>在可证明安全体系中，有三大要素：<strong>安全模型，安全性定义和困难性问题</strong>。<br>安全模型分为<strong>安全目标和敌手能力</strong>。<br>安全目标描述了安全模型要达到什么程度的安全，例如，对于加密算法的不可区分性（Indistinguishablity 简称 <strong>IND</strong>）、对于签名算法的存在性不可伪造（Existable Unforgeble 简称 EU）等。</p>
+<p>其中不可区分性（IND）也称为<strong>语义安全</strong>（Semantic scurity），其定义如下。<br><strong>敌手即使获得了密文，也不能得到其对应明文的任何信息，哪怕是 1bit 的信息。</strong><br>其形式化的表示方法为：已知 m0，m1以及 Cb=Enc(pk，mb)，其中 m0是 m0或 m1中的任意一个，即 Cb是 m0、m1其中之一的密文，敌手无法有效判断加密过程中 b 到底是 0 还是 1。</p>
 
         <h2 id="安全性定义">
           <a href="#安全性定义" class="heading-link"><i class="fas fa-link"></i></a>安全性定义</h2>
-      
-<p>刻画敌手的能力，主要有四类，<strong>选择明文攻击（Chosen Plaintext Attacke 简称 CPA）</strong>、<strong>选择密文攻击（Chosen Ciphertext Attack 简称 CCA）</strong>、惟密文攻击（Ciphertext-Only Attack）、已知明文攻击（Known Plaintext Attack）。常用的刻画敌手能力是前面两类，<strong>选择明文攻击（CPA）是指由敌手选择明文并且可以得到对应的密文。选择密文攻击（CCA）是指敌手不仅可以选择明文获得密文，还能选择有限次的密文，获得对应的明文</strong>。CCA比 CPA 描述敌手的能力更强。</p>
+      <p>刻画敌手的能力，主要有四类，<strong>选择明文攻击（Chosen Plaintext Attacke 简称 CPA）</strong>、<strong>选择密文攻击（Chosen Ciphertext Attack 简称 CCA）</strong>、惟密文攻击（Ciphertext-Only Attack）、已知明文攻击（Known Plaintext Attack）。常用的刻画敌手能力是前面两类，<strong>选择明文攻击（CPA）是指由敌手选择明文并且可以得到对应的密文。选择密文攻击（CCA）是指敌手不仅可以选择明文获得密文，还能选择有限次的密文，获得对应的明文</strong>。CCA比 CPA 描述敌手的能力更强。</p>
 <p>下面介绍一下常用的安全性定义。</p>
-<p><strong>CPA 安全。<strong>我们把选择明文攻击（CPA）描述成一个游戏以方便我们更好的理解。首先声明一点，这个游戏的目的</strong>是在选择明文攻击的前提下攻破系统的不可区分性（Indistinguishablity）</strong>，所以下面简称这个游戏为 <strong>IND-CPA</strong>。其次，还要定义两个角色挑战者 C 和敌手 A。挑战者（challenger）的任务相当裁判，主持游戏并且对敌手的行为进行反馈。敌手顾名思义，就是去攻击当前系统，而且对于这个游戏来说是采用选择明文攻击的方法进行攻击。游戏的描述如下：</p>
+<p><strong>CPA 安全。</strong>我们把选择明文攻击（CPA）描述成一个游戏以方便我们更好的理解。首先声明一点，这个游戏的目的<strong>是在选择明文攻击的前提下攻破系统的不可区分性（Indistinguishablity）</strong>，所以下面简称这个游戏为 <strong>IND-CPA</strong>。其次，还要定义两个角色挑战者 C 和敌手 A。挑战者（challenger）的任务相当裁判，主持游戏并且对敌手的行为进行反馈。敌手顾名思义，就是去攻击当前系统，而且对于这个游戏来说是采用选择明文攻击的方法进行攻击。游戏的描述如下： </p>
 <ol>
-<li>
-<p>初始化：挑战者 C 创建 IND-CPA 系统，并且将公钥发送给敌手 A。</p>
+<li><p>初始化：挑战者 C 创建 IND-CPA 系统，并且将公钥发送给敌手 A。 </p>
 </li>
-<li>
-<p>敌手 A 选择<strong>两个长度相同的明文 m0，m1</strong>发送给挑战者 C。挑战者 C <strong>随机选择 b∈｛0,1｝</strong>，并将 mb加密记作 cb，然后将密文cb发送给敌手 A。</p>
+<li><p>敌手 A 选择<strong>两个长度相同的明文 m0，m1</strong>发送给挑战者 C。挑战者 C <strong>随机选择 b∈｛0,1｝</strong>，并将 mb加密记作 cb，然后将密文cb发送给敌手 A。</p>
 </li>
-<li>
-<p>敌手 A <strong>猜测</strong>挑战者 C 上一步进行加密的明文是 m0还是 m1，并且将猜测结果输出，输出结果记为 b‘。若 b‘=b，那么敌手攻击成功。</p>
+<li><p>敌手 A <strong>猜测</strong>挑战者 C 上一步进行加密的明文是 m0还是 m1，并且将猜测结果输出，输出结果记为 b‘。若 b‘=b，那么敌手攻击成功。</p>
 </li>
 </ol>
 <p>敌手攻击的优势可以定义为如下函数：<br>
-
         <img class="lazyload lazyload-gif" src="/images/loading.svg" data-src="https://s1.ax1x.com/2020/07/02/NqbGY4.png" alt="NqbGY4.png">
-      <br>
-其中 w 是加密方案密钥的长度。因为随机猜测就有<strong>1/2</strong>的概率赢得 IND-CPA 游戏。所以<br>
-
+      <br>其中 w 是加密方案密钥的长度。因为随机猜测就有<strong>1/2</strong>的概率赢得 IND-CPA 游戏。所以<br>
         <img class="lazyload lazyload-gif" src="/images/loading.svg" data-src="https://s1.ax1x.com/2020/07/02/Nqbtp9.png" alt="Nqbtp9.png">
-      <br>
-才是敌手经过努力得到的优势。如果对任何多项式时间的敌手 A，存在一个可忽略的优势σ，使得<br>
-
+      <br>才是敌手经过努力得到的优势。如果对任何多项式时间的敌手 A，存在一个可忽略的优势σ，使得<br>
         <img class="lazyload lazyload-gif" src="/images/loading.svg" data-src="https://s1.ax1x.com/2020/07/02/NqbrkD.png" alt="NqbrkD.png">
-      <br>
-那么就称<strong>这个加密算法在选择明文攻击下具有不可区分性，或者称为 IND-CPA 安全。</strong></p>
+      <br>那么就称<strong>这个加密算法在选择明文攻击下具有不可区分性，或者称为 IND-CPA 安全。</strong></p>
 
         <h2 id="困难问题">
           <a href="#困难问题" class="heading-link"><i class="fas fa-link"></i></a>困难问题</h2>
-      
-<p>有了安全模型和安全性定义，通常使用规约到困难问题的方法来进行安全性证明。密码学中常用的困难问题有<strong>离散对数困难问题</strong>（discrete logarithm problem，简称 DLP）、<strong>CDH 问题</strong>（Computational Diffie-Hellman） 、<strong>DDH 问题</strong>（Decisional Diffie-Hellman）以及 BDH 问题（Bilinear Diffie-Hellman）。</p>
+      <p>有了安全模型和安全性定义，通常使用规约到困难问题的方法来进行安全性证明。密码学中常用的困难问题有<strong>离散对数困难问题</strong>（discrete logarithm problem，简称 DLP）、<strong>CDH 问题</strong>（Computational Diffie-Hellman） 、<strong>DDH 问题</strong>（Decisional Diffie-Hellman）以及 BDH 问题（Bilinear Diffie-Hellman）。 </p>
 
         <h2 id="可证明安全性理论">
           <a href="#可证明安全性理论" class="heading-link"><i class="fas fa-link"></i></a>可证明安全性理论</h2>
-      
-<p>有了前面叙述了安全模型，安全性定义，困难性问题，可证有了前面叙述了安全模型，安全性定义，困难性问题，可证明安全体系也变得可行。<br>
-可证明安全性是指利用**“规约”**的方法，将攻击密码算法或安全协议的方法规约到一个攻击困难问题上。首先确定加密体制的安全目标，如签名体制的安全目标是签名的不可伪造性（Existable Unforgeble），加密体制的安全目标是信息的不可区分性（Indistinguishablity）。然后根据安全性定义确定敌手的能力构建一个安全性模型。</p>
+      <p>有了前面叙述了安全模型，安全性定义，困难性问题，可证有了前面叙述了安全模型，安全性定义，困难性问题，可证明安全体系也变得可行。<br>可证明安全性是指利用<strong>“规约”</strong>的方法，将攻击密码算法或安全协议的方法规约到一个攻击困难问题上。首先确定加密体制的安全目标，如签名体制的安全目标是签名的不可伪造性（Existable Unforgeble），加密体制的安全目标是信息的不可区分性（Indistinguishablity）。然后根据安全性定义确定敌手的能力构建一个安全性模型。</p>
 <p><strong>规约是复杂性理论中的概念， 一个问题P1规约到问题P2是指，已知解决问题 P1的算法 M1，我们能构造另一算法 M2，M2可以以 M1作为子程序，用来解决问题 P2。</strong></p>
 <p><strong>将规约的方法应用在密码算法或安全协议的安全性证明上，例如，可以将敌手对密码算法或安全协议（P1）的攻击规约到一些已经得到深入研究的困难问题（P2）。即若敌手能够对算法或协议发起有效的攻击，就可以利用敌手构建一个算法来攻破困难问题，然而困难问题是已经被证明无法攻破的，这样就出现矛盾。根据反证法，敌手可以攻破算法或协议假设不成立，证明完毕。</strong></p>
 <p>一般来说，为了证明方案 1 的安全性，我们可以将方案 1 规约到方案 2，即如果敌手 A 可以攻破方案 1，那么敌手 B 同样也可以攻击方案 2，而方案 2 已经被证明是安全的，或者是一个难题。</p>
 <p>证明过程通过一个思维游戏来描述。首先，挑战者创建方案2，B 表示方案 2 中的敌手，A 表示方案 1 中的敌手。B 为了攻破方案 2，利用 A 作为子程序来攻击方案 1。B 想要利用 A，就需要对 A 进行训练，所以 B 模拟了 A 的挑战者。<br>
-
         <img class="lazyload lazyload-gif" src="/images/loading.svg" data-src="https://s1.ax1x.com/2020/07/02/Nqbotg.png" alt="Nqbotg.png">
-      <br>
-例如，如果要对加密算法进行安全性证明，那么方案 1 就是具体的加密算法 。 假设安全目标是信息的不可区分性（Indistinguishablity），敌手 A 的能力是可以选择明文攻击，即 CPA。敌手 B 模拟敌手 A 的挑战者，与 A 进行 IND-CPA 游戏。在游戏过程中，B 为了实现自己的目的利用 A。如果 A 无法判断自己是与 B 还是与挑战者做游戏，那么称 B 的模拟是完备的。</p>
+      <br>例如，如果要对加密算法进行安全性证明，那么方案 1 就是具体的加密算法 。 假设安全目标是信息的不可区分性（Indistinguishablity），敌手 A 的能力是可以选择明文攻击，即 CPA。敌手 B 模拟敌手 A 的挑战者，与 A 进行 IND-CPA 游戏。在游戏过程中，B 为了实现自己的目的利用 A。如果 A 无法判断自己是与 B 还是与挑战者做游戏，那么称 B 的模拟是完备的。</p>
 <p><strong>对于其他加密算法或加密协议，我们必须首先确定它想要实现的安全目标，例如签名方案的不可伪造性，然后根据安全性定义确定敌手的能力构建一个安全性模型，再把对加密算法或加密协议的攻击规约到已被证明的困难问题上。 这就是可证明安全性。</strong></p>
 
         <h1 id="结语">
           <a href="#结语" class="heading-link"><i class="fas fa-link"></i></a>结语</h1>
-      
-<p>可证明安全性理论是密码学理论与计算复杂性理论的一次完美结合，也是现代密码学的基石。在过去的 30 年终，现代密码学最大的突破就是把密码学体系建立在计算复杂理论上，这使得密码学从一门艺术发展成为一门严谨的学科。</p>
+      <p>可证明安全性理论是密码学理论与计算复杂性理论的一次完美结合，也是现代密码学的基石。在过去的 30 年终，现代密码学最大的突破就是把密码学体系建立在计算复杂理论上，这使得密码学从一门艺术发展成为一门严谨的学科。</p>
 <script>
         document.querySelectorAll('.github-emoji')
           .forEach(el => {
@@ -178,13 +147,13 @@ window.CONFIG = CONFIG;</script><meta name="generator" content="Hexo 4.2.1"></he
             });
             document.body.appendChild(img);
           });
-      </script></div><footer class="post-footer"><div class="post-ending ending"><div class="ending__text">------ 本文结束，感谢您的阅读 ------</div></div><div class="post-copyright copyright"><div class="copyright-author"><span class="copyright-author__name">本文作者: </span><span class="copyright-author__value"><a href="https://Gemini-Lin.github.io">Gemini-Lin</a></span></div><div class="copyright-link"><span class="copyright-link__name">本文链接: </span><span class="copyright-link__value"><a href="https://gemini-lin.github.io/safety/">https://gemini-lin.github.io/safety/</a></span></div><div class="copyright-notice"><span class="copyright-notice__name">版权声明: </span><span class="copyright-notice__value">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en" rel="external nofollow" target="_blank">BY-NC-SA</a> 许可协议。转载请注明出处！</span></div></div><div class="post-tags"><span class="post-tags-item"><span class="post-tags-item__icon"><i class="fas fa-tag"></i></span><a class="post-tags-item__link" href="https://gemini-lin.github.io/tags/%E5%AE%89%E5%85%A8%E5%88%86%E6%9E%90/">安全分析</a></span></div><div class="post-share"><div class="social-share" data-sites="qzone, qq, weibo, wechat, douban, linkedin, facebook, twitter, google">Share to: </div></div><div class="post-reward reward"><div class="reward-button">请我喝杯咖啡~</div><div class="reward-qrcode"><span class="reward-qrcode-alipay"><img class="reward-qrcode-alipay__img" src="/images/alipay.jpg"><div class="reward-qrcode-alipay__text">支付宝打赏</div></span><span class="reward-qrcode-wechat"><img class="reward-qrcode-wechat__img" src="/images/wechatpay.jpg"><div class="reward-qrcode-wechat__text">微信打赏</div></span></div></div><nav class="post-paginator paginator"><div class="paginator-prev"><a class="paginator-prev__link" href="/Tightly-Secure/"><span class="paginator-prev__icon"><i class="fas fa-angle-left"></i></span><span class="paginator-prev__text">Tightly-Secure</span></a></div><div class="paginator-next"><a class="paginator-next__link" href="/summer/"><span class="paginator-prev__text">Summer</span><span class="paginator-next__icon"><i class="fas fa-angle-right"></i></span></a></div></nav></footer></div></div><div class="comments" id="comments"><div id="valine-container"></div></div></div><div class="sidebar-wrap" id="sidebar-wrap"><aside class="sidebar" id="sidebar"><div class="sidebar-nav"><span class="sidebar-nav-toc current">文章目录</span><span class="sidebar-nav-ov">站点概览</span></div><section class="sidebar-toc"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#free-talk"><span class="toc-number">1.</span> <span class="toc-text">
+      </script></div><footer class="post-footer"><div class="post-ending ending"><div class="ending__text">------ 本文结束，感谢您的阅读 ------</div></div><div class="post-copyright copyright"><div class="copyright-author"><span class="copyright-author__name">本文作者: </span><span class="copyright-author__value"><a href="https://Gemini-Lin.github.io">Gemini-Lin</a></span></div><div class="copyright-link"><span class="copyright-link__name">本文链接: </span><span class="copyright-link__value"><a href="https://gemini-lin.github.io/safety/">https://gemini-lin.github.io/safety/</a></span></div><div class="copyright-notice"><span class="copyright-notice__name">版权声明: </span><span class="copyright-notice__value">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en" rel="external nofollow" target="_blank">BY-NC-SA</a> 许可协议。转载请注明出处！</span></div></div><div class="post-tags"><span class="post-tags-item"><span class="post-tags-item__icon"><i class="fas fa-tag"></i></span><a class="post-tags-item__link" href="https://gemini-lin.github.io/tags/%E5%AE%89%E5%85%A8%E5%88%86%E6%9E%90/">安全分析</a></span></div><div class="post-share"><div class="social-share" data-sites="qzone, qq, weibo, wechat, douban, linkedin, facebook, twitter, google">Share to: </div></div><div class="post-reward reward"><div class="reward-button">请我喝杯咖啡~</div><div class="reward-qrcode"><span class="reward-qrcode-alipay"><img class="reward-qrcode-alipay__img" src="/images/alipay.jpg"><div class="reward-qrcode-alipay__text">支付宝打赏</div></span><span class="reward-qrcode-wechat"><img class="reward-qrcode-wechat__img" src="/images/wechatpay.jpg"><div class="reward-qrcode-wechat__text">微信打赏</div></span></div></div><nav class="post-paginator paginator"><div class="paginator-prev"><a class="paginator-prev__link" href="/Tightly-Secure/"><span class="paginator-prev__icon"><i class="fas fa-angle-left"></i></span><span class="paginator-prev__text">Tightly-Secure</span></a></div><div class="paginator-next"><a class="paginator-next__link" href="/summer/"><span class="paginator-prev__text">Summer</span><span class="paginator-next__icon"><i class="fas fa-angle-right"></i></span></a></div></nav></footer></div></div><div class="comments" id="comments"><div id="valine-container"></div></div></div><div class="sidebar-wrap" id="sidebar-wrap"><aside class="sidebar" id="sidebar"><div class="sidebar-nav"><span class="sidebar-nav-toc current">文章目录</span><span class="sidebar-nav-ov">站点概览</span></div><section class="sidebar-toc"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Free-Talk"><span class="toc-number">1.</span> <span class="toc-text">
           Free Talk</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#密码系统安全性的评估方法"><span class="toc-number">2.</span> <span class="toc-text">
           密码系统安全性的评估方法</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#无条件安全性"><span class="toc-number">2.1.</span> <span class="toc-text">
           无条件安全性</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#计算安全性"><span class="toc-number">2.2.</span> <span class="toc-text">
           计算安全性</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#可证明安全性"><span class="toc-number">2.3.</span> <span class="toc-text">
           可证明安全性</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#实际安全性"><span class="toc-number">3.</span> <span class="toc-text">
-          实际安全性</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#可证明安全性-2"><span class="toc-number">4.</span> <span class="toc-text">
+          实际安全性</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#可证明安全性-1"><span class="toc-number">4.</span> <span class="toc-text">
           可证明安全性</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#可证明安全性体系的三大要素"><span class="toc-number">4.1.</span> <span class="toc-text">
           可证明安全性体系的三大要素</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#安全性定义"><span class="toc-number">4.2.</span> <span class="toc-text">
           安全性定义</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#困难问题"><span class="toc-number">4.3.</span> <span class="toc-text">
