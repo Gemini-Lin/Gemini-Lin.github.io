@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://gemini-lin.github.io/"/>
-  <updated>2020-10-29T01:51:11.152Z</updated>
+  <updated>2020-11-01T11:51:15.821Z</updated>
   <id>https://gemini-lin.github.io/</id>
   
   <author>
@@ -17,11 +17,36 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>LeetCode-Easy</title>
+    <link href="https://gemini-lin.github.io/LeetCode-Easy/"/>
+    <id>https://gemini-lin.github.io/LeetCode-Easy/</id>
+    <published>2020-11-01T11:46:17.000Z</published>
+    <updated>2020-11-01T11:51:15.821Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;Free-Talk&quot;&gt;
+          &lt;a href=&quot;#Free-Talk&quot; class=&quot;heading-link&quot;&gt;&lt;i class=&quot;fas fa-link&quot;&gt;&lt;/i&gt;&lt;/a&gt;Free Talk&lt;/h1&gt;
+      &lt;p&gt;看了一下实习的面经，发现简单类型的算法题竟然也不少，想刷个十几道练练手。&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="LeetCode" scheme="https://Gemini-Lin.github.io/categories/LeetCode/"/>
+    
+    
+      <category term="LeetCode" scheme="https://Gemini-Lin.github.io/tags/LeetCode/"/>
+    
+      <category term="Easy" scheme="https://Gemini-Lin.github.io/tags/Easy/"/>
+    
+  </entry>
+  
+  <entry>
     <title>LeetCode-BFS</title>
     <link href="https://gemini-lin.github.io/LeetCode-BFS/"/>
     <id>https://gemini-lin.github.io/LeetCode-BFS/</id>
     <published>2020-10-28T11:07:37.000Z</published>
-    <updated>2020-10-29T01:51:11.152Z</updated>
+    <updated>2020-10-30T03:32:56.044Z</updated>
     
     <summary type="html">
     
@@ -601,44 +626,6 @@
     
     
       <category term="数据库编程" scheme="https://Gemini-Lin.github.io/tags/%E6%95%B0%E6%8D%AE%E5%BA%93%E7%BC%96%E7%A8%8B/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>数据库第五章--数据库管理</title>
-    <link href="https://gemini-lin.github.io/Database-System-5/"/>
-    <id>https://gemini-lin.github.io/Database-System-5/</id>
-    <published>2020-08-10T02:19:04.000Z</published>
-    <updated>2020-08-10T02:21:25.878Z</updated>
-    
-    <summary type="html">
-    
-      &lt;p&gt;
-        &lt;img class=&quot;lazyload lazyload-gif&quot; src=&quot;/images/loading.svg&quot; data-src=&quot;https://s1.ax1x.com/2020/08/10/aHKVN6.png&quot; alt=&quot;数据库第五章--数据库管理&quot;&gt;
-      &lt;br&gt;&lt;/p&gt;
-
-
-&lt;title&gt;数据库第五章--数据库管理&lt;/title&gt;
-&lt;meta charset=&quot;utf-8&quot;&gt;
-&lt;meta http-equiv=&quot;Content-Type&quot; content=&quot;text/html; charset=utf-8&quot;&gt;
-&lt;meta name=&quot;renderer&quot; content=&quot;webkit&quot;&gt;
-&lt;meta name=&quot;author&quot; content=&quot;mubu.com&quot;&gt;
-&lt;meta name=&quot;generator&quot; content=&quot;Hexo 4.2.1&quot;&gt;&lt;link rel=&quot;alternate&quot; href=&quot;/atom.xml&quot; title=&quot;GeminiPlanet&quot; type=&quot;application/atom+xml&quot;&gt;
-
-
-&lt;div class=&quot;export-wrapper&quot;&gt;&lt;div style=&quot;font-size: 22px; padding: 0 15px 0;&quot;&gt;&lt;div style=&quot;padding-bottom: 24px&quot;&gt;数据库第五章--数据库管理&lt;/div&gt;&lt;div style=&quot;background: #e5e6e8; height: 1px; margin-bottom: 20px;&quot;&gt;&lt;/div&gt;&lt;/div&gt;&lt;ul style=&quot;list-style: disc outside;&quot;&gt;&lt;li style=&quot;line-height: 24px;&quot;&gt;&lt;span class=&quot;content mubu-node&quot; style=&quot;line-height: 24px; min-height: 24px; font-size: 16px; padding: 2px 0px; display: inline-block; vertical-align: top;&quot;&gt;数据库管理概述&lt;/span&gt;&lt;ul class=&quot;children&quot; style=&quot;list-style: disc outside; padding-bottom: 4px;&quot;&gt;&lt;li style=&quot;line-height: 24px;&quot;&gt;&lt;span class=&quot;content mubu-node&quot; style=&quot;line-height: 24px; min-height: 24px; font-size: 16px; padding: 2px 0px; display: inline-block; vertical-align: top;&quot;&gt;&lt;span class=&quot;bold&quot; style=&quot;font-weight: bold;&quot;&gt;数据库管理&lt;/span&gt;&lt;/span&gt;&lt;ul class=&quot;children&quot; style=&quot;list-style: disc outside; padding-bottom: 4px;&quot;&gt;&lt;li style=&quot;line-height: 24px;&quot;&gt;&lt;span class=&quot;content mubu-node&quot; style=&quot;line-height: 24px; min-height: 24px; font-size: 16px; padding: 2px 0px; display: inline-block; vertical-align: top;&quot;&gt;定义：指为保证数据库系统的正常运行和服务质量必须进行的系统管理工作&lt;/span&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/li&gt;&lt;li style=&quot;line-height: 24px;&quot;&gt;&lt;span class=&quot;content mubu-node&quot; style=&quot;line-height: 24px; min-height: 24px; font-size: 16px; padding: 2px 0px; display: inline-block; vertical-align: top;&quot;&gt;DBMS管理功能结构&lt;/span&gt;&lt;ul class=&quot;children&quot; style=&quot;list-style: disc outside; padding-bottom: 4px;&quot;&gt;&lt;li style=&quot;line-height: 24px;&quot;&gt;&lt;span class=&quot;content mubu-node&quot; style=&quot;line-height: 24px; min-height: 24px; font-size: 16px; padding: 2px 0px; display: inline-block; vertical-align: top;&quot;&gt;数据库定义&lt;/span&gt;&lt;/li&gt;&lt;li style=&quot;line-height: 24px;&quot;&gt;&lt;span class=&quot;content mubu-node&quot; style=&quot;line-height: 24px; min-height: 24px; font-size: 16px; padding: 2px 0px; display: inline-block; vertical-align: top;&quot;&gt;数据库运行管理&lt;/span&gt;&lt;/li&gt;&lt;li style=&quot;line-height: 24px;&quot;&gt;&lt;span class=&quot;content mubu-node&quot; style=&quot;line-height: 24px; min-height: 24px; font-size: 16px; padding: 2px 0px; display: inline-block; vertical-align: top;&quot;&gt;数据库组织与存储&lt;/span&gt;&lt;/li&gt;&lt;li style=&quot;line-height: 24px;&quot;&gt;&lt;span class=&quot;content mubu-node&quot; style=&quot;line-height: 24px; min-height: 24px; font-size: 16px; padding: 2px 0px; display: inline-block; vertical-align: top;&quot;&gt;数据库维护&lt;/span&gt;&lt;/li&gt;&lt;li style=&quot;line-height: 24px;&quot;&gt;&lt;span class=&quot;content mubu-node&quot; style=&quot;line-height: 24px; min-height: 24px; font-size: 16px; padding: 2px 0px; display: inline-block; vertical-align: top;&quot;&gt;数据库通信&lt;/span&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/div&gt;
-    
-    </summary>
-    
-    
-      <category term="课程总结" scheme="https://Gemini-Lin.github.io/categories/%E8%AF%BE%E7%A8%8B%E6%80%BB%E7%BB%93/"/>
-    
-      <category term="数据库" scheme="https://Gemini-Lin.github.io/categories/%E8%AF%BE%E7%A8%8B%E6%80%BB%E7%BB%93/%E6%95%B0%E6%8D%AE%E5%BA%93/"/>
-    
-    
-      <category term="数据库管理" scheme="https://Gemini-Lin.github.io/tags/%E6%95%B0%E6%8D%AE%E5%BA%93%E7%AE%A1%E7%90%86/"/>
-    
-      <category term="数据库备份" scheme="https://Gemini-Lin.github.io/tags/%E6%95%B0%E6%8D%AE%E5%BA%93%E5%A4%87%E4%BB%BD/"/>
     
   </entry>
   
