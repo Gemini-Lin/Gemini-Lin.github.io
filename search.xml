@@ -79,6 +79,111 @@
       <p>
         <img class="lazyload lazyload-gif" src="/images/loading.svg" data-src="https://i.loli.net/2020/11/01/SpthZP4ECiGrxDV.png" alt="image-20201101195057700">
       </p>
+
+        <h1 id="多数元素">
+          <a href="#多数元素" class="heading-link"><i class="fas fa-link"></i></a>多数元素</h1>
+      <p><span class="exturl"><a class="exturl__link" href="https://leetcode-cn.com/problems/majority-element/" target="_blank" rel="noopener">169. 多数元素</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></p>
+
+        <h2 id="哈希表">
+          <a href="#哈希表" class="heading-link"><i class="fas fa-link"></i></a>哈希表</h2>
+      <figure class="highlight java"><div class="table-container"><table><tbody><tr><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>{</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">majorityElement</span><span class="params">(<span class="keyword">int</span>[] nums)</span> </span>{</span><br><span class="line">        <span class="comment">// 这个相当简单，如果不考虑时间复杂度，就直接遍历就可以</span></span><br><span class="line">        <span class="comment">// 用一个 哈希表存放， key 为 元素， value 为 元素出现的次数</span></span><br><span class="line"></span><br><span class="line">        HashMap&lt;Integer, Integer&gt; map = <span class="keyword">new</span> HashMap&lt;&gt;();</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> num: nums){</span><br><span class="line">            map.put(num, map.getOrDefault(num, <span class="number">0</span>) + <span class="number">1</span>);</span><br><span class="line">        }</span><br><span class="line">        <span class="keyword">int</span> m = nums.length / <span class="number">2</span>;</span><br><span class="line">        <span class="keyword">int</span> res = nums[<span class="number">0</span>];</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> num: nums){</span><br><span class="line">            <span class="keyword">if</span>(map.get(num) &gt; m){</span><br><span class="line">                res = num;</span><br><span class="line">            }</span><br><span class="line">        }</span><br><span class="line"></span><br><span class="line">        <span class="keyword">return</span> res;</span><br><span class="line">    }</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></div></figure>
+
+
+        <h3 id="执行结果-1">
+          <a href="#执行结果-1" class="heading-link"><i class="fas fa-link"></i></a>执行结果</h3>
+      <p>
+        <img class="lazyload lazyload-gif" src="/images/loading.svg" data-src="https://i.loli.net/2020/11/01/Ke7fS8YJFihzo6Z.png" alt="image-20201101204758997">
+      </p>
+
+        <h2 id="数组排序">
+          <a href="#数组排序" class="heading-link"><i class="fas fa-link"></i></a>数组排序</h2>
+      <figure class="highlight java"><div class="table-container"><table><tbody><tr><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>{</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">majorityElement</span><span class="params">(<span class="keyword">int</span>[] nums)</span> </span>{</span><br><span class="line">        <span class="comment">// 刚刚的时间复杂度太高，改用数组排序</span></span><br><span class="line">        Arrays.sort(nums);</span><br><span class="line">        <span class="keyword">return</span> nums[nums.length / <span class="number">2</span>];</span><br><span class="line">    }</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></div></figure>
+
+
+        <h3 id="执行结果-2">
+          <a href="#执行结果-2" class="heading-link"><i class="fas fa-link"></i></a>执行结果</h3>
+      <p>
+        <img class="lazyload lazyload-gif" src="/images/loading.svg" data-src="https://i.loli.net/2020/11/01/M1J8wqRtdgZcWhp.png" alt="image-20201101205337066">
+      </p>
+
+        <h2 id="投票法">
+          <a href="#投票法" class="heading-link"><i class="fas fa-link"></i></a>投票法</h2>
+      <figure class="highlight java"><div class="table-container"><table><tbody><tr><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>{</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">majorityElement</span><span class="params">(<span class="keyword">int</span>[] nums)</span> </span>{</span><br><span class="line">        <span class="comment">// 看了一下题解的投票法，思路很新颖，理解很简单</span></span><br><span class="line">        <span class="keyword">int</span> vote = Integer.MIN_VALUE;</span><br><span class="line">        <span class="keyword">int</span> count = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> num: nums){</span><br><span class="line">            <span class="keyword">if</span>(count == <span class="number">0</span>){</span><br><span class="line">                vote = num;</span><br><span class="line">            }</span><br><span class="line">            count += (num == vote)? <span class="number">1</span> : -<span class="number">1</span>;</span><br><span class="line">        }</span><br><span class="line"></span><br><span class="line">        <span class="keyword">return</span> vote;</span><br><span class="line">    }</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></div></figure>
+
+
+        <h3 id="执行结果-3">
+          <a href="#执行结果-3" class="heading-link"><i class="fas fa-link"></i></a>执行结果</h3>
+      <p>
+        <img class="lazyload lazyload-gif" src="/images/loading.svg" data-src="https://i.loli.net/2020/11/01/k9DjU15Tv3K6CFp.png" alt="image-20201101210057150">
+      </p>
+
+        <h2 id="Array-sort-排序原理">
+          <a href="#Array-sort-排序原理" class="heading-link"><i class="fas fa-link"></i></a>Array.sort()排序原理</h2>
+      <p>刚刚写的用数组排序的算法，发现时间复杂度还不错，突然想了解一下，它底层的实现原理。</p>
+<p>简单查阅了一下 JDK 1.8 的具体实现，附上源码。</p>
+<blockquote>
+<p>源码真的太多了，想要了解的可以看看这篇文章：<span class="exturl"><a class="exturl__link" href="https://zhuanlan.zhihu.com/p/37510564" target="_blank" rel="noopener">https://zhuanlan.zhihu.com/p/37510564</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></p>
+</blockquote>
+
+        <h1 id="翻转二叉树">
+          <a href="#翻转二叉树" class="heading-link"><i class="fas fa-link"></i></a>翻转二叉树</h1>
+      <p><span class="exturl"><a class="exturl__link" href="https://leetcode-cn.com/problems/invert-binary-tree/" target="_blank" rel="noopener">226. 翻转二叉树</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></p>
+
+        <h2 id="递归">
+          <a href="#递归" class="heading-link"><i class="fas fa-link"></i></a>递归</h2>
+      <figure class="highlight java"><div class="table-container"><table><tbody><tr><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * Definition for a binary tree node.</span></span><br><span class="line"><span class="comment"> * public class TreeNode {</span></span><br><span class="line"><span class="comment"> *     int val;</span></span><br><span class="line"><span class="comment"> *     TreeNode left;</span></span><br><span class="line"><span class="comment"> *     TreeNode right;</span></span><br><span class="line"><span class="comment"> *     TreeNode(int x) { val = x; }</span></span><br><span class="line"><span class="comment"> * }</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>{</span><br><span class="line">    <span class="function"><span class="keyword">public</span> TreeNode <span class="title">invertTree</span><span class="params">(TreeNode root)</span> </span>{</span><br><span class="line">        <span class="comment">// 翻转二叉树，其实就是交换左右节点</span></span><br><span class="line">        <span class="comment">// 可以采用 深度优先搜索，交换节点</span></span><br><span class="line">        <span class="keyword">if</span>(root == <span class="keyword">null</span>) <span class="keyword">return</span> root;</span><br><span class="line"></span><br><span class="line">        TreeNode tmp = root.left;</span><br><span class="line">        root.left = root.right;</span><br><span class="line">        root.right = tmp;</span><br><span class="line"></span><br><span class="line">        invertTree(root.left);</span><br><span class="line">        invertTree(root.right);</span><br><span class="line"></span><br><span class="line">        <span class="keyword">return</span> root;</span><br><span class="line">    }</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></div></figure>
+
+
+        <h3 id="执行截图">
+          <a href="#执行截图" class="heading-link"><i class="fas fa-link"></i></a>执行截图</h3>
+      <p>
+        <img class="lazyload lazyload-gif" src="/images/loading.svg" data-src="https://i.loli.net/2020/11/02/KinPXLuwxycvze8.png" alt="image-20201102154552097">
+      </p>
+
+        <h1 id="找到所有数组中消失的数字">
+          <a href="#找到所有数组中消失的数字" class="heading-link"><i class="fas fa-link"></i></a>找到所有数组中消失的数字</h1>
+      <p><span class="exturl"><a class="exturl__link" href="https://leetcode-cn.com/problems/find-all-numbers-disappeared-in-an-array/" target="_blank" rel="noopener">448. 找到所有数组中消失的数字</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></p>
+
+        <h2 id="原地修改">
+          <a href="#原地修改" class="heading-link"><i class="fas fa-link"></i></a>原地修改</h2>
+      <figure class="highlight java"><div class="table-container"><table><tbody><tr><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>{</span><br><span class="line">    <span class="function"><span class="keyword">public</span> List&lt;Integer&gt; <span class="title">findDisappearedNumbers</span><span class="params">(<span class="keyword">int</span>[] nums)</span> </span>{</span><br><span class="line">        <span class="comment">// 这个既要求时间复杂度，又要求空间复杂度，确实很麻烦</span></span><br><span class="line">        <span class="comment">// 本来想是用个哈希表来存储，但是只能改为在本地修改数组</span></span><br><span class="line"></span><br><span class="line">        List&lt;Integer&gt; res = <span class="keyword">new</span> ArrayList&lt;&gt;();</span><br><span class="line"></span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; nums.length ; i ++ ){</span><br><span class="line">            <span class="comment">// 这边刚刚忘记考虑绝对值，导致索引为负</span></span><br><span class="line">            <span class="keyword">int</span> tmp = Math.abs(nums[i]) - <span class="number">1</span>;</span><br><span class="line">            <span class="keyword">if</span>(nums[tmp] &gt; <span class="number">0</span>){</span><br><span class="line">                nums[tmp] *= -<span class="number">1</span>;</span><br><span class="line">            }</span><br><span class="line">            </span><br><span class="line">        }</span><br><span class="line"></span><br><span class="line">        <span class="comment">// 这边忘记考虑等号，憨批行为</span></span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">1</span>; i &lt;= nums.length; i ++ ){</span><br><span class="line">            <span class="keyword">if</span>(nums[i - <span class="number">1</span>] &gt;= <span class="number">0</span>){</span><br><span class="line">                res.add(i);</span><br><span class="line">            }</span><br><span class="line">        }</span><br><span class="line"></span><br><span class="line">        <span class="keyword">return</span> res;</span><br><span class="line">    }</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></div></figure>
+
+
+        <h3 id="执行截图-1">
+          <a href="#执行截图-1" class="heading-link"><i class="fas fa-link"></i></a>执行截图</h3>
+      <p>​    
+        <img class="lazyload lazyload-gif" src="/images/loading.svg" data-src="https://i.loli.net/2020/11/02/MfwsJRuKP1Ge2ZD.png" alt="image-20201102163137936">
+      </p>
+
+        <h1 id="汉明距离">
+          <a href="#汉明距离" class="heading-link"><i class="fas fa-link"></i></a>汉明距离</h1>
+      <p><span class="exturl"><a class="exturl__link" href="https://leetcode-cn.com/problems/hamming-distance/" target="_blank" rel="noopener">461. 汉明距离</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></p>
+
+        <h2 id="二进制运算">
+          <a href="#二进制运算" class="heading-link"><i class="fas fa-link"></i></a>二进制运算</h2>
+      <figure class="highlight java"><div class="table-container"><table><tbody><tr><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>{</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">hammingDistance</span><span class="params">(<span class="keyword">int</span> x, <span class="keyword">int</span> y)</span> </span>{</span><br><span class="line">        <span class="comment">// 没想到什么好的方法，可能关于二进制操作有一些库函数可以利用</span></span><br><span class="line">        <span class="comment">// 比如说逻辑按位与运算，只要计算结果不为0的位树和</span></span><br><span class="line">        <span class="comment">// 果然是不熟悉 Java的位运算，其实思路上没什么问题</span></span><br><span class="line"></span><br><span class="line">        <span class="comment">// 为什么这里要用异或而不能是与运算呢</span></span><br><span class="line">        <span class="comment">// 原来是我这个憨憨把与运算不小心理解错了</span></span><br><span class="line">        <span class="keyword">int</span> res = x ^ y;</span><br><span class="line">        <span class="keyword">int</span> count = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">while</span>(res != <span class="number">0</span>){</span><br><span class="line">            <span class="keyword">if</span>((res &amp; <span class="number">1</span>) == <span class="number">1</span>){</span><br><span class="line">                count ++ ;</span><br><span class="line">            }</span><br><span class="line">            <span class="comment">// 这边的右移位确保每次按位与最后一位</span></span><br><span class="line">            res = res &gt;&gt; <span class="number">1</span>;</span><br><span class="line">        }</span><br><span class="line"></span><br><span class="line">        <span class="keyword">return</span> count;</span><br><span class="line">    }</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></div></figure>
+
+
+        <h3 id="执行结果-4">
+          <a href="#执行结果-4" class="heading-link"><i class="fas fa-link"></i></a>执行结果</h3>
+      <p>
+        <img class="lazyload lazyload-gif" src="/images/loading.svg" data-src="https://i.loli.net/2020/11/02/CKo8vPnX4yWc3ta.png" alt="image-20201102171521827">
+      </p>
+
+        <h1 id="二叉树的直径">
+          <a href="#二叉树的直径" class="heading-link"><i class="fas fa-link"></i></a>二叉树的直径</h1>
+      <p><span class="exturl"><a class="exturl__link" href="https://leetcode-cn.com/problems/diameter-of-binary-tree/" target="_blank" rel="noopener">543. 二叉树的直径</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></p>
+
+        <h2 id="转换节点-递归">
+          <a href="#转换节点-递归" class="heading-link"><i class="fas fa-link"></i></a>转换节点 + 递归</h2>
+      <figure class="highlight java"><div class="table-container"><table><tbody><tr><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * Definition for a binary tree node.</span></span><br><span class="line"><span class="comment"> * public class TreeNode {</span></span><br><span class="line"><span class="comment"> *     int val;</span></span><br><span class="line"><span class="comment"> *     TreeNode left;</span></span><br><span class="line"><span class="comment"> *     TreeNode right;</span></span><br><span class="line"><span class="comment"> *     TreeNode(int x) { val = x; }</span></span><br><span class="line"><span class="comment"> * }</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>{</span><br><span class="line">    <span class="keyword">int</span> count = <span class="number">0</span>;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">diameterOfBinaryTree</span><span class="params">(TreeNode root)</span> </span>{</span><br><span class="line">        <span class="comment">// 这一题真的不仅仅是简单难度</span></span><br><span class="line">        <span class="comment">// 可以转换一下思维，求直径，其实就是求一个节点到其他节点的最长路径</span></span><br><span class="line">        <span class="comment">// 那么可以固定一个节点为路径的 “根节点”，求这个节点的最长路径</span></span><br><span class="line">        reverse(root);</span><br><span class="line">        <span class="keyword">return</span> count;</span><br><span class="line">    }</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">reverse</span><span class="params">(TreeNode root)</span></span>{</span><br><span class="line">        <span class="keyword">if</span>(root == <span class="keyword">null</span>) <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">        </span><br><span class="line">        <span class="keyword">int</span> left = reverse(root.left);</span><br><span class="line">        <span class="keyword">int</span> right = reverse(root.right);</span><br><span class="line"></span><br><span class="line">        count = Math.max(count, left + right);</span><br><span class="line">        <span class="keyword">return</span> <span class="number">1</span> + Math.max(left, right);</span><br><span class="line">    }</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></div></figure>
+
+
+        <h3 id="执行结果-5">
+          <a href="#执行结果-5" class="heading-link"><i class="fas fa-link"></i></a>执行结果</h3>
+      <p>
+        <img class="lazyload lazyload-gif" src="/images/loading.svg" data-src="C:%5CUsers%5CGemini%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20201102175628736.png" alt="image-20201102175628736">
+      </p>
 <script>
         document.querySelectorAll('.github-emoji')
           .forEach(el => {
