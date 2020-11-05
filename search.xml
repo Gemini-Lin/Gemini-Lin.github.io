@@ -137,6 +137,25 @@
       <p>
         <img class="lazyload lazyload-gif" src="/images/loading.svg" data-src="https://i.loli.net/2020/11/05/5m34LpTKnR9WDXM.png" alt="image-20201105165801114">
       </p>
+
+        <h1 id="二叉树中的最大路径和">
+          <a href="#二叉树中的最大路径和" class="heading-link"><i class="fas fa-link"></i></a>二叉树中的最大路径和</h1>
+      <p><span class="exturl"><a class="exturl__link" href="https://leetcode-cn.com/problems/binary-tree-maximum-path-sum/" target="_blank" rel="noopener">124. 二叉树中的最大路径和</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></p>
+
+        <h1 id="根据字符出现频率排序">
+          <a href="#根据字符出现频率排序" class="heading-link"><i class="fas fa-link"></i></a>根据字符出现频率排序</h1>
+      <p><span class="exturl"><a class="exturl__link" href="https://leetcode-cn.com/problems/sort-characters-by-frequency/" target="_blank" rel="noopener">451. 根据字符出现频率排序</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></p>
+
+        <h2 id="桶排序">
+          <a href="#桶排序" class="heading-link"><i class="fas fa-link"></i></a>桶排序</h2>
+      <figure class="highlight java"><div class="table-container"><table><tbody><tr><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>{</span><br><span class="line">    <span class="function"><span class="keyword">public</span> String <span class="title">frequencySort</span><span class="params">(String s)</span> </span>{</span><br><span class="line">        <span class="comment">// 看到跟谁学的面经里面有这道题</span></span><br><span class="line">        <span class="comment">// 利用桶排序做法</span></span><br><span class="line"></span><br><span class="line">        <span class="comment">// 初始化 HashMap</span></span><br><span class="line">        HashMap&lt;Character,Integer&gt; map = <span class="keyword">new</span> HashMap&lt;&gt;();</span><br><span class="line">        <span class="keyword">char</span>[] array = s.toCharArray();</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">char</span> ch: array){</span><br><span class="line">            map.put(ch,map.getOrDefault(ch, <span class="number">0</span>) + <span class="number">1</span> );</span><br><span class="line">        }</span><br><span class="line"></span><br><span class="line">        <span class="comment">// 装桶</span></span><br><span class="line">        List&lt;Character&gt;[] list = <span class="keyword">new</span> List[s.length() + <span class="number">1</span>];</span><br><span class="line">        <span class="comment">// 遍历 key,将 value相同的字母加入同一个链表</span></span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">char</span> key: map.keySet()){</span><br><span class="line">            <span class="keyword">int</span> i = map.get(key);</span><br><span class="line">            <span class="keyword">if</span>(list[i] == <span class="keyword">null</span> ){</span><br><span class="line">                list[i] = <span class="keyword">new</span> ArrayList&lt;&gt;();</span><br><span class="line">            }</span><br><span class="line">            list[i].add(key);</span><br><span class="line">        }</span><br><span class="line"></span><br><span class="line">        <span class="comment">// 倒桶，按照字母出现次数的高低，倒序输出</span></span><br><span class="line">        <span class="keyword">char</span>[] res = <span class="keyword">new</span> <span class="keyword">char</span>[s.length()];</span><br><span class="line">        <span class="keyword">int</span> index = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i = s.length(); i &gt; <span class="number">0</span>; i --){</span><br><span class="line">            <span class="keyword">if</span>(list[i] == <span class="keyword">null</span>) <span class="keyword">continue</span>;</span><br><span class="line">            <span class="keyword">for</span>(<span class="keyword">char</span> ch: list[i]){</span><br><span class="line">                <span class="keyword">for</span>(<span class="keyword">int</span> j = <span class="number">0</span>; j &lt; i ; j ++ ){</span><br><span class="line">                    res[index ++ ] = ch;</span><br><span class="line">                }</span><br><span class="line">            }</span><br><span class="line">        }</span><br><span class="line"></span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">new</span> String(res);</span><br><span class="line">    }</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></div></figure>
+
+
+        <h3 id="执行结果-5">
+          <a href="#执行结果-5" class="heading-link"><i class="fas fa-link"></i></a>执行结果</h3>
+      <p>
+        <img class="lazyload lazyload-gif" src="/images/loading.svg" data-src="https://i.loli.net/2020/11/06/hdp1YjsP8zvOB53.png" alt="image-20201106001122725">
+      </p>
 <script>
         document.querySelectorAll('.github-emoji')
           .forEach(el => {
