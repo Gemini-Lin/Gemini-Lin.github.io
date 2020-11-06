@@ -57,6 +57,84 @@
       </tags>
   </entry>
   <entry>
+    <title>跟谁学面经</title>
+    <url>/genshuixue/</url>
+    <content><![CDATA[<h1 id="Free-Talk">
+          <a href="#Free-Talk" class="heading-link"><i class="fas fa-link"></i></a>Free Talk</h1>
+      <p>跟谁学是我投的第一家公司，周一投的简历，周二HR联系我，约了周五下午4点。</p>
+<a id="more"></a>
+
+
+        <h1 id="跟谁学一面">
+          <a href="#跟谁学一面" class="heading-link"><i class="fas fa-link"></i></a>跟谁学一面</h1>
+      <p>介绍一下项目：</p>
+<ul>
+<li>我讲了项目的前后端分离，Shiro，JWT，Redis，MySQL</li>
+<li>问使用的MySQl引擎是哪个，答Innodb，追问还了解那些引擎，追问Innodb 和 MyIsam 的区别（这边答得一般，没回答全）</li>
+<li>问 MySQL 的优化过程，从 explain，到 随机采样， analyze table, force index，覆盖索引，最左前缀原则（这边面试官看我比较懂，就没问了）</li>
+<li>问 Redis 的更新操作，答 延时双删，追问双删时，先删除了缓冲后，又有大量的业务逻辑进来，该怎么缓解数据库压力。（这边没有回答出来）</li>
+<li>问 Redis 的负载均衡怎么实现的，答利用自从复制和读写分离（这边举了项目的一些例子）</li>
+<li>问 AOP，IOC，追问AOP 有什么好处（只答出一半）</li>
+</ul>
+<p>Java基础：</p>
+<ul>
+<li>介绍一下面向对象，联合面向过程和封装、继承、多态答了一下。追问解释封装、继承、多态。（多态这边没答好，扯到泛型去了）</li>
+<li>讲一下 Java 的泛型，没答好，扯到 反射去了。</li>
+<li>讲一下线程和进程，追问什么时候使用多进程，什么时候使用多进程（没答好）</li>
+<li>讲一下进程的几种状态（讲的特别乱，也不全）</li>
+<li>追问 多进程之间怎么通信（紧张到没答出来）</li>
+</ul>
+<p>计网：</p>
+<ul>
+<li>讲一下 TCP/IP 模型</li>
+<li>追问 TCP / UDP的区别和使用场景，讲了 DNS 是使用 UDP，追问为什么？</li>
+<li>问 TCP 怎么实现可靠传输的</li>
+<li>问流量控制和拥塞控制 （计网这边都没答好）</li>
+</ul>
+<p>算法题：（用的百家互联）</p>
+<figure class="highlight java"><div class="table-container"><table><tbody><tr><td class="code"><pre><span class="line">二叉树右侧投影</span><br><span class="line">从右向左观察一棵二叉树，返回能看到的元素</span><br><span class="line"></span><br><span class="line">        <span class="number">1</span>                            &lt;-----</span><br><span class="line">      /    \</span><br><span class="line">    <span class="number">2</span>       <span class="number">3</span>                       &lt;-----</span><br><span class="line">     \         \</span><br><span class="line">      <span class="number">5</span>         <span class="number">7</span>                   &lt;-----</span><br><span class="line">    / </span><br><span class="line">  <span class="number">6</span>                                  &lt;-----</span><br><span class="line">应该返回[ <span class="number">1</span>, <span class="number">3</span>, <span class="number">7</span>, <span class="number">6</span> ]</span><br><span class="line">    <span class="comment">// 想了半天没想出来，面试官提示了层序遍历，还是没写出来</span></span><br></pre></td></tr></tbody></table></div></figure>
+
+<figure class="highlight java"><div class="table-container"><table><tbody><tr><td class="code"><pre><span class="line">实现一个快排算法</span><br><span class="line">    <span class="comment">// 一开始都写成二分查找去了，后面改成了冒泡排序，然后也没有写完，好久没写过快排了</span></span><br></pre></td></tr></tbody></table></div></figure>
+
+<p>结束的时候，面试官问了一下我的博客网站，面试官建议要多复习一下基础知识，我和面试官讲自己很惭愧，觉得肯定过不了一面了，面试官说还要考虑一下其他面试者的情况，一面结果会在晚上或者明天通知，不过我觉得应该就是凉了。</p>
+
+        <h1 id="反思">
+          <a href="#反思" class="heading-link"><i class="fas fa-link"></i></a>反思</h1>
+      <ol>
+<li>首先是计网和操作系统，加上 Java 的基础部分，因为没有怎么准备，回答的特别差(这边至少要花一周时间，做一下复习，记在脑子里)</li>
+<li>其次是要注意构建知识树，不要被面试官绕着走，遇到会的题，要一层层的深入进去，直到面试官打断</li>
+<li>对于算法题，还需要多刷一下，多做总结，刷的提醒还是太少，刷的过程要少看题解（算法题还特别差，必须要在十分钟内能够有清晰的思路）</li>
+<li>注意每天都要复习一下今天看过的知识，最后是自己讲一遍，这样面试才不会特别紧张</li>
+<li>Redis 和 AQS 这边还没有都弄懂，还需要继续补知识</li>
+<li>再认真准备一周，下周日开始投滴滴和京东</li>
+</ol>
+<script>
+        document.querySelectorAll('.github-emoji')
+          .forEach(el => {
+            if (!el.dataset.src) { return; }
+            const img = document.createElement('img');
+            img.style = 'display:none !important;';
+            img.src = el.dataset.src;
+            img.addEventListener('error', () => {
+              img.remove();
+              el.style.color = 'inherit';
+              el.style.backgroundImage = 'none';
+              el.style.background = 'none';
+            });
+            img.addEventListener('load', () => {
+              img.remove();
+            });
+            document.body.appendChild(img);
+          });
+      </script>]]></content>
+      <categories>
+        <category>面经</category>
+      </categories>
+      <tags>
+        <tag>跟谁学</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>LeetCode-Tree</title>
     <url>/LeetCode-Tree/</url>
     <content><![CDATA[<h1 id="Free-Talk">
