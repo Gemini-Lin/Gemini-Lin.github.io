@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://gemini-lin.github.io/LeetCode-Tree/</loc>
+    
+    <lastmod>2020-11-07T16:02:37.935Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://gemini-lin.github.io/LeetCode-SortingAlgorithm/</loc>
     
     <lastmod>2020-11-07T14:48:38.749Z</lastmod>
@@ -12,13 +19,6 @@
     <loc>https://gemini-lin.github.io/genshuixue/</loc>
     
     <lastmod>2020-11-07T06:51:29.620Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://gemini-lin.github.io/LeetCode-Tree/</loc>
-    
-    <lastmod>2020-11-07T03:04:04.517Z</lastmod>
     
   </url>
   
