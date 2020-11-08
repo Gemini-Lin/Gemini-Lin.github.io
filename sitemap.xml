@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://gemini-lin.github.io/LeetCode-EasyTree/</loc>
+    
+    <lastmod>2020-11-08T09:46:50.856Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://gemini-lin.github.io/LeetCode-Tree/</loc>
     
     <lastmod>2020-11-08T08:49:05.175Z</lastmod>
