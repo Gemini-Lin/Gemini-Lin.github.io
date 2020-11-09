@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://gemini-lin.github.io/"/>
-  <updated>2020-11-09T03:43:47.715Z</updated>
+  <updated>2020-11-09T09:01:22.234Z</updated>
   <id>https://gemini-lin.github.io/</id>
   
   <author>
@@ -15,6 +15,32 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>LeetCode-Offer-Part1</title>
+    <link href="https://gemini-lin.github.io/LeetCode-Offer-Part1/"/>
+    <id>https://gemini-lin.github.io/LeetCode-Offer-Part1/</id>
+    <published>2020-11-09T08:24:15.000Z</published>
+    <updated>2020-11-09T09:01:22.234Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;Free-Talk&quot;&gt;
+          &lt;a href=&quot;#Free-Talk&quot; class=&quot;heading-link&quot;&gt;&lt;i class=&quot;fas fa-link&quot;&gt;&lt;/i&gt;&lt;/a&gt;Free Talk&lt;/h1&gt;
+      &lt;p&gt;这系列文章用来记录 剑指 Offer 第二版 的 75 题题解。&lt;/p&gt;
+&lt;p&gt;Part 1 ： 1 - 15 题&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="LeetCode" scheme="https://Gemini-Lin.github.io/categories/LeetCode/"/>
+    
+    
+      <category term="LeetCode" scheme="https://Gemini-Lin.github.io/tags/LeetCode/"/>
+    
+      <category term="剑指 Offer" scheme="https://Gemini-Lin.github.io/tags/%E5%89%91%E6%8C%87-Offer/"/>
+    
+  </entry>
   
   <entry>
     <title>LeetCode-EasyTree</title>
@@ -38,9 +64,9 @@
     
       <category term="LeetCode" scheme="https://Gemini-Lin.github.io/tags/LeetCode/"/>
     
-      <category term="Tree" scheme="https://Gemini-Lin.github.io/tags/Tree/"/>
-    
       <category term="Easy" scheme="https://Gemini-Lin.github.io/tags/Easy/"/>
+    
+      <category term="Tree" scheme="https://Gemini-Lin.github.io/tags/Tree/"/>
     
   </entry>
   
@@ -533,48 +559,6 @@
       <category term="虚拟内存" scheme="https://Gemini-Lin.github.io/tags/%E8%99%9A%E6%8B%9F%E5%86%85%E5%AD%98/"/>
     
       <category term="页面置换" scheme="https://Gemini-Lin.github.io/tags/%E9%A1%B5%E9%9D%A2%E7%BD%AE%E6%8D%A2/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>操作系统第四章--存储器管理（内存）</title>
-    <link href="https://gemini-lin.github.io/Operating-System-6/"/>
-    <id>https://gemini-lin.github.io/Operating-System-6/</id>
-    <published>2020-08-12T13:59:38.000Z</published>
-    <updated>2020-08-18T09:04:06.662Z</updated>
-    
-    <summary type="html">
-    
-      &lt;p&gt;
-        &lt;img class=&quot;lazyload lazyload-gif&quot; src=&quot;/images/loading.svg&quot; data-src=&quot;https://s1.ax1x.com/2020/08/12/axaINn.png&quot; alt=&quot;操作系统第四章--存储器管理（内存）&quot;&gt;
-      &lt;br&gt;&lt;/p&gt;
-
-
-&lt;title&gt;操作系统第四章--存储器管理（内存）&lt;/title&gt;
-&lt;meta charset=&quot;utf-8&quot;&gt;
-&lt;meta http-equiv=&quot;Content-Type&quot; content=&quot;text/html; charset=utf-8&quot;&gt;
-&lt;meta name=&quot;renderer&quot; content=&quot;webkit&quot;&gt;
-&lt;meta name=&quot;author&quot; content=&quot;mubu.com&quot;&gt;
-&lt;meta name=&quot;generator&quot; content=&quot;Hexo 4.2.1&quot;&gt;&lt;link rel=&quot;alternate&quot; href=&quot;/atom.xml&quot; title=&quot;GeminiPlanet&quot; type=&quot;application/atom+xml&quot;&gt;
-
-
-&lt;div class=&quot;export-wrapper&quot;&gt;&lt;div style=&quot;font-size: 22px; padding: 0 15px 0;&quot;&gt;&lt;div style=&quot;padding-bottom: 24px&quot;&gt;操作系统第四章--存储器管理（内存）&lt;/div&gt;&lt;div style=&quot;background: #e5e6e8; height: 1px; margin-bottom: 20px;&quot;&gt;&lt;/div&gt;&lt;/div&gt;&lt;ul style=&quot;list-style: disc outside;&quot;&gt;&lt;li style=&quot;line-height: 24px;&quot;&gt;&lt;span class=&quot;content mubu-node&quot; style=&quot;line-height: 24px; min-height: 24px; font-size: 16px; padding: 2px 0px; display: inline-block; vertical-align: top;&quot;&gt;&lt;span class=&quot;bold&quot; style=&quot;font-weight: bold;&quot;&gt;存储器的层次结构&lt;/span&gt;&lt;/span&gt;&lt;ul class=&quot;children&quot; style=&quot;list-style: disc outside; padding-bottom: 4px;&quot;&gt;&lt;li style=&quot;line-height: 24px;&quot;&gt;&lt;span class=&quot;content mubu-node&quot; style=&quot;line-height: 24px; min-height: 24px; font-size: 16px; padding: 2px 0px; display: inline-block; vertical-align: top;&quot;&gt;&lt;span class=&quot;bold&quot; style=&quot;font-weight: bold;&quot;&gt;存储器的层次结构（缓存、内存、外存）&lt;/span&gt;&lt;/span&gt;&lt;ul class=&quot;children&quot; style=&quot;list-style: disc outside; padding-bottom: 4px;&quot;&gt;&lt;li style=&quot;line-height: 24px;&quot;&gt;&lt;span class=&quot;content mubu-node&quot; style=&quot;line-height: 24px; min-height: 24px; font-size: 16px; padding: 2px 0px; display: inline-block; vertical-align: top;&quot;&gt;&lt;span class=&quot;bold&quot; style=&quot;font-weight: bold;&quot;&gt;主存储器与寄存器&lt;/span&gt;&lt;/span&gt;&lt;ul class=&quot;children&quot; style=&quot;list-style: disc outside; padding-bottom: 4px;&quot;&gt;&lt;li style=&quot;line-height: 24px;&quot;&gt;&lt;span class=&quot;content mubu-node&quot; style=&quot;line-height: 24px; min-height: 24px; font-size: 16px; padding: 2px 0px; display: inline-block; vertical-align: top;&quot;&gt;&lt;span class=&quot;bold&quot; style=&quot;font-weight: bold;&quot;&gt;主存储器：&lt;/span&gt;用于保存进程运行时的程序和数据。&lt;/span&gt;&lt;/li&gt;&lt;li style=&quot;line-height: 24px;&quot;&gt;&lt;span class=&quot;content mubu-node&quot; style=&quot;line-height: 24px; min-height: 24px; font-size: 16px; padding: 2px 0px; display: inline-block; vertical-align: top;&quot;&gt;&lt;span class=&quot;bold&quot; style=&quot;font-weight: bold;&quot;&gt;寄存器：&lt;/span&gt;寄存器&lt;span class=&quot;bold&quot; style=&quot;font-weight: bold;&quot;&gt;访问速度最快&lt;/span&gt;，与CPU协调工作。&lt;/span&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/li&gt;&lt;li style=&quot;line-height: 24px;&quot;&gt;&lt;span class=&quot;content mubu-node&quot; style=&quot;line-height: 24px; min-height: 24px; font-size: 16px; padding: 2px 0px; display: inline-block; vertical-align: top;&quot;&gt;&lt;span class=&quot;bold&quot; style=&quot;font-weight: bold;&quot;&gt;高速缓存与磁盘缓存&lt;/span&gt;&lt;/span&gt;&lt;ul class=&quot;children&quot; style=&quot;list-style: disc outside; padding-bottom: 4px;&quot;&gt;&lt;li style=&quot;line-height: 24px;&quot;&gt;&lt;span class=&quot;content mubu-node&quot; style=&quot;line-height: 24px; min-height: 24px; font-size: 16px; padding: 2px 0px; display: inline-block; vertical-align: top;&quot;&gt;&lt;span class=&quot;bold&quot; style=&quot;font-weight: bold;&quot;&gt;高速缓存：&lt;/span&gt;CPU对高速缓存的访问，其速度&lt;span class=&quot;bold&quot; style=&quot;font-weight: bold;&quot;&gt;比访问主存快&lt;/span&gt;，&lt;span class=&quot;bold&quot; style=&quot;font-weight: bold;&quot;&gt;比访问寄存器慢&lt;/span&gt;。&lt;/span&gt;&lt;/li&gt;&lt;li style=&quot;line-height: 24px;&quot;&gt;&lt;span class=&quot;content mubu-node&quot; style=&quot;line-height: 24px; min-height: 24px; font-size: 16px; padding: 2px 0px; display: inline-block; vertical-align: top;&quot;&gt;&lt;span class=&quot;bold&quot; style=&quot;font-weight: bold;&quot;&gt;磁盘缓存：&lt;/span&gt;内存中一块存储区，对应于某固定磁盘，&lt;span class=&quot;bold&quot; style=&quot;font-weight: bold;&quot;&gt;临时存储磁盘数据&lt;/span&gt;（如，数据预取）。&lt;/span&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/div&gt;
-    
-    </summary>
-    
-    
-      <category term="课程总结" scheme="https://Gemini-Lin.github.io/categories/%E8%AF%BE%E7%A8%8B%E6%80%BB%E7%BB%93/"/>
-    
-      <category term="操作系统" scheme="https://Gemini-Lin.github.io/categories/%E8%AF%BE%E7%A8%8B%E6%80%BB%E7%BB%93/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/"/>
-    
-    
-      <category term="内存管理" scheme="https://Gemini-Lin.github.io/tags/%E5%86%85%E5%AD%98%E7%AE%A1%E7%90%86/"/>
-    
-      <category term="OS" scheme="https://Gemini-Lin.github.io/tags/OS/"/>
-    
-      <category term="分页" scheme="https://Gemini-Lin.github.io/tags/%E5%88%86%E9%A1%B5/"/>
-    
-      <category term="分段" scheme="https://Gemini-Lin.github.io/tags/%E5%88%86%E6%AE%B5/"/>
     
   </entry>
   
