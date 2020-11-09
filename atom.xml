@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://gemini-lin.github.io/"/>
-  <updated>2020-11-09T09:01:22.234Z</updated>
+  <updated>2020-11-09T11:08:56.294Z</updated>
   <id>https://gemini-lin.github.io/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="https://gemini-lin.github.io/LeetCode-Offer-Part1/"/>
     <id>https://gemini-lin.github.io/LeetCode-Offer-Part1/</id>
     <published>2020-11-09T08:24:15.000Z</published>
-    <updated>2020-11-09T09:01:22.234Z</updated>
+    <updated>2020-11-09T11:08:56.294Z</updated>
     
     <summary type="html">
     
@@ -64,9 +64,9 @@
     
       <category term="LeetCode" scheme="https://Gemini-Lin.github.io/tags/LeetCode/"/>
     
-      <category term="Easy" scheme="https://Gemini-Lin.github.io/tags/Easy/"/>
-    
       <category term="Tree" scheme="https://Gemini-Lin.github.io/tags/Tree/"/>
+    
+      <category term="Easy" scheme="https://Gemini-Lin.github.io/tags/Easy/"/>
     
   </entry>
   
