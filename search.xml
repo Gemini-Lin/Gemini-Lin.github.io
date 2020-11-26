@@ -81,6 +81,19 @@
         <h1 id="一面感受">
           <a href="#一面感受" class="heading-link"><i class="fas fa-link"></i></a>一面感受</h1>
       <p>面试官人真的超好，问的题目也比较基础，接下来还是再认真准备一下，说不定就进字节跳动了呢？</p>
+
+        <h1 id="字节跳动二面">
+          <a href="#字节跳动二面" class="heading-link"><i class="fas fa-link"></i></a>字节跳动二面</h1>
+      <p>简单自我介绍一下</p>
+<p>直接开始写算法题</p>
+<p>LeetCode medium 难度 ：链表排序（要求空间复杂度为常量），我用插入排序写出来了，面试官让我再用归并排序写，我稍微讲了一下思路，没写出来</p>
+<p>LeetCode hard 难度：n 皇后问题</p>
+<p>写完两道算法题之后，面试官让我简单讲讲 MySQL 懂的所有知识、Redis 的数据类型</p>
+<p>最后问了 cookie、session 的详细问题</p>
+
+        <h1 id="二面感受">
+          <a href="#二面感受" class="heading-link"><i class="fas fa-link"></i></a>二面感受</h1>
+      <p>一开始都觉得自己要挂，后面突然状态好了起来。</p>
 <script>
         document.querySelectorAll('.github-emoji')
           .forEach(el => {
