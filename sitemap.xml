@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://gemini-lin.github.io/friends/index.html</loc>
+    
+    <lastmod>2020-12-14T07:19:27.618Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://gemini-lin.github.io/bytedance/</loc>
     
     <lastmod>2020-11-27T03:08:25.765Z</lastmod>
@@ -614,13 +621,6 @@
     <loc>https://gemini-lin.github.io/safety/</loc>
     
     <lastmod>2020-07-03T03:18:32.767Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://gemini-lin.github.io/friends/index.html</loc>
-    
-    <lastmod>2020-07-03T01:48:44.643Z</lastmod>
     
   </url>
   
