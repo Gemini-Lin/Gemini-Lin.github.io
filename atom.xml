@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://gemini-lin.github.io/"/>
-  <updated>2020-11-27T03:08:25.765Z</updated>
+  <updated>2020-12-15T09:28:53.288Z</updated>
   <id>https://gemini-lin.github.io/</id>
   
   <author>
@@ -15,6 +15,32 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Technical-Notes-1</title>
+    <link href="https://gemini-lin.github.io/Technical-Notes-1/"/>
+    <id>https://gemini-lin.github.io/Technical-Notes-1/</id>
+    <published>2020-12-15T09:01:13.000Z</published>
+    <updated>2020-12-15T09:28:53.288Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;free-talk&quot;&gt;
+          &lt;a href=&quot;#free-talk&quot; class=&quot;heading-link&quot;&gt;&lt;i class=&quot;fas fa-link&quot;&gt;&lt;/i&gt;&lt;/a&gt;Free Talk&lt;/h1&gt;
+      
+&lt;p&gt;​	我发现自己每天都会在实验，或者编程，或者一些知识点上遇到困惑，但是之前总是简单百度看一下就过去了。今天我突然想另开一个专栏，用于记录自己每天的一个简单的知识收获，方便自己加深印象以及后续查阅。这一专栏的文章知识点都比较零碎，更多地是给自己做记录，打算之后有空每天都更新一篇。&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="技术札记" scheme="https://Gemini-Lin.github.io/categories/%E6%8A%80%E6%9C%AF%E6%9C%AD%E8%AE%B0/"/>
+    
+    
+      <category term="编译型语言" scheme="https://Gemini-Lin.github.io/tags/%E7%BC%96%E8%AF%91%E5%9E%8B%E8%AF%AD%E8%A8%80/"/>
+    
+      <category term="解释型语言" scheme="https://Gemini-Lin.github.io/tags/%E8%A7%A3%E9%87%8A%E5%9E%8B%E8%AF%AD%E8%A8%80/"/>
+    
+  </entry>
   
   <entry>
     <title>字节跳动面经</title>
@@ -511,41 +537,6 @@
       <category term="LeetCode" scheme="https://Gemini-Lin.github.io/tags/LeetCode/"/>
     
       <category term="Array" scheme="https://Gemini-Lin.github.io/tags/Array/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>汇编语言期末总结</title>
-    <link href="https://gemini-lin.github.io/Assembly-Language/"/>
-    <id>https://gemini-lin.github.io/Assembly-Language/</id>
-    <published>2020-08-18T08:13:55.000Z</published>
-    <updated>2020-08-19T03:16:09.988Z</updated>
-    
-    <summary type="html">
-    
-      &lt;p&gt;
-        &lt;img class=&quot;lazyload lazyload-gif&quot; src=&quot;/images/loading.svg&quot; data-src=&quot;https://i.loli.net/2020/08/18/xPuCYETheyF3sQ4.png&quot; alt=&quot;汇编语言&quot;&gt;
-      &lt;/p&gt;
-
-        &lt;h1 id=&quot;基础知识&quot;&gt;
-          &lt;a href=&quot;#基础知识&quot; class=&quot;heading-link&quot;&gt;&lt;i class=&quot;fas fa-link&quot;&gt;&lt;/i&gt;&lt;/a&gt;基础知识&lt;/h1&gt;
-      
-
-        &lt;h2 id=&quot;机器语言&quot;&gt;
-          &lt;a href=&quot;#机器语言&quot; class=&quot;heading-link&quot;&gt;&lt;i class=&quot;fas fa-link&quot;&gt;&lt;/i&gt;&lt;/a&gt;机器语言&lt;/h2&gt;
-      
-&lt;p&gt;汇编语言的&lt;strong&gt;本质可以看作计算机硬件的功能接口。&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;机器语言是&lt;strong&gt;机器指令&lt;/strong&gt;的集合。&lt;/p&gt;
-    
-    </summary>
-    
-    
-      <category term="课程总结" scheme="https://Gemini-Lin.github.io/categories/%E8%AF%BE%E7%A8%8B%E6%80%BB%E7%BB%93/"/>
-    
-      <category term="汇编语言" scheme="https://Gemini-Lin.github.io/categories/%E8%AF%BE%E7%A8%8B%E6%80%BB%E7%BB%93/%E6%B1%87%E7%BC%96%E8%AF%AD%E8%A8%80/"/>
-    
-    
-      <category term="汇编语言" scheme="https://Gemini-Lin.github.io/tags/%E6%B1%87%E7%BC%96%E8%AF%AD%E8%A8%80/"/>
     
   </entry>
   
