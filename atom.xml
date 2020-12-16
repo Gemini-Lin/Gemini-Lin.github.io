@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://gemini-lin.github.io/"/>
-  <updated>2020-12-15T15:17:13.466Z</updated>
+  <updated>2020-12-16T10:49:44.357Z</updated>
   <id>https://gemini-lin.github.io/</id>
   
   <author>
@@ -21,13 +21,13 @@
     <link href="https://gemini-lin.github.io/The-Little-Go-Book/"/>
     <id>https://gemini-lin.github.io/The-Little-Go-Book/</id>
     <published>2020-12-15T15:10:22.000Z</published>
-    <updated>2020-12-15T15:17:13.466Z</updated>
+    <updated>2020-12-16T10:49:44.357Z</updated>
     
     <summary type="html">
     
       &lt;h1 id=&quot;Free-Talk&quot;&gt;
           &lt;a href=&quot;#Free-Talk&quot; class=&quot;heading-link&quot;&gt;&lt;i class=&quot;fas fa-link&quot;&gt;&lt;/i&gt;&lt;/a&gt;Free Talk&lt;/h1&gt;
-      &lt;p&gt;因为下个月将要去字节实习，技术栈要从 Java 转为 Goland ，大约半年期多前，我粗略地学习过一次 Goland ，完成了一个简单项目研发。这次打算系统地学习一下 Goland ，这篇文章主要是阅读 The Little Go Book 的笔记，适合初学者快速了解 Goland。&lt;/p&gt;
+      &lt;p&gt;因为下个月将要去字节实习，技术栈要从 Java 转为 Goland ，大约半年多前，我粗略地学习过一次 Goland ，完成了一个简单项目研发。这次打算系统地学习一下 Goland ，这篇文章主要是阅读 The Little Go Book 的笔记，适合有一定其他语言经验的开发者快速了解 Goland。&lt;/p&gt;
     
     </summary>
     

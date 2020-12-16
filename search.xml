@@ -61,7 +61,7 @@
     <url>/The-Little-Go-Book/</url>
     <content><![CDATA[<h1 id="Free-Talk">
           <a href="#Free-Talk" class="heading-link"><i class="fas fa-link"></i></a>Free Talk</h1>
-      <p>因为下个月将要去字节实习，技术栈要从 Java 转为 Goland ，大约半年期多前，我粗略地学习过一次 Goland ，完成了一个简单项目研发。这次打算系统地学习一下 Goland ，这篇文章主要是阅读 The Little Go Book 的笔记，适合初学者快速了解 Goland。</p>
+      <p>因为下个月将要去字节实习，技术栈要从 Java 转为 Goland ，大约半年多前，我粗略地学习过一次 Goland ，完成了一个简单项目研发。这次打算系统地学习一下 Goland ，这篇文章主要是阅读 The Little Go Book 的笔记，适合有一定其他语言经验的开发者快速了解 Goland。</p>
 <a id="more"></a>
 
 
@@ -71,8 +71,8 @@
         <h2 id="简单定义">
           <a href="#简单定义" class="heading-link"><i class="fas fa-link"></i></a>简单定义</h2>
       <p>Go是一种<strong>编译型</strong>、具有<strong>静态类型</strong>和类C语言语法的语言，并具备<strong>垃圾回收机制</strong>。</p>
-<p>编译型上面已经讲过， 不再赘述</p>
-<p><strong>静态类型：</strong>变量必须指定一个类型，可以在声明变量时指定变量类型，但是在大多数情况下，让编译器去自动推断类型</p>
+<p>编译型之前已经讲过， 不再赘述。</p>
+<p><strong>静态类型：</strong>变量必须指定一个类型，可以在声明变量时指定变量类型，但是在大多数情况下，让编译器去自动推断类型。</p>
 <p>下载地址：<span class="exturl"><a class="exturl__link" href="https://golang.org/dl/" target="_blank" rel="noopener">https://golang.org/dl/</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></p>
 
         <h2 id="程序示例">
@@ -92,6 +92,225 @@
 
 <figure class="highlight go"><div class="table-container"><table><tbody><tr><td class="code"><pre><span class="line"><span class="comment">// 接受返回值</span></span><br><span class="line"><span class="comment">// _是一个空白标识符，尤其用在返回值时没有真正的赋值</span></span><br><span class="line">_, exists := power(<span class="string">"goku"</span>)</span><br><span class="line">    <span class="keyword">if</span> exists == <span class="literal">false</span> {</span><br><span class="line">    <span class="comment">// 处理出错情况</span></span><br><span class="line">}</span><br></pre></td></tr></tbody></table></div></figure>
 
+
+        <h1 id="结构体">
+          <a href="#结构体" class="heading-link"><i class="fas fa-link"></i></a>结构体</h1>
+      <p>Go不是面向对象语言，没有对象和继承的概念，因此也不存在多态和重载等特性。</p>
+<figure class="highlight go"><div class="table-container"><table><tbody><tr><td class="code"><pre><span class="line"><span class="keyword">type</span> Saiyan <span class="keyword">struct</span> {</span><br><span class="line">    Name <span class="keyword">string</span></span><br><span class="line">    Power <span class="keyword">int</span></span><br><span class="line">}</span><br></pre></td></tr></tbody></table></div></figure>
+
+
+        <h2 id="声明和初始化">
+          <a href="#声明和初始化" class="heading-link"><i class="fas fa-link"></i></a>声明和初始化</h2>
+      <figure class="highlight go"><div class="table-container"><table><tbody><tr><td class="code"><pre><span class="line"><span class="comment">// 完全赋值</span></span><br><span class="line">goku := Saiyan{</span><br><span class="line">    Name: <span class="string">"Goku"</span>, <span class="comment">//逗号不可省略</span></span><br><span class="line">    Power: <span class="number">9000</span>,</span><br><span class="line">}</span><br><span class="line"></span><br><span class="line"><span class="comment">// 不赋值，为默认值</span></span><br><span class="line">goku := Saiyan{}</span><br><span class="line"></span><br><span class="line"><span class="comment">// 部分赋值</span></span><br><span class="line">goku := Saiyan{Name: <span class="string">"Goku"</span>}</span><br><span class="line">goku.Power = <span class="number">9000</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 省略字段的名字，按字段的顺序赋值</span></span><br><span class="line">goku := Saiyan{<span class="string">"Goku"</span>, <span class="number">9000</span>}</span><br></pre></td></tr></tbody></table></div></figure>
+
+
+        <h3 id="指针">
+          <a href="#指针" class="heading-link"><i class="fas fa-link"></i></a>指针</h3>
+      <p>Go不希望我一个变量直接关联一个值，而是希望一个指针指向变量的值，即<strong>间接取值</strong>。</p>
+<p>Go中，函数的参数传递都是按值传递，即传递的是一个拷贝。</p>
+<figure class="highlight go"><div class="table-container"><table><tbody><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">main</span><span class="params">()</span></span> {</span><br><span class="line">    goku := Saiyan{<span class="string">"Goku"</span>, <span class="number">9000</span>}</span><br><span class="line">    Super(goku)</span><br><span class="line">    fmt.Println(goku.Power)</span><br><span class="line">    <span class="comment">// Super 改变的只是 goku 的拷贝</span></span><br><span class="line">    <span class="comment">// 打印输出的值为9000，而不是19000</span></span><br><span class="line">}</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">Super</span><span class="params">(s Saiyan)</span></span> {</span><br><span class="line">    s.Power += <span class="number">10000</span></span><br><span class="line">}</span><br></pre></td></tr></tbody></table></div></figure>
+
+<figure class="highlight go"><div class="table-container"><table><tbody><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">main</span><span class="params">()</span></span> {</span><br><span class="line">	<span class="comment">// &amp;取地址符，获得结构体的地址</span></span><br><span class="line">    goku := &amp;Saiyan{<span class="string">"Goku"</span>, <span class="number">9000</span>}</span><br><span class="line">    Super(goku)</span><br><span class="line">    fmt.Println(goku.Power)</span><br><span class="line">    <span class="comment">// 打印输出的值为19000</span></span><br><span class="line">}</span><br><span class="line">	<span class="comment">// 传入一个指针*</span></span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">Super</span><span class="params">(s *Saiyan)</span></span> {</span><br><span class="line">    s.Power += <span class="number">10000</span></span><br><span class="line">}</span><br></pre></td></tr></tbody></table></div></figure>
+
+<p>赋值一个指针变量的开销比复制一个复杂的结构体小的多，在一个64位的系统上，指针的大小只有64位（就是表示一个内存地址），因此<strong>指针的真正意义就是通过指针可以共享值</strong>。</p>
+
+        <h2 id="结构体上的函数">
+          <a href="#结构体上的函数" class="heading-link"><i class="fas fa-link"></i></a>结构体上的函数</h2>
+      <figure class="highlight go"><div class="table-container"><table><tbody><tr><td class="code"><pre><span class="line"><span class="keyword">type</span> Saiyan <span class="keyword">struct</span> {</span><br><span class="line">	Name <span class="keyword">string</span></span><br><span class="line">	Power <span class="keyword">int</span></span><br><span class="line">}</span><br><span class="line"></span><br><span class="line"><span class="comment">// 函数的接收者是结构体指针，这个概念第一次见到</span></span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="params">(s *Saiyan)</span> <span class="title">Super</span><span class="params">()</span></span> {</span><br><span class="line">	s.Power += <span class="number">10000</span></span><br><span class="line">}</span><br></pre></td></tr></tbody></table></div></figure>
+
+<figure class="highlight go"><div class="table-container"><table><tbody><tr><td class="code"><pre><span class="line">goku := &amp;Saiyan{<span class="string">"Goku"</span>, <span class="number">9001</span>}</span><br><span class="line"><span class="comment">// 这边的调用函数的方式太新颖了</span></span><br><span class="line">goku.Super()</span><br><span class="line">fmt.Println(goku.Power) <span class="comment">// 将打印：19001</span></span><br></pre></td></tr></tbody></table></div></figure>
+
+
+        <h2 id="构造函数">
+          <a href="#构造函数" class="heading-link"><i class="fas fa-link"></i></a>构造函数</h2>
+      <p>结构体没有构造函数，可以创建一个函数返回一个相应类型的实例代替（类似一个工厂）</p>
+<figure class="highlight go"><div class="table-container"><table><tbody><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">NewSaiyan</span><span class="params">(name <span class="keyword">string</span>, power <span class="keyword">int</span>)</span> <span class="title">Saiyan</span></span> {</span><br><span class="line">	<span class="keyword">return</span> Saiyan{</span><br><span class="line">		Name: name,</span><br><span class="line">		Power: power,</span><br><span class="line">	}</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></div></figure>
+
+
+        <h2 id="new">
+          <a href="#new" class="heading-link"><i class="fas fa-link"></i></a>new</h2>
+      <p>尽管没有构造函数，Go有一个内置的函数new，用来分配一个类型需要的内存</p>
+<figure class="highlight go"><div class="table-container"><table><tbody><tr><td class="code"><pre><span class="line">goku := <span class="built_in">new</span>(Saiyan)</span><br><span class="line"><span class="comment">// 等效</span></span><br><span class="line">goku := &amp;Saiyan{}</span><br></pre></td></tr></tbody></table></div></figure>
+
+
+        <h2 id="结构体字段">
+          <a href="#结构体字段" class="heading-link"><i class="fas fa-link"></i></a>结构体字段</h2>
+      <p>结构体里面还可以嵌套其他结构体</p>
+<figure class="highlight go"><div class="table-container"><table><tbody><tr><td class="code"><pre><span class="line"><span class="keyword">type</span> Saiyan <span class="keyword">struct</span> {</span><br><span class="line">    Name <span class="keyword">string</span></span><br><span class="line">    Power <span class="keyword">int</span></span><br><span class="line">    Father *Saiyan</span><br><span class="line">}</span><br><span class="line"></span><br><span class="line"><span class="comment">// 初始化</span></span><br><span class="line">gohan := &amp;Saiyan{</span><br><span class="line">    Name: <span class="string">"Gohan"</span>,</span><br><span class="line">    Power: <span class="number">1000</span>,</span><br><span class="line">    Father: &amp;Saiyan {</span><br><span class="line">        Name: <span class="string">"Goku"</span>,</span><br><span class="line">        Power: <span class="number">9001</span>,</span><br><span class="line">        Father: <span class="literal">nil</span>,</span><br><span class="line">    },</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></div></figure>
+
+
+        <h2 id="组合">
+          <a href="#组合" class="heading-link"><i class="fas fa-link"></i></a>组合</h2>
+      <p>Go 使用组合来替代继承，这本书这部分讲的不清楚，我打算重新梳理一下。</p>
+<figure class="highlight go"><div class="table-container"><table><tbody><tr><td class="code"><pre><span class="line"><span class="keyword">type</span> Animal <span class="keyword">struct</span> {</span><br><span class="line">    Name <span class="keyword">string</span></span><br><span class="line">}</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="params">(a *Animal)</span> <span class="title">Eat</span><span class="params">()</span></span> {</span><br><span class="line">    fmt.Printf(<span class="string">"%v is eating"</span>, a.Name)</span><br><span class="line">    fmt.Println()</span><br><span class="line">}</span><br><span class="line"></span><br><span class="line"><span class="keyword">type</span> Cat <span class="keyword">struct</span> {</span><br><span class="line">    *Animal</span><br><span class="line">}</span><br><span class="line"></span><br><span class="line">cat := &amp;Cat{</span><br><span class="line">    Animal: &amp;Animal{</span><br><span class="line">        Name: <span class="string">"cat"</span>,</span><br><span class="line">    },</span><br><span class="line">}</span><br><span class="line">cat.Eat() <span class="comment">// cat is eating</span></span><br></pre></td></tr></tbody></table></div></figure>
+
+<p>Cat 的结构体本身没有 Name 字段，也没有去实现 Eat 方法，但却得到了正常的输出。</p>
+<p>这边我看了一些文章，还是了解的比较浅，之后再深入了解。</p>
+
+        <h2 id="指针类型和值类型">
+          <a href="#指针类型和值类型" class="heading-link"><i class="fas fa-link"></i></a>指针类型和值类型</h2>
+      <p>在以下情况我们都有实现指针类型，因为传递值类型的数据不可变：</p>
+<ul>
+<li>一个局部变量赋值</li>
+<li>结构体字段</li>
+<li>函数返回值</li>
+<li>传递给函数的参数</li>
+<li>方法的接收者</li>
+</ul>
+<p>如果不确定使用哪个，就使用指针。</p>
+
+        <h1 id="映射、数组和切片">
+          <a href="#映射、数组和切片" class="heading-link"><i class="fas fa-link"></i></a>映射、数组和切片</h1>
+      
+        <h2 id="数组">
+          <a href="#数组" class="heading-link"><i class="fas fa-link"></i></a>数组</h2>
+      <p>Go 中数组是<strong>固定大小</strong>的，声明一个数组时我们必须指明它的大小，并且不能被扩展变大。</p>
+<figure class="highlight go"><div class="table-container"><table><tbody><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> scores [<span class="number">10</span>]<span class="keyword">int</span></span><br><span class="line">scores[<span class="number">0</span>] = <span class="number">339</span></span><br></pre></td></tr></tbody></table></div></figure>
+
+
+        <h2 id="切片">
+          <a href="#切片" class="heading-link"><i class="fas fa-link"></i></a>切片</h2>
+      <p>切片是一个轻量级的结构体，代表数组的一部分。</p>
+<figure class="highlight go"><div class="table-container"><table><tbody><tr><td class="code"><pre><span class="line"><span class="comment">// 和声明数组不同，切片不需要再[]中指定大小</span></span><br><span class="line">scores := []<span class="keyword">int</span>{<span class="number">1</span>,<span class="number">4</span>,<span class="number">293</span>,<span class="number">4</span>,<span class="number">9</span>}</span><br><span class="line"></span><br><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment">	make 方式</span></span><br><span class="line"><span class="comment">	没有使用 new, 是因为创建一个切片不仅仅是为底层数组分配一段内存，而且也要初始化这个切片</span></span><br><span class="line"><span class="comment">	长度表示切片的长度，容量表示底层数组的大小，索引不能超过切片的长度</span></span><br><span class="line"><span class="comment">*/</span></span><br><span class="line">scores := <span class="built_in">make</span>([]<span class="keyword">int</span>, <span class="number">10</span>) <span class="comment">// 长度和容量都为10</span></span><br><span class="line">scores := <span class="built_in">make</span>([]<span class="keyword">int</span>,<span class="number">0</span>,<span class="number">10</span>) <span class="comment">// 长度为0，容量为10</span></span><br></pre></td></tr></tbody></table></div></figure>
+
+<p>使用 append 函数可以扩展切片长度，如果底层的数组已经达到上限， append 会重新创建一个更大的数组，使用2倍算法。</p>
+<figure class="highlight go"><div class="table-container"><table><tbody><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">main</span><span class="params">()</span></span> {</span><br><span class="line">    scores := <span class="built_in">make</span>([]<span class="keyword">int</span>, <span class="number">0</span>, <span class="number">10</span>)</span><br><span class="line">    scores = <span class="built_in">append</span>(scores, <span class="number">5</span>)</span><br><span class="line">    fmt.Println(scores) <span class="comment">// 打印：[5]</span></span><br><span class="line">}</span><br></pre></td></tr></tbody></table></div></figure>
+
+
+        <h2 id="映射">
+          <a href="#映射" class="heading-link"><i class="fas fa-link"></i></a>映射</h2>
+      <p>Go 中的映射和 Java 的中哈希表其实一样，包含一个键和值，可以从映射中获取、设置和删除这个值。</p>
+<p>和切片一样，映射也是可以通过 <code>make</code> 创建的：</p>
+<figure class="highlight go"><div class="table-container"><table><tbody><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">main</span><span class="params">()</span></span> {</span><br><span class="line">    lookup := <span class="built_in">make</span>(<span class="keyword">map</span>[<span class="keyword">string</span>]<span class="keyword">int</span>)</span><br><span class="line">    lookup[<span class="string">"goku"</span>] = <span class="number">9001</span></span><br><span class="line">    power, exists := lookup[<span class="string">"vegeta"</span>]</span><br><span class="line">    <span class="comment">// 打印：0和false</span></span><br><span class="line">    <span class="comment">// 0代表一个整数型的默认值</span></span><br><span class="line">    fmt.Println(power, exists)</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></div></figure>
+
+<p>使用<code>len</code>可以获得映射中键的个数。使用<code>delete</code>可以删除映射中的一个键值对。</p>
+<figure class="highlight go"><div class="table-container"><table><tbody><tr><td class="code"><pre><span class="line"><span class="comment">// 返回 1</span></span><br><span class="line">total := <span class="built_in">len</span>(lookup)</span><br><span class="line"><span class="comment">// 没有返回值, 可以调用一个不存在的键</span></span><br><span class="line"><span class="built_in">delete</span>(lookup, <span class="string">"goku"</span>)</span><br></pre></td></tr></tbody></table></div></figure>
+
+<p>映射是动态增长的，可以在使用 <code>make</code> 时传递第二个参数设置映射的初始大小：</p>
+<figure class="highlight go"><div class="table-container"><table><tbody><tr><td class="code"><pre><span class="line">lookup := <span class="built_in">make</span>(<span class="keyword">map</span>[<span class="keyword">string</span>]<span class="keyword">int</span>, <span class="number">100</span>)</span><br></pre></td></tr></tbody></table></div></figure>
+
+
+        <h1 id="代码组织和接口">
+          <a href="#代码组织和接口" class="heading-link"><i class="fas fa-link"></i></a>代码组织和接口</h1>
+      
+        <h2 id="包">
+          <a href="#包" class="heading-link"><i class="fas fa-link"></i></a>包</h2>
+      <p>在 Go 中，包名和你的 Go 语言工作空间的目录结构有关。</p>
+<p>默认路径为：<code>$GOPATH/src</code></p>
+
+        <h3 id="循环导入">
+          <a href="#循环导入" class="heading-link"><i class="fas fa-link"></i></a>循环导入</h3>
+      <p>简单讲就是 A  包导入 B 包，B 包导入 A 包。</p>
+
+        <h3 id="可见性">
+          <a href="#可见性" class="heading-link"><i class="fas fa-link"></i></a>可见性</h3>
+      <p>如果命令类型或者函数时一一个大写字母开发，那么这个类型和函数就是可见的。</p>
+
+        <h3 id="包管理">
+          <a href="#包管理" class="heading-link"><i class="fas fa-link"></i></a>包管理</h3>
+      <p>go get 可以将远程文件保存到工作空间 <code>$GOPATH/src</code></p>
+
+        <h2 id="接口">
+          <a href="#接口" class="heading-link"><i class="fas fa-link"></i></a>接口</h2>
+      <p>Go 的接口和 Java 很像，是一种类型，只定义了声明，没有具体实现，用于代码解耦。</p>
+<figure class="highlight go"><div class="table-container"><table><tbody><tr><td class="code"><pre><span class="line"><span class="keyword">type</span> Logger <span class="keyword">interface</span> {</span><br><span class="line">    Log(message <span class="keyword">string</span>)</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></div></figure>
+
+
+        <h1 id="Go特性">
+          <a href="#Go特性" class="heading-link"><i class="fas fa-link"></i></a>Go特性</h1>
+      
+        <h2 id="错误处理">
+          <a href="#错误处理" class="heading-link"><i class="fas fa-link"></i></a>错误处理</h2>
+      <p>Go 语言没有异常处理，一般通过返回值处理错误。</p>
+<figure class="highlight go"><div class="table-container"><table><tbody><tr><td class="code"><pre><span class="line"><span class="keyword">package</span> main</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> (</span><br><span class="line">    <span class="string">"fmt"</span></span><br><span class="line">    <span class="string">"os"</span></span><br><span class="line">    <span class="string">"strconv"</span></span><br><span class="line">)</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">main</span><span class="params">()</span></span> {</span><br><span class="line">    <span class="keyword">if</span> <span class="built_in">len</span>(os.Args) != <span class="number">2</span> {</span><br><span class="line">        os.Exit(<span class="number">1</span>)</span><br><span class="line">    }</span><br><span class="line">    n, err := strconv.Atoi(os.Args[<span class="number">1</span>])</span><br><span class="line">    <span class="keyword">if</span> err != <span class="literal">nil</span> {</span><br><span class="line">        fmt.Println(<span class="string">"not a valid number"</span>)</span><br><span class="line">    } <span class="keyword">else</span> {</span><br><span class="line">        fmt.Println(n)</span><br><span class="line">    }</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></div></figure>
+
+
+        <h2 id="defer">
+          <a href="#defer" class="heading-link"><i class="fas fa-link"></i></a>defer</h2>
+      <p>Go 语言提供了垃圾回收机制，但是一些资源需要手动释放更安全，使用 defer 关键词释放。</p>
+<figure class="highlight go"><div class="table-container"><table><tbody><tr><td class="code"><pre><span class="line"><span class="keyword">package</span> main</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> (</span><br><span class="line">    <span class="string">"fmt"</span></span><br><span class="line">    <span class="string">"os"</span></span><br><span class="line">)</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">main</span><span class="params">()</span></span> {</span><br><span class="line">    file, err := os.Open(<span class="string">"a_file_to_read"</span>)</span><br><span class="line">    <span class="keyword">if</span> err != <span class="literal">nil</span> {</span><br><span class="line">        fmt.Println(err)</span><br><span class="line">        <span class="keyword">return</span></span><br><span class="line">    }</span><br><span class="line">    <span class="keyword">defer</span> file.Close()</span><br><span class="line">    <span class="comment">// 读这个文件</span></span><br><span class="line">}</span><br></pre></td></tr></tbody></table></div></figure>
+
+
+        <h2 id="Go语言风格">
+          <a href="#Go语言风格" class="heading-link"><i class="fas fa-link"></i></a>Go语言风格</h2>
+      <p>Go 语言程序都遵循相同的格式化规则，如使用 tab 缩进并且花括号和语句在同一行。</p>
+<p>当你在工程内部，你可以通过下面的命令将工程下所有文件使用相同的格式化规则：</p>
+<figure class="highlight go"><div class="table-container"><table><tbody><tr><td class="code"><pre><span class="line"><span class="keyword">go</span> fmt ./...</span><br></pre></td></tr></tbody></table></div></figure>
+
+
+        <h2 id="初始化的if">
+          <a href="#初始化的if" class="heading-link"><i class="fas fa-link"></i></a>初始化的if</h2>
+      <p>一个值可以在条件语句执行前定义并初始化：</p>
+<figure class="highlight go"><div class="table-container"><table><tbody><tr><td class="code"><pre><span class="line"><span class="keyword">if</span> x := <span class="number">10</span>; count &gt; x {</span><br><span class="line">    ...</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></div></figure>
+
+<p><code>if</code>语句中定义并初始化的值在<code>if</code>语句之外是不可用的，但是可以在<code>else if</code>和<code>else</code>语句中使用。</p>
+
+        <h2 id="空接口和转换">
+          <a href="#空接口和转换" class="heading-link"><i class="fas fa-link"></i></a>空接口和转换</h2>
+      <p>在大多数面向对象语言中，都有一种内置的基类，叫<code>object</code>，它是所有其他类的超类。但是go语言不支持继承，所以没有类似超类的概念。go拥有一个没有任何方法的空接口：<code>interface{}</code>。因为每种类型都实现了空接口的0个方法，并且接口都是隐式实现，所以每种类型都实现了空接口的条约。</p>
+
+        <h2 id="字符串和字节数组">
+          <a href="#字符串和字节数组" class="heading-link"><i class="fas fa-link"></i></a>字符串和字节数组</h2>
+      <p>字符串和字节数组有密切关系，我们可以轻易的将它们转换成对方：</p>
+<figure class="highlight go"><div class="table-container"><table><tbody><tr><td class="code"><pre><span class="line">stra := <span class="string">"the spice must flow"</span></span><br><span class="line">byts := []<span class="keyword">byte</span>(stra)</span><br><span class="line">strb := <span class="keyword">string</span>(byts)</span><br></pre></td></tr></tbody></table></div></figure>
+
+
+        <h1 id="并发">
+          <a href="#并发" class="heading-link"><i class="fas fa-link"></i></a>并发</h1>
+      
+        <h2 id="Go-协程">
+          <a href="#Go-协程" class="heading-link"><i class="fas fa-link"></i></a>Go 协程</h2>
+      <p>Go 协程类似一个线程，但是 Go 协程是有 Go 自己调度，而不是系统。在协程中的代码可以和其他代码并发执行。</p>
+<figure class="highlight go"><div class="table-container"><table><tbody><tr><td class="code"><pre><span class="line"><span class="keyword">package</span> main</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> (</span><br><span class="line">    <span class="string">"fmt"</span></span><br><span class="line">    <span class="string">"time"</span></span><br><span class="line">)</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">main</span><span class="params">()</span></span> {</span><br><span class="line">    fmt.Println(<span class="string">"start"</span>)</span><br><span class="line">    <span class="keyword">go</span> process()</span><br><span class="line">    time.Sleep(time.Millisecond * <span class="number">10</span>) <span class="comment">// this is bad, don't do this!</span></span><br><span class="line">    fmt.Println(<span class="string">"done"</span>)</span><br><span class="line">}</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">process</span><span class="params">()</span></span> {</span><br><span class="line">    fmt.Println(<span class="string">"processing"</span>)</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></div></figure>
+
+<p>Go 协程很容易创建且开销较小。最终多个 Go 协程将会在同一个底层的系统线程上运行。这也常称之为<strong><code>M:N</code>线程模型</strong>，因为我们有<code>M</code>个应用线程（Go 协程）运行在<code>N</code>个系统线程上。结果就是，一个 Go 协程的开销和系统线程比起来相对很低（一般都是几KB）。在现代的硬件上，有可能拥有成千上万个 Go 协程。</p>
+
+        <h2 id="同步">
+          <a href="#同步" class="heading-link"><i class="fas fa-link"></i></a>同步</h2>
+      <p>在编写并发执行的代码时，特别需要关注的是在<strong>哪里</strong>和<strong>如何</strong>读写一个值（Where、How）。</p>
+<figure class="highlight go"><div class="table-container"><table><tbody><tr><td class="code"><pre><span class="line"><span class="keyword">package</span> main</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> (</span><br><span class="line">    <span class="string">"fmt"</span></span><br><span class="line">    <span class="string">"time"</span></span><br><span class="line">)</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> counter = <span class="number">0</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">main</span><span class="params">()</span></span> {</span><br><span class="line">    <span class="keyword">for</span> i := <span class="number">0</span>; i &lt; <span class="number">2</span>; i++ {</span><br><span class="line">        <span class="keyword">go</span> incr()</span><br><span class="line">    }</span><br><span class="line">    time.Sleep(time.Millisecond * <span class="number">10</span>)</span><br><span class="line">}</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">incr</span><span class="params">()</span></span> {</span><br><span class="line">    counter++</span><br><span class="line">    fmt.Println(counter)</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></div></figure>
+
+<p>这里应该有两个协程同时读写 counter 变量，可以使用一个互斥锁保证原子性。</p>
+<figure class="highlight go"><div class="table-container"><table><tbody><tr><td class="code"><pre><span class="line"><span class="keyword">package</span> main</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> (</span><br><span class="line">    <span class="string">"fmt"</span></span><br><span class="line">    <span class="string">"sync"</span></span><br><span class="line">    <span class="string">"time"</span></span><br><span class="line">)</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> (</span><br><span class="line">    counter = <span class="number">0</span></span><br><span class="line">    lock    sync.Mutex</span><br><span class="line">)</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">main</span><span class="params">()</span></span> {</span><br><span class="line">    <span class="keyword">for</span> i := <span class="number">0</span>; i &lt; <span class="number">2</span>; i++ {</span><br><span class="line">        <span class="keyword">go</span> incr()</span><br><span class="line">    }</span><br><span class="line">    time.Sleep(time.Millisecond * <span class="number">10</span>)</span><br><span class="line">}</span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">incr</span><span class="params">()</span></span> {</span><br><span class="line">    lock.Lock()</span><br><span class="line">    <span class="keyword">defer</span> lock.Unlock()</span><br><span class="line">    counter++</span><br><span class="line">    fmt.Println(counter)</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></div></figure>
+
+<p>关于 Go 并发编程这块内容很深，涉及死锁，读写锁等等其他问题。</p>
+
+        <h2 id="通道">
+          <a href="#通道" class="heading-link"><i class="fas fa-link"></i></a>通道</h2>
+      <p>并发编程最难的就是共享数据，在Go 协程中通过通道 channel 传递数据。</p>
+
+        <h3 id="通道使用">
+          <a href="#通道使用" class="heading-link"><i class="fas fa-link"></i></a>通道使用</h3>
+      <figure class="highlight go"><div class="table-container"><table><tbody><tr><td class="code"><pre><span class="line">c := <span class="built_in">make</span>(<span class="keyword">chan</span> <span class="keyword">int</span>) <span class="comment">// 创建通道</span></span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">worker</span><span class="params">(c <span class="keyword">chan</span> <span class="keyword">int</span>)</span></span> { ... } <span class="comment">// 将通道传递给一个函数</span></span><br><span class="line">CHANNEL &lt;- DATA <span class="comment">// 往通道发送数据</span></span><br><span class="line">VAR := &lt;-CHANNEL <span class="comment">// 从通道接受数据</span></span><br></pre></td></tr></tbody></table></div></figure>
+
+<figure class="highlight go"><div class="table-container"><table><tbody><tr><td class="code"><pre><span class="line"><span class="keyword">package</span> main</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> (</span><br><span class="line">    <span class="string">"fmt"</span></span><br><span class="line">    <span class="string">"math/rand"</span></span><br><span class="line">    <span class="string">"time"</span></span><br><span class="line">)</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">main</span><span class="params">()</span></span> {</span><br><span class="line">    c := <span class="built_in">make</span>(<span class="keyword">chan</span> <span class="keyword">int</span>)</span><br><span class="line">    <span class="keyword">for</span> i := <span class="number">0</span>; i &lt; <span class="number">5</span>; i++ {</span><br><span class="line">        worker := &amp;Worker{id: i}</span><br><span class="line">        <span class="keyword">go</span> worker.process(c)</span><br><span class="line">    }</span><br><span class="line"></span><br><span class="line">    <span class="keyword">for</span> {</span><br><span class="line">        c &lt;- rand.Int()</span><br><span class="line">        time.Sleep(time.Millisecond * <span class="number">50</span>)</span><br><span class="line">    }</span><br><span class="line">}</span><br><span class="line"></span><br><span class="line"><span class="keyword">type</span> Worker <span class="keyword">struct</span> {</span><br><span class="line">    id <span class="keyword">int</span></span><br><span class="line">}</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="params">(w *Worker)</span> <span class="title">process</span><span class="params">(c <span class="keyword">chan</span> <span class="keyword">int</span>)</span></span> {</span><br><span class="line">    <span class="keyword">for</span> {</span><br><span class="line">        data := &lt;-c</span><br><span class="line">        fmt.Printf(<span class="string">"worker %d got %d\n"</span>, w.id, data)</span><br><span class="line">    }</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></div></figure>
+
+
+        <h3 id="带缓存的通道">
+          <a href="#带缓存的通道" class="heading-link"><i class="fas fa-link"></i></a>带缓存的通道</h3>
+      <p>顾名思义，可以指明通道的长度：</p>
+<figure class="highlight go"><div class="table-container"><table><tbody><tr><td class="code"><pre><span class="line">c := <span class="built_in">make</span>(<span class="keyword">chan</span> <span class="keyword">int</span>, <span class="number">100</span>)</span><br></pre></td></tr></tbody></table></div></figure>
+
+<p>通过查看通道的长度，我们可以了解到，带缓存通道中有待处理的缓存数据：</p>
+<figure class="highlight go"><div class="table-container"><table><tbody><tr><td class="code"><pre><span class="line"><span class="keyword">for</span> {</span><br><span class="line">    c &lt;- rand.Int()</span><br><span class="line">    fmt.Println(<span class="built_in">len</span>(c))</span><br><span class="line">    time.Sleep(time.Millisecond * <span class="number">50</span>)</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></div></figure>
+
+
+        <h3 id="select">
+          <a href="#select" class="heading-link"><i class="fas fa-link"></i></a>select</h3>
+      <p><code>select</code> 用于丢弃通道中的消息，使用时类似于 <code>switch</code>：</p>
+<figure class="highlight go"><div class="table-container"><table><tbody><tr><td class="code"><pre><span class="line"><span class="keyword">for</span> {</span><br><span class="line">    <span class="keyword">select</span> {</span><br><span class="line">        <span class="keyword">case</span> c &lt;- rand.Int():</span><br><span class="line">            <span class="comment">//可选的代码</span></span><br><span class="line">        <span class="keyword">default</span>:</span><br><span class="line">            <span class="comment">//这里可以留下空行以丢弃数据</span></span><br><span class="line">            fmt.Println(<span class="string">"dropped"</span>)</span><br><span class="line">    }</span><br><span class="line">    time.Sleep(time.Millisecond * <span class="number">50</span>)</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></div></figure>
+
+<p>使用<code>select</code>的最主要目的是，通过它管理多个通道。给定多个通道，<code>select</code>将阻塞直到有一个通道可用。如果没有可用的通道，当提供了<code>default</code>语句时，执行该分支。当多个通道都可用时，选择其中的一个通道是随机的。</p>
+
+        <h3 id="超时">
+          <a href="#超时" class="heading-link"><i class="fas fa-link"></i></a>超时</h3>
+      <p>我们也可以利用超时来丢弃通道中的信息，使用<code>time.After</code>函数。</p>
+<figure class="highlight go"><div class="table-container"><table><tbody><tr><td class="code"><pre><span class="line"><span class="keyword">for</span> {</span><br><span class="line">    <span class="keyword">select</span> {</span><br><span class="line">        <span class="keyword">case</span> c &lt;- rand.Int():</span><br><span class="line">        <span class="keyword">case</span> &lt;-time.After(time.Millisecond * <span class="number">100</span>): <span class="comment">// 返回的是一个通道</span></span><br><span class="line">            fmt.Println(<span class="string">"timed out"</span>)</span><br><span class="line">    }</span><br><span class="line">    time.Sleep(time.Millisecond * <span class="number">50</span>)</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></div></figure>
+
+
+        <h1 id="总结">
+          <a href="#总结" class="heading-link"><i class="fas fa-link"></i></a>总结</h1>
+      <p>这本书确实是非常浅显地讲解了 Goland 的基本特性，花费了大约四个小时做了一下记录，接下来对于语法需要代码训练实现熟悉，常见包和并发编程等需要阅读源码和博客文章进一步了解。</p>
 <script>
         document.querySelectorAll('.github-emoji')
           .forEach(el => {
