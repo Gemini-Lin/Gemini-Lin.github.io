@@ -2,16 +2,23 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>https://gemini-lin.github.io/The-Little-Go-Book/</loc>
+    <loc>https://gemini-lin.github.io/Network-Security-Protocol/</loc>
     
-    <lastmod>2020-12-16T10:49:44.357Z</lastmod>
+    <lastmod>2020-12-20T13:34:58.321Z</lastmod>
     
   </url>
   
   <url>
     <loc>https://gemini-lin.github.io/Technical-Notes-1/</loc>
     
-    <lastmod>2020-12-15T15:10:59.100Z</lastmod>
+    <lastmod>2020-12-20T13:32:33.019Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://gemini-lin.github.io/The-Little-Go-Book/</loc>
+    
+    <lastmod>2020-12-16T10:49:44.357Z</lastmod>
     
   </url>
   

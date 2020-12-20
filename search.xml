@@ -57,6 +57,77 @@
       </tags>
   </entry>
   <entry>
+    <title>Network Security Protocol</title>
+    <url>/Network-Security-Protocol/</url>
+    <content><![CDATA[<h1 id="Introdution">
+          <a href="#Introdution" class="heading-link"><i class="fas fa-link"></i></a>Introdution</h1>
+      <p>假设我们现在有两个用户分别为 Alice 和 Bob，Alice 拥有一个较大的数据文件，Alice 想要通过网络安全地和 Bob 共享这个数据文件。我们知道计算机网络提供的最大功能就是连通性和共享，在网络存在着大量的安全威胁，诸如被动攻击与主动攻击等等，但我们传统的 TCP/IP 网络栈并不提供安全传输，那么我们要如何保证数据传输过程中的安全呢？</p>
+<p>这里的“安全”对应着网络安全中种种的网络安全需求，包括保密性、完整性、可用性、可控性、不可否认性等等。因此我们需要设计一个网络安全协议，我们可以借鉴一下 HTTPs的设计理念，利用公钥密码进行密钥分发（公钥加密效率较低），利用对称密码进行数据加密（对称加密适合加密大量数据），完成这里的简单数据传输。显然这个协议并不能满足身份认证等功能，那么如何设计一个完善的网络安全协议呢？</p>
+<p>通常我们将网络安全协议划分为<strong>协商过程</strong>和<strong>数据通信</strong>两个步骤，并针对两个步骤分别规定了相应的语法、语义和时序。在协议过程中，我们需要完成身份认证，算法协商，会话密钥的协商等。</p>
+<p>在本篇文章中，我们自顶向下地分析TCP/IP 协议栈中每层的网络安全协议，包括应用层协议PGP、传输层协议TLS、网络层协议IPSec、链路层协议WPA等等。</p>
+<a id="more"></a>
+
+
+        <h1 id="PGP">
+          <a href="#PGP" class="heading-link"><i class="fas fa-link"></i></a>PGP</h1>
+      <p>PGP协议是应用层的一种网络安全协议，主要提供了保密性、完整性、身份认证等安全功能，并由加/解密、数字签名、压缩、电子邮件兼容性四个成分组成，用于邮件服务。在这里我们主要论述PGP协议的加解密与数字签名部分。</p>
+<p>PGP协议的加密主要分成两个片段，首先利用伪随机数生成器生成会话密钥，再采用公钥加密算法，用接受者的公钥加密会话密钥，得到第一个片段—经过加密的会话密钥；然后将消息进行压缩，使用对称密码对压缩后的消息进行加密，得到第二个片段—经过压缩和加密的消息；最后将两者拼接起来，并将原来的二进制结果转为文本数据传输。解密操作其实和加密相对应，比较简单理解，这里不再赘述。</p>
+<p>但是这里还需要额外谈谈接收者私钥管理，在解密时我们使用了公钥加密算法中的私钥，因此我们必须要保证私钥的不被泄露，也就是私钥的安全性问题。对于私钥的加密，我们采用基于口令的密码（PBE），根据自己的口令和 salt 生成口令密码。整个算法其实也是由两个部分构成，首先通过伪随机数生成 salt 并与用户口令拼接，在经过单向散列函数，生成第一部分—私钥的解密密钥；然后利用这个密钥对经过加密的私钥（第二部分）进行对称密码解密，得到接受者私钥。当然你也可以简单地理解为，就是对私钥进行一层对称加密，隐藏了接收者私钥。</p>
+<p>为了认证邮件发送者的身份，PGP协议提供了数字签名技术，协议的签名与验签部分其实比较简单。发送方输入用于解密私钥的口令，加上salt 进行 hash得到解密私钥的密钥（KEK），利用这个密钥对经过 hash 的消息进行签名，最后将经过签名的哈希值和消息拼接压缩，并将二进制结果转换为文本数据传输。接收者直接利用公钥对经过签名的哈希值进行解密，并将接收到的消息进行哈希，将两者比较验证签名。</p>
+<p>同时PGP协议比较有意思的一点时对于公钥的管理，它不依赖于PKI，而是采用信任网机制来保证公钥的合法性。信任网机制有三个基本原则，通过自己的数字签名进行确认；通过自己完全信任的人的数字签名进行确认；通过自己有限信任的多个人的数字签名进行确认。</p>
+
+        <h1 id="TLS">
+          <a href="#TLS" class="heading-link"><i class="fas fa-link"></i></a>TLS</h1>
+      <p>TLS协议是传输层的一种网络安全协议，起源于网景公司设计Secure Socket Layer，并由IETF统一规范为 TLS协议，如今已经发展到 TLS1.3 版本。TLS 协议是一个分层协议，分为两层，底层是 TLS Record Protocol，上层由 Handshake Protocol、ChangeCipherSpec、Alert Protocol、Application data 四个部分构成。</p>
+<p>TLS Record Protocol 主要提供机密性和完整性的安全服务，基于握手协议协商确定的安全参数对应用数据传输提供保密性和完整性保护，例如分片、压缩、加密、MAC等等。</p>
+<p>Handshake Protocol 主要用于在客户端和服务器之间协商产生用于记录协议中索要使用的密码算法和共享密钥，以及实现基于证书的认证操作。这个协议对话过程比较有趣，这里就简单描述一下。第一步是客户端发送 ClientHello请求，告知服务端自己的支持的协议版本号、密码套件等信息；第二步是服务器发送ServerHello 消息，指定使用的密钥套件等信息；第三步是服务端发送 Certificate消息，提供证书证明自己的身份；第四步是服务器发送ServerKeyExchange消息，提供加密算法的参数信息等等；第五步是服务器发送CertificateRequest 请求，认证客户端身份；第六步是服务器发送ServerHelloDone，握手成功，问候结束。</p>
+<p>ChangeCipherSpec Protocol 主要用于发信号给通信对端，表示要切换到新协商确定的密码格式；Alert Protocol 主要用于传递协议运行过程中出现的警报，fatal 级别的警报会导致连接的立即终止；Application Data Protocol 主要是给 Record层提供application data 用于传输。</p>
+
+        <h1 id="IPSec">
+          <a href="#IPSec" class="heading-link"><i class="fas fa-link"></i></a>IPSec</h1>
+      <p>TLS协议是传输层的一种网络安全协议，起源于网景公司设计Secure Socket Layer，并由IETF统一规范为 TLS协议，如今已经发展到 TLS1.3 版本。TLS 协议是一个分层协议，分为两层，底层是 TLS Record Protocol，上层由 Handshake Protocol、ChangeCipherSpec、Alert Protocol、Application data 四个部分构成。</p>
+<p>TLS Record Protocol 主要提供机密性和完整性的安全服务，基于握手协议协商确定的安全参数对应用数据传输提供保密性和完整性保护，例如分片、压缩、加密、MAC等等。</p>
+<p>Handshake Protocol 主要用于在客户端和服务器之间协商产生用于记录协议中索要使用的密码算法和共享密钥，以及实现基于证书的认证操作。这个协议对话过程比较有趣，这里就简单描述一下。第一步是客户端发送 ClientHello请求，告知服务端自己的支持的协议版本号、密码套件等信息；第二步是服务器发送ServerHello 消息，指定使用的密钥套件等信息；第三步是服务端发送 Certificate消息，提供证书证明自己的身份；第四步是服务器发送ServerKeyExchange消息，提供加密算法的参数信息等等；第五步是服务器发送CertificateRequest 请求，认证客户端身份；第六步是服务器发送ServerHelloDone，握手成功，问候结束。</p>
+<p>ChangeCipherSpec Protocol 主要用于发信号给通信对端，表示要切换到新协商确定的密码格式；Alert Protocol 主要用于传递协议运行过程中出现的警报，fatal 级别的警报会导致连接的立即终止；Application Data Protocol 主要是给 Record层提供application data 用于传输。</p>
+
+        <h1 id="WLAN-Security">
+          <a href="#WLAN-Security" class="heading-link"><i class="fas fa-link"></i></a>WLAN Security</h1>
+      <p>TLS协议是传输层的一种网络安全协议，起源于网景公司设计Secure Socket Layer，并由IETF统一规范为 TLS协议，如今已经发展到 TLS1.3 版本。TLS 协议是一个分层协议，分为两层，底层是 TLS Record Protocol，上层由 Handshake Protocol、ChangeCipherSpec、Alert Protocol、Application data 四个部分构成。</p>
+<p>TLS Record Protocol 主要提供机密性和完整性的安全服务，基于握手协议协商确定的安全参数对应用数据传输提供保密性和完整性保护，例如分片、压缩、加密、MAC等等。</p>
+<p>Handshake Protocol 主要用于在客户端和服务器之间协商产生用于记录协议中索要使用的密码算法和共享密钥，以及实现基于证书的认证操作。这个协议对话过程比较有趣，这里就简单描述一下。第一步是客户端发送 ClientHello请求，告知服务端自己的支持的协议版本号、密码套件等信息；第二步是服务器发送ServerHello 消息，指定使用的密钥套件等信息；第三步是服务端发送 Certificate消息，提供证书证明自己的身份；第四步是服务器发送ServerKeyExchange消息，提供加密算法的参数信息等等；第五步是服务器发送CertificateRequest 请求，认证客户端身份；第六步是服务器发送ServerHelloDone，握手成功，问候结束。</p>
+<p>ChangeCipherSpec Protocol 主要用于发信号给通信对端，表示要切换到新协商确定的密码格式；Alert Protocol 主要用于传递协议运行过程中出现的警报，fatal 级别的警报会导致连接的立即终止；Application Data Protocol 主要是给 Record层提供application data 用于传输。</p>
+
+        <h1 id="Conclusion">
+          <a href="#Conclusion" class="heading-link"><i class="fas fa-link"></i></a>Conclusion</h1>
+      <p>学习网络安全协议真的有一种柳暗花明又一村的感觉。一开始我学习的时候都是钻进去看协议的一步步设计与算法思路，觉得特别枯燥。后面我突然从这个框架中跳了出来，去看看整个网络安全协议体系的设计思路与整体理念，就开始豁然开朗了。这篇报告主要是自己复习网络协议知识的一个简单整理，对安全协议进行一个整体概括，并对其中一部分重点内容展开描述。大学的最后一门课程结束了，我的大学生活也在成都寒冷的冬天画上了句号，下一站字节见！</p>
+<script>
+        document.querySelectorAll('.github-emoji')
+          .forEach(el => {
+            if (!el.dataset.src) { return; }
+            const img = document.createElement('img');
+            img.style = 'display:none !important;';
+            img.src = el.dataset.src;
+            img.addEventListener('error', () => {
+              img.remove();
+              el.style.color = 'inherit';
+              el.style.backgroundImage = 'none';
+              el.style.background = 'none';
+            });
+            img.addEventListener('load', () => {
+              img.remove();
+            });
+            document.body.appendChild(img);
+          });
+      </script>]]></content>
+      <categories>
+        <category>课程总结</category>
+        <category>网络安全协议</category>
+      </categories>
+      <tags>
+        <tag>Network Security Protocol</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>The Little Go Book</title>
     <url>/The-Little-Go-Book/</url>
     <content><![CDATA[<h1 id="Free-Talk">
@@ -338,7 +409,7 @@
       </tags>
   </entry>
   <entry>
-    <title>Technical-Notes-1</title>
+    <title>Technical Notes 1</title>
     <url>/Technical-Notes-1/</url>
     <content><![CDATA[<h1 id="Free-Talk">
           <a href="#Free-Talk" class="heading-link"><i class="fas fa-link"></i></a>Free Talk</h1>
