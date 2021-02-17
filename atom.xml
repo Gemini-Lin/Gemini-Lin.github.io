@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://gemini-lin.github.io/"/>
-  <updated>2020-12-20T13:34:58.321Z</updated>
+  <updated>2021-02-17T09:16:48.347Z</updated>
   <id>https://gemini-lin.github.io/</id>
   
   <author>
@@ -15,6 +15,33 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>北漂日记（一）</title>
+    <link href="https://gemini-lin.github.io/BeiJing-Lives-1/"/>
+    <id>https://gemini-lin.github.io/BeiJing-Lives-1/</id>
+    <published>2021-02-17T08:56:15.000Z</published>
+    <updated>2021-02-17T09:16:48.347Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;Welcome-to-BeiJing&quot;&gt;
+          &lt;a href=&quot;#Welcome-to-BeiJing&quot; class=&quot;heading-link&quot;&gt;&lt;i class=&quot;fas fa-link&quot;&gt;&lt;/i&gt;&lt;/a&gt;Welcome to BeiJing!&lt;/h1&gt;
+      &lt;p&gt;​        2021年1月18日，我乘坐川航，从双流国际机场抵达首都国际机场。北京，是萦绕在无数年轻人脑海的一个城市，爱恨交织着。到达北京，我的第一感受是落后，满眼都是破旧的建筑，与我向往的繁华都市相差甚大（指魔都）。带着失望的心情，我扛着几十斤的行李箱，一层层地爬到五楼，来到一个合租的七平米的小屋，我的北京生活就此拉开了帷幕。&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="大学生活" scheme="https://Gemini-Lin.github.io/categories/%E5%A4%A7%E5%AD%A6%E7%94%9F%E6%B4%BB/"/>
+    
+    
+      <category term="实习" scheme="https://Gemini-Lin.github.io/tags/%E5%AE%9E%E4%B9%A0/"/>
+    
+      <category term="北京" scheme="https://Gemini-Lin.github.io/tags/%E5%8C%97%E4%BA%AC/"/>
+    
+      <category term="ByteDance" scheme="https://Gemini-Lin.github.io/tags/ByteDance/"/>
+    
+  </entry>
   
   <entry>
     <title>Network Security Protocol</title>
@@ -211,9 +238,9 @@
     
       <category term="LeetCode" scheme="https://Gemini-Lin.github.io/tags/LeetCode/"/>
     
-      <category term="Tree" scheme="https://Gemini-Lin.github.io/tags/Tree/"/>
-    
       <category term="Easy" scheme="https://Gemini-Lin.github.io/tags/Easy/"/>
+    
+      <category term="Tree" scheme="https://Gemini-Lin.github.io/tags/Tree/"/>
     
   </entry>
   
@@ -488,34 +515,6 @@
       <category term="LeetCode" scheme="https://Gemini-Lin.github.io/tags/LeetCode/"/>
     
       <category term="HashTable" scheme="https://Gemini-Lin.github.io/tags/HashTable/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>LeetCode-String</title>
-    <link href="https://gemini-lin.github.io/LeetCode-String/"/>
-    <id>https://gemini-lin.github.io/LeetCode-String/</id>
-    <published>2020-10-14T02:58:32.000Z</published>
-    <updated>2020-10-19T02:59:20.748Z</updated>
-    
-    <summary type="html">
-    
-      &lt;h1 id=&quot;Free-Talk&quot;&gt;
-          &lt;a href=&quot;#Free-Talk&quot; class=&quot;heading-link&quot;&gt;&lt;i class=&quot;fas fa-link&quot;&gt;&lt;/i&gt;&lt;/a&gt;Free Talk&lt;/h1&gt;
-      &lt;p&gt;最近一直刷 Array Tags，有点无聊了，找了一份常见算法数组题图片，打算开启 String Tags 新篇章了。&lt;/p&gt;
-&lt;p&gt;
-        &lt;img class=&quot;lazyload lazyload-gif&quot; src=&quot;/images/loading.svg&quot; data-src=&quot;https://i.loli.net/2020/10/14/Uoih5swTgfepQKZ.png&quot; alt=&quot;image-20201014110219435&quot;&gt;
-      &lt;/p&gt;
-    
-    </summary>
-    
-    
-      <category term="LeetCode" scheme="https://Gemini-Lin.github.io/categories/LeetCode/"/>
-    
-    
-      <category term="LeetCode" scheme="https://Gemini-Lin.github.io/tags/LeetCode/"/>
-    
-      <category term="String" scheme="https://Gemini-Lin.github.io/tags/String/"/>
     
   </entry>
   
