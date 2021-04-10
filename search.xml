@@ -4,6 +4,35 @@
   
     
     <entry>
+      <title>北漂日记（二）</title>
+      <link href="/BeiJing-Lives-2/"/>
+      <url>/BeiJing-Lives-2/</url>
+      
+        <content type="html"><![CDATA[<h1 id="北漂日记（二）">          <a href="#北漂日记（二）" class="heading-link"><i class="fas fa-link"></i></a>北漂日记（二）</h1>      <p>​    今天是 2021 年 4 月 4 日，距离第一次来到北京（2021 年 1 月 18 日）已经有两个多月，而我的网站也已经停更了两个多月了，停更有两个主要原因，其一是自己偷懒了，放假的时候更喜欢躺在床上或者出去运动走走，基本不打开电脑；其二是涉及到公司的项目技术，都因为签署了保密协议或是知识产权，不能放在个人博客上。</p><a id="more"></a><p>​    因此在未来的很长时间内，博客里的技术分享会减少很多，更多的是自己实习生活的一些感悟，就把这里当作一个小树洞，写写想说又不能对人说的话。同时我注意到网站的评论系统没有处理好，我没法统一查看网站的留言，目前有两个解决方案，一是开放一个留言板页面自己定期查看，另一个是接入实时评论系统；如果你想联系到我，可以添加私人微信 1009712456，并备注来意。</p>        <h1 id="字节生活">          <a href="#字节生活" class="heading-link"><i class="fas fa-link"></i></a>字节生活</h1>      <p>​    字节 10 10 5.5 的工作占据了我几乎所有的精力，不过我还是挺适应这里的一切，养成了一套自己的作息方式。每天 9 点起床，10 到公司恰早饭（我经常因为起晚了，又想吃早饭，而一路狂奔到矮楼食堂），早上是我 Coding 的黄金时间，通常是在晚上就想好了思路，早上一通敲打就实现了。下午是绝对的工作噩梦，持续的工作时间太长，人一疲惫，效率就持续下降，开始去厕所划水🦑。晚上是最 relax 的，去健身房锻炼（体重虽然没有下降，但大脑和身体都极度舒畅），再回来开个组会，就可以溜了。我时常会觉得自己做的事情太偏向 CRUD，not  exciting 。最近想要在技术上有快速的进步，还在找寻一个突破口ing。</p><script>        document.querySelectorAll('.github-emoji')          .forEach(el => {            if (!el.dataset.src) { return; }            const img = document.createElement('img');            img.style = 'display:none !important;';            img.src = el.dataset.src;            img.addEventListener('error', () => {              img.remove();              el.style.color = 'inherit';              el.style.backgroundImage = 'none';              el.style.background = 'none';            });            img.addEventListener('load', () => {              img.remove();            });            document.body.appendChild(img);          });      </script>]]></content>
+      
+      
+      <categories>
+          
+          <category> 大学生活 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 实习 </tag>
+            
+            <tag> 北京 </tag>
+            
+            <tag> ByteDance </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>北漂日记（一）</title>
       <link href="/BeiJing-Lives-1/"/>
       <url>/BeiJing-Lives-1/</url>

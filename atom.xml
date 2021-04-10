@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://gemini-lin.github.io/"/>
-  <updated>2021-02-17T09:16:48.347Z</updated>
+  <updated>2021-04-10T14:37:11.792Z</updated>
   <id>https://gemini-lin.github.io/</id>
   
   <author>
@@ -17,11 +17,38 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>北漂日记（二）</title>
+    <link href="https://gemini-lin.github.io/BeiJing-Lives-2/"/>
+    <id>https://gemini-lin.github.io/BeiJing-Lives-2/</id>
+    <published>2021-04-10T14:33:01.000Z</published>
+    <updated>2021-04-10T14:37:11.792Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;北漂日记（二）&quot;&gt;
+          &lt;a href=&quot;#北漂日记（二）&quot; class=&quot;heading-link&quot;&gt;&lt;i class=&quot;fas fa-link&quot;&gt;&lt;/i&gt;&lt;/a&gt;北漂日记（二）&lt;/h1&gt;
+      &lt;p&gt;​    今天是 2021 年 4 月 4 日，距离第一次来到北京（2021 年 1 月 18 日）已经有两个多月，而我的网站也已经停更了两个多月了，停更有两个主要原因，其一是自己偷懒了，放假的时候更喜欢躺在床上或者出去运动走走，基本不打开电脑；其二是涉及到公司的项目技术，都因为签署了保密协议或是知识产权，不能放在个人博客上。&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="大学生活" scheme="https://Gemini-Lin.github.io/categories/%E5%A4%A7%E5%AD%A6%E7%94%9F%E6%B4%BB/"/>
+    
+    
+      <category term="实习" scheme="https://Gemini-Lin.github.io/tags/%E5%AE%9E%E4%B9%A0/"/>
+    
+      <category term="北京" scheme="https://Gemini-Lin.github.io/tags/%E5%8C%97%E4%BA%AC/"/>
+    
+      <category term="ByteDance" scheme="https://Gemini-Lin.github.io/tags/ByteDance/"/>
+    
+  </entry>
+  
+  <entry>
     <title>北漂日记（一）</title>
     <link href="https://gemini-lin.github.io/BeiJing-Lives-1/"/>
     <id>https://gemini-lin.github.io/BeiJing-Lives-1/</id>
     <published>2021-02-17T08:56:15.000Z</published>
-    <updated>2021-02-17T09:16:48.347Z</updated>
+    <updated>2021-02-17T09:16:50.000Z</updated>
     
     <summary type="html">
     
@@ -48,7 +75,7 @@
     <link href="https://gemini-lin.github.io/Network-Security-Protocol/"/>
     <id>https://gemini-lin.github.io/Network-Security-Protocol/</id>
     <published>2020-12-20T13:30:57.000Z</published>
-    <updated>2020-12-20T13:34:58.321Z</updated>
+    <updated>2020-12-20T13:35:00.000Z</updated>
     
     <summary type="html">
     
@@ -76,7 +103,7 @@
     <link href="https://gemini-lin.github.io/The-Little-Go-Book/"/>
     <id>https://gemini-lin.github.io/The-Little-Go-Book/</id>
     <published>2020-12-15T15:10:22.000Z</published>
-    <updated>2020-12-16T10:49:44.357Z</updated>
+    <updated>2020-12-16T10:49:46.000Z</updated>
     
     <summary type="html">
     
@@ -99,7 +126,7 @@
     <link href="https://gemini-lin.github.io/Technical-Notes-1/"/>
     <id>https://gemini-lin.github.io/Technical-Notes-1/</id>
     <published>2020-12-15T09:01:13.000Z</published>
-    <updated>2020-12-20T13:32:33.019Z</updated>
+    <updated>2020-12-20T13:32:34.000Z</updated>
     
     <summary type="html">
     
@@ -124,7 +151,7 @@
     <link href="https://gemini-lin.github.io/bytedance/"/>
     <id>https://gemini-lin.github.io/bytedance/</id>
     <published>2020-11-25T03:31:51.000Z</published>
-    <updated>2020-11-27T03:08:25.765Z</updated>
+    <updated>2020-11-27T03:08:26.000Z</updated>
     
     <summary type="html">
     
@@ -147,7 +174,7 @@
     <link href="https://gemini-lin.github.io/didimj/"/>
     <id>https://gemini-lin.github.io/didimj/</id>
     <published>2020-11-19T13:21:12.000Z</published>
-    <updated>2020-11-21T04:03:25.833Z</updated>
+    <updated>2020-11-21T04:03:26.000Z</updated>
     
     <summary type="html">
     
@@ -170,7 +197,7 @@
     <link href="https://gemini-lin.github.io/LeetCode-Offer-Part2/"/>
     <id>https://gemini-lin.github.io/LeetCode-Offer-Part2/</id>
     <published>2020-11-10T07:51:17.000Z</published>
-    <updated>2020-11-10T16:08:20.748Z</updated>
+    <updated>2020-11-10T16:08:22.000Z</updated>
     
     <summary type="html">
     
@@ -195,7 +222,7 @@
     <link href="https://gemini-lin.github.io/LeetCode-Offer-Part1/"/>
     <id>https://gemini-lin.github.io/LeetCode-Offer-Part1/</id>
     <published>2020-11-09T08:24:15.000Z</published>
-    <updated>2020-11-10T16:15:07.590Z</updated>
+    <updated>2020-11-10T16:15:08.000Z</updated>
     
     <summary type="html">
     
@@ -221,7 +248,7 @@
     <link href="https://gemini-lin.github.io/LeetCode-EasyTree/"/>
     <id>https://gemini-lin.github.io/LeetCode-EasyTree/</id>
     <published>2020-11-08T09:00:24.000Z</published>
-    <updated>2020-11-09T03:43:47.715Z</updated>
+    <updated>2020-11-09T03:43:48.000Z</updated>
     
     <summary type="html">
     
@@ -249,7 +276,7 @@
     <link href="https://gemini-lin.github.io/LeetCode-SortingAlgorithm/"/>
     <id>https://gemini-lin.github.io/LeetCode-SortingAlgorithm/</id>
     <published>2020-11-06T13:13:30.000Z</published>
-    <updated>2020-11-08T02:01:59.318Z</updated>
+    <updated>2020-11-08T02:02:00.000Z</updated>
     
     <summary type="html">
     
@@ -272,7 +299,7 @@
     <link href="https://gemini-lin.github.io/genshuixue/"/>
     <id>https://gemini-lin.github.io/genshuixue/</id>
     <published>2020-11-06T09:58:55.000Z</published>
-    <updated>2020-11-07T06:51:29.620Z</updated>
+    <updated>2020-11-07T06:51:30.000Z</updated>
     
     <summary type="html">
     
@@ -295,7 +322,7 @@
     <link href="https://gemini-lin.github.io/LeetCode-Tree/"/>
     <id>https://gemini-lin.github.io/LeetCode-Tree/</id>
     <published>2020-11-05T01:56:28.000Z</published>
-    <updated>2020-11-08T08:49:05.175Z</updated>
+    <updated>2020-11-08T08:49:06.000Z</updated>
     
     <summary type="html">
     
@@ -320,7 +347,7 @@
     <link href="https://gemini-lin.github.io/LeetCode-Easy/"/>
     <id>https://gemini-lin.github.io/LeetCode-Easy/</id>
     <published>2020-11-01T11:46:17.000Z</published>
-    <updated>2020-11-02T12:07:24.723Z</updated>
+    <updated>2020-11-02T12:07:26.000Z</updated>
     
     <summary type="html">
     
@@ -345,7 +372,7 @@
     <link href="https://gemini-lin.github.io/LeetCode-BFS/"/>
     <id>https://gemini-lin.github.io/LeetCode-BFS/</id>
     <published>2020-10-28T11:07:37.000Z</published>
-    <updated>2020-11-07T02:59:36.449Z</updated>
+    <updated>2020-11-07T02:59:38.000Z</updated>
     
     <summary type="html">
     
@@ -370,7 +397,7 @@
     <link href="https://gemini-lin.github.io/LeetCode-HeapAndStack/"/>
     <id>https://gemini-lin.github.io/LeetCode-HeapAndStack/</id>
     <published>2020-10-26T02:37:19.000Z</published>
-    <updated>2020-10-28T08:48:45.118Z</updated>
+    <updated>2020-10-28T08:48:46.000Z</updated>
     
     <summary type="html">
     
@@ -397,7 +424,7 @@
     <link href="https://gemini-lin.github.io/LeetCode-LinkedList/"/>
     <id>https://gemini-lin.github.io/LeetCode-LinkedList/</id>
     <published>2020-10-25T12:09:08.000Z</published>
-    <updated>2020-10-26T02:33:12.488Z</updated>
+    <updated>2020-10-26T02:33:14.000Z</updated>
     
     <summary type="html">
     
@@ -422,7 +449,7 @@
     <link href="https://gemini-lin.github.io/LeetCode-DynamicProgramming/"/>
     <id>https://gemini-lin.github.io/LeetCode-DynamicProgramming/</id>
     <published>2020-10-22T12:32:13.000Z</published>
-    <updated>2020-10-25T12:06:24.109Z</updated>
+    <updated>2020-10-25T12:06:26.000Z</updated>
     
     <summary type="html">
     
@@ -448,7 +475,7 @@
     <link href="https://gemini-lin.github.io/LeetCode-BinarySearch/"/>
     <id>https://gemini-lin.github.io/LeetCode-BinarySearch/</id>
     <published>2020-10-22T01:24:51.000Z</published>
-    <updated>2020-10-22T12:07:49.982Z</updated>
+    <updated>2020-10-22T12:07:50.000Z</updated>
     
     <summary type="html">
     
@@ -473,7 +500,7 @@
     <link href="https://gemini-lin.github.io/LeetCode-TwoPointers/"/>
     <id>https://gemini-lin.github.io/LeetCode-TwoPointers/</id>
     <published>2020-10-19T07:50:21.000Z</published>
-    <updated>2020-10-22T01:22:50.030Z</updated>
+    <updated>2020-10-22T01:22:52.000Z</updated>
     
     <summary type="html">
     
@@ -490,31 +517,6 @@
       <category term="LeetCode" scheme="https://Gemini-Lin.github.io/tags/LeetCode/"/>
     
       <category term="Two Pointers" scheme="https://Gemini-Lin.github.io/tags/Two-Pointers/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>LeetCode-HashTable</title>
-    <link href="https://gemini-lin.github.io/LeetCode-HashTable/"/>
-    <id>https://gemini-lin.github.io/LeetCode-HashTable/</id>
-    <published>2020-10-17T00:47:09.000Z</published>
-    <updated>2020-10-19T07:49:41.776Z</updated>
-    
-    <summary type="html">
-    
-      &lt;h1 id=&quot;Free-Talk&quot;&gt;
-          &lt;a href=&quot;#Free-Talk&quot; class=&quot;heading-link&quot;&gt;&lt;i class=&quot;fas fa-link&quot;&gt;&lt;/i&gt;&lt;/a&gt;Free Talk&lt;/h1&gt;
-      &lt;p&gt;HashTable 在 LeetCode 的题目中经常出现，打算刷完 Hot 100 里面的 HashTable Tags，熟悉一下 HashTable 相关的 API。&lt;/p&gt;
-    
-    </summary>
-    
-    
-      <category term="LeetCode" scheme="https://Gemini-Lin.github.io/categories/LeetCode/"/>
-    
-    
-      <category term="LeetCode" scheme="https://Gemini-Lin.github.io/tags/LeetCode/"/>
-    
-      <category term="HashTable" scheme="https://Gemini-Lin.github.io/tags/HashTable/"/>
     
   </entry>
   
