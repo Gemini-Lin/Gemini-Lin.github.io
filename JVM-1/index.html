@@ -1,9 +1,9 @@
-<!DOCTYPE html><html lang="zh-CN"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="format-detection" content="telephone=no"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="black"><link rel="icon" href="/images/icons/favicon.ico?v=2.0.1" type="image/png" sizes="16x16"><link rel="icon" href="/images/icons/favicon.ico?v=2.0.1" type="image/png" sizes="32x32"><meta name="google-site-verification" content="_T_d70fQRwnF8GQJNmmDRbHpjKelZbY-RFDWgS--hAw"><meta name="baidu-site-verification" content="AM9It5Uqy8"><meta name="description" content="类的加载定义        类的加载指的是将类的.class文件中的二进制数据读入到内存中，将其放在运行时数据区的方法区内，然后在堆区创建一个java.lang.Class对象，用来封装类在方法区内的数据结构。                  类的最终加载产品是位于堆区中的Class对象，Class对象封装了类在方法区内的数据结构，并向Java程序提供访问接口。 与C语言的">
+<!DOCTYPE html><html lang="zh-CN"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="format-detection" content="telephone=no"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="black"><link rel="icon" href="/images/icons/favicon.ico?v=2.0.1" type="image/png" sizes="16x16"><link rel="icon" href="/images/icons/favicon.ico?v=2.0.1" type="image/png" sizes="32x32"><meta name="google-site-verification" content="_T_d70fQRwnF8GQJNmmDRbHpjKelZbY-RFDWgS--hAw"><meta name="baidu-site-verification" content="AM9It5Uqy8"><meta name="description" content="类的加载定义       类的加载指的是将类的.class文件中的二进制数据读入到内存中，将其放在运行时数据区的方法区内，然后在堆区创建一个java.lang.Class对象，用来封装类在方法区内的数据结构。                  类的最终加载产品是位于堆区中的Class对象，Class对象封装了类在方法区内的数据结构，并向Java程序提供访问接口。 与C语言的类">
 <meta property="og:type" content="article">
 <meta property="og:title" content="JVM系列（一）-- Java类的加载机制">
 <meta property="og:url" content="https://gemini-lin.github.io/JVM-1/index.html">
 <meta property="og:site_name" content="GeminiPlanet">
-<meta property="og:description" content="类的加载定义        类的加载指的是将类的.class文件中的二进制数据读入到内存中，将其放在运行时数据区的方法区内，然后在堆区创建一个java.lang.Class对象，用来封装类在方法区内的数据结构。                  类的最终加载产品是位于堆区中的Class对象，Class对象封装了类在方法区内的数据结构，并向Java程序提供访问接口。 与C语言的">
+<meta property="og:description" content="类的加载定义       类的加载指的是将类的.class文件中的二进制数据读入到内存中，将其放在运行时数据区的方法区内，然后在堆区创建一个java.lang.Class对象，用来封装类在方法区内的数据结构。                  类的最终加载产品是位于堆区中的Class对象，Class对象封装了类在方法区内的数据结构，并向Java程序提供访问接口。 与C语言的类">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="http://favorites.ren/assets/images/2017/jvm/jvm-1.png">
 <meta property="og:image" content="https://imgconvert.csdnimg.cn/aHR0cHM6Ly9tbWJpei5xcGljLmNuL21tYml6X3BuZy80QUc2dGljNjhBR2JSNnc4bWQ5cW1vcmdldjV5cHN0aWF3ekRKNk5kNmFONUZJRzVzaWFyYmlhTUFSSmljeFQ0UmR2ZzZtaDRhUWdnSVlmQ0xZNTAwMHVIRGliUS82NDA_d3hfZm10PXBuZw?x-oss-process=image/format,png">
@@ -39,22 +39,21 @@ var CONFIG = {
 
 window.CONFIG = CONFIG;</script><meta name="generator" content="Hexo 5.4.0"></head><body><div class="container" id="container"><header class="header" id="header"><div class="header-inner header-inner--height header-inner--bgcolor"><nav class="header-nav header-nav--sticky"><div class="header-nav-inner"><div class="header-nav-menubtn"><i class="fas fa-bars"></i></div><div class="header-nav-menu"><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/"><span class="header-nav-menu-item__icon"><i class="fas fa-home"></i></span><span class="header-nav-menu-item__text">首页</span></a></div><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/about/"><span class="header-nav-menu-item__icon"><i class="fas fa-user"></i></span><span class="header-nav-menu-item__text">关于</span></a></div><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/archives/"><span class="header-nav-menu-item__icon"><i class="fas fa-folder-open"></i></span><span class="header-nav-menu-item__text">归档</span></a></div><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/categories/"><span class="header-nav-menu-item__icon"><i class="fas fa-layer-group"></i></span><span class="header-nav-menu-item__text">分类</span></a></div><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/tags/"><span class="header-nav-menu-item__icon"><i class="fas fa-tags"></i></span><span class="header-nav-menu-item__text">标签</span></a></div><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/friends/"><span class="header-nav-menu-item__icon"><i class="fas fa-link"></i></span><span class="header-nav-menu-item__text">友链</span></a></div></div><div class="header-nav-search"><span class="header-nav-search__icon"><i class="fas fa-search"></i></span><span class="header-nav-search__text">搜索</span></div><div class="header-nav-mode"><div class="mode"><div class="mode-track"><span class="mode-track-moon"></span><span class="mode-track-sun"></span></div><div class="mode-thumb"></div></div></div></div></nav></div></header><main class="main" id="main"><div class="main-inner"><div class="content-wrap" id="content-wrap"><div class="content" id="content"><!-- Just used to judge whether it is an article page--><div id="is-post"></div><div class="post"><header class="post-header"><h1 class="post-title">JVM系列（一）-- Java类的加载机制</h1><div class="post-meta"><span class="post-meta-item post-meta-item--createtime"><span class="post-meta-item__icon"><i class="far fa-calendar-plus"></i></span><span class="post-meta-item__info">发表于</span><span class="post-meta-item__value">2020-05-27</span></span><span class="post-meta-item post-meta-item--updatetime"><span class="post-meta-item__icon"><i class="far fa-calendar-check"></i></span><span class="post-meta-item__info">更新于</span><span class="post-meta-item__value">2020-05-27</span></span><span class="post-meta-item post-meta-item--wordcount"><span class="post-meta-item__icon"><i class="far fa-file-word"></i></span><span class="post-meta-item__info">字数统计</span><span class="post-meta-item__value">3.1k</span></span><span class="post-meta-item post-meta-item--readtime"><span class="post-meta-item__icon"><i class="far fa-clock"></i></span><span class="post-meta-item__info">阅读时长</span><span class="post-meta-item__value">22分</span></span><span class="post-meta-item post-meta-item--visitors"><span class="post-meta-item__icon"><i class="fas fa-eye"></i></span><span class="post-meta-item__info">阅读次数</span><span class="post-meta-item__value" id="busuanzi_value_page_pv"></span></span></div></header><div class="post-body"><h1 id="类的加载定义">
           <a href="#类的加载定义" class="heading-link"><i class="fas fa-link"></i></a>类的加载定义</h1>
-      
-<p>类的加载指的是将类的.class文件中的二进制数据读入到内存中，将其放在运行时数据区的方法区内，然后在堆区创建一个<code>java.lang.Class</code>对象，用来封装类在方法区内的数据结构。</p>
+      <p>类的加载指的是将类的.class文件中的二进制数据读入到内存中，将其放在运行时数据区的方法区内，然后在堆区创建一个<code>java.lang.Class</code>对象，用来封装类在方法区内的数据结构。</p>
 <p>
         <img class="lazyload lazyload-gif" src="/images/loading.svg" data-src="http://favorites.ren/assets/images/2017/jvm/jvm-1.png" alt="image">
       </p>
 <p>类的最终加载产品是位于堆区中的Class对象，Class对象封装了类在方法区内的数据结构，并向Java程序提供访问接口。</p>
-<p>与C语言的类比：C语言 --&gt; 二进制文件 --&gt; 计算机硬件；Java --&gt; 字节码文件 --&gt; JVM</p>
+<p>与C语言的类比：C语言 –&gt; 二进制文件 –&gt; 计算机硬件；Java –&gt; 字节码文件 –&gt; JVM</p>
 <blockquote>
-<p>**注意事项：**类加载器并不需要等到某个类被“首次主动使用”时再加载，JVM规范允许类加载器在预料某个类将要被使用时就预先加载它，但是如果这个类在加载中遇到错误，只有在主动使用此类时才会报错(LinkageError)。</p>
+<p><strong>注意事项：</strong>类加载器并不需要等到某个类被“首次主动使用”时再加载，JVM规范允许类加载器在预料某个类将要被使用时就预先加载它，但是如果这个类在加载中遇到错误，只有在主动使用此类时才会报错(LinkageError)。</p>
 </blockquote>
 <span id="more"></span>
 
+
         <h1 id="类的生命周期">
           <a href="#类的生命周期" class="heading-link"><i class="fas fa-link"></i></a>类的生命周期</h1>
-      
-<p>加载(Loading) --&gt;  <strong>验证(Verification) --&gt; 准备(Preparation) --&gt; 解析(Resolution)</strong> --&gt; 初始化(Intialization) --&gt; 使用(Using) --&gt; 卸载(Unloading) 共七个阶段；其中验证、准备和解析又统称为<strong>连接(Linking)阶段</strong>。</p>
+      <p>加载(Loading) –&gt;  <strong>验证(Verification) –&gt; 准备(Preparation) –&gt; 解析(Resolution)</strong> –&gt; 初始化(Intialization) –&gt; 使用(Using) –&gt; 卸载(Unloading) 共七个阶段；其中验证、准备和解析又统称为<strong>连接(Linking)阶段</strong>。</p>
 <p>
         <img class="lazyload lazyload-gif" src="/images/loading.svg" data-src="https://imgconvert.csdnimg.cn/aHR0cHM6Ly9tbWJpei5xcGljLmNuL21tYml6X3BuZy80QUc2dGljNjhBR2JSNnc4bWQ5cW1vcmdldjV5cHN0aWF3ekRKNk5kNmFONUZJRzVzaWFyYmlhTUFSSmljeFQ0UmR2ZzZtaDRhUWdnSVlmQ0xZNTAwMHVIRGliUS82NDA_d3hfZm10PXBuZw?x-oss-process=image/format,png" style="" alt="image">
       </p>
@@ -64,8 +63,7 @@ window.CONFIG = CONFIG;</script><meta name="generator" content="Hexo 5.4.0"></he
 
         <h2 id="加载">
           <a href="#加载" class="heading-link"><i class="fas fa-link"></i></a>加载</h2>
-      
-<p><strong>三个任务：</strong></p>
+      <p><strong>三个任务：</strong></p>
 <blockquote>
 <ul>
 <li>通过一个类的全限定名来获取其定义的二进制字节流</li>
@@ -74,10 +72,9 @@ window.CONFIG = CONFIG;</script><meta name="generator" content="Hexo 5.4.0"></he
 </ul>
 </blockquote>
 
-        <h2 id="验证确保被加载的类的正确性">
-          <a href="#验证确保被加载的类的正确性" class="heading-link"><i class="fas fa-link"></i></a>验证：确保被加载的类的正确性</h2>
-      
-<p><strong>四个阶段：</strong></p>
+        <h2 id="验证：确保被加载的类的正确性">
+          <a href="#验证：确保被加载的类的正确性" class="heading-link"><i class="fas fa-link"></i></a>验证：确保被加载的类的正确性</h2>
+      <p><strong>四个阶段：</strong></p>
 <blockquote>
 <ul>
 <li><strong>文件格式验证</strong>：验证字节流是否符合Class文件格式规范；</li>
@@ -90,40 +87,36 @@ window.CONFIG = CONFIG;</script><meta name="generator" content="Hexo 5.4.0"></he
 <p>ps: 验证阶段非常重要，但是不是必须的，如果引用的类已经经过反复验证了，就可以使用<code>-Xverifynone</code>参数来关闭大部分的类验证措施，以缩短虚拟机类加载的时间。</p>
 </blockquote>
 
-        <h2 id="准备为类的静态变量分配内存并将其初始化为默认值">
-          <a href="#准备为类的静态变量分配内存并将其初始化为默认值" class="heading-link"><i class="fas fa-link"></i></a>准备：为类的静态变量分配内存，并将其初始化为默认值</h2>
-      
-<ol>
+        <h2 id="准备：为类的静态变量分配内存，并将其初始化为默认值">
+          <a href="#准备：为类的静态变量分配内存，并将其初始化为默认值" class="heading-link"><i class="fas fa-link"></i></a>准备：为类的静态变量分配内存，并将其初始化为默认值</h2>
+      <ol>
 <li>这时候进行内存分配的仅包括类变量(static)，而不包括实例变量，实例变量会在对象实例化时随着对象一块分配在java堆中。</li>
 <li>这里所设置的初始值通常情况下是数据类型默认的零值(如0，null,false),而不是被在java代码中显示赋予的值。</li>
-<li>如果类字段的字段属性表中存在<code>ConstantValue</code>属性，即同时被final和static修饰，那么在准备阶段变量value就会被初始化为ConstValue属性所指定的值。<br>
-<strong>示例：</strong></li>
+<li>如果类字段的字段属性表中存在<code>ConstantValue</code>属性，即同时被final和static修饰，那么在准备阶段变量value就会被初始化为ConstValue属性所指定的值。</li>
 </ol>
+<p><strong>示例：</strong></p>
 <blockquote>
-<p>假设一个类变量的定义为：<code>public static int value = 3;</code><br>
-那么变量value在准备阶段过后的初始值为0，而不是3。因为此时尚未执行任何java方法，而赋值为3是在程序编译后，存放于类构造器<code>&lt;clinit&gt;()</code>方法中的，在初始化阶段执行。</p>
+<p>假设一个类变量的定义为：<code>public static int value = 3;</code><br>那么变量value在准备阶段过后的初始值为0，而不是3。因为此时尚未执行任何java方法，而赋值为3是在程序编译后，存放于类构造器<code>&lt;clinit&gt;()</code>方法中的，在初始化阶段执行。</p>
 </blockquote>
-<p>这里还需要注意如下几点：</p>
+<p> 这里还需要注意如下几点：</p>
 <blockquote>
 <ul>
 <li>对基本数据类型来说，对于类变量（static）和全局变量，如果不显式地对其赋值而直接使用，则系统会为其赋予默认的零值，而对于局部变量来说，在使用前必须显式地为其赋值，否则编译时不通过。</li>
 <li>对于同时被static和final修饰的常量，必须在声明的时候就为其显式地赋值，否则编译时不通过；而只被final修饰的常量则既可以在声明时显式地为其赋值，也可以在类初始化时显式地为其赋值，总之，在使用前必须为其显式地赋值，系统不会为其赋予默认零值。</li>
-<li>对于引用数据类型reference来说，如数组引用、对象引用等，如果没有对其进行显式地赋值而直接使用，系统都会为其赋予默认的零值，即null。</li>
+<li>对于引用数据类型reference来说，如数组引用、对象引用等，如果没有对其进行显式地赋值而直接使用，系统都会为其赋予默认的零值，即null。<ul>
 <li>如果在数组初始化时没有对数组中的各元素赋值，那么其中的元素将根据对应的数据类型而被赋予默认的零值。</li>
+</ul>
+</li>
 </ul>
 </blockquote>
 
         <h2 id="解析">
           <a href="#解析" class="heading-link"><i class="fas fa-link"></i></a>解析</h2>
-      
-<p>解析阶段是虚拟机将<strong>常量池内的符号引用替换为直接引用</strong>的过程。<br>
-符号引用就是一组符号来描述目标，可以是任何字面量。<br>
-直接引用就是直接指向目标的指针、相对偏移量或一个间接定位到目标的句柄。</p>
+      <p>解析阶段是虚拟机将<strong>常量池内的符号引用替换为直接引用</strong>的过程。<br>符号引用就是一组符号来描述目标，可以是任何字面量。<br>直接引用就是直接指向目标的指针、相对偏移量或一个间接定位到目标的句柄。</p>
 
         <h2 id="初始化">
           <a href="#初始化" class="heading-link"><i class="fas fa-link"></i></a>初始化</h2>
-      
-<p>初始化：为类的静态变量赋予正确的初始值，JVM负责对类进行初始化，主要对类变量进行初始化。在java中对类变量进行初始值设定有两种方式：</p>
+      <p>初始化：为类的静态变量赋予正确的初始值，JVM负责对类进行初始化，主要对类变量进行初始化。在java中对类变量进行初始值设定有两种方式：</p>
 <blockquote>
 <ol>
 <li>声明类变量是指定初始值</li>
@@ -138,8 +131,7 @@ window.CONFIG = CONFIG;</script><meta name="generator" content="Hexo 5.4.0"></he
 <li>假如类中有初始化语句，则系统依次执行这些初始化语句</li>
 </ol>
 </blockquote>
-<p>类初始化时机：只有当对类的主动引用的时候才会导致类的初始化。<br>
-<strong>类的主动引用</strong>包括以下六种：</p>
+<p>类初始化时机：只有当对类的主动引用的时候才会导致类的初始化。<br><strong>类的主动引用</strong>包括以下六种：</p>
 <blockquote>
 <ol>
 <li>创建类的实例，也就是new的方式</li>
@@ -161,8 +153,7 @@ window.CONFIG = CONFIG;</script><meta name="generator" content="Hexo 5.4.0"></he
 
         <h2 id="介绍生命周期">
           <a href="#介绍生命周期" class="heading-link"><i class="fas fa-link"></i></a>介绍生命周期</h2>
-      
-<p>以下四种情况：</p>
+      <p>以下四种情况：</p>
 <blockquote>
 <ul>
 <li>执行了 System.exit()方法</li>
@@ -174,38 +165,27 @@ window.CONFIG = CONFIG;</script><meta name="generator" content="Hexo 5.4.0"></he
 
         <h1 id="类加载器">
           <a href="#类加载器" class="heading-link"><i class="fas fa-link"></i></a>类加载器</h1>
-      
-<p>
+      <p>
         <img class="lazyload lazyload-gif" src="/images/loading.svg" data-src="http://favorites.ren/assets/images/2017/jvm/calssloader.png" alt="image">
       </p>
-<p>站在Java虚拟机的角度来讲，只存在两种不同的类加载器：<br>
-<strong>启动类加载器：</strong><br>
-它使用C++实现（这里仅限于Hotspot，也就是JDK1.5之后默认的虚拟机，有很多其他的虚拟机是用Java语言实现的），是虚拟机自身的一部分；<br>
-<strong>所有其它的类加载器：</strong><br>
-这些类加载器都由Java语言实现，独立于虚拟机之外，并且全部继承自抽象类 <code>java.lang.ClassLoader</code>，这些类加载器需要由启动类加载器加载到内存中之后才能去加载其他的类。</p>
+<p>站在Java虚拟机的角度来讲，只存在两种不同的类加载器：<br><strong>启动类加载器：</strong><br>它使用C++实现（这里仅限于Hotspot，也就是JDK1.5之后默认的虚拟机，有很多其他的虚拟机是用Java语言实现的），是虚拟机自身的一部分；<br><strong>所有其它的类加载器：</strong><br>这些类加载器都由Java语言实现，独立于虚拟机之外，并且全部继承自抽象类 <code>java.lang.ClassLoader</code>，这些类加载器需要由启动类加载器加载到内存中之后才能去加载其他的类。</p>
 <p>站在Java开发人员的角度来看，类加载器可以大致划分为以下三类：</p>
-<p><strong>启动类加载器：</strong><code>BootstrapClassLoader</code>，负责加载存放在 <code>JDK\jre\lib</code>(JDK代表JDK的安装目录，下同)下，或被 <code>-Xbootclasspath</code>参数指定的路径中的，并且能被虚拟机识别的类库（如rt.jar，所有的java.开头的类均被 <code>BootstrapClassLoader</code>加载）。启动类加载器是无法被Java程序直接引用的。<br>
-<strong>扩展类加载器：</strong><code>ExtensionClassLoader</code>，该加载器由 <code>sun.misc.Launcher$ExtClassLoader</code>实现，它负责加载 <code>JDK\jre\lib\ext</code>目录中，或者由 <code>java.ext.dirs</code>系统变量指定的路径中的所有类库（如javax.开头的类），开发者可以直接使用扩展类加载器。<br>
-<strong>应用程序类加载器：</strong><code>ApplicationClassLoader</code>，该类加载器由 <code>sun.misc.Launcher$AppClassLoader</code>来实现，它负责加载用户类路径（ClassPath）所指定的类，开发者可以直接使用该类加载器，如果应用程序中没有自定义过自己的类加载器，一般情况下这个就是程序中默认的类加载器。</p>
+<p><strong>启动类加载器：</strong><code>BootstrapClassLoader</code>，负责加载存放在 <code>JDK\jre\lib</code>(JDK代表JDK的安装目录，下同)下，或被 <code>-Xbootclasspath</code>参数指定的路径中的，并且能被虚拟机识别的类库（如rt.jar，所有的java.开头的类均被 <code>BootstrapClassLoader</code>加载）。启动类加载器是无法被Java程序直接引用的。<br><strong>扩展类加载器：</strong><code>ExtensionClassLoader</code>，该加载器由 <code>sun.misc.Launcher$ExtClassLoader</code>实现，它负责加载 <code>JDK\jre\lib\ext</code>目录中，或者由 <code>java.ext.dirs</code>系统变量指定的路径中的所有类库（如javax.开头的类），开发者可以直接使用扩展类加载器。<br><strong>应用程序类加载器：</strong><code>ApplicationClassLoader</code>，该类加载器由 <code>sun.misc.Launcher$AppClassLoader</code>来实现，它负责加载用户类路径（ClassPath）所指定的类，开发者可以直接使用该类加载器，如果应用程序中没有自定义过自己的类加载器，一般情况下这个就是程序中默认的类加载器。</p>
 
-        <h2 id="jvm类加载机制">
-          <a href="#jvm类加载机制" class="heading-link"><i class="fas fa-link"></i></a>JVM类加载机制</h2>
-      
-<ul>
-<li>**全盘负责：**当一个类加载器负责加载某个Class时，该Class所依赖的和引用的其他Class也将由该类加载器负责载入，除非显示使用另外一个类加载器来载入；</li>
-<li>**父类委托：**先让父类加载器试图加载该类，只有在父类加载器无法加载该类时才尝试从自己的类路径中加载该类；</li>
-<li>**缓存机制：**缓存机制将会保证所有加载过的Class都会被缓存，当程序中需要使用某个Class时，类加载器先从缓冲区寻找该Class，只有缓存区不存在，系统才会读取该类对应的二进制数据，并将其转换成Class对象，存入缓存区。*这就是为什么修改了Class后，必须重启JVM，程序的修改才会生效。</li>
+        <h2 id="JVM类加载机制">
+          <a href="#JVM类加载机制" class="heading-link"><i class="fas fa-link"></i></a>JVM类加载机制</h2>
+      <ul>
+<li><strong>全盘负责：</strong>当一个类加载器负责加载某个Class时，该Class所依赖的和引用的其他Class也将由该类加载器负责载入，除非显示使用另外一个类加载器来载入；</li>
+<li><strong>父类委托：</strong>先让父类加载器试图加载该类，只有在父类加载器无法加载该类时才尝试从自己的类路径中加载该类；</li>
+<li><strong>缓存机制：</strong>缓存机制将会保证所有加载过的Class都会被缓存，当程序中需要使用某个Class时，类加载器先从缓冲区寻找该Class，只有缓存区不存在，系统才会读取该类对应的二进制数据，并将其转换成Class对象，存入缓存区。*这就是为什么修改了Class后，必须重启JVM，程序的修改才会生效。</li>
 </ul>
 
         <h1 id="类的加载">
           <a href="#类的加载" class="heading-link"><i class="fas fa-link"></i></a>类的加载</h1>
       
-
         <h2 id="显式加载">
           <a href="#显式加载" class="heading-link"><i class="fas fa-link"></i></a>显式加载</h2>
-      
-<p>调用<code>ClassLoader#loadClass(className)</code>或<code>Class.forName(className)</code>。<br>
-区别：</p>
+      <p>调用<code>ClassLoader#loadClass(className)</code>或<code>Class.forName(className)</code>。<br>区别：</p>
 <blockquote>
 <ol>
 <li>Class.forName()：将类的.class文件加载到jvm中之外，还会对类进行解释，执行类中的static块；</li>
@@ -216,73 +196,54 @@ window.CONFIG = CONFIG;</script><meta name="generator" content="Hexo 5.4.0"></he
 
         <h2 id="隐式加载">
           <a href="#隐式加载" class="heading-link"><i class="fas fa-link"></i></a>隐式加载</h2>
-      
-<ol>
+      <ol>
 <li>new类对象；</li>
 <li>使用类的静态域；</li>
 <li>创建子类对象；</li>
 <li>使用子类的静态域；</li>
-<li>其他的隐式加载，在JVM启动时：</li>
-</ol>
-<blockquote>
+<li>其他的隐式加载，在JVM启动时：<blockquote>
 <ul>
 <li>BootStrapLoader 会加载一些 JVM 自身运行所需的 Class；</li>
 <li>ExtClassLoader 会加载指定目录下一些特殊的 Class；</li>
 <li>AppClassLoader 会加载 classpath 路径下的 Class，以及 main 函数所在的类的 Class 文件。</li>
 </ul>
 </blockquote>
+</li>
+</ol>
 
         <h1 id="双亲委派模型">
           <a href="#双亲委派模型" class="heading-link"><i class="fas fa-link"></i></a>双亲委派模型</h1>
-      
-<p>**工作流程：**如果一个类加载器收到了类加载的请求，它首先不会自己去尝试加载这个类，而是把请求委托给父加载器去完成，依次向上，因此，所有的类加载请求最终都应该被传递到顶层的启动类加载器中，只有当父加载器在它的搜索范围中没有找到所需的类时，即无法完成该加载，子加载器才会尝试自己去加载该类。</p>
+      <p><strong>工作流程：</strong>如果一个类加载器收到了类加载的请求，它首先不会自己去尝试加载这个类，而是把请求委托给父加载器去完成，依次向上，因此，所有的类加载请求最终都应该被传递到顶层的启动类加载器中，只有当父加载器在它的搜索范围中没有找到所需的类时，即无法完成该加载，子加载器才会尝试自己去加载该类。</p>
 <p><strong>双亲委派机制：</strong></p>
 <ol>
-<li>
-<p>当 <code>AppClassLoader</code>加载一个class时，它首先不会自己去尝试加载这个类，而是把类加载请求委派给父类加载器<code>ExtClassLoader</code>去完成。</p>
+<li><p>当 <code>AppClassLoader</code>加载一个class时，它首先不会自己去尝试加载这个类，而是把类加载请求委派给父类加载器<code>ExtClassLoader</code>去完成。</p>
 </li>
-<li>
-<p>当 <code>ExtClassLoader</code>加载一个class时，它首先也不会自己去尝试加载这个类，而是把类加载请求委派给<code>BootStrapClassLoader</code>去完成。</p>
+<li><p>当 <code>ExtClassLoader</code>加载一个class时，它首先也不会自己去尝试加载这个类，而是把类加载请求委派给<code>BootStrapClassLoader</code>去完成。</p>
 </li>
-<li>
-<p>如果 <code>BootStrapClassLoader</code>加载失败（例如在 $JAVA_HOME/jre/lib里未查找到该class），会使用 <code>ExtClassLoader</code>来尝试加载；</p>
+<li><p>如果 <code>BootStrapClassLoader</code>加载失败（例如在 $JAVA_HOME/jre/lib里未查找到该class），会使用 <code>ExtClassLoader</code>来尝试加载；</p>
 </li>
-<li>
-<p>若<code>ExtClassLoader</code>也加载失败，则会使用 <code>AppClassLoader</code>来加载，如果 <code>AppClassLoader</code>也加载失败，则会报出异常 <code>ClassNotFoundException</code>。</p>
+<li><p>若<code>ExtClassLoader</code>也加载失败，则会使用 <code>AppClassLoader</code>来加载，如果 <code>AppClassLoader</code>也加载失败，则会报出异常 <code>ClassNotFoundException</code>。</p>
 </li>
 </ol>
 
         <h1 id="面试问题">
           <a href="#面试问题" class="heading-link"><i class="fas fa-link"></i></a>面试问题</h1>
-      
-<ol>
-<li>
-<p>简单讲下JVM中的类加载过程</p>
+      <ol>
+<li><p>简单讲下JVM中的类加载过程</p>
 </li>
-<li>
-<p>JVM中的类加载和卸载的时机？</p>
+<li><p>JVM中的类加载和卸载的时机？</p>
 </li>
-<li>
-<p>如何理解JVM中不同类加载器的概念和作用？</p>
+<li><p>如何理解JVM中不同类加载器的概念和作用？</p>
 </li>
-<li>
-<p>简单讲下JVM中的双亲委派模型？</p>
+<li><p>简单讲下JVM中的双亲委派模型？</p>
 </li>
-<li>
-<p>什么情况下会破坏双亲委派模型？为什么？可否举个例子？</p>
+<li><p>什么情况下会破坏双亲委派模型？为什么？可否举个例子？</p>
 </li>
-<li>
-<p>Tomcat中的类加载机制有了解吗？为什么这么设计？</p>
+<li><p>Tomcat中的类加载机制有了解吗？为什么这么设计？</p>
 </li>
-<li>
-<p>实际开发中有遇到哪些类加载器相关的问题？你又是如何解决的？</p>
+<li><p>实际开发中有遇到哪些类加载器相关的问题？你又是如何解决的？</p>
 </li>
-<li>
-<p>JVM之上的弱类型语言例如Groovy是如何实现？简单讲下动态类加载机制？<br>
-参考资料：<br>
-<span class="exturl"><a class="exturl__link" target="_blank" rel="noopener" href="https://mp.weixin.qq.com/s?__biz=MzI4NDY5Mjc1Mg==&amp;mid=2247483934&amp;idx=1&amp;sn=41c46eceb2add54b7cde9eeb01412a90&amp;chksm=ebf6da61dc81537721d36aadb5d20613b0449762842f9128753e716ce5fefe2b659d8654c4e8&amp;scene=21#wechat_redirect">微信公众号</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span><br>
-<span class="exturl"><a class="exturl__link" target="_blank" rel="noopener" href="https://github.com/TangBean/understanding-the-jvm/blob/master/Ch2-Java%E8%99%9A%E6%8B%9F%E6%9C%BA%E7%A8%8B%E5%BA%8F%E6%89%A7%E8%A1%8C/01-%E8%99%9A%E6%8B%9F%E6%9C%BA%E7%9A%84%E7%B1%BB%E5%8A%A0%E8%BD%BD%E6%9C%BA%E5%88%B6.md">Github博主</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span><br>
-<span class="exturl"><a class="exturl__link" target="_blank" rel="noopener" href="https://blog.csdn.net/duqi_2009/article/details/101877579">Blog</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></p>
+<li><p>JVM之上的弱类型语言例如Groovy是如何实现？简单讲下动态类加载机制？<br>参考资料：<br><span class="exturl"><a class="exturl__link" target="_blank" rel="noopener" href="https://mp.weixin.qq.com/s?__biz=MzI4NDY5Mjc1Mg==&amp;mid=2247483934&amp;idx=1&amp;sn=41c46eceb2add54b7cde9eeb01412a90&amp;chksm=ebf6da61dc81537721d36aadb5d20613b0449762842f9128753e716ce5fefe2b659d8654c4e8&amp;scene=21#wechat_redirect">微信公众号</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span><br><span class="exturl"><a class="exturl__link" target="_blank" rel="noopener" href="https://github.com/TangBean/understanding-the-jvm/blob/master/Ch2-Java%E8%99%9A%E6%8B%9F%E6%9C%BA%E7%A8%8B%E5%BA%8F%E6%89%A7%E8%A1%8C/01-%E8%99%9A%E6%8B%9F%E6%9C%BA%E7%9A%84%E7%B1%BB%E5%8A%A0%E8%BD%BD%E6%9C%BA%E5%88%B6.md">Github博主</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span><br><span class="exturl"><a class="exturl__link" target="_blank" rel="noopener" href="https://blog.csdn.net/duqi_2009/article/details/101877579">Blog</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></p>
 </li>
 </ol>
 <script>
@@ -306,13 +267,13 @@ window.CONFIG = CONFIG;</script><meta name="generator" content="Hexo 5.4.0"></he
       </script></div><footer class="post-footer"><div class="post-ending ending"><div class="ending__text">------ 本文结束，感谢您的阅读 ------</div></div><div class="post-copyright copyright"><div class="copyright-author"><span class="copyright-author__name">本文作者: </span><span class="copyright-author__value"><a href="https://Gemini-Lin.github.io">Gemini-Lin</a></span></div><div class="copyright-link"><span class="copyright-link__name">本文链接: </span><span class="copyright-link__value"><a href="https://gemini-lin.github.io/JVM-1/">https://gemini-lin.github.io/JVM-1/</a></span></div><div class="copyright-notice"><span class="copyright-notice__name">版权声明: </span><span class="copyright-notice__value">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en" rel="external nofollow" target="_blank">BY-NC-SA</a> 许可协议。转载请注明出处！</span></div></div><div class="post-tags"><span class="post-tags-item"><span class="post-tags-item__icon"><i class="fas fa-tag"></i></span><a class="post-tags-item__link" href="https://gemini-lin.github.io/tags/JVM/">JVM</a></span><span class="post-tags-item"><span class="post-tags-item__icon"><i class="fas fa-tag"></i></span><a class="post-tags-item__link" href="https://gemini-lin.github.io/tags/java%E7%B1%BB/">java类</a></span></div><div class="post-share"><div class="social-share" data-sites="qzone, qq, weibo, wechat, douban, linkedin, facebook, twitter, google">Share to: </div></div><div class="post-reward reward"><div class="reward-button">请我喝杯咖啡~</div><div class="reward-qrcode"><span class="reward-qrcode-alipay"><img class="reward-qrcode-alipay__img" src="/images/alipay.jpg"><div class="reward-qrcode-alipay__text">支付宝打赏</div></span><span class="reward-qrcode-wechat"><img class="reward-qrcode-wechat__img" src="/images/wechatpay.jpg"><div class="reward-qrcode-wechat__text">微信打赏</div></span></div></div><nav class="post-paginator paginator"><div class="paginator-prev"><a class="paginator-prev__link" href="/JVM%E7%B3%BB%E5%88%97%EF%BC%88%E4%BA%8C%EF%BC%89-Java%E5%86%85%E5%AD%98%E7%AE%A1%E7%90%86/"><span class="paginator-prev__icon"><i class="fas fa-angle-left"></i></span><span class="paginator-prev__text">JVM系列（二）-- Java内存管理</span></a></div><div class="paginator-next"><a class="paginator-next__link" href="/%E6%B1%87%E7%BC%96%E8%AF%AD%E8%A8%80%E5%AD%A6%E4%B9%A0%E6%80%BB%E7%BB%93/"><span class="paginator-prev__text">汇编语言学习总结</span><span class="paginator-next__icon"><i class="fas fa-angle-right"></i></span></a></div></nav></footer></div></div><div class="comments" id="comments"><div id="gitalk-container"></div></div></div><div class="sidebar-wrap" id="sidebar-wrap"><aside class="sidebar" id="sidebar"><div class="sidebar-nav"><span class="sidebar-nav-toc current">文章目录</span><span class="sidebar-nav-ov">站点概览</span></div><section class="sidebar-toc"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%B1%BB%E7%9A%84%E5%8A%A0%E8%BD%BD%E5%AE%9A%E4%B9%89"><span class="toc-number">1.</span> <span class="toc-text">
           类的加载定义</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%B1%BB%E7%9A%84%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F"><span class="toc-number">2.</span> <span class="toc-text">
           类的生命周期</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8A%A0%E8%BD%BD"><span class="toc-number">2.1.</span> <span class="toc-text">
-          加载</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%AA%8C%E8%AF%81%E7%A1%AE%E4%BF%9D%E8%A2%AB%E5%8A%A0%E8%BD%BD%E7%9A%84%E7%B1%BB%E7%9A%84%E6%AD%A3%E7%A1%AE%E6%80%A7"><span class="toc-number">2.2.</span> <span class="toc-text">
-          验证：确保被加载的类的正确性</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%87%86%E5%A4%87%E4%B8%BA%E7%B1%BB%E7%9A%84%E9%9D%99%E6%80%81%E5%8F%98%E9%87%8F%E5%88%86%E9%85%8D%E5%86%85%E5%AD%98%E5%B9%B6%E5%B0%86%E5%85%B6%E5%88%9D%E5%A7%8B%E5%8C%96%E4%B8%BA%E9%BB%98%E8%AE%A4%E5%80%BC"><span class="toc-number">2.3.</span> <span class="toc-text">
+          加载</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%AA%8C%E8%AF%81%EF%BC%9A%E7%A1%AE%E4%BF%9D%E8%A2%AB%E5%8A%A0%E8%BD%BD%E7%9A%84%E7%B1%BB%E7%9A%84%E6%AD%A3%E7%A1%AE%E6%80%A7"><span class="toc-number">2.2.</span> <span class="toc-text">
+          验证：确保被加载的类的正确性</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%87%86%E5%A4%87%EF%BC%9A%E4%B8%BA%E7%B1%BB%E7%9A%84%E9%9D%99%E6%80%81%E5%8F%98%E9%87%8F%E5%88%86%E9%85%8D%E5%86%85%E5%AD%98%EF%BC%8C%E5%B9%B6%E5%B0%86%E5%85%B6%E5%88%9D%E5%A7%8B%E5%8C%96%E4%B8%BA%E9%BB%98%E8%AE%A4%E5%80%BC"><span class="toc-number">2.3.</span> <span class="toc-text">
           准备：为类的静态变量分配内存，并将其初始化为默认值</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%A7%A3%E6%9E%90"><span class="toc-number">2.4.</span> <span class="toc-text">
           解析</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%88%9D%E5%A7%8B%E5%8C%96"><span class="toc-number">2.5.</span> <span class="toc-text">
           初始化</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BB%8B%E7%BB%8D%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F"><span class="toc-number">2.6.</span> <span class="toc-text">
           介绍生命周期</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%B1%BB%E5%8A%A0%E8%BD%BD%E5%99%A8"><span class="toc-number">3.</span> <span class="toc-text">
-          类加载器</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#jvm%E7%B1%BB%E5%8A%A0%E8%BD%BD%E6%9C%BA%E5%88%B6"><span class="toc-number">3.1.</span> <span class="toc-text">
+          类加载器</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#JVM%E7%B1%BB%E5%8A%A0%E8%BD%BD%E6%9C%BA%E5%88%B6"><span class="toc-number">3.1.</span> <span class="toc-text">
           JVM类加载机制</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%B1%BB%E7%9A%84%E5%8A%A0%E8%BD%BD"><span class="toc-number">4.</span> <span class="toc-text">
           类的加载</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%98%BE%E5%BC%8F%E5%8A%A0%E8%BD%BD"><span class="toc-number">4.1.</span> <span class="toc-text">
           显式加载</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%9A%90%E5%BC%8F%E5%8A%A0%E8%BD%BD"><span class="toc-number">4.2.</span> <span class="toc-text">
