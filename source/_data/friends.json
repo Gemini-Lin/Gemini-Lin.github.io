@@ -1,0 +1,38 @@
+[
+    {
+      "avatar": "https://cdn.jsdelivr.net/gh/OriPoin/Index/img/Avator_R_8Bit_Rendered256.webp",
+      "name": "OriPoin",
+      "introduction": "Blog of A EE Student",
+      "url": "https://blog.oripoin.me"
+    },
+    {
+      "avatar": "http://www.zer0-nu1l.com/uploads/Profile.jpg",
+      "name": "ZER0-Nu1L",
+      "introduction": "In me the tiger sniffs the rose.",
+      "url": "http://www.zer0-nu1l.com"
+    },
+    {
+      "avatar": "https://api.paugram.com/gravatar/?email=xiaobaomy123@qq.com",
+      "name": "时间回廊",
+      "introduction": "「 爱好历史的追忆者 」",
+      "url": "https://xbtzone.com"
+    },
+    {
+      "avatar": "https://f1ed.github.io/images/profile.png",
+      "name": "f1ed",
+      "introduction": "登高不傲，居低不怨。",
+      "url": "https://f1ed.github.io"
+    },
+    {
+      "avatar": "https://s3.ax1x.com/2020/12/13/reqIVP.jpg",
+      "name": "悫躍",
+      "introduction": "MSRA DKI组实习研究员",
+      "url": "https://huanhuqueyue.github.io/"
+    },
+    {
+      "name": "liuyib",
+      "introduction": "write code and love life",
+      "url": "https://liuyib.github.io/",
+      "avatar": "https://cdn.jsdelivr.net/gh/liuyib/picBed/avatar.jpg"
+    }
+  ]

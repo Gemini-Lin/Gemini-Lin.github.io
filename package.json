@@ -1,0 +1,45 @@
+{
+  "name": "hexo-site",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "build": "hexo generate",
+    "clean": "hexo clean",
+    "deploy": "hexo deploy",
+    "server": "hexo server"
+  },
+  "hexo": {
+    "version": "4.2.1"
+  },
+  "dependencies": {
+    "core-js": "^3.6.4",
+    "hexo": "^4.2.1",
+    "hexo-blog-encrypt": "^3.0.9",
+    "hexo-deployer-git": "^2.1.0",
+    "hexo-filter-github-emojis": "^2.1.0",
+    "hexo-generator-archive": "^1.0.0",
+    "hexo-generator-category": "^1.0.0",
+    "hexo-generator-feed": "^2.2.0",
+    "hexo-generator-index": "^1.0.0",
+    "hexo-generator-index-pin-top": "^0.2.2",
+    "hexo-generator-search": "^2.4.0",
+    "hexo-generator-searchdb": "^1.2.0",
+    "hexo-generator-sitemap": "^2.0.0",
+    "hexo-generator-tag": "^1.0.0",
+    "hexo-renderer-ejs": "^1.0.0",
+    "hexo-renderer-markdown-it-plus": "^1.0.4",
+    "hexo-renderer-marked": "^2.0.0",
+    "hexo-renderer-pug": "^1.0.0",
+    "hexo-renderer-stylus": "^1.1.0",
+    "hexo-server": "^1.0.0",
+    "hexo-wordcount": "^6.0.1",
+    "live2d-widget-model-miku": "^1.0.5",
+    "live2d-widget-model-shizuku": "^1.0.5"
+  },
+  "main": "index.js",
+  "devDependencies": {},
+  "keywords": [],
+  "author": "Gemini-Lin",
+  "license": "ISC",
+  "description": ""
+}
