@@ -1,0 +1,82 @@
+codeStyle = hexo-config('codeblock.style') || 'default';
+highlight_theme = hexo-config('codeblock.highlight') || 'light';
+
+if (highlight_theme == 'light') {
+  $highlight-color             = #333333;
+  $highlight-background        = #f3f4f5;
+  $highlight-side-color        = lighten($highlight-color, 60%);
+  $highlight-side-bg-color     = darken($highlight-background, 2%);
+  $highlight-header-color      = $highlight-color;
+  $highlight-header-bg-color   = $highlight-side-bg-color;
+  $highlight-code-lang-color   = alpha($highlight-header-color, .6);
+  $highlight-code-note-color   = $highlight-header-color;
+  $copy-button-color           = alpha($highlight-header-color, .7);
+  $marked-line-bg-color        = #5b5b5b;
+  $highlight-comment           = #969896;
+  $highlight-red               = #c82829;
+  $highlight-orange            = #ee8019;
+  $highlight-yellow            = #eab700;
+  $highlight-green             = #4eb4b4;
+  $highlight-aqua              = #4dc14c;
+  $highlight-blue              = #2a75c8;
+  $highlight-purple            = #be4dbc;
+
+  if (hexo-config('night_mode.enable')) {
+    $highlight-color             = var(--color-gray-800);
+    $highlight-background        = var(--color-gray-200);
+    $highlight-side-color        = var(--color-gray-600);
+    $highlight-side-bg-color     = var(--color-gray-250);
+    $highlight-header-color      = var(--color-gray-600);
+    $highlight-header-bg-color   = $highlight-side-bg-color;
+    $highlight-code-lang-color   = var(--color-gray-600);
+    $highlight-code-note-color   = $highlight-header-color;
+    $copy-button-color           = var(--color-gray-600);
+    $marked-line-bg-color        = var(--color-gray-300);
+  }
+}
+
+if (highlight_theme == 'dark') {
+  $highlight-color             = #abb2bf;
+  $highlight-background        = #282c34;
+  $highlight-side-color        = darken($highlight-color, 50%);
+  $highlight-side-bg-color     = darken($highlight-background, 10%);
+  $highlight-header-color      = $highlight-color;
+  $highlight-header-bg-color   = $highlight-side-bg-color;
+  $highlight-code-lang-color   = alpha($highlight-header-color, .6);
+  $highlight-code-note-color   = $highlight-header-color;
+  $copy-button-color           = alpha($highlight-header-color, .7);
+  $marked-line-bg-color        = #464646;
+  $highlight-comment           = #5c6370;
+  $highlight-red               = #f45a5a;
+  $highlight-orange            = #de812c;
+  $highlight-yellow            = #eedc6e;
+  $highlight-green             = #56b6c2;
+  $highlight-aqua              = #98c379;
+  $highlight-blue              = #4a98d8;
+  $highlight-purple            = #be74d5;
+}
+
+if (highlight_theme == 'ocean') {
+  $highlight-color             = #f8f8f2;
+  $highlight-background        = #304148;
+  $highlight-side-color        = alpha($highlight-color, 20%);
+  $highlight-side-bg-color     = darken($highlight-background, 5%);
+  $highlight-header-color      = $highlight-color;
+  $highlight-header-bg-color   = $highlight-side-bg-color;
+  $highlight-code-lang-color   = alpha($highlight-header-color, .5);
+  $highlight-code-note-color   = $highlight-header-color;
+  $copy-button-color           = alpha($highlight-header-color, .6);
+  $marked-line-bg-color        = #575757;
+  $highlight-comment           = #65737e;
+  $highlight-red               = #eb606b;
+  $highlight-orange            = #f99157;
+  $highlight-yellow            = #fac863;
+  $highlight-green             = #5fb3b3;
+  $highlight-aqua              = #99c794;
+  $highlight-blue              = #6699cc;
+  $highlight-purple            = #c594c5;
+}
+
+if (codeStyle == 'carbon') {
+  $highlight-header-bg-color = $highlight-background;
+}
