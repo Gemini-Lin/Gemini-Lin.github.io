@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://gemini-lin.github.io/"/>
-  <updated>2021-10-22T02:47:14.346Z</updated>
+  <updated>2021-11-08T07:59:35.228Z</updated>
   <id>https://gemini-lin.github.io/</id>
   
   <author>
@@ -17,29 +17,32 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>road to cpp</title>
-    <link href="https://gemini-lin.github.io/road-to-cpp/"/>
-    <id>https://gemini-lin.github.io/road-to-cpp/</id>
+    <title>北京再见，你好广州！</title>
+    <link href="https://gemini-lin.github.io/GuangZhou/"/>
+    <id>https://gemini-lin.github.io/GuangZhou/</id>
     <published>2021-10-22T02:47:14.000Z</published>
-    <updated>2021-10-22T02:47:14.346Z</updated>
+    <updated>2021-11-08T07:59:35.228Z</updated>
     
     <summary type="html">
     
+      &lt;h1 id=&quot;北京再见&quot;&gt;
+          &lt;a href=&quot;#北京再见&quot; class=&quot;heading-link&quot;&gt;&lt;i class=&quot;fas fa-link&quot;&gt;&lt;/i&gt;&lt;/a&gt;北京再见&lt;/h1&gt;
       
-      
-        
-        
-          &lt;script&gt;
-        document.querySelectorAll(&#39;.github-emoji&#39;)
-          .forEach(el =&gt; {
-            if (!el.dataset.src) { return; }
-       
-        
-      
+&lt;p&gt;2021 年 1 月 18 日 — 2021 年 7 月 31 日北漂生涯纪录。&lt;/p&gt;
     
     </summary>
     
     
+      <category term="大学生活" scheme="https://Gemini-Lin.github.io/categories/%E5%A4%A7%E5%AD%A6%E7%94%9F%E6%B4%BB/"/>
+    
+    
+      <category term="实习" scheme="https://Gemini-Lin.github.io/tags/%E5%AE%9E%E4%B9%A0/"/>
+    
+      <category term="北京" scheme="https://Gemini-Lin.github.io/tags/%E5%8C%97%E4%BA%AC/"/>
+    
+      <category term="广州" scheme="https://Gemini-Lin.github.io/tags/%E5%B9%BF%E5%B7%9E/"/>
+    
+      <category term="Pony" scheme="https://Gemini-Lin.github.io/tags/Pony/"/>
     
   </entry>
   
