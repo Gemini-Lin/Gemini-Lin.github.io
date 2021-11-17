@@ -30,7 +30,7 @@ copyrignt: true
 1. 大一热衷于社团活动，想保研却成绩糟糕
 2. 大二上打鸡血，均分91+却积重难返
 3. 大二下疫情在家（开始尝试就业，开通博客）
-4. 大三上逃课准备实习，两个月后顺利拿到字节offer
+4. 大三上全力准备实习，两个月后顺利拿到字节offer
 5. 大三下字节实习半年，拿到转正offer
 6. 8月字节离职，准备秋招，9月底结束秋招
 7. 11月加入Pony.ai 自动驾驶公司
@@ -39,10 +39,10 @@ copyrignt: true
 
 大家为什么想就业呢？
 
-- 对学习不感兴趣
+- 对研究性工作缺乏兴趣
 - 觉得自己没有学习天赋
 - 想搞钱，赚个小目标
-- 我想躺平了
+- 我其实想躺平了
 
 # 就业方向
 
@@ -53,7 +53,7 @@ copyrignt: true
 - 安全（网络攻防）
 - 嵌入式（无人机）
 - 算法（CV、NLP、搜广推）
-- 产品经理（人人都是产品经理）
+- 产品经理（“人人都是产品经理”）
 - 公务员（YYDS）
 
 # 成长路线
@@ -68,6 +68,34 @@ copyrignt: true
 学习阶段在大二上到大三上，期间有企业实训（根据个人技术情况选择）；
 
 大三下是企业实习，大四上秋招，大四下春招。
+
+# 简历&面经&组队
+
+## 简历
+
+一份好的简历，需要具备几个要素：
+
+- 简洁，突出重点（关键处可以**加粗**）
+- 详细写好掌握的技术点，项目技术栈（能够给面试官提示问题）
+- 不写虚的话，写的东西最好都是可量化的
+
+推荐网站：超级简历
+
+## 面经
+
+每一次的面试都是查缺补漏的过程，可以选择录音下来，回顾总结。
+
+可以根据对应技术栈的面经来确定学习知识点，当你从只识字到能够答出问题，就到了可以面试的水平啦！
+
+推荐网站：牛客网（很多的就业资讯，面经分享）
+
+## 组队
+
+准备就业的道路其实会很孤独，很迷茫，会退缩，会懈怠。
+
+找到一些目标一致的人一起组队学习会很快乐（今天我比你多刷一道题了：）
+
+刷题网站：Leetcode&牛客网
 
 # 公司选择
 
@@ -106,12 +134,19 @@ copyrignt: true
 # Read More
 
 1. [成长旅程](https://www.zhihu.com/question/24387753/answer/577986869)
-2. [实习总结](https://geminiplanet.cn/java-intern/)
-3. [秋招总结](https://geminiplanet.cn/go-employ/)
-4. [课程总结](https://geminiplanet.cn/categories/%E8%AF%BE%E7%A8%8B%E6%80%BB%E7%BB%93/)
+2. [顶级学长求职心路](https://bbs.uestc.edu.cn/forum.php?mod=viewthread&tid=1905003)
+3. [实习总结](https://geminiplanet.cn/java-intern/)
+4. [秋招总结](https://geminiplanet.cn/go-employ/)
+5. [课程总结](https://geminiplanet.cn/categories/%E8%AF%BE%E7%A8%8B%E6%80%BB%E7%BB%93/)
 
 5. [Java后端](https://geminiplanet.cn/categories/Java%E5%90%8E%E7%AB%AF/)
 6. [LeetCode题解](https://geminiplanet.cn/categories/LeetCode/)
 
 # 永远自信 未来可期
+
+![大学的意义](https://z3.ax1x.com/2021/11/17/IIQkTJ.jpg)
+
+[大学的意义](https://www.bilibili.com/video/BV1Mb4y1a7pv?from=search&seid=5325160911453970739&spm_id_from=333.337.0.0)
+
+[沉淀时光](https://www.bilibili.com/video/BV17s41137Hm?from=search&seid=12987270448656271350&spm_id_from=333.337.0.0)
 
