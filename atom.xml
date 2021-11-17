@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://gemini-lin.github.io/"/>
-  <updated>2021-11-08T07:59:35.228Z</updated>
+  <updated>2021-11-17T14:24:20.570Z</updated>
   <id>https://gemini-lin.github.io/</id>
   
   <author>
@@ -17,11 +17,43 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>就业经验分享</title>
+    <link href="https://gemini-lin.github.io/employment/"/>
+    <id>https://gemini-lin.github.io/employment/</id>
+    <published>2021-11-17T12:53:58.000Z</published>
+    <updated>2021-11-17T14:24:20.570Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;在我刚刚来到大学时，每天都在考虑这几个问题？&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;要不要读研？（我想保研，但我好像保不上）&lt;/li&gt;
+&lt;li&gt;程序员会有35岁危机吗？（我害怕秃头失业）&lt;/li&gt;
+&lt;li&gt;要怎么找工作？（我压根不会写代码，我只是CV大师）&lt;/li&gt;
+&lt;li&gt;如果不读研的话，工作晋升是不是相对困难？（薪资是不是会低很多）&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;预知答案，且听分享⏭&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="大学生活" scheme="https://Gemini-Lin.github.io/categories/%E5%A4%A7%E5%AD%A6%E7%94%9F%E6%B4%BB/"/>
+    
+      <category term="就业" scheme="https://Gemini-Lin.github.io/categories/%E5%A4%A7%E5%AD%A6%E7%94%9F%E6%B4%BB/%E5%B0%B1%E4%B8%9A/"/>
+    
+    
+      <category term="就业" scheme="https://Gemini-Lin.github.io/tags/%E5%B0%B1%E4%B8%9A/"/>
+    
+      <category term="QA" scheme="https://Gemini-Lin.github.io/tags/QA/"/>
+    
+  </entry>
+  
+  <entry>
     <title>北京再见，你好广州！</title>
     <link href="https://gemini-lin.github.io/GuangZhou/"/>
     <id>https://gemini-lin.github.io/GuangZhou/</id>
     <published>2021-10-22T02:47:14.000Z</published>
-    <updated>2021-11-08T07:59:35.228Z</updated>
+    <updated>2021-11-17T12:59:53.583Z</updated>
     
     <summary type="html">
     
@@ -33,6 +65,8 @@
     
     
       <category term="大学生活" scheme="https://Gemini-Lin.github.io/categories/%E5%A4%A7%E5%AD%A6%E7%94%9F%E6%B4%BB/"/>
+    
+      <category term="实习" scheme="https://Gemini-Lin.github.io/categories/%E5%A4%A7%E5%AD%A6%E7%94%9F%E6%B4%BB/%E5%AE%9E%E4%B9%A0/"/>
     
     
       <category term="实习" scheme="https://Gemini-Lin.github.io/tags/%E5%AE%9E%E4%B9%A0/"/>
@@ -46,11 +80,38 @@
   </entry>
   
   <entry>
+    <title>秋招潦草收场</title>
+    <link href="https://gemini-lin.github.io/go-employ/"/>
+    <id>https://gemini-lin.github.io/go-employ/</id>
+    <published>2021-10-01T13:53:01.000Z</published>
+    <updated>2021-11-17T13:58:41.352Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;个人介绍&quot;&gt;
+          &lt;a href=&quot;#个人介绍&quot; class=&quot;heading-link&quot;&gt;&lt;i class=&quot;fas fa-link&quot;&gt;&lt;/i&gt;&lt;/a&gt;个人介绍&lt;/h1&gt;
+      &lt;p&gt;lz 信软学院大四，21年1月到7月在字节跳动基础架构部门实习，8月返校准备秋招，8月底开始投递面试大厂，至今秋招收获0Offer，被迫结束秋招。&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="大学生活" scheme="https://Gemini-Lin.github.io/categories/%E5%A4%A7%E5%AD%A6%E7%94%9F%E6%B4%BB/"/>
+    
+      <category term="秋招" scheme="https://Gemini-Lin.github.io/categories/%E5%A4%A7%E5%AD%A6%E7%94%9F%E6%B4%BB/%E7%A7%8B%E6%8B%9B/"/>
+    
+    
+      <category term="秋招" scheme="https://Gemini-Lin.github.io/tags/%E7%A7%8B%E6%8B%9B/"/>
+    
+      <category term="Go" scheme="https://Gemini-Lin.github.io/tags/Go/"/>
+    
+  </entry>
+  
+  <entry>
     <title>北漂日记（二）</title>
     <link href="https://gemini-lin.github.io/BeiJing-Lives-2/"/>
     <id>https://gemini-lin.github.io/BeiJing-Lives-2/</id>
     <published>2021-04-10T08:56:15.000Z</published>
-    <updated>2021-10-22T02:25:51.039Z</updated>
+    <updated>2021-11-17T12:59:39.839Z</updated>
     
     <summary type="html">
     
@@ -60,6 +121,8 @@
     
     
       <category term="大学生活" scheme="https://Gemini-Lin.github.io/categories/%E5%A4%A7%E5%AD%A6%E7%94%9F%E6%B4%BB/"/>
+    
+      <category term="实习" scheme="https://Gemini-Lin.github.io/categories/%E5%A4%A7%E5%AD%A6%E7%94%9F%E6%B4%BB/%E5%AE%9E%E4%B9%A0/"/>
     
     
       <category term="实习" scheme="https://Gemini-Lin.github.io/tags/%E5%AE%9E%E4%B9%A0/"/>
@@ -75,7 +138,7 @@
     <link href="https://gemini-lin.github.io/BeiJing-Lives-1/"/>
     <id>https://gemini-lin.github.io/BeiJing-Lives-1/</id>
     <published>2021-02-17T08:56:15.000Z</published>
-    <updated>2021-02-17T09:16:50.000Z</updated>
+    <updated>2021-11-17T12:59:34.282Z</updated>
     
     <summary type="html">
     
@@ -87,6 +150,8 @@
     
     
       <category term="大学生活" scheme="https://Gemini-Lin.github.io/categories/%E5%A4%A7%E5%AD%A6%E7%94%9F%E6%B4%BB/"/>
+    
+      <category term="实习" scheme="https://Gemini-Lin.github.io/categories/%E5%A4%A7%E5%AD%A6%E7%94%9F%E6%B4%BB/%E5%AE%9E%E4%B9%A0/"/>
     
     
       <category term="实习" scheme="https://Gemini-Lin.github.io/tags/%E5%AE%9E%E4%B9%A0/"/>
@@ -170,6 +235,33 @@
       <category term="编译型语言" scheme="https://Gemini-Lin.github.io/tags/%E7%BC%96%E8%AF%91%E5%9E%8B%E8%AF%AD%E8%A8%80/"/>
     
       <category term="解释型语言" scheme="https://Gemini-Lin.github.io/tags/%E8%A7%A3%E9%87%8A%E5%9E%8B%E8%AF%AD%E8%A8%80/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Java实习总结</title>
+    <link href="https://gemini-lin.github.io/java-intern/"/>
+    <id>https://gemini-lin.github.io/java-intern/</id>
+    <published>2020-12-05T13:48:58.000Z</published>
+    <updated>2021-11-17T13:51:31.905Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;自我介绍&quot;&gt;
+          &lt;a href=&quot;#自我介绍&quot; class=&quot;heading-link&quot;&gt;&lt;i class=&quot;fas fa-link&quot;&gt;&lt;/i&gt;&lt;/a&gt;自我介绍&lt;/h1&gt;
+      &lt;p&gt;我目前是电子科技大学的一名大三学生。在大一大二两年，我主要的精力都用来准备校内课程学习。在今年的十月份开始准备 Java 实习面试，目前陆续拿到了滴滴、华为、字节跳动的实习offer。&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="大学生活" scheme="https://Gemini-Lin.github.io/categories/%E5%A4%A7%E5%AD%A6%E7%94%9F%E6%B4%BB/"/>
+    
+      <category term="实习" scheme="https://Gemini-Lin.github.io/categories/%E5%A4%A7%E5%AD%A6%E7%94%9F%E6%B4%BB/%E5%AE%9E%E4%B9%A0/"/>
+    
+    
+      <category term="实习" scheme="https://Gemini-Lin.github.io/tags/%E5%AE%9E%E4%B9%A0/"/>
+    
+      <category term="Java" scheme="https://Gemini-Lin.github.io/tags/Java/"/>
     
   </entry>
   
@@ -443,82 +535,6 @@
       <category term="Heap" scheme="https://Gemini-Lin.github.io/tags/Heap/"/>
     
       <category term="Stack" scheme="https://Gemini-Lin.github.io/tags/Stack/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>LeetCode-LinkedList</title>
-    <link href="https://gemini-lin.github.io/LeetCode-LinkedList/"/>
-    <id>https://gemini-lin.github.io/LeetCode-LinkedList/</id>
-    <published>2020-10-25T12:09:08.000Z</published>
-    <updated>2020-10-26T02:33:14.000Z</updated>
-    
-    <summary type="html">
-    
-      &lt;h1 id=&quot;Free-Talk&quot;&gt;
-          &lt;a href=&quot;#Free-Talk&quot; class=&quot;heading-link&quot;&gt;&lt;i class=&quot;fas fa-link&quot;&gt;&lt;/i&gt;&lt;/a&gt;Free Talk&lt;/h1&gt;
-      &lt;p&gt;链表是一种常用的数据结构，打算练练这个 Tags,  熟悉一下相关 API 调用。&lt;/p&gt;
-    
-    </summary>
-    
-    
-      <category term="LeetCode" scheme="https://Gemini-Lin.github.io/categories/LeetCode/"/>
-    
-    
-      <category term="LeetCode" scheme="https://Gemini-Lin.github.io/tags/LeetCode/"/>
-    
-      <category term="Linked List" scheme="https://Gemini-Lin.github.io/tags/Linked-List/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>LeetCode-DynamicProgramming</title>
-    <link href="https://gemini-lin.github.io/LeetCode-DynamicProgramming/"/>
-    <id>https://gemini-lin.github.io/LeetCode-DynamicProgramming/</id>
-    <published>2020-10-22T12:32:13.000Z</published>
-    <updated>2020-10-25T12:06:26.000Z</updated>
-    
-    <summary type="html">
-    
-      &lt;h1 id=&quot;Free-Talk&quot;&gt;
-          &lt;a href=&quot;#Free-Talk&quot; class=&quot;heading-link&quot;&gt;&lt;i class=&quot;fas fa-link&quot;&gt;&lt;/i&gt;&lt;/a&gt;Free Talk&lt;/h1&gt;
-      &lt;p&gt;终于轮到 LeetCode 的大头了， 动态规划应该是占据了算法题的半壁江山，我们废话不多说，直接上代码。&lt;/p&gt;
-&lt;p&gt;Talk is cheap, Show me your Code!&lt;/p&gt;
-    
-    </summary>
-    
-    
-      <category term="LeetCode" scheme="https://Gemini-Lin.github.io/categories/LeetCode/"/>
-    
-    
-      <category term="LeetCode" scheme="https://Gemini-Lin.github.io/tags/LeetCode/"/>
-    
-      <category term="Dynamic Programming" scheme="https://Gemini-Lin.github.io/tags/Dynamic-Programming/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>LeetCode-BinarySearch</title>
-    <link href="https://gemini-lin.github.io/LeetCode-BinarySearch/"/>
-    <id>https://gemini-lin.github.io/LeetCode-BinarySearch/</id>
-    <published>2020-10-22T01:24:51.000Z</published>
-    <updated>2020-10-22T12:07:50.000Z</updated>
-    
-    <summary type="html">
-    
-      &lt;h1 id=&quot;Free-Talk&quot;&gt;
-          &lt;a href=&quot;#Free-Talk&quot; class=&quot;heading-link&quot;&gt;&lt;i class=&quot;fas fa-link&quot;&gt;&lt;/i&gt;&lt;/a&gt;Free Talk&lt;/h1&gt;
-      &lt;p&gt;刚刚做到了 寻找重复数 ， 发现自己对 二分查找 还不是很熟悉，打算再做几题训练一下。&lt;/p&gt;
-    
-    </summary>
-    
-    
-      <category term="LeetCode" scheme="https://Gemini-Lin.github.io/categories/LeetCode/"/>
-    
-    
-      <category term="LeetCode" scheme="https://Gemini-Lin.github.io/tags/LeetCode/"/>
-    
-      <category term="Binary Search" scheme="https://Gemini-Lin.github.io/tags/Binary-Search/"/>
     
   </entry>
   
