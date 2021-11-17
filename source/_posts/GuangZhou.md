@@ -7,7 +7,8 @@ tags:
 - 广州
 - Pony
 categories: 
-- 大学生活		
+- 大学生活	
+- 实习	
 copyrignt: true
 ---
 

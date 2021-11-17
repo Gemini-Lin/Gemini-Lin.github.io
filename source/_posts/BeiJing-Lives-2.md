@@ -6,7 +6,8 @@ tags:
 - 北京
 - ByteDance
 categories: 
-- 大学生活		
+- 大学生活
+- 实习		
 copyrignt: true
 ---
 
