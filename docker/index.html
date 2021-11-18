@@ -1,9 +1,9 @@
-<!DOCTYPE html><html lang="zh-CN"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="format-detection" content="telephone=no"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="black"><link rel="icon" href="/images/icons/favicon.ico?v=2.0.1" type="image/png" sizes="16x16"><link rel="icon" href="/images/icons/favicon.ico?v=2.0.1" type="image/png" sizes="32x32"><meta name="google-site-verification" content="_T_d70fQRwnF8GQJNmmDRbHpjKelZbY-RFDWgS--hAw"><meta name="baidu-site-verification" content="AM9It5Uqy8"><meta name="description" content="Free Talk                       我之前一直都听过鼎鼎大名的Docker,但都没有仔细地了解一下，有一次给后端接Mysql数据库时，本来想下一个Mysql的，但是安装配置太麻烦，就直接从Docker上下了一个镜像就解决了，这就是我的Docker初体验。接下来，就请乘坐我的宇宙航线，开启Docker之旅✨。">
+<!DOCTYPE html><html lang="zh-CN"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="format-detection" content="telephone=no"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="black"><link rel="icon" href="/images/icons/favicon.ico?v=2.0.1" type="image/png" sizes="16x16"><link rel="icon" href="/images/icons/favicon.ico?v=2.0.1" type="image/png" sizes="32x32"><meta name="google-site-verification" content="_T_d70fQRwnF8GQJNmmDRbHpjKelZbY-RFDWgS--hAw"><meta name="baidu-site-verification" content="AM9It5Uqy8"><meta name="description" content="Free Talk                         我之前一直都听过鼎鼎大名的Docker,但都没有仔细地了解一下，有一次给后端接Mysql数据库时，本来想下一个Mysql的，但是安装配置太麻烦，就直接从Docker上下了一个镜像就解决了，这就是我的Docker初体验。 接下来，就请乘坐我的宇宙航线，开启Docker之旅✨。">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Docker入门教程">
 <meta property="og:url" content="https://gemini-lin.github.io/docker/index.html">
 <meta property="og:site_name" content="GeminiPlanet">
-<meta property="og:description" content="Free Talk                       我之前一直都听过鼎鼎大名的Docker,但都没有仔细地了解一下，有一次给后端接Mysql数据库时，本来想下一个Mysql的，但是安装配置太麻烦，就直接从Docker上下了一个镜像就解决了，这就是我的Docker初体验。接下来，就请乘坐我的宇宙航线，开启Docker之旅✨。">
+<meta property="og:description" content="Free Talk                         我之前一直都听过鼎鼎大名的Docker,但都没有仔细地了解一下，有一次给后端接Mysql数据库时，本来想下一个Mysql的，但是安装配置太麻烦，就直接从Docker上下了一个镜像就解决了，这就是我的Docker初体验。 接下来，就请乘坐我的宇宙航线，开启Docker之旅✨。">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://s1.ax1x.com/2020/06/29/Nh1Saj.png">
 <meta property="og:image" content="https://s1.ax1x.com/2020/07/12/U3vH8f.png">
@@ -36,85 +36,109 @@ var CONFIG = {
   sourcePath: {"js":"js","css":"css","images":"images"},
 };
 
-window.CONFIG = CONFIG;</script><meta name="generator" content="Hexo 4.2.1"></head><body><div class="container" id="container"><header class="header" id="header"><div class="header-inner header-inner--height header-inner--bgcolor"><nav class="header-nav header-nav--sticky"><div class="header-nav-inner"><div class="header-nav-menubtn"><i class="fas fa-bars"></i></div><div class="header-nav-menu"><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/"><span class="header-nav-menu-item__icon"><i class="fas fa-home"></i></span><span class="header-nav-menu-item__text">首页</span></a></div><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/about/"><span class="header-nav-menu-item__icon"><i class="fas fa-user"></i></span><span class="header-nav-menu-item__text">关于</span></a></div><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/archives/"><span class="header-nav-menu-item__icon"><i class="fas fa-folder-open"></i></span><span class="header-nav-menu-item__text">归档</span></a></div><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/categories/"><span class="header-nav-menu-item__icon"><i class="fas fa-layer-group"></i></span><span class="header-nav-menu-item__text">分类</span></a></div><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/tags/"><span class="header-nav-menu-item__icon"><i class="fas fa-tags"></i></span><span class="header-nav-menu-item__text">标签</span></a></div><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/friends/"><span class="header-nav-menu-item__icon"><i class="fas fa-link"></i></span><span class="header-nav-menu-item__text">友链</span></a></div></div><div class="header-nav-search"><span class="header-nav-search__icon"><i class="fas fa-search"></i></span><span class="header-nav-search__text">搜索</span></div><div class="header-nav-mode"><div class="mode"><div class="mode-track"><span class="mode-track-moon"></span><span class="mode-track-sun"></span></div><div class="mode-thumb"></div></div></div></div></nav></div></header><main class="main" id="main"><div class="main-inner"><div class="content-wrap" id="content-wrap"><div class="content" id="content"><!-- Just used to judge whether it is an article page--><div id="is-post"></div><div class="post"><header class="post-header"><h1 class="post-title">Docker入门教程</h1><div class="post-meta"><span class="post-meta-item post-meta-item--createtime"><span class="post-meta-item__icon"><i class="far fa-calendar-plus"></i></span><span class="post-meta-item__info">发表于</span><span class="post-meta-item__value">2020-06-28</span></span><span class="post-meta-item post-meta-item--updatetime"><span class="post-meta-item__icon"><i class="far fa-calendar-check"></i></span><span class="post-meta-item__info">更新于</span><span class="post-meta-item__value">2020-07-18</span></span><span class="post-meta-item post-meta-item--wordcount"><span class="post-meta-item__icon"><i class="far fa-file-word"></i></span><span class="post-meta-item__info">字数统计</span><span class="post-meta-item__value">1.3k</span></span><span class="post-meta-item post-meta-item--readtime"><span class="post-meta-item__icon"><i class="far fa-clock"></i></span><span class="post-meta-item__info">阅读时长</span><span class="post-meta-item__value">9分</span></span><span class="post-meta-item post-meta-item--visitors"><span class="post-meta-item__icon"><i class="fas fa-eye"></i></span><span class="post-meta-item__info">阅读次数</span><span class="post-meta-item__value" id="busuanzi_value_page_pv"></span></span></div></header><div class="post-body"><h1 id="Free-Talk">
-          <a href="#Free-Talk" class="heading-link"><i class="fas fa-link"></i></a>Free Talk</h1>
-      <p>
+window.CONFIG = CONFIG;</script><meta name="generator" content="Hexo 4.2.1"></head><body><div class="container" id="container"><header class="header" id="header"><div class="header-inner header-inner--height header-inner--bgcolor"><nav class="header-nav header-nav--sticky"><div class="header-nav-inner"><div class="header-nav-menubtn"><i class="fas fa-bars"></i></div><div class="header-nav-menu"><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/"><span class="header-nav-menu-item__icon"><i class="fas fa-home"></i></span><span class="header-nav-menu-item__text">首页</span></a></div><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/about/"><span class="header-nav-menu-item__icon"><i class="fas fa-user"></i></span><span class="header-nav-menu-item__text">关于</span></a></div><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/archives/"><span class="header-nav-menu-item__icon"><i class="fas fa-folder-open"></i></span><span class="header-nav-menu-item__text">归档</span></a></div><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/categories/"><span class="header-nav-menu-item__icon"><i class="fas fa-layer-group"></i></span><span class="header-nav-menu-item__text">分类</span></a></div><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/tags/"><span class="header-nav-menu-item__icon"><i class="fas fa-tags"></i></span><span class="header-nav-menu-item__text">标签</span></a></div><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/friends/"><span class="header-nav-menu-item__icon"><i class="fas fa-link"></i></span><span class="header-nav-menu-item__text">友链</span></a></div></div><div class="header-nav-search"><span class="header-nav-search__icon"><i class="fas fa-search"></i></span><span class="header-nav-search__text">搜索</span></div><div class="header-nav-mode"><div class="mode"><div class="mode-track"><span class="mode-track-moon"></span><span class="mode-track-sun"></span></div><div class="mode-thumb"></div></div></div></div></nav></div></header><main class="main" id="main"><div class="main-inner"><div class="content-wrap" id="content-wrap"><div class="content" id="content"><!-- Just used to judge whether it is an article page--><div id="is-post"></div><div class="post"><header class="post-header"><h1 class="post-title">Docker入门教程</h1><div class="post-meta"><span class="post-meta-item post-meta-item--createtime"><span class="post-meta-item__icon"><i class="far fa-calendar-plus"></i></span><span class="post-meta-item__info">发表于</span><span class="post-meta-item__value">2020-06-28</span></span><span class="post-meta-item post-meta-item--updatetime"><span class="post-meta-item__icon"><i class="far fa-calendar-check"></i></span><span class="post-meta-item__info">更新于</span><span class="post-meta-item__value">2020-07-18</span></span><span class="post-meta-item post-meta-item--wordcount"><span class="post-meta-item__icon"><i class="far fa-file-word"></i></span><span class="post-meta-item__info">字数统计</span><span class="post-meta-item__value">1.3k</span></span><span class="post-meta-item post-meta-item--readtime"><span class="post-meta-item__icon"><i class="far fa-clock"></i></span><span class="post-meta-item__info">阅读时长</span><span class="post-meta-item__value">9分</span></span><span class="post-meta-item post-meta-item--visitors"><span class="post-meta-item__icon"><i class="fas fa-eye"></i></span><span class="post-meta-item__info">阅读次数</span><span class="post-meta-item__value" id="busuanzi_value_page_pv"></span></span></div></header><div class="post-body"><h1 id="free-talk">
+          <a href="#free-talk" class="heading-link"><i class="fas fa-link"></i></a>Free Talk</h1>
+      
+<p>
         <img class="lazyload lazyload-gif" src="/images/loading.svg" data-src="https://s1.ax1x.com/2020/06/29/Nh1Saj.png" alt="Docker">
-      <br>我之前一直都听过鼎鼎大名的Docker,但都没有仔细地了解一下，有一次给后端接Mysql数据库时，本来想下一个Mysql的，但是安装配置太麻烦，就直接从Docker上下了一个镜像就解决了，这就是我的Docker初体验。<br>接下来，就请乘坐我的宇宙航线，开启Docker之旅<span class="github-emoji" style="color: transparent;background:no-repeat url(https://github.githubassets.com/images/icons/emoji/unicode/2728.png?v8) center/contain" data-src="https://github.githubassets.com/images/icons/emoji/unicode/2728.png?v8">✨</span>。</p>
+      <br>
+我之前一直都听过鼎鼎大名的Docker,但都没有仔细地了解一下，有一次给后端接Mysql数据库时，本来想下一个Mysql的，但是安装配置太麻烦，就直接从Docker上下了一个镜像就解决了，这就是我的Docker初体验。<br>
+接下来，就请乘坐我的宇宙航线，开启Docker之旅✨。</p>
 <a id="more"></a>
 
-        <h1 id="What-is-Dcoker">
-          <a href="#What-is-Dcoker" class="heading-link"><i class="fas fa-link"></i></a>What is Dcoker?</h1>
-      <p>在讲述Docker前，我们需要了解一下的它的诞生起源，也就是<strong>Why need it?</strong></p>
+        <h1 id="what-is-dcoker">
+          <a href="#what-is-dcoker" class="heading-link"><i class="fas fa-link"></i></a>What is Dcoker?</h1>
+      
+<p>在讲述Docker前，我们需要了解一下的它的诞生起源，也就是<strong>Why need it?</strong></p>
 
         <h2 id="环境配置">
           <a href="#环境配置" class="heading-link"><i class="fas fa-link"></i></a>环境配置</h2>
-      <p>软件开发过程中，遇到最麻烦的问题就各种环境的安装，从一开始的C语言到Java到数据库postgresql等,很多时候自己的程序在本机跑没有问题，但是别人的机子就跑不通。这个时候开发者经常说“<strong>it works on my machine</strong>”,其实往往在别的机子不行。<br>于是聪明的开发者就想，我能不能把环境一起安装呢?也就是说，我在安装的软件程序的时候，不仅仅安装程序应用本身，而且把它所需要的环境依赖都一同安装下来。</p>
+      
+<p>软件开发过程中，遇到最麻烦的问题就各种环境的安装，从一开始的C语言到Java到数据库postgresql等,很多时候自己的程序在本机跑没有问题，但是别人的机子就跑不通。这个时候开发者经常说“<strong>it works on my machine</strong>”,其实往往在别的机子不行。<br>
+于是聪明的开发者就想，我能不能把环境一起安装呢?也就是说，我在安装的软件程序的时候，不仅仅安装程序应用本身，而且把它所需要的环境依赖都一同安装下来。</p>
 
         <h2 id="虚拟机">
           <a href="#虚拟机" class="heading-link"><i class="fas fa-link"></i></a>虚拟机</h2>
-      <p>虚拟机(Virtual Machine)其实就是一种很好的解决方案，我只要使用Vmware安装Linux虚拟机，就可以在Windows系统中运行Linux虚拟环境。虽然用户可以通过虚拟机还原软件的原始环境。但是，这个方案有几个缺点。</p>
+      
+<p>虚拟机(Virtual Machine)其实就是一种很好的解决方案，我只要使用Vmware安装Linux虚拟机，就可以在Windows系统中运行Linux虚拟环境。虽然用户可以通过虚拟机还原软件的原始环境。但是，这个方案有几个缺点。</p>
 <ol>
-<li>占用内存空间<blockquote>
+<li>占用内存空间</li>
+</ol>
+<blockquote>
 <p>我自己在运行Linux虚拟机就要划分80GB的磁盘空间，而且一跑起来风扇就开始快速转动。</p>
 </blockquote>
-</li>
-<li>启动慢<blockquote>
+<ol start="2">
+<li>启动慢</li>
+</ol>
+<blockquote>
 <p>启动操作系统虚拟多久，启动虚拟机就要多久。我因为之前划分了磁盘，每次启动要几分钟的时间。</p>
 </blockquote>
-</li>
-<li>操作不便捷<blockquote>
+<ol start="3">
+<li>操作不便捷</li>
+</ol>
+<blockquote>
 <p>虚拟机是完整的操作系统，想要启动一个服务，往往需要冗余步骤。</p>
 </blockquote>
-</li>
-</ol>
 
-        <h2 id="Linux容器">
-          <a href="#Linux容器" class="heading-link"><i class="fas fa-link"></i></a>Linux容器</h2>
-      <p>针对前面提到的虚拟机存在的问题，Linux发展出另一种虚拟化技术(Linux Containers),也就是<strong>Linux容器</strong>。<br>
+        <h2 id="linux容器">
+          <a href="#linux容器" class="heading-link"><i class="fas fa-link"></i></a>Linux容器</h2>
+      
+<p>针对前面提到的虚拟机存在的问题，Linux发展出另一种虚拟化技术(Linux Containers),也就是<strong>Linux容器</strong>。<br>
+
         <img class="lazyload lazyload-gif" src="/images/loading.svg" data-src="https://s1.ax1x.com/2020/07/12/U3vH8f.png" alt="container">
       </p>
 <blockquote>
 <p>关于容器的概念我们可以把它通俗地理解为一个个集装箱，每一个集装箱之间是相互隔离运行的，但是在运输的时候又共享同一艘货轮(操作系统)，也就是说每一个容器都是一个进程，共享操作系统的资源。</p>
 </blockquote>
 
-        <h3 id="容器VS虚拟机">
-          <a href="#容器VS虚拟机" class="heading-link"><i class="fas fa-link"></i></a>容器VS虚拟机</h3>
-      <p>虚拟机技术是虚拟化一整套硬件，在上面运行一个完整的操作系统。<br>而容器虚拟化的是操作系统，而不是硬件，容器之间是共享同一个操作系统资源的。</p>
+        <h3 id="容器vs虚拟机">
+          <a href="#容器vs虚拟机" class="heading-link"><i class="fas fa-link"></i></a>容器VS虚拟机</h3>
+      
+<p>虚拟机技术是虚拟化一整套硬件，在上面运行一个完整的操作系统。<br>
+而容器虚拟化的是操作系统，而不是硬件，容器之间是共享同一个操作系统资源的。</p>
 
-        <h2 id="Docker">
-          <a href="#Docker" class="heading-link"><i class="fas fa-link"></i></a>Docker</h2>
-      <p>Docker 属于 Linux 容器的一种<strong>封装</strong>，提供简单易用的容器使用接口。它是目前最流行的 Linux 容器解决方案。</p>
+        <h2 id="docker">
+          <a href="#docker" class="heading-link"><i class="fas fa-link"></i></a>Docker</h2>
+      
+<p>Docker 属于 Linux 容器的一种<strong>封装</strong>，提供简单易用的容器使用接口。它是目前最流行的 Linux 容器解决方案。</p>
 <p>Docker 将应用程序与该程序的依赖，打包在一个文件里面。运行这个文件，就会生成一个虚拟容器。程序在这个虚拟容器里运行，就好像在真实的物理机上运行一样。有了 Docker，就不用担心环境问题。</p>
 <p>总体来说，Docker 的接口相当简单，用户可以方便地创建和使用容器，把自己的应用放入容器。容器还可以进行版本管理、复制、分享、修改，就像管理普通的代码一样。</p>
 
-        <h1 id="Docker的基本概念">
-          <a href="#Docker的基本概念" class="heading-link"><i class="fas fa-link"></i></a>Docker的基本概念</h1>
-      <p>
+        <h1 id="docker的基本概念">
+          <a href="#docker的基本概念" class="heading-link"><i class="fas fa-link"></i></a>Docker的基本概念</h1>
+      
+<p>
         <img class="lazyload lazyload-gif" src="/images/loading.svg" data-src="https://s1.ax1x.com/2020/07/12/U3xAr4.png" alt="docker">
       </p>
 
-        <h2 id="Image镜像">
-          <a href="#Image镜像" class="heading-link"><i class="fas fa-link"></i></a>Image镜像</h2>
-      <p>我们可以把镜像理解成是一个特殊的文件系统。</p>
+        <h2 id="image镜像">
+          <a href="#image镜像" class="heading-link"><i class="fas fa-link"></i></a>Image镜像</h2>
+      
+<p>我们可以把镜像理解成是一个特殊的文件系统。</p>
 <blockquote>
 <p>对于Linux操作系统而言，内核模块启动后，会挂载root文件系统为其提供用户空间的支持。而Docker镜像就相当于是一个root文件系统。</p>
 </blockquote>
 <p>Docker 把应用程序及其依赖，打包在 image 文件里面。只有通过这个文件，才能生成 Docker 容器。image 文件可以看作是容器的<strong>模板</strong>。Docker 根据 image 文件生成容器的实例。同一个 image 文件，可以生成多个同时运行的容器实例。</p>
-<p>因为Docker在设计时，采用的是Union FS的技术，将其设计为<strong>分层存储</strong>的架构。<br><strong>因此在镜像构建时，会一层层地构建，前一层是后一层地基础。</strong>每一层构建完就不会再发生改变，后一层上的任何改变只会影响到自己这一层。可以见上图中的镜像层次分布。</p>
+<p>因为Docker在设计时，采用的是Union FS的技术，将其设计为<strong>分层存储</strong>的架构。<br>
+**因此在镜像构建时，会一层层地构建，前一层是后一层地基础。**每一层构建完就不会再发生改变，后一层上的任何改变只会影响到自己这一层。可以见上图中的镜像层次分布。</p>
 
-        <h2 id="Container容器">
-          <a href="#Container容器" class="heading-link"><i class="fas fa-link"></i></a>Container容器</h2>
-      <p>镜像（Image）和容器（Container）的关系，就像是面向对象程序设计中的 类 和 实例 一样，镜像是静态的定义，<strong>容器是镜像运行时的实体。容器可以被创建、启动、停止、删除、暂停等。</strong></p>
+        <h2 id="container容器">
+          <a href="#container容器" class="heading-link"><i class="fas fa-link"></i></a>Container容器</h2>
+      
+<p>镜像（Image）和容器（Container）的关系，就像是面向对象程序设计中的 类 和 实例 一样，镜像是静态的定义，<strong>容器是镜像运行时的实体。容器可以被创建、启动、停止、删除、暂停等。</strong></p>
 
-        <h2 id="Repository仓库">
-          <a href="#Repository仓库" class="heading-link"><i class="fas fa-link"></i></a>Repository仓库</h2>
-      <p>仓库就是一个集中存放镜像文件的地方。</p>
+        <h2 id="repository仓库">
+          <a href="#repository仓库" class="heading-link"><i class="fas fa-link"></i></a>Repository仓库</h2>
+      
+<p>仓库就是一个集中存放镜像文件的地方。</p>
 
-        <h1 id="Docker常用命令">
-          <a href="#Docker常用命令" class="heading-link"><i class="fas fa-link"></i></a>Docker常用命令</h1>
-      <figure class="highlight docker"><div class="table-container"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 启动Docker服务</span></span><br><span class="line">sudo service docker start</span><br><span class="line"><span class="comment"># Pull Docker镜像</span></span><br><span class="line">docker image pull library/hello-world</span><br><span class="line"><span class="comment"># 运行image镜像,生成容器实例</span></span><br><span class="line">docker container <span class="keyword">run</span><span class="bash"> hello-world</span></span><br><span class="line"><span class="comment"># 结束实例进程</span></span><br><span class="line">docker container kill[containerID]</span><br></pre></td></tr></tbody></table></div></figure>
-<p>参考资料：<br><span class="exturl"><a class="exturl__link" href="https://www.ruanyifeng.com/blog/2018/02/docker-tutorial.html" target="_blank" rel="noopener">https://www.ruanyifeng.com/blog/2018/02/docker-tutorial.html</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span><br><span class="exturl"><a class="exturl__link" href="https://juejin.im/post/5b260ec26fb9a00e8e4b031a#heading-6" target="_blank" rel="noopener">https://juejin.im/post/5b260ec26fb9a00e8e4b031a#heading-6</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></p>
+        <h1 id="docker常用命令">
+          <a href="#docker常用命令" class="heading-link"><i class="fas fa-link"></i></a>Docker常用命令</h1>
+      
+<figure class="highlight docker"><div class="table-container"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 启动Docker服务</span></span><br><span class="line">sudo service docker start</span><br><span class="line"><span class="comment"># Pull Docker镜像</span></span><br><span class="line">docker image pull library/hello-world</span><br><span class="line"><span class="comment"># 运行image镜像,生成容器实例</span></span><br><span class="line">docker container <span class="keyword">run</span><span class="bash"> hello-world</span></span><br><span class="line"><span class="comment"># 结束实例进程</span></span><br><span class="line">docker container kill[containerID]</span><br></pre></td></tr></tbody></table></div></figure>
+<p>参考资料：<br>
+<span class="exturl"><a class="exturl__link" href="https://www.ruanyifeng.com/blog/2018/02/docker-tutorial.html" target="_blank" rel="noopener">https://www.ruanyifeng.com/blog/2018/02/docker-tutorial.html</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span><br>
+<span class="exturl"><a class="exturl__link" href="https://juejin.im/post/5b260ec26fb9a00e8e4b031a#heading-6" target="_blank" rel="noopener">https://juejin.im/post/5b260ec26fb9a00e8e4b031a#heading-6</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></p>
 <script>
         document.querySelectorAll('.github-emoji')
           .forEach(el => {
@@ -133,18 +157,18 @@ window.CONFIG = CONFIG;</script><meta name="generator" content="Hexo 4.2.1"></he
             });
             document.body.appendChild(img);
           });
-      </script></div><footer class="post-footer"><div class="post-ending ending"><div class="ending__text">------ 本文结束，感谢您的阅读 ------</div></div><div class="post-copyright copyright"><div class="copyright-author"><span class="copyright-author__name">本文作者: </span><span class="copyright-author__value"><a href="https://Gemini-Lin.github.io">Gemini-Lin</a></span></div><div class="copyright-link"><span class="copyright-link__name">本文链接: </span><span class="copyright-link__value"><a href="https://gemini-lin.github.io/docker/">https://gemini-lin.github.io/docker/</a></span></div><div class="copyright-notice"><span class="copyright-notice__name">版权声明: </span><span class="copyright-notice__value">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en" rel="external nofollow" target="_blank">BY-NC-SA</a> 许可协议。转载请注明出处！</span></div></div><div class="post-tags"><span class="post-tags-item"><span class="post-tags-item__icon"><i class="fas fa-tag"></i></span><a class="post-tags-item__link" href="https://gemini-lin.github.io/tags/Docker/">Docker</a></span></div><div class="post-share"><div class="social-share" data-sites="qzone, qq, weibo, wechat, douban, linkedin, facebook, twitter, google">Share to: </div></div><div class="post-reward reward"><div class="reward-button">请我喝杯咖啡~</div><div class="reward-qrcode"><span class="reward-qrcode-alipay"><img class="reward-qrcode-alipay__img" src="/images/alipay.jpg"><div class="reward-qrcode-alipay__text">支付宝打赏</div></span><span class="reward-qrcode-wechat"><img class="reward-qrcode-wechat__img" src="/images/wechatpay.jpg"><div class="reward-qrcode-wechat__text">微信打赏</div></span></div></div><nav class="post-paginator paginator"><div class="paginator-prev"><a class="paginator-prev__link" href="/SM2/"><span class="paginator-prev__icon"><i class="fas fa-angle-left"></i></span><span class="paginator-prev__text">SM2算法分析</span></a></div><div class="paginator-next"><a class="paginator-next__link" href="/regex/"><span class="paginator-prev__text">正则表达式</span><span class="paginator-next__icon"><i class="fas fa-angle-right"></i></span></a></div></nav></footer></div></div><div class="comments" id="comments"><div id="gitalk-container"></div></div></div><div class="sidebar-wrap" id="sidebar-wrap"><aside class="sidebar" id="sidebar"><div class="sidebar-nav"><span class="sidebar-nav-toc current">文章目录</span><span class="sidebar-nav-ov">站点概览</span></div><section class="sidebar-toc"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Free-Talk"><span class="toc-number">1.</span> <span class="toc-text">
-          Free Talk</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#What-is-Dcoker"><span class="toc-number">2.</span> <span class="toc-text">
+      </script></div><footer class="post-footer"><div class="post-ending ending"><div class="ending__text">------ 本文结束，感谢您的阅读 ------</div></div><div class="post-copyright copyright"><div class="copyright-author"><span class="copyright-author__name">本文作者: </span><span class="copyright-author__value"><a href="https://Gemini-Lin.github.io">Gemini-Lin</a></span></div><div class="copyright-link"><span class="copyright-link__name">本文链接: </span><span class="copyright-link__value"><a href="https://gemini-lin.github.io/docker/">https://gemini-lin.github.io/docker/</a></span></div><div class="copyright-notice"><span class="copyright-notice__name">版权声明: </span><span class="copyright-notice__value">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en" rel="external nofollow" target="_blank">BY-NC-SA</a> 许可协议。转载请注明出处！</span></div></div><div class="post-tags"><span class="post-tags-item"><span class="post-tags-item__icon"><i class="fas fa-tag"></i></span><a class="post-tags-item__link" href="https://gemini-lin.github.io/tags/Docker/">Docker</a></span></div><div class="post-share"><div class="social-share" data-sites="qzone, qq, weibo, wechat, douban, linkedin, facebook, twitter, google">Share to: </div></div><div class="post-reward reward"><div class="reward-button">请我喝杯咖啡~</div><div class="reward-qrcode"><span class="reward-qrcode-alipay"><img class="reward-qrcode-alipay__img" src="/images/alipay.jpg"><div class="reward-qrcode-alipay__text">支付宝打赏</div></span><span class="reward-qrcode-wechat"><img class="reward-qrcode-wechat__img" src="/images/wechatpay.jpg"><div class="reward-qrcode-wechat__text">微信打赏</div></span></div></div><nav class="post-paginator paginator"><div class="paginator-prev"><a class="paginator-prev__link" href="/SM2/"><span class="paginator-prev__icon"><i class="fas fa-angle-left"></i></span><span class="paginator-prev__text">SM2算法分析</span></a></div><div class="paginator-next"><a class="paginator-next__link" href="/regex/"><span class="paginator-prev__text">正则表达式</span><span class="paginator-next__icon"><i class="fas fa-angle-right"></i></span></a></div></nav></footer></div></div><div class="comments" id="comments"><div id="gitalk-container"></div></div></div><div class="sidebar-wrap" id="sidebar-wrap"><aside class="sidebar" id="sidebar"><div class="sidebar-nav"><span class="sidebar-nav-toc current">文章目录</span><span class="sidebar-nav-ov">站点概览</span></div><section class="sidebar-toc"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#free-talk"><span class="toc-number">1.</span> <span class="toc-text">
+          Free Talk</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#what-is-dcoker"><span class="toc-number">2.</span> <span class="toc-text">
           What is Dcoker?</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#环境配置"><span class="toc-number">2.1.</span> <span class="toc-text">
           环境配置</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#虚拟机"><span class="toc-number">2.2.</span> <span class="toc-text">
-          虚拟机</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Linux容器"><span class="toc-number">2.3.</span> <span class="toc-text">
-          Linux容器</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#容器VS虚拟机"><span class="toc-number">2.3.1.</span> <span class="toc-text">
-          容器VS虚拟机</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Docker"><span class="toc-number">2.4.</span> <span class="toc-text">
-          Docker</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Docker的基本概念"><span class="toc-number">3.</span> <span class="toc-text">
-          Docker的基本概念</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#Image镜像"><span class="toc-number">3.1.</span> <span class="toc-text">
-          Image镜像</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Container容器"><span class="toc-number">3.2.</span> <span class="toc-text">
-          Container容器</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Repository仓库"><span class="toc-number">3.3.</span> <span class="toc-text">
-          Repository仓库</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Docker常用命令"><span class="toc-number">4.</span> <span class="toc-text">
+          虚拟机</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#linux容器"><span class="toc-number">2.3.</span> <span class="toc-text">
+          Linux容器</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#容器vs虚拟机"><span class="toc-number">2.3.1.</span> <span class="toc-text">
+          容器VS虚拟机</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#docker"><span class="toc-number">2.4.</span> <span class="toc-text">
+          Docker</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#docker的基本概念"><span class="toc-number">3.</span> <span class="toc-text">
+          Docker的基本概念</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#image镜像"><span class="toc-number">3.1.</span> <span class="toc-text">
+          Image镜像</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#container容器"><span class="toc-number">3.2.</span> <span class="toc-text">
+          Container容器</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#repository仓库"><span class="toc-number">3.3.</span> <span class="toc-text">
+          Repository仓库</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#docker常用命令"><span class="toc-number">4.</span> <span class="toc-text">
           Docker常用命令</span></a></li></ol></section><!-- ov = overview--><section class="sidebar-ov hide"><div class="sidebar-ov-author"><div class="sidebar-ov-author__avatar"><img class="sidebar-ov-author__avatar_img" src="https://s1.ax1x.com/2020/05/14/YD6wTI.png" alt="avatar"></div><p class="sidebar-ov-author__text">In me the tiger sniffs the rose</p></div><div class="sidebar-ov-social"><a class="sidebar-ov-social-item" href="https://github.com/Gemini-Lin" target="_blank" rel="noopener" data-popover="Github" data-popover-pos="up"><span class="sidebar-ov-social-item__icon"><i class="fab fa-github"></i></span></a><a class="sidebar-ov-social-item" href="https://www.zhihu.com/people/iye-kong-zhong-zui-liang-de-xing-i" target="_blank" rel="noopener" data-popover="知乎" data-popover-pos="up"><span class="sidebar-ov-social-item__icon">知</span></a><a class="sidebar-ov-social-item" href="https://space.bilibili.com/313103161" target="_blank" rel="noopener" data-popover="social.bilibili" data-popover-pos="up"><span class="sidebar-ov-social-item__icon">B</span></a><a class="sidebar-ov-social-item" href="/images/qq.png" target="_blank" rel="noopener" data-popover="QQ" data-popover-pos="up"><span class="sidebar-ov-social-item__icon"><i class="fab fa-qq"></i></span></a><a class="sidebar-ov-social-item" href="/images/wechat.jpg" target="_blank" rel="noopener" data-popover="微信" data-popover-pos="up"><span class="sidebar-ov-social-item__icon"><i class="fab fa-weixin"></i></span></a><a class="sidebar-ov-social-item" href="mailto:geminilin@gmail.com" target="_blank" rel="noopener" data-popover="social.E-Mail" data-popover-pos="up"><span class="sidebar-ov-social-item__icon">E</span></a></div><div class="sidebar-ov-feed"><span class="sidebar-ov-feed-rss"><a class="sidebar-ov-feed-rss__link" href="/atom.xml" target="_blank" rel="noopener"><span class="sidebar-ov-feed-rss__icon"><i class="fas fa-rss"></i></span><span>RSS 订阅</span></a></span></div><div class="sidebar-ov-state"><a class="sidebar-ov-state-item sidebar-ov-state-item--posts" href="/archives/"><div class="sidebar-ov-state-item__count">97</div><div class="sidebar-ov-state-item__name">归档</div></a><a class="sidebar-ov-state-item sidebar-ov-state-item--categories" href="/categories/"><div class="sidebar-ov-state-item__count">34</div><div class="sidebar-ov-state-item__name">分类</div></a><a class="sidebar-ov-state-item sidebar-ov-state-item--tags" href="/tags/"><div class="sidebar-ov-state-item__count">107</div><div class="sidebar-ov-state-item__name">标签</div></a></div><div class="sidebar-ov-cc"><a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en" target="_blank" rel="noopener" data-popover="知识共享许可协议" data-popover-pos="up"><img src="/images/cc-by-nc-sa.svg"></a></div></section><div class="sidebar-reading"><div class="sidebar-reading-info"><span class="sidebar-reading-info__text">你已阅读了 </span><span class="sidebar-reading-info__num">0</span></div><div class="sidebar-reading-line"></div></div></aside></div><div class="clearfix"></div></div></main><footer class="footer" id="footer"><div class="footer-inner"><div><span>Copyright © 2021</span><span class="footer__icon"><i class="fas fa-heart"></i></span><span>Gemini-Lin</span><span class="footer__devider">|</span><span>闽ICP备20012376号</span></div><div class="busuanzi"><span class="busuanzi-siteuv"><span class="busuanzi-siteuv__icon"><i class="fas fa-user"></i></span><span class="busuanzi-siteuv__info">访问人数</span><span class="busuanzi-siteuv__value" id="busuanzi_value_site_uv"></span></span><span class="busuanzi-sitepv"><span class="busuanzi-siteuv__icon"><i class="fas fa-eye"></i></span><span class="busuanzi-siteuv__info">浏览总量</span><span class="busuanzi-siteuv__value" id="busuanzi_value_site_pv"></span></span></div></div></footer><div class="loading-bar" id="loading-bar"><div class="loading-bar__progress"></div></div><div class="back2top" id="back2top"><span class="back2top__icon"><i class="fas fa-rocket"></i></span></div></div><div class="search-mask"></div><div class="search-popup"><span class="search-close"></span><div class="search-input"><input placeholder="搜索文章（支持多关键词，请用空格分隔）"></div><div class="search-results"></div></div><script src="https://cdn.jsdelivr.net/npm/jquery@v3.4.1/dist/jquery.min.js"></script><script src="https://cdn.jsdelivr.net/npm/velocity-animate@1.5.2/velocity.min.js"></script><script src="https://cdn.jsdelivr.net/npm/velocity-animate@1.5.2/velocity.ui.min.js"></script><script src="https://cdn.jsdelivr.net/npm/ribbon.js@latest/dist/ribbon.min.js" size="150" alpha="0.6" zIndex="-1"></script><script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script><script src="https://cdn.jsdelivr.net/npm/masonry-layout@4.2.2/dist/masonry.pkgd.min.js"></script><script src="https://cdn.jsdelivr.net/npm/lazyload@2.0.0-rc.2/lazyload.min.js"></script><script src="https://cdn.jsdelivr.net/npm/social-share.js@1.0.16/dist/js/social-share.min.js"></script><script>function initSearch() {
   var isXML = true;
   var search_path = 'search.xml';
